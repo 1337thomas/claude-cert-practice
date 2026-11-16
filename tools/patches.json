@@ -1,0 +1,1760 @@
+{
+ "global": [
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "\\bTask tool\\b",
+   "first_repl": "Agent tool (formerly Task)",
+   "repl": "Agent tool"
+  },
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "`@import\\s+([^`\\s]+)`",
+   "repl": "`@\\1`"
+  },
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "@import\\s+(\\.{0,2}/?[\\w./-]+\\.md)",
+   "repl": "@\\1"
+  },
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "`@import`(s?)",
+   "repl": "`@`-import\\1"
+  },
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "(?<![`\\w])@import(s?)\\b",
+   "repl": "@-import\\1"
+  },
+  {
+   "exams": [
+    "architect-foundations",
+    "architect-professional",
+    "developer-foundations"
+   ],
+   "pattern": "--json-schema (<schema-file>|[\\w./-]+\\.json)",
+   "repl": "--json-schema \"$(cat \\1)\""
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-4.4-easy-1",
+    "connectry:q-4.4-medium-3",
+    "connectry:q-4.4-hard-1",
+    "connectry:q-4.4-hard-4"
+   ],
+   "pattern": "\\bisError\\b",
+   "repl": "is_error"
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-2.4-medium-3",
+    "connectry:q-2.4-hard-4"
+   ],
+   "pattern": "sse type",
+   "repl": "http type"
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-2.4-medium-3",
+    "connectry:q-2.4-hard-4"
+   ],
+   "pattern": "SSE endpoint URL",
+   "repl": "MCP endpoint URL"
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-2.4-medium-3",
+    "connectry:q-2.4-hard-4"
+   ],
+   "pattern": "The SSE \\(Server-Sent Events\\) transport type is",
+   "repl": "The HTTP (Streamable HTTP) transport type is"
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-2.4-medium-3",
+    "connectry:q-2.4-hard-4"
+   ],
+   "pattern": "SSE endpoint",
+   "repl": "HTTP endpoint"
+  },
+  {
+   "exams": [
+    "architect-foundations"
+   ],
+   "ids": [
+    "connectry:q-2.4-medium-3",
+    "connectry:q-2.4-hard-4"
+   ],
+   "pattern": "\\bSSE\\b",
+   "repl": "Streamable HTTP"
+  }
+ ],
+ "items": [
+  {
+   "id": "milind:Q693",
+   "action": "rekey",
+   "correct": "Claude Code prompts the user for permission"
+  },
+  {
+   "id": "milind:Q693",
+   "action": "set_explanation",
+   "text": "`allowed-tools` only pre-approves the listed tools for the turn that invokes the skill; it does not restrict which tools are available. A `write` call therefore falls back to the normal permission rules, which (in the default mode) means Claude Code asks for permission. To actually remove a tool while the skill is active, use `disallowed-tools` or a permission deny rule. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "milind:Q453",
+   "action": "rekey",
+   "correct": "Use plan mode"
+  },
+  {
+   "id": "milind:Q453",
+   "action": "set_explanation",
+   "text": "Plan mode is Claude Code's read-only mode: Claude can explore and plan but does not edit files until you approve. `allowed-tools` would not help here because it only pre-approves tools and does not restrict the others (restricting needs `--tools`, `--disallowedTools` or permission deny rules). A system-prompt instruction is only advisory, and there is no `--read-only` flag."
+  },
+  {
+   "id": "milind:Q443",
+   "action": "set_option",
+   "match": "Both A and C are correct",
+   "text": "Add the exploration steps to CLAUDE.md so they run in every session"
+  },
+  {
+   "id": "milind:Q443",
+   "action": "rekey",
+   "correct": "Implement it as a skill with `context: fork`"
+  },
+  {
+   "id": "milind:Q443",
+   "action": "set_explanation",
+   "text": "`context: fork` runs the skill in a forked subagent, so the 50+ tool calls and intermediate output stay out of the main conversation and only the overview comes back. `allowed-tools` only pre-approves tools; it neither isolates context nor restricts other tools. A plain command runs inline and floods the main context, and CLAUDE.md is not a command mechanism."
+  },
+  {
+   "id": "milind:Q620",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q435",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q633",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-3.2-medium-1",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-3.2-medium-5",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q532",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q149",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q175",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q372",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q420",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q516",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q548",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q569",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q704",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q650",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-3.2-hard-2",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-3.2-hard-3",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q583",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q594",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "note",
+   "text": "a subagent's tools are restricted with the `tools` field of its AgentDefinition; `allowedTools` only auto-approves tools."
+  },
+  {
+   "id": "connectry:q-3.2-hard-1",
+   "action": "note",
+   "text": "`allowed-tools` pre-approves the listed tools (here Bash and Read) for the skill's turn; it does not restrict other tools."
+  },
+  {
+   "id": "milind:Q78",
+   "action": "note",
+   "text": "the subagent tool is now called Agent (renamed from Task in Claude Code 2.1.63; `Task` still works as an alias)."
+  },
+  {
+   "id": "milind:Q806",
+   "action": "note",
+   "text": "`allowed-tools` only pre-approves the listed tools; it is the skill's instructions that direct Claude to inspect the existing tests first."
+  },
+  {
+   "id": "milind:Q606",
+   "action": "rekey",
+   "correct": "The personal command in"
+  },
+  {
+   "id": "milind:Q606",
+   "action": "set_explanation",
+   "text": "When skills or commands share a name, Claude Code resolves them as enterprise over personal, and personal over project. So the personal `~/.claude/commands/generate-test.md` runs. To customize a team command for yourself without shadowing it, give your personal version a different name. (code.claude.com/docs/en/skills, 'Resolve skills that share a name')"
+  },
+  {
+   "id": "connectry:q-3.2-medium-3",
+   "action": "set_option",
+   "match": "The user-level command always takes precedence",
+   "text": "The user-level (personal) command takes precedence over the project-level command."
+  },
+  {
+   "id": "connectry:q-3.2-medium-3",
+   "action": "rekey",
+   "correct": "The user-level (personal) command takes precedence"
+  },
+  {
+   "id": "connectry:q-3.2-medium-3",
+   "action": "set_explanation",
+   "text": "Same-name skills and commands resolve as enterprise over personal, and personal over project, so `/refactor` runs `~/.claude/commands/refactor.md`. Claude Code neither merges the two files nor raises an error. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "milind:Q699",
+   "action": "set_explanation",
+   "text": "A personal command with the same name (`~/.claude/commands/review.md`) would shadow the shared one, because personal takes precedence over project, which replaces rather than extends it and silently diverges from the team. Creating a differently named personal command (`review-extended`) that builds on the shared command adds the extra checks without modifying or shadowing it."
+  },
+  {
+   "id": "milind:Q580",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q571",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-1.5-medium-1",
+   "action": "rekey",
+   "correct": "The SDK runs hooks in parallel"
+  },
+  {
+   "id": "connectry:q-1.5-medium-1",
+   "action": "set_explanation",
+   "text": "When an event fires, all matching hooks run in parallel and their completion order is non-deterministic, so each hook must act independently rather than rely on another having run first. For permission decisions the most restrictive result applies (deny over ask over allow). Hooks without a matcher fire for every tool call. (code.claude.com/docs/en/agent-sdk/hooks)"
+  },
+  {
+   "id": "connectry:q-1.5-medium-5",
+   "action": "rekey",
+   "correct": "Hook 3 receives the original raw tool result"
+  },
+  {
+   "id": "connectry:q-1.5-medium-5",
+   "action": "set_explanation",
+   "text": "Matching hooks run in parallel, not as a sequential pipeline, so each one receives the same original tool result and none sees another's modifications. If transformations must compose (redact, then convert, then log), do them in order inside a single hook callback. (code.claude.com/docs/en/agent-sdk/hooks)"
+  },
+  {
+   "id": "connectry:q-1.5-hard-4",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q11",
+   "action": "set_option",
+   "match": "`\"Task\"`",
+   "text": "`\"Subagent\"`"
+  },
+  {
+   "id": "milind:Q11",
+   "action": "rekey",
+   "correct": "`\"Agent\"`"
+  },
+  {
+   "id": "milind:Q11",
+   "action": "set_explanation",
+   "text": "Subagents are spawned through the Agent tool, so a coordinator needs `\"Agent\"` in its `allowedTools`. The tool was called Task before Claude Code 2.1.63, and `Task` still works as an alias in existing configurations. (code.claude.com/docs/en/sub-agents)"
+  },
+  {
+   "id": "milind:Q591",
+   "action": "set_option",
+   "match": "Yes, `@import` supports recursive",
+   "text": "Yes, imported files can import other files, up to a maximum depth of four hops"
+  },
+  {
+   "id": "milind:Q591",
+   "action": "set_option",
+   "match": "Yes, but only up to 3 levels",
+   "text": "Yes, with no depth limit"
+  },
+  {
+   "id": "milind:Q591",
+   "action": "set_explanation",
+   "text": "CLAUDE.md imports use `@path/to/file` syntax, and imported files can recursively import other files with a maximum depth of four hops. Relative paths resolve from the importing file. (code.claude.com/docs/en/memory)"
+  },
+  {
+   "id": "milind:Q677",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q652",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q430",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q456",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q560",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q655",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q713",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q967",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q698",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q952",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q968",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q33",
+   "action": "remove"
+  },
+  {
+   "id": "amey:associate-foundations-practice-5",
+   "action": "set_explanation",
+   "text": "**A** wastes cost and latency budget on routine work; **C** underserves exactly the cases that need depth; **D** matches nothing to anything. **B** aligns model choice with task requirements in both directions, which is the tested judgment."
+  },
+  {
+   "id": "milind:Q682",
+   "action": "rekey",
+   "correct": "The personal ~/.claude/commands/deploy.md always wins"
+  },
+  {
+   "id": "milind:Q682",
+   "action": "set_explanation",
+   "text": "Same-name skills and commands resolve as enterprise over personal, and personal over project, so the second developer's personal `~/.claude/commands/deploy.md` runs. (A skill also beats a `.claude/commands/` file of the same name.) To avoid shadowing a team command, give personal variants a different name. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "connectry:q-2.4-medium-4",
+   "action": "rekey",
+   "correct": "The environment variable is set in the interactive shell"
+  },
+  {
+   "id": "connectry:q-2.4-medium-4",
+   "action": "set_explanation",
+   "text": "The literal `${DB_PASSWORD}` reaching the server shows the placeholder syntax is correct. When a referenced variable is not set in Claude Code's own process environment and has no default, Claude Code passes the unexpanded `${VAR}` text through as-is. The usual cause is a variable that is set but not exported, or set in a different shell than the one that launched Claude Code. Export it (or use a `${VAR:-default}` fallback) and restart Claude Code. (code.claude.com/docs/en/mcp)"
+  },
+  {
+   "id": "milind:Q754",
+   "action": "set_option",
+   "match": "Make both fields nullable",
+   "text": "Make both fields nullable: set `vendor` to null for purchase orders and `supplier` to null for invoices"
+  },
+  {
+   "id": "milind:Q754",
+   "action": "rekey",
+   "correct": "Make both fields nullable"
+  },
+  {
+   "id": "milind:Q754",
+   "action": "set_explanation",
+   "text": "Within a single schema, type-specific fields should be optional or nullable so each document type fills only what applies. Leaving a field null avoids pressuring the model to invent a value. `tool_choice: \"any\"` selects among several tools or schemas, which contradicts the single-schema constraint. Collapsing the fields loses information, and separate pipelines abandon the single schema."
+  },
+  {
+   "id": "milind:Q688",
+   "action": "edit",
+   "field": "q",
+   "find": "(`prompts/**/*.md`)",
+   "replace": "(`**/prompts/**/*.md`)"
+  },
+  {
+   "id": "milind:Q688",
+   "action": "set_explanation",
+   "text": "Path-scoped rules load for every rule whose `paths` glob matches the file. `src/integrations/prompts/escalation.md` matches both `**/prompts/**/*.md` and `src/integrations/**`, so both rule sets load together. Rules are additive, not exclusive. Note that globs are matched relative to the project root, so a bare `prompts/**/*.md` would only match a top-level prompts/ directory."
+  },
+  {
+   "id": "aliquanto:d1-58",
+   "action": "edit",
+   "field": "q",
+   "find": "attempt four adds about half a point",
+   "replace": "attempt four adds under a tenth of a point"
+  },
+  {
+   "id": "aliquanto:d1-58",
+   "action": "edit",
+   "field": "q",
+   "find": "~$4",
+   "replace": "~$1"
+  },
+  {
+   "id": "aliquanto:d1-58",
+   "action": "set_explanation",
+   "text": "An extra attempt is only paid on drafts that are still failing, so compare its cost with the conditional pass rate among those drafts times the human fallback cost. Attempt three: 7% still fail and 3 points pass, so 3/7 ≈ 43% × $1 ≈ $0.43 saved per $0.09 attempt, which pays. Attempt four: 4% still fail and under 0.1 point pass, so ≈ 2.5% × $1 ≈ $0.025 per $0.09 attempt, which does not pay. The cap belongs at three. Two stops while attempts still pay; four and five spend more than they save."
+  },
+  {
+   "id": "milind:Q592",
+   "action": "set_option",
+   "match": "Whether to address issues one at a time",
+   "text": "Whether to give all interacting issues to Claude together in a single message, or to fix independent issues one at a time"
+  },
+  {
+   "id": "milind:Q592",
+   "action": "set_explanation",
+   "text": "When fixes interact, presenting them together in one detailed message lets Claude resolve them consistently; fixing them one at a time risks each fix breaking another. Independent issues can be fixed sequentially, verifying each before moving on. The strategy is about how feedback is grouped, not about commits, parallel instances or API call styles."
+  },
+  {
+   "id": "milind:Q1022",
+   "action": "set_option",
+   "match": "A prompt shown to the developer",
+   "text": "A placeholder shown in slash-command autocomplete that tells the user which arguments the skill expects (e.g. `[issue-number]`)"
+  },
+  {
+   "id": "milind:Q1022",
+   "action": "set_explanation",
+   "text": "`argument-hint` is a hint shown during autocomplete to indicate the expected arguments, e.g. `[issue-number]` or `[filename] [format]`. It does not supply default values, it is not instructions for Claude, and it is not an interactive prompt shown when arguments are missing. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "milind:Q244",
+   "action": "edit",
+   "field": "q",
+   "find": " --- Rewrote 50 questions. Q numbers: [7, 14, 20, 23, 25, 27, 32, 33, 36, 42, 43, 47, 54, 59, 66, 68, 69, 70, 74, 75, 78, 82, 87, 88, 91, 93, 96, 97, 107, 110, 113, 115, 118, 119, 125, 132, 139, 141, 149, 154, 155, 159, 161, 163, 165, 219, 231, 237, 241, 244]",
+   "replace": ""
+  },
+  {
+   "id": "connectry:q-3.3-easy-3",
+   "action": "set_option",
+   "match": "As a comma-separated string",
+   "text": "As a single string joined with pipes: `paths: src/**/*.tsx | src/**/*.ts`"
+  },
+  {
+   "id": "connectry:q-3.3-easy-3",
+   "action": "set_option",
+   "match": "As a JSON array inline",
+   "text": "Under a separate `globs:` key instead of `paths:`"
+  },
+  {
+   "id": "connectry:q-3.3-easy-3",
+   "action": "note",
+   "text": "`paths` accepts a YAML list (block form with `-` or inline `[...]`) or a comma-separated string; pipes and a `globs:` key are not supported."
+  },
+  {
+   "id": "connectry:q-3.3-easy-4",
+   "action": "set_option",
+   "match": "Add a YAML frontmatter block at the top of the file with `paths: [",
+   "text": "Add a YAML frontmatter block at the top of the file with `scope: \"**/*.tsx\"`."
+  },
+  {
+   "id": "connectry:q-3.2-hard-4",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q631",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q127",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q144",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q1104",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "rekey",
+   "correct": "Start a new session with a summary"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "set_explanation",
+   "text": "The migration check is a new task with a different scope. A fresh session seeded with a short summary of the review findings keeps the relevant conclusions without carrying the whole prior transcript. Forking is for exploring divergent approaches from a shared baseline. Resuming would pile unrelated context into the same session."
+  },
+  {
+   "id": "milind:Q932",
+   "action": "rekey",
+   "correct": "Start a fresh session for the new feature question"
+  },
+  {
+   "id": "milind:Q932",
+   "action": "set_explanation",
+   "text": "An unrelated question is best answered in a fresh session (or after /clear), so the bug-investigation detail doesn't dilute it. The investigation isn't lost: that session can be resumed later. Forking is meant for divergent explorations that build on the same baseline, which a different feature doesn't."
+  },
+  {
+   "id": "milind:Q551",
+   "action": "rekey",
+   "correct": "Consider whether the current changes can be reversed"
+  },
+  {
+   "id": "milind:Q551",
+   "action": "set_explanation",
+   "text": "Forking a session branches the conversation, not the working tree: the 8 edited files on disk are shared, so a fork doesn't let you try a new approach 'without losing progress'. When the approach itself is wrong, assess whether the changes can be reverted (checkpoints/rewind or git) and re-plan from a clean state, e.g. in plan mode. Pushing on, or committing a half-done refactor, bakes in the flawed approach."
+  },
+  {
+   "id": "milind:Q460",
+   "action": "edit",
+   "field": "opt",
+   "find": ".claude/skills/",
+   "replace": "~/.claude/skills/"
+  },
+  {
+   "id": "milind:Q460",
+   "action": "note",
+   "text": "a committed project skill (`.claude/skills/estimate-complexity/SKILL.md`) would also work, since custom commands are merged into skills; a personal `~/.claude/skills/` skill is not shared with the team."
+  },
+  {
+   "id": "milind:Q563",
+   "action": "edit",
+   "field": "opt",
+   "find": ".claude/skills/",
+   "replace": "~/.claude/skills/"
+  },
+  {
+   "id": "milind:Q563",
+   "action": "note",
+   "text": "a committed project skill (`.claude/skills/generate-service/SKILL.md`) would also work, since custom commands are merged into skills; a personal `~/.claude/skills/` skill is not shared."
+  },
+  {
+   "id": "milind:Q588",
+   "action": "edit",
+   "field": "opt",
+   "find": ".claude/skills/",
+   "replace": "~/.claude/skills/"
+  },
+  {
+   "id": "milind:Q588",
+   "action": "note",
+   "text": "a committed project skill (`.claude/skills/api-endpoint/SKILL.md`) would also work and supports `$ARGUMENTS`; a personal `~/.claude/skills/` skill is not shared."
+  },
+  {
+   "id": "milind:Q667",
+   "action": "edit",
+   "field": "opt",
+   "find": ".claude/skills/",
+   "replace": "~/.claude/skills/"
+  },
+  {
+   "id": "milind:Q667",
+   "action": "note",
+   "text": "a committed project skill (`.claude/skills/run-tests/SKILL.md`) would also work, since custom commands are merged into skills; a personal `~/.claude/skills/` skill is not shared."
+  },
+  {
+   "id": "milind:Q312",
+   "action": "set_option",
+   "match": "Present both conclusions in the memo",
+   "text": "Present both conclusions in the memo with source attribution and flag the conflict for the attorney's review"
+  },
+  {
+   "id": "milind:Q312",
+   "action": "rekey",
+   "correct": "Present both conclusions in the memo with source attribution"
+  },
+  {
+   "id": "milind:Q312",
+   "action": "set_explanation",
+   "text": "When specialist subagents reach conflicting conclusions, the coordinator should preserve both with their sources and annotate the conflict. It should not let another model silently 'resolve' it, especially in a legal memo where the attorney owns the judgment. Preferring one source by rule, or re-running the minority until it agrees, hides real uncertainty."
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_option",
+   "match": "Present both conflicting answers to the user",
+   "text": "Present both values with source attribution and flag the conflict in the final answer"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "rekey",
+   "correct": "Present both values with source attribution"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_explanation",
+   "text": "The coordinator's authority is over the final synthesis, not over the facts. When two subagents disagree on a fact, the reliable pattern is to keep both values with their sources and annotate the conflict, rather than pick one by vote or confidence score. Discarding both loses information, and letting subagents debate adds cost without adding evidence."
+  },
+  {
+   "id": "connectry:q-2.2-medium-5",
+   "action": "edit",
+   "field": "q",
+   "find": "The tool returns an error when no users match the search criteria.",
+   "replace": "The tool returns an error when its directory backend query times out."
+  },
+  {
+   "id": "connectry:q-2.2-medium-5",
+   "action": "edit",
+   "field": "q",
+   "find": "`\"No users found matching query: SELECT",
+   "replace": "`\"Query timed out: SELECT"
+  },
+  {
+   "id": "connectry:q-2.2-medium-5",
+   "action": "edit",
+   "field": "q",
+   "find": "`\"No users found matching the search criteria. Try broadening your search filters.\"`",
+   "replace": "`\"The user directory did not respond in time (transient). Retry shortly or narrow the search filters.\"`"
+  },
+  {
+   "id": "connectry:q-2.2-medium-5",
+   "action": "set_option",
+   "match": "Neither option is correct",
+   "text": "Neither option: a timeout should not be reported with `isError: true` because the agent cannot act on it"
+  },
+  {
+   "id": "connectry:q-2.2-medium-5",
+   "action": "set_explanation",
+   "text": "Option Y reports what happened and that it is transient, and suggests an actionable next step, without exposing the SQL, table or schema. Raw SQL in an error message leaks implementation details and does not help the agent recover. A timeout is a genuine failure, so flagging it as an error is right. (A search that simply finds no users would instead be a valid empty result, not an error.)"
+  },
+  {
+   "id": "milind:Q416",
+   "action": "set_option",
+   "match": "It defines the prompt shown to developers",
+   "text": "It shows a hint during slash-command autocomplete indicating the expected arguments (e.g. `[pr-number]`)"
+  },
+  {
+   "id": "milind:Q416",
+   "action": "set_explanation",
+   "text": "`argument-hint` is a hint shown during autocomplete to indicate the expected arguments, e.g. `[issue-number]`. It does not set defaults, document implementation, or prompt for missing arguments. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "milind:Q581",
+   "action": "edit",
+   "field": "q",
+   "find": "How is this communicated in the SKILL.md configuration?",
+   "replace": "How do you show users which argument the skill expects when they type its slash command?"
+  },
+  {
+   "id": "milind:Q581",
+   "action": "set_option",
+   "match": "By defining `$1`, `$2` placeholders",
+   "text": "By listing the argument in a `usage:` field in SKILL.md frontmatter"
+  },
+  {
+   "id": "milind:Q581",
+   "action": "set_explanation",
+   "text": "`argument-hint` in the frontmatter is shown during slash-command autocomplete, e.g. `[component-name]`. The skill body then receives the value through `$ARGUMENTS` (or positional `$0`, `$1`, ...). There are no `parameters:`, `inputs:` or `usage:` frontmatter fields. (code.claude.com/docs/en/skills)"
+  },
+  {
+   "id": "milind:Q643",
+   "action": "set_option",
+   "match": "Yes, @-import works in slash command files",
+   "text": "Yes, `@` file references work in command and skill content as well as in CLAUDE.md"
+  },
+  {
+   "id": "milind:Q643",
+   "action": "rekey",
+   "correct": "Yes, `@` file references work"
+  },
+  {
+   "id": "milind:Q643",
+   "action": "set_explanation",
+   "text": "Command and skill content can include files with `@path` references, just as CLAUDE.md can import files with `@path/to/file`. Relative paths resolve from the file that contains the reference. There is no `#include` syntax, and the referenced file does not need to live inside `.claude/`."
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_option",
+   "match": "Store separate rule files under .claude/rules/",
+   "text": "Store separate rule files under .claude/rules/ in the project; Claude Code discovers them automatically (CLAUDE.md can additionally pull in other files with `@path` imports)."
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_explanation",
+   "text": "Every `.md` file under `.claude/rules/` is discovered automatically (recursively). Files without `paths` frontmatter load at launch, and files with `paths` load when Claude works with matching files. No import is needed, though CLAUDE.md can still pull in other files with `@path/to/file`. Symlinked CLAUDE.md files, a CLAUDE.json manifest, and package.json config are not mechanisms Claude Code uses. (code.claude.com/docs/en/memory)"
+  },
+  {
+   "id": "connectry:q-3.1-hard-2",
+   "action": "edit",
+   "field": "opt",
+   "find": " @-import it in ./CLAUDE.md.",
+   "replace": ""
+  },
+  {
+   "id": "connectry:q-3.1-hard-2",
+   "action": "set_explanation",
+   "text": "The project `./CLAUDE.md` holds the common rules. A `.claude/rules/sensitive-data.md` file with `paths` frontmatter for `payments/**`, `compliance/**` and `audit/**` holds the strict rules, and Claude Code loads it on its own only when working with matching files. No duplication occurs and scope is enforced by metadata. Duplicating rules per directory (C) or repeating imports (D) creates drift; comment markers (A) are not enforced."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "14 files in .claude/rules/ some of which are never referenced by any @-import",
+   "replace": "14 files in .claude/rules/, several of them obsolete or duplicating each other"
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_option",
+   "match": "Audit each rule for active @-import references",
+   "text": "Audit the .claude/rules/ files and remove those that are obsolete or duplicated; deduplicate backend/CLAUDE.md by keeping only rules that differ from the root; trim the root ./CLAUDE.md by moving repeated content into focused .claude/rules/ files; and remove the user-level overrides from ~/.claude/CLAUDE.md that are no longer desired."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_explanation",
+   "text": "Each problem gets its own fix. Every file in `.claude/rules/` is loaded automatically (at launch, or when matching paths are touched), so cleaning them up means removing obsolete or duplicated rules, not 'unreferenced' ones. Deduplicating backend/CLAUDE.md removes drift, moving repeated root content into focused rule files shrinks the root file, and pruning unwanted user-level overrides restores the intended behaviour. The other options either lose coverage (A, B) or rely on unenforced comments (C)."
+  },
+  {
+   "id": "milind:Q642",
+   "action": "rekey",
+   "correct": "Post-process with jq"
+  },
+  {
+   "id": "milind:Q642",
+   "action": "set_explanation",
+   "text": "Only a deterministic step can guarantee key order: piping the result through `jq -S` (sort keys) produces identical ordering on every run. A prompt instruction is probabilistic. JSON objects are unordered by definition, so neither `--output-format json` nor a schema's `required` array fixes the order."
+  },
+  {
+   "id": "milind:Q536",
+   "action": "set_option",
+   "match": "Claude outputs JSON-formatted text",
+   "text": "Claude Code prints a JSON envelope with metadata (result, session ID, cost/usage); the model's answer is free text inside the `result` field, with no schema applied to it"
+  },
+  {
+   "id": "milind:Q536",
+   "action": "set_explanation",
+   "text": "`--output-format json` wraps the run in a fixed JSON envelope; the model's response sits in `result` as ordinary text. Only `--json-schema` makes Claude return validated structured output matching a schema (in `structured_output`). Without it nothing is inferred or validated, and the command does not fail. (code.claude.com/docs/en/cli-reference)"
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "edit",
+   "field": "q",
+   "find": "`claude --print --output-format json --no-interactive`",
+   "replace": "`claude --print --output-format json`"
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_option",
+   "match": "Pass the raw git log as a user message",
+   "text": "Pass the raw git log as input data (not interpolated into the prompt instructions) and add `--json-schema` with a release-notes schema, so the output is validated structured JSON regardless of the characters in the input."
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_explanation",
+   "text": "Interpolating the raw log into the instruction text lets backticks and quotes break the prompt structure. Passing it as data separates content from instructions, and `--json-schema` makes Claude Code return schema-validated structured output (in `structured_output`) instead of free text. Retries treat the symptom (A), regex over text is fragile (B), and stripping characters corrupts commit messages (C)."
+  },
+  {
+   "id": "milind:Q261",
+   "action": "edit",
+   "field": "q",
+   "find": "Your CI pipeline runs Claude with `--output-format json --json-schema` but Claude occasionally returns plain text responses instead of JSON.",
+   "replace": "Your CI pipeline calls the Messages API directly for an extraction step, but Claude occasionally returns plain text responses instead of the JSON you asked for in the prompt."
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_option",
+   "match": "Add `--force-json` flag",
+   "text": "Set `stop_sequences: [\"}\"]` so the response ends after the JSON object"
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_explanation",
+   "text": "Define the desired output as a tool's `input_schema` and force a tool call (`tool_choice: \"any\"`, or `{\"type\": \"tool\", \"name\": ...}` for one specific tool). Claude then returns a `tool_use` block whose input follows the schema instead of free text; add `strict: true` for guaranteed schema conformance. `auto` lets Claude answer in text, and `response_format` and stop-sequence tricks are not the Claude API's structured-output mechanism."
+  },
+  {
+   "id": "milind:Q628",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q1117",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "edit",
+   "field": "q",
+   "find": "always check authentication first",
+   "replace": "always analyze authentication first"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "edit",
+   "field": "explanation",
+   "find": "\"Always analyze authentication\"",
+   "replace": "\"always analyze authentication first\""
+  },
+  {
+   "id": "connectry:q-5.1-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "mentioned at the very beginning of a long conversation",
+   "replace": "mentioned partway through a long conversation (around turn 15 of 40)"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_option",
+   "match": "Split the review into smaller chunks",
+   "text": "Split the review into smaller focused passes (by file group or review dimension) that each complete within the timeout"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_explanation",
+   "text": "Breaking a large review into focused passes (by file group, or security first and style second) lets each pass finish within the CI timeout and keeps the results of completed passes. `--output-format json` does not salvage a killed run, skipping large PRs leaves exactly the riskiest changes unreviewed, and ever-larger timeouts don't scale."
+  },
+  {
+   "id": "milind:Q1047",
+   "action": "set_option",
+   "match": "Pattern Y, because the cumulative",
+   "text": "Pattern Y, because appending every sub-agent's full output (~24,000 tokens of raw findings) dilutes the orchestrator's attention and spends context budget on material it does not need, while MCP resource reads let it retrieve only the relevant findings for synthesis."
+  },
+  {
+   "id": "milind:Q1047",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Latency concerns (D) are real but secondary to context budget exhaustion for long-horizon research tasks.",
+   "replace": "24K tokens is only a fraction of a 200K+ window, so the issue is attention dilution and wasted budget rather than running out of space. Latency concerns (D) are real but secondary."
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_option",
+   "match": "Explore is a Claude Code built-in subagent",
+   "text": "Explore is a built-in read-only subagent type for codebase discovery that returns a summary to keep the main context lean; it is launched through the Agent (formerly Task) tool, which can also spawn custom subagents with their own prompt and tool set"
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_explanation",
+   "text": "Explore isn't an alternative to the Agent (formerly Task) tool: it is one of the built-in subagent types that tool launches. It does read-only discovery and returns a summary. For other work you spawn general-purpose or custom subagents through the same tool, each with its own prompt and tools. This applies in Claude Code and in the Agent SDK alike. (code.claude.com/docs/en/sub-agents)"
+  },
+  {
+   "id": "connectry:q-4.3-medium-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "the API rejects responses that do not conform",
+   "replace": "with `strict: true` (structured outputs) the API guarantees the tool input conforms to the schema"
+  },
+  {
+   "id": "connectry:q-4.3-medium-2",
+   "action": "note",
+   "text": "without `strict: true`, a forced tool call is still far more reliable than prose instructions, but the API does not validate the tool input against the schema."
+  },
+  {
+   "id": "connectry:q-4.4-easy-2",
+   "action": "note",
+   "text": "'2–3 retries' is common engineering practice for a small, bounded retry budget, not a number published by Anthropic. The point being tested is: bounded retries with feedback, then escalate or fall back."
+  },
+  {
+   "id": "milind:Q614",
+   "action": "edit",
+   "field": "q",
+   "find": "The testing instructions are in a .claude/rules/testing.md file.",
+   "replace": "The testing instructions are in a .claude/rules/testing.md file that has a `paths` field in its frontmatter."
+  },
+  {
+   "id": "milind:Q197",
+   "action": "set_option",
+   "match": "The description omits the `cc` and `bcc` parameters",
+   "text": "The tool and parameter descriptions never say what `cc`/`bcc` are for or when to use them (e.g. 'also notify' means add to cc), so the model has no signal to use them"
+  },
+  {
+   "id": "milind:Q197",
+   "action": "set_explanation",
+   "text": "Claude does see every property in `input_schema`, but a bare parameter name gives no guidance on when to use it. Good tool definitions describe each parameter's purpose and its trigger conditions in the parameter description and the tool description. Splitting the tool adds complexity, a system-prompt rule is a workaround for a poor tool definition, and parameter order is irrelevant."
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_option",
+   "match": "Provide concrete I/O examples",
+   "text": "Add explicit code-quality criteria (style rules, complexity limits, project conventions) to the iteration, or an independent review pass"
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_explanation",
+   "text": "Tests check behaviour, not design, so test-driven iteration converges on code that passes but can be poor. Make quality an explicit target in the loop: concrete criteria the code must meet, or an independent review pass against them. A CI gate (B) only rejects after the fact without telling Claude what good looks like, and abandoning test-driven iteration (C) gives up correctness."
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_option",
+   "match": "Define the `bash` tool with an explicit allowlist",
+   "text": "Configure permission rules in `.claude/settings.json` (allow the intended commands, deny or ask for `Bash(rm -rf:*)` and `Bash(git clean:*)`), and include a few-shot example in the system prompt that demonstrates scoped cleanup behavior."
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_explanation",
+   "text": "Layered controls work at different levels. Permission rules in settings.json are enforced by Claude Code: allow the intended commands, and deny or require approval for destructive patterns. A few-shot example shapes how the model interprets 'clean up'. CLAUDE.md, by contrast, is advisory context rather than enforced configuration. The `make clean` wrapper (B) only fixes this one case, a 'confirm everything' instruction (C) is fragile, and `--dangerously-skip-permissions` (D) removes approvals instead of adding them."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_option",
+   "match": "Terminate when the agent assigns a confidence score",
+   "text": "Terminate when an evaluator step confirms objective completion criteria, e.g. the diagnostic reproduces the failure and the proposed root cause explains it, checked at the end of each iteration (with an iteration cap as a safety net)."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_explanation",
+   "text": "Loops should end on verifiable success criteria, not on a fixed count (A), brittle string matching (B), or an unrelated heuristic (D). An evaluator step that checks objective evidence each iteration ends the loop correctly, and a ceiling bounds the failure case. Self-reported confidence scores are poorly calibrated and shouldn't be the sole stop signal."
+  },
+  {
+   "id": "connectry:q-4.3-medium-5",
+   "action": "edit",
+   "field": "q",
+   "find": "A document references an entity called 'escrow agent'.",
+   "replace": "Escrow agents now appear routinely in the contracts being processed and the business wants them reported as a first-class role."
+  },
+  {
+   "id": "milind:Q1012",
+   "action": "edit",
+   "field": "q",
+   "find": "Which is the MOST reliable way to ensure consistent style?",
+   "replace": "What is the most effective way to make Claude generate code in the team's style from the start?"
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_option",
+   "match": "A single prompt cannot use different schemas",
+   "text": "A single pass dilutes attention across three distinct analyses and removes the independent validation checkpoint between extraction and synthesis, reducing recall and making failures harder to isolate."
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_explanation",
+   "text": "Separate passes give each analysis Claude's full attention and let you validate the structured output of passes 1 and 2 before synthesis, so errors are caught and attributed to one step. A single schema could hold separate sections, so schema shape is not the issue, and Claude can emit multiple JSON blocks (A). The speed (C) and cost (D) arguments are wrong or context-dependent."
+  },
+  {
+   "id": "milind:Q451",
+   "action": "set_option",
+   "match": "Both A and C are valid approaches",
+   "text": "Move the review instructions into CLAUDE.md so they are always loaded"
+  },
+  {
+   "id": "milind:Q451",
+   "action": "rekey",
+   "correct": "Add `context: fork`"
+  },
+  {
+   "id": "milind:Q451",
+   "action": "set_explanation",
+   "text": "`context: fork` runs the skill in a forked subagent, so the verbose analysis stays out of the main conversation and only the final structured result comes back. A summarization step inside a non-forked skill still lands the full analysis in the main context first. There is no `max-words` frontmatter, and CLAUDE.md would load the instructions everywhere."
+  },
+  {
+   "id": "milind:Q615",
+   "action": "rekey",
+   "correct": "The pipeline is accidentally passing a --resume flag"
+  },
+  {
+   "id": "milind:Q615",
+   "action": "set_explanation",
+   "text": "Each `claude -p` run starts a new session unless `--continue` or `--resume` is passed, so a run that 'remembers' previous runs is almost certainly resuming a session. There is no `--no-context` flag, and session isolation is the default. A cached `~/.claude` directory could carry over auto memory, but it would not replay previous conversations."
+  },
+  {
+   "id": "connectry:q-1.6-medium-3",
+   "action": "rekey",
+   "correct": "No change needed"
+  },
+  {
+   "id": "connectry:q-1.6-medium-3",
+   "action": "set_explanation",
+   "text": "Routing a low-confidence result to human review is a deterministic branch in code after the relevant step, which a static chain expresses easily (and testably). Dynamic decomposition is for when the next step itself can't be known in advance, not for a known escalation rule. Running all steps in parallel (B, C) wastes work the requirement says to skip."
+  },
+  {
+   "id": "connectry:q-1.4-easy-4",
+   "action": "edit",
+   "field": "q",
+   "find": "without blocking the tool call entirely.",
+   "replace": "before the email is sent, without blocking the tool call entirely."
+  },
+  {
+   "id": "connectry:q-1.4-easy-4",
+   "action": "edit",
+   "field": "q",
+   "find": "Which hook type is most appropriate for transforming the tool result after execution but before the model sees it?",
+   "replace": "Which hook type is most appropriate?"
+  },
+  {
+   "id": "connectry:q-1.4-easy-4",
+   "action": "rekey",
+   "correct": "PreToolUse hook"
+  },
+  {
+   "id": "connectry:q-1.4-easy-4",
+   "action": "set_explanation",
+   "text": "The body must be shortened before the email goes out, so the hook has to act on the tool's arguments: a PreToolUse hook can return `updatedInput` with the truncated body and let the call proceed. A PostToolUse hook runs after the email is already sent and can only change what the model sees. A prompt instruction is advisory, and a Stop hook is too late."
+  },
+  {
+   "id": "milind:Q106",
+   "action": "remove"
+  },
+  {
+   "id": "aliquanto:d1-48",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q646",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q653",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q656",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q1144",
+   "action": "remove"
+  },
+  {
+   "id": "milind:Q939",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-3.6-medium-3",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-4.5-hard-1",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-5.5-hard-2",
+   "action": "remove"
+  },
+  {
+   "id": "connectry:q-5.6-medium-5",
+   "action": "remove"
+  },
+  {
+   "id": "aliquanto:d3-09",
+   "action": "edit",
+   "field": "q",
+   "find": "Why does the design still have a security gap?",
+   "replace": "Which design closes the remaining security gap?"
+  },
+  {
+   "id": "aliquanto:d4-04",
+   "action": "edit",
+   "field": "q",
+   "find": "What is incomplete?",
+   "replace": "How should the evaluation plan be completed?"
+  },
+  {
+   "id": "aliquanto:d4-05",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the team most likely measuring wrong?",
+   "replace": "Which measurement change best explains and exposes the problem?"
+  },
+  {
+   "id": "aliquanto:d4-49",
+   "action": "edit",
+   "field": "q",
+   "find": "After the contract-segment incident,",
+   "replace": "After an index refresh, global accuracy stayed within tolerance while contract-type documents dropped 22 points and complaints spiked. Given that incident,"
+  },
+  {
+   "id": "mrkindly:20",
+   "action": "edit",
+   "field": "opt",
+   "find": "Test whether removing or adjusting those instructions resolves the behavior.",
+   "replace": "Remove recently added system-prompt instructions one at a time and test whether the refusals stop."
+  },
+  {
+   "id": "milind:Q626",
+   "action": "edit",
+   "field": "q",
+   "find": "What explains this behavior?",
+   "replace": "What actually happens to a `context: fork` skill's results when it completes?"
+  },
+  {
+   "id": "milind:Q787",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Options B, C, D are format/structural errors",
+   "replace": "The other options are format/structural errors"
+  },
+  {
+   "id": "connectry:q-4.5-easy-4",
+   "action": "edit",
+   "field": "q",
+   "find": "requiring sub-second responses?",
+   "replace": "that must respond within two seconds?"
+  },
+  {
+   "id": "connectry:q-5.2-easy-4",
+   "action": "note",
+   "text": "if a human reviewer is available, escalating a decision with legal implications to a human is the stronger choice; the supervisor-agent route assumes no human reviewer is immediately available."
+  },
+  {
+   "id": "mrkindly:1",
+   "action": "edit",
+   "field": "opt",
+   "find": "into a package the model loads as a unit",
+   "replace": "into a package that Claude loads progressively when relevant"
+  },
+  {
+   "id": "mrkindly:1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "“loads as a unit” is the closest option, but Skills use progressive disclosure in practice.",
+   "replace": "Skills use progressive disclosure: only the name and description are always in context, and SKILL.md and bundled files load when needed."
+  },
+  {
+   "id": "mrkindly:31",
+   "action": "edit",
+   "field": "opt",
+   "find": "through validation, retries, or temperature adjustment.",
+   "replace": "through clear output constraints, structured outputs, validation, and retries."
+  },
+  {
+   "id": "amey:architect-professional-practice-11",
+   "action": "edit",
+   "field": "q",
+   "find": "no request data leave their AWS account",
+   "replace": "request data stay within AWS infrastructure under their own AWS governance (IAM, region, VPC endpoints)"
+  },
+  {
+   "id": "amey:architect-professional-practice-11",
+   "action": "note",
+   "text": "Bedrock inference runs in AWS-managed accounts, not literally inside the customer's account; what the customer gets is that data stays within AWS under their account's IAM, region and network controls."
+  },
+  {
+   "id": "amey:architect-professional-mock2-1",
+   "action": "edit",
+   "field": "q",
+   "find": "inference run inside their own AWS account",
+   "replace": "inference stay within AWS and be governed by their AWS account's identity, region and network controls"
+  },
+  {
+   "id": "milind:Q178",
+   "action": "note",
+   "text": "forking a session only copies the conversation; it cannot undo external side effects such as a funds transfer. Treat it as a way to explore alternatives without contaminating the main session, not as a transactional rollback."
+  },
+  {
+   "id": "milind:Q237",
+   "action": "edit",
+   "field": "q",
+   "find": "`claude_desktop_config.json`",
+   "replace": "`.mcp.json`"
+  },
+  {
+   "id": "milind:Q264",
+   "action": "note",
+   "text": "Claude Code asks each developer to approve project-scoped servers from `.mcp.json` on first use; after that approval their tools are available without further setup."
+  },
+  {
+   "id": "milind:Q274",
+   "action": "note",
+   "text": "Claude Code saves every session locally and can resume it with `--continue` or the `--resume` picker; naming a session (e.g. via /rename) just makes `--resume <name>` convenient."
+  },
+  {
+   "id": "milind:Q337",
+   "action": "note",
+   "text": "Claude Code retries remote server connections on transient errors at startup and attempts reconnection if a remote server drops mid-session; if it still fails, its tools stay unavailable until it is reconnected (e.g. via /mcp)."
+  },
+  {
+   "id": "milind:Q413",
+   "action": "edit",
+   "field": "opt",
+   "find": "(e.g., `my-review.md`) — user-scoped skills are personal, version-controlled separately from the project,",
+   "replace": "(e.g., `~/.claude/skills/my-review/SKILL.md`) — user-scoped skills are personal, are not part of the project repository,"
+  },
+  {
+   "id": "milind:Q552",
+   "action": "edit",
+   "field": "opt",
+   "find": "`~/.claude/skills/my-review.md`",
+   "replace": "`~/.claude/skills/my-review/SKILL.md`"
+  },
+  {
+   "id": "milind:Q552",
+   "action": "edit",
+   "field": "opt",
+   "find": "`.claude/skills/review.md`",
+   "replace": "`.claude/skills/review/SKILL.md`"
+  },
+  {
+   "id": "milind:Q428",
+   "action": "note",
+   "text": "`/memory` lists the CLAUDE.md and memory file locations (including ones not created yet) and opens them for editing; to verify which instruction files are actually loaded, use `/context`."
+  },
+  {
+   "id": "milind:Q452",
+   "action": "note",
+   "text": "to verify which instruction files are actually loaded, have Claude touch a matching file and check the memory files listed by `/context`; `/memory` mainly lists file locations for editing."
+  },
+  {
+   "id": "milind:Q1132",
+   "action": "note",
+   "text": "`/memory` lists memory/CLAUDE.md file locations for editing; `/context` shows which memory files are actually loaded."
+  },
+  {
+   "id": "milind:Q593",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Using `*.ts` without the `**/` prefix would only match files in the root directory.",
+   "replace": "Using `*.ts` alone matches .ts files anywhere but misses .tsx files."
+  },
+  {
+   "id": "milind:Q1069",
+   "action": "edit",
+   "field": "q",
+   "find": "`claude --print --no-interactive`",
+   "replace": "`claude -p`"
+  },
+  {
+   "id": "milind:Q1078",
+   "action": "note",
+   "text": "on Claude 4-generation models thinking is returned in summarized form, and visible reasoning may not perfectly reflect the model's internal process; it is still a better record than a post-hoc reconstruction."
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "edit",
+   "field": "opt",
+   "find": "(e.g., `claude-sonnet-4-5` not `claude-sonnet`)",
+   "replace": "(e.g., a dated snapshot ID such as `claude-sonnet-4-5-20250929` rather than the `claude-sonnet-4-5` alias)"
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "edit",
+   "field": "opt",
+   "find": "model aliases like `claude-sonnet` are equivalent",
+   "replace": "model aliases like `claude-sonnet-4-5` are equivalent"
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "note",
+   "text": "API version 2026-10-21 removes the `temperature`, `top_p` and `top_k` parameters (they return a 400 error), and Claude 4.7+ models only accept the defaults. Determinism now comes from pinned snapshots, structured outputs and validation, not temperature 0."
+  },
+  {
+   "id": "connectry:q-1.7-easy-1",
+   "action": "edit",
+   "field": "opt",
+   "find": "store conversation state server-side under a stable identifier",
+   "replace": "persist conversation state under a stable session ID that can be resumed"
+  },
+  {
+   "id": "connectry:q-1.7-easy-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "persist and reload full context server-side",
+   "replace": "persist and reload the full conversation"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "edit",
+   "field": "opt",
+   "find": "the MCP configuration stored under ~/.claude/",
+   "replace": "configured with `claude mcp add --scope user` (stored in ~/.claude.json)"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "is stored under ~/.claude/",
+   "replace": "is stored in ~/.claude.json"
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "note",
+   "text": "a model's self-reported confidence is poorly calibrated, so an observable criterion (e.g. 'the source does not state the value explicitly') is more reproducible than a numeric confidence threshold."
+  },
+  {
+   "id": "connectry:q-4.3-easy-4",
+   "action": "note",
+   "text": "prefilling the assistant turn is not supported on the newest models (it returns an error); structured outputs (`output_config.format`) replace it for enforcing output format."
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "note",
+   "text": "prefilling the assistant turn is not supported on the newest models; structured outputs (`output_config.format`, or a strict tool schema) are the current way to enforce output structure."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "note",
+   "text": "prefilling the assistant turn is not supported on the newest models; structured outputs (`output_config.format`, or a strict tool schema) are the current way to enforce output structure."
+  },
+  {
+   "id": "rohitg00:ccdv-m1-051",
+   "action": "edit",
+   "field": "q",
+   "find": "Which steps belong to the MCP connection lifecycle?",
+   "replace": "Under the MCP 2025-11-25 revision (before the 2026-07-28 stateless redesign removed the initialize handshake), which steps belong to the connection lifecycle?"
+  },
+  {
+   "id": "rohitg00:ccdv-m1-030",
+   "action": "note",
+   "text": "Note: API version 2026-10-21 removes temperature, top_p and top_k (sending them returns a 400 error), so this knob exists only on older API versions."
+  },
+  {
+   "id": "preporato:ccdv-f#14",
+   "action": "note",
+   "text": "On API version 2026-10-21 and later, temperature is removed entirely (sending it returns a 400 error), which is one more reason to assert on structure and key facts."
+  },
+  {
+   "id": "davidalex89:developer/d7/check#2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "A better tier (C) can be *more* susceptible since injected text is instructions.",
+   "replace": "A better tier (C) may resist injection more often, but it is still a probability reduction and does not bound what a successful injection can do."
+  },
+  {
+   "id": "davidalex89:developer/d3/quiz#1",
+   "action": "note",
+   "text": "Clarification: a rule in .claude/rules/ with `paths` frontmatter loads only when matching files are touched; rules without it are always in effect."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "set_option",
+   "match": "allowed-tools: [Read, Grep], so the skill",
+   "text": "disallowed-tools: [Write, Edit], so write and edit tools are removed from Claude's available tools while the skill is active."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#11",
+   "action": "edit",
+   "field": "opt",
+   "find": "Move it into a .claude/rules/deployment.md file (or",
+   "replace": "Move it into a .claude/rules/deployment.md file with paths: [\"infra/**\"] frontmatter (or"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#13",
+   "action": "note",
+   "text": "Note: a same-name personal skill would not cause an undefined collision; personal skills take precedence over project skills, so option C silently shadows the shared skill for that developer, which is why a different name is preferred."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#6",
+   "action": "set_option",
+   "match": "\"Task\"",
+   "text": "\"Agent\" (formerly \"Task\", still accepted as an alias)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#28",
+   "action": "edit",
+   "field": "q",
+   "find": "does not include `\"Task\"`",
+   "replace": "does not include `\"Agent\"` (formerly `\"Task\"`)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#49",
+   "action": "note",
+   "text": "Precisely: the API rejects citations combined with JSON outputs (output_config.format) with a 400, and tool_use inputs never carry citation blocks, so schema-enforced findings can't get API citations; an explicit excerpt field is the supported pattern."
+  },
+  {
+   "id": "davidalex89:associate/d6/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Most of the 30 hours were reading, not deciding",
+   "replace": "Most of the screening time goes to reading, not deciding"
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "a bigger model (B)",
+   "replace": "a bigger model (C)"
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#11",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Efficiency (A) removes the human, so it demands airtight guardrails, a confidence threshold, and an approval audit trail. Productivity (B) keeps",
+   "replace": "Efficiency (Team A) removes the human, so it demands airtight guardrails, a confidence threshold, and an approval audit trail. Productivity (Team B) keeps"
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#6",
+   "action": "set_option",
+   "match": "The subtasks are independent, can be explored in parallel",
+   "text": "The subtasks can't be predicted in advance, so a central model must break the task down dynamically, delegate pieces to workers, and synthesize their results."
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-024",
+   "action": "set_option",
+   "match": "Recall likely catalog entries before retrieval",
+   "text": "Have the model recall likely catalog entries from its own memory before retrieval"
+  },
+  {
+   "id": "rohitg00:lesson-22#2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Choosing a tool is neither.",
+   "replace": "A launch-approval condition is a decision rule, not a measured signal."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(B's alternative, D)",
+   "replace": "(D)"
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "B's alternative (C) throws out",
+   "replace": "option C throws out"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "context: fork isolates the skill's verbose output in a sub-agent context, and allowed-tools restricts tool access during execution — limiting it to read-only tools makes modification impossible rather than merely discouraged.",
+   "replace": "context: fork isolates the skill's verbose output in a sub-agent context, and `disallowed-tools` removes Write and Edit from the tool pool while the skill is active (`allowed-tools` would only pre-approve tools, not restrict the others)."
+  }
+ ],
+ "hold": [
+  "utkarsh1agarwal:exam-1#48",
+  "utkarsh1agarwal:exam-1#49",
+  "utkarsh1agarwal:exam-1#50",
+  "utkarsh1agarwal:exam-1#51",
+  "utkarsh1agarwal:exam-1#52",
+  "utkarsh1agarwal:exam-1#53",
+  "utkarsh1agarwal:exam-1#54",
+  "utkarsh1agarwal:exam-1#55",
+  "utkarsh1agarwal:exam-1#56",
+  "utkarsh1agarwal:exam-1#57",
+  "utkarsh1agarwal:exam-1#58",
+  "utkarsh1agarwal:exam-1#59",
+  "utkarsh1agarwal:exam-1#60",
+  "utkarsh1agarwal:exam-2#1",
+  "utkarsh1agarwal:exam-2#2",
+  "utkarsh1agarwal:exam-2#3",
+  "utkarsh1agarwal:exam-2#4",
+  "utkarsh1agarwal:exam-2#5",
+  "utkarsh1agarwal:exam-2#6",
+  "utkarsh1agarwal:exam-2#7",
+  "utkarsh1agarwal:exam-2#8",
+  "utkarsh1agarwal:exam-2#9",
+  "utkarsh1agarwal:exam-2#10",
+  "utkarsh1agarwal:exam-2#11",
+  "utkarsh1agarwal:exam-2#12",
+  "utkarsh1agarwal:exam-2#13",
+  "utkarsh1agarwal:exam-2#14",
+  "utkarsh1agarwal:exam-2#15",
+  "utkarsh1agarwal:exam-2#16",
+  "utkarsh1agarwal:exam-2#17",
+  "utkarsh1agarwal:exam-2#18",
+  "utkarsh1agarwal:exam-2#19",
+  "utkarsh1agarwal:exam-2#20",
+  "utkarsh1agarwal:exam-2#21",
+  "utkarsh1agarwal:exam-2#22",
+  "utkarsh1agarwal:exam-2#23",
+  "utkarsh1agarwal:exam-2#24",
+  "utkarsh1agarwal:exam-2#25",
+  "utkarsh1agarwal:exam-2#26",
+  "utkarsh1agarwal:exam-2#27",
+  "utkarsh1agarwal:exam-2#28",
+  "utkarsh1agarwal:exam-2#29",
+  "utkarsh1agarwal:exam-2#30",
+  "utkarsh1agarwal:exam-2#31",
+  "utkarsh1agarwal:exam-2#32",
+  "utkarsh1agarwal:exam-2#33",
+  "utkarsh1agarwal:exam-2#34",
+  "utkarsh1agarwal:exam-2#35",
+  "utkarsh1agarwal:exam-2#36",
+  "utkarsh1agarwal:exam-2#37",
+  "utkarsh1agarwal:exam-2#38",
+  "utkarsh1agarwal:exam-2#39",
+  "utkarsh1agarwal:exam-2#40",
+  "utkarsh1agarwal:exam-2#41",
+  "utkarsh1agarwal:exam-2#42",
+  "utkarsh1agarwal:exam-2#43",
+  "utkarsh1agarwal:exam-2#44",
+  "utkarsh1agarwal:exam-2#45",
+  "utkarsh1agarwal:exam-2#46",
+  "utkarsh1agarwal:exam-2#47",
+  "utkarsh1agarwal:exam-2#48",
+  "utkarsh1agarwal:exam-2#49",
+  "utkarsh1agarwal:exam-2#50",
+  "utkarsh1agarwal:exam-2#51",
+  "utkarsh1agarwal:exam-2#52",
+  "utkarsh1agarwal:exam-2#53",
+  "utkarsh1agarwal:exam-2#54",
+  "utkarsh1agarwal:exam-2#55",
+  "utkarsh1agarwal:exam-2#56",
+  "utkarsh1agarwal:exam-2#57",
+  "utkarsh1agarwal:exam-2#58",
+  "utkarsh1agarwal:exam-2#59",
+  "utkarsh1agarwal:exam-2#60",
+  "utkarsh1agarwal:exam-3#1",
+  "utkarsh1agarwal:exam-3#2",
+  "utkarsh1agarwal:exam-3#3",
+  "utkarsh1agarwal:exam-3#4",
+  "utkarsh1agarwal:exam-3#5",
+  "utkarsh1agarwal:exam-3#6",
+  "utkarsh1agarwal:exam-3#7",
+  "utkarsh1agarwal:exam-3#8",
+  "utkarsh1agarwal:exam-3#9",
+  "utkarsh1agarwal:exam-3#10",
+  "utkarsh1agarwal:exam-3#11",
+  "utkarsh1agarwal:exam-3#12",
+  "utkarsh1agarwal:exam-3#13",
+  "utkarsh1agarwal:exam-3#14",
+  "utkarsh1agarwal:exam-3#15",
+  "utkarsh1agarwal:exam-3#16",
+  "utkarsh1agarwal:exam-3#17",
+  "utkarsh1agarwal:exam-3#18",
+  "utkarsh1agarwal:exam-3#19",
+  "utkarsh1agarwal:exam-3#20",
+  "utkarsh1agarwal:exam-3#21",
+  "utkarsh1agarwal:exam-3#22",
+  "utkarsh1agarwal:exam-3#23",
+  "utkarsh1agarwal:exam-3#24",
+  "utkarsh1agarwal:exam-3#25",
+  "utkarsh1agarwal:exam-3#26",
+  "utkarsh1agarwal:exam-3#27",
+  "utkarsh1agarwal:exam-3#28",
+  "utkarsh1agarwal:exam-3#29",
+  "utkarsh1agarwal:exam-3#30",
+  "utkarsh1agarwal:exam-3#31",
+  "utkarsh1agarwal:exam-3#32",
+  "utkarsh1agarwal:exam-3#33",
+  "utkarsh1agarwal:exam-3#34",
+  "utkarsh1agarwal:exam-3#35",
+  "utkarsh1agarwal:exam-3#36",
+  "utkarsh1agarwal:exam-3#37",
+  "utkarsh1agarwal:exam-3#38",
+  "utkarsh1agarwal:exam-3#39",
+  "utkarsh1agarwal:exam-3#40",
+  "utkarsh1agarwal:exam-3#41",
+  "utkarsh1agarwal:exam-3#42",
+  "utkarsh1agarwal:exam-3#43",
+  "utkarsh1agarwal:exam-3#44",
+  "utkarsh1agarwal:exam-3#45",
+  "utkarsh1agarwal:exam-3#46",
+  "utkarsh1agarwal:exam-3#47",
+  "utkarsh1agarwal:exam-3#48",
+  "utkarsh1agarwal:exam-3#49",
+  "utkarsh1agarwal:exam-3#50",
+  "utkarsh1agarwal:exam-3#51",
+  "utkarsh1agarwal:exam-3#52",
+  "utkarsh1agarwal:exam-3#53",
+  "utkarsh1agarwal:exam-3#54",
+  "utkarsh1agarwal:exam-3#55",
+  "utkarsh1agarwal:exam-3#56",
+  "utkarsh1agarwal:exam-3#57",
+  "utkarsh1agarwal:exam-3#58",
+  "utkarsh1agarwal:exam-3#59",
+  "utkarsh1agarwal:exam-3#60",
+  "utkarsh1agarwal:exam-4#1",
+  "utkarsh1agarwal:exam-4#2",
+  "utkarsh1agarwal:exam-4#3",
+  "utkarsh1agarwal:exam-4#4",
+  "utkarsh1agarwal:exam-4#5",
+  "utkarsh1agarwal:exam-4#6",
+  "utkarsh1agarwal:exam-4#7",
+  "utkarsh1agarwal:exam-4#8",
+  "utkarsh1agarwal:exam-4#9",
+  "utkarsh1agarwal:exam-4#10",
+  "utkarsh1agarwal:exam-4#11",
+  "utkarsh1agarwal:exam-4#12",
+  "utkarsh1agarwal:exam-4#13",
+  "utkarsh1agarwal:exam-4#14",
+  "utkarsh1agarwal:exam-4#15",
+  "utkarsh1agarwal:exam-4#16",
+  "utkarsh1agarwal:exam-4#17",
+  "utkarsh1agarwal:exam-4#18",
+  "utkarsh1agarwal:exam-4#19",
+  "utkarsh1agarwal:exam-4#20",
+  "utkarsh1agarwal:exam-4#21",
+  "utkarsh1agarwal:exam-4#22",
+  "utkarsh1agarwal:exam-4#23",
+  "utkarsh1agarwal:exam-4#24",
+  "utkarsh1agarwal:exam-4#25",
+  "utkarsh1agarwal:exam-4#26",
+  "utkarsh1agarwal:exam-4#27",
+  "utkarsh1agarwal:exam-4#28",
+  "utkarsh1agarwal:exam-4#29",
+  "utkarsh1agarwal:exam-4#30",
+  "utkarsh1agarwal:exam-4#31",
+  "utkarsh1agarwal:exam-4#32",
+  "utkarsh1agarwal:exam-4#33",
+  "utkarsh1agarwal:exam-4#34",
+  "utkarsh1agarwal:exam-4#35",
+  "utkarsh1agarwal:exam-4#36",
+  "utkarsh1agarwal:exam-4#37",
+  "utkarsh1agarwal:exam-4#38",
+  "utkarsh1agarwal:exam-4#39",
+  "utkarsh1agarwal:exam-4#40",
+  "utkarsh1agarwal:exam-4#41",
+  "utkarsh1agarwal:exam-4#42",
+  "utkarsh1agarwal:exam-4#43",
+  "utkarsh1agarwal:exam-4#44",
+  "utkarsh1agarwal:exam-4#45",
+  "utkarsh1agarwal:exam-4#46",
+  "utkarsh1agarwal:exam-4#47",
+  "utkarsh1agarwal:exam-4#48",
+  "utkarsh1agarwal:exam-4#49",
+  "utkarsh1agarwal:exam-4#50",
+  "utkarsh1agarwal:exam-4#51",
+  "utkarsh1agarwal:exam-4#52",
+  "utkarsh1agarwal:exam-4#53",
+  "utkarsh1agarwal:exam-4#54",
+  "utkarsh1agarwal:exam-4#55",
+  "utkarsh1agarwal:exam-4#56",
+  "utkarsh1agarwal:exam-4#57",
+  "utkarsh1agarwal:exam-4#58",
+  "utkarsh1agarwal:exam-4#59",
+  "utkarsh1agarwal:exam-4#60",
+  "utkarsh1agarwal:exam-5#1",
+  "utkarsh1agarwal:exam-5#2",
+  "utkarsh1agarwal:exam-5#3",
+  "utkarsh1agarwal:exam-5#4",
+  "utkarsh1agarwal:exam-5#5",
+  "utkarsh1agarwal:exam-5#6",
+  "utkarsh1agarwal:exam-5#7",
+  "utkarsh1agarwal:exam-5#8",
+  "utkarsh1agarwal:exam-5#9",
+  "utkarsh1agarwal:exam-5#10",
+  "utkarsh1agarwal:exam-5#11",
+  "utkarsh1agarwal:exam-5#12",
+  "utkarsh1agarwal:exam-5#13",
+  "utkarsh1agarwal:exam-5#14",
+  "utkarsh1agarwal:exam-5#15",
+  "utkarsh1agarwal:exam-5#16",
+  "utkarsh1agarwal:exam-5#17",
+  "utkarsh1agarwal:exam-5#18",
+  "utkarsh1agarwal:exam-5#19",
+  "utkarsh1agarwal:exam-5#20",
+  "utkarsh1agarwal:exam-5#21",
+  "utkarsh1agarwal:exam-5#22",
+  "utkarsh1agarwal:exam-5#23",
+  "utkarsh1agarwal:exam-5#24",
+  "utkarsh1agarwal:exam-5#25",
+  "utkarsh1agarwal:exam-5#26",
+  "utkarsh1agarwal:exam-5#27",
+  "utkarsh1agarwal:exam-5#28",
+  "utkarsh1agarwal:exam-5#29",
+  "utkarsh1agarwal:exam-5#30",
+  "utkarsh1agarwal:exam-5#31",
+  "utkarsh1agarwal:exam-5#32",
+  "utkarsh1agarwal:exam-5#33",
+  "utkarsh1agarwal:exam-5#34",
+  "utkarsh1agarwal:exam-5#35",
+  "utkarsh1agarwal:exam-5#36",
+  "utkarsh1agarwal:exam-5#37",
+  "utkarsh1agarwal:exam-5#38",
+  "utkarsh1agarwal:exam-5#39",
+  "utkarsh1agarwal:exam-5#40",
+  "utkarsh1agarwal:exam-5#41",
+  "utkarsh1agarwal:exam-5#42",
+  "utkarsh1agarwal:exam-5#43",
+  "utkarsh1agarwal:exam-5#44",
+  "utkarsh1agarwal:exam-5#45",
+  "utkarsh1agarwal:exam-5#46",
+  "utkarsh1agarwal:exam-5#47",
+  "utkarsh1agarwal:exam-5#48",
+  "utkarsh1agarwal:exam-5#49",
+  "utkarsh1agarwal:exam-5#50",
+  "utkarsh1agarwal:exam-5#51",
+  "utkarsh1agarwal:exam-5#52",
+  "utkarsh1agarwal:exam-5#53",
+  "utkarsh1agarwal:exam-5#54",
+  "utkarsh1agarwal:exam-5#55",
+  "utkarsh1agarwal:exam-5#56",
+  "utkarsh1agarwal:exam-5#57",
+  "utkarsh1agarwal:exam-5#58",
+  "utkarsh1agarwal:exam-5#59",
+  "utkarsh1agarwal:exam-5#60",
+  "utkarsh1agarwal:exam-6#1",
+  "utkarsh1agarwal:exam-6#2",
+  "utkarsh1agarwal:exam-6#3",
+  "utkarsh1agarwal:exam-6#4",
+  "utkarsh1agarwal:exam-6#5",
+  "utkarsh1agarwal:exam-6#6",
+  "utkarsh1agarwal:exam-6#7",
+  "utkarsh1agarwal:exam-6#8",
+  "utkarsh1agarwal:exam-6#9",
+  "utkarsh1agarwal:exam-6#10",
+  "utkarsh1agarwal:exam-6#11",
+  "utkarsh1agarwal:exam-6#12",
+  "utkarsh1agarwal:exam-6#13",
+  "utkarsh1agarwal:exam-6#14",
+  "utkarsh1agarwal:exam-6#15",
+  "utkarsh1agarwal:exam-6#16",
+  "utkarsh1agarwal:exam-6#17",
+  "utkarsh1agarwal:exam-6#18",
+  "utkarsh1agarwal:exam-6#19",
+  "utkarsh1agarwal:exam-6#20",
+  "utkarsh1agarwal:exam-6#21",
+  "utkarsh1agarwal:exam-6#22",
+  "utkarsh1agarwal:exam-6#23",
+  "utkarsh1agarwal:exam-6#24",
+  "utkarsh1agarwal:exam-6#25",
+  "utkarsh1agarwal:exam-6#26",
+  "utkarsh1agarwal:exam-6#27",
+  "utkarsh1agarwal:exam-6#28",
+  "utkarsh1agarwal:exam-6#29",
+  "utkarsh1agarwal:exam-6#30",
+  "utkarsh1agarwal:exam-6#31",
+  "utkarsh1agarwal:exam-6#32",
+  "utkarsh1agarwal:exam-6#33",
+  "utkarsh1agarwal:exam-6#34"
+ ]
+}
