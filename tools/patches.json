@@ -1466,8 +1466,212 @@
    "field": "explanation",
    "find": "context: fork isolates the skill's verbose output in a sub-agent context, and allowed-tools restricts tool access during execution — limiting it to read-only tools makes modification impossible rather than merely discouraged.",
    "replace": "context: fork isolates the skill's verbose output in a sub-agent context, and `disallowed-tools` removes Write and Edit from the tool pool while the skill is active (`allowed-tools` would only pre-approve tools, not restrict the others)."
+  },
+  {
+   "id": "amey:associate-foundations-practice-10",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Configuration and Knowledge Management"
+  },
+  {
+   "id": "amey:associate-foundations-practice-34",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "amey:associate-foundations-practice-35",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Workflow Design and Integration"
+  },
+  {
+   "id": "amey:associate-foundations-mock1-11",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Configuration and Knowledge Management"
+  },
+  {
+   "id": "amey:associate-foundations-mock2-14",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "amey:associate-foundations-mock2-15",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "amey:associate-foundations-mock3-14",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "amey:associate-foundations-mock3-15",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "rohitg00:ccao-d-013",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "rohitg00:ccao-d-014",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "rohitg00:ccao-m1-055",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "rohitg00:ccao-m1-056",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "rohitg00:ccao-m1-057",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "rohitg00:ccao-m1-058",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Configuration and Knowledge Management"
+  },
+  {
+   "id": "rohitg00:ccao-m1-059",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "rohitg00:ccao-m1-060",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Workflow Design and Integration"
+  },
+  {
+   "id": "davidalex89:associate/d7/check#1",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "davidalex89:associate/d7/check#2",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Workflow Design and Integration"
+  },
+  {
+   "id": "davidalex89:associate/d7/check#3",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#1",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#2",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#3",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#4",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#5",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Workflow Design and Integration"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#6",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#7",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Output Evaluation and Quality Control"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#8",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#9",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Workflow Design and Integration"
+  },
+  {
+   "id": "davidalex89:associate/d7/quiz#10",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Capability, Model, and Context Selection"
+  },
+  {
+   "id": "preporato:ccao-f#28",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
+  },
+  {
+   "id": "preporato:ccao-f#29",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Configuration and Knowledge Management"
+  },
+  {
+   "id": "preporato:ccao-f#30",
+   "action": "set_domain",
+   "from": "Troubleshooting and Optimization",
+   "to": "Task Definition and Prompting"
   }
  ],
+ "domains": {
+  "associate-foundations": {
+   "Prompting and Task Execution": "Task Definition and Prompting",
+   "Output Evaluation and Validation": "Output Evaluation and Quality Control",
+   "Product and Model Selection": "Capability, Model, and Context Selection",
+   "Workflow Integration and Solution Design": "Workflow Design and Integration",
+   "Governance, Risk, and Responsible Use": "Responsible Use, Data Protection, and Governance"
+  },
+  "developer-foundations": {
+   "Tools and MCPs": "Tools and MCP"
+  }
+ },
  "hold": [
   "utkarsh1agarwal:exam-1#48",
   "utkarsh1agarwal:exam-1#49",
@@ -1756,5 +1960,145 @@
   "utkarsh1agarwal:exam-6#32",
   "utkarsh1agarwal:exam-6#33",
   "utkarsh1agarwal:exam-6#34"
+ ],
+ "reviews": [
+  {
+   "id": "ccdvp:d1-001",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/mid-conversation-system-messages",
+    "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+   ],
+   "change": "stem: hard block lives in the order tool; the system message is guidance"
+  },
+  {
+   "id": "ccdvp:d1-002",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/agent-sdk/sessions"
+   ],
+   "change": "resume across pods needs the transcript in durable storage (session store)"
+  },
+  {
+   "id": "ccdvp:d2-001",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
+    "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector",
+    "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
+   ],
+   "change": "rationale: Bedrock lacks both features; not \"first-party only\""
+  },
+  {
+   "id": "ccdvp:d2-002",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d3-001",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/manage-claude/opentelemetry",
+    "https://platform.claude.com/docs/en/manage-claude/opentelemetry/api"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-002",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d4-001",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+    "https://platform.claude.com/docs/en/api/errors"
+   ],
+   "change": "stem gives stop_details evidence to rule out empty end_turn responses"
+  },
+  {
+   "id": "ccdvp:d4-002",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [],
+   "change": "stem scope covers incident and re-release, so the regression-eval option is in scope"
+  },
+  {
+   "id": "ccdvp:d5-001",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-002",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [],
+   "change": "explanation: dropped unsupported \"pin the judge version\""
+  },
+  {
+   "id": "ccdvp:d6-001",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+    "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-002",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+   ],
+   "change": "pre-warm on deploy alone does not survive gaps beyond the 5-minute TTL"
+  },
+  {
+   "id": "ccdvp:d7-001",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/agent-sdk/hooks",
+    "https://code.claude.com/docs/en/agent-sdk/permissions"
+   ],
+   "change": "distractor: dropped unsupported \"has to ask a human\""
+  },
+  {
+   "id": "ccdvp:d7-002",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/manage-claude/workload-identity-federation"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-001",
+   "date": "2026-11-24",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d8-002",
+   "date": "2026-11-24",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/managed-mcp",
+    "https://code.claude.com/docs/en/settings",
+    "https://code.claude.com/docs/en/mcp"
+   ],
+   "change": "key needs allowManagedMcpServersOnly; allowlists from other scopes merge otherwise"
+  }
  ]
 }

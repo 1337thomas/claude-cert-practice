@@ -1,0 +1,502 @@
+{
+ "developer-professional": [
+  {
+   "id": "ccdvp:d1-001",
+   "mock": 3,
+   "domain": "D1 Advanced Agent Architecture & Orchestration",
+   "source": "Original",
+   "q": "A support agent runs on Claude Opus 5.5 with a 40K-token tools-plus-system prefix and long multi-turn histories, all served from the prompt cache. A plan was discontinued: the order tool already rejects it, and every active session should stop offering it from the next turn on. The team edited the top-level `system` prompt for live sessions, and `cache_read_input_tokens` collapsed while cost tripled. Which change applies the instruction to live sessions with the least cache impact?",
+   "options": [
+    {
+     "text": "Close each live session and start a new one with the updated `system` prompt and a compacted summary of the earlier conversation as the first user turn.",
+     "correct": false,
+     "why": "It enforces the rule, but it throws away the entire cache and loses detail from the history. A fresh session is the most expensive option here."
+    },
+    {
+     "text": "Keep editing the top-level `system` prompt, but add a second `cache_control` breakpoint right after the edited paragraph so the remaining prompt is still reused.",
+     "correct": false,
+     "why": "Caching is a prefix match: a byte change invalidates everything after it. An extra breakpoint after the edit cannot make later content readable again."
+    },
+    {
+     "text": "Carry the instruction in the description of a new no-op tool, so the top-level `system` prompt stays untouched and only the tools block changes for live sessions.",
+     "correct": false,
+     "why": "Tools render first. Changing the tool list invalidates the tools, system and messages caches at once, which is worse than the system edit."
+    },
+    {
+     "text": "Append the instruction as a `role: \"system\"` message after the latest user turn, and keep the top-level `system` block and the tool list byte-identical.",
+     "correct": true,
+     "why": "Supported on Opus 5.5 without a beta header. The message sits after the cached history, so tools, system and earlier turns stay valid read points. The hard block stays in the order tool."
+    }
+   ],
+   "explanation": "Mid-conversation operator instructions belong in a `role: \"system\"` message appended to `messages`. Render order is tools → system → messages, so only an append after the cached history preserves the prefix."
+  },
+  {
+   "id": "ccdvp:d1-002",
+   "mock": 3,
+   "domain": "D1 Advanced Agent Architecture & Orchestration",
+   "source": "Original",
+   "q": "A data-migration agent built on the Agent SDK runs for about six hours and creates one ticket per migrated table through a `create_ticket` tool. When its pod is rescheduled, the job restarts from the beginning; after resuming, it created duplicate tickets for tables it had already handled. Which two changes make the job durable? (Select TWO.)",
+   "options": [
+    {
+     "text": "Mirror the session transcript and a checkpoint of completed tables to durable storage outside the pod, and resume the session from there after a restart.",
+     "correct": true,
+     "why": "Durable execution needs state the harness owns. Session files live on the local disk, so resuming on a new pod needs the transcript in shared storage, for example through a session store."
+    },
+    {
+     "text": "Enable server-side compaction so that the history stays small, and replay the compacted summary to the agent as its first message after any restart.",
+     "correct": false,
+     "why": "Compaction manages context size within a session. A summary is not a reliable record of which side effects already happened."
+    },
+    {
+     "text": "Pass an idempotency key derived from the table name to `create_ticket`, and have the tool return the existing ticket when that key was already used.",
+     "correct": true,
+     "why": "Resumes can replay a side effect. Idempotency enforced in the tool makes a repeated call harmless, whatever the model decides."
+    },
+    {
+     "text": "Add a system prompt rule telling the agent to always search for an existing ticket before creating one, and to skip any table that already has an open ticket.",
+     "correct": false,
+     "why": "Useful as guidance, but it is probabilistic and relies on the model always checking. Duplicate side effects need a deterministic guard in the tool."
+    },
+    {
+     "text": "Raise the agent's turn limit and run the job on a node pool without preemption, so that the six-hour run can finish without any interruption at all.",
+     "correct": false,
+     "why": "It lowers the chance of a restart but does not make the job survive one. Deploys, crashes and model changes still interrupt long runs."
+    }
+   ],
+   "_select": 2,
+   "explanation": "Long-running agents need two things to survive a restart: state persisted outside the context (session ID plus checkpoint) and idempotent side effects. Prompt rules and fewer interruptions only reduce the symptom."
+  },
+  {
+   "id": "ccdvp:d2-001",
+   "mock": 3,
+   "domain": "D2 Production Integration, Reliability & Knowledge Grounding",
+   "source": "Original",
+   "q": "A platform team adds Amazon Bedrock as a cross-platform fallback for its first-party Claude API workloads. In a failover drill, interactive chat traffic switches cleanly. The nightly job that uses the Message Batches API and an agent that uses the MCP connector (`mcp_servers` on the Messages API) both fail on the fallback path. What is the most accurate diagnosis?",
+   "options": [
+    {
+     "text": "The fallback requests still send first-party model IDs; switching them to Bedrock's prefixed model IDs will make both the batch job and the MCP agent work again on Bedrock.",
+     "correct": false,
+     "why": "Bedrock does use prefixed model IDs, so this is a real migration step. But chat already works, and correct IDs cannot add missing features."
+    },
+    {
+     "text": "Both features are unavailable on Bedrock, so the fallback plan needs a per-feature path: queue batch work until recovery and run MCP through a client-side harness.",
+     "correct": true,
+     "why": "Per the platform docs, Amazon Bedrock offers neither Message Batches nor the MCP connector (other platforms differ). Fallbacks must respect per-platform feature parity."
+    },
+    {
+     "text": "The Bedrock account lacks the IAM permissions for these two endpoints; granting them to the fallback role restores both workloads without code changes.",
+     "correct": false,
+     "why": "Missing IAM permissions would also break chat. The two failing workloads depend on features that do not exist on the platform."
+    },
+    {
+     "text": "Bedrock enforces lower default quotas than the Claude API, so the batch job and the agent are throttled; a quota increase brings both workloads back.",
+     "correct": false,
+     "why": "Quotas can differ by platform, but throttling shows up as rate-limit errors, not as unsupported request shapes. It does not explain the pattern."
+    }
+   ],
+   "explanation": "Cross-platform fallback is not a URL swap. Check each feature a workload uses against the platform's availability before failover, and design an alternative path where parity is missing."
+  },
+  {
+   "id": "ccdvp:d2-002",
+   "mock": 3,
+   "domain": "D2 Production Integration, Reliability & Knowledge Grounding",
+   "source": "Original",
+   "q": "A policy assistant retrieves the top 50 chunks by hybrid search, reranks them, and passes the top 5 to Claude with citations enabled. After a re-index, wrong answers rise. Stage-level traces for failed questions show the correct chunk in the top 50 in 92% of cases but in the final top 5 in only 41%. When it is in the top 5, answers are correct. Where should the team act first?",
+   "options": [
+    {
+     "text": "On the reranking stage: measure recall at 5 after reranking on a labeled set, then fix the reranker input or model before touching chunking or the prompt.",
+     "correct": true,
+     "why": "Retrieval finds the evidence and generation uses it correctly when present. The loss happens between top 50 and top 5, which is the reranker's job."
+    },
+    {
+     "text": "On chunking: the re-index changed chunk boundaries, so smaller overlapping chunks will raise the chance that the right passage lands in the final five.",
+     "correct": false,
+     "why": "Chunking may be what changed in the re-index, but the traces show retrieval still finds the chunk. Rechunking does not target the observed loss."
+    },
+    {
+     "text": "On the embedding model: a domain-tuned embedding model will rank the correct chunk higher, so it will reach the final five more often after reranking.",
+     "correct": false,
+     "why": "First-stage recall is already 92%. A new embedding model changes the stage that works and leaves the failing stage untouched."
+    },
+    {
+     "text": "On generation: instruct Claude to state that it is unsure when the provided chunks do not support an answer, so wrong answers turn into uncertainty statements.",
+     "correct": false,
+     "why": "Declaring uncertainty is good grounding practice and lowers harm, but it does not fix the retrieval failure that removes the evidence."
+    }
+   ],
+   "explanation": "Diagnose retrieval failures stage by stage: recall at retrieval, then after reranking, then answer correctness given the evidence. Fix the first stage where the correct evidence is lost."
+  },
+  {
+   "id": "ccdvp:d3-001",
+   "mock": 3,
+   "domain": "D3 Observability & Production Monitoring",
+   "source": "Original",
+   "q": "A healthcare SaaS company runs a Claude agent on the first-party API under zero data retention. Engineers want Claude API tracing (server-side spans sent to an OTLP destination) to debug slow agent turns. Compliance forbids storing prompt or response text in the third-party observability backend. Which configuration meets both goals?",
+   "options": [
+    {
+     "text": "Use SDK tracing with full content enabled instead, because SDK spans stay inside the application process and are never sent on to an external backend.",
+     "correct": false,
+     "why": "SDK spans are created in-process, but the application's own exporter sends them to the backend. Full content would still leave the boundary."
+    },
+    {
+     "text": "Add the destination with the full-content mode, because zero data retention already prevents the API from exporting prompt or response text to any destination.",
+     "correct": false,
+     "why": "Per the docs, zero data retention does not limit the content mode. Full content would put prompt text into the backend, which compliance forbids."
+    },
+    {
+     "text": "Skip tracing entirely and rely on the Usage and Cost API, which reports token and latency figures per request without exporting any prompt or response text.",
+     "correct": false,
+     "why": "Usage and cost reporting helps with spend, but it is aggregated and has no spans per tool call or turn. It cannot show where an agent turn is slow."
+    },
+    {
+     "text": "Add the destination with the metadata-only content mode, which still exports timing, status and token counts, and join API spans to app traces via `traceparent`.",
+     "correct": true,
+     "why": "Metadata only is the default content mode: identifiers, timing, status and token counts, no prompts or responses. Trace context links the spans to the app's own traces."
+    }
+   ],
+   "explanation": "Under privacy constraints, keep content capture off (metadata-only) and rely on timing, status and token attributes plus trace-context propagation. ZDR governs Anthropic's retention, not what you export to your own backend."
+  },
+  {
+   "id": "ccdvp:d3-002",
+   "mock": 3,
+   "domain": "D3 Observability & Production Monitoring",
+   "source": "Original",
+   "q": "An agent platform handles about 2 million sessions per day and keeps traces with 1% head sampling. Its task-success SLI fell from 96% to 91% over a week. Engineers reviewed 30 random failed traces one by one and found no common cause. What should they do next?",
+   "options": [
+    {
+     "text": "Roll back the most recent prompt version on all traffic, since prompt changes are the most frequent source of regressions, and then watch whether the SLI recovers.",
+     "correct": false,
+     "why": "Rollback is a valid mitigation once evidence points to the prompt. Without that evidence it is a guess that may not change anything."
+    },
+    {
+     "text": "Score every sampled trace with an LLM judge for overall quality, and alert when the daily average score falls below the level observed before the drop began.",
+     "correct": false,
+     "why": "A judge score is a useful signal, but it measures the drop again and does not explain it. Cohort analysis is what isolates the cause."
+    },
+    {
+     "text": "Raise head sampling to 10% so that engineers get ten times more failed traces, then review a larger random sample of them by hand until a pattern becomes clear.",
+     "correct": false,
+     "why": "More data helps, but head sampling still drops most failures, and manual review of random traces does not scale. Aggregation is the missing step."
+    },
+    {
+     "text": "Keep every failed session through tail-based sampling, then compare failure rates by cohort such as tool, tenant, prompt version and input size to find the outlier.",
+     "correct": true,
+     "why": "Systemic issues show up as an over-represented cohort, not in single traces. Tail sampling keeps all failures, and aggregation makes the pattern visible."
+    }
+   ],
+   "explanation": "When single traces show nothing, the issue is statistical. Retain failures (tail sampling), aggregate, and look for the cohort whose failure rate moved."
+  },
+  {
+   "id": "ccdvp:d4-001",
+   "mock": 3,
+   "domain": "D4 Advanced Debugging & Incident Response",
+   "source": "Original",
+   "q": "After a model upgrade, about 3% of requests to an internal security-research assistant return HTTP 200 but show an empty answer in the UI. The team suspects a parsing bug. The client reads only `text` blocks and never logs `stop_reason`, but a few captured raw responses carry a non-null `stop_details` object. What is the most likely cause, and what should they check first?",
+   "options": [
+    {
+     "text": "The reply ran out of output budget: check for `stop_reason: \"max_tokens\"`, then raise `max_tokens` so that the model can finish its answer before it has to stop.",
+     "correct": false,
+     "why": "Truncation is worth ruling out, and it also returns HTTP 200. But a length stop leaves partial text, not an empty answer."
+    },
+    {
+     "text": "Thinking display is set to omitted by default: check the `display` setting, then switch it to summarized so the answer text appears again in the UI.",
+     "correct": false,
+     "why": "On newer models the default display omits thinking text, but that only affects `thinking` blocks. The answer arrives in `text` blocks either way."
+    },
+    {
+     "text": "The model declined the request: check for `stop_reason: \"refusal\"` and its `stop_details` category, then send those requests to a fallback or safety path.",
+     "correct": true,
+     "why": "A safety refusal returns HTTP 200 with the `refusal` stop reason. `stop_details` is populated only for refusals and names the category; security topics can trigger such classifiers."
+    },
+    {
+     "text": "The API was overloaded and dropped the content: check for `overloaded_error` responses in the logs, then add retries with exponential backoff.",
+     "correct": false,
+     "why": "Overload is real and retryable, but it arrives as HTTP 529 with an error body, not as a successful response without text."
+    }
+   ],
+   "explanation": "Refusal is its own failure class: HTTP 200, `stop_reason: \"refusal\"`, a `stop_details` category. Always branch on `stop_reason` before reading content and log it, so refusals do not look like empty answers."
+  },
+  {
+   "id": "ccdvp:d4-002",
+   "mock": 3,
+   "domain": "D4 Advanced Debugging & Incident Response",
+   "source": "Original",
+   "q": "Prompt v42 of a billing assistant is in a progressive rollout at 50% of traffic. Within two hours, complaints about wrong refund amounts spike, all from conversations served by v42. The prompt version is a runtime flag. Which two actions should the team take, between now and the next release of v42? (Select TWO.)",
+   "options": [
+    {
+     "text": "Route the v42 traffic to a larger model while keeping the new prompt, since a stronger model is less likely to miscalculate the refund amounts.",
+     "correct": false,
+     "why": "It changes a second variable during an incident and may not fix a prompt regression. Restore the known-good state first."
+    },
+    {
+     "text": "Set the flag back to v41 for all traffic now, keep the v42 traces for analysis, and tell support which window of conversations may be affected.",
+     "correct": true,
+     "why": "Mitigate first. The evidence points at v42, a rollback by flag is fast and reversible, and preserved traces keep the root-cause analysis possible."
+    },
+    {
+     "text": "Add the failing conversations as regression cases to the release eval gate, so a fixed v42 cannot reach users again until it passes them.",
+     "correct": true,
+     "why": "This turns the incident into a learning loop: the failure becomes a permanent check that blocks the same regression."
+    },
+    {
+     "text": "Hotfix v42 with an instruction to double-check refund amounts against the billing record, and ship it to 100% so all users get the fix.",
+     "correct": false,
+     "why": "An untested fix rolled out to everyone widens the blast radius. The rollback is safer, and the fix should go through the gate first."
+    },
+    {
+     "text": "Freeze the rollout at 50% while the team investigates, so that the comparison between v41 and v42 stays valid for the incident analysis.",
+     "correct": false,
+     "why": "Comparison data matters, but half of the users keep getting wrong refunds. Existing traces already provide the evidence."
+    }
+   ],
+   "_select": 2,
+   "explanation": "Incident order: mitigate (roll back to known good), preserve evidence, communicate, then convert the failure into regression evals that gate the next release."
+  },
+  {
+   "id": "ccdvp:d5-001",
+   "mock": 3,
+   "domain": "D5 Evaluation Engineering & Quality Assurance",
+   "source": "Original",
+   "q": "An extraction service turns invoices into 14 structured fields. Releases are gated by an LLM judge that rates overall quality from 1 to 5. A release passed with an unchanged average, yet it swapped day and month in the due date on 8% of European invoices. Which change to the evaluation would have caught this regression?",
+   "options": [
+    {
+     "text": "Extend the judge rubric with an explicit date-format criterion, so that the judge lowers its score whenever a date in the output is written in the wrong order.",
+     "correct": false,
+     "why": "A better rubric would help with this one field, but it stays a probabilistic judgment and still averages away errors in other fields."
+    },
+    {
+     "text": "Collect thumbs-up and thumbs-down feedback from finance users on live traffic, and block the next release when the share of negative ratings rises.",
+     "correct": false,
+     "why": "Online feedback complements offline evals, but it is slow, sparse and arrives after users are affected. It is not a release gate."
+    },
+    {
+     "text": "Have two human reviewers grade a weekly sample of 50 invoices end to end, and add their average rating to the judge score before each release decision.",
+     "correct": false,
+     "why": "Human review helps calibration, but a sample of 50 rarely shows an 8% regional error, and an overall rating hides which field broke."
+    },
+    {
+     "text": "Compare each field with labeled golden values after normalization, and gate releases on per-field accuracy and schema validity instead of one overall score.",
+     "correct": true,
+     "why": "Extraction has right answers, so code-based checks per field are exact, cheap and sensitive. A single average hides an 8% error in one field."
+    }
+   ],
+   "explanation": "Choose the metric by task type. Extraction: code-based checks against golden labels, per field. Open-ended generation: a judge calibrated against human labels. Live feedback complements but does not replace either."
+  },
+  {
+   "id": "ccdvp:d5-002",
+   "mock": 3,
+   "domain": "D5 Evaluation Engineering & Quality Assurance",
+   "source": "Original",
+   "q": "A team moves its LLM judge to a newer, cheaper model. The prompt-release gate's pass rate jumps from 72% to 88% without any change to the product prompts. On the old judge, agreement with human labels had been measured and accepted. What should the team do?",
+   "options": [
+    {
+     "text": "Run both judges on every candidate and gate on the average of their scores, so differences between the two models even out over many releases.",
+     "correct": false,
+     "why": "An ensemble can reduce variance, but averaging an uncalibrated judge into the gate dilutes the calibrated one instead of validating it."
+    },
+    {
+     "text": "Accept the new pass rate, since a newer model is more capable and is likely to judge better than the old one, and then recalibrate at the next scheduled review.",
+     "correct": false,
+     "why": "Capability does not equal calibration. The new judge may simply be more lenient, and the gate would let regressions through."
+    },
+    {
+     "text": "Treat the judge swap as a release: measure the new judge's agreement with the human-labeled set, and keep the old judge gating until agreement is acceptable.",
+     "correct": true,
+     "why": "A pass-rate jump with no product change is judge drift. The judge has to earn gating authority again through calibration against human labels."
+    },
+    {
+     "text": "Raise the pass threshold of the new judge until the pass rate returns to about 72% on the same candidates, then let it gate the releases again.",
+     "correct": false,
+     "why": "Matching the old rate is a quick fix, but it tunes to a number, not to human judgment. Which cases pass can still differ."
+    }
+   ],
+   "explanation": "Judge drift across model versions is expected. Treat a judge model change like a release: re-measure agreement with human labels before a new judge model gets gating authority."
+  },
+  {
+   "id": "ccdvp:d6-001",
+   "mock": 3,
+   "domain": "D6 Cost & Latency Optimization at Scale",
+   "source": "Original",
+   "q": "Every night a pipeline classifies about 400,000 support tickets. Each request repeats the same 6,000-token instruction block, followed by one ticket. Requests go out synchronously at a concurrency of 50 without caching. Results are due within 24 hours, and the current model's quality is validated by an eval. Which two changes cut cost the most without touching quality? (Select TWO.)",
+   "options": [
+    {
+     "text": "Route all tickets to the smallest Claude model, because ticket classification is a simple task that any model tier should handle at similar quality.",
+     "correct": false,
+     "why": "Routing can save a lot, but the quality of the smaller model is not validated. The question asks for savings without touching quality."
+    },
+    {
+     "text": "Raise the concurrency from 50 to 200 parallel requests, so the pipeline finishes in a quarter of the time and keeps workers busy for far fewer hours.",
+     "correct": false,
+     "why": "This improves throughput, not token cost. The API bill stays the same, and higher concurrency is more likely to hit rate limits."
+    },
+    {
+     "text": "Submit the tickets through the Message Batches API, which bills at half the standard price and returns results asynchronously, within 24 hours at most.",
+     "correct": true,
+     "why": "The deadline tolerates asynchronous processing, and batch pricing is a 50% discount with the same model and prompt."
+    },
+    {
+     "text": "Shorten the instruction block to about 3,000 tokens by removing the examples, which halves the repeated input tokens without changing the model or the code path.",
+     "correct": false,
+     "why": "It saves tokens, but removing examples can change quality and needs a new eval. Caching recovers most of that saving for free."
+    },
+    {
+     "text": "Put a `cache_control` breakpoint at the end of the shared instruction block, so the 6,000 repeated tokens are read from the cache at a fraction of the price.",
+     "correct": true,
+     "why": "The instructions are an identical prefix on every request. Cache reads cost a fraction of base input, and caching also works inside batches."
+    }
+   ],
+   "_select": 2,
+   "explanation": "For delay-tolerant, repetitive workloads the free wins come first: batch pricing and caching of the shared prefix. Model routing and prompt cuts trade quality and need evaluation."
+  },
+  {
+   "id": "ccdvp:d6-002",
+   "mock": 3,
+   "domain": "D6 Cost & Latency Optimization at Scale",
+   "source": "Original",
+   "q": "A voice assistant must start speaking within 1.0 s, but time to first token is 2.8 s at the median. Responses are short and streaming is already on. Each request carries a 30K-token prompt, of which 28K are static instructions and reference data. Traces show the wait happens before the first token even at the lowest effort level. Which change best reduces time to first token?",
+   "options": [
+    {
+     "text": "Lower `max_tokens` from 4,096 to 512, since a smaller output budget lets the model plan a shorter reply and start emitting tokens sooner.",
+     "correct": false,
+     "why": "`max_tokens` caps output length and mainly affects total time. It does nothing for processing the 30K-token input before the first token."
+    },
+    {
+     "text": "Move the assistant to the Message Batches API at off-peak times, where requests queue less and the model can start processing each long prompt sooner.",
+     "correct": false,
+     "why": "Batches are asynchronous and can take up to 24 hours. They lower cost and are unsuitable for a real-time voice interaction."
+    },
+    {
+     "text": "Cache the 28K static prefix with a breakpoint at its end, and keep it warm with a 1-hour TTL or scheduled re-warms so quiet periods do not cause misses.",
+     "correct": true,
+     "why": "The delay is prefill of a large, stable prefix. Cache reads skip most of that work; the default 5-minute TTL needs a longer TTL or re-warming to survive quiet periods."
+    },
+    {
+     "text": "Run independent tool calls in parallel instead of one after another, so that the assistant spends less time waiting before it can speak to the user.",
+     "correct": false,
+     "why": "Parallel tool execution is a valid latency lever when tools are on the critical path. Here the wait is before the first token, so it does not apply."
+    }
+   ],
+   "explanation": "Separate time to first token from total latency. A large stable prefix makes TTFT a prefill problem, which caching (and pre-warming) addresses. Output limits and tool parallelism affect other parts of the latency profile."
+  },
+  {
+   "id": "ccdvp:d7-001",
+   "mock": 3,
+   "domain": "D7 Runtime Guardrails & Production Security",
+   "source": "Original",
+   "q": "An operations agent built on the Agent SDK has a Bash tool. It must never run `terraform destroy` or `kubectl delete` against production. A system prompt rule already says so, yet a red-team test made the agent run `kubectl delete` after it read instructions hidden in a repository README. Which control most directly closes this path?",
+   "options": [
+    {
+     "text": "A stronger system prompt that repeats the rule, explains the business impact of deletions, and tells the agent to treat file content as untrusted data.",
+     "correct": false,
+     "why": "Good hygiene, but it is the same kind of control that just failed. A prompt is not an enforceable boundary against injected instructions."
+    },
+    {
+     "text": "Removing the Bash tool entirely through `disallowedTools`, so the agent can no longer run any shell command, including the routine read-only checks it needs.",
+     "correct": false,
+     "why": "It closes the path but also removes the agent's core function. Least privilege should narrow the capability, not eliminate the use case."
+    },
+    {
+     "text": "A `PreToolUse` hook that inspects each Bash command and denies destructive patterns, plus production credentials that are absent from the agent's environment.",
+     "correct": true,
+     "why": "The hook runs before execution and decides deterministically, whatever the model was told. Removing the credentials limits damage if a pattern slips through."
+    },
+    {
+     "text": "A `PostToolUse` hook that inspects each Bash command and its output, and pages the on-call engineer whenever a destructive command against production shows up.",
+     "correct": false,
+     "why": "Detection is valuable for audit, but a post-tool hook runs after the command has executed. The deletion has already happened."
+    }
+   ],
+   "explanation": "Irreversible actions need deterministic enforcement outside the model: a pre-execution hook or permission rule that denies the action, plus least-privilege credentials. Prompts and after-the-fact detection do not prevent the action."
+  },
+  {
+   "id": "ccdvp:d7-002",
+   "mock": 3,
+   "domain": "D7 Runtime Guardrails & Production Security",
+   "source": "Original",
+   "q": "CI pipelines in a regulated company call the Claude API with a long-lived API key stored as a repository secret. A misconfigured workflow printed the key in a build log. The security team wants a lasting fix for how CI jobs authenticate. Which approach should they adopt?",
+   "options": [
+    {
+     "text": "Workload identity federation: CI jobs exchange their OIDC identity token for short-lived Claude API access granted by a federation rule, with no static key.",
+     "correct": true,
+     "why": "Federation replaces the long-lived secret. Each job gets a short-lived credential bound to its identity, so there is nothing durable to leak."
+    },
+    {
+     "text": "Automated key rotation: CI jobs keep a static API key, but a scheduled job replaces it every seven days and revokes the old key as soon as the new one is in place.",
+     "correct": false,
+     "why": "Rotation shortens the exposure window and is good practice, but a leaked key stays usable until the next rotation. The static secret remains."
+    },
+    {
+     "text": "Workspace scoping: CI jobs use a dedicated API key that belongs to a separate workspace with its own spend limit, so any leak is limited to that workspace.",
+     "correct": false,
+     "why": "Scoping limits the blast radius, which helps. It does not change the root cause, a long-lived key that can still be copied from a log."
+    },
+    {
+     "text": "Secret masking: CI jobs keep the static API key, but the runner masks it in all logs and the workflow files are reviewed before each merge to the main branch.",
+     "correct": false,
+     "why": "Masking prevents this one leak path. The key can still leak through other paths, such as a compromised dependency, and stays valid for a long time."
+    }
+   ],
+   "explanation": "For machine identities, replace static API keys with workload identity federation (short-lived, identity-bound credentials). Rotation, scoping and masking reduce risk but keep a long-lived secret."
+  },
+  {
+   "id": "ccdvp:d8-001",
+   "mock": 3,
+   "domain": "D8 Agent Fleet Operations for Software Delivery",
+   "source": "Original",
+   "q": "Coding agents now open more pull requests than the team can review. Leadership wants an AI code reviewer to become a required merge gate next sprint. The reviewer has not been measured on this codebase. What is the most responsible rollout?",
+   "options": [
+    {
+     "text": "Let the reviewer auto-approve small pull requests from coding agents, and keep human review only for larger changes that touch many files.",
+     "correct": false,
+     "why": "Risk-based routing is a sound idea later on. Without calibration, auto-approval by size removes human oversight where defects slip in."
+    },
+    {
+     "text": "Run the reviewer in shadow mode on real pull requests, compare its findings with the human reviews, and gate only on categories with proven precision.",
+     "correct": true,
+     "why": "Shadow mode collects evidence without blocking anyone. Calibration against human review shows where the reviewer can be trusted to gate."
+    },
+    {
+     "text": "Run the reviewer on every pull request for a month, survey engineers about its usefulness, and make it a gate if most of them rate it as clearly helpful.",
+     "correct": false,
+     "why": "Developer feedback matters, but satisfaction is not accuracy. The decision needs measured agreement with human reviewers."
+    },
+    {
+     "text": "Make the reviewer a required gate right away, but let any engineer override a block with one click, so false positives never stop urgent changes.",
+     "correct": false,
+     "why": "Overrides soften the impact, but an uncalibrated gate trains people to click through. Its findings lose value before they were measured."
+    }
+   ],
+   "explanation": "Introduce AI code review in shadow mode, calibrate it against human review, and only then give it gating authority, category by category, with human oversight kept for high-risk changes."
+  },
+  {
+   "id": "ccdvp:d8-002",
+   "mock": 3,
+   "domain": "D8 Agent Fleet Operations for Software Delivery",
+   "source": "Original",
+   "q": "A company rolls out Claude Code to 400 engineers. Security requires that only approved MCP servers can be used and that no project or user configuration can override this. Which approach meets the requirement?",
+   "options": [
+    {
+     "text": "Add a rule to the organization-wide CLAUDE.md that names the approved servers and tells Claude never to connect to any other MCP server at all.",
+     "correct": false,
+     "why": "CLAUDE.md is guidance loaded into context, not enforcement. It does not stop a configured MCP server from being used."
+    },
+    {
+     "text": "Commit a reviewed `.mcp.json` to every repository that lists only the approved servers, and block changes to it with a CODEOWNERS rule.",
+     "correct": false,
+     "why": "Project-scoped MCP configuration is useful for sharing, but users can still add servers in their own user or local scope."
+    },
+    {
+     "text": "Deploy managed settings with an MCP server allowlist and `allowManagedMcpServersOnly: true`, so allowlists from user, project or local scope are ignored.",
+     "correct": true,
+     "why": "Managed settings sit at the top of the hierarchy. Without the managed-only flag, allowlists from other scopes are merged in and users could extend the list."
+    },
+    {
+     "text": "Push a user-level `~/.claude/settings.json` with the allowed servers to every laptop through the device management tool, and re-apply it every single night.",
+     "correct": false,
+     "why": "It sets a default, but user settings are editable by the user and rank below project and local settings, so they can be overridden."
+    }
+   ],
+   "explanation": "Organization-wide MCP policy belongs in managed settings, the highest-precedence scope, with the managed-only switch so other scopes cannot extend the allowlist (alternatively a managed-mcp.json for exclusive control). Project files, user settings and CLAUDE.md can be overridden or are not enforced."
+  }
+ ]
+}

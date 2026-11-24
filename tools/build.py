@@ -2,7 +2,7 @@
 
 Usage: python -I build.py <in_bank.json> <out_bank.json>
 """
-import sys, os, json, re, collections
+import sys, os, json, re, collections, hashlib, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import loaders as L
 
@@ -148,6 +148,14 @@ if os.path.exists('newsrc/new_questions.json'):
         for item in items:
             add(exam, item)
 
+# 7c) Original questions written for this site (one file per exam, see newsrc/ORIGINAL.md).
+#     Unlike upstream items they carry per-option rationale (`why`) and a fixed mock-set number (`mock`).
+for path in sorted(glob.glob('newsrc/original_*.json')):
+    for exam, items in json.load(open(path, encoding='utf-8')).items():
+        out.setdefault(exam, []); index.setdefault(exam, {})
+        for item in items:
+            add(exam, item)
+
 # 8) normalize domains, flags, overrides, removals
 REF_OPT = re.compile(r'^(both [A-E] and [A-E]|[A-E] and [A-E] (are|both)|all of the above|none of the above|neither [A-E] nor [A-E]|either [A-E] or [A-E])', re.I)
 for exam, items in out.items():
@@ -168,7 +176,8 @@ for exam, items in out.items():
                 q['_reviewed'] = 'answer-corrected'; stats['override'] += 1
         n_correct = sum(o['correct'] for o in q['options'])
         assert n_correct >= 1, q['q'][:80]
-        if not q.get('id'): q['id'] = f"{q['source'].lower()}:{abs(hash(norm(q['q']))) % 10**8}"
+        if not q.get('id'):  # stable across runs (built-in hash() is salted per process)
+            q['id'] = f"{q['source'].lower()}:{int(hashlib.md5(norm(q['q']).encode()).hexdigest(), 16) % 10**8}"
         kept.append(q)
     out[exam] = kept
 
