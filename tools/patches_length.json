@@ -29114,6 +29114,1213 @@
    "action": "set_option",
    "match": "Process the refund",
    "text": "Process the refund first, then transfer the customer to a manager afterwards"
+  },
+  {
+   "id": "milind:Q850",
+   "action": "set_option",
+   "match": "three instances are",
+   "text": "Three instances are too many; use two instances plus a tiebreaker on disagreements"
+  },
+  {
+   "id": "milind:Q850",
+   "action": "set_option",
+   "match": "the instances are malfunctioning",
+   "text": "The instances are malfunctioning, since one input should yield near-identical findings"
+  },
+  {
+   "id": "milind:Q850",
+   "action": "set_option",
+   "match": "the instances are independently",
+   "text": "Independent coverage; weight issues by flag count and send low-overlap ones to review"
+  },
+  {
+   "id": "milind:Q850",
+   "action": "set_option",
+   "match": "the prompt is",
+   "text": "The prompt is ambiguous; tighten it until all three instances reach the same conclusions"
+  },
+  {
+   "id": "milind:Q851",
+   "action": "set_option",
+   "match": "add a formally",
+   "text": "Add a nullable `extraction_notes` field as a legitimate uncertainty channel"
+  },
+  {
+   "id": "milind:Q851",
+   "action": "set_option",
+   "match": "remove additionalproperties false",
+   "text": "Remove `additionalProperties: false` so the schema accepts extra fields globally"
+  },
+  {
+   "id": "milind:Q851",
+   "action": "set_option",
+   "match": "increase the retry",
+   "text": "Raise the retry limit until the model returns output without the extra fields"
+  },
+  {
+   "id": "milind:Q851",
+   "action": "set_option",
+   "match": "set additionalproperties true",
+   "text": "Set `additionalProperties: true` so the model can add whatever fields it needs"
+  },
+  {
+   "id": "milind:Q852",
+   "action": "set_option",
+   "match": "the schema cannot",
+   "text": "Keep the schema and add a system prompt rule: \"Omit docstrings for private functions.\""
+  },
+  {
+   "id": "milind:Q852",
+   "action": "set_option",
+   "match": "split into two",
+   "text": "Split it into two tools: one for public functions with docstrings, one for private ones"
+  },
+  {
+   "id": "milind:Q852",
+   "action": "set_option",
+   "match": "the model will",
+   "text": "The model writes placeholders like \"TODO: add docstring\", which is acceptable output"
+  },
+  {
+   "id": "milind:Q852",
+   "action": "set_option",
+   "match": "making docstring a",
+   "text": "The model must fabricate docstrings; make the field nullable so it can return `null`"
+  },
+  {
+   "id": "milind:Q853",
+   "action": "set_option",
+   "match": "the actual sla is 8",
+   "text": "The real SLA is 8 hours, and nothing ensures the batch is done before 7 AM"
+  },
+  {
+   "id": "milind:Q853",
+   "action": "set_option",
+   "match": "the actual sla",
+   "text": "The real SLA is 24 hours, and the API commits to delivering results by 7 AM"
+  },
+  {
+   "id": "milind:Q853",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "Batches under 50,000 requests finish within 2–3 hours, so 7 AM carries no risk"
+  },
+  {
+   "id": "milind:Q853",
+   "action": "set_option",
+   "match": "the team should",
+   "text": "Split it into four batches of 5,000 so each one is processed faster in parallel"
+  },
+  {
+   "id": "milind:Q854",
+   "action": "set_option",
+   "match": "structured json output",
+   "text": "The integration pass can programmatically deduplicate, group, and prioritize findings"
+  },
+  {
+   "id": "milind:Q854",
+   "action": "set_option",
+   "match": "json output is easier",
+   "text": "JSON output is easier for human reviewers to scan than free-text narratives"
+  },
+  {
+   "id": "milind:Q854",
+   "action": "set_option",
+   "match": "the integration pass can then",
+   "text": "The integration pass can be replaced by a plain script, removing the second LLM call"
+  },
+  {
+   "id": "milind:Q854",
+   "action": "set_option",
+   "match": "json output is faster",
+   "text": "JSON output is generated faster than narrative text, shortening each local pass"
+  },
+  {
+   "id": "milind:Q855",
+   "action": "set_option",
+   "match": "the high fp",
+   "text": "The category is under-defined; write explicit criteria first, pausing it if needed"
+  },
+  {
+   "id": "milind:Q855",
+   "action": "set_option",
+   "match": "merge out_of_date_comment with",
+   "text": "Merge `out_of_date_comment` into `deprecated_note`, since the two are semantically close"
+  },
+  {
+   "id": "milind:Q855",
+   "action": "set_option",
+   "match": "lower the threshold",
+   "text": "Lower the threshold for `out_of_date_comment` so the model assigns it less often"
+  },
+  {
+   "id": "milind:Q855",
+   "action": "set_option",
+   "match": "add more few",
+   "text": "Add more few-shot examples for `out_of_date_comment` so the model learns to spot it"
+  },
+  {
+   "id": "milind:Q856",
+   "action": "set_option",
+   "match": "add a detected_pattern",
+   "text": "Add a `detected_pattern` field with the raw text and compare it to the enum"
+  },
+  {
+   "id": "milind:Q856",
+   "action": "set_option",
+   "match": "add more enum",
+   "text": "Keep adding enum values until the measured false mapping rate drops below 5%"
+  },
+  {
+   "id": "milind:Q856",
+   "action": "set_option",
+   "match": "switch to free",
+   "text": "Switch to free-text extraction and derive the enum value in post-processing"
+  },
+  {
+   "id": "milind:Q856",
+   "action": "set_option",
+   "match": "monitor schema validation",
+   "text": "Monitor schema validation error rates, since novel types will fail validation"
+  },
+  {
+   "id": "milind:Q857",
+   "action": "set_option",
+   "match": "the model will output",
+   "text": "The model outputs `null` for the priority field whenever an outage is critical"
+  },
+  {
+   "id": "milind:Q857",
+   "action": "set_option",
+   "match": "the model will automatically",
+   "text": "The model infers `\"p0\"` despite the enum, so those outputs fail schema validation"
+  },
+  {
+   "id": "milind:Q857",
+   "action": "set_option",
+   "match": "the model will force",
+   "text": "Outages get force-mapped to `\"p1\"`; add `\"p0\"` to the enum and redeploy the schema"
+  },
+  {
+   "id": "milind:Q857",
+   "action": "set_option",
+   "match": "the model will",
+   "text": "The model refuses to classify critical outages and returns an error instead"
+  },
+  {
+   "id": "milind:Q858",
+   "action": "set_option",
+   "match": "the engineer is correct for",
+   "text": "The engineer is right for deterministic tasks but wrong for open-ended analysis"
+  },
+  {
+   "id": "milind:Q858",
+   "action": "set_option",
+   "match": "the engineer is correct",
+   "text": "The engineer is right: identical prompts produce identical outputs at temperature 0"
+  },
+  {
+   "id": "milind:Q858",
+   "action": "set_option",
+   "match": "even with identical",
+   "text": "Outputs still vary, and more importantly each instance's errors are uncorrelated"
+  },
+  {
+   "id": "milind:Q858",
+   "action": "set_option",
+   "match": "the instances will",
+   "text": "Outputs differ only above temperature 0.5, so at low settings the concern is valid"
+  },
+  {
+   "id": "milind:Q859",
+   "action": "set_option",
+   "match": "retries should be",
+   "text": "Cap retries at two and escalate instead of accumulating more error context"
+  },
+  {
+   "id": "milind:Q859",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "No tradeoff: truncating old errors cuts context without any quality impact"
+  },
+  {
+   "id": "milind:Q859",
+   "action": "set_option",
+   "match": "truncating early error",
+   "text": "Context size vs. error history; keep the latest error, summarize earlier ones"
+  },
+  {
+   "id": "milind:Q859",
+   "action": "set_option",
+   "match": "error messages are",
+   "text": "Errors stop being useful after the first retry, so remove them from the context"
+  },
+  {
+   "id": "milind:Q86",
+   "action": "set_option",
+   "match": "single pass provide",
+   "text": "Single-pass: give it the full API spec and ask for one comprehensive security audit"
+  },
+  {
+   "id": "milind:Q86",
+   "action": "set_option",
+   "match": "parallel decomposition spawn",
+   "text": "Parallel decomposition: spawn agents for each known security category at once"
+  },
+  {
+   "id": "milind:Q86",
+   "action": "set_option",
+   "match": "dynamic adaptive decomposition",
+   "text": "Dynamic adaptive decomposition: explore endpoints first, then generate subtasks"
+  },
+  {
+   "id": "milind:Q86",
+   "action": "set_option",
+   "match": "fixed sequential pipeline",
+   "text": "Fixed sequential pipeline: authentication, then authorization, then input validation"
+  },
+  {
+   "id": "milind:Q860",
+   "action": "set_option",
+   "match": "8 examples exceed",
+   "text": "Eight examples exceed the model's few-shot learning capacity, so later ones are ignored"
+  },
+  {
+   "id": "milind:Q860",
+   "action": "set_option",
+   "match": "8 examples covering",
+   "text": "Boundary examples teach decision logic that generalizes; selection beats quantity"
+  },
+  {
+   "id": "milind:Q860",
+   "action": "set_option",
+   "match": "8 examples increase",
+   "text": "Eight examples lengthen the prompt, so the model pays less attention to the instruction"
+  },
+  {
+   "id": "milind:Q860",
+   "action": "set_option",
+   "match": "common case examples",
+   "text": "Common-case examples are easy, so the model underestimates how hard the task is"
+  },
+  {
+   "id": "milind:Q861",
+   "action": "set_option",
+   "match": "the enum must",
+   "text": "The enum must be expanded exhaustively to cover every world currency up front"
+  },
+  {
+   "id": "milind:Q861",
+   "action": "set_option",
+   "match": "reactive enum expansion",
+   "text": "Reactive enum expansion is an anti-pattern; use enum + \"other\" + `currency_detail`"
+  },
+  {
+   "id": "milind:Q861",
+   "action": "set_option",
+   "match": "the currency field",
+   "text": "Make `currency` a free-text string to remove the enum maintenance burden entirely"
+  },
+  {
+   "id": "milind:Q861",
+   "action": "set_option",
+   "match": "use a post",
+   "text": "Add a post-processing lookup table that normalizes all codes after extraction"
+  },
+  {
+   "id": "milind:Q862",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The prompt change is cosmetic; giving the reviewer different examples is what matters"
+  },
+  {
+   "id": "milind:Q862",
+   "action": "set_option",
+   "match": "a distinct system",
+   "text": "A distinct prompt stops the review instance from writing a new draft instead of reviewing"
+  },
+  {
+   "id": "milind:Q862",
+   "action": "set_option",
+   "match": "a review focused",
+   "text": "It applies explicit review criteria instead of judging the draft like a generator would"
+  },
+  {
+   "id": "milind:Q862",
+   "action": "set_option",
+   "match": "using different system",
+   "text": "Different system prompts prevent the two instances from sharing reasoning patterns"
+  },
+  {
+   "id": "milind:Q863",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model is well-calibrated, since a uniform distribution across levels is expected"
+  },
+  {
+   "id": "milind:Q863",
+   "action": "set_option",
+   "match": "the false_positive_likelihood field",
+   "text": "The field carries no signal; find observable fields that predict false positives"
+  },
+  {
+   "id": "milind:Q863",
+   "action": "set_option",
+   "match": "the enum needs",
+   "text": "The enum is too coarse; replace it with a numeric probability from 0.0 to 1.0 instead"
+  },
+  {
+   "id": "milind:Q863",
+   "action": "set_option",
+   "match": "the model needs",
+   "text": "The model needs more training data before it can calibrate its confidence estimates"
+  },
+  {
+   "id": "milind:Q864",
+   "action": "set_option",
+   "match": "for short documents",
+   "text": "Single pass for short documents; per-section passes plus integration for long ones"
+  },
+  {
+   "id": "milind:Q864",
+   "action": "set_option",
+   "match": "truncate all documents",
+   "text": "Truncate every document to its first 20 pages to standardize the input size"
+  },
+  {
+   "id": "milind:Q864",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "Use one long-context pass for every document, since the window fits 150 pages"
+  },
+  {
+   "id": "milind:Q864",
+   "action": "set_option",
+   "match": "set a fixed",
+   "text": "Use a fixed chunk size of 10 pages for every document to keep processing consistent"
+  },
+  {
+   "id": "milind:Q865",
+   "action": "set_option",
+   "match": "format examples address output",
+   "text": "Format examples shape structure only; grounding rules and null examples fix content"
+  },
+  {
+   "id": "milind:Q865",
+   "action": "set_option",
+   "match": "structured output via",
+   "text": "Structured output via tool_use removes hallucination by strictly enforcing the schema"
+  },
+  {
+   "id": "milind:Q865",
+   "action": "set_option",
+   "match": "chain of thought",
+   "text": "Chain-of-thought prompting addresses both format and hallucination at the same time"
+  },
+  {
+   "id": "milind:Q865",
+   "action": "set_option",
+   "match": "format examples address",
+   "text": "Format examples also address hallucination; adding more of them will eliminate it"
+  },
+  {
+   "id": "milind:Q866",
+   "action": "set_option",
+   "match": "yes the message",
+   "text": "Yes: the Message Batches API sends webhooks for each individual item completion"
+  },
+  {
+   "id": "milind:Q866",
+   "action": "set_option",
+   "match": "no the message",
+   "text": "No: results arrive only after the full batch ends; use the synchronous API instead"
+  },
+  {
+   "id": "milind:Q866",
+   "action": "set_option",
+   "match": "yes poll the",
+   "text": "Yes: poll the batch status endpoint every 60 seconds and process finished items"
+  },
+  {
+   "id": "milind:Q866",
+   "action": "set_option",
+   "match": "yes use a",
+   "text": "Yes: submit potentially critical items as a separate batch to get faster results"
+  },
+  {
+   "id": "milind:Q867",
+   "action": "set_option",
+   "match": "increase the temperature",
+   "text": "Raise the temperature so the model considers `reversal` more often in borderline cases"
+  },
+  {
+   "id": "milind:Q867",
+   "action": "set_option",
+   "match": "remove the credit",
+   "text": "Remove `credit` and map credits to a broader `incoming_funds` category to reduce confusion"
+  },
+  {
+   "id": "milind:Q867",
+   "action": "set_option",
+   "match": "add a confidence",
+   "text": "Add a `confidence` field and route low-confidence `credit` results to human review"
+  },
+  {
+   "id": "milind:Q867",
+   "action": "set_option",
+   "match": "write an explicit",
+   "text": "Add an explicit reversal-vs-credit criterion plus 2–3 few-shot boundary examples"
+  },
+  {
+   "id": "milind:Q868",
+   "action": "set_option",
+   "match": "use a separate",
+   "text": "Use a separate system prompt per language with only that language's examples"
+  },
+  {
+   "id": "milind:Q868",
+   "action": "set_option",
+   "match": "always use equal",
+   "text": "Use an equal number of examples per language so that no single language is favored"
+  },
+  {
+   "id": "milind:Q868",
+   "action": "set_option",
+   "match": "use proportional examples",
+   "text": "Weight the examples by volume toward English, since it carries the most traffic"
+  },
+  {
+   "id": "milind:Q868",
+   "action": "set_option",
+   "match": "for few shot",
+   "text": "Neither; show the pattern in each language with 1–2 examples, not by volume"
+  },
+  {
+   "id": "milind:Q869",
+   "action": "set_option",
+   "match": "run multiple integration",
+   "text": "Run several integration passes, each one focusing on a subset of the 20 files"
+  },
+  {
+   "id": "milind:Q869",
+   "action": "set_option",
+   "match": "add a fourth",
+   "text": "Add a fourth pass dedicated to cross-file pattern detection after the integration pass"
+  },
+  {
+   "id": "milind:Q869",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Move the integration pass to a model with a larger context window for all 20 outputs"
+  },
+  {
+   "id": "milind:Q869",
+   "action": "set_option",
+   "match": "pre process local",
+   "text": "Cluster local findings by pattern type before the integration pass receives them"
+  },
+  {
+   "id": "milind:Q87",
+   "action": "set_option",
+   "match": "an empty result",
+   "text": "An empty result set without explanation, so the coordinator simply moves on"
+  },
+  {
+   "id": "milind:Q87",
+   "action": "set_option",
+   "match": "an exception that",
+   "text": "An exception that terminates the coordinator workflow so the failure is visible"
+  },
+  {
+   "id": "milind:Q87",
+   "action": "set_option",
+   "match": "a fabricated summary",
+   "text": "A best-effort summary of the document inferred from its filename and metadata"
+  },
+  {
+   "id": "milind:Q87",
+   "action": "set_option",
+   "match": "structured error context",
+   "text": "Structured error: failure type, document name, supported formats, alternatives"
+  },
+  {
+   "id": "milind:Q870",
+   "action": "set_option",
+   "match": "the 0 0",
+   "text": "The 0.0% syntax error rate, which is suspiciously perfect and hints at over-validation"
+  },
+  {
+   "id": "milind:Q870",
+   "action": "set_option",
+   "match": "the 4 2",
+   "text": "The 4.2% semantic error rate, since small semantic errors compound across the pipeline"
+  },
+  {
+   "id": "milind:Q870",
+   "action": "set_option",
+   "match": "the 31 false",
+   "text": "The 31% `risk_flag` false positive rate, since it erodes trust in every flag"
+  },
+  {
+   "id": "milind:Q870",
+   "action": "set_option",
+   "match": "the 89 retry",
+   "text": "The 89% retry success rate, since 11% of retries fail and need escalation"
+  },
+  {
+   "id": "milind:Q871",
+   "action": "set_option",
+   "match": "summarize all 40",
+   "text": "Summarize all 40 fields into natural language before adding them to the history"
+  },
+  {
+   "id": "milind:Q871",
+   "action": "set_option",
+   "match": "store the full",
+   "text": "Store the full result externally and pass only a reference key into the history"
+  },
+  {
+   "id": "milind:Q871",
+   "action": "set_option",
+   "match": "trim the tool",
+   "text": "Trim the result to the 6 relevant fields before appending it to the history"
+  },
+  {
+   "id": "milind:Q871",
+   "action": "set_option",
+   "match": "pass all 40",
+   "text": "Pass all 40 fields so Claude has complete information on every later turn"
+  },
+  {
+   "id": "milind:Q872",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model is confusing this customer's order with orders of other customers"
+  },
+  {
+   "id": "milind:Q872",
+   "action": "set_option",
+   "match": "the conversation history",
+   "text": "The conversation history was corrupted between turn 3 and the current turn"
+  },
+  {
+   "id": "milind:Q872",
+   "action": "set_option",
+   "match": "progressive summarization has",
+   "text": "Summarization dropped the exact number; keep such facts in a case-facts block"
+  },
+  {
+   "id": "milind:Q872",
+   "action": "set_option",
+   "match": "the agent has",
+   "text": "The order lookup tool has a bug and returned the wrong order number this time"
+  },
+  {
+   "id": "milind:Q873",
+   "action": "set_option",
+   "match": "when a customer",
+   "text": "An explicit request for a human must be honored immediately, not deferred"
+  },
+  {
+   "id": "milind:Q873",
+   "action": "set_option",
+   "match": "the bot should verify",
+   "text": "The bot should verify the issue first so it can hand context to the human agent"
+  },
+  {
+   "id": "milind:Q873",
+   "action": "set_option",
+   "match": "the bot should offer",
+   "text": "The bot should make one resolution attempt and transfer only if that attempt fails"
+  },
+  {
+   "id": "milind:Q873",
+   "action": "set_option",
+   "match": "the bot should assess",
+   "text": "The bot should assess the issue's complexity first, then decide whether to escalate"
+  },
+  {
+   "id": "milind:Q874",
+   "action": "set_option",
+   "match": "require subagents to",
+   "text": "Use structured claim-source mappings that the coordinator passes on intact"
+  },
+  {
+   "id": "milind:Q874",
+   "action": "set_option",
+   "match": "have the synthesis",
+   "text": "Have the synthesis agent search for the sources again on its own during synthesis"
+  },
+  {
+   "id": "milind:Q874",
+   "action": "set_option",
+   "match": "store all source",
+   "text": "Store all source URLs in a shared database that any agent can query later on"
+  },
+  {
+   "id": "milind:Q874",
+   "action": "set_option",
+   "match": "accept the citation",
+   "text": "Accept the citation gap, since the synthesized content itself is already accurate"
+  },
+  {
+   "id": "milind:Q875",
+   "action": "set_option",
+   "match": "use the most",
+   "text": "Use the more recent of the two statistics and cite that single source in the report"
+  },
+  {
+   "id": "milind:Q875",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two statistics and report 15% as the global prevalence figure"
+  },
+  {
+   "id": "milind:Q875",
+   "action": "set_option",
+   "match": "use the who",
+   "text": "Use the WHO statistic, since it is the more authoritative of the two sources"
+  },
+  {
+   "id": "milind:Q875",
+   "action": "set_option",
+   "match": "preserve both statistics",
+   "text": "Report both figures with their sources and annotate the conflict for the reader"
+  },
+  {
+   "id": "milind:Q876",
+   "action": "set_option",
+   "match": "deletes all tool",
+   "text": "It permanently deletes all tool call results from the current session history"
+  },
+  {
+   "id": "milind:Q876",
+   "action": "set_option",
+   "match": "creates a compressed",
+   "text": "It writes a compressed backup file of the session to disk and starts a new one"
+  },
+  {
+   "id": "milind:Q876",
+   "action": "set_option",
+   "match": "reduces the model",
+   "text": "It lowers the model's output token limit for all subsequent responses"
+  },
+  {
+   "id": "milind:Q876",
+   "action": "set_option",
+   "match": "compresses the conversation",
+   "text": "It summarizes the history, freeing context while the session continues"
+  },
+  {
+   "id": "milind:Q877",
+   "action": "set_option",
+   "match": "publication dates and",
+   "text": "Publication and data collection dates attached to each individual finding"
+  },
+  {
+   "id": "milind:Q877",
+   "action": "set_option",
+   "match": "only the finding",
+   "text": "Only the finding text, since dates can be added later in post-processing"
+  },
+  {
+   "id": "milind:Q877",
+   "action": "set_option",
+   "match": "a single overall",
+   "text": "A single overall timestamp recording when each search agent ran its search"
+  },
+  {
+   "id": "milind:Q877",
+   "action": "set_option",
+   "match": "dates are not",
+   "text": "No dates at all, since timing does not affect how findings are synthesized"
+  },
+  {
+   "id": "milind:Q878",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Increase the context window so the full conversation fits without any loss"
+  },
+  {
+   "id": "milind:Q878",
+   "action": "set_option",
+   "match": "periodically re ask",
+   "text": "Periodically ask the customer to re-confirm their expectations and commitments"
+  },
+  {
+   "id": "milind:Q878",
+   "action": "set_option",
+   "match": "use a database",
+   "text": "Store commitments in a database between turns and look them up when needed"
+  },
+  {
+   "id": "milind:Q878",
+   "action": "set_option",
+   "match": "extract customer stated",
+   "text": "Keep stated commitments in a persistent case-facts block included in every prompt"
+  },
+  {
+   "id": "milind:Q879",
+   "action": "set_option",
+   "match": "whether the empty",
+   "text": "Whether the empty result is an access failure or a valid search with no matches"
+  },
+  {
+   "id": "milind:Q879",
+   "action": "set_option",
+   "match": "the number of",
+   "text": "The number of queries the subagent attempted before it returned the result"
+  },
+  {
+   "id": "milind:Q879",
+   "action": "set_option",
+   "match": "the total size",
+   "text": "The total size of the search index that the subagent queried for this request"
+  },
+  {
+   "id": "milind:Q879",
+   "action": "set_option",
+   "match": "the time taken",
+   "text": "The time the subagent took to execute the query and return the empty result"
+  },
+  {
+   "id": "milind:Q88",
+   "action": "set_option",
+   "match": "using break instead",
+   "text": "Using `break` instead of `return` to leave the loop once the cap is reached"
+  },
+  {
+   "id": "milind:Q88",
+   "action": "set_option",
+   "match": "not logging the",
+   "text": "Not logging the iteration count, which makes runaway loops hard to debug"
+  },
+  {
+   "id": "milind:Q88",
+   "action": "set_option",
+   "match": "using an arbitrary",
+   "text": "An arbitrary cap as the primary stop, hiding whether the task actually finished"
+  },
+  {
+   "id": "milind:Q88",
+   "action": "set_option",
+   "match": "using a static",
+   "text": "Using a static number instead of a limit that adapts to the task's complexity"
+  },
+  {
+   "id": "milind:Q880",
+   "action": "set_option",
+   "match": "present all findings",
+   "text": "Present all findings with equal weight to keep the report objective and neutral"
+  },
+  {
+   "id": "milind:Q880",
+   "action": "set_option",
+   "match": "only include well",
+   "text": "Include only the well-established findings and leave out weakly supported ones"
+  },
+  {
+   "id": "milind:Q880",
+   "action": "set_option",
+   "match": "add confidence scores",
+   "text": "Add a numeric confidence score to each finding based on its number of sources"
+  },
+  {
+   "id": "milind:Q880",
+   "action": "set_option",
+   "match": "structure reports with",
+   "text": "Separate sections for well-established and contested findings, with source context"
+  },
+  {
+   "id": "milind:Q881",
+   "action": "set_option",
+   "match": "spawn one subagent",
+   "text": "Spawn one subagent that works through all 15 questions in a single context"
+  },
+  {
+   "id": "milind:Q881",
+   "action": "set_option",
+   "match": "use plan mode",
+   "text": "Use plan mode for the investigations so no files are changed while exploring"
+  },
+  {
+   "id": "milind:Q881",
+   "action": "set_option",
+   "match": "spawn subagents for",
+   "text": "Spawn a subagent per question so tool output stays out of the main context"
+  },
+  {
+   "id": "milind:Q881",
+   "action": "set_option",
+   "match": "have the main",
+   "text": "Have the main agent investigate all 15 questions sequentially in its own context"
+  },
+  {
+   "id": "milind:Q882",
+   "action": "set_option",
+   "match": "tool results are",
+   "text": "Tool results placed in the middle of the conversation are dropped from the input"
+  },
+  {
+   "id": "milind:Q882",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's reasoning degrades specifically between turns 15 and 30 of a conversation"
+  },
+  {
+   "id": "milind:Q882",
+   "action": "set_option",
+   "match": "models reliably process",
+   "text": "Models underweight content in the middle of long inputs relative to start and end"
+  },
+  {
+   "id": "milind:Q882",
+   "action": "set_option",
+   "match": "agents lose track",
+   "text": "Agents lose track of the middle steps when executing a long multi-step plan"
+  },
+  {
+   "id": "milind:Q883",
+   "action": "set_option",
+   "match": "place key findings",
+   "text": "Put key-findings summaries from all sources first and add explicit section headers"
+  },
+  {
+   "id": "milind:Q883",
+   "action": "set_option",
+   "match": "process documents 8",
+   "text": "Process documents 8-14 with a separate synthesis agent and merge the results"
+  },
+  {
+   "id": "milind:Q883",
+   "action": "set_option",
+   "match": "increase the synthesis",
+   "text": "Increase the synthesis agent's context window so all 20 documents fit easily"
+  },
+  {
+   "id": "milind:Q883",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the number of source documents until the synthesis no longer misses any"
+  },
+  {
+   "id": "milind:Q884",
+   "action": "set_option",
+   "match": "deny the request",
+   "text": "Deny the request, since the policy does not explicitly cover this situation"
+  },
+  {
+   "id": "milind:Q884",
+   "action": "set_option",
+   "match": "search for similar",
+   "text": "Search similar historical cases and apply them as a precedent for this one"
+  },
+  {
+   "id": "milind:Q884",
+   "action": "set_option",
+   "match": "escalate to a",
+   "text": "Escalate to a human agent, since a policy gap calls for human judgment"
+  },
+  {
+   "id": "milind:Q884",
+   "action": "set_option",
+   "match": "apply the closest",
+   "text": "Apply the closest matching policy provision to the situation by analogy"
+  },
+  {
+   "id": "milind:Q885",
+   "action": "set_option",
+   "match": "summarize all findings",
+   "text": "Summarize all findings in the next user message so they stay in the history"
+  },
+  {
+   "id": "milind:Q885",
+   "action": "set_option",
+   "match": "start a new",
+   "text": "Start a new session and repeat the investigation with a fresh context window"
+  },
+  {
+   "id": "milind:Q885",
+   "action": "set_option",
+   "match": "continue until the",
+   "text": "Keep working until the context fills up, then summarize all findings at once"
+  },
+  {
+   "id": "milind:Q885",
+   "action": "set_option",
+   "match": "write the 15",
+   "text": "Write the 15 patterns to a scratchpad file and reference its path from then on"
+  },
+  {
+   "id": "milind:Q886",
+   "action": "set_option",
+   "match": "use the academic",
+   "text": "Use the academic figure, since a peer-reviewed study is the more rigorous source"
+  },
+  {
+   "id": "milind:Q886",
+   "action": "set_option",
+   "match": "average the figures",
+   "text": "Average the two figures and add a note that the sources disagree with each other"
+  },
+  {
+   "id": "milind:Q886",
+   "action": "set_option",
+   "match": "preserve both figures",
+   "text": "Keep both figures with their sources and dates; they reflect different years"
+  },
+  {
+   "id": "milind:Q886",
+   "action": "set_option",
+   "match": "use the more",
+   "text": "Use the more recent 2024 figure of 65%, since market data goes stale quickly"
+  },
+  {
+   "id": "milind:Q887",
+   "action": "set_option",
+   "match": "extract and persist",
+   "text": "Persist the item count, missing item, and deadline in a case-facts block"
+  },
+  {
+   "id": "milind:Q887",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Raise the context compression threshold so history is compressed less often"
+  },
+  {
+   "id": "milind:Q887",
+   "action": "set_option",
+   "match": "ask the customer",
+   "text": "Ask the customer to restate their issue periodically so details stay current"
+  },
+  {
+   "id": "milind:Q887",
+   "action": "set_option",
+   "match": "store the full",
+   "text": "Store the full conversation in a database and retrieve parts of it as needed"
+  },
+  {
+   "id": "milind:Q888",
+   "action": "set_option",
+   "match": "policy gap situation",
+   "text": "A policy gap, meaning the situation is not covered by any written policy"
+  },
+  {
+   "id": "milind:Q888",
+   "action": "set_option",
+   "match": "agent unable to",
+   "text": "The agent cannot make meaningful progress after several attempts"
+  },
+  {
+   "id": "milind:Q888",
+   "action": "set_option",
+   "match": "customer sentiment score",
+   "text": "A customer sentiment score that drops below a configured threshold"
+  },
+  {
+   "id": "milind:Q888",
+   "action": "set_option",
+   "match": "customer explicitly requesting",
+   "text": "The customer explicitly asks to be transferred to a human agent"
+  },
+  {
+   "id": "milind:Q889",
+   "action": "set_option",
+   "match": "use bullet points",
+   "text": "Use bullet points for every content type so the report reads uniformly"
+  },
+  {
+   "id": "milind:Q889",
+   "action": "set_option",
+   "match": "let the synthesis",
+   "text": "Let the synthesis agent decide the format freely for each report it writes"
+  },
+  {
+   "id": "milind:Q889",
+   "action": "set_option",
+   "match": "render different content",
+   "text": "Tables for financial data, lists for technical findings, prose for news"
+  },
+  {
+   "id": "milind:Q889",
+   "action": "set_option",
+   "match": "always use prose",
+   "text": "Use prose for every content type to keep the report consistent throughout"
+  },
+  {
+   "id": "milind:Q89",
+   "action": "set_option",
+   "match": "structured data with",
+   "text": "Structured records linking each claim to its source URL, title, excerpt, and date"
+  },
+  {
+   "id": "milind:Q89",
+   "action": "set_option",
+   "match": "a single concatenated",
+   "text": "A single concatenated text block with the claims from all 8 articles merged"
+  },
+  {
+   "id": "milind:Q89",
+   "action": "set_option",
+   "match": "just the source",
+   "text": "A list of the 8 source URLs so the synthesis agent can fetch the claims itself"
+  },
+  {
+   "id": "milind:Q89",
+   "action": "set_option",
+   "match": "the raw html",
+   "text": "The raw HTML of each article so the synthesis agent has the full original text"
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_option",
+   "match": "re analyze the",
+   "text": "Re-analyze the whole codebase from scratch at the start of Session 2"
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_option",
+   "match": "export the full",
+   "text": "Export Session 1's full conversation history as a text file and load it"
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_option",
+   "match": "have session 1",
+   "text": "Write findings to structured scratchpad files and inject them into Session 2"
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_option",
+   "match": "resume session 1",
+   "text": "Resume Session 1 with `--resume` and continue the investigation from there"
+  },
+  {
+   "id": "milind:Q891",
+   "action": "set_option",
+   "match": "have the agent",
+   "text": "Write a manifest after each step; on restart, the coordinator resumes from it"
+  },
+  {
+   "id": "milind:Q891",
+   "action": "set_option",
+   "match": "use a database",
+   "text": "Use a database transaction system that saves the agent's state automatically"
+  },
+  {
+   "id": "milind:Q891",
+   "action": "set_option",
+   "match": "accept that crashes",
+   "text": "Accept that a crash requires a full restart and design steps to run quickly"
+  },
+  {
+   "id": "milind:Q891",
+   "action": "set_option",
+   "match": "keep state in",
+   "text": "Keep state in memory and flush it to disk periodically during the analysis"
+  },
+  {
+   "id": "milind:Q892",
+   "action": "set_option",
+   "match": "continue the session",
+   "text": "Continue the session and let the context fill up naturally until it compacts"
+  },
+  {
+   "id": "milind:Q892",
+   "action": "set_option",
+   "match": "delete all tool",
+   "text": "Delete all tool results from turns 1-10 from the conversation history"
+  },
+  {
+   "id": "milind:Q892",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Ask Claude to ignore the old tool results from turns 1-10 from now on"
+  },
+  {
+   "id": "milind:Q892",
+   "action": "set_option",
+   "match": "summarize completed phases",
+   "text": "Summarize the finished phase, then compact or start fresh with that summary"
+  },
+  {
+   "id": "milind:Q893",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "The coordinator assigns every subagent a distinct, non-overlapping domain"
+  },
+  {
+   "id": "milind:Q893",
+   "action": "set_option",
+   "match": "allow subagents to",
+   "text": "Let subagents search freely, then consolidate the duplicates in synthesis"
+  },
+  {
+   "id": "milind:Q893",
+   "action": "set_option",
+   "match": "give all subagents",
+   "text": "Give all subagents the same query and deduplicate their combined results"
+  },
+  {
+   "id": "milind:Q893",
+   "action": "set_option",
+   "match": "run subagents sequentially",
+   "text": "Run subagents sequentially so each one can see what the previous one found"
+  },
+  {
+   "id": "milind:Q894",
+   "action": "set_option",
+   "match": "the later responses",
+   "text": "The later responses are deliberately more general as the session matures"
+  },
+  {
+   "id": "milind:Q894",
+   "action": "set_option",
+   "match": "the model version",
+   "text": "The model version was switched silently in the middle of the session"
+  },
+  {
+   "id": "milind:Q894",
+   "action": "set_option",
+   "match": "context degradation the",
+   "text": "Context degradation: early specifics sit mid-history and lose attention"
+  },
+  {
+   "id": "milind:Q894",
+   "action": "set_option",
+   "match": "the agent has",
+   "text": "The agent has permanently forgotten the specific classes from turn 5"
+  },
+  {
+   "id": "milind:Q895",
+   "action": "set_option",
+   "match": "ask the user",
+   "text": "Ask the user to choose which market definition the final report should use"
+  },
+  {
+   "id": "milind:Q895",
+   "action": "set_option",
+   "match": "preserve both figures",
+   "text": "Keep both figures with definitions and sources; they measure different scopes"
+  },
+  {
+   "id": "milind:Q895",
+   "action": "set_option",
+   "match": "report the average",
+   "text": "Report the average of the two figures as the best overall market size estimate"
+  },
+  {
+   "id": "milind:Q895",
+   "action": "set_option",
+   "match": "use only one",
+   "text": "Use only one figure and add a footnote that another definition also exists"
+  },
+  {
+   "id": "milind:Q87",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and fabrication is never acceptable",
+   "replace": "and a summary inferred from the filename is fabrication, which is never acceptable"
   }
  ],
  "hold": []
