@@ -24,6 +24,7 @@ WORDS = {2: 'TWO', 3: 'THREE'}
 RATIO = (0.85, 1.15)      # mean correct length / mean distractor length
 LONGEST_MARGIN = 1.10     # correct option may not beat the next-longest option by more than this
 MAX_LONGEST_SHARE = 0.35 # across a file: correct option is the longest in at most this share of items
+MAX_SHORTEST_SHARE = 0.35  # ... and the shortest in at most this share (the reverse tell)
 
 
 def targets(n, weights):
@@ -37,7 +38,7 @@ def targets(n, weights):
 
 def main(path, hold=()):
     bank = json.load(open(path, encoding='utf-8'))
-    errors, warns, longest = [], [], 0
+    errors, warns, longest, shortest = [], [], 0, 0
     ids, stems = set(), set()
     for exam, items in bank.items():
         per_mock, weights = BLUEPRINTS[exam]
@@ -70,6 +71,7 @@ def main(path, hold=()):
             if max(c) == top[0]:
                 longest += 1
                 if top[0] > LONGEST_MARGIN * top[1] and k == 1: err(f'correct option clearly longest {L}')
+            if min(c) == min(L) and k == 1: shortest += 1
             if max(L) > 1.6 * min(L): warns.append(f'{qid}: option lengths spread {L}')
         # blueprint coverage per mock
         live = [q for q in items if q['id'] not in hold]
@@ -81,6 +83,9 @@ def main(path, hold=()):
             print(f'  mock {m}: {sum(cnt.values()):>3}/{per_mock}  {row}')
         n = len(items)
         print(f'  correct option is the longest in {longest}/{n} items ({longest / n:.0%}; chance ≈ 25%)')
+        singles = sum(1 for q in items if sum(o['correct'] for o in q['options']) == 1)
+        print(f'  correct option is the shortest in {shortest}/{singles} single-answer items ({shortest / max(singles, 1):.0%})')
+        if shortest / max(singles, 1) > MAX_SHORTEST_SHARE: errors.append(f'{exam}: correct option is the shortest in {shortest / singles:.0%} of single-answer items (max {MAX_SHORTEST_SHARE:.0%})')
         if longest / n > MAX_LONGEST_SHARE: errors.append(f'{exam}: correct option is the longest in {longest / n:.0%} of items (max {MAX_LONGEST_SHARE:.0%})')
         pos = collections.Counter(next(i for i, o in enumerate(q['options']) if o['correct']) for q in items)
         print('  first correct option at source position:', dict(sorted(pos.items())), '(options are shuffled at runtime)')

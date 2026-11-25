@@ -154,7 +154,7 @@ for path in sorted(glob.glob('newsrc/original_*.json')):
     for exam, items in json.load(open(path, encoding='utf-8')).items():
         out.setdefault(exam, []); index.setdefault(exam, {})
         for item in items:
-            add(exam, item)
+            add(exam, {k: v for k, v in item.items() if k != '_claims'})  # _claims: review evidence, not published
 
 # 8) normalize domains, flags, overrides, removals
 REF_OPT = re.compile(r'^(both [A-E] and [A-E]|[A-E] and [A-E] (are|both)|all of the above|none of the above|neither [A-E] nor [A-E]|either [A-E] or [A-E])', re.I)

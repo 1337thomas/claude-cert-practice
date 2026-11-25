@@ -5,10 +5,11 @@ Currently: `original_ccdv-p.json` for CCDV-P (Claude Certified Developer – Pro
 
 ## Format
 
-Same item shape as the rest of the bank, plus two fields:
+Same item shape as the rest of the bank, plus these fields:
 
 - `why` on every option: one or two sentences on why the option is right or wrong. The page shows them in the
   order the options were displayed, so they must not refer to option letters.
+- `_claims` (optional): the product facts an item relies on, each with its doc source. Kept in the source file as review evidence; `build.py` drops it from the published bank.
 - `mock`: the fixed mock-exam set (1–3). Each set follows the blueprint weights for 70 items:
   D1 12 · D2 14 · D3 8 · D4 7 · D5 8 · D6 6 · D7 8 · D8 7.
 
