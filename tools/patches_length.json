@@ -15158,6 +15158,1176 @@
    "text": "Retry the search, since an access_time_ms of 450 indicates a slow query"
   },
   {
+   "id": "milind:Q162",
+   "action": "set_option",
+   "match": "3 simultaneous synthesis",
+   "text": "The three agents share the same findings, so their outputs will stay consistent with each other"
+  },
+  {
+   "id": "milind:Q162",
+   "action": "set_option",
+   "match": "parallel synthesis is",
+   "text": "Parallel synthesis isn't supported in the Agent SDK, so the three agents will run one after another"
+  },
+  {
+   "id": "milind:Q162",
+   "action": "set_option",
+   "match": "the coordinator must",
+   "text": "The coordinator must wait for all three agents before it can return any part of the report"
+  },
+  {
+   "id": "milind:Q162",
+   "action": "set_option",
+   "match": "the 3 synthesis",
+   "text": "Each agent reasons independently, so summary and recommendations may contradict; add a consistency review"
+  },
+  {
+   "id": "milind:Q163",
+   "action": "set_option",
+   "match": "context passing has",
+   "text": "Context passed between subagents is capped by the API at 1,000 characters per handoff"
+  },
+  {
+   "id": "milind:Q163",
+   "action": "set_option",
+   "match": "context must be",
+   "text": "Context must be serialized as JSON before the coordinator can hand it to another subagent"
+  },
+  {
+   "id": "milind:Q163",
+   "action": "set_option",
+   "match": "subagents inherit context",
+   "text": "Subagents inherit the coordinator's context automatically, so earlier findings should be visible"
+  },
+  {
+   "id": "milind:Q163",
+   "action": "set_option",
+   "match": "context is never",
+   "text": "Subagents share no context; everything a subagent needs must be passed in its prompt"
+  },
+  {
+   "id": "milind:Q164",
+   "action": "set_option",
+   "match": "the compliance team",
+   "text": "The compliance audit misread the logs; programmatic prerequisites can't run steps out of order"
+  },
+  {
+   "id": "milind:Q164",
+   "action": "set_option",
+   "match": "network latency caused",
+   "text": "Network latency let step 3's result arrive after step 4 had already started executing"
+  },
+  {
+   "id": "milind:Q164",
+   "action": "set_option",
+   "match": "the steps are",
+   "text": "The steps are actually independent, so the agent is free to run them in any order it likes"
+  },
+  {
+   "id": "milind:Q164",
+   "action": "set_option",
+   "match": "the prerequisite gate",
+   "text": "The gate is really a prompt instruction, not a code-level block that stops step 4 until step 3 returns"
+  },
+  {
+   "id": "milind:Q165",
+   "action": "set_option",
+   "match": "silently retry the",
+   "text": "Silently retry the failed tool call three times in code before reporting the failure to anyone"
+  },
+  {
+   "id": "milind:Q165",
+   "action": "set_option",
+   "match": "skip the failed",
+   "text": "Skip the failed tool and continue the loop as if the lookup had returned successfully"
+  },
+  {
+   "id": "milind:Q165",
+   "action": "set_option",
+   "match": "return the error",
+   "text": "Send the error back as a tool result marked as an error and let Claude decide how to recover"
+  },
+  {
+   "id": "milind:Q165",
+   "action": "set_option",
+   "match": "immediately terminate with",
+   "text": "Terminate the loop immediately and surface the timeout error directly to the user"
+  },
+  {
+   "id": "milind:Q166",
+   "action": "set_option",
+   "match": "the tool returned",
+   "text": "The tool returned an empty string, which the model interprets as an end_turn signal"
+  },
+  {
+   "id": "milind:Q166",
+   "action": "set_option",
+   "match": "the model hit",
+   "text": "The model reached its context window limit and terminated the loop on its own without error"
+  },
+  {
+   "id": "milind:Q166",
+   "action": "set_option",
+   "match": "an iteration cap",
+   "text": "An iteration cap exited on a pending tool call without ever sending back its tool result"
+  },
+  {
+   "id": "milind:Q166",
+   "action": "set_option",
+   "match": "the model issued",
+   "text": "The model emitted a `stop_sequence` matching the orchestrator's iteration-boundary sentinel"
+  },
+  {
+   "id": "milind:Q167",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model switches to a fallback routing heuristic once its tool confidence drops below a threshold"
+  },
+  {
+   "id": "milind:Q167",
+   "action": "set_option",
+   "match": "parallel tool calls",
+   "text": "Earlier parallel tool calls in the session corrupted the model's internal state for later calls"
+  },
+  {
+   "id": "milind:Q167",
+   "action": "set_option",
+   "match": "the tool schemas",
+   "text": "The tool schemas are reloaded mid-session, overwriting the parameter formats the model had learned"
+  },
+  {
+   "id": "milind:Q167",
+   "action": "set_option",
+   "match": "accumulating tool_use and",
+   "text": "Accumulated tool_use/tool_result pairs crowd out the original tool descriptions in the context"
+  },
+  {
+   "id": "milind:Q168",
+   "action": "set_option",
+   "match": "cancel subagents a",
+   "text": "Cancel Subagents A and B as soon as C fails, so no partial state reaches the coordinator"
+  },
+  {
+   "id": "milind:Q168",
+   "action": "set_option",
+   "match": "discard subagent c",
+   "text": "Discard Subagent C's result and continue with the outputs that A and B produced"
+  },
+  {
+   "id": "milind:Q168",
+   "action": "set_option",
+   "match": "retry subagent c",
+   "text": "Retry Subagent C synchronously before letting the coordinator use A's and B's results"
+  },
+  {
+   "id": "milind:Q168",
+   "action": "set_option",
+   "match": "collect all results",
+   "text": "Collect all results, including C's structured error, and let the coordinator decide to retry or reroute"
+  },
+  {
+   "id": "milind:Q169",
+   "action": "set_option",
+   "match": "prompt instructions rely",
+   "text": "Prompts rely on model compliance and can be overridden; hooks execute deterministically"
+  },
+  {
+   "id": "milind:Q169",
+   "action": "set_option",
+   "match": "hooks have lower",
+   "text": "Hooks have lower latency because they bypass the LLM entirely when making approval decisions"
+  },
+  {
+   "id": "milind:Q169",
+   "action": "set_option",
+   "match": "the model cannot",
+   "text": "The model can't reliably read prompt instructions once the context window exceeds 32K tokens"
+  },
+  {
+   "id": "milind:Q169",
+   "action": "set_option",
+   "match": "prompt instructions are",
+   "text": "Prompt instructions are slower than hooks because they need an extra model inference pass"
+  },
+  {
+   "id": "milind:Q170",
+   "action": "set_option",
+   "match": "the subagent should",
+   "text": "The subagent should have been started with fork_session so it inherits the coordinator's context"
+  },
+  {
+   "id": "milind:Q170",
+   "action": "set_option",
+   "match": "the subagent s allowedtools",
+   "text": "The subagent's allowedTools list was too restrictive, so it couldn't retrieve the project data"
+  },
+  {
+   "id": "milind:Q170",
+   "action": "set_option",
+   "match": "the coordinator failed",
+   "text": "The coordinator relied on implicit shared state instead of passing the context explicitly"
+  },
+  {
+   "id": "milind:Q170",
+   "action": "set_option",
+   "match": "the hub and",
+   "text": "Hub-and-spoke is unsuitable for report generation, so a single agent should write the report"
+  },
+  {
+   "id": "milind:Q171",
+   "action": "set_option",
+   "match": "text parsing is",
+   "text": "Scanning output text for a sentinel is computationally more expensive than checking stop_reason"
+  },
+  {
+   "id": "milind:Q171",
+   "action": "set_option",
+   "match": "the done sentinel",
+   "text": "The \"DONE\" sentinel collides with built-in stop sequences and makes the API return a parse error"
+  },
+  {
+   "id": "milind:Q171",
+   "action": "set_option",
+   "match": "the model outputs",
+   "text": "\"DONE\" appears in a code comment inside a tool argument, ending the loop before the tool runs"
+  },
+  {
+   "id": "milind:Q171",
+   "action": "set_option",
+   "match": "the model never",
+   "text": "The model won't output \"DONE\" because it prefers end_turn, so the loop keeps running forever"
+  },
+  {
+   "id": "milind:Q172",
+   "action": "set_option",
+   "match": "cap the loop",
+   "text": "Cap the loop at exactly three iterations, matching the plateau observed during testing"
+  },
+  {
+   "id": "milind:Q172",
+   "action": "set_option",
+   "match": "increase the model",
+   "text": "Raise the temperature on critique passes so the critic produces more substantive feedback"
+  },
+  {
+   "id": "milind:Q172",
+   "action": "set_option",
+   "match": "add a programmatic",
+   "text": "Add a programmatic quality gate that exits when measured improvement falls below a threshold"
+  },
+  {
+   "id": "milind:Q173",
+   "action": "set_option",
+   "match": "the resumed session",
+   "text": "The resumed session will re-run all six steps from the beginning, duplicating completed work"
+  },
+  {
+   "id": "milind:Q173",
+   "action": "set_option",
+   "match": "the agent may",
+   "text": "The agent may trust the partial file in step 6; --resume doesn't verify artifacts"
+  },
+  {
+   "id": "milind:Q173",
+   "action": "set_option",
+   "match": "resume only works",
+   "text": "`--resume` errors on any session that didn't end with `stop_reason: \"end_turn\"`, like this one"
+  },
+  {
+   "id": "milind:Q173",
+   "action": "set_option",
+   "match": "the model will",
+   "text": "The resumed model loses its tool definitions and needs every tool re-registered before step 5"
+  },
+  {
+   "id": "milind:Q174",
+   "action": "set_option",
+   "match": "a posttooluse hook",
+   "text": "A PostToolUse hook should have validated each file write in isolation as it happened"
+  },
+  {
+   "id": "milind:Q174",
+   "action": "set_option",
+   "match": "the subagents should",
+   "text": "The subagents should have been spawned in parallel rather than executed sequentially"
+  },
+  {
+   "id": "milind:Q174",
+   "action": "set_option",
+   "match": "task decomposition must",
+   "text": "The decomposition ignored cross-task dependencies, so a shared module changed without the others knowing"
+  },
+  {
+   "id": "milind:Q174",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "The coordinator should have used prompt chaining instead of spawning subagents for file-level tasks"
+  },
+  {
+   "id": "milind:Q176",
+   "action": "set_option",
+   "match": "add content type",
+   "text": "Detect the file's content type first and skip text normalization for binary output"
+  },
+  {
+   "id": "milind:Q176",
+   "action": "set_option",
+   "match": "use a pretooluse",
+   "text": "Switch to a PreToolUse hook, which receives the file content before it is written to disk"
+  },
+  {
+   "id": "milind:Q176",
+   "action": "set_option",
+   "match": "configure the hook",
+   "text": "Run the hook asynchronously so that a crash in it can't block the rest of the pipeline"
+  },
+  {
+   "id": "milind:Q176",
+   "action": "set_option",
+   "match": "disable the posttooluse",
+   "text": "Disable the PostToolUse hook for every file operation that a subagent performs"
+  },
+  {
+   "id": "milind:Q177",
+   "action": "set_option",
+   "match": "merge steps 2",
+   "text": "Merge Steps 2 and 3 into one prompt that handles the empty-result case internally"
+  },
+  {
+   "id": "milind:Q177",
+   "action": "set_option",
+   "match": "add instructions to",
+   "text": "Instruct the Step 2 prompt to tell the user about empty results and not pass output to Step 3"
+  },
+  {
+   "id": "milind:Q177",
+   "action": "set_option",
+   "match": "implement the conditional",
+   "text": "Check Step 2's structured output in the orchestration code before deciding to invoke Step 3"
+  },
+  {
+   "id": "milind:Q177",
+   "action": "set_option",
+   "match": "use a posttooluse",
+   "text": "Have a PostToolUse hook on Step 2's search tool set a global flag that Step 3 reads"
+  },
+  {
+   "id": "milind:Q178",
+   "action": "set_option",
+   "match": "resume is deprecated",
+   "text": "`--resume` is deprecated, and `fork_session` is its modern replacement for continuing sessions"
+  },
+  {
+   "id": "milind:Q178",
+   "action": "set_option",
+   "match": "resume restores a",
+   "text": "`--resume` continues a saved session; `fork_session` branches it and keeps the earlier state"
+  },
+  {
+   "id": "milind:Q178",
+   "action": "set_option",
+   "match": "fork_session is faster",
+   "text": "`fork_session` is faster because it doesn't serialize the conversation history to disk"
+  },
+  {
+   "id": "milind:Q178",
+   "action": "set_option",
+   "match": "resume can only",
+   "text": "`--resume` can be used once per session, while `fork_session` supports multiple branch points"
+  },
+  {
+   "id": "milind:Q18",
+   "action": "set_option",
+   "match": "preventing claude from",
+   "text": "Blocking Claude from calling a specific tool by throwing an exception before that tool executes"
+  },
+  {
+   "id": "milind:Q18",
+   "action": "set_option",
+   "match": "replacing the entire",
+   "text": "Replacing the entire conversation history with a summary after each tool call completes"
+  },
+  {
+   "id": "milind:Q18",
+   "action": "set_option",
+   "match": "translating claude s",
+   "text": "Translating Claude's tool call requests from English into another language before they run"
+  },
+  {
+   "id": "milind:Q18",
+   "action": "set_option",
+   "match": "normalizing heterogeneous date",
+   "text": "Normalizing mixed date formats (Unix, ISO 8601) from MCP tools before Claude sees the results"
+  },
+  {
+   "id": "milind:Q180",
+   "action": "set_option",
+   "match": "add a retry",
+   "text": "Run the 3-step path first and escalate to the 7-step path when the short path fails"
+  },
+  {
+   "id": "milind:Q180",
+   "action": "set_option",
+   "match": "reduce the 7",
+   "text": "Cut the 7-step path down to 5 steps to reduce token costs while keeping most of the quality"
+  },
+  {
+   "id": "milind:Q180",
+   "action": "set_option",
+   "match": "hard code simple",
+   "text": "Hard-code simple inputs to the 3-step path, bypassing the complexity assessment for them"
+  },
+  {
+   "id": "milind:Q180",
+   "action": "set_option",
+   "match": "replace the vague",
+   "text": "Give the router explicit criteria and thresholds, or swap it for a programmatic classifier"
+  },
+  {
+   "id": "milind:Q181",
+   "action": "set_option",
+   "match": "tool result blocks",
+   "text": "Tool result blocks need a non-empty `content` field of type `text`, and an empty one was passed"
+  },
+  {
+   "id": "milind:Q181",
+   "action": "set_option",
+   "match": "tool results must",
+   "text": "Tool results must be sent in an `assistant` role message rather than in a `user` role message"
+  },
+  {
+   "id": "milind:Q181",
+   "action": "set_option",
+   "match": "the tool_result block",
+   "text": "The `user` message is fine, but its `tool_use_id` matches no `tool_use` block in a prior `assistant` turn"
+  },
+  {
+   "id": "milind:Q181",
+   "action": "set_option",
+   "match": "the api does",
+   "text": "The API rejects tool results sent in the same request as the conversation's initial user message"
+  },
+  {
+   "id": "milind:Q182",
+   "action": "set_option",
+   "match": "remove one of",
+   "text": "Remove one of the two tools, since a tool suite should not contain duplicate functionality"
+  },
+  {
+   "id": "milind:Q182",
+   "action": "set_option",
+   "match": "use tool_choice auto",
+   "text": "Set `tool_choice: \"auto\"` so the model dynamically picks the most appropriate tool each time"
+  },
+  {
+   "id": "milind:Q182",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "Add a system prompt instruction telling the agent to prefer the built-in Read tool every time"
+  },
+  {
+   "id": "milind:Q182",
+   "action": "set_option",
+   "match": "overlapping tool descriptions",
+   "text": "Near-identical descriptions give no basis for choosing; give each clear use-case boundaries"
+  },
+  {
+   "id": "milind:Q183",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's instruction-following degrades through weight drift; restarting sessions weekly fixes it"
+  },
+  {
+   "id": "milind:Q183",
+   "action": "set_option",
+   "match": "add the audit",
+   "text": "Repeat the audit-logging instruction three times in the system prompt to increase its weight"
+  },
+  {
+   "id": "milind:Q183",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The system prompt was truncated in a deployment; restore it and add checksum validation"
+  },
+  {
+   "id": "milind:Q183",
+   "action": "set_option",
+   "match": "long running sessions",
+   "text": "Accumulated context dilutes the instruction; enforce audit logging with a PostToolUse hook instead"
+  },
+  {
+   "id": "milind:Q184",
+   "action": "set_option",
+   "match": "retry the entire",
+   "text": "Retry the entire batch of five subagents so that all five segments come from one consistent run"
+  },
+  {
+   "id": "milind:Q184",
+   "action": "set_option",
+   "match": "mark segment 3",
+   "text": "Record segment 3 as a structured error so the coordinator makes an explicit decision about it"
+  },
+  {
+   "id": "milind:Q184",
+   "action": "set_option",
+   "match": "proceed with the",
+   "text": "Proceed with the four successful results and record the timeout in the application logs"
+  },
+  {
+   "id": "milind:Q184",
+   "action": "set_option",
+   "match": "extend the timeout",
+   "text": "Extend the timeout and keep waiting for subagent 3 for as long as it needs to complete"
+  },
+  {
+   "id": "milind:Q185",
+   "action": "set_option",
+   "match": "the re prompt",
+   "text": "The re-prompt is phrased in second person (\"you\"), which is an anti-pattern for agentic prompts"
+  },
+  {
+   "id": "milind:Q185",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "The coordinator shouldn't tell the model about tool failures at all, but silently retry in code"
+  },
+  {
+   "id": "milind:Q185",
+   "action": "set_option",
+   "match": "the generic re",
+   "text": "The generic re-prompt drops the error details the model needs for an informed retry decision"
+  },
+  {
+   "id": "milind:Q185",
+   "action": "set_option",
+   "match": "tool errors should",
+   "text": "A tool error should trigger a session restart rather than an in-session retry attempt"
+  },
+  {
+   "id": "milind:Q186",
+   "action": "set_option",
+   "match": "the structured handoff",
+   "text": "The handoff was incomplete: Pass 2 got the file list but not the code context it needed"
+  },
+  {
+   "id": "milind:Q186",
+   "action": "set_option",
+   "match": "f string conversion",
+   "text": "f-string conversion requires a single pass; two-pass prompt chaining can't handle this task"
+  },
+  {
+   "id": "milind:Q186",
+   "action": "set_option",
+   "match": "the agent tool",
+   "text": "The Agent tool (formerly Task) in Pass 2 was missing Read from its allowedTools list"
+  },
+  {
+   "id": "milind:Q186",
+   "action": "set_option",
+   "match": "pass 2 s",
+   "text": "Pass 2's context window was too small to hold the complete list of files from Pass 1"
+  },
+  {
+   "id": "milind:Q187",
+   "action": "set_option",
+   "match": "resume if the",
+   "text": "Resume if the session state matches the real state of the migrated data; start fresh if that is uncertain"
+  },
+  {
+   "id": "milind:Q187",
+   "action": "set_option",
+   "match": "always resume to",
+   "text": "Resume in every case to save tokens, since rebuilding context from scratch wastes resources"
+  },
+  {
+   "id": "milind:Q187",
+   "action": "set_option",
+   "match": "start fresh only",
+   "text": "Start fresh when the migration schema changed during the 12-hour gap; otherwise resume as normal"
+  },
+  {
+   "id": "milind:Q187",
+   "action": "set_option",
+   "match": "always start fresh",
+   "text": "Start fresh after any interruption longer than an hour, to avoid working from stale context"
+  },
+  {
+   "id": "milind:Q188",
+   "action": "set_option",
+   "match": "pretooluse hooks cannot",
+   "text": "PreToolUse hooks can't intercept bash commands; bash visibility exists in PostToolUse hooks"
+  },
+  {
+   "id": "milind:Q188",
+   "action": "set_option",
+   "match": "the hook performs",
+   "text": "It matches literal flag strings; robust blocking needs semantic parsing or an allowlist"
+  },
+  {
+   "id": "milind:Q188",
+   "action": "set_option",
+   "match": "the hook should",
+   "text": "The hook should run after the command executes so it can inspect the actual filesystem changes"
+  },
+  {
+   "id": "milind:Q188",
+   "action": "set_option",
+   "match": "the penetration test",
+   "text": "It's a false positive, since `rm --recursive --force` needs different permissions than `rm -rf`"
+  },
+  {
+   "id": "milind:Q189",
+   "action": "set_option",
+   "match": "use iterative refinement",
+   "text": "Use iterative refinement: run subagent 1, refine with 2, then with 3, then synthesize the result"
+  },
+  {
+   "id": "milind:Q189",
+   "action": "set_option",
+   "match": "spawn all 4",
+   "text": "Spawn all four as sequential subagents so the dependency order is respected at every step"
+  },
+  {
+   "id": "milind:Q189",
+   "action": "set_option",
+   "match": "spawn subagents 1",
+   "text": "Spawn 1-3 in parallel in one coordinator response, then spawn 4 with their combined outputs"
+  },
+  {
+   "id": "milind:Q189",
+   "action": "set_option",
+   "match": "spawn a single",
+   "text": "Spawn a single subagent for all four steps to keep coordination overhead to a minimum"
+  },
+  {
+   "id": "milind:Q19",
+   "action": "set_option",
+   "match": "a pre execution",
+   "text": "A pre-execution hook that intercepts `process_refund` and redirects amounts over $500 to `escalate_to_human`"
+  },
+  {
+   "id": "milind:Q19",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system prompt instruction: \"Only process refunds under $500 automatically; escalate larger ones\""
+  },
+  {
+   "id": "milind:Q19",
+   "action": "set_option",
+   "match": "a few shot",
+   "text": "Few-shot examples in the system prompt showing the agent escalating a $600 refund to a human"
+  },
+  {
+   "id": "milind:Q190",
+   "action": "set_option",
+   "match": "add a confidence",
+   "text": "Add a confidence threshold so the model uses restricted tools when its confidence is above 90%"
+  },
+  {
+   "id": "milind:Q190",
+   "action": "set_option",
+   "match": "add stronger language",
+   "text": "Strengthen the prompt: \"NEVER use tools F-T for high-sensitivity requests under any circumstances\""
+  },
+  {
+   "id": "milind:Q190",
+   "action": "set_option",
+   "match": "implement sensitivity based",
+   "text": "Limit the `tools` array to the 5 permitted tools for every high-sensitivity request"
+  },
+  {
+   "id": "milind:Q191",
+   "action": "set_option",
+   "match": "the description lacks",
+   "text": "Which database, supported queries, return format, when to prefer alternatives, and an example"
+  },
+  {
+   "id": "milind:Q191",
+   "action": "set_option",
+   "match": "the description should",
+   "text": "The maximum query length, so the agent stops sending oversized or off-topic queries to this tool"
+  },
+  {
+   "id": "milind:Q191",
+   "action": "set_option",
+   "match": "tool descriptions only",
+   "text": "A `tool_choice: \"auto\"` setting, since descriptions don't influence selection without it"
+  },
+  {
+   "id": "milind:Q191",
+   "action": "set_option",
+   "match": "the description needs",
+   "text": "A longer tool name that includes the database type, since names drive tool selection"
+  },
+  {
+   "id": "milind:Q192",
+   "action": "set_option",
+   "match": "the error message",
+   "text": "The error message is too short; an agent needs at least 50 characters of detail to act on an error"
+  },
+  {
+   "id": "milind:Q192",
+   "action": "set_option",
+   "match": "the error lacks",
+   "text": "It lacks `errorCategory: \"permission\"` and `isRetryable: false`, so the agent retries in vain"
+  },
+  {
+   "id": "milind:Q192",
+   "action": "set_option",
+   "match": "mcp error responses",
+   "text": "MCP error responses must use HTTP status codes rather than JSON fields to signal failure"
+  },
+  {
+   "id": "milind:Q192",
+   "action": "set_option",
+   "match": "the error should",
+   "text": "It should include the user's ID so the agent can request elevated permissions automatically"
+  },
+  {
+   "id": "milind:Q193",
+   "action": "set_option",
+   "match": "proprietary servers require",
+   "text": "Proprietary servers need a separate MCP gateway and can't be configured in either file"
+  },
+  {
+   "id": "milind:Q193",
+   "action": "set_option",
+   "match": "both types should",
+   "text": "Both types belong in `~/.claude.json`, because project files can be committed by accident"
+  },
+  {
+   "id": "milind:Q193",
+   "action": "set_option",
+   "match": "all servers should",
+   "text": "All servers belong in the project `.mcp.json` so the whole team gets a consistent setup"
+  },
+  {
+   "id": "milind:Q193",
+   "action": "set_option",
+   "match": "proprietary data servers",
+   "text": "Proprietary servers in authorized users' `~/.claude.json`, utilities in `.mcp.json`"
+  },
+  {
+   "id": "milind:Q194",
+   "action": "set_option",
+   "match": "the mcp servers",
+   "text": "The MCP servers are rate-limiting responses, and the added latency degrades selection accuracy"
+  },
+  {
+   "id": "milind:Q194",
+   "action": "set_option",
+   "match": "the llm s",
+   "text": "Discriminating between tool descriptions gets harder as the number of tools grows"
+  },
+  {
+   "id": "milind:Q194",
+   "action": "set_option",
+   "match": "tools from different",
+   "text": "Tools from different MCP servers conflict when loaded together, causing routing ambiguity"
+  },
+  {
+   "id": "milind:Q194",
+   "action": "set_option",
+   "match": "the 45 tool",
+   "text": "The 45-tool configuration overflowed the context window, truncating some of the descriptions"
+  },
+  {
+   "id": "milind:Q195",
+   "action": "set_option",
+   "match": "move the credential",
+   "text": "Move the credential into `~/.claude.json` so new developers don't need to set it themselves"
+  },
+  {
+   "id": "milind:Q195",
+   "action": "set_option",
+   "match": "use tool_choice any",
+   "text": "Set `tool_choice: \"any\"` so the agent can keep working without the payment MCP server"
+  },
+  {
+   "id": "milind:Q195",
+   "action": "set_option",
+   "match": "hard code the",
+   "text": "Hard-code the API key directly in `.mcp.json` so onboarding works without extra setup"
+  },
+  {
+   "id": "milind:Q195",
+   "action": "set_option",
+   "match": "document the required",
+   "text": "Document the required variables, add a `.env.example`, and have developers set them from the secrets store"
+  },
+  {
+   "id": "milind:Q196",
+   "action": "set_option",
+   "match": "set tool_choice any",
+   "text": "Set `tool_choice: \"any\"` so the model must pick a tool instead of defaulting to the first one"
+  },
+  {
+   "id": "milind:Q196",
+   "action": "set_option",
+   "match": "remove search_customers from",
+   "text": "Remove `search_customers` from the toolset whenever the user context looks like a financial task"
+  },
+  {
+   "id": "milind:Q196",
+   "action": "set_option",
+   "match": "rename search_financials to",
+   "text": "Rename `search_financials` to `lookup_financials` so that it also contains the word \"lookup\""
+  },
+  {
+   "id": "milind:Q196",
+   "action": "set_option",
+   "match": "add negative scope",
+   "text": "Mark `search_customers` \"not for financial data\"; add revenue terms to `search_financials`"
+  },
+  {
+   "id": "milind:Q197",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "The system prompt needs a rule: \"Always check for CC recipients before sending any email to a user\""
+  },
+  {
+   "id": "milind:Q197",
+   "action": "set_option",
+   "match": "the parameter list",
+   "text": "The parameters are in the wrong order, and `body` should be listed before `subject`"
+  },
+  {
+   "id": "milind:Q197",
+   "action": "set_option",
+   "match": "the tool and",
+   "text": "It never says what `cc`/`bcc` are for or when to use them, e.g. that \"also notify\" means cc"
+  },
+  {
+   "id": "milind:Q198",
+   "action": "set_option",
+   "match": "provide all 15",
+   "text": "Provide all 15 tools but set `tool_choice: \"auto\"` together with a confidence threshold"
+  },
+  {
+   "id": "milind:Q198",
+   "action": "set_option",
+   "match": "15 tools is",
+   "text": "Fifteen tools is within the acceptable range, so give every agent all of them for flexibility"
+  },
+  {
+   "id": "milind:Q198",
+   "action": "set_option",
+   "match": "scope tools by",
+   "text": "Scope tools by role: read-only tools for inquiries, order tools for orders, ticket tools for escalation"
+  },
+  {
+   "id": "milind:Q198",
+   "action": "set_option",
+   "match": "consolidate all 15",
+   "text": "Consolidate the 15 tools into 3 \"super tools\" that route internally via a type parameter"
+  },
+  {
+   "id": "milind:Q199",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The request should have used `tool_choice: \"auto\"` so the model could decide on its own"
+  },
+  {
+   "id": "milind:Q199",
+   "action": "set_option",
+   "match": "forced tool_choice is",
+   "text": "A forced tool_choice is overridden whenever the model decides the tool is irrelevant"
+  },
+  {
+   "id": "milind:Q199",
+   "action": "set_option",
+   "match": "this is a",
+   "text": "It's a bug: a forced tool_choice should activate when the tool is relevant to the query"
+  },
+  {
+   "id": "milind:Q199",
+   "action": "set_option",
+   "match": "this is expected",
+   "text": "Expected: a named tool_choice forces that tool regardless of the input's relevance"
+  },
+  {
+   "id": "milind:Q20",
+   "action": "set_option",
+   "match": "when the llm",
+   "text": "When the rule is too complex to express clearly in a single system prompt instruction"
+  },
+  {
+   "id": "milind:Q20",
+   "action": "set_option",
+   "match": "when the rule requires",
+   "text": "When the rule needs guaranteed compliance, as in financial, security or regulatory cases"
+  },
+  {
+   "id": "milind:Q20",
+   "action": "set_option",
+   "match": "when the rule is simple",
+   "text": "When the rule is simple and its prompt instruction would be longer than twenty words"
+  },
+  {
+   "id": "milind:Q20",
+   "action": "set_option",
+   "match": "when hooks are",
+   "text": "When hooks are cheaper to implement than writing and testing detailed prompt instructions"
+  },
+  {
+   "id": "milind:Q200",
+   "action": "set_option",
+   "match": "add a errorsubcategory",
+   "text": "Add an `errorSubCategory`; set `isRetryable: true` for input errors, `false` for business-rule violations"
+  },
+  {
+   "id": "milind:Q200",
+   "action": "set_option",
+   "match": "return a permission",
+   "text": "Return a `\"permission\"` category for business rule violations, since they involve company policy"
+  },
+  {
+   "id": "milind:Q200",
+   "action": "set_option",
+   "match": "consolidate both into",
+   "text": "Consolidate both failures into a single error message that describes both possible causes"
+  },
+  {
+   "id": "milind:Q200",
+   "action": "set_option",
+   "match": "use different http",
+   "text": "Use different HTTP status codes so the agent can tell the two validation types apart"
+  },
+  {
+   "id": "milind:Q201",
+   "action": "set_option",
+   "match": "use a separate",
+   "text": "Add a separate `allow_writes: false` configuration flag to the MCP server's settings"
+  },
+  {
+   "id": "milind:Q201",
+   "action": "set_option",
+   "match": "add a parameter",
+   "text": "Add a `readonly: boolean` parameter that the agent can set to true for each query"
+  },
+  {
+   "id": "milind:Q201",
+   "action": "set_option",
+   "match": "update the description",
+   "text": "Mark it READ-ONLY for SELECT, list forbidden write statements, and add SELECT-only examples"
+  },
+  {
+   "id": "milind:Q201",
+   "action": "set_option",
+   "match": "implement input validation",
+   "text": "Add backend validation that rejects non-SELECT statements, leaving the description unchanged"
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_option",
+   "match": "use glob to",
+   "text": "Use Glob to find all source files, then Read each one in turn to check it for the string"
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_option",
+   "match": "use the edit",
+   "text": "Use the Edit tool's search mode to locate the pattern across all files in the codebase"
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_option",
+   "match": "use the read",
+   "text": "Use the Read tool with a wildcard path pattern to scan all matching files in one call"
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_option",
+   "match": "use the grep",
+   "text": "Use Grep to find the files by content, then open each matched file with Read"
+  },
+  {
+   "id": "milind:Q203",
+   "action": "set_option",
+   "match": "read the current",
+   "text": "Re-read the file, retry Edit with the current text as `old_string`, and fall back to Write if needed"
+  },
+  {
+   "id": "milind:Q203",
+   "action": "set_option",
+   "match": "use the write",
+   "text": "Use the Write tool immediately to overwrite the whole file with the desired configuration content"
+  },
+  {
+   "id": "milind:Q203",
+   "action": "set_option",
+   "match": "delete the file",
+   "text": "Delete the file and then recreate it with Write, containing the updated configuration"
+  },
+  {
+   "id": "milind:Q203",
+   "action": "set_option",
+   "match": "use the bash",
+   "text": "Use the Bash tool to run `sed -i` on line 47 as an alternative way of editing the file"
+  },
+  {
+   "id": "milind:Q204",
+   "action": "set_option",
+   "match": "yes but only",
+   "text": "Yes, but both servers must use the same authentication mechanism to run side by side"
+  },
+  {
+   "id": "milind:Q204",
+   "action": "set_option",
+   "match": "only project scoped",
+   "text": "Project-scoped servers load at startup; user-scoped servers need an explicit activation command"
+  },
+  {
+   "id": "milind:Q204",
+   "action": "set_option",
+   "match": "no only one",
+   "text": "No, a session can connect to one MCP server at a time, so you must pick one of the two"
+  },
+  {
+   "id": "milind:Q204",
+   "action": "set_option",
+   "match": "yes claude supports",
+   "text": "Yes, project- and user-scoped servers are merged at startup and are all usable concurrently"
+  },
+  {
+   "id": "milind:Q205",
+   "action": "set_option",
+   "match": "the description should clarify",
+   "text": "That the parameters are alternatives: pass exactly one, preferring customer ID when known"
+  },
+  {
+   "id": "milind:Q205",
+   "action": "set_option",
+   "match": "the tool needs",
+   "text": "Separate `find_by_email`, `find_by_phone` and `find_by_id` tools instead of one combined tool"
+  },
+  {
+   "id": "milind:Q205",
+   "action": "set_option",
+   "match": "add required false",
+   "text": "`required: false` on each parameter in the JSON schema to signal that they are optional"
+  },
+  {
+   "id": "milind:Q205",
+   "action": "set_option",
+   "match": "the description should",
+   "text": "An explicit list of the returned fields, so the agent knows which inputs the tool needs"
+  },
+  {
+   "id": "milind:Q206",
+   "action": "set_option",
+   "match": "remove the old",
+   "text": "Remove the old tool from the MCP server, since routing accuracy outweighs backward compatibility"
+  },
+  {
+   "id": "milind:Q206",
+   "action": "set_option",
+   "match": "add deprecated use",
+   "text": "Start the old description with \"DEPRECATED: use archive_records_v2\" and mark v2 as the preferred replacement"
+  },
+  {
+   "id": "milind:Q206",
+   "action": "set_option",
+   "match": "rename archive_records to",
+   "text": "Rename `archive_records` to `do_not_use_archive_records` so the name itself signals deprecation"
+  },
+  {
+   "id": "milind:Q207",
+   "action": "set_option",
+   "match": "remove the isretryable",
+   "text": "Remove the `isRetryable` field so the agent decides based on `errorCategory` by itself"
+  },
+  {
+   "id": "milind:Q207",
+   "action": "set_option",
+   "match": "return a success",
+   "text": "Return a success response with empty data instead of an error so the agent doesn't give up"
+  },
+  {
+   "id": "milind:Q207",
+   "action": "set_option",
+   "match": "change errorcategory to permission",
+   "text": "Change `errorCategory` to `\"permission\"`, since a 503 is an authorization-related error"
+  },
+  {
+   "id": "milind:Q207",
+   "action": "set_option",
+   "match": "change errorcategory to transient",
+   "text": "Set `errorCategory: \"transient\"` and `isRetryable: true`; a 503 is a temporary outage"
+  },
+  {
+   "id": "milind:Q208",
+   "action": "set_option",
+   "match": "8 tools is",
+   "text": "Eight tools is too many for one agent; remove the five unused tools from the configuration"
+  },
+  {
+   "id": "milind:Q208",
+   "action": "set_option",
+   "match": "the agent has",
+   "text": "The agent can track just three tools at a time; increase the session memory to fix it"
+  },
+  {
+   "id": "milind:Q208",
+   "action": "set_option",
+   "match": "the model may",
+   "text": "Likely positional bias; reorder by expected use and sharpen the descriptions of underused tools"
+  },
+  {
+   "id": "milind:Q208",
+   "action": "set_option",
+   "match": "the other 5",
+   "text": "The other five tools have a bug blocking their invocation; run individual validation tests on them"
+  },
+  {
+   "id": "milind:Q209",
+   "action": "set_option",
+   "match": "first the description",
+   "text": "The description advertises an auth bypass, and authentication belongs in server code, not description text"
+  },
+  {
+   "id": "milind:Q209",
+   "action": "set_option",
+   "match": "the tool should",
+   "text": "The tool lacks a required password parameter that the agent must supply on every call"
+  },
+  {
+   "id": "milind:Q209",
+   "action": "set_option",
+   "match": "the red team",
+   "text": "The attack works because `tool_choice: \"any\"` was configured, forcing the agent to call a tool"
+  },
+  {
+   "id": "milind:Q209",
+   "action": "set_option",
+   "match": "the tool description",
+   "text": "The description is false, since every MCP server requires authentication before tools can run"
+  },
+  {
+   "id": "milind:Q210",
+   "action": "set_option",
+   "match": "set tool_choice auto",
+   "text": "Set `tool_choice: \"auto\"` and add a file-size preprocessing step that picks the tool in code"
+  },
+  {
+   "id": "milind:Q210",
+   "action": "set_option",
+   "match": "remove the built",
+   "text": "Remove the built-in Read tool from the toolset so the agent has to use `read_csv`"
+  },
+  {
+   "id": "milind:Q210",
+   "action": "set_option",
+   "match": "rename read_csv to",
+   "text": "Rename `read_csv` to `parse_large_csv` so that the size guidance becomes implicit in the name"
+  },
+  {
+   "id": "milind:Q210",
+   "action": "set_option",
+   "match": "add explicit size",
+   "text": "Add size guidance: `read_csv` for CSVs over 1MB, Read for small files, noted in both"
+  },
+  {
    "id": "milind:Q211",
    "action": "set_option",
    "match": "the four category system is",
