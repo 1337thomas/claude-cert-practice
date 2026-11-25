@@ -34913,6 +34913,1181 @@
    "action": "set_option",
    "match": "The message field",
    "text": "The message field is redundant alongside isError and should be removed to save tokens."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "edit",
+   "field": "opt",
+   "find": "tool_choice: \"auto\"",
+   "replace": "tool_choice: \"auto\", letting Claude decide whether to call a tool"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "edit",
+   "field": "opt",
+   "find": "tool_choice: \"any\"",
+   "replace": "tool_choice: \"any\", so Claude must call one of the provided tools"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "set_option",
+   "match": "forced selection e g",
+   "text": "Forced selection: {\"type\": \"tool\", \"name\": \"extract_metadata\"}"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "None; tool_choice cannot control which tool is called first"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#10",
+   "action": "set_option",
+   "match": "none an",
+   "text": "None — for the agent, an empty result and a failed call mean the same thing, so either form works."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#10",
+   "action": "set_option",
+   "match": "the agent treats",
+   "text": "A successful empty query looks like a failure, so the agent may retry or report an outage instead of \"you have no orders.\""
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#10",
+   "action": "set_option",
+   "match": "the agent will",
+   "text": "The agent automatically re-classifies it as a valid empty result, using the isRetryable field as its hint."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#10",
+   "action": "set_option",
+   "match": "the mcp client",
+   "text": "The MCP client rejects the response, because an isError result must also carry an errorCategory field."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#12",
+   "action": "set_option",
+   "match": "the jira_search tool s",
+   "text": "The jira_search description is too thin about its capabilities and outputs, so the agent falls back to Grep."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#12",
+   "action": "set_option",
+   "match": "built in tools always",
+   "text": "Claude Code resolves built-in tools before MCP tools, so Grep is picked whenever it can handle the request at all."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#12",
+   "action": "set_option",
+   "match": "mcp tools are",
+   "text": "MCP tools are limited to plan mode, so the agent cannot reach jira_search during normal direct execution."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#12",
+   "action": "set_option",
+   "match": "the mcp json file",
+   "text": "The .mcp.json entry needs a priority field set above the built-in tools, otherwise Grep is preferred."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#13",
+   "action": "set_option",
+   "match": "commit mcp json with the",
+   "text": "Commit .mcp.json with the token value inline, since only team members can read the private repository."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#13",
+   "action": "set_option",
+   "match": "configure the server",
+   "text": "Use project-scoped .mcp.json with environment variable expansion (\"${GITHUB_TOKEN}\"), so each environment supplies the value."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#13",
+   "action": "set_option",
+   "match": "have each engineer",
+   "text": "Have each engineer add the server to their own ~/.claude.json, since project-scoped config cannot reference credentials."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#13",
+   "action": "set_option",
+   "match": "commit mcp json without",
+   "text": "Commit .mcp.json without the env block and have every engineer paste the token in at each session start."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#14",
+   "action": "set_option",
+   "match": "mcp resources which",
+   "text": "MCP resources, which expose content catalogs (schemas, documentation hierarchies) so the agent can see available data without probing."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#14",
+   "action": "set_option",
+   "match": "adding more mcp",
+   "text": "Adding more MCP tools so that each discovery question about sources and schemas gets its own dedicated tool."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#14",
+   "action": "set_option",
+   "match": "setting tool_choice any",
+   "text": "Setting tool_choice: \"any\" so the agent stops returning conversational text while it discovers the sources."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#14",
+   "action": "set_option",
+   "match": "moving the mcp",
+   "text": "Moving the MCP servers from project scope to user scope so that connections to the data sources open faster."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#3",
+   "action": "set_option",
+   "match": "add a mode",
+   "text": "Add a mode parameter to analyze_document and describe what each mode does in the tool description."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#3",
+   "action": "set_option",
+   "match": "split the generic",
+   "text": "Split it into purpose-specific tools: extract_data_points, summarize_content, and verify_claim_against_source."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#3",
+   "action": "set_option",
+   "match": "delete the tool",
+   "text": "Remove the tool and have the agent do extraction, summaries, and claim checks directly in its own prose reply instead."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#3",
+   "action": "set_option",
+   "match": "rename the tool",
+   "text": "Rename the tool to something more descriptive while keeping its existing generic description unchanged."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#4",
+   "action": "set_option",
+   "match": "it doesn t matter",
+   "text": "It isn't needed: an isError flag plus the error message text already gives the agent everything to react on."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#4",
+   "action": "set_option",
+   "match": "different error categories",
+   "text": "Each category calls for a different reaction (retry, fix input, explain a policy, escalate), which one flag can't convey."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#4",
+   "action": "set_option",
+   "match": "errorcategory is required",
+   "text": "The MCP specification requires errorCategory on every error result, so a bare isError flag is rejected outright."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#4",
+   "action": "set_option",
+   "match": "it s purely cosmetic",
+   "text": "It mainly helps human operators filter logs and dashboards; the agent's behavior stays the same either way."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#5",
+   "action": "set_option",
+   "match": "having more tools",
+   "text": "More tools generally improve coverage, so the drop must come from a flaw hidden in one of the tool descriptions."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#5",
+   "action": "set_option",
+   "match": "more available tools",
+   "text": "More candidate tools make each selection decision harder, degrading routing even when descriptions are good."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#5",
+   "action": "set_option",
+   "match": "the extra tools",
+   "text": "The extra tool definitions crowd the context window so much that none of the descriptions remain visible."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#5",
+   "action": "set_option",
+   "match": "only the first",
+   "text": "The model looks at the first five tools in the list and ignores the rest, so later tools are never picked."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "edit",
+   "field": "opt",
+   "find": "tool_choice: \"auto\"",
+   "replace": "tool_choice: \"auto\", letting Claude decide whether to use any tool"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "edit",
+   "field": "opt",
+   "find": "tool_choice: \"any\"",
+   "replace": "tool_choice: \"any\", so Claude must call one of the provided tools"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "set_option",
+   "match": "a forced tool_choice",
+   "text": "A forced tool_choice that names one specific extraction tool"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "set_option",
+   "match": "omitting tool_choice entirely",
+   "text": "Omitting tool_choice so the API applies its default behavior"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#7",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "None in practice; both files hold the same server definitions and are loaded the same way for everyone."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#7",
+   "action": "set_option",
+   "match": "project scoped mcp json is",
+   "text": "Project .mcp.json is shared, version-controlled team tooling; ~/.claude.json holds personal or experimental servers."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#7",
+   "action": "set_option",
+   "match": "user scoped configuration always",
+   "text": "User-scoped definitions override project-scoped ones whenever both files define a server with the same name."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#7",
+   "action": "set_option",
+   "match": "only project scoped mcp",
+   "text": "Project-scoped .mcp.json servers start without approval, while ~/.claude.json servers must be approved first."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/check#1",
+   "action": "set_option",
+   "match": "claude code ignores",
+   "text": "Claude Code starts reading CLAUDE.md after a developer has run /init once on their own machine."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/check#1",
+   "action": "set_option",
+   "match": "the standards were",
+   "text": "The standards sit in a teammate's user-level ~/.claude/CLAUDE.md, not the project CLAUDE.md, so were never shared."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/check#1",
+   "action": "set_option",
+   "match": "the new engineer",
+   "text": "CLAUDE.md is loaded once it is listed under a claudeMdFiles key in the engineer's settings.json file."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/check#1",
+   "action": "set_option",
+   "match": "claude md files expire",
+   "text": "The new engineer's clone needs a .claude/rules/ index file before Claude Code will pick up CLAUDE.md."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/check#2",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "No such option"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#11",
+   "action": "set_option",
+   "match": "move it into",
+   "text": "Move it to .claude/rules/deployment.md with paths: [\"infra/**\"] (or an infra/CLAUDE.md) to scope it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#11",
+   "action": "set_option",
+   "match": "leave it in",
+   "text": "Keep it in the root CLAUDE.md but add a header saying \"ignore unless working in infra/\" so sessions skip it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#11",
+   "action": "set_option",
+   "match": "move it to each",
+   "text": "Move it into each engineer's user-level ~/.claude/CLAUDE.md so the shared project file stays short and focused."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#11",
+   "action": "set_option",
+   "match": "convert it to",
+   "text": "Convert it into a slash command so it never loads automatically and engineers invoke it when they need it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "set_option",
+   "match": "disallowed tools write edit",
+   "text": "disallowed-tools: [Write, Edit], so write and edit tools leave Claude's available pool while the skill is active."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "set_option",
+   "match": "argument hint which prevents",
+   "text": "argument-hint: \"read-only\", which tells Claude Code to block any destructive file operations while the skill is running."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "set_option",
+   "match": "context fork which",
+   "text": "context: fork, which also gives the forked sub-agent read-only access to the filesystem by default."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#15",
+   "action": "set_option",
+   "match": "use the explore",
+   "text": "Do discovery in the Explore subagent so it returns summaries and the main context is preserved."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#15",
+   "action": "set_option",
+   "match": "increase max_tokens so",
+   "text": "Raise max_tokens so the session can hold more of the discovery output before implementation begins."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#15",
+   "action": "set_option",
+   "match": "run the discovery",
+   "text": "Run the discovery phase with --output-format json so the listings and traces enter context compressed."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#15",
+   "action": "set_option",
+   "match": "skip the discovery",
+   "text": "Skip detailed discovery and let the model rely on its general knowledge of similar codebases instead."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#17",
+   "action": "set_option",
+   "match": "the interview pattern",
+   "text": "Use the interview pattern: Claude asks you questions first, surfacing issues like cache invalidation."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#17",
+   "action": "set_option",
+   "match": "write a longer",
+   "text": "Write a longer, more emphatic prose specification that spells out every requirement you can think of upfront."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#17",
+   "action": "set_option",
+   "match": "ask for three",
+   "text": "Ask Claude for three different implementations at once and pick whichever one handles the most cases."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#17",
+   "action": "set_option",
+   "match": "use plan mode",
+   "text": "Use plan mode with an explicit instruction not to ask questions, so Claude commits to a single design."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#18",
+   "action": "set_option",
+   "match": "provide the existing",
+   "text": "Put the existing test files in context and document testing standards and available fixtures in CLAUDE.md."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#18",
+   "action": "set_option",
+   "match": "reduce how often",
+   "text": "Run the job less often, for example weekly, so reviewers see fewer duplicate proposals in each review round."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#18",
+   "action": "set_option",
+   "match": "instruct the prompt",
+   "text": "Tell the prompt to \"only generate valuable, non-duplicate tests\" and rely on the model's own judgment."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#18",
+   "action": "set_option",
+   "match": "switch the job",
+   "text": "Move the job to the Message Batches API so the redundant output costs half as much to generate."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#5",
+   "action": "set_option",
+   "match": "it lets you",
+   "text": "It references other files so CLAUDE.md stays modular, e.g. importing only what a package needs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#5",
+   "action": "set_option",
+   "match": "it automatically synchronizes",
+   "text": "It automatically syncs CLAUDE.md content across every developer's machine whenever the file changes."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#5",
+   "action": "set_option",
+   "match": "it replaces the",
+   "text": "It replaces .claude/rules/ entirely, since imported files load with the same path-scoped behavior."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#5",
+   "action": "set_option",
+   "match": "it s required for",
+   "text": "It is required for CLAUDE.md to be version-controlled, since imports mark which files git should track."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#6",
+   "action": "set_option",
+   "match": "it duplicates the",
+   "text": "It copies the skill under a new name so a variant can be edited without touching the original."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#6",
+   "action": "set_option",
+   "match": "it runs the",
+   "text": "It runs the skill in an isolated sub-agent context so its output stays out of the main conversation."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#6",
+   "action": "set_option",
+   "match": "it forks the",
+   "text": "It creates a temporary git branch before the skill runs so that its file changes can be discarded later."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#6",
+   "action": "set_option",
+   "match": "it grants the",
+   "text": "It lifts the allowed-tools limits so the skill gets unrestricted tool access for as long as it runs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#7",
+   "action": "set_option",
+   "match": "nothing re running",
+   "text": "Nothing; each re-run checks the earlier PR comments on its own and posts only genuinely fresh findings."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#7",
+   "action": "set_option",
+   "match": "include the prior",
+   "text": "Include the prior findings in context and tell Claude to report only new or unaddressed issues."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#7",
+   "action": "set_option",
+   "match": "disable the review",
+   "text": "Disable the review after the first run so later commits on the pull request never get commented on."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#7",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a higher-tier model, which remembers the previous run's findings automatically between jobs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#8",
+   "action": "set_option",
+   "match": "repeat the prose",
+   "text": "Repeat the prose description with stronger, more emphatic wording on the key requirements."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#8",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a larger model, since the current one can't follow the prose reliably."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#8",
+   "action": "set_option",
+   "match": "abandon the transformation",
+   "text": "Run each request several times and keep whichever output appears most often."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#1",
+   "action": "set_option",
+   "match": "be even more",
+   "text": "Strengthen it to \"only flag issues you are absolutely certain about, and nothing else.\""
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#1",
+   "action": "set_option",
+   "match": "specific categorical criteria",
+   "text": "Categorical criteria naming which issue types to report (bugs, security) and which to skip (style, local patterns)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#1",
+   "action": "set_option",
+   "match": "use your best",
+   "text": "Replace it with \"use your best judgment about what an experienced senior reviewer would flag.\""
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#1",
+   "action": "set_option",
+   "match": "remove all guidance",
+   "text": "Ask the model to attach a confidence score to each issue and drop every finding scored below 0.8."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "set_option",
+   "match": "yes tool_use",
+   "text": "Yes — a schema-enforced tool_use call ensures full correctness, both the structure and the values."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "set_option",
+   "match": "no tool_use with",
+   "text": "No — the schema removes JSON syntax errors, but a total that doesn't match its line items needs separate validation."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "set_option",
+   "match": "no tool_use",
+   "text": "No — tool_use with a schema gives no reliability benefit over asking for the JSON in plain prose."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "set_option",
+   "match": "only if the",
+   "text": "Only if the schema marks every line-item field as required and gives each amount a numeric type."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#3",
+   "action": "set_option",
+   "match": "no batch processing",
+   "text": "No — the Batches API is meant for evaluations and bulk classification, not for generating reports."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#3",
+   "action": "set_option",
+   "match": "yes overnight",
+   "text": "Yes — an overnight, latency-tolerant job suits the Batches API's 50% discount and 24-hour window."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#3",
+   "action": "set_option",
+   "match": "only if the",
+   "text": "Only if the report needs multi-turn tool calling inside a single batch request to gather its data."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#3",
+   "action": "set_option",
+   "match": "no batch",
+   "text": "No — batch results come back in random order and cannot be matched to their original input requests."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "set_option",
+   "match": "submit batches every",
+   "text": "Submit a batch every 4 hours: at most 4 h queued plus 24 h processing stays within 30 hours."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "set_option",
+   "match": "submit one batch",
+   "text": "Submit one batch daily at midnight, since batches usually finish well before the 24-hour limit."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "set_option",
+   "match": "submit each document",
+   "text": "Submit each document individually the moment it arrives, so no document ever waits in a queue."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "set_option",
+   "match": "the 30 hour sla",
+   "text": "The 30-hour SLA cannot be met with the Batches API under any submission schedule or batch size."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#14",
+   "action": "set_option",
+   "match": "add a detected_pattern",
+   "text": "Add a detected_pattern field to each finding recording the code construct that triggered it, for analysis by pattern."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#14",
+   "action": "set_option",
+   "match": "ask developers to",
+   "text": "Ask developers to write a short free-text explanation every time they dismiss one of the bot's findings."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#14",
+   "action": "set_option",
+   "match": "log the full",
+   "text": "Log the full prompt and response of every review run and have someone read through them manually each week."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#14",
+   "action": "set_option",
+   "match": "increase the confidence",
+   "text": "Raise the confidence threshold for posting findings until the dismissal rate drops to an acceptable level."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#15",
+   "action": "set_option",
+   "match": "an enum of known categories plus",
+   "text": "An enum of known categories plus an \"other\" value, paired with a detail string for unenumerated cases."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#15",
+   "action": "set_option",
+   "match": "a free text string",
+   "text": "A free-text string field with no enum, so any present or future category can be expressed as written."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#15",
+   "action": "set_option",
+   "match": "an enum of known categories only",
+   "text": "An enum of known categories only, marked required, forcing each expense into the closest existing match."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#15",
+   "action": "set_option",
+   "match": "a boolean field",
+   "text": "A boolean field for each known category, so several categories can be set on the same expense at once."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#16",
+   "action": "set_option",
+   "match": "add few shot examples",
+   "text": "Add few-shot examples showing correct extraction from the varied formats, including narrative prose."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#16",
+   "action": "set_option",
+   "match": "mark the affected",
+   "text": "Mark the affected fields as nullable, since the data clearly can't be extracted from those documents."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#16",
+   "action": "set_option",
+   "match": "add a retry",
+   "text": "Add a retry loop that re-requests the extraction whenever a required field comes back empty."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#16",
+   "action": "set_option",
+   "match": "filter out narrative format",
+   "text": "Filter out the narrative-format documents and route every one of them to manual human review."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#17",
+   "action": "set_option",
+   "match": "a model retains",
+   "text": "The session retains its reasoning context, so it is less likely to question its own decisions."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#17",
+   "action": "set_option",
+   "match": "self review instructions cause",
+   "text": "Self-review instructions make responses long enough to hit max_tokens before the generated code is complete."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#17",
+   "action": "set_option",
+   "match": "self review only works",
+   "text": "Self-review instructions only take effect when tool_choice is set to \"any\" for the generation call."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#17",
+   "action": "set_option",
+   "match": "there s no flaw",
+   "text": "There's no flaw — self-review instructions match an independent review instance and cost less."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#20",
+   "action": "set_option",
+   "match": "examples distinguishing acceptable",
+   "text": "Contrasting acceptable patterns with real issues cuts false positives while the model still generalizes."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#20",
+   "action": "set_option",
+   "match": "it pads the",
+   "text": "It pads the prompt, so the model spends more reasoning time weighing each finding before it finally reports it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#20",
+   "action": "set_option",
+   "match": "negative examples are",
+   "text": "Negative examples are required whenever tool_use enforces a JSON schema on the structured review output."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#20",
+   "action": "set_option",
+   "match": "it demonstrates the",
+   "text": "It demonstrates the output format for findings, which examples of real issues alone cannot do."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#3",
+   "action": "set_option",
+   "match": "it s too short",
+   "text": "It is too short for the model to weigh it properly against the rest of the long system prompt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#3",
+   "action": "set_option",
+   "match": "it gives the",
+   "text": "It offers no concrete, checkable standard; categorical report/skip criteria work far better."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#3",
+   "action": "set_option",
+   "match": "confidence based filtering is",
+   "text": "Claude has no confidence-filtering feature, so the instruction is silently ignored at inference."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#3",
+   "action": "set_option",
+   "match": "it causes the",
+   "text": "It makes the model suppress nearly all findings, so recall collapses while precision stays flat."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#4",
+   "action": "set_option",
+   "match": "add 2 4 few shot",
+   "text": "Add 2-4 few-shot examples showing correct extraction across the different formats."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#4",
+   "action": "set_option",
+   "match": "remove the ambiguous",
+   "text": "Remove the informally formatted invoices from the input set before extraction runs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#4",
+   "action": "set_option",
+   "match": "increase the model s",
+   "text": "Increase max_tokens so the model has more room to reason about each amount."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#4",
+   "action": "set_option",
+   "match": "ask the model",
+   "text": "Ask the model to guess each amount and flag its own confidence afterwards."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#5",
+   "action": "set_option",
+   "match": "no consequence",
+   "text": "No consequence — the model reliably leaves the field blank whenever a document has no tax ID."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#5",
+   "action": "set_option",
+   "match": "the model may",
+   "text": "The model may fabricate a plausible tax ID to fill it; making the field optional/nullable prevents this."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#5",
+   "action": "set_option",
+   "match": "the extraction will",
+   "text": "Every extraction from such a document fails with a schema validation error until a tax ID value is supplied."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#5",
+   "action": "set_option",
+   "match": "required fields have",
+   "text": "Required only affects downstream validation, not what the model writes, so nothing needs changing."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#6",
+   "action": "set_option",
+   "match": "keep retrying with",
+   "text": "Keep retrying with the same validation error message; with enough attempts it will eventually succeed."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#6",
+   "action": "set_option",
+   "match": "this is a",
+   "text": "Retries can't help here; make the field optional/nullable or route the document to human review."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#6",
+   "action": "set_option",
+   "match": "switch the field",
+   "text": "Switch the field to a stricter type, such as a regex-constrained string, to force a compliant value."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#6",
+   "action": "set_option",
+   "match": "the retry loop",
+   "text": "The retry loop itself is broken and needs to be reimplemented from scratch with a new error format."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#8",
+   "action": "set_option",
+   "match": "the generating session has",
+   "text": "During review, the generating session runs with a smaller context window than a fresh session."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#8",
+   "action": "set_option",
+   "match": "the generating session",
+   "text": "The writing session keeps its reasoning context and is less likely to question its own decisions."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#8",
+   "action": "set_option",
+   "match": "independent instances always",
+   "text": "Independent instances are automatically routed to a higher-tier model than the original writing session."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#8",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "There is no real difference; the effect is a myth, since both instances use the same weights."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#1",
+   "action": "edit",
+   "field": "opt",
+   "find": "A hallucination.",
+   "replace": "A hallucination, where the model invents favorable results that are not in the report."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#1",
+   "action": "set_option",
+   "match": "the lost in",
+   "text": "The \"lost in the middle\" effect: content buried mid-document gets under-weighted."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#1",
+   "action": "set_option",
+   "match": "a tool selection error",
+   "text": "A chunking error, where the reading tool skipped the middle pages of the report."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#1",
+   "action": "set_option",
+   "match": "a schema validation",
+   "text": "A recency bias, where only the final section of the report shapes the summary."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#3",
+   "action": "set_option",
+   "match": "it isn t a",
+   "text": "It isn't a problem; \"search unavailable\" tells the coordinator enough to retry the same query."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#3",
+   "action": "set_option",
+   "match": "the generic status",
+   "text": "It hides the failure type, attempted query, and partial results the coordinator needs to choose a recovery."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#3",
+   "action": "set_option",
+   "match": "the coordinator will",
+   "text": "The coordinator's parser expects a JSON object and will crash on any plain string status."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/check#3",
+   "action": "set_option",
+   "match": "it means the",
+   "text": "It signals that the subagent exhausted its token budget, so any retry would fail the same way."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#14",
+   "action": "set_option",
+   "match": "structured claim source mappings",
+   "text": "Subagent outputs weren't required to carry claim-source mappings (URL, document, excerpt) through synthesis."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#14",
+   "action": "set_option",
+   "match": "the synthesis agent s",
+   "text": "The synthesis agent's context window is too small to hold all of the original source documents at the same time."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#14",
+   "action": "set_option",
+   "match": "the subagents used",
+   "text": "The research subagents used too many tool calls, so their source details were truncated away."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#14",
+   "action": "set_option",
+   "match": "the report needed",
+   "text": "The final report needed a bibliography section listing every consulted source at the end."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#15",
+   "action": "set_option",
+   "match": "include both values",
+   "text": "Include both values with a conflict annotation and source attribution, letting the coordinator reconcile."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#15",
+   "action": "set_option",
+   "match": "select the value",
+   "text": "Select the value from the more recently published source and pass only that one forward to synthesis."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#15",
+   "action": "set_option",
+   "match": "omit the contested",
+   "text": "Omit the contested statistic entirely so that no contradiction is introduced into the later synthesis step."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#15",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two values so that downstream synthesis receives a single, consistent number to work with."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#3",
+   "action": "set_option",
+   "match": "the overall topic",
+   "text": "The overall topic of the conversation, which summaries tend to drop first."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#3",
+   "action": "set_option",
+   "match": "specific numbers dates",
+   "text": "Exact amounts, dates, and stated customer expectations, which blur into vague wording."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#3",
+   "action": "set_option",
+   "match": "the identity of",
+   "text": "Who said what in each turn, since summaries tend to merge all the speakers into one voice."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#3",
+   "action": "set_option",
+   "match": "the language the",
+   "text": "The language of the conversation, since summaries default to English output."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#4",
+   "action": "set_option",
+   "match": "to reduce token",
+   "text": "To cut token usage, since a compact block can stand in for the whole history."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#4",
+   "action": "set_option",
+   "match": "to ensure key",
+   "text": "To keep key transactional facts exact rather than blurred by summarization."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#4",
+   "action": "set_option",
+   "match": "it s required by",
+   "text": "Because the Messages API requires a structured facts block in long conversations."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#4",
+   "action": "set_option",
+   "match": "to replace the",
+   "text": "To remove the need for tool calls, since the facts are already in every prompt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#5",
+   "action": "set_option",
+   "match": "pick the most",
+   "text": "Pick the most recently active account, since that's statistically the most likely match."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#5",
+   "action": "set_option",
+   "match": "ask the customer",
+   "text": "Ask the customer for another identifier, such as an order number or email."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#5",
+   "action": "set_option",
+   "match": "proceed with the",
+   "text": "Proceed with the first match the tool returned, since results are sorted by relevance."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#5",
+   "action": "set_option",
+   "match": "escalate immediately without",
+   "text": "Escalate to a human agent immediately without trying to resolve the ambiguity itself."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#6",
+   "action": "set_option",
+   "match": "nothing unusual",
+   "text": "Nothing unusual; this is expected long-session behavior and needs no mitigation at all."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#6",
+   "action": "set_option",
+   "match": "context degradation",
+   "text": "Context degradation; persisting key findings in a scratchpad file mitigates it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#6",
+   "action": "set_option",
+   "match": "a tool selection error",
+   "text": "A tool-selection error; renaming the exploration tools to be more distinct fixes it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#6",
+   "action": "set_option",
+   "match": "a json schema",
+   "text": "A JSON schema validation failure in the exploration output; a tighter schema fixes it."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#7",
+   "action": "set_option",
+   "match": "yes an aggregate",
+   "text": "Yes — an aggregate accuracy figure is representative of every document type and field."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#7",
+   "action": "set_option",
+   "match": "no aggregate",
+   "text": "No — the aggregate can hide weak segments; validate accuracy by document type and field first."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#7",
+   "action": "set_option",
+   "match": "yes as long",
+   "text": "Yes — as long as the sample size behind the 97% figure was large enough to be statistically significant."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#7",
+   "action": "set_option",
+   "match": "no because aggregate",
+   "text": "No — aggregate accuracy metrics carry no meaningful information about extraction quality."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#8",
+   "action": "set_option",
+   "match": "annotate the conflict",
+   "text": "Annotate the conflict, keeping both values with their source attribution rather than silently picking one."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#8",
+   "action": "set_option",
+   "match": "arbitrarily select the",
+   "text": "Select the value from whichever source was processed first and discard the other one as a duplicate."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#8",
+   "action": "set_option",
+   "match": "check whether the",
+   "text": "Check whether different publication or collection dates explain the gap rather than a real contradiction."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d5/quiz#8",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two values and report only that average as a single figure, with both sources cited in a footnote."
+  },
+  {
+   "id": "connectry:q-1.1-hard-1",
+   "action": "set_option",
+   "match": "root cause the model",
+   "text": "Root cause: the model ignores `end_turn` signals and keeps calling tools. Mitigation: switch to a newer model version with better instruction-following and a stricter system prompt."
+  },
+  {
+   "id": "connectry:q-1.1-hard-1",
+   "action": "set_option",
+   "match": "root cause the agentic",
+   "text": "Root cause: the loop omits the assistant message from conversation history, so the model re-requests the same tools. Mitigation: always append the previous assistant turn."
+  },
+  {
+   "id": "connectry:q-1.1-hard-1",
+   "action": "set_option",
+   "match": "root cause tool",
+   "text": "Root cause: tool results return ambiguous or error states the model keeps trying to resolve. Mitigation: structured errors with `\"is_error\": true`, an iteration cap, and logging of each tool result."
+  },
+  {
+   "id": "connectry:q-1.1-hard-1",
+   "action": "set_option",
+   "match": "root cause parallel",
+   "text": "Root cause: parallel tool execution causes race conditions that return stale results. Mitigation: switch all tool calls to sequential execution so each result reflects the latest state."
+  },
+  {
+   "id": "connectry:q-1.1-hard-2",
+   "action": "set_option",
+   "match": "execute all tools in",
+   "text": "Execute all tools in parallel, commit each successful result immediately, and return `is_error: true` only for the failed tools so the model can retry them next turn."
+  },
+  {
+   "id": "connectry:q-1.1-hard-2",
+   "action": "set_option",
+   "match": "if any single",
+   "text": "If any single tool in the turn fails, abort the entire agentic loop at once and surface the error to the user without returning any tool results to the model."
+  },
+  {
+   "id": "connectry:q-1.1-hard-2",
+   "action": "set_option",
+   "match": "execute all tools hold",
+   "text": "Buffer all results uncommitted and commit atomically only if every tool succeeds; on failure, return successes plus `is_error: true` for failed tools and let the model retry or abort."
+  },
+  {
+   "id": "connectry:q-1.1-hard-2",
+   "action": "set_option",
+   "match": "execute all tools and",
+   "text": "Execute all tools, return `is_error: true` for failed ones and normal results for the rest, and let the model decide through a later tool call whether to commit the successes."
+  },
+  {
+   "id": "connectry:q-1.1-hard-3",
+   "action": "set_option",
+   "match": "design b is",
+   "text": "Design B is the better choice in every case because parallel execution is faster, so Design A has no real place in a production loop."
+  },
+  {
+   "id": "connectry:q-1.1-hard-3",
+   "action": "set_option",
+   "match": "design a produces",
+   "text": "Design A yields higher-quality outputs because the model sees each tool result before the next call is made, enabling incremental reasoning."
+  },
+  {
+   "id": "connectry:q-1.1-hard-3",
+   "action": "set_option",
+   "match": "design a is",
+   "text": "Design A is safer because sequential execution avoids race conditions; Design B adds correctness risks that outweigh its latency benefit."
+  },
+  {
+   "id": "connectry:q-1.1-hard-3",
+   "action": "set_option",
+   "match": "design b reduces",
+   "text": "Design B lowers latency for independent calls, but the orchestrator must analyze dependencies and run calls concurrently, risking misclassification."
+  },
+  {
+   "id": "connectry:q-1.1-hard-4",
+   "action": "set_option",
+   "match": "keep the full",
+   "text": "Keep the full message history at all times; if it exceeds the context limit, raise `max_tokens` to make room for the extra turns."
+  },
+  {
+   "id": "connectry:q-1.1-hard-4",
+   "action": "set_option",
+   "match": "preserve the system",
+   "text": "Keep the system prompt and first 1–2 turns verbatim, a compact structured summary of completed work, and the last K turns in full."
+  },
+  {
+   "id": "connectry:q-1.1-hard-4",
+   "action": "set_option",
+   "match": "replace the entire",
+   "text": "Replace the entire message history with a single summarization prompt after every 5 turns, discarding all of the prior messages."
+  },
+  {
+   "id": "connectry:q-1.1-hard-4",
+   "action": "set_option",
+   "match": "keep the system prompt and the",
+   "text": "Keep the system prompt plus the most recent N user/assistant turns, and discard the older turns from the middle of the conversation."
+  },
+  {
+   "id": "connectry:q-1.2-easy-2",
+   "action": "set_option",
+   "match": "direct subagent to subagent calls",
+   "text": "Direct subagent-to-subagent calls are technically impossible in the Anthropic SDK, so the coordinator must relay them."
+  },
+  {
+   "id": "connectry:q-1.2-easy-2",
+   "action": "set_option",
+   "match": "routing through the",
+   "text": "It keeps the coordinator as sole decision-maker, eases error recovery, and avoids hidden peer dependencies."
+  },
+  {
+   "id": "connectry:q-1.2-easy-2",
+   "action": "set_option",
+   "match": "it reduces total",
+   "text": "It lowers total latency, because the coordinator batches all subagent messages before forwarding them onward."
+  },
+  {
+   "id": "connectry:q-1.2-easy-2",
+   "action": "set_option",
+   "match": "subagents lack tool",
+   "text": "Subagents have no tool access of their own and so cannot initiate any network calls to other agents directly."
   }
  ],
  "hold": []
