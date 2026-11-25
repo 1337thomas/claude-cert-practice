@@ -15156,6 +15156,1165 @@
    "action": "set_option",
    "match": "the access_time_ms indicates",
    "text": "Retry the search, since an access_time_ms of 450 indicates a slow query"
+  },
+  {
+   "id": "milind:Q211",
+   "action": "set_option",
+   "match": "the four category system is",
+   "text": "The MCP specification mandates exactly these four categories; two categories are non-compliant"
+  },
+  {
+   "id": "milind:Q211",
+   "action": "set_option",
+   "match": "category granularity enables",
+   "text": "Each category maps to its own recovery: backoff, input fix, escalation, or elevated access"
+  },
+  {
+   "id": "milind:Q211",
+   "action": "set_option",
+   "match": "the four category",
+   "text": "Four categories give the monitoring dashboards finer-grained error logs to report against"
+  },
+  {
+   "id": "milind:Q211",
+   "action": "set_option",
+   "match": "two categories make",
+   "text": "With two categories, `isRetryable` can't be set correctly for edge cases like rate limits"
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_option",
+   "match": "use grep with",
+   "text": "Use Grep with a pattern that matches only source file headers to filter the list"
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_option",
+   "match": "use the write",
+   "text": "Use the Write tool to create a script that filters the Glob output via shell commands"
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_option",
+   "match": "use the read",
+   "text": "Use the Read tool to open each returned file and check its actual content type"
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_option",
+   "match": "use glob with",
+   "text": "Narrow the Glob pattern (e.g., `src/**/*.py`, not `**/*.py`) or run targeted Globs"
+  },
+  {
+   "id": "milind:Q213",
+   "action": "set_option",
+   "match": "all three servers",
+   "text": "The session fails to start, since every configured server must be healthy at startup"
+  },
+  {
+   "id": "milind:Q213",
+   "action": "set_option",
+   "match": "the session starts with",
+   "text": "It starts with server-a and server-c; server-b's tools are unavailable or return errors"
+  },
+  {
+   "id": "milind:Q213",
+   "action": "set_option",
+   "match": "claude automatically substitutes",
+   "text": "Claude substitutes server-a or server-c tools for server-b's based on semantic similarity"
+  },
+  {
+   "id": "milind:Q213",
+   "action": "set_option",
+   "match": "the session starts",
+   "text": "It starts, and server-b is polled and added automatically once it is back online"
+  },
+  {
+   "id": "milind:Q214",
+   "action": "set_option",
+   "match": "keep both tools",
+   "text": "Keep both tools for backward compatibility and mark one as deprecated in its description"
+  },
+  {
+   "id": "milind:Q214",
+   "action": "set_option",
+   "match": "use tool_choice auto",
+   "text": "Set `tool_choice: \"auto\"` so the model picks the better-named tool for each context"
+  },
+  {
+   "id": "milind:Q214",
+   "action": "set_option",
+   "match": "fix both descriptions",
+   "text": "Rewrite both descriptions with non-overlapping use cases so the agent can tell them apart"
+  },
+  {
+   "id": "milind:Q214",
+   "action": "set_option",
+   "match": "if both tools",
+   "text": "Merge them into a single tool; identical tools add complexity and invite misrouting"
+  },
+  {
+   "id": "milind:Q215",
+   "action": "set_option",
+   "match": "the error is",
+   "text": "Validation is correct, but `isRetryable` should be `false` or name a parameter change"
+  },
+  {
+   "id": "milind:Q215",
+   "action": "set_option",
+   "match": "the error category should be business",
+   "text": "The category should be `\"business\"`, since report size is a business policy constraint"
+  },
+  {
+   "id": "milind:Q215",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should switch to a different report-format tool instead of retrying this one"
+  },
+  {
+   "id": "milind:Q215",
+   "action": "set_option",
+   "match": "the error category",
+   "text": "The category should be `\"transient\"`, since large outputs are a temporary condition"
+  },
+  {
+   "id": "milind:Q216",
+   "action": "set_option",
+   "match": "the tool names",
+   "text": "The tool names are too similar and must be changed to clearly distinct names"
+  },
+  {
+   "id": "milind:Q216",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "The agent needs few-shot examples in the prompt showing correct tool selection"
+  },
+  {
+   "id": "milind:Q216",
+   "action": "set_option",
+   "match": "the tools should",
+   "text": "The two tools overlap and should simply be merged into a single analysis tool"
+  },
+  {
+   "id": "milind:Q216",
+   "action": "set_option",
+   "match": "both tools have",
+   "text": "Both descriptions are too minimal to differentiate inputs and use cases"
+  },
+  {
+   "id": "milind:Q217",
+   "action": "set_option",
+   "match": "lookup order details",
+   "text": "\"Looks up order details in the database. Use whenever order information could help answer the user's question.\""
+  },
+  {
+   "id": "milind:Q217",
+   "action": "set_option",
+   "match": "use this tool",
+   "text": "\"Use this tool to get order data when needed. Returns the complete order record with all stored fields.\""
+  },
+  {
+   "id": "milind:Q217",
+   "action": "set_option",
+   "match": "retrieves order details",
+   "text": "\"Retrieves an order by ID (e.g., 'ORD-123', '#7749'). Returns status, items, shipping. NOT for customers: use get_customer.\""
+  },
+  {
+   "id": "milind:Q217",
+   "action": "set_option",
+   "match": "gets order information",
+   "text": "\"Gets order information. Accepts an order ID, customer email, or name and handles any order-related question.\""
+  },
+  {
+   "id": "milind:Q217",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Minimal descriptions like options B, C, D fail to differentiate the tool from similar alternatives.",
+   "replace": "The other options each miss key elements: A and B give no concrete triggering inputs, return details, or boundary, and D even widens the scope into customer lookups instead of drawing a boundary with get_customer."
+  },
+  {
+   "id": "milind:Q218",
+   "action": "set_option",
+   "match": "generic errors cause",
+   "text": "Generic errors make the agent terminate the session instead of attempting recovery"
+  },
+  {
+   "id": "milind:Q218",
+   "action": "set_option",
+   "match": "the generic error",
+   "text": "The agent can't tell a missing ID (needs new input) from a timeout (worth retrying)"
+  },
+  {
+   "id": "milind:Q218",
+   "action": "set_option",
+   "match": "the error format",
+   "text": "None; the error format is valid and gives the agent enough to recover on its own"
+  },
+  {
+   "id": "milind:Q218",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "Tools should not return error details to the agent, so the message itself is the issue"
+  },
+  {
+   "id": "milind:Q219",
+   "action": "set_option",
+   "match": "the tool result",
+   "text": "The tool result should be hidden from the user and kept only in the agent's context"
+  },
+  {
+   "id": "milind:Q219",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent must immediately terminate the current workflow and report the failure"
+  },
+  {
+   "id": "milind:Q219",
+   "action": "set_option",
+   "match": "the tool execution",
+   "text": "The call failed; the agent should inspect the error and retry, re-ask, or escalate"
+  },
+  {
+   "id": "milind:Q219",
+   "action": "set_option",
+   "match": "the server itself",
+   "text": "The server itself has crashed, so all subsequent tool calls to it will also fail"
+  },
+  {
+   "id": "milind:Q22",
+   "action": "set_option",
+   "match": "dynamic adaptive decomposition",
+   "text": "Dynamic adaptive: map the codebase, find high-impact areas, adapt the plan as you go"
+  },
+  {
+   "id": "milind:Q22",
+   "action": "set_option",
+   "match": "fixed sequential pipeline",
+   "text": "Fixed sequential pipeline: scan files, generate tests, write tests, in that fixed order"
+  },
+  {
+   "id": "milind:Q22",
+   "action": "set_option",
+   "match": "single step provide",
+   "text": "Single-step: give Claude the full codebase and have it write all tests in one response"
+  },
+  {
+   "id": "milind:Q22",
+   "action": "set_option",
+   "match": "parallel decomposition spawn",
+   "text": "Parallel decomposition: spawn one subagent per file to write its tests independently"
+  },
+  {
+   "id": "milind:Q220",
+   "action": "set_option",
+   "match": "rename all irrelevant",
+   "text": "Rename every irrelevant tool with a \"do_not_use_\" prefix to discourage selection"
+  },
+  {
+   "id": "milind:Q220",
+   "action": "set_option",
+   "match": "restrict the synthesis",
+   "text": "Restrict its tool set to synthesis tools (e.g., verify_fact, format_output)"
+  },
+  {
+   "id": "milind:Q220",
+   "action": "set_option",
+   "match": "add detailed instructions",
+   "text": "List the tools to avoid in the system prompt with detailed usage instructions"
+  },
+  {
+   "id": "milind:Q220",
+   "action": "set_option",
+   "match": "increase the synthesis",
+   "text": "Increase the agent's context window so it can better track all available tools"
+  },
+  {
+   "id": "milind:Q221",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt rule: \"Only call fetch_url with URLs from the approved CMS\""
+  },
+  {
+   "id": "milind:Q221",
+   "action": "set_option",
+   "match": "add input validation",
+   "text": "Add input validation inside `fetch_url` that logs any invalid URLs it receives"
+  },
+  {
+   "id": "milind:Q221",
+   "action": "set_option",
+   "match": "create a pre",
+   "text": "Create a pre-execution hook that inspects the URLs passed to `fetch_url`"
+  },
+  {
+   "id": "milind:Q221",
+   "action": "set_option",
+   "match": "replace fetch_url with",
+   "text": "Replace it with a `load_document` tool that validates URLs against an approved list"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "set_option",
+   "match": "the keyword analyze",
+   "text": "The word \"analyze\" in the tool name ties it to the prompt's security instruction"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "set_option",
+   "match": "the tool description",
+   "text": "The tool description is malformed and has to be rewritten from scratch to work"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "set_option",
+   "match": "security review and",
+   "text": "Security review and content analysis are semantically equivalent tasks for the model"
+  },
+  {
+   "id": "milind:Q222",
+   "action": "set_option",
+   "match": "the agent is",
+   "text": "The agent is correctly using `analyze_content` for the authentication analysis"
+  },
+  {
+   "id": "milind:Q223",
+   "action": "set_option",
+   "match": "tool_choice auto the",
+   "text": "`tool_choice: \"auto\"`, the default, which lets Claude decide whether to use a tool"
+  },
+  {
+   "id": "milind:Q223",
+   "action": "set_option",
+   "match": "tool_choice type none",
+   "text": "`tool_choice: {\"type\": \"none\"}`, which stops Claude from calling any tools"
+  },
+  {
+   "id": "milind:Q223",
+   "action": "set_option",
+   "match": "tool_choice required a",
+   "text": "`tool_choice: \"required\"`, a dedicated mode that blocks plain text responses"
+  },
+  {
+   "id": "milind:Q223",
+   "action": "set_option",
+   "match": "tool_choice any forces",
+   "text": "`tool_choice: \"any\"`, which makes Claude call one of the provided tools"
+  },
+  {
+   "id": "milind:Q224",
+   "action": "set_option",
+   "match": "tool_choice auto with",
+   "text": "`tool_choice: \"auto\"` plus a prompt instruction to call `extract_metadata` first"
+  },
+  {
+   "id": "milind:Q224",
+   "action": "set_option",
+   "match": "tool_choice any with",
+   "text": "`tool_choice: \"any\"` with `extract_metadata` listed first in the tools array"
+  },
+  {
+   "id": "milind:Q224",
+   "action": "set_option",
+   "match": "set extract_metadata as",
+   "text": "Make `extract_metadata` the only tool that is available on the first turn"
+  },
+  {
+   "id": "milind:Q224",
+   "action": "set_option",
+   "match": "type tool name",
+   "text": "`{\"type\": \"tool\", \"name\": \"extract_metadata\"}` on turn one, enrichment on the next"
+  },
+  {
+   "id": "milind:Q225",
+   "action": "set_option",
+   "match": "in the root",
+   "text": "In the root `CLAUDE.md` file, under a dedicated `[tools]` section for the server"
+  },
+  {
+   "id": "milind:Q225",
+   "action": "set_option",
+   "match": "in the claude",
+   "text": "In the `.claude/commands/` directory, next to the project's slash commands"
+  },
+  {
+   "id": "milind:Q225",
+   "action": "set_option",
+   "match": "in the project",
+   "text": "In the project-level `.mcp.json` file, checked into the repository"
+  },
+  {
+   "id": "milind:Q225",
+   "action": "set_option",
+   "match": "in each developer",
+   "text": "In each developer's `~/.claude.json` file, added by every team member"
+  },
+  {
+   "id": "milind:Q226",
+   "action": "set_option",
+   "match": "in a mcp",
+   "text": "In a `.mcp.local.json` file placed in the project root"
+  },
+  {
+   "id": "milind:Q226",
+   "action": "set_option",
+   "match": "in your shell",
+   "text": "In your shell profile, defined as environment variables"
+  },
+  {
+   "id": "milind:Q226",
+   "action": "set_option",
+   "match": "in your user",
+   "text": "In your personal `~/.claude.json`, outside the repository"
+  },
+  {
+   "id": "milind:Q226",
+   "action": "set_option",
+   "match": "in the project",
+   "text": "In the project's `.mcp.json`, with `enabled: false` set"
+  },
+  {
+   "id": "milind:Q227",
+   "action": "set_option",
+   "match": "remove the grep",
+   "text": "Remove the built-in Grep tool from the agent's set of available tools"
+  },
+  {
+   "id": "milind:Q227",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt rule: \"Prefer the database tool over Grep\""
+  },
+  {
+   "id": "milind:Q227",
+   "action": "set_option",
+   "match": "rename the database",
+   "text": "Rename the database tool to `enhanced_grep` so it resembles Grep"
+  },
+  {
+   "id": "milind:Q227",
+   "action": "set_option",
+   "match": "enhance the mcp",
+   "text": "Expand the description with what it adds over Grep (joins, aggregations)"
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_option",
+   "match": "read reads specific",
+   "text": "Read — opens specific files to inspect their contents"
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_option",
+   "match": "edit finds text",
+   "text": "Edit — finds text patterns in files in order to modify them"
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_option",
+   "match": "grep searches file",
+   "text": "Grep — searches file contents for patterns like names"
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_option",
+   "match": "glob finds files",
+   "text": "Glob — finds files across the codebase by path pattern"
+  },
+  {
+   "id": "milind:Q23",
+   "action": "set_option",
+   "match": "creating a backup",
+   "text": "Creating a backup copy of a session before risky tool calls, for rollback"
+  },
+  {
+   "id": "milind:Q23",
+   "action": "set_option",
+   "match": "creating independent branches",
+   "text": "Branching from a shared baseline to explore divergent approaches in parallel"
+  },
+  {
+   "id": "milind:Q23",
+   "action": "set_option",
+   "match": "splitting a single",
+   "text": "Splitting one conversation into multiple parallel turns for faster processing"
+  },
+  {
+   "id": "milind:Q23",
+   "action": "set_option",
+   "match": "forking the claude",
+   "text": "Forking the Claude model so it runs in a separate, isolated container"
+  },
+  {
+   "id": "milind:Q231",
+   "action": "set_option",
+   "match": "iserror true always",
+   "text": "`isError: true` is a signal that the agent must escalate the case to human review"
+  },
+  {
+   "id": "milind:Q231",
+   "action": "set_option",
+   "match": "empty array with",
+   "text": "`[]` is a valid empty result; `isError: true` is a failure that may need retry"
+  },
+  {
+   "id": "milind:Q231",
+   "action": "set_option",
+   "match": "empty arrays and",
+   "text": "Empty arrays and errors both indicate that the query itself failed to execute"
+  },
+  {
+   "id": "milind:Q231",
+   "action": "set_option",
+   "match": "the distinction is",
+   "text": "It's cosmetic; both signal that the agent should try a different query instead"
+  },
+  {
+   "id": "milind:Q232",
+   "action": "set_option",
+   "match": "include all issues",
+   "text": "Include all the open issues directly in the project's CLAUDE.md file"
+  },
+  {
+   "id": "milind:Q232",
+   "action": "set_option",
+   "match": "create a tool for",
+   "text": "Create a tool per issue type: `list_bugs`, `list_features`, `list_epics`"
+  },
+  {
+   "id": "milind:Q232",
+   "action": "set_option",
+   "match": "expose the issue",
+   "text": "Expose the issue catalog as an MCP resource the agent can browse"
+  },
+  {
+   "id": "milind:Q232",
+   "action": "set_option",
+   "match": "create a tool called",
+   "text": "Create one `list_all_issues` tool that returns everything in a single call"
+  },
+  {
+   "id": "milind:Q233",
+   "action": "set_option",
+   "match": "the keyword security",
+   "text": "The word \"security\" in the prompt ties `security_scan` to every review"
+  },
+  {
+   "id": "milind:Q233",
+   "action": "set_option",
+   "match": "the agent is",
+   "text": "The agent is correctly applying security scanning broadly across all code"
+  },
+  {
+   "id": "milind:Q233",
+   "action": "set_option",
+   "match": "the security_scan tool",
+   "text": "The `security_scan` tool description is too narrow to scope its use"
+  },
+  {
+   "id": "milind:Q233",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The system prompt instruction directly conflicts with the tool's description"
+  },
+  {
+   "id": "milind:Q234",
+   "action": "set_option",
+   "match": "each tool has",
+   "text": "Each has a clear, non-overlapping purpose, so selection is unambiguous"
+  },
+  {
+   "id": "milind:Q234",
+   "action": "set_option",
+   "match": "three tools are",
+   "text": "Three narrow tools execute faster than one general-purpose tool would"
+  },
+  {
+   "id": "milind:Q234",
+   "action": "set_option",
+   "match": "splitting tools reduces",
+   "text": "Splitting the tool reduces API costs because each tool schema is smaller"
+  },
+  {
+   "id": "milind:Q234",
+   "action": "set_option",
+   "match": "multiple tools enable",
+   "text": "Multiple tools enable parallel processing of one document within one agent"
+  },
+  {
+   "id": "milind:Q235",
+   "action": "set_option",
+   "match": "tool_choice any forces",
+   "text": "`tool_choice: \"any\"`, so Claude must call a tool but picks the matching schema"
+  },
+  {
+   "id": "milind:Q235",
+   "action": "set_option",
+   "match": "tool_choice auto allows",
+   "text": "`tool_choice: \"auto\"`, so Claude decides itself whether a tool is needed"
+  },
+  {
+   "id": "milind:Q235",
+   "action": "set_option",
+   "match": "tool_choice type tool",
+   "text": "`tool_choice: {\"type\": \"tool\", \"name\": \"extract_invoice\"}`, forcing one schema"
+  },
+  {
+   "id": "milind:Q235",
+   "action": "set_option",
+   "match": "tool_choice none disables",
+   "text": "`tool_choice: \"none\"`, so Claude disables tool selection for the request"
+  },
+  {
+   "id": "milind:Q236",
+   "action": "set_option",
+   "match": "token encryption before",
+   "text": "Encryption of the token before it is transmitted to the MCP server"
+  },
+  {
+   "id": "milind:Q236",
+   "action": "set_option",
+   "match": "multi user token",
+   "text": "Sharing a single token across every user on the team automatically"
+  },
+  {
+   "id": "milind:Q236",
+   "action": "set_option",
+   "match": "credential management without",
+   "text": "Keeping the secret out of git; the token is read from the environment"
+  },
+  {
+   "id": "milind:Q236",
+   "action": "set_option",
+   "match": "automatic token rotation",
+   "text": "Automatic token rotation whenever the environment variable changes"
+  },
+  {
+   "id": "milind:Q237",
+   "action": "set_option",
+   "match": "tools from all",
+   "text": "All servers' tools are discovered at connection and usable together"
+  },
+  {
+   "id": "milind:Q237",
+   "action": "set_option",
+   "match": "only the primary",
+   "text": "Only the primary server's tools are available; the others stay on standby"
+  },
+  {
+   "id": "milind:Q238",
+   "action": "set_option",
+   "match": "searches products required",
+   "text": "\"Searches products. Required when the user says 'find', 'search', 'do you have', or 'available'.\""
+  },
+  {
+   "id": "milind:Q238",
+   "action": "set_option",
+   "match": "add required true",
+   "text": "Add `required: true` to the tool definition so Claude must consider it on every product turn"
+  },
+  {
+   "id": "milind:Q238",
+   "action": "set_option",
+   "match": "searches the product",
+   "text": "\"Finds catalog items by name. Use for stock or price questions ('size 10 in blue?'). Returns stock, price.\""
+  },
+  {
+   "id": "milind:Q238",
+   "action": "set_option",
+   "match": "this is the",
+   "text": "\"This is the ONLY tool for product searches. ALWAYS use it for any product-related question.\""
+  },
+  {
+   "id": "milind:Q239",
+   "action": "set_option",
+   "match": "the document agent s",
+   "text": "The document agent's tool descriptions confuse it about its own capabilities"
+  },
+  {
+   "id": "milind:Q239",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should silently ignore requests that fall outside its scope"
+  },
+  {
+   "id": "milind:Q239",
+   "action": "set_option",
+   "match": "the coordinator is",
+   "text": "The coordinator misroutes requests; web searches shouldn't reach this agent"
+  },
+  {
+   "id": "milind:Q240",
+   "action": "set_option",
+   "match": "increase the process_refund",
+   "text": "Raise the existing `process_refund` limit from $1,000 to $10,000 for all calls"
+  },
+  {
+   "id": "milind:Q240",
+   "action": "set_option",
+   "match": "create a hook",
+   "text": "Add a hook that upgrades `process_refund` calls to large-refund mode when authorized"
+  },
+  {
+   "id": "milind:Q240",
+   "action": "set_option",
+   "match": "create a separate",
+   "text": "Add a separate `approve_large_refund` tool with its own parameters and auth rules"
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_option",
+   "match": "use glob to",
+   "text": "Use Glob to list every file, then Read all of them in parallel batches"
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_option",
+   "match": "start with the",
+   "text": "Start with the README and follow each of its documentation references"
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_option",
+   "match": "start with grep",
+   "text": "Grep for entry points and key patterns, then Read to trace the imports"
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_option",
+   "match": "read all files",
+   "text": "Read all files in alphabetical order to ensure complete coverage first"
+  },
+  {
+   "id": "milind:Q242",
+   "action": "set_option",
+   "match": "present the customermessage",
+   "text": "Show the `customerMessage` and ask for another payment method instead"
+  },
+  {
+   "id": "milind:Q242",
+   "action": "set_option",
+   "match": "retry the payment",
+   "text": "Retry the payment with the same card details after a short backoff delay"
+  },
+  {
+   "id": "milind:Q242",
+   "action": "set_option",
+   "match": "escalate to human",
+   "text": "Escalate the declined payment to human support immediately, without replying"
+  },
+  {
+   "id": "milind:Q242",
+   "action": "set_option",
+   "match": "try all available",
+   "text": "Automatically try every other payment method that is stored on the account"
+  },
+  {
+   "id": "milind:Q243",
+   "action": "set_option",
+   "match": "scoped cross role",
+   "text": "Scoped cross-role tool access — a constrained capability for rare needs"
+  },
+  {
+   "id": "milind:Q243",
+   "action": "set_option",
+   "match": "tool inheritance synthesis",
+   "text": "Tool inheritance — the synthesis agent inherits a subset of search tools"
+  },
+  {
+   "id": "milind:Q243",
+   "action": "set_option",
+   "match": "tool delegation synthesis",
+   "text": "Tool delegation — synthesis hands fact checks to the search agent directly"
+  },
+  {
+   "id": "milind:Q243",
+   "action": "set_option",
+   "match": "tool shadowing fact",
+   "text": "Tool shadowing — fact verification shadows web search with narrower scope"
+  },
+  {
+   "id": "milind:Q244",
+   "action": "set_option",
+   "match": "for standard integrations",
+   "text": "When it covers a standard, well-known service and is well maintained"
+  },
+  {
+   "id": "milind:Q244",
+   "action": "set_option",
+   "match": "always use community",
+   "text": "As the default for every integration, to avoid the maintenance burden"
+  },
+  {
+   "id": "milind:Q244",
+   "action": "set_option",
+   "match": "only when the",
+   "text": "When Anthropic has officially endorsed that particular community server"
+  },
+  {
+   "id": "milind:Q244",
+   "action": "set_option",
+   "match": "when your jira",
+   "text": "When your Jira instance requires a custom authentication mechanism"
+  },
+  {
+   "id": "milind:Q245",
+   "action": "set_option",
+   "match": "pdf extraction requires",
+   "text": "PDF extraction needs a special flag that is missing from the tool call"
+  },
+  {
+   "id": "milind:Q245",
+   "action": "set_option",
+   "match": "the tool names",
+   "text": "The two tool names are too similar for the model to tell them apart"
+  },
+  {
+   "id": "milind:Q245",
+   "action": "set_option",
+   "match": "the word content",
+   "text": "\"Content\" and \"research\" also fit uploaded files, so scopes overlap"
+  },
+  {
+   "id": "milind:Q245",
+   "action": "set_option",
+   "match": "the agent prefers",
+   "text": "The agent tends to prefer tools that have the shorter description"
+  },
+  {
+   "id": "milind:Q246",
+   "action": "set_option",
+   "match": "api costs increase",
+   "text": "API costs rise linearly with the number of tool definitions in each request"
+  },
+  {
+   "id": "milind:Q246",
+   "action": "set_option",
+   "match": "with 22 tools",
+   "text": "Tool selection gets less reliable as more tools add decision complexity"
+  },
+  {
+   "id": "milind:Q246",
+   "action": "set_option",
+   "match": "22 tools is",
+   "text": "None, since 22 tools is below the allowed maximum for a single agent"
+  },
+  {
+   "id": "milind:Q246",
+   "action": "set_option",
+   "match": "the agent will",
+   "text": "The agent may refuse to act because it has too many available choices"
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_option",
+   "match": "grep to find",
+   "text": "Grep for `validateUserInput` and its exported names, then Grep each name"
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_option",
+   "match": "read all files",
+   "text": "Read every file in the project, then search them for the function manually"
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_option",
+   "match": "use glob to",
+   "text": "Use Glob to find files named `validate*`, then Read each of them in turn"
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_option",
+   "match": "use bash with",
+   "text": "Use Bash with `grep -r` instead of the built-in search tools for the trace"
+  },
+  {
+   "id": "milind:Q248",
+   "action": "set_option",
+   "match": "auto and any",
+   "text": "`\"auto\"` and `\"any\"` behave identically; the names are just aliases"
+  },
+  {
+   "id": "milind:Q248",
+   "action": "set_option",
+   "match": "auto claude may",
+   "text": "`\"auto\"`: Claude may answer in text only; `\"any\"`: it must call a tool"
+  },
+  {
+   "id": "milind:Q248",
+   "action": "set_option",
+   "match": "auto always calls",
+   "text": "`\"auto\"`: calls every available tool; `\"any\"`: calls exactly one tool"
+  },
+  {
+   "id": "milind:Q248",
+   "action": "set_option",
+   "match": "auto is the",
+   "text": "`\"auto\"`: the default mode; `\"any\"`: deprecated in current versions"
+  },
+  {
+   "id": "milind:Q249",
+   "action": "set_option",
+   "match": "the tools need",
+   "text": "The tools should be renamed so both names include the word \"existing\""
+  },
+  {
+   "id": "milind:Q249",
+   "action": "set_option",
+   "match": "update_ticket needs to",
+   "text": "`update_ticket` needs to be listed before `create_ticket` in the tools array"
+  },
+  {
+   "id": "milind:Q249",
+   "action": "set_option",
+   "match": "both tool descriptions",
+   "text": "The descriptions lack when-to-use guidance, e.g., \"modify existing tickets\""
+  },
+  {
+   "id": "milind:Q249",
+   "action": "set_option",
+   "match": "claude cannot parse",
+   "text": "Claude cannot parse ticket IDs like TKT-456 that appear in user messages"
+  },
+  {
+   "id": "milind:Q25",
+   "action": "set_option",
+   "match": "when the prior session used",
+   "text": "When the prior session made more than 50 tool calls in total"
+  },
+  {
+   "id": "milind:Q25",
+   "action": "set_option",
+   "match": "when the prior session s",
+   "text": "When earlier tool results are stale and would mislead it"
+  },
+  {
+   "id": "milind:Q25",
+   "action": "set_option",
+   "match": "when the prior session lasted",
+   "text": "When the prior session ran for longer than two hours overall"
+  },
+  {
+   "id": "milind:Q25",
+   "action": "set_option",
+   "match": "when you want",
+   "text": "When you want the new session to use a different Claude model"
+  },
+  {
+   "id": "milind:Q250",
+   "action": "set_option",
+   "match": "remove grep from",
+   "text": "Remove the built-in Grep tool from the agent's list of available tools"
+  },
+  {
+   "id": "milind:Q250",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt rule: \"Use search_kb for knowledge base queries\""
+  },
+  {
+   "id": "milind:Q250",
+   "action": "set_option",
+   "match": "rename search_kb to",
+   "text": "Rename `search_kb` to `enhanced_grep_knowledge` so it resembles Grep"
+  },
+  {
+   "id": "milind:Q250",
+   "action": "set_option",
+   "match": "enhance the search_kb",
+   "text": "Explain what `search_kb` adds over Grep: semantic search and ranking"
+  },
+  {
+   "id": "milind:Q251",
+   "action": "set_option",
+   "match": "the null response",
+   "text": "The null response is preferred because it needs less error-handling code"
+  },
+  {
+   "id": "milind:Q251",
+   "action": "set_option",
+   "match": "the error response will",
+   "text": "The error response makes the agent terminate the whole session; null does not"
+  },
+  {
+   "id": "milind:Q251",
+   "action": "set_option",
+   "match": "the error response clearly",
+   "text": "The error is explicit and blocks retries; null might be not found or failed"
+  },
+  {
+   "id": "milind:Q251",
+   "action": "set_option",
+   "match": "both approaches are",
+   "text": "Both approaches are equivalent and tools can use them interchangeably"
+  },
+  {
+   "id": "milind:Q252",
+   "action": "set_option",
+   "match": "update the tool",
+   "text": "List supported formats and limits, e.g., \"NOT for CSV; use data_processor\""
+  },
+  {
+   "id": "milind:Q252",
+   "action": "set_option",
+   "match": "add input validation",
+   "text": "Add input validation that silently ignores any unsupported file it receives"
+  },
+  {
+   "id": "milind:Q252",
+   "action": "set_option",
+   "match": "add all file",
+   "text": "Mark every file type as supported so the agent never routes wrongly"
+  },
+  {
+   "id": "milind:Q252",
+   "action": "set_option",
+   "match": "create an error",
+   "text": "Return an error for unsupported files and let the agent learn the pattern"
+  },
+  {
+   "id": "milind:Q253",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should return a clear error and request the correct tool instead"
+  },
+  {
+   "id": "milind:Q253",
+   "action": "set_option",
+   "match": "web pages and",
+   "text": "Web pages and documents are semantically similar, so the routing is fine"
+  },
+  {
+   "id": "milind:Q253",
+   "action": "set_option",
+   "match": "the coordinator is",
+   "text": "The coordinator routes web content to an agent specialized in documents"
+  },
+  {
+   "id": "milind:Q253",
+   "action": "set_option",
+   "match": "the document agent",
+   "text": "The document agent should add web scraping tools to broaden its scope"
+  },
+  {
+   "id": "milind:Q254",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "One turn with both tools, instructing Claude to call them in that exact order"
+  },
+  {
+   "id": "milind:Q254",
+   "action": "set_option",
+   "match": "turn 1 tool_choice type",
+   "text": "Turn 1 forces `extract_metadata` via `tool_choice`; turn 2 uses `\"auto\"`"
+  },
+  {
+   "id": "milind:Q254",
+   "action": "set_option",
+   "match": "turn 1 tool_choice",
+   "text": "Turn 1: `tool_choice: \"any\"` so both tools get called simultaneously"
+  },
+  {
+   "id": "milind:Q254",
+   "action": "set_option",
+   "match": "turn 1 list",
+   "text": "Turn 1 lists `extract_metadata` first under `\"auto\"`, relying on order"
+  },
+  {
+   "id": "milind:Q255",
+   "action": "set_option",
+   "match": "resources for large",
+   "text": "Resources: for large datasets; Tools: for small payloads"
+  },
+  {
+   "id": "milind:Q255",
+   "action": "set_option",
+   "match": "resources for browsable",
+   "text": "Resources: browsable catalogs; Tools: parameterized calls"
+  },
+  {
+   "id": "milind:Q256",
+   "action": "set_option",
+   "match": "add a posttooluse",
+   "text": "Add a PostToolUse hook that cancels any subsequent notification tool calls"
+  },
+  {
+   "id": "milind:Q256",
+   "action": "set_option",
+   "match": "update each tool",
+   "text": "State each channel's use case and \"choose ONE channel per notification\" in the descriptions"
+  },
+  {
+   "id": "milind:Q256",
+   "action": "set_option",
+   "match": "create a single",
+   "text": "Merge them into one `send_notification` tool that picks the channel internally"
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_option",
+   "match": "glob with pattern",
+   "text": "Glob with pattern `**/*.ts`, which finds TypeScript files by their path"
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_option",
+   "match": "read each typescript",
+   "text": "Read each TypeScript file and check its import statements manually"
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_option",
+   "match": "bash with ls",
+   "text": "Bash with `ls -la *.ts` to list the TypeScript files in the directory"
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_option",
+   "match": "grep with a",
+   "text": "Grep with an import pattern such as `import.*from.*'@company/auth'`"
+  },
+  {
+   "id": "milind:Q258",
+   "action": "set_option",
+   "match": "escalate to human",
+   "text": "Escalate the timeout to human review instead of retrying the query"
+  },
+  {
+   "id": "milind:Q258",
+   "action": "set_option",
+   "match": "wait 5 seconds",
+   "text": "Wait 5 seconds per `retryAfterMs`, then retry the same query"
+  },
+  {
+   "id": "milind:Q258",
+   "action": "set_option",
+   "match": "immediately terminate the",
+   "text": "Terminate the workflow immediately and report the database failure"
+  },
+  {
+   "id": "milind:Q258",
+   "action": "set_option",
+   "match": "try a different",
+   "text": "Reformulate the query differently and run the new version right away"
+  },
+  {
+   "id": "milind:Q259",
+   "action": "set_option",
+   "match": "keep all tools",
+   "text": "Keep all 15 tools and rewrite their descriptions to be more precise"
+  },
+  {
+   "id": "milind:Q259",
+   "action": "set_option",
+   "match": "reduce to the",
+   "text": "Cut down to the 5 most-used tools and remove all the remaining ones"
+  },
+  {
+   "id": "milind:Q259",
+   "action": "set_option",
+   "match": "decompose into specialized",
+   "text": "Split into domain subagents (CRM, billing, support, ...) with 3-4 tools each"
   }
  ],
  "hold": []
