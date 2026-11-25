@@ -39571,6 +39571,1200 @@
    "action": "set_option",
    "match": "it always uses",
    "text": "It uses a different model family than the generator, so the two instances share none of the same training biases"
+  },
+  {
+   "id": "connectry:q-4.6-hard-1",
+   "action": "set_option",
+   "match": "Increase the number",
+   "text": "Increase Phase 1 from three to five independent instances so that more component-level perspectives feed into the Phase 2 summaries"
+  },
+  {
+   "id": "connectry:q-4.6-hard-1",
+   "action": "set_option",
+   "match": "Replace Phase 1",
+   "text": "Have Phase 1 keep raw observations apart from conclusions in its findings, and let Phase 2 examine the original artifact before reading them"
+  },
+  {
+   "id": "connectry:q-4.6-hard-1",
+   "action": "set_option",
+   "match": "Run Phase 2",
+   "text": "Run Phase 2 before Phase 1, so that the cross-component consistency analysis is complete before any of the component-level findings can anchor it"
+  },
+  {
+   "id": "connectry:q-4.6-hard-1",
+   "action": "set_option",
+   "match": "Use a different",
+   "text": "Run Phase 2 on a model from a different LLM provider, so that its consistency analysis adds the model diversity that Phase 1 lacks"
+  },
+  {
+   "id": "connectry:q-4.6-hard-2",
+   "action": "set_option",
+   "match": "Majority vote cannot",
+   "text": "Majority vote breaks down with more than three instances; reducing the panel to three instances would remove the false confidence in the consensus"
+  },
+  {
+   "id": "connectry:q-4.6-hard-2",
+   "action": "set_option",
+   "match": "Correlated errors across",
+   "text": "Correlated errors mean unanimity does not imply correctness; use differently trained models or adversarial counter-hypothesis reviewers"
+  },
+  {
+   "id": "connectry:q-4.6-hard-2",
+   "action": "set_option",
+   "match": "The solution is",
+   "text": "The panel lacks a tie-breaker; adding a sixth instance with the same prompt would break potential ties and expose the bias toward the drug class"
+  },
+  {
+   "id": "connectry:q-4.6-hard-2",
+   "action": "set_option",
+   "match": "Majority vote should",
+   "text": "Majority vote should give way to confidence threshold filtering, so that only findings above 0.9 model confidence are accepted for clinical use"
+  },
+  {
+   "id": "connectry:q-4.6-hard-3",
+   "action": "set_option",
+   "match": "Option X, because a",
+   "text": "Option X, because a single large context lets the reviewer see all interdependencies between the 50 files at once and avoids the overhead of coordinating 51 instances"
+  },
+  {
+   "id": "connectry:q-4.6-hard-3",
+   "action": "set_option",
+   "match": "Option Y, because parallel",
+   "text": "Option Y, because splitting the batch into parallel per-file instances is faster and cheaper than any single large-context review of the same 50 files"
+  },
+  {
+   "id": "connectry:q-4.6-hard-3",
+   "action": "set_option",
+   "match": "Option Y, because per-file",
+   "text": "Option Y, because per-file instances each review one file at full depth, run in parallel, and feed structured summaries rather than 50 raw files to the cross-file pass"
+  },
+  {
+   "id": "connectry:q-4.6-hard-3",
+   "action": "set_option",
+   "match": "Option X, because multi-instance",
+   "text": "Option X, because multi-instance architectures produce more false positives than single-instance review, and the constrained budget cannot absorb them"
+  },
+  {
+   "id": "connectry:q-4.6-hard-4",
+   "action": "set_option",
+   "match": "The structured disagreement",
+   "text": "The mechanism is working as designed; routing every disagreement to a human is the intended behaviour, so the architecture needs no change"
+  },
+  {
+   "id": "connectry:q-4.6-hard-4",
+   "action": "set_option",
+   "match": "The two instances",
+   "text": "Both instances hold opposite biases on this clause type; add a third instance prompted with domain knowledge about it and feed resolved cases back as few-shot examples"
+  },
+  {
+   "id": "connectry:q-4.6-hard-4",
+   "action": "set_option",
+   "match": "The disagreement rate",
+   "text": "The 80% disagreement rate shows the dual-review setup is unreliable; the team should revert to a single review instance for all clause types"
+  },
+  {
+   "id": "connectry:q-4.6-hard-4",
+   "action": "set_option",
+   "match": "The attorney should",
+   "text": "The attorney should be replaced by an automated rule engine for this clause type, which removes the review latency the disagreements cause"
+  },
+  {
+   "id": "connectry:q-4.6-medium-1",
+   "action": "set_option",
+   "match": "Unanimous agreement; it",
+   "text": "Unanimous agreement; a finding reaches the engineering team only when all three reviewers flag it, which filters out false positives"
+  },
+  {
+   "id": "connectry:q-4.6-medium-1",
+   "action": "set_option",
+   "match": "Majority vote; it",
+   "text": "Majority vote; the issue surfaces even though one reviewer missed it, so no single reviewer's blind spot decides the result"
+  },
+  {
+   "id": "connectry:q-4.6-medium-1",
+   "action": "set_option",
+   "match": "Structured disagreement; it",
+   "text": "Structured disagreement; the split between the reviewers automatically triggers a fourth instance that resolves the tie"
+  },
+  {
+   "id": "connectry:q-4.6-medium-1",
+   "action": "set_option",
+   "match": "Weighted confidence scoring;",
+   "text": "Weighted confidence scoring; the outlier instance's approval receives zero weight and is discarded from the result"
+  },
+  {
+   "id": "connectry:q-4.6-medium-2",
+   "action": "set_option",
+   "match": "Off-by-one errors within",
+   "text": "Off-by-one errors and boundary mistakes inside a single function body"
+  },
+  {
+   "id": "connectry:q-4.6-medium-2",
+   "action": "set_option",
+   "match": "Missing null checks",
+   "text": "Missing null checks and unhandled exceptions inside a single service"
+  },
+  {
+   "id": "connectry:q-4.6-medium-2",
+   "action": "set_option",
+   "match": "Inconsistent API contracts,",
+   "text": "Inconsistent API contracts and data model mismatches across services"
+  },
+  {
+   "id": "connectry:q-4.6-medium-2",
+   "action": "set_option",
+   "match": "Unused imports and",
+   "text": "Unused imports, dead code and naming drift within individual files"
+  },
+  {
+   "id": "connectry:q-4.6-medium-4",
+   "action": "set_option",
+   "match": "The contracts are",
+   "text": "The contracts are long, and splitting them across instances would reduce the API latency of each analysis"
+  },
+  {
+   "id": "connectry:q-4.6-medium-4",
+   "action": "set_option",
+   "match": "High stakes (legal",
+   "text": "High stakes from legal liability, a complex 200-page artifact, and the need to cross-validate for missed clauses"
+  },
+  {
+   "id": "connectry:q-4.6-medium-4",
+   "action": "set_option",
+   "match": "The company wants",
+   "text": "The company wants to cut total token costs by distributing the 200 pages across several smaller instances"
+  },
+  {
+   "id": "connectry:q-4.6-medium-4",
+   "action": "set_option",
+   "match": "Multi-instance review is",
+   "text": "Multi-instance review is a fixed requirement for any document longer than 50 pages, whatever the stakes"
+  },
+  {
+   "id": "connectry:q-5.1-easy-4",
+   "action": "set_option",
+   "match": "Pass the full",
+   "text": "Pass the full 50,000-token output unchanged so that Claude itself can decide which parts are relevant."
+  },
+  {
+   "id": "connectry:q-5.1-easy-4",
+   "action": "set_option",
+   "match": "Trim or filter",
+   "text": "Filter the output server-side to the three fields the agent needs before it enters the context."
+  },
+  {
+   "id": "connectry:q-5.1-easy-4",
+   "action": "set_option",
+   "match": "Increase the model's",
+   "text": "Switch to a larger model tier so the context window can hold the full 50,000-token output as is."
+  },
+  {
+   "id": "connectry:q-5.1-easy-4",
+   "action": "set_option",
+   "match": "Store the output",
+   "text": "Store the full output in a vector database and give Claude only a reference to it, not the values."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_option",
+   "match": "The observation is",
+   "text": "The observation is anomalous, since Claude attends equally to all positions; it points to a model defect that needs escalation to the vendor."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_option",
+   "match": "The decision log",
+   "text": "The 40,000-token log pushes the rules into the middle of the effective context despite their position 0, lowering their salience; re-pin the rules at the end."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_option",
+   "match": "The regulatory rules",
+   "text": "Position 0 is itself the lowest-attention zone of the context while the end receives the most attention; moving the regulatory rules into the middle of the context would fix this."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_option",
+   "match": "The checklist is",
+   "text": "Claude favours the short, simple checklist over the long rules; the fix is to shorten the regulatory rules until they match the checklist's length."
+  },
+  {
+   "id": "connectry:q-5.1-hard-2",
+   "action": "set_option",
+   "match": "Run /compact after",
+   "text": "Run /compact after every turn within each session so that little content is left to be summarized when the session ends."
+  },
+  {
+   "id": "connectry:q-5.1-hard-2",
+   "action": "set_option",
+   "match": "Maintain a separate",
+   "text": "Keep a separate 'critical facts' register outside the progressive summary, carry it forward verbatim, and tell the summarizer to keep every entry."
+  },
+  {
+   "id": "connectry:q-5.1-hard-2",
+   "action": "set_option",
+   "match": "Use a higher",
+   "text": "Use a higher temperature when generating session summaries so that the model explores more diverse retention strategies each round."
+  },
+  {
+   "id": "connectry:q-5.1-hard-2",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Switch to a model with a larger context window so that the full history of all six sessions never needs to be summarized."
+  },
+  {
+   "id": "connectry:q-5.1-hard-3",
+   "action": "set_option",
+   "match": "Design X, because",
+   "text": "Design X, because summarizing every 50 turns keeps the context small and thereby prevents any 'lost in the middle' effect from arising at all."
+  },
+  {
+   "id": "connectry:q-5.1-hard-3",
+   "action": "set_option",
+   "match": "Design Z, because",
+   "text": "Design Z, because fresh conversations remove attention distribution problems and the curated handoff document ensures that nothing is lost."
+  },
+  {
+   "id": "connectry:q-5.1-hard-3",
+   "action": "set_option",
+   "match": "Design Y, because",
+   "text": "Design Y, because it splits compressible narrative from critical decisions, keeps rare constraints verbatim, and avoids cumulative loss."
+  },
+  {
+   "id": "connectry:q-5.1-hard-3",
+   "action": "set_option",
+   "match": "All three designs",
+   "text": "All three designs perform about the same, since the context management strategy has no measurable effect on task quality over 500 turns."
+  },
+  {
+   "id": "connectry:q-5.1-hard-4",
+   "action": "set_option",
+   "match": "Strategy P, because",
+   "text": "Strategy P, because verbatim injection ensures that no information is lost and lets Claude filter out the irrelevant parts internally while reasoning."
+  },
+  {
+   "id": "connectry:q-5.1-hard-4",
+   "action": "set_option",
+   "match": "Strategy Q, because",
+   "text": "Strategy Q, because a fixed 500-token cap keeps context usage predictable and stops any single tool from dominating the window."
+  },
+  {
+   "id": "connectry:q-5.1-hard-4",
+   "action": "set_option",
+   "match": "Strategy R, because",
+   "text": "Strategy R, because it applies minimum necessary context: inject what the next reasoning step needs, preserving signal density and avoiding bloat."
+  },
+  {
+   "id": "connectry:q-5.1-hard-4",
+   "action": "set_option",
+   "match": "Strategy Q and",
+   "text": "Strategies P and Q yield the same reasoning quality, because Claude filters noise either way; they differ only in latency and token cost."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_option",
+   "match": "Store critical fields",
+   "text": "Keep issue, commitments and tried steps in a structured block at the start of the system prompt, refresh it each turn, and summarize the rest."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_option",
+   "match": "Let the conversation",
+   "text": "Let the conversation grow unrestricted until the API returns a context length error, then start a fresh session with the next message."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_option",
+   "match": "Summarize the entire",
+   "text": "Summarize the entire conversation, including the critical fields, every five turns and discard the original turns after each new summary is written."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_option",
+   "match": "Keep only the",
+   "text": "Keep only the last five turns in the context window and discard everything older, so the session never gets close to the limit."
+  },
+  {
+   "id": "connectry:q-5.1-medium-5",
+   "action": "set_option",
+   "match": "Trimmed outputs are",
+   "text": "Trimmed outputs are cached automatically by Claude's prompt cache, whereas full outputs of this size are not eligible for caching at all."
+  },
+  {
+   "id": "connectry:q-5.1-medium-5",
+   "action": "set_option",
+   "match": "Trimming forces the",
+   "text": "The model attends to the relevant signal instead of fixating on irrelevant parts of the HTML, which improves reasoning accuracy."
+  },
+  {
+   "id": "connectry:q-5.1-medium-5",
+   "action": "set_option",
+   "match": "Trimming increases the",
+   "text": "Trimming the input raises the output token limit that is available to the model for its subsequent response in the same pipeline."
+  },
+  {
+   "id": "connectry:q-5.1-medium-5",
+   "action": "set_option",
+   "match": "Trimmed outputs bypass",
+   "text": "Trimmed outputs skip the safety classifier pass that large HTML payloads trigger, which noticeably reduces latency for the next step."
+  },
+  {
+   "id": "connectry:q-5.2-easy-3",
+   "action": "set_option",
+   "match": "Sentiment analysis is too",
+   "text": "Sentiment analysis is too expensive and too slow to run on every customer message in real time."
+  },
+  {
+   "id": "connectry:q-5.2-easy-3",
+   "action": "set_option",
+   "match": "Sentiment analysis is unreliable",
+   "text": "Sentiment is an unreliable escalation signal; explicit signals such as a direct request for a human are better."
+  },
+  {
+   "id": "connectry:q-5.2-easy-3",
+   "action": "set_option",
+   "match": "Negative sentiment always",
+   "text": "Negative sentiment usually signals an intent to cancel, which belongs with the retention team rather than escalation."
+  },
+  {
+   "id": "connectry:q-5.2-easy-3",
+   "action": "set_option",
+   "match": "Human agents should",
+   "text": "Human agents should focus on positive interactions, while angry customers are better kept with the bot."
+  },
+  {
+   "id": "connectry:q-5.2-hard-1",
+   "action": "set_option",
+   "match": "The transaction value",
+   "text": "The transaction value trigger is absolute and overrides any customer preference, so the agent escalates to a full human hand-off unconditionally."
+  },
+  {
+   "id": "connectry:q-5.2-hard-1",
+   "action": "set_option",
+   "match": "Customer preferences always",
+   "text": "Documented customer preferences take precedence over system triggers, so the agent proceeds with self-service and skips the escalation."
+  },
+  {
+   "id": "connectry:q-5.2-hard-1",
+   "action": "set_option",
+   "match": "The architect should",
+   "text": "Keep the value trigger non-overridable by preference, but personalize how it escalates: a lightweight confirmation step with documented consent instead of a full hand-off."
+  },
+  {
+   "id": "connectry:q-5.2-hard-1",
+   "action": "set_option",
+   "match": "Remove the transaction",
+   "text": "Remove the transaction value trigger entirely, since it conflicts with personalization goals and the high confidence already covers the risk."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "set_option",
+   "match": "Raise the confidence",
+   "text": "Raise the confidence threshold so that fewer conversations trigger escalation while the knowledge base is stale, and restore the original threshold once the queue has cleared."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "set_option",
+   "match": "Implement circuit-breaker logic:",
+   "text": "Add a circuit breaker: detect system-wide escalation spikes, switch to degraded-mode answers with caveats, alert operations, and resume once the knowledge base is fresh."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "set_option",
+   "match": "Add sentiment analysis",
+   "text": "Add sentiment analysis as a secondary filter, so that only conversations with clearly negative sentiment still reach the human review queue during the spike."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "set_option",
+   "match": "Route all escalations",
+   "text": "Route all escalations to a supervisor agent instead of human review, so that the automated tier absorbs the additional volume while the spike lasts."
+  },
+  {
+   "id": "connectry:q-5.2-hard-3",
+   "action": "set_option",
+   "match": "Only the safety",
+   "text": "Only the safety concern trigger is active; the agent routes the case straight to human review and withholds all pharmaceutical information from the user until then."
+  },
+  {
+   "id": "connectry:q-5.2-hard-3",
+   "action": "set_option",
+   "match": "Safety concern and",
+   "text": "Safety concern and ambiguous input triggers are both active; the agent first asks which medication is involved and only then decides whether to escalate the case."
+  },
+  {
+   "id": "connectry:q-5.2-hard-3",
+   "action": "set_option",
+   "match": "Safety concern trigger is active; the",
+   "text": "The safety concern trigger is active, but the user asked explicitly, so the agent provides the full pharmaceutical data right away and notes the trigger afterwards."
+  },
+  {
+   "id": "connectry:q-5.2-hard-3",
+   "action": "set_option",
+   "match": "Safety concern trigger",
+   "text": "Safety trigger, possibly plus a confidence trigger; give harm-reduction guidance, state the agent's limits, recommend a healthcare provider, route to human review."
+  },
+  {
+   "id": "connectry:q-5.2-hard-4",
+   "action": "set_option",
+   "match": "Use a single",
+   "text": "Use a single escalation queue for all four trigger types and apply a time-based filter that suppresses every non-safety escalation during off-hours, then work off the backlog in the morning."
+  },
+  {
+   "id": "connectry:q-5.2-hard-4",
+   "action": "set_option",
+   "match": "Design a tiered",
+   "text": "Tiered escalation: supervisor agent for confidence and conflict triggers, async human queue with SLA callbacks for preference requests, immediate human routing for safety, and transparent degradation messages at capacity."
+  },
+  {
+   "id": "connectry:q-5.2-hard-4",
+   "action": "set_option",
+   "match": "Rely on supervisor",
+   "text": "Route all four trigger types to supervisor agents, including safety concerns and requests for human contact, so that the platform no longer depends on human staffing at any hour of the day."
+  },
+  {
+   "id": "connectry:q-5.2-hard-4",
+   "action": "set_option",
+   "match": "Add more human",
+   "text": "Hire additional human agents in every time zone so that a person is available around the clock for each trigger type and the platform never enters a low-staffing window."
+  },
+  {
+   "id": "connectry:q-5.2-medium-1",
+   "action": "set_option",
+   "match": "Customer preferences should",
+   "text": "Ignore the stored preference, because the confidence threshold rule takes precedence over customer settings."
+  },
+  {
+   "id": "connectry:q-5.2-medium-1",
+   "action": "set_option",
+   "match": "The agent should attempt",
+   "text": "Attempt a more thorough self-service resolution before escalating, in line with the customer's stated preference."
+  },
+  {
+   "id": "connectry:q-5.2-medium-1",
+   "action": "set_option",
+   "match": "The agent should immediately",
+   "text": "Escalate right away, because billing questions need human review regardless of what the customer prefers."
+  },
+  {
+   "id": "connectry:q-5.2-medium-1",
+   "action": "set_option",
+   "match": "The agent should",
+   "text": "Ask the customer to restate their preference in this session before deciding whether to escalate the billing question."
+  },
+  {
+   "id": "connectry:q-5.2-medium-3",
+   "action": "set_option",
+   "match": "Silently proceed as",
+   "text": "Proceed as if the escalation path were available and answer the question without human input, without mentioning the outage to the user."
+  },
+  {
+   "id": "connectry:q-5.2-medium-3",
+   "action": "set_option",
+   "match": "Terminate the session",
+   "text": "End the session immediately with an error message and ask the user to come back later, once the human review queue is available again."
+  },
+  {
+   "id": "connectry:q-5.2-medium-3",
+   "action": "set_option",
+   "match": "Inform the user",
+   "text": "Tell the user escalation is down, offer an alternative such as a callback, and give the best self-service answer with clear caveats."
+  },
+  {
+   "id": "connectry:q-5.2-medium-3",
+   "action": "set_option",
+   "match": "Retry the escalation",
+   "text": "Retry the escalation path every 5 seconds until it is reachable again, holding the user in the conversation until a human agent can join."
+  },
+  {
+   "id": "connectry:q-5.2-medium-4",
+   "action": "set_option",
+   "match": "Always assume the",
+   "text": "Assume the most benign interpretation and proceed, since keeping the conversation flowing matters more than resolving the ambiguity."
+  },
+  {
+   "id": "connectry:q-5.2-medium-4",
+   "action": "set_option",
+   "match": "Always ask for",
+   "text": "Ask for clarification whenever any ambiguity exists, regardless of how much is at stake in the particular request."
+  },
+  {
+   "id": "connectry:q-5.2-medium-4",
+   "action": "set_option",
+   "match": "Weigh the cost",
+   "text": "Weigh the cost of a wrong assumption against the cost of asking, and ask when a wrong guess would cost more than the friction."
+  },
+  {
+   "id": "connectry:q-5.2-medium-4",
+   "action": "set_option",
+   "match": "Escalate to a",
+   "text": "Escalate to a human agent, because neighbor disputes can involve safety concerns that an agent should not assess on its own."
+  },
+  {
+   "id": "connectry:q-5.2-medium-5",
+   "action": "set_option",
+   "match": "Supervisor agents handle",
+   "text": "Supervisor agents handle all issues end to end; human review is reserved for conversations that contain abusive language."
+  },
+  {
+   "id": "connectry:q-5.2-medium-5",
+   "action": "set_option",
+   "match": "Route to supervisor agent when",
+   "text": "Supervisor agent when automated knowledge or policy arbitration is needed; human review when judgment, empathy or accountability is."
+  },
+  {
+   "id": "connectry:q-5.2-medium-5",
+   "action": "set_option",
+   "match": "Always route to",
+   "text": "Route every case to human review first; supervisor agents act as a fallback for the periods when no human reviewer is available."
+  },
+  {
+   "id": "connectry:q-5.2-medium-5",
+   "action": "set_option",
+   "match": "Route to supervisor",
+   "text": "Route technical issues to the supervisor agent and billing issues to human review, since billing decisions involve the customer's money."
+  },
+  {
+   "id": "connectry:q-5.3-easy-2",
+   "action": "set_option",
+   "match": "Wait indefinitely for",
+   "text": "Wait for the timed-out source to respond before returning anything, so that the orchestrator receives a complete result"
+  },
+  {
+   "id": "connectry:q-5.3-easy-2",
+   "action": "set_option",
+   "match": "Discard all results",
+   "text": "Discard all results and return a single TIMEOUT error, so the orchestrator knows the search failed and can retry it as a whole"
+  },
+  {
+   "id": "connectry:q-5.3-easy-2",
+   "action": "set_option",
+   "match": "Return the results",
+   "text": "Return the two sources' results plus metadata stating which source timed out and that its results are missing"
+  },
+  {
+   "id": "connectry:q-5.3-easy-2",
+   "action": "set_option",
+   "match": "Return only the",
+   "text": "Return the results from the two successful sources as a normal response, without any mention of the third source"
+  },
+  {
+   "id": "connectry:q-5.3-easy-4",
+   "action": "set_option",
+   "match": "Return a structured",
+   "text": "Return a structured error payload with type: 'NO_DATA_FOUND' and retryable: false so that the orchestrator stops"
+  },
+  {
+   "id": "connectry:q-5.3-easy-4",
+   "action": "set_option",
+   "match": "Return an error",
+   "text": "Return an error payload stating that the query failed to retrieve any results for the requested date range"
+  },
+  {
+   "id": "connectry:q-5.3-easy-4",
+   "action": "set_option",
+   "match": "Return a successful response with an",
+   "text": "Return a successful response with an empty results array and a message that no records matched the criteria"
+  },
+  {
+   "id": "connectry:q-5.3-easy-4",
+   "action": "set_option",
+   "match": "Return a successful response with null",
+   "text": "Return a successful response whose results field is null, signalling to the orchestrator that no data was available"
+  },
+  {
+   "id": "connectry:q-5.3-hard-1",
+   "action": "set_option",
+   "match": "Return only the",
+   "text": "{ results: [7 results] } with no metadata, since errors and timeouts are internal concerns of the orchestrator and the caller only needs the output of Workers 1–7"
+  },
+  {
+   "id": "connectry:q-5.3-hard-1",
+   "action": "set_option",
+   "match": "Return a single",
+   "text": "{ error: { type: 'NETWORK_ERROR', retryable: true } }: a single error payload with the first error encountered, since only one error can be communicated at a time"
+  },
+  {
+   "id": "connectry:q-5.3-hard-1",
+   "action": "set_option",
+   "match": "{ results: [7 results], metadata: { completed: 7, failed:",
+   "text": "{ results: [7 results], metadata: { completed: 7, failed: [{ worker: 8, type: 'NETWORK_ERROR', retryable: true }, { worker: 9, type: 'ACCESS_DENIED', retryable: false }], timed_out: [10], total: 10 } }"
+  },
+  {
+   "id": "connectry:q-5.3-hard-1",
+   "action": "set_option",
+   "match": "{ results: [7 results], metadata: { completed: 7, errors:",
+   "text": "{ results: [7 results], metadata: { completed: 7, errors: 2, timed_out: 1, total: 10 } }: error counts only, since detailed error types are a security concern for the caller"
+  },
+  {
+   "id": "connectry:q-5.3-hard-2",
+   "action": "set_option",
+   "match": "Verify that the",
+   "text": "Verify that the score value lies within the expected numeric range, since out-of-range values are the typical sign of incomplete enrichment further upstream"
+  },
+  {
+   "id": "connectry:q-5.3-hard-2",
+   "action": "set_option",
+   "match": "Check the metadata",
+   "text": "Check the metadata chain for a completeness or partial-results flag that Score inherited from Enrich's timeout, and apply a policy for degraded scores"
+  },
+  {
+   "id": "connectry:q-5.3-hard-2",
+   "action": "set_option",
+   "match": "Re-run the Enrich",
+   "text": "Re-run the Enrich stage from scratch and wait for all three APIs, so that the score rests on a fully enriched input before Decide acts"
+  },
+  {
+   "id": "connectry:q-5.3-hard-2",
+   "action": "set_option",
+   "match": "Accept the score",
+   "text": "Accept the score at face value, since quality control is the responsibility of each individual agent and not of downstream consumers"
+  },
+  {
+   "id": "connectry:q-5.3-hard-3",
+   "action": "set_option",
+   "match": "Use HTTP status",
+   "text": "HTTP status codes alone: 200 for empty results, 403 for permission, 408 for timeout and 500 for corruption, with downstream agents branching on the status code without inspecting the response body"
+  },
+  {
+   "id": "connectry:q-5.3-hard-3",
+   "action": "set_option",
+   "match": "Use a two-field",
+   "text": "A two-field payload { ok: boolean, data: any }: ok: true with empty data for an empty day and ok: false with a descriptive error string for every one of the three failure cases"
+  },
+  {
+   "id": "connectry:q-5.3-hard-3",
+   "action": "set_option",
+   "match": "Use a structured",
+   "text": "{ status: SUCCESS|PARTIAL|ERROR, data, metadata: { completeness: FULL|PARTIAL|NONE, reason? }, error?: { type: ACCESS_DENIED|NETWORK_TIMEOUT|DATA_CORRUPTION, retryable, partialResults } }"
+  },
+  {
+   "id": "connectry:q-5.3-hard-3",
+   "action": "set_option",
+   "match": "Use a single",
+   "text": "A single error type DATA_UNAVAILABLE with a free-text message field for all four cases, so that downstream agents parse the message text to determine the actual condition"
+  },
+  {
+   "id": "connectry:q-5.3-hard-4",
+   "action": "set_option",
+   "match": "Increase all agent",
+   "text": "Increase every agent timeout to 60 seconds so that each agent has more time to recover from slow dependencies before it fails"
+  },
+  {
+   "id": "connectry:q-5.3-hard-4",
+   "action": "set_option",
+   "match": "Add a circuit",
+   "text": "A circuit breaker on B's calls to C, exponential backoff with jitter on A's retries to B, and a retry budget capping all attempts"
+  },
+  {
+   "id": "connectry:q-5.3-hard-4",
+   "action": "set_option",
+   "match": "Remove all retries",
+   "text": "Remove all retries from Agent A so that it fails fast on the first timeout, which keeps the retry flood from ever reaching Agent C"
+  },
+  {
+   "id": "connectry:q-5.3-hard-4",
+   "action": "set_option",
+   "match": "Add request queuing",
+   "text": "Add request queuing in Agent B so that all of Agent A's retry requests are buffered there instead of being forwarded to Agent C"
+  },
+  {
+   "id": "connectry:q-5.3-medium-1",
+   "action": "set_option",
+   "match": "The credit-check agent retries",
+   "text": "The credit-check agent retries immediately in a tight loop until the bureau responds, while the decision agent keeps waiting for the credit score"
+  },
+  {
+   "id": "connectry:q-5.3-medium-1",
+   "action": "set_option",
+   "match": "The credit-check agent returns",
+   "text": "The credit-check agent returns a structured error with type: 'TIMEOUT', retryable: true and cached partial data; the orchestrator picks retry or fallback"
+  },
+  {
+   "id": "connectry:q-5.3-medium-1",
+   "action": "set_option",
+   "match": "The credit-check agent propagates",
+   "text": "The credit-check agent passes a generic error message to the decision agent, which forwards it to the notification agent so that it alerts the user"
+  },
+  {
+   "id": "connectry:q-5.3-medium-1",
+   "action": "set_option",
+   "match": "The credit-check agent silently",
+   "text": "The credit-check agent silently returns a neutral credit score of 0, so that the decision and notification stages can keep processing the loan application"
+  },
+  {
+   "id": "connectry:q-5.3-medium-2",
+   "action": "set_option",
+   "match": "Allow Agent C",
+   "text": "Let Agent C start and run to completion, then combine its output with Agent A's output and leave out Agent B's contribution"
+  },
+  {
+   "id": "connectry:q-5.3-medium-2",
+   "action": "set_option",
+   "match": "Cancel Agent C",
+   "text": "Cancel Agent C before it starts and return Agent A's results with metadata saying B failed with a permission error and C was cancelled"
+  },
+  {
+   "id": "connectry:q-5.3-medium-2",
+   "action": "set_option",
+   "match": "Restart all three",
+   "text": "Restart all three agents from the beginning so that the caller receives a consistent result from one complete, clean run"
+  },
+  {
+   "id": "connectry:q-5.3-medium-2",
+   "action": "set_option",
+   "match": "Return only Agent",
+   "text": "Return only Agent A's results as a normal response, without indicating that Agents B and C did not complete their work"
+  },
+  {
+   "id": "connectry:q-5.3-medium-3",
+   "action": "set_option",
+   "match": "Exception tunneling —",
+   "text": "Exception tunneling; the fix is to re-throw the original exception unchanged at every boundary instead of creating a new RuntimeException"
+  },
+  {
+   "id": "connectry:q-5.3-medium-3",
+   "action": "set_option",
+   "match": "Error context loss",
+   "text": "Error context loss; propagate the original structured error intact, or wrap it in a new payload carrying the original as its cause"
+  },
+  {
+   "id": "connectry:q-5.3-medium-3",
+   "action": "set_option",
+   "match": "Over-logging — the",
+   "text": "Over-logging; each agent logs the same error again, so the fix is to log the error only once, at the final Aggregator boundary of the chain"
+  },
+  {
+   "id": "connectry:q-5.3-medium-3",
+   "action": "set_option",
+   "match": "Error swallowing —",
+   "text": "Error swallowing; the fix is to catch and discard errors at each boundary so that a single failed fetch cannot break the rest of the chain"
+  },
+  {
+   "id": "connectry:q-5.3-medium-4",
+   "action": "set_option",
+   "match": "Wait for the",
+   "text": "Wait for the third agent to finish despite the pipeline timeout, since its result may be needed by the two agents that come after it"
+  },
+  {
+   "id": "connectry:q-5.3-medium-4",
+   "action": "set_option",
+   "match": "Cancel the third",
+   "text": "Cancel the third agent, skip the last two, and return the two completed results with metadata on which agents timed out or were skipped"
+  },
+  {
+   "id": "connectry:q-5.3-medium-4",
+   "action": "set_option",
+   "match": "Extend the pipeline",
+   "text": "Extend the pipeline timeout to 60 seconds so that the third agent and the two remaining agents all have enough time to complete normally"
+  },
+  {
+   "id": "connectry:q-5.3-medium-4",
+   "action": "set_option",
+   "match": "Cancel all five",
+   "text": "Cancel all five agents and return a total failure to the caller, since the pipeline did not complete its work within the 30-second budget"
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_option",
+   "match": "Read every file",
+   "text": "Read every file in the repository from top to bottom to build a full picture"
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_option",
+   "match": "Use Glob to",
+   "text": "Use Glob to map file patterns and structure before reading specific files"
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_option",
+   "match": "Run Grep searches",
+   "text": "Run broad Grep searches across all files at once to see which terms appear"
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_option",
+   "match": "Immediately delegate the",
+   "text": "Delegate the entire exploration to a subagent right away and wait for its report"
+  },
+  {
+   "id": "connectry:q-5.4-easy-2",
+   "action": "set_option",
+   "match": "To share findings",
+   "text": "To share the findings with other team members working on the same codebase"
+  },
+  {
+   "id": "connectry:q-5.4-easy-2",
+   "action": "set_option",
+   "match": "To satisfy documentation",
+   "text": "To satisfy the project's formal documentation requirements for exploration work"
+  },
+  {
+   "id": "connectry:q-5.4-easy-2",
+   "action": "set_option",
+   "match": "To preserve discovered",
+   "text": "To keep discovered knowledge available across context resets or compaction"
+  },
+  {
+   "id": "connectry:q-5.4-easy-2",
+   "action": "set_option",
+   "match": "To create a",
+   "text": "To create a permanent audit log of every action taken during exploration"
+  },
+  {
+   "id": "connectry:q-5.4-easy-3",
+   "action": "set_option",
+   "match": "Model hallucination caused",
+   "text": "Model hallucination caused by incorrect or outdated training data"
+  },
+  {
+   "id": "connectry:q-5.4-easy-3",
+   "action": "set_option",
+   "match": "Network latency from",
+   "text": "Network latency caused by too many sequential file read operations"
+  },
+  {
+   "id": "connectry:q-5.4-easy-3",
+   "action": "set_option",
+   "match": "Rate limiting from",
+   "text": "Rate limiting imposed by the underlying API provider on large requests"
+  },
+  {
+   "id": "connectry:q-5.4-easy-4",
+   "action": "set_option",
+   "match": "Compresses source code",
+   "text": "Compresses the source code files on disk to reduce the repository's overall size"
+  },
+  {
+   "id": "connectry:q-5.4-easy-4",
+   "action": "set_option",
+   "match": "Summarizes the current",
+   "text": "Summarizes the conversation and frees context window space for further work"
+  },
+  {
+   "id": "connectry:q-5.4-easy-4",
+   "action": "set_option",
+   "match": "Deletes all scratchpad",
+   "text": "Deletes all scratchpad files so that the agent's working memory is freed again"
+  },
+  {
+   "id": "connectry:q-5.4-easy-4",
+   "action": "set_option",
+   "match": "Restarts the agent",
+   "text": "Restarts the agent process and clears all session state so that work begins fresh"
+  },
+  {
+   "id": "connectry:q-5.4-hard-1",
+   "action": "set_option",
+   "match": "Run all three",
+   "text": "Run all three phases one after another in the orchestrator's own context, using /compact between phases to free space for the next one"
+  },
+  {
+   "id": "connectry:q-5.4-hard-1",
+   "action": "set_option",
+   "match": "Delegate all three",
+   "text": "Delegate all three phases to a single subagent with a large context window and let it produce the final report itself"
+  },
+  {
+   "id": "connectry:q-5.4-hard-1",
+   "action": "set_option",
+   "match": "Spawn three parallel",
+   "text": "Spawn three specialized subagents in parallel, each writing structured findings to a named scratchpad file, and synthesize from those files"
+  },
+  {
+   "id": "connectry:q-5.4-hard-1",
+   "action": "set_option",
+   "match": "Have the orchestrator",
+   "text": "Have the orchestrator read all 500,000 lines itself, so that it retains the full source context it needs to synthesize the final audit report"
+  },
+  {
+   "id": "connectry:q-5.4-hard-2",
+   "action": "set_option",
+   "match": "Using a larger",
+   "text": "Using a model with a larger context window so that the session never needs /compact"
+  },
+  {
+   "id": "connectry:q-5.4-hard-2",
+   "action": "set_option",
+   "match": "Writing findings to",
+   "text": "Writing findings to scratchpad files immediately upon discovery, before context grows to where /compact is needed"
+  },
+  {
+   "id": "connectry:q-5.4-hard-2",
+   "action": "set_option",
+   "match": "Running /compact more",
+   "text": "Running /compact more often so that each compaction summary is smaller and keeps more detail"
+  },
+  {
+   "id": "connectry:q-5.4-hard-2",
+   "action": "set_option",
+   "match": "Avoiding /compact entirely",
+   "text": "Avoiding /compact entirely and starting a new agent session whenever the context window is full"
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "set_option",
+   "match": "Delegate all integration",
+   "text": "Delegate all integration analysis to three parallel subagents, because the remaining context has dropped below the 50% mark"
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "set_option",
+   "match": "Use remaining context",
+   "text": "Use the remaining 40% of context to explore all three integrations directly, reading every file of each service from start to end"
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "set_option",
+   "match": "Use targeted Grep",
+   "text": "Use targeted Grep for cross-service interface points and constructor signatures, and read the hits with the existing payment knowledge"
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "set_option",
+   "match": "Run /compact immediately",
+   "text": "Run /compact immediately to free up context, then delegate the complete integration check for all three services to a single fresh subagent"
+  },
+  {
+   "id": "connectry:q-5.4-hard-4",
+   "action": "set_option",
+   "match": "Always use a",
+   "text": "Use one agent session for every PR and run /compact as needed, reading the full diff plus all surrounding context files each time"
+  },
+  {
+   "id": "connectry:q-5.4-hard-4",
+   "action": "set_option",
+   "match": "Always spawn a",
+   "text": "Spawn a dedicated subagent for every PR regardless of its size, and let that subagent read the diff and the surrounding code itself"
+  },
+  {
+   "id": "connectry:q-5.4-hard-4",
+   "action": "set_option",
+   "match": "Implement a tiered",
+   "text": "Tiered: direct exploration for small PRs; for large ones, subagents per concern (diff, patterns, tests) writing to scratchpad files for synthesis"
+  },
+  {
+   "id": "connectry:q-5.4-hard-4",
+   "action": "set_option",
+   "match": "Limit the agent",
+   "text": "Limit the agent to the diff lines and skip all surrounding code, so that context pollution from the 300,000-line repository is avoided"
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "set_option",
+   "match": "Use Glob to",
+   "text": "Use Glob to list all `.ts` files, then read each one in turn to check for the function name"
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "set_option",
+   "match": "Use Grep with",
+   "text": "Grep for `legacyAuth` scoped to TypeScript files, returning only matching file paths and line numbers"
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "set_option",
+   "match": "Ask the user",
+   "text": "Ask the user to search the codebase manually and report the locations back to the agent"
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "set_option",
+   "match": "Read the entire",
+   "text": "Read all 500 files into the context in one pass and then scan the loaded content for the function name"
+  },
+  {
+   "id": "connectry:q-5.4-medium-3",
+   "action": "set_option",
+   "match": "Delegate to a subagent, because",
+   "text": "Delegate to a subagent, because subagents explore files more efficiently than the main session in every situation"
+  },
+  {
+   "id": "connectry:q-5.4-medium-3",
+   "action": "set_option",
+   "match": "Explore directly in",
+   "text": "Explore directly, since the existing domain context helps interpret the pipeline and a fresh subagent lacks it"
+  },
+  {
+   "id": "connectry:q-5.4-medium-3",
+   "action": "set_option",
+   "match": "Delegate to a subagent and",
+   "text": "Delegate to a subagent and pass it the full context window as input, so that it starts with all of the background"
+  },
+  {
+   "id": "connectry:q-5.4-medium-3",
+   "action": "set_option",
+   "match": "Always use /compact",
+   "text": "Run /compact first and then delegate to a subagent, regardless of how much useful context the session already holds"
+  },
+  {
+   "id": "connectry:q-5.4-medium-4",
+   "action": "set_option",
+   "match": "Begin reading frontend",
+   "text": "Begin reading the frontend files immediately in the same session, so that the backend context stays available for comparison"
+  },
+  {
+   "id": "connectry:q-5.4-medium-4",
+   "action": "set_option",
+   "match": "Run /compact to",
+   "text": "Run /compact to summarize the backend findings, then continue with the frontend analysis in the same session"
+  },
+  {
+   "id": "connectry:q-5.4-medium-4",
+   "action": "set_option",
+   "match": "Verify scratchpad files",
+   "text": "Verify the scratchpad files hold complete backend findings, then run /compact or spawn a fresh subagent for the frontend"
+  },
+  {
+   "id": "connectry:q-5.4-medium-4",
+   "action": "set_option",
+   "match": "Delete the scratchpad",
+   "text": "Delete the backend scratchpad files to free disk space and context, then start the frontend analysis from scratch"
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_option",
+   "match": "Read all files",
+   "text": "Read all files from all 8 services into context first, and begin the analysis only once everything has been loaded"
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_option",
+   "match": "Explore all 8",
+   "text": "Explore all 8 services simultaneously by interleaving their file reads, so that cross-service patterns become visible early on"
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_option",
+   "match": "Explore one service",
+   "text": "Explore one service at a time with Glob → Read → Grep, writing each service's findings to a scratchpad file before the next"
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_option",
+   "match": "Spawn 8 further",
+   "text": "Spawn 8 further sub-subagents, one per service, and have them all report their findings back at the same time"
+  },
+  {
+   "id": "connectry:q-5.5-easy-4",
+   "action": "set_option",
+   "match": "The extraction took",
+   "text": "The extraction took longer than two seconds, which signals that the model struggled."
+  },
+  {
+   "id": "connectry:q-5.5-easy-4",
+   "action": "set_option",
+   "match": "The document is",
+   "text": "The source document is longer than ten pages and contains several clause types."
+  },
+  {
+   "id": "connectry:q-5.5-easy-4",
+   "action": "set_option",
+   "match": "The confidence score",
+   "text": "The confidence is below a set threshold, or the field has high business or legal impact."
+  },
+  {
+   "id": "connectry:q-5.5-easy-4",
+   "action": "set_option",
+   "match": "The user who",
+   "text": "The user who submitted the document lacks administrator privileges in the extraction system."
+  },
+  {
+   "id": "connectry:q-5.5-hard-1",
+   "action": "set_option",
+   "match": "Apply a single",
+   "text": "Apply one global Platt scaling transformation across all 50 classes, fitted on a single held-out validation set, and base every threshold on it."
+  },
+  {
+   "id": "connectry:q-5.5-hard-1",
+   "action": "set_option",
+   "match": "Apply temperature scaling",
+   "text": "Global temperature scaling of the logits tuned on a held-out set for average calibration, plus a rare-class auto-approve blacklist for residual overconfidence."
+  },
+  {
+   "id": "connectry:q-5.5-hard-1",
+   "action": "set_option",
+   "match": "Raise the global",
+   "text": "Raise the global auto-approve threshold to 0.99 so that only the most confident predictions are approved, regardless of how frequently the predicted class appears in training."
+  },
+  {
+   "id": "connectry:q-5.5-hard-1",
+   "action": "set_option",
+   "match": "Disable confidence scoring",
+   "text": "Disable confidence scoring for rare values entirely and require manual review of every extraction in all 50-class fields, whether the value is common or rare."
+  },
+  {
+   "id": "connectry:q-5.5-hard-3",
+   "action": "set_option",
+   "match": "Retraining model weights",
+   "text": "Weekly retraining risks corrupting weights with reviewer bias, since only low-confidence items get reviewed; post-hoc recalibration avoids weight changes but needs a representative sample of all confidence levels."
+  },
+  {
+   "id": "connectry:q-5.5-hard-3",
+   "action": "set_option",
+   "match": "Post-hoc recalibration is",
+   "text": "Post-hoc recalibration is preferred because it is computationally cheaper than retraining, and compute cost is the deciding factor for a weekly update cycle of this kind."
+  },
+  {
+   "id": "connectry:q-5.5-hard-3",
+   "action": "set_option",
+   "match": "Weekly retraining is",
+   "text": "Weekly retraining is preferred because it lets the model learn from reviewer corrections directly and faster than a separate calibration layer on top of the model can."
+  },
+  {
+   "id": "connectry:q-5.5-hard-3",
+   "action": "set_option",
+   "match": "The two proposals",
+   "text": "The two proposals are equivalent in practice, because confidence calibration and model accuracy are independent properties, so either one improves the scores equally."
+  },
+  {
+   "id": "connectry:q-5.5-hard-4",
+   "action": "set_option",
+   "match": "Route all 10,000",
+   "text": "Route all 10,000 daily applications to human review and hire enough additional staff to raise review capacity from 500 to 10,000 applications per day, so that no error goes unseen."
+  },
+  {
+   "id": "connectry:q-5.5-hard-4",
+   "action": "set_option",
+   "match": "Use confidence-based auto-approve",
+   "text": "Auto-approve high-confidence cases, queue low-confidence ones for daily review, and run a stratified random audit across all confidence buckets, sized to detect a 1% auto-approved error rate within 30 days."
+  },
+  {
+   "id": "connectry:q-5.5-hard-4",
+   "action": "set_option",
+   "match": "Auto-approve all applications",
+   "text": "Auto-approve applications whose document-level confidence exceeds 0.85, review the remaining 15% within daily capacity, and add no further monitoring of auto-approved applications."
+  },
+  {
+   "id": "connectry:q-5.5-hard-4",
+   "action": "set_option",
+   "match": "Implement a 30-day",
+   "text": "Run a 30-day rolling review in which every application processed on day 1 is reviewed on day 30, so that each decision is checked exactly once with a one-month lag."
+  },
+  {
+   "id": "connectry:q-5.5-medium-1",
+   "action": "set_option",
+   "match": "Distribute reviews proportionally",
+   "text": "Distribute reviews proportionally to volume each week: 300 invoices, 150 contracts and 50 purchase orders."
+  },
+  {
+   "id": "connectry:q-5.5-medium-1",
+   "action": "set_option",
+   "match": "Review all documents",
+   "text": "Sample documents randomly regardless of type, since random sampling gives an unbiased estimate of the error rate."
+  },
+  {
+   "id": "connectry:q-5.5-medium-1",
+   "action": "set_option",
+   "match": "Concentrate all 500",
+   "text": "Concentrate all 500 reviews on contracts, because at 78% they have the lowest accuracy of the three types."
+  },
+  {
+   "id": "connectry:q-5.5-medium-1",
+   "action": "set_option",
+   "match": "Allocate reviews inversely",
+   "text": "Allocate reviews inversely to accuracy, favouring error-prone types while keeping coverage of all types."
   }
  ],
  "hold": []
