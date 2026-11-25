@@ -28111,6 +28111,1009 @@
    "action": "set_option",
    "match": "use the message",
    "text": "Use the Message Batches API: 50% cheaper, and its 24-hour maximum fits the deadline"
+  },
+  {
+   "id": "milind:Q804",
+   "action": "set_option",
+   "match": "Replace with",
+   "text": "Flag 100+ line functions only if they lack structure, and add a flagged vs. unflagged example pair"
+  },
+  {
+   "id": "milind:Q804",
+   "action": "set_option",
+   "match": "Increase the threshold",
+   "text": "Raise the threshold to 200 lines so well-organized mid-sized functions are no longer flagged"
+  },
+  {
+   "id": "milind:Q804",
+   "action": "set_option",
+   "match": "Add only flag",
+   "text": "Add the qualifier \"only flag functions that are clearly too long\" to the existing criterion"
+  },
+  {
+   "id": "milind:Q804",
+   "action": "set_option",
+   "match": "Disable this criterion",
+   "text": "Disable the criterion and rely on the linter's function-length rule to catch oversized functions"
+  },
+  {
+   "id": "milind:Q805",
+   "action": "set_option",
+   "match": "Both optional",
+   "text": "Both optional, giving the model maximum flexibility when either field is missing"
+  },
+  {
+   "id": "milind:Q805",
+   "action": "set_option",
+   "match": "`vendor_id` optional",
+   "text": "`vendor_id` optional, `purchase_order_number` required, so every order gets a PO reference"
+  },
+  {
+   "id": "milind:Q805",
+   "action": "set_option",
+   "match": "`vendor_id` as required",
+   "text": "`vendor_id` required, `purchase_order_number` nullable, matching how often each appears"
+  },
+  {
+   "id": "milind:Q805",
+   "action": "set_option",
+   "match": "Both required",
+   "text": "Both required, because both fields are essential for downstream order matching"
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_option",
+   "match": "Add `allowed-tools",
+   "text": "Add `allowed-tools: Read, Grep, Glob` to SKILL.md and tell it to check existing tests first"
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_option",
+   "match": "Add the authentication",
+   "text": "Add the authentication module to a test exclusion list in the skill's configuration"
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_option",
+   "match": "Regenerate the existing",
+   "text": "Delete and regenerate the existing authentication tests with the updated skill"
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_option",
+   "match": "Document the existing",
+   "text": "List the existing authentication tests by name in the project's CLAUDE.md file"
+  },
+  {
+   "id": "milind:Q807",
+   "action": "set_option",
+   "match": "When the finding",
+   "text": "When severity genuinely depends on unseen context, e.g. test-only code, so a human decides"
+  },
+  {
+   "id": "milind:Q807",
+   "action": "set_option",
+   "match": "When the model",
+   "text": "When the model's confidence in its chosen severity falls below a fixed 0.8 threshold"
+  },
+  {
+   "id": "milind:Q807",
+   "action": "set_option",
+   "match": "For any finding",
+   "text": "For any finding that doesn't closely match one of the pre-specified severity examples"
+  },
+  {
+   "id": "milind:Q807",
+   "action": "set_option",
+   "match": "Never",
+   "text": "It shouldn't be used; a reviewer can determine severity from the code in every case"
+  },
+  {
+   "id": "milind:Q808",
+   "action": "set_option",
+   "match": "Track overall finding",
+   "text": "Track the overall number of findings produced per review as a trend over time"
+  },
+  {
+   "id": "milind:Q808",
+   "action": "set_option",
+   "match": "Measure developer",
+   "text": "Measure developer satisfaction with the review tool through quarterly surveys"
+  },
+  {
+   "id": "milind:Q808",
+   "action": "set_option",
+   "match": "Count the number",
+   "text": "Count the bugs found in production each month that the review should have caught"
+  },
+  {
+   "id": "milind:Q808",
+   "action": "set_option",
+   "match": "Track dismissed finding",
+   "text": "Track the dismissed-finding rate per category via the `detected_pattern` field"
+  },
+  {
+   "id": "milind:Q809",
+   "action": "set_option",
+   "match": "Use the document content",
+   "text": "Match each result to its document by comparing the returned content to the inputs"
+  },
+  {
+   "id": "milind:Q809",
+   "action": "set_option",
+   "match": "Sort both submission",
+   "text": "Sort both the submission and result arrays by timestamp, then pair them up"
+  },
+  {
+   "id": "milind:Q809",
+   "action": "set_option",
+   "match": "Use `custom_id`",
+   "text": "Match each result to its document via the `custom_id` set on each request"
+  },
+  {
+   "id": "milind:Q809",
+   "action": "set_option",
+   "match": "Use the array index",
+   "text": "Use each result's array index to look up the document at the same submission position"
+  },
+  {
+   "id": "milind:Q81",
+   "action": "set_option",
+   "match": "Using more specific",
+   "text": "Use more specific, narrower queries within each subtask the coordinator assigns"
+  },
+  {
+   "id": "milind:Q81",
+   "action": "set_option",
+   "match": "Running the pipeline",
+   "text": "Run the full pipeline twice and merge the outputs of both runs into one report"
+  },
+  {
+   "id": "milind:Q81",
+   "action": "set_option",
+   "match": "Asking the synthesis",
+   "text": "Have the synthesis agent identify coverage gaps and generate additional subtasks"
+  },
+  {
+   "id": "milind:Q81",
+   "action": "set_option",
+   "match": "Domain enumeration",
+   "text": "Map every media sector (film, music, radio, TV, ...) before creating any subtasks"
+  },
+  {
+   "id": "milind:Q810",
+   "action": "set_option",
+   "match": "Create a separate",
+   "text": "Create a separate review pass dedicated to state mutation issues so they get focused attention"
+  },
+  {
+   "id": "milind:Q810",
+   "action": "set_option",
+   "match": "Add a negative",
+   "text": "Add a safe synchronized utility as a don't-flag example, paired with an unsafe external mutation to flag"
+  },
+  {
+   "id": "milind:Q810",
+   "action": "set_option",
+   "match": "Remove state mutation",
+   "text": "Remove state mutation from the review criteria entirely so the noisy findings disappear"
+  },
+  {
+   "id": "milind:Q810",
+   "action": "set_option",
+   "match": "Add only flag",
+   "text": "Add the instruction \"only flag unsafe mutations\" to the existing state mutation criterion"
+  },
+  {
+   "id": "milind:Q811",
+   "action": "set_option",
+   "match": "Use an enum",
+   "text": "Use an enum with known types plus \"mixed\"/\"unclear\" and a nullable `secondary_type`"
+  },
+  {
+   "id": "milind:Q811",
+   "action": "set_option",
+   "match": "Always assign",
+   "text": "Assign exactly one primary category per document, picking whichever type fits best overall"
+  },
+  {
+   "id": "milind:Q811",
+   "action": "set_option",
+   "match": "Return an error",
+   "text": "Return an error for ambiguous documents so they can be reprocessed in a separate batch"
+  },
+  {
+   "id": "milind:Q811",
+   "action": "set_option",
+   "match": "Skip ambiguous",
+   "text": "Skip ambiguous documents and process just the clear-cut cases in the current batch"
+  },
+  {
+   "id": "milind:Q812",
+   "action": "set_option",
+   "match": "The model asks",
+   "text": "The model asks the user for clarification about the missing end date"
+  },
+  {
+   "id": "milind:Q812",
+   "action": "set_option",
+   "match": "The model fabricates",
+   "text": "The model fabricates a plausible end date to satisfy the field"
+  },
+  {
+   "id": "milind:Q812",
+   "action": "set_option",
+   "match": "The model returns",
+   "text": "The model returns an error stating that the field cannot be extracted"
+  },
+  {
+   "id": "milind:Q812",
+   "action": "set_option",
+   "match": "The model skips",
+   "text": "The model skips the contract entirely and moves on to the next document"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "set_option",
+   "match": "In a separate",
+   "text": "In a separate system message placed ahead of the review instructions"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "set_option",
+   "match": "After the review criteria",
+   "text": "After the review criteria, immediately before the code to be reviewed"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "set_option",
+   "match": "At the very",
+   "text": "At the very beginning of the system prompt, before any other instructions"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "set_option",
+   "match": "After the code",
+   "text": "After the code to be reviewed, as the last thing in the user message"
+  },
+  {
+   "id": "milind:Q814",
+   "action": "set_option",
+   "match": "All 40",
+   "text": "All 40 equally, since each one failed the same validation check"
+  },
+  {
+   "id": "milind:Q814",
+   "action": "set_option",
+   "match": "None",
+   "text": "None of them, since retrying doesn't improve extraction accuracy"
+  },
+  {
+   "id": "milind:Q814",
+   "action": "set_option",
+   "match": "The 25",
+   "text": "The 25 where the security deposit was extracted as the monthly rent"
+  },
+  {
+   "id": "milind:Q814",
+   "action": "set_option",
+   "match": "The 15",
+   "text": "The 15 where the lease states only a weekly rate with no monthly conversion"
+  },
+  {
+   "id": "milind:Q815",
+   "action": "set_option",
+   "match": "Ask Claude",
+   "text": "Ask Claude to analyze the existing test files and infer the patterns"
+  },
+  {
+   "id": "milind:Q815",
+   "action": "set_option",
+   "match": "Provide the testing",
+   "text": "Provide the testing framework's documentation along with the API spec"
+  },
+  {
+   "id": "milind:Q815",
+   "action": "set_option",
+   "match": "Provide 2 3",
+   "text": "Provide 2-3 existing tests that represent your team's testing style"
+  },
+  {
+   "id": "milind:Q815",
+   "action": "set_option",
+   "match": "Write a detailed",
+   "text": "Write a detailed prose description of the team's testing style and conventions"
+  },
+  {
+   "id": "milind:Q816",
+   "action": "set_option",
+   "match": "Reduce severity",
+   "text": "Reduce the severity of all magic number findings to LOW so they stop blocking reviews"
+  },
+  {
+   "id": "milind:Q816",
+   "action": "set_option",
+   "match": "Counter examples",
+   "text": "Don't-flag examples (HTTP 404, 30000ms timeout) plus a flag example (unexplained threshold 7)"
+  },
+  {
+   "id": "milind:Q816",
+   "action": "set_option",
+   "match": "Add skip",
+   "text": "Add an instruction telling the reviewer to skip magic number detection entirely"
+  },
+  {
+   "id": "milind:Q816",
+   "action": "set_option",
+   "match": "Add HTTP",
+   "text": "Add HTTP status codes and common timeout values to a hard-coded exclusion list"
+  },
+  {
+   "id": "milind:Q817",
+   "action": "set_option",
+   "match": "Add an enum",
+   "text": "Add an enum constraint to `effective_date` that lists the valid date ranges for contracts"
+  },
+  {
+   "id": "milind:Q817",
+   "action": "set_option",
+   "match": "Use a two step",
+   "text": "Use two steps: first identify all dates, then classify which one is the effective date"
+  },
+  {
+   "id": "milind:Q817",
+   "action": "set_option",
+   "match": "Add 2 3",
+   "text": "Add 2-3 examples: header effective date, multi-date contract, clause deep in the body"
+  },
+  {
+   "id": "milind:Q817",
+   "action": "set_option",
+   "match": "Add extract only",
+   "text": "Add the instruction \"extract only the effective date\" to the system prompt"
+  },
+  {
+   "id": "milind:Q818",
+   "action": "set_option",
+   "match": "Always use",
+   "text": "Store one integer, using the minimum value whenever a range is given"
+  },
+  {
+   "id": "milind:Q818",
+   "action": "set_option",
+   "match": "Use a string",
+   "text": "Use a single string field for every experience value, as written"
+  },
+  {
+   "id": "milind:Q818",
+   "action": "set_option",
+   "match": "Use only",
+   "text": "Use just an `experience_level` enum such as junior, mid, or senior"
+  },
+  {
+   "id": "milind:Q818",
+   "action": "set_option",
+   "match": "Use `experience_min_years`",
+   "text": "Nullable fields for min years, max years, a level enum, and the raw text"
+  },
+  {
+   "id": "milind:Q819",
+   "action": "set_option",
+   "match": "Claude cannot",
+   "text": "Claude can't adjust its selectivity through prompt instructions at all"
+  },
+  {
+   "id": "milind:Q819",
+   "action": "set_option",
+   "match": "Selectivity and",
+   "text": "Selectivity and accuracy are inversely correlated in language model classifiers"
+  },
+  {
+   "id": "milind:Q819",
+   "action": "set_option",
+   "match": "The 95",
+   "text": "Cutting false positives would necessarily lower the 95% genuine detection rate"
+  },
+  {
+   "id": "milind:Q819",
+   "action": "set_option",
+   "match": "Be more selective",
+   "text": "It's vague: it doesn't name the over-firing categories or their thresholds"
+  },
+  {
+   "id": "milind:Q82",
+   "action": "set_option",
+   "match": "Fork the session",
+   "text": "Fork the session so it can compare the custom JWT and the OAuth approaches"
+  },
+  {
+   "id": "milind:Q82",
+   "action": "set_option",
+   "match": "Start fresh",
+   "text": "Start fresh and inject the key findings, since old tool results describe deleted code"
+  },
+  {
+   "id": "milind:Q82",
+   "action": "set_option",
+   "match": "Resume the session and",
+   "text": "Resume the session and use it to compare the old and new implementations side by side"
+  },
+  {
+   "id": "milind:Q820",
+   "action": "set_option",
+   "match": "Change one field",
+   "text": "Change one field's format to alphanumeric so the two IDs can be told apart by shape"
+  },
+  {
+   "id": "milind:Q820",
+   "action": "set_option",
+   "match": "Process insurance",
+   "text": "Process insurance IDs and patient IDs in two separate extraction passes over each form"
+  },
+  {
+   "id": "milind:Q820",
+   "action": "set_option",
+   "match": "An example showing",
+   "text": "A labeled-form example mapping each ID to its label, plus an unlabeled one using context clues"
+  },
+  {
+   "id": "milind:Q820",
+   "action": "set_option",
+   "match": "Add label matching",
+   "text": "Add instructions to the system prompt telling the model to match each ID by its label"
+  },
+  {
+   "id": "milind:Q821",
+   "action": "set_option",
+   "match": "Define explicit",
+   "text": "Give `technical_issue` concrete triggers (error codes) and exclusions (billing questions)."
+  },
+  {
+   "id": "milind:Q821",
+   "action": "set_option",
+   "match": "Lower the model",
+   "text": "Lower the model temperature to 0 to make the classifier more deterministic."
+  },
+  {
+   "id": "milind:Q822",
+   "action": "set_option",
+   "match": "Temporarily disable",
+   "text": "Disable `fraud_indicator` temporarily and use standard approval until criteria are refined."
+  },
+  {
+   "id": "milind:Q822",
+   "action": "set_option",
+   "match": "Add more few shot",
+   "text": "Add more few-shot examples of real fraud cases to raise the model's confidence in its flags."
+  },
+  {
+   "id": "milind:Q822",
+   "action": "set_option",
+   "match": "Increase the retry",
+   "text": "Raise the retry limit so the model gets more chances to self-correct its fraud flags."
+  },
+  {
+   "id": "milind:Q823",
+   "action": "set_option",
+   "match": "Define severity",
+   "text": "Define each level with code snippets, e.g. `critical` = null dereference in production."
+  },
+  {
+   "id": "milind:Q823",
+   "action": "set_option",
+   "match": "Add a chain",
+   "text": "Use chain-of-thought so the model explains its severity choice before outputting it."
+  },
+  {
+   "id": "milind:Q823",
+   "action": "set_option",
+   "match": "Tell the model",
+   "text": "Tell the model: \"Reserve `critical` for the most serious issues in the codebase.\""
+  },
+  {
+   "id": "milind:Q824",
+   "action": "set_option",
+   "match": "Write 2",
+   "text": "Add 2–4 examples of ambiguous `security_debt` TODOs, with reasoning why each qualifies."
+  },
+  {
+   "id": "milind:Q825",
+   "action": "set_option",
+   "match": "Increase the number",
+   "text": "Increase the number of examples to 10–12 so that more citation formats are covered."
+  },
+  {
+   "id": "milind:Q825",
+   "action": "set_option",
+   "match": "Replace 2",
+   "text": "Replace 2–3 examples with ones that reason through missing fields and emit `null`."
+  },
+  {
+   "id": "milind:Q825",
+   "action": "set_option",
+   "match": "Switch to a zero",
+   "text": "Switch to a zero-shot prompt to prevent over-fitting to the formats in the examples."
+  },
+  {
+   "id": "milind:Q825",
+   "action": "set_option",
+   "match": "Add a post",
+   "text": "Add a post-processing rule that strips page numbers from every extracted citation."
+  },
+  {
+   "id": "milind:Q826",
+   "action": "set_option",
+   "match": "The examples are too",
+   "text": "The examples are too long and should be shortened so the model can focus on the labels."
+  },
+  {
+   "id": "milind:Q826",
+   "action": "set_option",
+   "match": "The examples fail",
+   "text": "The examples skip ambiguous cases, so the model has no decision boundary for borderline diffs."
+  },
+  {
+   "id": "milind:Q827",
+   "action": "set_option",
+   "match": "Add a few shot",
+   "text": "Add a few-shot example showing a contract that has no termination clause at all."
+  },
+  {
+   "id": "milind:Q827",
+   "action": "set_option",
+   "match": "Make `termination_clause`",
+   "text": "Make `termination_clause` nullable so the model can express absence instead of fabricating."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_option",
+   "match": "Increase the number",
+   "text": "Add more tools so the model has more options that fit each ticket."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_option",
+   "match": "Use a retry",
+   "text": "Add a retry loop that re-prompts the model whenever no tool call is detected."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_option",
+   "match": "Switch `tool_choice`",
+   "text": "Set `tool_choice` to `\"any\"` so a tool call is required on every turn."
+  },
+  {
+   "id": "milind:Q829",
+   "action": "set_option",
+   "match": "A semantic error",
+   "text": "A semantic error; constrain it with an `enum` or few-shot examples."
+  },
+  {
+   "id": "milind:Q829",
+   "action": "set_option",
+   "match": "A hallucination",
+   "text": "A hallucination; remove the return type field from the schema so it can't recur."
+  },
+  {
+   "id": "milind:Q83",
+   "action": "set_option",
+   "match": "The agent is not",
+   "text": "The agent fails to check the tool result status before dependent calls"
+  },
+  {
+   "id": "milind:Q83",
+   "action": "set_option",
+   "match": "The agent is using",
+   "text": "The agent is sending an outdated customer ID format to the `get_customer` tool"
+  },
+  {
+   "id": "milind:Q83",
+   "action": "set_option",
+   "match": "The `get_customer` tool",
+   "text": "The `get_customer` tool is returning incorrect not_found statuses for valid customers"
+  },
+  {
+   "id": "milind:Q83",
+   "action": "set_option",
+   "match": "The agentic loop",
+   "text": "The agentic loop isn't waiting for tool results before it issues the next call"
+  },
+  {
+   "id": "milind:Q830",
+   "action": "set_option",
+   "match": "Use an enum",
+   "text": "Add an `\"other\"` enum value plus a `payment_method_detail` string field."
+  },
+  {
+   "id": "milind:Q830",
+   "action": "set_option",
+   "match": "Use two separate",
+   "text": "Use two API calls: one to check whether the method is known, another to extract details."
+  },
+  {
+   "id": "milind:Q830",
+   "action": "set_option",
+   "match": "Expand the enum",
+   "text": "Expand the enum each time a new payment method is discovered in production."
+  },
+  {
+   "id": "milind:Q830",
+   "action": "set_option",
+   "match": "Replace the enum",
+   "text": "Replace the enum with a free-text string field and validate the values downstream."
+  },
+  {
+   "id": "milind:Q831",
+   "action": "set_option",
+   "match": "No improvement",
+   "text": "No improvement, since retries succeed when the model randomly picks a different answer."
+  },
+  {
+   "id": "milind:Q831",
+   "action": "set_option",
+   "match": "Higher retry",
+   "text": "Higher success, since the specific error gives the model something concrete to correct."
+  },
+  {
+   "id": "milind:Q831",
+   "action": "set_option",
+   "match": "Lower retry",
+   "text": "Lower success, since the longer retry prompt adds tokens and degrades model performance."
+  },
+  {
+   "id": "milind:Q832",
+   "action": "set_option",
+   "match": "Always trust `stated",
+   "text": "Use `stated_total`, since it comes directly from the source document itself."
+  },
+  {
+   "id": "milind:Q832",
+   "action": "set_option",
+   "match": "Flag the discrepancy",
+   "text": "Flag the discrepancy, keep both values, and route the invoice to human review."
+  },
+  {
+   "id": "milind:Q832",
+   "action": "set_option",
+   "match": "Retry the extraction",
+   "text": "Retry the extraction up to 3 times, then accept the last output if they still differ."
+  },
+  {
+   "id": "milind:Q832",
+   "action": "set_option",
+   "match": "Always trust `calculated",
+   "text": "Use `calculated_total` and overwrite `stated_total`, since the arithmetic is exact."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_option",
+   "match": "No the Message Batches API does not",
+   "text": "No — each batch item is one request/response; follow-up tool calls need the standard API."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_option",
+   "match": "Yes but only",
+   "text": "Yes, as long as all follow-up tool calls are pre-defined in the batch request upfront."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_option",
+   "match": "No the Message Batches API is only",
+   "text": "No — the Message Batches API handles plain text generation but not tool_use requests."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_option",
+   "match": "Yes the Message",
+   "text": "Yes — batch items support multi-turn tool calling, so follow-up calls run inside the batch."
+  },
+  {
+   "id": "milind:Q834",
+   "action": "set_option",
+   "match": "Message Batches API it offers",
+   "text": "Message Batches API — 50% lower cost, and its 24-hour window fits the 36-hour deadline."
+  },
+  {
+   "id": "milind:Q835",
+   "action": "set_option",
+   "match": "Use `custom_id`",
+   "text": "Use `custom_id` to map failures to their inputs and resubmit only those items."
+  },
+  {
+   "id": "milind:Q835",
+   "action": "set_option",
+   "match": "Log the error",
+   "text": "Log the errors and skip failed items, since 3% is within normal batch tolerances."
+  },
+  {
+   "id": "milind:Q835",
+   "action": "set_option",
+   "match": "`custom_id` is only",
+   "text": "Find failed items by their array position; `custom_id` just sets the result order."
+  },
+  {
+   "id": "milind:Q836",
+   "action": "set_option",
+   "match": "Sample 50",
+   "text": "Test 50–100 representative requests via the synchronous API before the full batch."
+  },
+  {
+   "id": "milind:Q836",
+   "action": "set_option",
+   "match": "Submit the full",
+   "text": "Submit the full batch in segments of 1,000 requests to limit the impact of failures."
+  },
+  {
+   "id": "milind:Q836",
+   "action": "set_option",
+   "match": "Use a staging",
+   "text": "Use a staging environment with synthetic data that mirrors the full production volume."
+  },
+  {
+   "id": "milind:Q836",
+   "action": "set_option",
+   "match": "Run the full",
+   "text": "Run the full batch with a short timeout so any failures surface as quickly as possible."
+  },
+  {
+   "id": "milind:Q837",
+   "action": "set_option",
+   "match": "No improvement",
+   "text": "No improvement, since both instances share the same weights and will make identical errors."
+  },
+  {
+   "id": "milind:Q837",
+   "action": "set_option",
+   "match": "Improved detection",
+   "text": "Better detection, since the reviewer lacks the drafter's context and its blind spots."
+  },
+  {
+   "id": "milind:Q837",
+   "action": "set_option",
+   "match": "Worse performance",
+   "text": "Worse results, since two instances may apply inconsistent quality standards to the drafts."
+  },
+  {
+   "id": "milind:Q837",
+   "action": "set_option",
+   "match": "Marginal improvement",
+   "text": "Only a marginal improvement, unless the reviewer runs on a different model version."
+  },
+  {
+   "id": "milind:Q838",
+   "action": "set_option",
+   "match": "Reduced API cost",
+   "text": "Lower API cost, because the shorter per-section prompts are cheaper per token overall."
+  },
+  {
+   "id": "milind:Q838",
+   "action": "set_option",
+   "match": "Each local pass",
+   "text": "Each pass keeps full attention on its own section, improving both recall and synthesis."
+  },
+  {
+   "id": "milind:Q838",
+   "action": "set_option",
+   "match": "Parallel execution",
+   "text": "Faster results, because the local passes run in parallel and cut total wall-clock time."
+  },
+  {
+   "id": "milind:Q839",
+   "action": "set_option",
+   "match": "The confidence field",
+   "text": "Use a numeric confidence score (0.0–1.0) instead of categories to get finer granularity."
+  },
+  {
+   "id": "milind:Q839",
+   "action": "set_option",
+   "match": "The model s self",
+   "text": "Confidence is poorly calibrated; route on `detected_pattern` or other objective fields."
+  },
+  {
+   "id": "milind:Q840",
+   "action": "set_option",
+   "match": "Retrain the model",
+   "text": "Retrain the model on labeled indemnification boilerplate as negative examples."
+  },
+  {
+   "id": "milind:Q840",
+   "action": "set_option",
+   "match": "Remove the `detected_pattern`",
+   "text": "Remove the `detected_pattern` field from the schema, since it is just generating noise."
+  },
+  {
+   "id": "milind:Q840",
+   "action": "set_option",
+   "match": "Use this finding",
+   "text": "Add a prompt criterion excluding standard indemnification boilerplate from `unusual_clause`."
+  },
+  {
+   "id": "milind:Q840",
+   "action": "set_option",
+   "match": "Add `\"indemnification",
+   "text": "Add that pattern value to a downstream blocklist that overrides the model's `unusual_clause` flag."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_option",
+   "match": "The model will output",
+   "text": "It will reply with an error explaining it can't handle Kotlin; add a free-text error field."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_option",
+   "match": "The model will silently",
+   "text": "It will omit the `language` field and fail validation; make the field optional instead."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_option",
+   "match": "The model will refuse",
+   "text": "It will refuse to respond since Kotlin isn't in the enum; switch to a free-text field."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_option",
+   "match": "The model will pick",
+   "text": "It picks an ill-fitting enum value; add `\"other\"` plus a `language_detail` string."
+  },
+  {
+   "id": "milind:Q842",
+   "action": "set_option",
+   "match": "The few shot",
+   "text": "The examples don't match the production distribution and should cover multiple domains."
+  },
+  {
+   "id": "milind:Q842",
+   "action": "set_option",
+   "match": "The prompt needs",
+   "text": "The prompt needs more examples; 10+ biology examples would improve cross-domain results."
+  },
+  {
+   "id": "milind:Q842",
+   "action": "set_option",
+   "match": "Domain specific",
+   "text": "Domain-specific field names are confusing the model; rename the schema fields generically."
+  },
+  {
+   "id": "milind:Q843",
+   "action": "set_option",
+   "match": "`tool_choice: \"auto\"` — it allows",
+   "text": "`tool_choice: \"auto\"` — the model decides whether to classify or reply directly."
+  },
+  {
+   "id": "milind:Q843",
+   "action": "set_option",
+   "match": "Forced tool call",
+   "text": "A forced call to the classification tool, which gives maximum control over every reply."
+  },
+  {
+   "id": "milind:Q843",
+   "action": "set_option",
+   "match": "`tool_choice: \"auto\"` but",
+   "text": "`tool_choice: \"auto\"` plus a system prompt rule to classify whenever the tool is skipped."
+  },
+  {
+   "id": "milind:Q844",
+   "action": "set_option",
+   "match": "When the validation",
+   "text": "When the needed information is absent from the source, so no retry can produce it."
+  },
+  {
+   "id": "milind:Q844",
+   "action": "set_option",
+   "match": "When the schema",
+   "text": "When the schema is too strict and should be relaxed instead of retrying the output."
+  },
+  {
+   "id": "milind:Q844",
+   "action": "set_option",
+   "match": "When the model is large",
+   "text": "When a large, capable model is used that should self-correct without needing retries."
+  },
+  {
+   "id": "milind:Q845",
+   "action": "set_option",
+   "match": "When the schema uses",
+   "text": "When nullable fields let the model output `null` instead of correcting the dates."
+  },
+  {
+   "id": "milind:Q845",
+   "action": "set_option",
+   "match": "When the model is using",
+   "text": "When the model runs with `tool_choice: \"any\"`, which blocks it from self-correcting."
+  },
+  {
+   "id": "milind:Q845",
+   "action": "set_option",
+   "match": "When the source",
+   "text": "When the source contract itself contains the error, e.g. a mistyped effective year."
+  },
+  {
+   "id": "milind:Q846",
+   "action": "set_option",
+   "match": "Split the integration",
+   "text": "Split the integration pass into two smaller passes to reduce each one's context size."
+  },
+  {
+   "id": "milind:Q846",
+   "action": "set_option",
+   "match": "Restructure local",
+   "text": "Have local passes emit concise structured summaries instead of verbose full text."
+  },
+  {
+   "id": "milind:Q847",
+   "action": "set_option",
+   "match": "Yes but only",
+   "text": "Yes, as long as ticket volume exceeds 1,000 tickets per hour to fill each batch."
+  },
+  {
+   "id": "milind:Q847",
+   "action": "set_option",
+   "match": "No the Message Batches API provides",
+   "text": "No — the Message Batches API has no latency SLA and can take up to 24 hours per batch."
+  },
+  {
+   "id": "milind:Q848",
+   "action": "set_option",
+   "match": "`tool_use` eliminates",
+   "text": "`tool_use` with `strict: true` enforces the schema; \"respond in JSON\" is just an instruction."
+  },
+  {
+   "id": "milind:Q848",
+   "action": "set_option",
+   "match": "`tool_use` supports",
+   "text": "`tool_use` supports multi-turn workflows much better than JSON returned as plain text."
+  },
+  {
+   "id": "milind:Q848",
+   "action": "set_option",
+   "match": "Plain text JSON",
+   "text": "Text JSON is brittle only for deeply nested schemas; flat schemas work equally well either way."
+  },
+  {
+   "id": "milind:Q848",
+   "action": "set_option",
+   "match": "`tool_use` is faster",
+   "text": "`tool_use` is faster, because structured outputs need fewer tokens than plain-text JSON."
+  },
+  {
+   "id": "milind:Q848",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The model literally cannot return malformed JSON when operating through a tool schema — the constraint is enforced at the API level.",
+   "replace": "With `strict: true` (structured outputs), the model cannot return malformed or schema-violating tool input — the constraint is enforced at the API level."
+  },
+  {
+   "id": "milind:Q849",
+   "action": "set_option",
+   "match": "Compress examples",
+   "text": "Compress the examples so that more of them fit into the available context window."
+  },
+  {
+   "id": "milind:Q849",
+   "action": "set_option",
+   "match": "Add more examples",
+   "text": "Add more input → label examples so that every known code smell type is covered."
+  },
+  {
+   "id": "milind:Q849",
+   "action": "set_option",
+   "match": "Reformat examples",
+   "text": "Add explicit reasoning to each example showing which code properties triggered the label."
+  },
+  {
+   "id": "milind:Q85",
+   "action": "set_option",
+   "match": "Honor the escalation",
+   "text": "Escalate to a human immediately, without first attempting to resolve the refund"
+  },
+  {
+   "id": "milind:Q85",
+   "action": "set_option",
+   "match": "Process the refund",
+   "text": "Process the refund first, then transfer the customer to a manager afterwards"
   }
  ],
  "hold": []
