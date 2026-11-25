@@ -20,6 +20,7 @@
   .pill{background:var(--panel2);border:1px solid var(--line);border-radius:20px;
     padding:4px 12px;font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px}
   #timer.warn{color:var(--warn);border-color:var(--warn)}
+  .timeup{border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:10px 14px;margin:0 0 14px;font-weight:600;text-align:center}
   .btn{background:var(--panel2);color:var(--txt);border:1px solid var(--line);
     border-radius:8px;padding:8px 14px;cursor:pointer;font-size:14px}
   .btn:hover{border-color:var(--acc)}
@@ -235,6 +236,7 @@ const META = {
 };
 
 let activeKey=null, selectedN=30, withTimer=true, useAll=false, qa=[], cur=0, remaining=0, tick=null, mockSet=0;
+let timed=false, deadline=0, graded=false;  // timer runs only in exam mode; deadline is wall-clock, so dialogs/background tabs can't pause it
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])).replace(/`/g,'&#96;').replace(/\$\{/g,'&#36;{');}
@@ -344,9 +346,11 @@ function updateReadyFacts(){
   const m=META[activeKey];
   const total=CATALOG[activeKey].length;
   const n=getN();
-  const tline = withTimer
-    ? `Time limit <b>${fmt(timeFor(activeKey,n))}</b> min`
+  const tline = mode==='learn' ? `No time limit in learning mode`
+    : withTimer ? `Time limit <b>${fmt(timeFor(activeKey,n))}</b> min &middot; submitted automatically when time runs out`
     : `No time limit`;
+  const ts=document.getElementById('timeSel');
+  ts.style.opacity = mode==='learn' ? .4 : 1; ts.style.pointerEvents = mode==='learn' ? 'none' : '';
   const label = mockSet ? `Mock ${mockSet}: ${n}` : useAll ? `${total} (all)` : `${n}${m.weights?' (weighted by domain)':''}`;
   document.getElementById('readyFacts').innerHTML=
     `<b>${label}</b> questions &middot; ${tline}<br>`+
@@ -364,24 +368,26 @@ function buildExam(){
     return {q:p.q, id:p.id||'', domain:p.domain, source:p.source||'', explanation:p.explanation||'',
       _select:p._select, options: p._fixed ? opts : shuffle(opts), chosen:null, revealed:false};
   });
-  cur=0; remaining=withTimer?timeFor(activeKey,N):0;
+  cur=0; graded=false; timed = withTimer && mode!=='learn';
+  remaining = timed ? timeFor(activeKey,N) : 0; deadline = Date.now() + remaining*1000;
   hide('ready'); hide('result'); show('exam');
   document.getElementById('hbarTitle').textContent=META[activeKey].code;
   ['progress','restart','submit','homeBtn'].forEach(id=>show(id));
-  if(withTimer){ show('timer'); startTimer(); } else { hide('timer'); }
+  if(tick) clearInterval(tick);
+  if(timed){ show('timer'); startTimer(); } else { hide('timer'); }
   render();
   window.scrollTo(0,0);
 }
 function startTimer(){
   if(tick) clearInterval(tick);
   const t=document.getElementById('timer');
-  const paint=()=>{t.textContent=fmt(remaining); t.classList.toggle('warn',remaining<=300);};
-  paint();
-  tick=setInterval(()=>{
-    remaining--;
-    if(remaining<=0){remaining=0;paint();clearInterval(tick);grade();return;}
-    paint();
-  },1000);
+  const step=()=>{
+    remaining=Math.max(0, Math.ceil((deadline-Date.now())/1000));
+    t.textContent=fmt(remaining); t.classList.toggle('warn',remaining<=600);
+    if(remaining<=0){ clearInterval(tick); tick=null; grade(true); }
+  };
+  step();
+  if(remaining>0) tick=setInterval(step,1000);
 }
 function render(){
   const item=qa[cur];
@@ -439,10 +445,16 @@ function render(){
   const gb=document.getElementById('gradeNow');
   if(cur===qa.length-1 && allAnswered) gb.classList.add('show'); else gb.classList.remove('show');
 }
-function grade(){
-  if(tick) clearInterval(tick);
+function grade(timeUp){
+  if(graded) return;
+  timeUp = timeUp===true;
+  if(tick){ clearInterval(tick); tick=null; }
   const answered=qa.filter(q=>q.chosen!==null && (Array.isArray(q.chosen)?q.chosen.length>0:true)).length;
-  if(answered<qa.length && !confirm(`You've only answered ${answered}/${qa.length}. Grade anyway?`)){if(withTimer)startTimer();return;}
+  if(!timeUp && answered<qa.length && !confirm(`You've only answered ${answered}/${qa.length}. Grade anyway?`)){
+    if(timed) startTimer();  // resumes against the same deadline; submits at once if time ran out meanwhile
+    return;
+  }
+  graded=true;
   let correct=0;
   qa.forEach(q=>{
     if(q.chosen===null) return;
@@ -451,9 +463,9 @@ function grade(){
     const ok = chosen.length===correctIdx.length && chosen.every(i=>correctIdx.includes(i));
     if(ok) correct++;
   });
-  showResult(correct);
+  showResult(correct, timeUp, answered);
 }
-function showResult(correct){
+function showResult(correct, timeUp, answered){
   hide('exam');
   ['timer','progress','restart','submit','gradeNow'].forEach(id=>hide(id));
   const res=document.getElementById('result'); show('result');
@@ -461,7 +473,9 @@ function showResult(correct){
   let scaled;
   if(pct<=72) scaled=Math.round(300+(pct/72)*(720-300));
   else scaled=Math.round(720+((pct-72)/(100-72))*(1000-720));
-  let h=`<div class="scorebox">
+  let h = timeUp ? `<div class="timeup">&#9201; Time's up &mdash; the exam was submitted automatically.`+
+    `${answered<N?` ${N-answered} unanswered question${N-answered>1?'s':''} counted as wrong.`:''}</div>` : '';
+  h+=`<div class="scorebox">
     <div class="verdict ${pass?'pass':'fail'}">${pass?'PASSED':'FAILED'}</div>
     <div class="big">${correct} / ${N}</div>
     <div class="sub">${pct}% correct &middot; threshold ${passFor(N)}/${N} (~72%)</div>
@@ -498,11 +512,11 @@ function showResult(correct){
 document.getElementById('next').onclick=()=>{if(cur<qa.length-1){cur++;render();}};
 document.getElementById('prev').onclick=()=>{if(cur>0){cur--;render();}};
 document.getElementById('startBtn').onclick=buildExam;
-document.getElementById('gradeNow').onclick=grade;
+document.getElementById('gradeNow').onclick=()=>grade();
 document.getElementById('readyBack').onclick=renderHome;
 document.getElementById('homeBtn').onclick=()=>{if(confirm('Back to start? Current progress will be lost.'))renderHome();};
 document.getElementById('restart').onclick=()=>{if(confirm('New exam? Current progress will be lost.'))buildExam();};
-document.getElementById('submit').onclick=grade;
+document.getElementById('submit').onclick=()=>grade();
 document.querySelectorAll('#cntSel .seg').forEach(b=>{
   b.onclick=()=>{ useAll=false; selectedN=+b.dataset.n;
     document.querySelectorAll('#cntSel .seg').forEach(x=>x.classList.toggle('on',x===b));
@@ -521,7 +535,8 @@ document.getElementById('cntCustom').oninput=()=>{
 };
 document.querySelectorAll('#modeSel .seg').forEach(b=>{
   b.onclick=()=>{ mode=b.dataset.m;
-    document.querySelectorAll('#modeSel .seg').forEach(x=>x.classList.toggle('on',x===b)); };
+    document.querySelectorAll('#modeSel .seg').forEach(x=>x.classList.toggle('on',x===b));
+    if(activeKey) updateReadyFacts(); };
 });
 document.querySelectorAll('#timeSel .seg').forEach(b=>{
   b.onclick=()=>{ withTimer=!!+b.dataset.t;

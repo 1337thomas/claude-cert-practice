@@ -10,7 +10,7 @@ CCAO-F, CCDV-F and CCAR-P follow the exam guides v1.1 effective 7 December 2026 
 
 ## Features
 
-- Exam mode (timed, scored at the end) and learning mode (answer and explanation after each question)
+- Exam mode (timed, scored at the end; submitted automatically when time runs out, unanswered questions count as wrong) and learning mode (answer and explanation after each question, no time limit)
 - Random exams are drawn in the official domain weights; results show percent correct by domain, like the real score report
 - CCDV-P: original scenario questions with a rationale for every option, grouped into fixed mock exams
 - Explanations from the original authors for nearly every question
