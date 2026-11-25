@@ -17485,6 +17485,1201 @@
    "action": "set_option",
    "match": "decompose into specialized",
    "text": "Split into domain subagents (CRM, billing, support, ...) with 3-4 tools each"
+  },
+  {
+   "id": "milind:Q26",
+   "action": "set_option",
+   "match": "the document analysis",
+   "text": "The document analysis agent lacked the context needed to cover livestock and fisheries data"
+  },
+  {
+   "id": "milind:Q26",
+   "action": "set_option",
+   "match": "the coordinator s",
+   "text": "The coordinator split the topic by crop type, leaving whole agricultural sectors uncovered"
+  },
+  {
+   "id": "milind:Q26",
+   "action": "set_option",
+   "match": "the web search",
+   "text": "The web search subagents used overly narrow queries that missed the adjacent sectors"
+  },
+  {
+   "id": "milind:Q26",
+   "action": "set_option",
+   "match": "the synthesis agent",
+   "text": "The synthesis agent filtered out non-crop findings as irrelevant to agriculture"
+  },
+  {
+   "id": "milind:Q260",
+   "action": "set_option",
+   "match": "specifying the tool",
+   "text": "Specifying the tool's version number so the model can tell similar tools apart"
+  },
+  {
+   "id": "milind:Q260",
+   "action": "set_option",
+   "match": "clear boundary statements",
+   "text": "Stating when not to use the tool and which alternative tool to use instead"
+  },
+  {
+   "id": "milind:Q260",
+   "action": "set_option",
+   "match": "listing all possible",
+   "text": "Listing every accepted input format so the model can match the request shape"
+  },
+  {
+   "id": "milind:Q260",
+   "action": "set_option",
+   "match": "providing performance benchmarks",
+   "text": "Including performance benchmarks so the model prefers the faster of two tools"
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_option",
+   "match": "use tool_choice auto",
+   "text": "Use `tool_choice: \"auto\"` and add detailed output format instructions to the prompt"
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_option",
+   "match": "set response_format json",
+   "text": "Set `response_format: \"json\"` in the request so the API returns only JSON"
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_option",
+   "match": "tool_choice any in",
+   "text": "Set `tool_choice: \"any\"` and define the desired output structure as a tool schema"
+  },
+  {
+   "id": "milind:Q261",
+   "action": "set_option",
+   "match": "set stop_sequences so",
+   "text": "Set `stop_sequences: [\"}\"]` so the response ends right after the JSON object"
+  },
+  {
+   "id": "milind:Q262",
+   "action": "set_option",
+   "match": "rename check_inventory to",
+   "text": "Rename `check_inventory` to `product_stock_check` so its name no longer suggests order lookups"
+  },
+  {
+   "id": "milind:Q262",
+   "action": "set_option",
+   "match": "make get_order_status the",
+   "text": "Make `get_order_status` the default tool so Claude falls back to it whenever a request is at all unclear"
+  },
+  {
+   "id": "milind:Q262",
+   "action": "set_option",
+   "match": "add examples of",
+   "text": "Add several inventory query examples to the system prompt so Claude sees what the tool is for"
+  },
+  {
+   "id": "milind:Q262",
+   "action": "set_option",
+   "match": "update check_inventory to",
+   "text": "Describe it as an SKU stock check before ordering and send existing-order queries to `get_order_status`"
+  },
+  {
+   "id": "milind:Q263",
+   "action": "set_option",
+   "match": "when you want to",
+   "text": "When you want to prevent any other tools from being defined in the same request"
+  },
+  {
+   "id": "milind:Q263",
+   "action": "set_option",
+   "match": "when tool descriptions",
+   "text": "When tool descriptions are ambiguous and you want to override Claude's own selection"
+  },
+  {
+   "id": "milind:Q263",
+   "action": "set_option",
+   "match": "when a specific",
+   "text": "When one tool must always run first because later workflow steps depend on its output"
+  },
+  {
+   "id": "milind:Q263",
+   "action": "set_option",
+   "match": "when you want claude",
+   "text": "When you want Claude to call the tools in a fixed, alphabetical order across turns"
+  },
+  {
+   "id": "milind:Q264",
+   "action": "set_option",
+   "match": "mcp servers configured",
+   "text": "Servers in `.mcp.json` need an administrator's approval before any new developer can use them"
+  },
+  {
+   "id": "milind:Q264",
+   "action": "set_option",
+   "match": "claude code automatically",
+   "text": "Claude Code loads the servers from `.mcp.json` automatically once the developer approves them"
+  },
+  {
+   "id": "milind:Q264",
+   "action": "set_option",
+   "match": "the developer must manually",
+   "text": "The developer must register each MCP server manually with `claude mcp add` before using it"
+  },
+  {
+   "id": "milind:Q264",
+   "action": "set_option",
+   "match": "the developer must copy",
+   "text": "The developer must copy `.mcp.json` into their home directory before Claude Code reads it"
+  },
+  {
+   "id": "milind:Q265",
+   "action": "set_option",
+   "match": "update search_documentation to",
+   "text": "Expand its description with what it covers, when to use it, and when to use `search_codebase` instead"
+  },
+  {
+   "id": "milind:Q265",
+   "action": "set_option",
+   "match": "put search_documentation before",
+   "text": "Move `search_documentation` ahead of `search_codebase` in the tools list so it gets picked first"
+  },
+  {
+   "id": "milind:Q265",
+   "action": "set_option",
+   "match": "add a routing",
+   "text": "Add a separate routing classifier that picks the right search tool before Claude's own tool selection runs"
+  },
+  {
+   "id": "milind:Q265",
+   "action": "set_option",
+   "match": "merge both tools",
+   "text": "Merge both tools into one `search_all` tool so Claude no longer has to choose between the two"
+  },
+  {
+   "id": "milind:Q266",
+   "action": "set_option",
+   "match": "remove grep from",
+   "text": "Remove Grep from the agent's available tools so documentation queries can only go to the MCP tool"
+  },
+  {
+   "id": "milind:Q266",
+   "action": "set_option",
+   "match": "lower the priority",
+   "text": "Move Grep lower in the tool list so the model gives `search_internal_docs` higher priority"
+  },
+  {
+   "id": "milind:Q266",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt rule: \"Always prefer MCP tools over built-in tools for every query\""
+  },
+  {
+   "id": "milind:Q266",
+   "action": "set_option",
+   "match": "enhance the search_internal_docs",
+   "text": "Expand the `search_internal_docs` description to say what it adds beyond Grep and when to use it"
+  },
+  {
+   "id": "milind:Q267",
+   "action": "set_option",
+   "match": "the word processes",
+   "text": "The verb \"processes\" is ambiguous and should be replaced with a more specific, descriptive action verb"
+  },
+  {
+   "id": "milind:Q267",
+   "action": "set_option",
+   "match": "tool descriptions should",
+   "text": "It should not mention \"customer\" at all, since that word implies the tool handles personal data"
+  },
+  {
+   "id": "milind:Q267",
+   "action": "set_option",
+   "match": "the description needs",
+   "text": "It needs a version number and an owner field, or the model treats the description as incomplete"
+  },
+  {
+   "id": "milind:Q267",
+   "action": "set_option",
+   "match": "it is too",
+   "text": "It's too vague about the data, operations, inputs, and how it differs from similar tools"
+  },
+  {
+   "id": "milind:Q268",
+   "action": "set_option",
+   "match": "the token will",
+   "text": "The token will expire after 24 hours once it is committed to a file in the repository"
+  },
+  {
+   "id": "milind:Q268",
+   "action": "set_option",
+   "match": "the actual token",
+   "text": "The real token lands in version control for anyone with repo access; use `${GITHUB_TOKEN}` instead"
+  },
+  {
+   "id": "milind:Q268",
+   "action": "set_option",
+   "match": "the token format",
+   "text": "The token format is wrong for GitHub API authentication and will be rejected by the server"
+  },
+  {
+   "id": "milind:Q268",
+   "action": "set_option",
+   "match": "mcp servers don",
+   "text": "MCP servers don't support token-based authentication, so the server will fail to start"
+  },
+  {
+   "id": "milind:Q269",
+   "action": "set_option",
+   "match": "merge both tools",
+   "text": "Merge both tools into a single `get_entity_orders` tool that takes an additional entity type parameter"
+  },
+  {
+   "id": "milind:Q269",
+   "action": "set_option",
+   "match": "add a routing",
+   "text": "Add a routing classifier in front of Claude that pre-selects the right tool for each incoming ID"
+  },
+  {
+   "id": "milind:Q269",
+   "action": "set_option",
+   "match": "add explicit boundary",
+   "text": "Add ID-format boundaries to both descriptions, e.g. `CUST-` vs `SUPP-`, each naming the other tool"
+  },
+  {
+   "id": "milind:Q269",
+   "action": "set_option",
+   "match": "rename both tools",
+   "text": "Rename both tools to spell out their full entity names, like `get_retail_customer_orders`"
+  },
+  {
+   "id": "milind:Q27",
+   "action": "set_option",
+   "match": "when the synthesis output",
+   "text": "When the synthesis output exceeds 1,000 words, since that suggests unfocused source material"
+  },
+  {
+   "id": "milind:Q27",
+   "action": "set_option",
+   "match": "when the synthesis agent s confidence",
+   "text": "When the synthesis agent's self-reported confidence score falls below a threshold such as 0.7"
+  },
+  {
+   "id": "milind:Q27",
+   "action": "set_option",
+   "match": "when the synthesis agent s output",
+   "text": "When the synthesis shows coverage gaps, i.e. in-scope topics with weak source support"
+  },
+  {
+   "id": "milind:Q27",
+   "action": "set_option",
+   "match": "always coordinators should",
+   "text": "On every run, with at least three synthesis iterations before any output is accepted"
+  },
+  {
+   "id": "milind:Q270",
+   "action": "set_option",
+   "match": "it specifies the",
+   "text": "It specifies the maximum number of retries the agent may attempt before it gives up on the call"
+  },
+  {
+   "id": "milind:Q270",
+   "action": "set_option",
+   "match": "it tells the agent",
+   "text": "It tells the agent whether the same call might succeed on retry, so it skips hopeless retries"
+  },
+  {
+   "id": "milind:Q270",
+   "action": "set_option",
+   "match": "it indicates whether",
+   "text": "It indicates whether the tool supports automatic retry with exponential backoff on the server"
+  },
+  {
+   "id": "milind:Q270",
+   "action": "set_option",
+   "match": "it tells the developer",
+   "text": "It tells the developer whether retry logic still needs to be added to the MCP server itself"
+  },
+  {
+   "id": "milind:Q271",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Use a fixed pipeline: one prompt per file in order, then a separate aggregation prompt over the per-file summaries."
+  },
+  {
+   "id": "milind:Q271",
+   "action": "set_option",
+   "match": "add a continue",
+   "text": "Add a \"continue\" instruction to the original prompt so the model handles the remaining files in later turns of the same context."
+  },
+  {
+   "id": "milind:Q271",
+   "action": "set_option",
+   "match": "increase the model",
+   "text": "Batch the files into groups of 50 and send each batch as one long prompt to make better use of the context window."
+  },
+  {
+   "id": "milind:Q271",
+   "action": "set_option",
+   "match": "run the entire",
+   "text": "Run 200 single-file prompts in parallel all at once and use their combined output directly, with no aggregation step."
+  },
+  {
+   "id": "milind:Q272",
+   "action": "set_option",
+   "match": "fixed prompt chaining because",
+   "text": "Fixed prompt chaining, because a deterministic step order keeps the agent from going off-script on an unknown incident type."
+  },
+  {
+   "id": "milind:Q272",
+   "action": "set_option",
+   "match": "fixed prompt chaining with",
+   "text": "Fixed prompt chaining with a fallback prompt at step 2 that handles unknown incident types as a special case."
+  },
+  {
+   "id": "milind:Q272",
+   "action": "set_option",
+   "match": "dynamic adaptive decomposition",
+   "text": "Dynamic adaptive decomposition, because an open-ended investigation needs the agent to revise its plan as evidence arrives."
+  },
+  {
+   "id": "milind:Q272",
+   "action": "set_option",
+   "match": "neither delegate the",
+   "text": "Neither; hand the entire incident to a human operator whenever its type is missing from the existing runbooks."
+  },
+  {
+   "id": "milind:Q274",
+   "action": "set_option",
+   "match": "let the session",
+   "text": "Let the session time out; Claude restores it automatically the next time you run `claude` in that folder."
+  },
+  {
+   "id": "milind:Q274",
+   "action": "set_option",
+   "match": "use resume session",
+   "text": "Launch Claude tomorrow with `--resume <session-name>`, using the name the session was saved under, to reload its history."
+  },
+  {
+   "id": "milind:Q274",
+   "action": "set_option",
+   "match": "before closing send",
+   "text": "Before closing, ask the agent for a final summary, then paste that summary into a new session tomorrow."
+  },
+  {
+   "id": "milind:Q274",
+   "action": "set_option",
+   "match": "run claude resume",
+   "text": "Run `claude --resume research-landscape` before closing the terminal, which saves the session under that name."
+  },
+  {
+   "id": "milind:Q277",
+   "action": "set_option",
+   "match": "per service local",
+   "text": "Bounded per-service prompts limit attention dilution, and the integration pass gets clean, structured inputs."
+  },
+  {
+   "id": "milind:Q277",
+   "action": "set_option",
+   "match": "the senior s design is",
+   "text": "The senior's design is cheaper, because splitting the work consumes fewer tokens across the entire audit overall."
+  },
+  {
+   "id": "milind:Q277",
+   "action": "set_option",
+   "match": "the senior s design runs",
+   "text": "The senior's design runs faster, because each smaller per-service prompt finishes sooner and they run in parallel."
+  },
+  {
+   "id": "milind:Q277",
+   "action": "set_option",
+   "match": "the single prompt",
+   "text": "A single prompt cannot detect cross-service violations at all, so the senior's design is the only workable option."
+  },
+  {
+   "id": "milind:Q278",
+   "action": "set_option",
+   "match": "the agent has",
+   "text": "The agent hasn't produced any intermediate findings yet, so there is nothing worth carrying forward."
+  },
+  {
+   "id": "milind:Q278",
+   "action": "set_option",
+   "match": "the session name",
+   "text": "The session name was never recorded, so `--resume` can no longer find the session to reload it."
+  },
+  {
+   "id": "milind:Q278",
+   "action": "set_option",
+   "match": "the context window",
+   "text": "The context is nearly full, so resuming leaves little room, while a fresh summarized session reclaims it."
+  },
+  {
+   "id": "milind:Q278",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "The agent must switch to a different model version, and switching models mid-session requires a new session."
+  },
+  {
+   "id": "milind:Q279",
+   "action": "set_option",
+   "match": "sequential prompts are",
+   "text": "Sequential prompts are more accurate than a combined prompt for any task, whatever its structure or size."
+  },
+  {
+   "id": "milind:Q279",
+   "action": "set_option",
+   "match": "sequential execution is",
+   "text": "Sequential execution is required whenever the final task depends on the output of all prior tasks."
+  },
+  {
+   "id": "milind:Q279",
+   "action": "set_option",
+   "match": "the synthesis prompt",
+   "text": "The synthesis prompt would grow too long if it also ran all five analyses, so splitting is mainly a token-budget fix."
+  },
+  {
+   "id": "milind:Q279",
+   "action": "set_option",
+   "match": "the five sub",
+   "text": "The five sub-tasks span distinct domains; separate prompts stop findings blurring and give each full attention."
+  },
+  {
+   "id": "milind:Q280",
+   "action": "set_option",
+   "match": "resume market analysis q3 and conduct",
+   "text": "Resume `market-analysis-q3` and explore there; if it proves irrelevant, manually delete those turns from the history."
+  },
+  {
+   "id": "milind:Q280",
+   "action": "set_option",
+   "match": "start a completely",
+   "text": "Start a brand-new unnamed session for the speculative work, giving up access to yesterday's context entirely."
+  },
+  {
+   "id": "milind:Q280",
+   "action": "set_option",
+   "match": "use fork_session from",
+   "text": "Fork `market-analysis-q3`, explore in the fork, and carry findings back to the main session only if useful."
+  },
+  {
+   "id": "milind:Q280",
+   "action": "set_option",
+   "match": "resume market analysis q3 and use",
+   "text": "Resume `market-analysis-q3` with a \"sandbox mode\" flag that isolates the speculative turns from the rest."
+  },
+  {
+   "id": "milind:Q281",
+   "action": "set_option",
+   "match": "each phase requires",
+   "text": "Each phase needs a different reasoning mode (inventory, brainstorm, rank, plan); chaining keeps them from interfering."
+  },
+  {
+   "id": "milind:Q281",
+   "action": "set_option",
+   "match": "the single prompt",
+   "text": "One prompt would exceed the model's maximum output token limit, so four prompts are a technical necessity."
+  },
+  {
+   "id": "milind:Q281",
+   "action": "set_option",
+   "match": "sequential prompts allow",
+   "text": "Sequential prompts allow human review at each phase boundary, which the compliance framework requires."
+  },
+  {
+   "id": "milind:Q281",
+   "action": "set_option",
+   "match": "four prompts cost",
+   "text": "Four prompts cost less than one large prompt, because API billing is per request rather than per token."
+  },
+  {
+   "id": "milind:Q287",
+   "action": "set_option",
+   "match": "add a log",
+   "text": "Add an instruction to the agent's system prompt telling it to log every command before running it."
+  },
+  {
+   "id": "milind:Q287",
+   "action": "set_option",
+   "match": "after each session",
+   "text": "After each session ends, export the session transcript and extract every Bash command into the audit log."
+  },
+  {
+   "id": "milind:Q287",
+   "action": "set_option",
+   "match": "wrap every tool",
+   "text": "Route every tool call through a dedicated logging subagent that records the call's inputs and outputs."
+  },
+  {
+   "id": "milind:Q287",
+   "action": "set_option",
+   "match": "configure a pre",
+   "text": "Configure a pre-tool-call hook that writes each Bash command to the audit log, then lets it proceed."
+  },
+  {
+   "id": "milind:Q289",
+   "action": "set_option",
+   "match": "have the second engineer resume",
+   "text": "Have the second engineer resume `migration-phase-1` directly and continue from where it left off two weeks ago."
+  },
+  {
+   "id": "milind:Q289",
+   "action": "set_option",
+   "match": "have the second engineer start",
+   "text": "Have the second engineer start a fresh session and re-explain all of the phase 1 context from memory as needed."
+  },
+  {
+   "id": "milind:Q289",
+   "action": "set_option",
+   "match": "fork migration phase",
+   "text": "Fork `migration-phase-1` into a new session, giving full baseline context while the original stays intact."
+  },
+  {
+   "id": "milind:Q289",
+   "action": "set_option",
+   "match": "generate a structured",
+   "text": "Summarize phase 1's key decisions and caveats and inject them into the engineer's fresh session."
+  },
+  {
+   "id": "milind:Q290",
+   "action": "set_option",
+   "match": "a single prompt cannot",
+   "text": "A single prompt cannot hold instructions for five different tasks; the model will only carry out the very last of them."
+  },
+  {
+   "id": "milind:Q290",
+   "action": "set_option",
+   "match": "a single prompt would",
+   "text": "A single prompt with all five phases would exceed the model's context window for any non-trivial research topic."
+  },
+  {
+   "id": "milind:Q290",
+   "action": "set_option",
+   "match": "separate prompts enable",
+   "text": "Separate prompts allow all five phases to run in parallel at the same time, which reduces the total latency."
+  },
+  {
+   "id": "milind:Q290",
+   "action": "set_option",
+   "match": "separate prompts allow each",
+   "text": "Each phase gets full attention instead of competing with four others, and strong intermediate outputs aid synthesis."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_option",
+   "match": "configure a pre",
+   "text": "Configure a pre-tool-call hook that blocks any Write or Edit call targeting a path outside `/var/app/data/`."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_option",
+   "match": "grant the agent",
+   "text": "Restrict the agent's OS-level file permissions to `/var/app/data/` so that any other write fails at the OS layer."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_option",
+   "match": "use a post",
+   "text": "Use a post-tool-call hook that detects writes outside `/var/app/data/` after they happen and reverts them."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add an instruction to the system prompt: \"Only ever edit files under /var/app/data/ and nowhere else.\""
+  },
+  {
+   "id": "milind:Q296",
+   "action": "set_option",
+   "match": "single prompt approach",
+   "text": "Use a single prompt for all 500 pages, with explicit instructions to stay equally thorough from the first page to the last."
+  },
+  {
+   "id": "milind:Q296",
+   "action": "set_option",
+   "match": "randomly sample 50",
+   "text": "Randomly sample 50 pages, run a per-page analysis on each, and extrapolate those results to the full 500-page document."
+  },
+  {
+   "id": "milind:Q296",
+   "action": "set_option",
+   "match": "per section local",
+   "text": "Per-section prompts that extract obligations, then one integration prompt that dedupes, weighs impact, and ranks."
+  },
+  {
+   "id": "milind:Q296",
+   "action": "set_option",
+   "match": "a single extraction",
+   "text": "One extraction prompt over the whole document, then four separate prompts for ranking, impact, deduplication, and formatting."
+  },
+  {
+   "id": "milind:Q297",
+   "action": "set_option",
+   "match": "continue in the",
+   "text": "Continue in the current session, since the remaining 15% of headroom is enough for two more days of planning."
+  },
+  {
+   "id": "milind:Q297",
+   "action": "set_option",
+   "match": "start a fresh",
+   "text": "Start a fresh session right away, discarding all day 1–3 context to get a fully clean slate."
+  },
+  {
+   "id": "milind:Q297",
+   "action": "set_option",
+   "match": "generate a structured",
+   "text": "Summarize days 1–3 decisions and pending work, then start a fresh session with that summary to regain headroom."
+  },
+  {
+   "id": "milind:Q297",
+   "action": "set_option",
+   "match": "fork the current",
+   "text": "Fork the current session as a backup, then keep working in the original session until it reaches 100%."
+  },
+  {
+   "id": "milind:Q298",
+   "action": "set_option",
+   "match": "agentic loops are",
+   "text": "Agentic loops run slower than sequential pipelines, so the workflow would breach its SLA requirements."
+  },
+  {
+   "id": "milind:Q298",
+   "action": "set_option",
+   "match": "the approval notification",
+   "text": "The approval notification might fire before the agent outputs its reasoning, leaving a gap in the audit trail."
+  },
+  {
+   "id": "milind:Q298",
+   "action": "set_option",
+   "match": "the dynamic decision",
+   "text": "Dynamic step selection could let the agent skip fraud screening or underwrite before the credit check completes."
+  },
+  {
+   "id": "milind:Q298",
+   "action": "set_option",
+   "match": "agentic loops do",
+   "text": "Agentic loops do not support tool calls at all, so the credit check and fraud screening could never actually run."
+  },
+  {
+   "id": "milind:Q301",
+   "action": "set_option",
+   "match": "resume the named",
+   "text": "Resume the named session tomorrow as-is, since the remaining 40% of headroom should cover one more day of debugging."
+  },
+  {
+   "id": "milind:Q301",
+   "action": "set_option",
+   "match": "fork the session",
+   "text": "Fork the session tonight before closing so a backup exists, then resume the original named session tomorrow morning."
+  },
+  {
+   "id": "milind:Q301",
+   "action": "set_option",
+   "match": "tonight have the",
+   "text": "Tonight, have the agent summarize hypotheses, evidence, and suspects; start tomorrow's fresh session with it."
+  },
+  {
+   "id": "milind:Q305",
+   "action": "set_option",
+   "match": "the single pass will",
+   "text": "A single pass would run far too long and hit a request timeout well before it gets through the full 1,000-page manual."
+  },
+  {
+   "id": "milind:Q305",
+   "action": "set_option",
+   "match": "processing 1 000",
+   "text": "One huge context dilutes attention, so tables and diagrams on later pages get shallower treatment than early ones."
+  },
+  {
+   "id": "milind:Q305",
+   "action": "set_option",
+   "match": "the single pass",
+   "text": "A single-pass approach cannot produce structured JSON output for the table data it extracts from the pages."
+  },
+  {
+   "id": "milind:Q306",
+   "action": "set_option",
+   "match": "run both agents",
+   "text": "Run both agents one after another in the same session: Agent A explores first, then Agent B continues."
+  },
+  {
+   "id": "milind:Q306",
+   "action": "set_option",
+   "match": "fork the shared",
+   "text": "Fork the design session twice, one branch per agent, then synthesize in a new session fed summaries of both forks."
+  },
+  {
+   "id": "milind:Q306",
+   "action": "set_option",
+   "match": "have both agents",
+   "text": "Have both agents write their findings to a shared file, then start a new session that reads that file."
+  },
+  {
+   "id": "milind:Q306",
+   "action": "set_option",
+   "match": "have agent a",
+   "text": "Have Agent A resume the design session, finish its exploration, then hand the session to Agent B."
+  },
+  {
+   "id": "milind:Q307",
+   "action": "set_option",
+   "match": "the agentic loop cannot",
+   "text": "An agentic loop cannot call external tools like git and npm, which makes it unsuitable for release automation."
+  },
+  {
+   "id": "milind:Q307",
+   "action": "set_option",
+   "match": "the dynamic decision",
+   "text": "The model could judge a test failure non-critical and proceed to publish, breaking the all-tests-pass rule."
+  },
+  {
+   "id": "milind:Q307",
+   "action": "set_option",
+   "match": "the agentic loop",
+   "text": "The loop would run each step several times through its retry logic, producing duplicate changelog entries."
+  },
+  {
+   "id": "milind:Q307",
+   "action": "set_option",
+   "match": "agentic loops do",
+   "text": "Agentic loops do not support sequential execution, so all five steps would end up running in parallel."
+  },
+  {
+   "id": "milind:Q308",
+   "action": "set_option",
+   "match": "use dynamic adaptive",
+   "text": "Dynamic adaptive decomposition: survey all five areas, then let findings steer deeper dives and their order."
+  },
+  {
+   "id": "milind:Q308",
+   "action": "set_option",
+   "match": "use a fixed",
+   "text": "A fixed five-step pipeline run in sequence: financials, then legal, technology, market position, and team last."
+  },
+  {
+   "id": "milind:Q308",
+   "action": "set_option",
+   "match": "assign each area",
+   "text": "A separate subagent for each of the five areas, all running in parallel, with outputs aggregated at the very end."
+  },
+  {
+   "id": "milind:Q308",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "A single prompt listing all five areas, with instructions to flag every interdependency it notices in the output."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_option",
+   "match": "terminate after exactly",
+   "text": "Terminate after exactly five iterations, whether or not the root cause has been identified by then."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_option",
+   "match": "terminate when the agent",
+   "text": "Terminate as soon as the agent's response contains the exact text \"BUG IDENTIFIED\" anywhere in its output."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_option",
+   "match": "terminate when an",
+   "text": "Terminate once an evaluator confirms objective completion criteria, with an iteration cap as a backstop."
+  },
+  {
+   "id": "milind:Q309",
+   "action": "set_option",
+   "match": "terminate when the",
+   "text": "Terminate when the diagnostic tool returns an empty output, which signals there is nothing left to find."
+  },
+  {
+   "id": "milind:Q311",
+   "action": "set_option",
+   "match": "each night have",
+   "text": "Each night, have the agent write a rolling 30-day trend summary and inject it into the next night's fresh session."
+  },
+  {
+   "id": "milind:Q311",
+   "action": "set_option",
+   "match": "fork the previous",
+   "text": "Fork the previous night's session each morning to make a fresh copy, then continue working in that fork."
+  },
+  {
+   "id": "milind:Q311",
+   "action": "set_option",
+   "match": "run all 30",
+   "text": "Run all 30 days of analysis together in one large batch session once a month instead of nightly."
+  },
+  {
+   "id": "milind:Q311",
+   "action": "set_option",
+   "match": "resume the same",
+   "text": "Resume the same named session every night so all 30 days of analysis build up in one growing context."
+  },
+  {
+   "id": "milind:Q313",
+   "action": "set_option",
+   "match": "have the coordinator extract",
+   "text": "Have the coordinator pass only the key claims, evidence, and conclusions as a structured list, not the full text."
+  },
+  {
+   "id": "milind:Q313",
+   "action": "set_option",
+   "match": "have the coordinator truncate",
+   "text": "Have the coordinator truncate the literature review to its first 500 words before passing it on to synthesis."
+  },
+  {
+   "id": "milind:Q313",
+   "action": "set_option",
+   "match": "have the synthesis",
+   "text": "Pass the full 5,000 words unchanged and add a system prompt instruction telling the synthesis subagent to \"be concise.\""
+  },
+  {
+   "id": "milind:Q313",
+   "action": "set_option",
+   "match": "increase the synthesis",
+   "text": "Raise the synthesis subagent's output token limit so it has enough room to write a longer, fuller summary."
+  },
+  {
+   "id": "milind:Q314",
+   "action": "set_option",
+   "match": "pass 1 per",
+   "text": "Pass 1: migrate each file in its own prompt. Pass 2: one integration prompt checks imports and cross-file fit."
+  },
+  {
+   "id": "milind:Q314",
+   "action": "set_option",
+   "match": "pass 1 migrate files",
+   "text": "Pass 1: migrate files 1–400. Pass 2: migrate files 401–800. Both passes reuse the identical migration prompt and settings."
+  },
+  {
+   "id": "milind:Q314",
+   "action": "set_option",
+   "match": "pass 1 analyze",
+   "text": "Pass 1: analyze all 800 files in one prompt to list every migration issue. Pass 2: fix each listed issue one by one."
+  },
+  {
+   "id": "milind:Q314",
+   "action": "set_option",
+   "match": "pass 1 migrate all",
+   "text": "Pass 1: migrate all Python 2 syntax across the codebase. Pass 2: migrate all standard library changes in a second sweep."
+  },
+  {
+   "id": "milind:Q315",
+   "action": "set_option",
+   "match": "agentic loops cannot",
+   "text": "Agentic loops cannot integrate with hospital EHR systems, which makes them technically incompatible with clinical triage."
+  },
+  {
+   "id": "milind:Q315",
+   "action": "set_option",
+   "match": "the agentic approach",
+   "text": "The agentic approach is too slow to meet the real-time response requirements of an emergency triage workflow."
+  },
+  {
+   "id": "milind:Q315",
+   "action": "set_option",
+   "match": "agentic loops require",
+   "text": "Agentic loops need more compute than sequential pipelines, which drives up the hospital's ongoing IT costs."
+  },
+  {
+   "id": "milind:Q315",
+   "action": "set_option",
+   "match": "the flexibility of",
+   "text": "In clinical triage, the risk of skipping red-flag screening or setting acuity before vitals outweighs flexibility."
+  },
+  {
+   "id": "milind:Q316",
+   "action": "set_option",
+   "match": "the entire 40",
+   "text": "The entire 40,000-word manuscript written so far, so the agent has full continuity with every earlier scene."
+  },
+  {
+   "id": "milind:Q316",
+   "action": "set_option",
+   "match": "a structured summary",
+   "text": "A structured summary of characters, active plot threads, style notes, and the remaining outline, injected up front."
+  },
+  {
+   "id": "milind:Q316",
+   "action": "set_option",
+   "match": "only the last",
+   "text": "Only the most recent chapter, since continuity depends mainly on the events that came immediately before."
+  },
+  {
+   "id": "milind:Q316",
+   "action": "set_option",
+   "match": "a resumption of",
+   "text": "A resumption of the previous named session, since it already holds the complete writing history."
+  },
+  {
+   "id": "milind:Q317",
+   "action": "set_option",
+   "match": "implement checkpointing in",
+   "text": "Add checkpointing: persist each validated result to a durable store and resume from the last checkpoint on retry."
+  },
+  {
+   "id": "milind:Q317",
+   "action": "set_option",
+   "match": "increase the agent",
+   "text": "Increase the agent's overall timeout so it waits much longer for the database connection to recover before it fails."
+  },
+  {
+   "id": "milind:Q317",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt instruction telling the agent: \"If the database write fails, retry up to three times before giving up.\""
+  },
+  {
+   "id": "milind:Q317",
+   "action": "set_option",
+   "match": "move the database",
+   "text": "Move the database write into a post-session hook that runs after all documents finish, so failures can't interrupt the loop."
+  },
+  {
+   "id": "milind:Q32",
+   "action": "set_option",
+   "match": "return structured error",
+   "text": "Return structured error context with the failure type, the attempt, any partial results, and alternatives"
+  },
+  {
+   "id": "milind:Q32",
+   "action": "set_option",
+   "match": "silently return an",
+   "text": "Silently return an empty result set marked as successful so the coordinator can proceed straight to synthesis"
+  },
+  {
+   "id": "milind:Q32",
+   "action": "set_option",
+   "match": "immediately terminate and",
+   "text": "Terminate immediately and propagate the exception to the coordinator so the whole workflow halts"
+  },
+  {
+   "id": "milind:Q32",
+   "action": "set_option",
+   "match": "retry the tool",
+   "text": "Keep retrying the tool call automatically until it eventually succeeds, without notifying the coordinator"
+  },
+  {
+   "id": "milind:Q320",
+   "action": "set_option",
+   "match": "per form processing guarantees",
+   "text": "Per-form processing eliminates extraction errors entirely, whereas batching still lets some through."
+  },
+  {
+   "id": "milind:Q320",
+   "action": "set_option",
+   "match": "per form processing is",
+   "text": "Per-form processing is cheaper, because each prompt is shorter and uses fewer tokens overall."
+  },
+  {
+   "id": "milind:Q320",
+   "action": "set_option",
+   "match": "per form processing ensures",
+   "text": "Each form gets the model's full attention instead of competing with 99 others, avoiding attention dilution."
+  },
+  {
+   "id": "milind:Q320",
+   "action": "set_option",
+   "match": "per form processing allows",
+   "text": "Per-form processing lets each form go to a different model version, which enables A/B testing."
+  },
+  {
+   "id": "milind:Q323",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system prompt instruction: \"Do not generate paychecks until all prior steps are complete and signed off.\""
+  },
+  {
+   "id": "milind:Q323",
+   "action": "set_option",
+   "match": "a structurally enforced",
+   "text": "A structural pipeline that programmatically gates steps 4 and 5 on a confirmed-success flag from steps 1–3."
+  },
+  {
+   "id": "milind:Q323",
+   "action": "set_option",
+   "match": "an agentic loop",
+   "text": "An agentic loop with a validation sub-prompt that checks every prior step for completeness before each step runs."
+  },
+  {
+   "id": "milind:Q323",
+   "action": "set_option",
+   "match": "a manual human",
+   "text": "A manual human approval gate in front of step 4 that replaces automated enforcement for the last two steps."
+  },
+  {
+   "id": "milind:Q324",
+   "action": "set_option",
+   "match": "fixed sequential pipeline",
+   "text": "A fixed sequential pipeline of brainstorm, evaluate, eliminate, and refine, each step taking the prior output."
+  },
+  {
+   "id": "milind:Q324",
+   "action": "set_option",
+   "match": "parallel decomposition spawn",
+   "text": "Parallel decomposition: one refinement agent per design direction, all spawned right after a single brainstorm."
+  },
+  {
+   "id": "milind:Q324",
+   "action": "set_option",
+   "match": "single prompt approach",
+   "text": "A single prompt with chain-of-thought reasoning that works through all four phases internally in one pass."
+  },
+  {
+   "id": "milind:Q324",
+   "action": "set_option",
+   "match": "dynamic adaptive decomposition",
+   "text": "Dynamic adaptive decomposition: brainstorm N directions, evaluate them, and refine only the survivors."
+  },
+  {
+   "id": "milind:Q325",
+   "action": "set_option",
+   "match": "fork arch review",
+   "text": "Fork `arch-review-service-a` for the Service B review, then discard the fork and resume the original session."
+  },
+  {
+   "id": "milind:Q325",
+   "action": "set_option",
+   "match": "start a completely",
+   "text": "Start a completely new unnamed session for Service B, giving up access to any of the prior context."
+  },
+  {
+   "id": "milind:Q325",
+   "action": "set_option",
+   "match": "pause arch review",
+   "text": "Pause `arch-review-service-a`, rename it to mark it as on hold, then start a new session for Service B."
+  },
+  {
+   "id": "milind:Q325",
+   "action": "set_option",
+   "match": "continue the arch",
+   "text": "Keep using `arch-review-service-a` for both reviews; the model can keep the two reviews cleanly apart internally."
+  },
+  {
+   "id": "milind:Q326",
+   "action": "set_option",
+   "match": "tool_choice type tool",
+   "text": "`tool_choice: {\"type\": \"tool\", \"name\": \"extract_invoice\"}`, which forces every document through that tool"
+  },
+  {
+   "id": "milind:Q326",
+   "action": "set_option",
+   "match": "tool_choice auto may",
+   "text": "`tool_choice: \"auto\"`, which lets Claude decide per document whether calling an extraction tool is needed"
+  },
+  {
+   "id": "milind:Q326",
+   "action": "set_option",
+   "match": "no tool_choice setting",
+   "text": "No `tool_choice` setting at all, relying on the system prompt instructions to get each document extracted"
+  },
+  {
+   "id": "milind:Q326",
+   "action": "set_option",
+   "match": "tool_choice any forces",
+   "text": "`tool_choice: \"any\"`, which forces a call to one of the three tools and lets Claude pick the schema"
+  },
+  {
+   "id": "milind:Q327",
+   "action": "set_option",
+   "match": "search_code looking at",
+   "text": "`search_code`, since reading the existing code implementations is the fastest route to the answer"
+  },
+  {
+   "id": "milind:Q327",
+   "action": "set_option",
+   "match": "all four comprehensive",
+   "text": "All four tools at once, since a comprehensive answer requires combining results from several sources"
+  },
+  {
+   "id": "milind:Q327",
+   "action": "set_option",
+   "match": "search_internal_kb or search_docs",
+   "text": "`search_internal_kb` or `search_docs`, since internal sources hold the team's own Redis setup"
+  },
+  {
+   "id": "milind:Q327",
+   "action": "set_option",
+   "match": "search_web external sources",
+   "text": "`search_web`, since external sources have the most comprehensive and current Redis documentation"
+  },
+  {
+   "id": "milind:Q328",
+   "action": "set_option",
+   "match": "the monolithic tool",
+   "text": "The monolithic tool is going to be deprecated in future API versions, so splitting it now avoids rework"
+  },
+  {
+   "id": "milind:Q328",
+   "action": "set_option",
+   "match": "three purpose specific",
+   "text": "Purpose-specific tools with non-overlapping scopes remove selection ambiguity and reduce misrouting"
+  },
+  {
+   "id": "milind:Q328",
+   "action": "set_option",
+   "match": "more tools means",
+   "text": "More tools add more tokens to the request, and that extra context improves overall model performance"
+  },
+  {
+   "id": "milind:Q328",
+   "action": "set_option",
+   "match": "splitting tools allows",
+   "text": "Splitting the tool allows the three operations to execute in parallel, which speeds up each analysis"
+  },
+  {
+   "id": "milind:Q329",
+   "action": "set_option",
+   "match": "yes if the",
+   "text": "Yes — as long as the colleague has the same environment variables configured on their own machine"
+  },
+  {
+   "id": "milind:Q329",
+   "action": "set_option",
+   "match": "no user level servers",
+   "text": "No — user-level MCP servers are disabled by default whenever a project is shared within a team"
+  },
+  {
+   "id": "milind:Q329",
+   "action": "set_option",
+   "match": "no user level configuration",
+   "text": "No — `~/.claude.json` is personal and not in version control; the colleague only gets servers from `.mcp.json`"
+  },
+  {
+   "id": "milind:Q329",
+   "action": "set_option",
+   "match": "yes all mcp",
+   "text": "Yes — Claude Code synchronizes all configured MCP servers across team members automatically"
+  },
+  {
+   "id": "milind:Q330",
+   "action": "set_option",
+   "match": "the calculation logic",
+   "text": "The shipping calculation has a logic bug that needs to be fixed inside the tool implementation itself"
+  },
+  {
+   "id": "milind:Q330",
+   "action": "set_option",
+   "match": "the tool returned",
+   "text": "It returned a success-looking value for an error instead of `isError: true` with a clear message"
+  },
+  {
+   "id": "milind:Q330",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should have validated every numerical tool result against business rules before using it"
+  },
+  {
+   "id": "milind:Q330",
+   "action": "set_option",
+   "match": "the tool should",
+   "text": "The tool should return `null` instead of `0` for invalid destinations so the agent can tell them apart"
+  },
+  {
+   "id": "milind:Q274",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Option A is incorrect because Claude does not auto-snapshot on timeout",
+   "replace": "Option A is incorrect because a plain `claude` launch starts a new session rather than restoring the old one"
   }
  ],
  "hold": []
