@@ -2099,6 +2099,1686 @@
     "https://code.claude.com/docs/en/mcp"
    ],
    "change": "key needs allowManagedMcpServersOnly; allowlists from other scopes merge otherwise"
+  },
+  {
+   "id": "ccdvp:d1-003",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md; claude-api/shared/managed-agents-multiagent.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-005",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/agent-sdk/subagents"
+   ],
+   "change": "concurrent-subagent-limit behaviour per docs"
+  },
+  {
+   "id": "ccdvp:d1-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/agent-sdk/sessions"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-007",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md; claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-overview.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/platform-availability.md",
+    "https://code.claude.com/docs/en/headless; https://code.claude.com/docs/en/agent-sdk/sessions"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/agent-design.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/preserved-thinking-migration.md; claude-api/shared/cost-optimization.md",
+    "claude-api/shared/tool-use-concepts.md; claude-api/shared/cost-optimization.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md",
+    "claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-015",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-016",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md",
+    "claude-api/shared/managed-agents-multiagent.md",
+    "general recommendation (not product documentation)"
+   ],
+   "change": "claims trimmed to docs"
+  },
+  {
+   "id": "ccdvp:d1-017",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md",
+    "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration (local mirror claude-api/shared/managed-agents-multiagent.md, line 393)"
+   ],
+   "change": "key rationale per docs; workflow-thread exemption quoted"
+  },
+  {
+   "id": "ccdvp:d1-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md",
+    "claude-api/shared/managed-agents-overview.md; claude-api/shared/managed-agents-core.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-019",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/preserved-thinking-migration/causes.md"
+   ],
+   "change": "claims per preserved-thinking causes"
+  },
+  {
+   "id": "ccdvp:d1-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-022",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md",
+    "claude-api/shared/managed-agents-overview.md; claude-api/shared/managed-agents-core.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-023",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d1-024",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md; https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-025",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-026",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md",
+    "claude-api/shared/prompt-caching.md; claude-api/shared/model-migration.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-027",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-028",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-029",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-multiagent.md",
+    "claude-api/shared/managed-agents-multiagent.md; claude-api/shared/managed-agents-tools.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-030",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-031",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/message-threads.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-032",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-overview.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-033",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md",
+    "claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-034",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool"
+   ],
+   "change": "unsupported ZDR alternative removed"
+  },
+  {
+   "id": "ccdvp:d1-035",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md",
+    "claude-api/shared/managed-agents-memory.md; claude-api/shared/agent-design.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d1-036",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/compaction-on-demand"
+   ],
+   "change": "compaction beta/parameter updated to live docs"
+  },
+  {
+   "id": "ccdvp:d2-003",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/error-codes.md (Error Code Summary)",
+    "https://platform.claude.com/docs/en/api/rate-limits (Reaching your spend cap; Rate limits)"
+   ],
+   "change": "spend-cap 429 excluded from retry key"
+  },
+  {
+   "id": "ccdvp:d2-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (Reaching your spend cap)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/error-codes.md (529 Overloaded)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/platform-availability.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-007",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (Cache-aware ITPM)",
+    "https://platform.claude.com/docs/en/api/rate-limits (Response headers)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/cost-optimization.md (2.4 Output tokens)",
+    "https://platform.claude.com/docs/en/api/rate-limits (Cache-aware ITPM section)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/python/claude-api/batches.md (Key Facts)",
+    "https://platform.claude.com/docs/en/api/rate-limits (Message Batches API)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports (Session Management)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md (Structured Outputs)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md (Structured Outputs, Important Notes)",
+    "https://platform.claude.com/docs/en/build-with-claude/search-results"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-015",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d2-016",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d2-017",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://github.com/anthropics/anthropic-sdk-python/blob/main/src/anthropic/_base_client.py (SDK source, not product docs)"
+   ],
+   "change": "mechanism instead of header names"
+  },
+  {
+   "id": "ccdvp:d2-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/python/claude-api/README.md (Refusal Fallbacks); claude-api/shared/model-migration.md",
+    "claude-api/shared/model-migration.md (refusal stop reason)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-019",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api SKILL.md (section Claude Opus 5.5); claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5, breaking change 3)",
+    "claude-api/shared/models.md; claude-api/shared/platform-availability.md",
+    "claude-api/shared/prompt-caching.md (Invalidation hierarchy)"
+   ],
+   "change": "thinking-block readability per docs"
+  },
+  {
+   "id": "ccdvp:d2-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (Ramp limits)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (Setting lower limits for workspaces; About rate limits)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-022",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (Setting your own spend limit); https://platform.claude.com/docs/en/api/errors"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-023",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits (footnote 2)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-024",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-025",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/error-codes.md (preserved thinking / history-editing check)",
+    "claude-api/shared/tool-use-concepts.md (Mid-conversation tool changes)"
+   ],
+   "change": "beta headers named"
+  },
+  {
+   "id": "ccdvp:d2-026",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md (Versioning; Agent Endpoints)",
+    "claude-api/shared/managed-agents-core.md; claude-api/shared/managed-agents-api-reference.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-027",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md; claude-api/shared/latency-optimization/levers.md (Model selection)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-028",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d2-029",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md",
+    "https://platform.claude.com/docs/en/build-with-claude/search-results",
+    "https://platform.claude.com/docs/en/build-with-claude/search-results (Limitations)"
+   ],
+   "change": "distractor rationale per docs"
+  },
+  {
+   "id": "ccdvp:d2-030",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/error-codes.md (Model-specific 400s)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-031",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/python/claude-api/batches.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-032",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/model-migration.md",
+    "claude-api/shared/model-migration.md (Server-side fallbacks, key semantics)"
+   ],
+   "change": "distractor rationale per docs"
+  },
+  {
+   "id": "ccdvp:d2-033",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (pattern 2)",
+    "claude-api/shared/platform-availability.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-034",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/api/rate-limits"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-035",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/python/claude-api/batches.md; claude-api/shared/cost-optimization.md (2.5)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-036",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/admin-api.md (Usage and Cost Analytics)",
+    "https://platform.claude.com/docs/en/api/rate-limits"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-037",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md (MCP Servers; Vaults, line 'Keys are immutable')"
+   ],
+   "change": "credential URL immutable: archive and recreate"
+  },
+  {
+   "id": "ccdvp:d2-038",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5, breaking change 2)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-039",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/error-codes.md",
+    "claude-api/shared/prompt-caching.md (Silent invalidators)",
+    "https://platform.claude.com/docs/en/api/errors (Request ID)"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-040",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d2-041",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/search-results"
+   ]
+  },
+  {
+   "id": "ccdvp:d2-042",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/search-results"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-003",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/platform-availability.md",
+    "claude-api shared/prompt-caching.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-006",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ],
+   "change": "stem giveaway removed"
+  },
+  {
+   "id": "ccdvp:d3-007",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/error-codes.md",
+    "claude-api shared/model-migration.md"
+   ],
+   "change": "\"HTTP 200\" -> successful response"
+  },
+  {
+   "id": "ccdvp:d3-008",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api SKILL.md (Client config); claude-api shared/error-codes.md",
+    "claude-api shared/error-codes.md"
+   ],
+   "change": "source added"
+  },
+  {
+   "id": "ccdvp:d3-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d3-010",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/monitoring-usage"
+   ],
+   "change": "managed-settings OTel precedence made precise"
+  },
+  {
+   "id": "ccdvp:d3-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/api-version-migration.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/model-migration.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-015",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/admin-api.md",
+    "claude-api shared/opentelemetry.md"
+   ],
+   "change": "source added"
+  },
+  {
+   "id": "ccdvp:d3-016",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-017",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/prompt-caching.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/model-migration.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-019",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ],
+   "change": "source added"
+  },
+  {
+   "id": "ccdvp:d3-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/error-codes.md",
+    "claude-api shared/model-migration.md",
+    "claude-api shared/prompt-audit.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-022",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/opentelemetry.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d3-023",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/admin-api.md"
+   ],
+   "change": "rate-limit scope per docs"
+  },
+  {
+   "id": "ccdvp:d3-024",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d4-003",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/error-codes.md",
+    "claude-api shared/prompt-caching.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-004",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/model-migration.md",
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
+   ],
+   "change": "stem no longer names the cause"
+  },
+  {
+   "id": "ccdvp:d4-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/model-migration.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-007",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d4-008",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api SKILL.md (Client config); claude-api shared/error-codes.md",
+    "claude-api shared/error-codes.md"
+   ],
+   "change": "stem giveaway removed"
+  },
+  {
+   "id": "ccdvp:d4-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d4-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/error-codes.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d4-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-013",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/prompt-caching.md"
+   ],
+   "change": "stem no longer names the cause"
+  },
+  {
+   "id": "ccdvp:d4-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/model-migration.md",
+    "claude-api shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-015",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/prompt-caching.md"
+   ],
+   "change": "no dependency on cross-model thinking-block readability"
+  },
+  {
+   "id": "ccdvp:d4-016",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/model-migration.md"
+   ],
+   "change": "unverified 400 removed"
+  },
+  {
+   "id": "ccdvp:d4-017",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api shared/managed-agents-core.md",
+    "claude-api shared/managed-agents-events.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d4-018",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/managed-agents-core.md",
+    "claude-api shared/managed-agents-events.md"
+   ],
+   "change": "unverified system-prompt-after-compaction claim removed"
+  },
+  {
+   "id": "ccdvp:d4-019",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [],
+   "change": "option lengths balanced"
+  },
+  {
+   "id": "ccdvp:d4-020",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api shared/admin-api.md",
+    "claude-api shared/managed-agents-core.md",
+    "claude-api shared/managed-agents-events.md"
+   ],
+   "change": "option lengths balanced"
+  },
+  {
+   "id": "ccdvp:d4-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-003",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/api-version-migration.md (1. Sampling parameters are removed)",
+    "claude-api/shared/models.md (Claude Sonnet 5)"
+   ],
+   "change": "unsupported formula claim removed"
+  },
+  {
+   "id": "ccdvp:d5-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md (When the grader is an LLM judge)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/api-version-migration.md (3. A text block with citations in a user message)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-007",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md",
+    "claude-api/shared/models.md (Claude Opus 5.5); claude-api/shared/tool-use-concepts.md",
+    "claude-api/shared/tool-use-concepts.md (Structured outputs)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/build-eval.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md (When the grader is an LLM judge)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md (section 6)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/tool-use-concepts.md (Structured outputs)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md",
+    "claude-api/shared/model-migration.md (Handle the refusal stop reason)",
+    "claude-api/shared/models.md (Claude Opus 5, Claude Opus 5.5)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-015",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [],
+   "change": "same review budget added to stem"
+  },
+  {
+   "id": "ccdvp:d5-016",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/evals/eval-hillclimb.md; claude-api/shared/evals/eval-audit.md",
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Web search & web fetch settings)",
+    "https://platform.claude.com/docs/en/managed-agents/environments (Networking)"
+   ],
+   "change": "source corrected"
+  },
+  {
+   "id": "ccdvp:d5-017",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md (When the grader is an LLM judge)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Claude Opus 5: New API features)",
+    "claude-api/shared/model-migration.md (Reading the response / Sticky routing)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-019",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d5-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-outcomes.md",
+    "claude-api/shared/managed-agents-outcomes.md (Outcome-specific events)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md (section 6)"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-022",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-023",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/evals/eval-audit.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d5-024",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/opentelemetry.md",
+    "claude-api/shared/opentelemetry.md (Content modes and content limits)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-003",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api SKILL.md (platforms); claude-api/shared/claude-platform-on-aws.md ('Bedrock is partner-operated (AWS runs the service ...)')",
+    "claude-api/shared/admin-api.md (Usage and Cost Analytics)"
+   ],
+   "change": "key rests on partner-operated billing"
+  },
+  {
+   "id": "ccdvp:d6-004",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/prompt-caching.md",
+    "https://platform.claude.com/docs/en/build-with-claude/cache-diagnostics"
+   ],
+   "change": "availability claim corrected"
+  },
+  {
+   "id": "ccdvp:d6-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/latency-optimization/levers.md (Agent-loop efficiency); claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-006",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/cost-optimization.md (2.4)",
+    "claude-api/shared/cost-optimization.md (2.6)"
+   ],
+   "change": "unsupported figure removed"
+  },
+  {
+   "id": "ccdvp:d6-007",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md (Choosing the TTL)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md (API reference)",
+    "claude-api/shared/prompt-caching.md (Concurrent-request timing)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md (Verifying cache hits; Economics)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/prompt-caching.md",
+    "claude-api/shared/prompt-caching.md (API reference)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/cost-optimization.md (2.7)",
+    "claude-api/shared/prompt-caching.md (Invalidation hierarchy)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/admin-api.md (Usage and Cost Analytics, Freshness)",
+    "https://platform.claude.com/docs/en/api/rate-limits (Setting your own spend limit; Setting lower limits for workspaces)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5)",
+    "claude-api/shared/prompt-caching.md (Pre-warming the cache)"
+   ]
+  },
+  {
+   "id": "ccdvp:d6-015",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/prompt-caching.md (20-block lookback window)",
+    "claude-api/shared/prompt-caching.md (Invalidation hierarchy)"
+   ],
+   "change": "mechanism instead of the number"
+  },
+  {
+   "id": "ccdvp:d6-016",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/python/claude-api/batches.md",
+    "https://platform.claude.com/docs/en/build-with-claude/batch-processing (Using prompt caching with Message Batches); claude-api/shared/cost-optimization.md (2.5)"
+   ],
+   "change": "stacking discounts sourced"
+  },
+  {
+   "id": "ccdvp:d6-017",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api SKILL.md (Fast Mode); https://platform.claude.com/docs/en/build-with-claude/fast-mode",
+    "claude-api SKILL.md (Task Budgets; Common Pitfalls)",
+    "claude-api SKILL.md (Thinking & Effort); shared/agent-design.md"
+   ],
+   "change": "rewritten (near-duplicate of d1-026): per-route effort after eval"
+  },
+  {
+   "id": "ccdvp:d6-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/latency-optimization.md (What a wait is made of)",
+    "claude-api/shared/model-migration.md (Migrating to Claude Opus 5.5, breaking change 1)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-003",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/hooks (exit code table)",
+    "https://code.claude.com/docs/en/permissions (How permissions interact with sandboxing)",
+    "https://code.claude.com/docs/en/permissions (What a Bash rule doesn't match)"
+   ],
+   "change": "PostToolUse semantics precise"
+  },
+  {
+   "id": "ccdvp:d7-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-005",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Web search & web fetch settings)",
+    "https://platform.claude.com/docs/en/managed-agents/environments (Networking)"
+   ],
+   "change": "source corrected"
+  },
+  {
+   "id": "ccdvp:d7-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md",
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Credentials and the sandbox)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-007",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Permission Policies)",
+    "https://platform.claude.com/docs/en/managed-agents/environments (Networking)"
+   ],
+   "change": "stem rules out bash network path"
+  },
+  {
+   "id": "ccdvp:d7-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://genai.owasp.org/llm-top-10/"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-009",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Permission Policies)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/model-migration.md (Claude Opus 5: New API features)",
+    "claude-api/shared/model-migration.md (Handle the refusal stop reason)",
+    "claude-api/shared/tool-use-concepts.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-011",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [],
+   "change": "stem matches keys"
+  },
+  {
+   "id": "ccdvp:d7-012",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/hooks",
+    "https://code.claude.com/docs/en/managed-mcp"
+   ],
+   "change": "PostToolUse semantics precise"
+  },
+  {
+   "id": "ccdvp:d7-013",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/admin-api.md",
+    "claude-api/shared/admin-api.md (usage and cost reports)"
+   ],
+   "change": "usage filter (not grouping) per docs"
+  },
+  {
+   "id": "ccdvp:d7-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-environments.md",
+    "claude-api/shared/managed-agents-environments.md (Networking)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-015",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d7-016",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-memory.md",
+    "claude-api/shared/managed-agents-tools.md (Credentials and the sandbox)"
+   ],
+   "change": "source corrected, token refresh added"
+  },
+  {
+   "id": "ccdvp:d7-017",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/hooks",
+    "https://code.claude.com/docs/en/permissions",
+    "https://code.claude.com/docs/en/settings (Settings precedence)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-018",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (evaluated_permission and evaluation)",
+    "claude-api/shared/opentelemetry.md"
+   ],
+   "change": "distractor rationale made supportable"
+  },
+  {
+   "id": "ccdvp:d7-019",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/agent-design.md (Bash vs. dedicated tools)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d7-021",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+    "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+   ],
+   "change": "stem limited to GOVERN gaps; NIST source"
+  },
+  {
+   "id": "ccdvp:d7-022",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Credentials and the sandbox)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-023",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/hooks",
+    "https://code.claude.com/docs/en/permissions",
+    "https://code.claude.com/docs/en/settings; https://code.claude.com/docs/en/permissions",
+    "unverified (Stop hook semantics from memory)"
+   ]
+  },
+  {
+   "id": "ccdvp:d7-024",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md; claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-tools.md (Vaults)"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-003",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/worktrees"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-004",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/monitoring-usage",
+    "https://code.claude.com/docs/en/worktrees"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-005",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d8-006",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/github-actions"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-007",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "claude-api/shared/managed-agents-core.md; claude-api/shared/managed-agents-tools.md",
+    "claude-api/shared/managed-agents-scheduled-deployments.md",
+    "https://platform.claude.com/docs/en/managed-agents/scheduled-deployments (local mirror claude-api/shared/managed-agents-scheduled-deployments.md, line 96)"
+   ],
+   "change": "key describes webhook handler; doc quote added"
+  },
+  {
+   "id": "ccdvp:d8-008",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/monitoring-usage"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-009",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/permissions",
+    "https://code.claude.com/docs/en/settings-reference",
+    "https://code.claude.com/docs/en/skills (Pre-approve tools for a skill)"
+   ],
+   "change": "allowed-tools scope corrected"
+  },
+  {
+   "id": "ccdvp:d8-010",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d8-011",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/agent-sdk/subagents"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-012",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/permissions"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-013",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-scheduled-deployments.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-014",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "claude-api/shared/managed-agents-scheduled-deployments.md"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-015",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/headless",
+    "https://code.claude.com/docs/en/headless; https://code.claude.com/docs/en/permissions"
+   ],
+   "change": "settings scope corrected"
+  },
+  {
+   "id": "ccdvp:d8-016",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/managed-mcp"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-017",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [],
+   "change": "methodology item, no product claim"
+  },
+  {
+   "id": "ccdvp:d8-018",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/github-actions"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-019",
+   "date": "2026-11-25",
+   "verdict": "fixed",
+   "sources": [
+    "https://code.claude.com/docs/en/headless",
+    "https://code.claude.com/docs/en/headless; https://code.claude.com/docs/en/agent-sdk/sessions"
+   ],
+   "change": "rewritten: mechanism instead of env-var trivia"
+  },
+  {
+   "id": "ccdvp:d8-020",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/llm-gateway"
+   ]
+  },
+  {
+   "id": "ccdvp:d8-021",
+   "date": "2026-11-25",
+   "verdict": "ok",
+   "sources": [
+    "https://code.claude.com/docs/en/headless",
+    "https://code.claude.com/docs/en/headless; https://code.claude.com/docs/en/mcp"
+   ]
   }
  ]
 }
