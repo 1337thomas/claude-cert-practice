@@ -12896,6 +12896,1188 @@
    "text": "The Streaming API, so that the review output appears in the CI job log in real time"
   },
   {
+   "id": "milind:Q1094",
+   "action": "set_option",
+   "match": "the coordinator should partition",
+   "text": "Give each agent a distinct dimension of the scope, such as pricing or market share"
+  },
+  {
+   "id": "milind:Q1094",
+   "action": "set_option",
+   "match": "run 3 agents instead",
+   "text": "Run 3 agents instead of 8 so that fewer overlapping result sets come back"
+  },
+  {
+   "id": "milind:Q1094",
+   "action": "set_option",
+   "match": "have agents search different",
+   "text": "Have the agents split the work by time period only, each covering a few years"
+  },
+  {
+   "id": "milind:Q1094",
+   "action": "set_option",
+   "match": "use a single comprehensive",
+   "text": "Use one comprehensive agent instead of several, so no results can overlap"
+  },
+  {
+   "id": "milind:Q1095",
+   "action": "set_option",
+   "match": "check the posttooluse hook",
+   "text": "Inspect the PostToolUse hook for stripping emotional content before the analysis"
+  },
+  {
+   "id": "milind:Q1095",
+   "action": "set_option",
+   "match": "switch to a different",
+   "text": "Switch to a different sentiment analysis model with stronger negative detection"
+  },
+  {
+   "id": "milind:Q1095",
+   "action": "set_option",
+   "match": "increase the sentiment tool",
+   "text": "Increase the sentiment tool's context window so full messages fit in one call"
+  },
+  {
+   "id": "milind:Q1095",
+   "action": "set_option",
+   "match": "disable the posttooluse hook",
+   "text": "Disable the PostToolUse hook entirely and rerun the sentiment analysis without it"
+  },
+  {
+   "id": "milind:Q1096",
+   "action": "set_option",
+   "match": "the model fabricates a",
+   "text": "The model fabricates a plausible number to satisfy the required numeric field"
+  },
+  {
+   "id": "milind:Q1096",
+   "action": "set_option",
+   "match": "the model returns an error",
+   "text": "The model returns an error for these documents instead of extracting any fields"
+  },
+  {
+   "id": "milind:Q1096",
+   "action": "set_option",
+   "match": "the model skips these",
+   "text": "The model skips these documents and returns no extraction result for them"
+  },
+  {
+   "id": "milind:Q1096",
+   "action": "set_option",
+   "match": "the model returns 0",
+   "text": "The model returns 0 as a placeholder value for the unresolved contract amount"
+  },
+  {
+   "id": "milind:Q1097",
+   "action": "set_option",
+   "match": "split the project into",
+   "text": "Split the project into separate repositories, one each for backend and frontend"
+  },
+  {
+   "id": "milind:Q1097",
+   "action": "set_option",
+   "match": "create path specific rules",
+   "text": "Add `.claude/rules/` files whose `paths` globs scope backend and frontend rules"
+  },
+  {
+   "id": "milind:Q1097",
+   "action": "set_option",
+   "match": "add conditional logic inside",
+   "text": "Add conditional if/else blocks inside CLAUDE.md that check the edited file's type"
+  },
+  {
+   "id": "milind:Q1097",
+   "action": "set_option",
+   "match": "create separate environment variables",
+   "text": "Set separate environment variables that switch between the two convention sets"
+  },
+  {
+   "id": "milind:Q1098",
+   "action": "set_option",
+   "match": "accept the 78",
+   "text": "Accept the 78% accuracy and keep the routing threshold at a score of 0.85"
+  },
+  {
+   "id": "milind:Q1098",
+   "action": "set_option",
+   "match": "add more training examples",
+   "text": "Add more training examples so that the model's confidence becomes calibrated"
+  },
+  {
+   "id": "milind:Q1098",
+   "action": "set_option",
+   "match": "use a different extraction",
+   "text": "Use a different extraction model whose confidence scores are better calibrated"
+  },
+  {
+   "id": "milind:Q1098",
+   "action": "set_option",
+   "match": "the model s confidence scores",
+   "text": "Scores are miscalibrated; derive the threshold from labeled data, not the raw score"
+  },
+  {
+   "id": "milind:Q1099",
+   "action": "set_option",
+   "match": "retry immediately 5 times",
+   "text": "Retry immediately up to 5 times with exponential backoff between the attempts"
+  },
+  {
+   "id": "milind:Q1099",
+   "action": "set_option",
+   "match": "escalate to human support",
+   "text": "Escalate to human support, since the service is currently unavailable"
+  },
+  {
+   "id": "milind:Q1099",
+   "action": "set_option",
+   "match": "try a different tool",
+   "text": "Fall back to a different tool that can provide the same data right away"
+  },
+  {
+   "id": "milind:Q1099",
+   "action": "set_option",
+   "match": "wait 30 seconds then",
+   "text": "Wait 30 seconds, then retry the same call once, as the error metadata advises"
+  },
+  {
+   "id": "milind:Q110",
+   "action": "set_option",
+   "match": "to comply with copyright",
+   "text": "To comply with copyright requirements that differ between content types"
+  },
+  {
+   "id": "milind:Q110",
+   "action": "set_option",
+   "match": "to enable the synthesis",
+   "text": "So synthesis can weight credibility and pick citation formats"
+  },
+  {
+   "id": "milind:Q110",
+   "action": "set_option",
+   "match": "to enable billing tracking",
+   "text": "To enable billing tracking per data source for the search provider costs"
+  },
+  {
+   "id": "milind:Q110",
+   "action": "set_option",
+   "match": "to route outputs to",
+   "text": "To route outputs to different downstream processing queues by type"
+  },
+  {
+   "id": "milind:Q1100",
+   "action": "set_option",
+   "match": "reduce review frequency",
+   "text": "Reduce the review frequency from every commit to a weekly run"
+  },
+  {
+   "id": "milind:Q1100",
+   "action": "set_option",
+   "match": "mark the 15 issues",
+   "text": "Mark the 15 issues as \"won't fix\" in the review output schema"
+  },
+  {
+   "id": "milind:Q1100",
+   "action": "set_option",
+   "match": "include prior review findings",
+   "text": "Feed prior findings in and report only new or unresolved issues"
+  },
+  {
+   "id": "milind:Q1100",
+   "action": "set_option",
+   "match": "disable the ci review",
+   "text": "Disable the CI review step entirely until all 15 issues are fixed"
+  },
+  {
+   "id": "milind:Q1101",
+   "action": "set_option",
+   "match": "execute only the first",
+   "text": "Execute only the first tool call, return to Claude, then execute the second"
+  },
+  {
+   "id": "milind:Q1101",
+   "action": "set_option",
+   "match": "execute them sequentially",
+   "text": "Execute both sequentially and append only the final result to the history"
+  },
+  {
+   "id": "milind:Q1101",
+   "action": "set_option",
+   "match": "execute only get_customer",
+   "text": "Execute only `get_customer`, since a customer lookup must precede an order lookup"
+  },
+  {
+   "id": "milind:Q1101",
+   "action": "set_option",
+   "match": "execute both tool calls",
+   "text": "Run both, return each result with its `tool_use_id`, then call Claude again"
+  },
+  {
+   "id": "milind:Q1102",
+   "action": "set_option",
+   "match": "project level applies only",
+   "text": "Project-level applies only to CI/CD runs; user-level to interactive sessions"
+  },
+  {
+   "id": "milind:Q1102",
+   "action": "set_option",
+   "match": "they are identical in",
+   "text": "They are identical in scope, but the project-level file takes priority on conflicts"
+  },
+  {
+   "id": "milind:Q1102",
+   "action": "set_option",
+   "match": "project level claude md",
+   "text": "Project-level is committed and shared with the team; `~/.claude/CLAUDE.md` is personal"
+  },
+  {
+   "id": "milind:Q1103",
+   "action": "set_option",
+   "match": "whether the schema is",
+   "text": "Whether the extraction schema is correctly defined for the sample field"
+  },
+  {
+   "id": "milind:Q1103",
+   "action": "set_option",
+   "match": "whether the papers are",
+   "text": "Whether the papers are all written in a language the model supports well"
+  },
+  {
+   "id": "milind:Q1103",
+   "action": "set_option",
+   "match": "whether those 30",
+   "text": "Whether those papers genuinely lack a sample size, making null correct"
+  },
+  {
+   "id": "milind:Q1103",
+   "action": "set_option",
+   "match": "whether the model version",
+   "text": "Whether the model version in use supports null values in its output"
+  },
+  {
+   "id": "milind:Q1105",
+   "action": "set_option",
+   "match": "any for support agents",
+   "text": "`\"any\"` for support agents and `\"auto\"` for research agents, as role-based settings"
+  },
+  {
+   "id": "milind:Q1105",
+   "action": "set_option",
+   "match": "any always produces",
+   "text": "`\"any\"` throughout, since it generally gives better support results"
+  },
+  {
+   "id": "milind:Q1105",
+   "action": "set_option",
+   "match": "they are equivalent for",
+   "text": "Either one, since the two behave identically for support agent use cases"
+  },
+  {
+   "id": "milind:Q1105",
+   "action": "set_option",
+   "match": "use any when every",
+   "text": "`\"any\"` when every turn must call a tool; `\"auto\"` when Claude may decide"
+  },
+  {
+   "id": "milind:Q1106",
+   "action": "set_option",
+   "match": "give agent 3 a",
+   "text": "Give Agent 3's findings a higher \"priority\" field in their metadata"
+  },
+  {
+   "id": "milind:Q1106",
+   "action": "set_option",
+   "match": "have agent 3 submit",
+   "text": "Have Agent 3 send its findings straight to synthesis, bypassing the coordinator"
+  },
+  {
+   "id": "milind:Q1106",
+   "action": "set_option",
+   "match": "run synthesis with only",
+   "text": "Run synthesis on Agent 3's findings alone first, then add the others later"
+  },
+  {
+   "id": "milind:Q1106",
+   "action": "set_option",
+   "match": "place agent 3 s",
+   "text": "Place Agent 3's findings in a key-findings summary at the start of the input"
+  },
+  {
+   "id": "milind:Q1107",
+   "action": "set_option",
+   "match": "use claude md for simple",
+   "text": "CLAUDE.md for simple rules and a skill for complex, multi-part rules"
+  },
+  {
+   "id": "milind:Q1107",
+   "action": "set_option",
+   "match": "claude md for guidelines",
+   "text": "CLAUDE.md for always-on standards; a skill for on-demand work"
+  },
+  {
+   "id": "milind:Q1107",
+   "action": "set_option",
+   "match": "always use skills",
+   "text": "Skills, since they are the more powerful mechanism for any guideline"
+  },
+  {
+   "id": "milind:Q1107",
+   "action": "set_option",
+   "match": "always use claude md",
+   "text": "CLAUDE.md for all of it, since its scope is broader than any skill"
+  },
+  {
+   "id": "milind:Q1108",
+   "action": "set_option",
+   "match": "ask team members to",
+   "text": "Have team members rate output quality with and without the examples"
+  },
+  {
+   "id": "milind:Q1108",
+   "action": "set_option",
+   "match": "create a labeled test",
+   "text": "Compare accuracy on a labeled set of 50-100 documents with and without examples"
+  },
+  {
+   "id": "milind:Q1108",
+   "action": "set_option",
+   "match": "run 5 documents manually",
+   "text": "Run 5 documents manually through both variants and compare the outputs"
+  },
+  {
+   "id": "milind:Q1108",
+   "action": "set_option",
+   "match": "add examples to production",
+   "text": "Add the examples in production and monitor the error rates afterward"
+  },
+  {
+   "id": "milind:Q1109",
+   "action": "set_option",
+   "match": "return errors as successful",
+   "text": "Return errors as successful responses that carry an `error` field"
+  },
+  {
+   "id": "milind:Q1109",
+   "action": "set_option",
+   "match": "add errorcategory transient",
+   "text": "Add `errorCategory`, `isRetryable`, `message`, `customerMessage`"
+  },
+  {
+   "id": "milind:Q1109",
+   "action": "set_option",
+   "match": "add just an http",
+   "text": "Add just the HTTP status code so the coordinator can map it to an action"
+  },
+  {
+   "id": "milind:Q1109",
+   "action": "set_option",
+   "match": "add a severity level",
+   "text": "Add a severity level (low/medium/high) to each error the tool returns"
+  },
+  {
+   "id": "milind:Q111",
+   "action": "set_option",
+   "match": "the subagent s search",
+   "text": "The subagent's search index is empty, so no query can return anything"
+  },
+  {
+   "id": "milind:Q111",
+   "action": "set_option",
+   "match": "the query syntax was",
+   "text": "The query syntax was incorrect, so the search returned nothing at all"
+  },
+  {
+   "id": "milind:Q111",
+   "action": "set_option",
+   "match": "the query executed successfully",
+   "text": "A successful query with no matches; a valid empty result"
+  },
+  {
+   "id": "milind:Q111",
+   "action": "set_option",
+   "match": "the subagent failed silently",
+   "text": "The subagent failed silently and the request should be retried"
+  },
+  {
+   "id": "milind:Q1110",
+   "action": "set_option",
+   "match": "use compact to remove",
+   "text": "Run /compact to remove all tool results from the conversation"
+  },
+  {
+   "id": "milind:Q1110",
+   "action": "set_option",
+   "match": "have the agent write",
+   "text": "Have it log findings to scratchpad files and reference those later"
+  },
+  {
+   "id": "milind:Q1110",
+   "action": "set_option",
+   "match": "ask the agent to",
+   "text": "Ask the agent to re-read the early files before each follow-up question"
+  },
+  {
+   "id": "milind:Q1110",
+   "action": "set_option",
+   "match": "restart the session with",
+   "text": "Restart the session with a higher max_tokens value for longer answers"
+  },
+  {
+   "id": "milind:Q1111",
+   "action": "set_option",
+   "match": "use database transactions that",
+   "text": "Use database transactions that roll back automatically on a crash"
+  },
+  {
+   "id": "milind:Q1111",
+   "action": "set_option",
+   "match": "accept that crashes require",
+   "text": "Accept that after a crash the pipeline has to restart from step 1"
+  },
+  {
+   "id": "milind:Q1111",
+   "action": "set_option",
+   "match": "keep all state in",
+   "text": "Keep all intermediate state in environment variables of the process"
+  },
+  {
+   "id": "milind:Q1111",
+   "action": "set_option",
+   "match": "the coordinator writes a",
+   "text": "Write a manifest after each step and read it on restart to resume"
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "output summary to compress",
+   "text": "`output: summary` in the frontmatter to compress the output"
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "allowed tools read alone",
+   "text": "`allowed-tools: [\"Read\"]` alone, which keeps the skill read-only"
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "context fork combined with",
+   "text": "`context: fork` plus read-only `allowed-tools` like Grep"
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "context isolated to prevent",
+   "text": "`context: isolated` in the frontmatter to prevent context sharing"
+  },
+  {
+   "id": "milind:Q1113",
+   "action": "set_option",
+   "match": "replace the generic execute_sql",
+   "text": "Swap `execute_sql` for a tool that only accepts validated SELECT queries"
+  },
+  {
+   "id": "milind:Q1113",
+   "action": "set_option",
+   "match": "add only execute select",
+   "text": "Add \"only execute SELECT statements\" as a rule in the system prompt"
+  },
+  {
+   "id": "milind:Q1113",
+   "action": "set_option",
+   "match": "require developer review of",
+   "text": "Require a developer to review every generated SQL query by hand"
+  },
+  {
+   "id": "milind:Q1114",
+   "action": "set_option",
+   "match": "code examples of the",
+   "text": "Code examples showing the exact output format the tool returns"
+  },
+  {
+   "id": "milind:Q1114",
+   "action": "set_option",
+   "match": "performance benchmarks compared to",
+   "text": "Performance benchmarks comparing the tool with similar alternatives"
+  },
+  {
+   "id": "milind:Q1114",
+   "action": "set_option",
+   "match": "explicit boundary statements that",
+   "text": "Stating when not to use it and which tool to use instead"
+  },
+  {
+   "id": "milind:Q1114",
+   "action": "set_option",
+   "match": "longer more detailed descriptions",
+   "text": "Longer, more detailed descriptions of everything the tool does"
+  },
+  {
+   "id": "milind:Q1115",
+   "action": "set_option",
+   "match": "split the pr into",
+   "text": "Split the PR into smaller PRs of 5-6 files each and review them"
+  },
+  {
+   "id": "milind:Q1115",
+   "action": "set_option",
+   "match": "use a larger context",
+   "text": "Use a larger context window to hold all 30 files at the same time"
+  },
+  {
+   "id": "milind:Q1115",
+   "action": "set_option",
+   "match": "per file local passes",
+   "text": "Per-file local passes plus one cross-file consistency pass"
+  },
+  {
+   "id": "milind:Q1115",
+   "action": "set_option",
+   "match": "run 3 independent single",
+   "text": "Run 3 independent single-pass reviews and take the majority vote"
+  },
+  {
+   "id": "milind:Q1116",
+   "action": "set_option",
+   "match": "better tool descriptions",
+   "text": "More detailed descriptions for the `process_refund` tool"
+  },
+  {
+   "id": "milind:Q1116",
+   "action": "set_option",
+   "match": "a posttooluse hook that",
+   "text": "A PostToolUse hook that logs every refund for a later audit"
+  },
+  {
+   "id": "milind:Q1116",
+   "action": "set_option",
+   "match": "limiting refunds to under",
+   "text": "An automatic limit that keeps all refunds under $50"
+  },
+  {
+   "id": "milind:Q1116",
+   "action": "set_option",
+   "match": "a disambiguation step requiring",
+   "text": "Customer disambiguation and confirmation before the refund"
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_option",
+   "match": "they are equivalent use",
+   "text": "They are equivalent, so either can be used interchangeably for investigation"
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_option",
+   "match": "explore is a built",
+   "text": "Explore is a built-in read-only subagent launched via the Agent (Task) tool"
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_option",
+   "match": "explore is for small",
+   "text": "Explore is meant for small codebases; Task subagents for large codebases"
+  },
+  {
+   "id": "milind:Q1118",
+   "action": "set_option",
+   "match": "explore uses grep glob",
+   "text": "Explore can only use Grep and Glob; a Task subagent can use any tool"
+  },
+  {
+   "id": "milind:Q1119",
+   "action": "set_option",
+   "match": "require all upstream agents",
+   "text": "Make `publication_date` and `data_collection_date` required upstream fields"
+  },
+  {
+   "id": "milind:Q1119",
+   "action": "set_option",
+   "match": "have the synthesis agent",
+   "text": "Have the synthesis agent look up publication dates after synthesis"
+  },
+  {
+   "id": "milind:Q1119",
+   "action": "set_option",
+   "match": "add temporal information manually",
+   "text": "Add the temporal information manually in a post-processing step"
+  },
+  {
+   "id": "milind:Q1119",
+   "action": "set_option",
+   "match": "trust the synthesis agent",
+   "text": "Trust the synthesis agent to infer the relevant dates from context"
+  },
+  {
+   "id": "milind:Q112",
+   "action": "set_option",
+   "match": "cache all tool results",
+   "text": "Cache all tool results in RAM so recovery after a crash is fast"
+  },
+  {
+   "id": "milind:Q112",
+   "action": "set_option",
+   "match": "use database transactions that",
+   "text": "Use database transactions that automatically roll back on a crash"
+  },
+  {
+   "id": "milind:Q112",
+   "action": "set_option",
+   "match": "have the agent write",
+   "text": "Write a manifest after each file and resume from it on restart"
+  },
+  {
+   "id": "milind:Q112",
+   "action": "set_option",
+   "match": "re run the entire",
+   "text": "Re-run the entire audit from the first file after each crash"
+  },
+  {
+   "id": "milind:Q1120",
+   "action": "set_option",
+   "match": "prompt instructions have non",
+   "text": "Prompt compliance is probabilistic; 100% needs programmatic enforcement"
+  },
+  {
+   "id": "milind:Q1120",
+   "action": "set_option",
+   "match": "the pipeline sequence is",
+   "text": "The pipeline sequence is wrong and should check eligibility before identity"
+  },
+  {
+   "id": "milind:Q1120",
+   "action": "set_option",
+   "match": "prompt instructions are not",
+   "text": "Prompt instructions are not supported for use in compliance workflows"
+  },
+  {
+   "id": "milind:Q1120",
+   "action": "set_option",
+   "match": "the audit is incorrect",
+   "text": "The audit is incorrect, since prompt instructions provide sufficient control"
+  },
+  {
+   "id": "milind:Q1121",
+   "action": "set_option",
+   "match": "when the skill needs to interact",
+   "text": "When it must ask the user or use the main conversation"
+  },
+  {
+   "id": "milind:Q1121",
+   "action": "set_option",
+   "match": "when the skill produces",
+   "text": "When the skill produces a large amount of output for the user"
+  },
+  {
+   "id": "milind:Q1121",
+   "action": "set_option",
+   "match": "when the skill reads",
+   "text": "When the skill needs to read files from the project directory"
+  },
+  {
+   "id": "milind:Q1121",
+   "action": "set_option",
+   "match": "when the skill runs",
+   "text": "When the skill is expected to run for more than 30 seconds"
+  },
+  {
+   "id": "milind:Q1122",
+   "action": "set_option",
+   "match": "ask developers to explain",
+   "text": "Ask developers to justify each dismissal in writing as training data"
+  },
+  {
+   "id": "milind:Q1122",
+   "action": "set_option",
+   "match": "switch to a different",
+   "text": "Switch to a different review model that produces fewer false positives"
+  },
+  {
+   "id": "milind:Q1122",
+   "action": "set_option",
+   "match": "analyze dismissed findings by",
+   "text": "Fix the most-dismissed `detected_pattern`s with criteria and examples"
+  },
+  {
+   "id": "milind:Q1122",
+   "action": "set_option",
+   "match": "reduce finding count by",
+   "text": "Raise the confidence threshold globally so fewer findings are reported"
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_option",
+   "match": "bash with ls la",
+   "text": "Bash with `ls -la` run across all of the source directories"
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_option",
+   "match": "grep with a pattern",
+   "text": "Grep for `from '@company/auth'` across the source files"
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_option",
+   "match": "glob with pattern",
+   "text": "Glob with the pattern `**/auth*.ts` across the repo"
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_option",
+   "match": "read all typescript files",
+   "text": "Read all TypeScript files and search them manually"
+  },
+  {
+   "id": "milind:Q1124",
+   "action": "set_option",
+   "match": "present both values with",
+   "text": "Report both with dates and sources as change over time, not a contradiction"
+  },
+  {
+   "id": "milind:Q1124",
+   "action": "set_option",
+   "match": "use the 2024 figure",
+   "text": "Use the 2024 figure, since the more recent source is likely the more accurate one"
+  },
+  {
+   "id": "milind:Q1124",
+   "action": "set_option",
+   "match": "average the figures and",
+   "text": "Average the two figures and add a note about the discrepancy between them"
+  },
+  {
+   "id": "milind:Q1124",
+   "action": "set_option",
+   "match": "flag as conflicting and",
+   "text": "Flag the values as conflicting and exclude both from the report"
+  },
+  {
+   "id": "milind:Q1125",
+   "action": "set_option",
+   "match": "environment variable controlled convention",
+   "text": "Convention loading controlled by a separate environment variable per service"
+  },
+  {
+   "id": "milind:Q1125",
+   "action": "set_option",
+   "match": "a root claude md",
+   "text": "A root CLAUDE.md plus a path-scoped `.claude/rules/` file per service"
+  },
+  {
+   "id": "milind:Q1125",
+   "action": "set_option",
+   "match": "five separate claude md",
+   "text": "Five separate CLAUDE.md files, one placed in each service directory"
+  },
+  {
+   "id": "milind:Q1125",
+   "action": "set_option",
+   "match": "one massive claude md",
+   "text": "One large CLAUDE.md that contains all five sets of conventions"
+  },
+  {
+   "id": "milind:Q1126",
+   "action": "set_option",
+   "match": "a confidence threshold before",
+   "text": "A confidence threshold that must be met before any email is sent"
+  },
+  {
+   "id": "milind:Q1126",
+   "action": "set_option",
+   "match": "sending only rejection emails",
+   "text": "Auto-send only rejection emails; approvals go to human review first"
+  },
+  {
+   "id": "milind:Q1126",
+   "action": "set_option",
+   "match": "logging all emails sent",
+   "text": "Logging every sent email so the team can review it afterwards"
+  },
+  {
+   "id": "milind:Q1126",
+   "action": "set_option",
+   "match": "a human in the loop",
+   "text": "A human review checkpoint before `send_decision_email` executes"
+  },
+  {
+   "id": "milind:Q1127",
+   "action": "set_option",
+   "match": "increase the synthesis agent",
+   "text": "Increase the synthesis agent's max_tokens limit for the report"
+  },
+  {
+   "id": "milind:Q1127",
+   "action": "set_option",
+   "match": "ask the synthesis agent",
+   "text": "Ask the synthesis agent to produce a considerably longer report"
+  },
+  {
+   "id": "milind:Q1127",
+   "action": "set_option",
+   "match": "add be thorough and",
+   "text": "Add \"be thorough and comprehensive\" to the synthesis prompt"
+  },
+  {
+   "id": "milind:Q1127",
+   "action": "set_option",
+   "match": "replace vague comprehensive report",
+   "text": "Spell out required topics, source minimums, and structure"
+  },
+  {
+   "id": "milind:Q1128",
+   "action": "set_option",
+   "match": "embed rules as few",
+   "text": "Embed the rules only as few-shot examples of return decisions"
+  },
+  {
+   "id": "milind:Q1128",
+   "action": "set_option",
+   "match": "provide rules in a",
+   "text": "Serve the rules through a tool call the agent makes before each decision"
+  },
+  {
+   "id": "milind:Q1128",
+   "action": "set_option",
+   "match": "trust the agent to",
+   "text": "Trust the agent to know standard return policies from training"
+  },
+  {
+   "id": "milind:Q1128",
+   "action": "set_option",
+   "match": "document the rules in",
+   "text": "Put them in the system prompt as categorized condition-action pairs"
+  },
+  {
+   "id": "milind:Q1129",
+   "action": "set_option",
+   "match": "escalate the entire workflow",
+   "text": "Escalate the whole workflow to a human supervisor right away"
+  },
+  {
+   "id": "milind:Q1129",
+   "action": "set_option",
+   "match": "do not retry instead",
+   "text": "Skip retries; explain the missing access, offer escalation"
+  },
+  {
+   "id": "milind:Q1129",
+   "action": "set_option",
+   "match": "retry with different credentials",
+   "text": "Retry the same call using a different set of agent credentials"
+  },
+  {
+   "id": "milind:Q1129",
+   "action": "set_option",
+   "match": "try accessing the data",
+   "text": "Try to fetch the same financial data through a different tool"
+  },
+  {
+   "id": "milind:Q113",
+   "action": "set_option",
+   "match": "confidence scores generated by",
+   "text": "Confidence scores from the synthesis agent's own self-assessment"
+  },
+  {
+   "id": "milind:Q113",
+   "action": "set_option",
+   "match": "a list of searches",
+   "text": "A list of the searches that were not performed during research"
+  },
+  {
+   "id": "milind:Q113",
+   "action": "set_option",
+   "match": "error codes for any",
+   "text": "Error codes for any of the tool calls that failed during research"
+  },
+  {
+   "id": "milind:Q113",
+   "action": "set_option",
+   "match": "coverage gap annotations indicating",
+   "text": "Notes flagging which topics or claims lack source support"
+  },
+  {
+   "id": "milind:Q1130",
+   "action": "set_option",
+   "match": "switch to plain text",
+   "text": "Switch to `--output-format text` and parse the plain-text response instead"
+  },
+  {
+   "id": "milind:Q1130",
+   "action": "set_option",
+   "match": "increase claude code s",
+   "text": "Increase the response timeout of the Claude Code CI step"
+  },
+  {
+   "id": "milind:Q1130",
+   "action": "set_option",
+   "match": "add json schema cat",
+   "text": "Add `--json-schema` with a schema file to constrain the structure"
+  },
+  {
+   "id": "milind:Q1130",
+   "action": "set_option",
+   "match": "add json validation to",
+   "text": "Add JSON validation to the downstream tool before parsing"
+  },
+  {
+   "id": "milind:Q1131",
+   "action": "set_option",
+   "match": "immediately execute the deletion",
+   "text": "Nothing; execute the deletion at once, since the customer asked for it"
+  },
+  {
+   "id": "milind:Q1131",
+   "action": "set_option",
+   "match": "ask for the customer",
+   "text": "The customer's password, collected as additional authentication"
+  },
+  {
+   "id": "milind:Q1131",
+   "action": "set_option",
+   "match": "escalate to a human",
+   "text": "Nothing; escalate to a human, as deletions are too risky for agents"
+  },
+  {
+   "id": "milind:Q1131",
+   "action": "set_option",
+   "match": "whether remove means permanent",
+   "text": "What \"remove\" means, which record, and policy; then get confirmation"
+  },
+  {
+   "id": "milind:Q1132",
+   "action": "set_option",
+   "match": "claude show config",
+   "text": "`claude --show-config` from the terminal"
+  },
+  {
+   "id": "milind:Q1132",
+   "action": "set_option",
+   "match": "memory this command displays",
+   "text": "`/memory` within the current session"
+  },
+  {
+   "id": "milind:Q1132",
+   "action": "set_option",
+   "match": "config show",
+   "text": "`/config show` within the current session"
+  },
+  {
+   "id": "milind:Q1132",
+   "action": "set_option",
+   "match": "status",
+   "text": "`/status` from the session prompt"
+  },
+  {
+   "id": "milind:Q1133",
+   "action": "set_option",
+   "match": "use the message batches",
+   "text": "Message Batches API for the weekly load; parallel workers if an SLA applies"
+  },
+  {
+   "id": "milind:Q1133",
+   "action": "set_option",
+   "match": "use a faster extraction",
+   "text": "Shorten the extraction prompt so each contract finishes in fewer seconds"
+  },
+  {
+   "id": "milind:Q1133",
+   "action": "set_option",
+   "match": "process only the most",
+   "text": "Process only the most important contracts and defer the remainder"
+  },
+  {
+   "id": "milind:Q1133",
+   "action": "set_option",
+   "match": "switch to a different",
+   "text": "Switch to a different model and keep the synchronous one-by-one loop"
+  },
+  {
+   "id": "milind:Q1134",
+   "action": "set_option",
+   "match": "the model is producing",
+   "text": "The model is producing too many tool calls in each turn"
+  },
+  {
+   "id": "milind:Q1134",
+   "action": "set_option",
+   "match": "the context window is",
+   "text": "The context window is too small for the agent's task"
+  },
+  {
+   "id": "milind:Q1134",
+   "action": "set_option",
+   "match": "the api connection is",
+   "text": "The API connection keeps dropping and reconnecting mid-loop"
+  },
+  {
+   "id": "milind:Q1134",
+   "action": "set_option",
+   "match": "the loop is using",
+   "text": "The loop doesn't use `stop_reason` to detect completion"
+  },
+  {
+   "id": "milind:Q1135",
+   "action": "set_option",
+   "match": "use a b testing",
+   "text": "Run an A/B test in production on real incoming invoices"
+  },
+  {
+   "id": "milind:Q1135",
+   "action": "set_option",
+   "match": "sample a diverse subset",
+   "text": "Validate on 50-100 diverse invoices, then batch the rest"
+  },
+  {
+   "id": "milind:Q1135",
+   "action": "set_option",
+   "match": "run all 10 000",
+   "text": "Run all 10,000 invoices through the new prompt right away"
+  },
+  {
+   "id": "milind:Q1135",
+   "action": "set_option",
+   "match": "test on 5 invoices",
+   "text": "Test on 5 invoices and extrapolate the accuracy to the rest"
+  },
+  {
+   "id": "milind:Q1136",
+   "action": "set_option",
+   "match": "managing api authentication",
+   "text": "Managing API authentication and credentials for all subagents"
+  },
+  {
+   "id": "milind:Q1136",
+   "action": "set_option",
+   "match": "task decomposition breaking",
+   "text": "Decomposing, delegating, aggregating, and re-delegating gaps"
+  },
+  {
+   "id": "milind:Q1136",
+   "action": "set_option",
+   "match": "executing all tool calls",
+   "text": "Executing every tool call directly instead of the subagents"
+  },
+  {
+   "id": "milind:Q1136",
+   "action": "set_option",
+   "match": "writing the final synthesis",
+   "text": "Writing the final synthesis report from the raw findings"
+  },
+  {
+   "id": "milind:Q1137",
+   "action": "set_option",
+   "match": "disable all missing_error_handling",
+   "text": "Disable all `missing_error_handling` findings across the codebase"
+  },
+  {
+   "id": "milind:Q1137",
+   "action": "set_option",
+   "match": "add a rule skip",
+   "text": "Add a rule telling Claude to skip async utility functions entirely"
+  },
+  {
+   "id": "milind:Q1137",
+   "action": "set_option",
+   "match": "increase the severity threshold",
+   "text": "Raise the severity threshold so that this pattern is reported much less often"
+  },
+  {
+   "id": "milind:Q1137",
+   "action": "set_option",
+   "match": "add a specific few",
+   "text": "Add counter-examples: fire-and-forget is fine, awaited calls need a catch"
+  },
+  {
+   "id": "milind:Q1138",
+   "action": "set_option",
+   "match": "the 500 threshold rule",
+   "text": "The rule is lost in the long context; restate it at the top of each prompt"
+  },
+  {
+   "id": "milind:Q1138",
+   "action": "set_option",
+   "match": "the approval threshold was",
+   "text": "The approval threshold was changed by a concurrent process mid-session"
+  },
+  {
+   "id": "milind:Q1138",
+   "action": "set_option",
+   "match": "the model version was",
+   "text": "The underlying model version was silently updated in the middle of the session"
+  },
+  {
+   "id": "milind:Q1138",
+   "action": "set_option",
+   "match": "the 500 rule conflicts",
+   "text": "The $500 rule conflicts with a newer rule that was added later on"
+  },
+  {
+   "id": "milind:Q1139",
+   "action": "set_option",
+   "match": "require subagents to include",
+   "text": "Have subagents include source counts and confidence in structured output"
+  },
+  {
+   "id": "milind:Q1139",
+   "action": "set_option",
+   "match": "run all searches 3",
+   "text": "Run every search three times to confirm results across repeated runs"
+  },
+  {
+   "id": "milind:Q1139",
+   "action": "set_option",
+   "match": "require each finding to",
+   "text": "Require each finding to be backed by exactly 3 independent sources"
+  },
+  {
+   "id": "milind:Q1139",
+   "action": "set_option",
+   "match": "have the synthesis agent",
+   "text": "Have the synthesis agent look for additional sources on its own"
+  },
+  {
+   "id": "milind:Q114",
+   "action": "set_option",
+   "match": "look up the customer",
+   "text": "Look up the customer's ticket history for prior context before responding"
+  },
+  {
+   "id": "milind:Q114",
+   "action": "set_option",
+   "match": "acknowledge the repetition",
+   "text": "Acknowledge the repetition, apologize, and ask for a brief re-explanation"
+  },
+  {
+   "id": "milind:Q114",
+   "action": "set_option",
+   "match": "tell the customer that",
+   "text": "Tell the customer that the previous agents failed and escalate immediately"
+  },
+  {
+   "id": "milind:Q1140",
+   "action": "set_option",
+   "match": "response speed billing",
+   "text": "Response speed, so that billing disputes complete in under 30 seconds"
+  },
+  {
+   "id": "milind:Q1140",
+   "action": "set_option",
+   "match": "tool count fewer",
+   "text": "Tool count, since fewer tools make the agent behave more reliably"
+  },
+  {
+   "id": "milind:Q1140",
+   "action": "set_option",
+   "match": "session isolation each",
+   "text": "Session isolation, so each dispute runs in its own separate session"
+  },
+  {
+   "id": "milind:Q1140",
+   "action": "set_option",
+   "match": "context continuity the",
+   "text": "Context continuity, keeping all discovered facts intact across turns"
+  },
+  {
    "id": "milind:Q1141",
    "action": "set_option",
    "match": "developers need training",
