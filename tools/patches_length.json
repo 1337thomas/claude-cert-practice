@@ -12894,6 +12894,1086 @@
    "action": "set_option",
    "match": "Streaming API for",
    "text": "The Streaming API, so that the review output appears in the CI job log in real time"
+  },
+  {
+   "id": "milind:Q1141",
+   "action": "set_option",
+   "match": "developers need training",
+   "text": "Developers need training on how to interpret and act on the review tool's comments"
+  },
+  {
+   "id": "milind:Q1141",
+   "action": "set_option",
+   "match": "the review is running",
+   "text": "The review runs on too many files per PR, so comments span unrelated changes"
+  },
+  {
+   "id": "milind:Q1141",
+   "action": "set_option",
+   "match": "the review is",
+   "text": "The review criteria are too broad, producing mostly low-value false positives"
+  },
+  {
+   "id": "milind:Q1141",
+   "action": "set_option",
+   "match": "the ci pipeline",
+   "text": "The CI pipeline is too slow, so comments arrive after developers have moved on"
+  },
+  {
+   "id": "milind:Q1142",
+   "action": "set_option",
+   "match": "escalate to a",
+   "text": "Escalate to a human agent with authority to make policy interpretation decisions"
+  },
+  {
+   "id": "milind:Q1142",
+   "action": "set_option",
+   "match": "apply the most",
+   "text": "Apply the most reasonable interpretation of the policy and explain it to the customer"
+  },
+  {
+   "id": "milind:Q1142",
+   "action": "set_option",
+   "match": "decline to answer",
+   "text": "Decline to answer and redirect the customer to the published FAQ page"
+  },
+  {
+   "id": "milind:Q1142",
+   "action": "set_option",
+   "match": "search for similar",
+   "text": "Search the ticket history for similar cases and follow that precedent"
+  },
+  {
+   "id": "milind:Q1143",
+   "action": "set_option",
+   "match": "get_customer_data first in",
+   "text": "`get_customer_data` first in all cases, then whatever the account data suggests"
+  },
+  {
+   "id": "milind:Q1143",
+   "action": "set_option",
+   "match": "calculate_shipping if return",
+   "text": "`calculate_shipping` and/or `search_internal_docs`, only as the question needs"
+  },
+  {
+   "id": "milind:Q1143",
+   "action": "set_option",
+   "match": "all four tools",
+   "text": "All four tools, so the answer combines policy, rates, customer data, and web info"
+  },
+  {
+   "id": "milind:Q1143",
+   "action": "set_option",
+   "match": "search_web for the",
+   "text": "`search_web`, since it returns the most current public shipping information"
+  },
+  {
+   "id": "milind:Q1145",
+   "action": "set_option",
+   "match": "use bold text",
+   "text": "Use bold text to highlight each critical finding wherever it appears in the report"
+  },
+  {
+   "id": "milind:Q1145",
+   "action": "set_option",
+   "match": "limit reports to",
+   "text": "Limit reports to 3 pages so that no critical finding can sit deep in the text"
+  },
+  {
+   "id": "milind:Q1145",
+   "action": "set_option",
+   "match": "add an executive",
+   "text": "Open with an executive summary of critical findings and use clear section headers"
+  },
+  {
+   "id": "milind:Q1145",
+   "action": "set_option",
+   "match": "move all critical",
+   "text": "Move all critical findings to the end, where readers finish and recall best"
+  },
+  {
+   "id": "milind:Q115",
+   "action": "set_option",
+   "match": "have each subagent",
+   "text": "Have each subagent write its results directly into the synthesis agent's context"
+  },
+  {
+   "id": "milind:Q115",
+   "action": "set_option",
+   "match": "merge all results",
+   "text": "Merge all results into a single JSON blob and pass only the blob's hash to synthesis"
+  },
+  {
+   "id": "milind:Q115",
+   "action": "set_option",
+   "match": "wait for all",
+   "text": "Wait for all parallel results, then pass them to synthesis in one structured prompt"
+  },
+  {
+   "id": "milind:Q116",
+   "action": "set_option",
+   "match": "continue both approaches",
+   "text": "Continue both approaches in parallel and merge the resulting code later"
+  },
+  {
+   "id": "milind:Q116",
+   "action": "set_option",
+   "match": "delete the less",
+   "text": "Delete the less promising branch and resume the better one as the implementation"
+  },
+  {
+   "id": "milind:Q116",
+   "action": "set_option",
+   "match": "review the findings",
+   "text": "Compare both branches' findings, choose one, then implement it in a new session"
+  },
+  {
+   "id": "milind:Q116",
+   "action": "set_option",
+   "match": "merge the two",
+   "text": "Merge the two fork branches automatically into one combined implementation"
+  },
+  {
+   "id": "milind:Q117",
+   "action": "set_option",
+   "match": "the synthesis agent",
+   "text": "The synthesis agent took more than 30 seconds to complete its run"
+  },
+  {
+   "id": "milind:Q117",
+   "action": "set_option",
+   "match": "the synthesis output has",
+   "text": "At least one major topic in scope has fewer than 2 sources"
+  },
+  {
+   "id": "milind:Q117",
+   "action": "set_option",
+   "match": "the synthesis output is",
+   "text": "The synthesis output is shorter than 500 words in its final form"
+  },
+  {
+   "id": "milind:Q118",
+   "action": "set_option",
+   "match": "trim the tool",
+   "text": "Trim the result in a PostToolUse hook to the relevant fields before it enters history"
+  },
+  {
+   "id": "milind:Q118",
+   "action": "set_option",
+   "match": "pass the full",
+   "text": "Pass the full 2,000-token result so Claude has complete information in later turns"
+  },
+  {
+   "id": "milind:Q118",
+   "action": "set_option",
+   "match": "store the full",
+   "text": "Store the full result in a database and pass Claude only a reference ID to it"
+  },
+  {
+   "id": "milind:Q118",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Keep the full result in context but ask Claude to ignore the irrelevant parts"
+  },
+  {
+   "id": "milind:Q119",
+   "action": "set_option",
+   "match": "the agent intentionally",
+   "text": "The agent intentionally deprioritizes older sources to favor fresher information"
+  },
+  {
+   "id": "milind:Q119",
+   "action": "set_option",
+   "match": "earlier sources were",
+   "text": "Earlier sources were automatically archived after a session time limit expired"
+  },
+  {
+   "id": "milind:Q119",
+   "action": "set_option",
+   "match": "the lost in",
+   "text": "The \"lost in the middle\" effect: early findings now sit mid-context and get less attention"
+  },
+  {
+   "id": "milind:Q120",
+   "action": "set_option",
+   "match": "the prompt is",
+   "text": "It's too vague: no goals, quality criteria, source types, or definition of \"relevant\""
+  },
+  {
+   "id": "milind:Q120",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "It should specify the exact number of sources the subagent is required to return"
+  },
+  {
+   "id": "milind:Q120",
+   "action": "set_option",
+   "match": "subagent prompts must",
+   "text": "Subagent prompts must use a structured JSON format rather than natural language"
+  },
+  {
+   "id": "milind:Q120",
+   "action": "set_option",
+   "match": "the word any",
+   "text": "The word \"any\" is prohibited in subagent instructions because it widens the scope"
+  },
+  {
+   "id": "milind:Q121",
+   "action": "set_option",
+   "match": "the claim amount",
+   "text": "The claim amount exceeds typical API rate limits for a single approval tool call"
+  },
+  {
+   "id": "milind:Q121",
+   "action": "set_option",
+   "match": "insurance claims require",
+   "text": "Insurance claims require a fine-tuned model rather than a general-purpose one"
+  },
+  {
+   "id": "milind:Q121",
+   "action": "set_option",
+   "match": "the agent is",
+   "text": "The agent used the wrong tool; it should call `process_payment` instead"
+  },
+  {
+   "id": "milind:Q121",
+   "action": "set_option",
+   "match": "high value irreversible",
+   "text": "High-value irreversible approvals need a programmatic human-review gate"
+  },
+  {
+   "id": "milind:Q122",
+   "action": "set_option",
+   "match": "create a new",
+   "text": "Create a new named session for the narrow investigation and resume it later"
+  },
+  {
+   "id": "milind:Q122",
+   "action": "set_option",
+   "match": "spawn the subagent",
+   "text": "Spawn a subagent for the question and have it return only a structured summary"
+  },
+  {
+   "id": "milind:Q123",
+   "action": "set_option",
+   "match": "average numerical values",
+   "text": "Average numerical values and take the most common text value across agents"
+  },
+  {
+   "id": "milind:Q123",
+   "action": "set_option",
+   "match": "present all three",
+   "text": "Present all three values with source attribution and note the conflict"
+  },
+  {
+   "id": "milind:Q123",
+   "action": "set_option",
+   "match": "use the majority",
+   "text": "Use the majority value, since two of the three sources agree on it"
+  },
+  {
+   "id": "milind:Q123",
+   "action": "set_option",
+   "match": "use the value",
+   "text": "Use the value from the most authoritative source type among the three"
+  },
+  {
+   "id": "milind:Q124",
+   "action": "set_option",
+   "match": "the api automatically",
+   "text": "Rely on the API, which automatically retains every session indefinitely"
+  },
+  {
+   "id": "milind:Q124",
+   "action": "set_option",
+   "match": "use resume session",
+   "text": "Resume the named session with `--resume`, plus scratchpad files of key findings"
+  },
+  {
+   "id": "milind:Q124",
+   "action": "set_option",
+   "match": "export the conversation",
+   "text": "Export the conversation to a text file and paste it into a new session next week"
+  },
+  {
+   "id": "milind:Q124",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "Start over next week, since Claude Code cannot carry work across sessions"
+  },
+  {
+   "id": "milind:Q125",
+   "action": "set_option",
+   "match": "100 programmatic enforcement",
+   "text": "100%, which requires programmatic enforcement of the step order"
+  },
+  {
+   "id": "milind:Q125",
+   "action": "set_option",
+   "match": "99 9 three",
+   "text": "99.9%, the three-sigma reliability level that is industry standard"
+  },
+  {
+   "id": "milind:Q125",
+   "action": "set_option",
+   "match": "95 acceptable for",
+   "text": "95%, which is acceptable for non-critical financial operations like this"
+  },
+  {
+   "id": "milind:Q125",
+   "action": "set_option",
+   "match": "depends on the",
+   "text": "It depends on the transaction amount and the customer's risk profile"
+  },
+  {
+   "id": "milind:Q126",
+   "action": "set_option",
+   "match": "accept the results",
+   "text": "Accept the results, since 2019 sources are still technically relevant to AI"
+  },
+  {
+   "id": "milind:Q126",
+   "action": "set_option",
+   "match": "terminate the research",
+   "text": "Terminate the research task, since the topic evidently has no recent sources"
+  },
+  {
+   "id": "milind:Q126",
+   "action": "set_option",
+   "match": "have the synthesis",
+   "text": "Have the synthesis agent note the data is from 2019 and proceed with it"
+  },
+  {
+   "id": "milind:Q126",
+   "action": "set_option",
+   "match": "re delegate to",
+   "text": "Re-delegate the search with an explicit 2023-2024 filter and note the outdated results"
+  },
+  {
+   "id": "milind:Q128",
+   "action": "set_option",
+   "match": "mark the entire",
+   "text": "Mark the entire research task as failed as soon as any subagent fails"
+  },
+  {
+   "id": "milind:Q128",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "Have the coordinator fill the missing research from its own training knowledge"
+  },
+  {
+   "id": "milind:Q128",
+   "action": "set_option",
+   "match": "have subagents return",
+   "text": "Subagents return error context and partial results; the gaps get annotated"
+  },
+  {
+   "id": "milind:Q128",
+   "action": "set_option",
+   "match": "retry all failed",
+   "text": "Retry each failed subagent indefinitely until it eventually succeeds"
+  },
+  {
+   "id": "milind:Q129",
+   "action": "set_option",
+   "match": "select the account",
+   "text": "Select the account with the most order history, as it is likely the primary one"
+  },
+  {
+   "id": "milind:Q129",
+   "action": "set_option",
+   "match": "process all matching",
+   "text": "Process the request against all matching accounts so none is missed"
+  },
+  {
+   "id": "milind:Q129",
+   "action": "set_option",
+   "match": "return control to",
+   "text": "Ask the user for an email, phone number, or account number to disambiguate"
+  },
+  {
+   "id": "milind:Q129",
+   "action": "set_option",
+   "match": "select the most",
+   "text": "Select the most recently created account, as it is likely the active one"
+  },
+  {
+   "id": "milind:Q130",
+   "action": "set_option",
+   "match": "yes high frustration",
+   "text": "Yes, since high frustration signals that a human should take over"
+  },
+  {
+   "id": "milind:Q130",
+   "action": "set_option",
+   "match": "yes frustration scores",
+   "text": "Yes, since frustration scores above 0.7 require escalation per policy"
+  },
+  {
+   "id": "milind:Q130",
+   "action": "set_option",
+   "match": "depends on the",
+   "text": "It depends on the refund amount, not on the customer's emotional state"
+  },
+  {
+   "id": "milind:Q130",
+   "action": "set_option",
+   "match": "no the agent",
+   "text": "No, resolve the refund and acknowledge the frustration"
+  },
+  {
+   "id": "milind:Q131",
+   "action": "set_option",
+   "match": "replace the fixed",
+   "text": "Replace the fixed pipeline with a coordinator that decides per query which stages run"
+  },
+  {
+   "id": "milind:Q131",
+   "action": "set_option",
+   "match": "add a query",
+   "text": "Add a complexity classifier that routes each query to a full or abbreviated pipeline"
+  },
+  {
+   "id": "milind:Q131",
+   "action": "set_option",
+   "match": "create two separate",
+   "text": "Create two separate pipelines, full and abbreviated, and route queries manually"
+  },
+  {
+   "id": "milind:Q131",
+   "action": "set_option",
+   "match": "make document analysis",
+   "text": "Make document analysis optional by letting it return empty results for simple queries"
+  },
+  {
+   "id": "milind:Q132",
+   "action": "set_option",
+   "match": "transient errors timeouts",
+   "text": "Transient errors (timeouts) may succeed on retry; business rule errors will not"
+  },
+  {
+   "id": "milind:Q132",
+   "action": "set_option",
+   "match": "transient errors are",
+   "text": "Transient errors are logged; business rule errors are silently swallowed by the agent"
+  },
+  {
+   "id": "milind:Q133",
+   "action": "set_option",
+   "match": "findings 6 17",
+   "text": "Findings 6-17 contained information redundant with the other findings"
+  },
+  {
+   "id": "milind:Q133",
+   "action": "set_option",
+   "match": "the lost in",
+   "text": "The \"lost in the middle\" effect: mid-input findings get less attention"
+  },
+  {
+   "id": "milind:Q133",
+   "action": "set_option",
+   "match": "the synthesis agent determined",
+   "text": "The synthesis agent judged findings 6-17 to be low quality and dropped them"
+  },
+  {
+   "id": "milind:Q134",
+   "action": "set_option",
+   "match": "complete re run when the",
+   "text": "Re-run when the research direction was wrong; re-delegate for specific gaps"
+  },
+  {
+   "id": "milind:Q134",
+   "action": "set_option",
+   "match": "always re run",
+   "text": "Re-run for every problem found, since full re-runs beat targeted re-delegation"
+  },
+  {
+   "id": "milind:Q134",
+   "action": "set_option",
+   "match": "always use targeted",
+   "text": "Re-delegate for every problem found, since full re-runs are too costly to justify"
+  },
+  {
+   "id": "milind:Q134",
+   "action": "set_option",
+   "match": "complete re run",
+   "text": "Re-run when any subagent failed; re-delegate when synthesis quality is low"
+  },
+  {
+   "id": "milind:Q135",
+   "action": "set_option",
+   "match": "escalate to a",
+   "text": "Escalate to a human, since the policy does not cover this request"
+  },
+  {
+   "id": "milind:Q135",
+   "action": "set_option",
+   "match": "deny the refund",
+   "text": "Deny the refund, since it falls outside the explicit 30-day refund window"
+  },
+  {
+   "id": "milind:Q135",
+   "action": "set_option",
+   "match": "approve the refund",
+   "text": "Approve the refund, since the policy does not explicitly prohibit it"
+  },
+  {
+   "id": "milind:Q135",
+   "action": "set_option",
+   "match": "ask the customer",
+   "text": "Ask the customer to re-read the refund policy and resubmit the request"
+  },
+  {
+   "id": "milind:Q136",
+   "action": "set_option",
+   "match": "never wait proceed",
+   "text": "No, the coordinator should proceed with whatever result arrives first"
+  },
+  {
+   "id": "milind:Q136",
+   "action": "set_option",
+   "match": "wait only if",
+   "text": "Only if the coordinator has a timeout configured for the slower subagent"
+  },
+  {
+   "id": "milind:Q136",
+   "action": "set_option",
+   "match": "it depends on",
+   "text": "It depends on whether synthesis needs both results or just one"
+  },
+  {
+   "id": "milind:Q136",
+   "action": "set_option",
+   "match": "always wait for",
+   "text": "Yes, the coordinator should wait for all subagents before any next step"
+  },
+  {
+   "id": "milind:Q137",
+   "action": "set_option",
+   "match": "as a few",
+   "text": "As a few-shot example in the prompt showing the agent escalating large claims"
+  },
+  {
+   "id": "milind:Q137",
+   "action": "set_option",
+   "match": "as a posttooluse",
+   "text": "As a PostToolUse hook that cancels any approval over $10,000 after it executes"
+  },
+  {
+   "id": "milind:Q137",
+   "action": "set_option",
+   "match": "as a programmatic",
+   "text": "As a gate that redirects `approve_claim` over $10,000 to `escalate_for_review`"
+  },
+  {
+   "id": "milind:Q138",
+   "action": "set_option",
+   "match": "the coordinator is spawning",
+   "text": "The coordinator is spawning duplicate agents that repeat the same search"
+  },
+  {
+   "id": "milind:Q138",
+   "action": "set_option",
+   "match": "the agents have",
+   "text": "The spawned agents have circular dependencies on each other's results"
+  },
+  {
+   "id": "milind:Q138",
+   "action": "set_option",
+   "match": "the coordinator is not",
+   "text": "It spawns a fixed number of agents without assessing query complexity"
+  },
+  {
+   "id": "milind:Q138",
+   "action": "set_option",
+   "match": "8 agents is",
+   "text": "8 agents is too many for any query, so a lower hard cap is needed"
+  },
+  {
+   "id": "milind:Q139",
+   "action": "set_option",
+   "match": "execute the tool",
+   "text": "Execute the tool calls, since Claude requested them in the content array"
+  },
+  {
+   "id": "milind:Q139",
+   "action": "set_option",
+   "match": "ignore the tool",
+   "text": "Ignore the tool calls, since `end_turn` means the task is already complete"
+  },
+  {
+   "id": "milind:Q139",
+   "action": "set_option",
+   "match": "return an error",
+   "text": "Return an error to the user and discard the whole response as invalid"
+  },
+  {
+   "id": "milind:Q139",
+   "action": "set_option",
+   "match": "this situation should",
+   "text": "Investigate it as a bug; `end_turn` implies no pending tool calls"
+  },
+  {
+   "id": "milind:Q14",
+   "action": "set_option",
+   "match": "model driven claude",
+   "text": "Model-driven: Claude picks `lookup_order` or `escalate_to_human` from context; Pre-configured: a fixed lookup, refund, close sequence"
+  },
+  {
+   "id": "milind:Q140",
+   "action": "set_option",
+   "match": "redundancy is inherent",
+   "text": "None worth fixing, since redundancy is inherent to multi-agent research systems"
+  },
+  {
+   "id": "milind:Q140",
+   "action": "set_option",
+   "match": "wasted compute and",
+   "text": "Wasted compute and API costs on redundant coverage, plus harder deduplication"
+  },
+  {
+   "id": "milind:Q140",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "There is no cost, since redundant coverage improves overall research quality"
+  },
+  {
+   "id": "milind:Q140",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "Only minor cost, since the coordinator can merge overlapping agents post-hoc"
+  },
+  {
+   "id": "milind:Q141",
+   "action": "set_option",
+   "match": "sequential time delays",
+   "text": "Sequential time delays between steps so each one has time to finish"
+  },
+  {
+   "id": "milind:Q141",
+   "action": "set_option",
+   "match": "logging and monitoring",
+   "text": "Logging and monitoring that detect ordering violations after the fact"
+  },
+  {
+   "id": "milind:Q141",
+   "action": "set_option",
+   "match": "programmatic prerequisites that",
+   "text": "Programmatic gates that block each step until the prior one returns a valid result"
+  },
+  {
+   "id": "milind:Q141",
+   "action": "set_option",
+   "match": "prompt instructions specifying",
+   "text": "Prompt instructions in the system prompt specifying the required order"
+  },
+  {
+   "id": "milind:Q142",
+   "action": "set_option",
+   "match": "let the synthesis",
+   "text": "Let the synthesis agent inherit the needed context from the coordinator"
+  },
+  {
+   "id": "milind:Q142",
+   "action": "set_option",
+   "match": "use a shared",
+   "text": "Write findings to a shared database that the synthesis agent reads from"
+  },
+  {
+   "id": "milind:Q142",
+   "action": "set_option",
+   "match": "include all three",
+   "text": "Put topic, attributed findings, and quality criteria in its prompt"
+  },
+  {
+   "id": "milind:Q143",
+   "action": "set_option",
+   "match": "1 customer explicitly",
+   "text": "(1) Customer asks for a human, (2) policy gap or exception, (3) stuck after real attempts"
+  },
+  {
+   "id": "milind:Q143",
+   "action": "set_option",
+   "match": "1 customer is",
+   "text": "(1) Customer is frustrated, (2) request is complex, (3) agent is unsure of its answer"
+  },
+  {
+   "id": "milind:Q145",
+   "action": "set_option",
+   "match": "aggregation collecting and",
+   "text": "Aggregation combines and organizes raw results; synthesis derives new insights"
+  },
+  {
+   "id": "milind:Q145",
+   "action": "set_option",
+   "match": "they are equivalent",
+   "text": "Nothing; they are two equivalent terms for the same combining operation"
+  },
+  {
+   "id": "milind:Q145",
+   "action": "set_option",
+   "match": "aggregation is done",
+   "text": "Aggregation is done by the coordinator; synthesis is done by the subagents"
+  },
+  {
+   "id": "milind:Q145",
+   "action": "set_option",
+   "match": "aggregation is for",
+   "text": "Aggregation handles factual content; synthesis handles opinions and judgments"
+  },
+  {
+   "id": "milind:Q146",
+   "action": "set_option",
+   "match": "pass only the",
+   "text": "Pass only the module name and let the subagent discover the rest itself"
+  },
+  {
+   "id": "milind:Q146",
+   "action": "set_option",
+   "match": "use a shared",
+   "text": "Store it in a shared session state object that the subagent can read"
+  },
+  {
+   "id": "milind:Q146",
+   "action": "set_option",
+   "match": "include all three",
+   "text": "Include the code, interface docs, and rationale in the Agent prompt"
+  },
+  {
+   "id": "milind:Q146",
+   "action": "set_option",
+   "match": "the subagent can",
+   "text": "Point the subagent at the file path, since it can read the source code itself"
+  },
+  {
+   "id": "milind:Q147",
+   "action": "set_option",
+   "match": "sequential spawning means",
+   "text": "Each subagent waits for the previous one; all 3 should be spawned in one response"
+  },
+  {
+   "id": "milind:Q147",
+   "action": "set_option",
+   "match": "3 sequential turns",
+   "text": "Nothing; 3 sequential turns is the maximum spawning pattern the coordinator allows"
+  },
+  {
+   "id": "milind:Q147",
+   "action": "set_option",
+   "match": "sequential spawning produces",
+   "text": "Sequential spawning produces lower quality results from each individual subagent"
+  },
+  {
+   "id": "milind:Q147",
+   "action": "set_option",
+   "match": "sequential spawning doesn",
+   "text": "Sequential spawning does not work at all when the dimensions are independent"
+  },
+  {
+   "id": "milind:Q148",
+   "action": "set_option",
+   "match": "15 subtasks is",
+   "text": "15 subtasks is too many for any research query, regardless of its scope"
+  },
+  {
+   "id": "milind:Q148",
+   "action": "set_option",
+   "match": "granular subtasks produce",
+   "text": "Granular subtasks produce duplicate results that synthesis must remove"
+  },
+  {
+   "id": "milind:Q148",
+   "action": "set_option",
+   "match": "subagents cannot handle",
+   "text": "Subagents cannot handle queries that are this narrow and will return nothing"
+  },
+  {
+   "id": "milind:Q148",
+   "action": "set_option",
+   "match": "overly narrow decomposition",
+   "text": "Atomized subtasks miss cross-cutting interconnections that broader analysis reveals"
+  },
+  {
+   "id": "milind:Q150",
+   "action": "set_option",
+   "match": "only during business",
+   "text": "Only during business hours, when staff can step in if something goes wrong"
+  },
+  {
+   "id": "milind:Q150",
+   "action": "set_option",
+   "match": "for valid clear",
+   "text": "Yes, a clearly valid refund within policy is a routine case for the agent"
+  },
+  {
+   "id": "milind:Q150",
+   "action": "set_option",
+   "match": "no always require",
+   "text": "No, every refund should require human approval before money is returned"
+  },
+  {
+   "id": "milind:Q150",
+   "action": "set_option",
+   "match": "only if the",
+   "text": "Only if the refund is under $10, since larger amounts need a human check"
+  },
+  {
+   "id": "milind:Q151",
+   "action": "set_option",
+   "match": "terminate the task",
+   "text": "Terminate the task, since the flight status was successfully retrieved"
+  },
+  {
+   "id": "milind:Q151",
+   "action": "set_option",
+   "match": "add the tool",
+   "text": "Append the result with its tool_use_id and call Claude again for next steps"
+  },
+  {
+   "id": "milind:Q152",
+   "action": "set_option",
+   "match": "geographic distribution for",
+   "text": "Geographic distribution of agents to reduce latency for each source"
+  },
+  {
+   "id": "milind:Q152",
+   "action": "set_option",
+   "match": "redundant coverage for",
+   "text": "Redundant coverage, so that each source is checked by more than one agent"
+  },
+  {
+   "id": "milind:Q152",
+   "action": "set_option",
+   "match": "cost optimization by",
+   "text": "Cost optimization by routing each source type to a cheaper agent"
+  },
+  {
+   "id": "milind:Q152",
+   "action": "set_option",
+   "match": "source type specialization",
+   "text": "Source-type specialization to minimize duplication across categories"
+  },
+  {
+   "id": "milind:Q153",
+   "action": "set_option",
+   "match": "yes more than",
+   "text": "Yes, more than 100 tool calls in a single run indicates a loop bug"
+  },
+  {
+   "id": "milind:Q153",
+   "action": "set_option",
+   "match": "yes tool calls",
+   "text": "Yes, a well-designed task should complete within about 20 tool calls"
+  },
+  {
+   "id": "milind:Q153",
+   "action": "set_option",
+   "match": "only if the",
+   "text": "Only if the agent also failed to produce a final result at the end"
+  },
+  {
+   "id": "milind:Q153",
+   "action": "set_option",
+   "match": "not necessarily the",
+   "text": "Not necessarily; the right call count depends on task complexity"
+  },
+  {
+   "id": "milind:Q154",
+   "action": "set_option",
+   "match": "it reduces api",
+   "text": "It reduces API costs because only one agent ever runs the error-handling logic"
+  },
+  {
+   "id": "milind:Q154",
+   "action": "set_option",
+   "match": "distributed error handling",
+   "text": "Distributed error handling creates circular dependencies between subagents"
+  },
+  {
+   "id": "milind:Q154",
+   "action": "set_option",
+   "match": "centralized error handling",
+   "text": "It ensures consistent messages, unified logging, and coherent recovery"
+  },
+  {
+   "id": "milind:Q154",
+   "action": "set_option",
+   "match": "subagents cannot handle",
+   "text": "Subagents cannot handle errors themselves, so the coordinator must do it"
+  },
+  {
+   "id": "milind:Q155",
+   "action": "set_option",
+   "match": "fork_session creates a",
+   "text": "`fork_session` starts from the current session's full context; a new session starts blank"
+  },
+  {
+   "id": "milind:Q155",
+   "action": "set_option",
+   "match": "fork_session is faster",
+   "text": "`fork_session` starts faster than a new session but otherwise behaves the same"
+  },
+  {
+   "id": "milind:Q155",
+   "action": "set_option",
+   "match": "they are functionally",
+   "text": "They are functionally identical; the names differ only for readability"
+  },
+  {
+   "id": "milind:Q155",
+   "action": "set_option",
+   "match": "fork_session shares api",
+   "text": "`fork_session` keeps the parent session updated with the fork's later findings"
+  },
+  {
+   "id": "milind:Q156",
+   "action": "set_option",
+   "match": "iso timestamps are",
+   "text": "ISO timestamps are shorter than Unix ones and therefore save context tokens"
+  },
+  {
+   "id": "milind:Q156",
+   "action": "set_option",
+   "match": "the claude api",
+   "text": "The Claude API rejects tool results that contain Unix-format timestamps"
+  },
+  {
+   "id": "milind:Q156",
+   "action": "set_option",
+   "match": "consistent timestamp format",
+   "text": "One consistent format lets the agent reason about time across all backends"
+  },
+  {
+   "id": "milind:Q157",
+   "action": "set_option",
+   "match": "add more detail",
+   "text": "Add more descriptive detail to the prose summary of what each agent found"
+  },
+  {
+   "id": "milind:Q157",
+   "action": "set_option",
+   "match": "send the raw",
+   "text": "Send the raw, unprocessed tool results instead of any kind of summary"
+  },
+  {
+   "id": "milind:Q157",
+   "action": "set_option",
+   "match": "the summary is",
+   "text": "Leave it as is; the summary is adequate input for the synthesis agent"
+  },
+  {
+   "id": "milind:Q157",
+   "action": "set_option",
+   "match": "replace the prose",
+   "text": "Replace the prose with structured findings that keep each claim's source and date"
+  },
+  {
+   "id": "milind:Q158",
+   "action": "set_option",
+   "match": "when claude returns",
+   "text": "Terminate on `end_turn` and present the final response"
+  },
+  {
+   "id": "milind:Q158",
+   "action": "set_option",
+   "match": "run one additional",
+   "text": "Run one additional verification pass to confirm the resolution"
+  },
+  {
+   "id": "milind:Q158",
+   "action": "set_option",
+   "match": "continue the loop",
+   "text": "Continue the loop for 2 more iterations as a safety margin"
+  },
+  {
+   "id": "milind:Q159",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "The coordinator should keep iterating until API costs reach a set threshold"
+  },
+  {
+   "id": "milind:Q159",
+   "action": "set_option",
+   "match": "the coordinator is",
+   "text": "Refine only for actual coverage gaps, not a fixed number of iterations"
+  },
+  {
+   "id": "milind:Q159",
+   "action": "set_option",
+   "match": "5 iterations is",
+   "text": "Nothing; 5 iterations is the recommended minimum for research quality"
+  },
+  {
+   "id": "milind:Q16",
+   "action": "set_option",
+   "match": "customer id issue",
+   "text": "Customer ID, issue summary, root cause, amounts involved, and recommended next actions"
+  },
+  {
+   "id": "milind:Q16",
+   "action": "set_option",
+   "match": "the full conversation",
+   "text": "The full conversation transcript, exported as a PDF and attached to the ticket"
+  },
+  {
+   "id": "milind:Q16",
+   "action": "set_option",
+   "match": "a link to",
+   "text": "A link to the conversation session so the human agent can resume it directly"
+  },
+  {
+   "id": "milind:Q16",
+   "action": "set_option",
+   "match": "only the customer",
+   "text": "Only the customer's account number and a severity rating for prioritization"
+  },
+  {
+   "id": "milind:Q160",
+   "action": "set_option",
+   "match": "run the deletion",
+   "text": "Run the deletion in dry-run mode first, then let the agent proceed on its own"
+  },
+  {
+   "id": "milind:Q160",
+   "action": "set_option",
+   "match": "require file system",
+   "text": "Require a full file system backup before the agent runs any operations"
+  },
+  {
+   "id": "milind:Q160",
+   "action": "set_option",
+   "match": "a human in",
+   "text": "A human checkpoint: list the deletions and wait for explicit confirmation"
+  },
+  {
+   "id": "milind:Q160",
+   "action": "set_option",
+   "match": "allow deletion since",
+   "text": "Allow the deletion, since the agent has determined that it is necessary"
+  },
+  {
+   "id": "milind:Q161",
+   "action": "set_option",
+   "match": "the search executed",
+   "text": "A valid empty result: no matches in this source, so note the gap without retrying"
+  },
+  {
+   "id": "milind:Q161",
+   "action": "set_option",
+   "match": "the subagent failed",
+   "text": "The subagent failed silently, and its null error field cannot be trusted"
+  },
+  {
+   "id": "milind:Q161",
+   "action": "set_option",
+   "match": "the coordinator should",
+   "text": "Retry the search, since empty results from a knowledge base are unusual"
+  },
+  {
+   "id": "milind:Q161",
+   "action": "set_option",
+   "match": "the access_time_ms indicates",
+   "text": "Retry the search, since an access_time_ms of 450 indicates a slow query"
   }
  ],
  "hold": []
