@@ -37265,6 +37265,1160 @@
    "action": "set_option",
    "match": "error true type",
    "text": "`{ \"error\": true, \"type\": 3, \"hint\": \"fix input\", \"field\": \"email\", \"received\": \"not-an-email\" }`"
+  },
+  {
+   "id": "connectry:q-2.3-easy-2",
+   "action": "set_option",
+   "match": "separation of concerns",
+   "text": "Separation of concerns principle"
+  },
+  {
+   "id": "connectry:q-2.3-easy-2",
+   "action": "set_option",
+   "match": "defense in depth",
+   "text": "Defense-in-depth principle"
+  },
+  {
+   "id": "connectry:q-2.3-easy-2",
+   "action": "set_option",
+   "match": "fail fast design",
+   "text": "Fail-fast design principle"
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "set_option",
+   "match": "type tool name",
+   "text": "`{\"type\": \"tool\", \"name\": \"extract_data\"}` on every request"
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "opt",
+   "find": "`{\"type\": \"auto\"}`",
+   "replace": "`{\"type\": \"auto\"}`, letting Claude decide whether to call it"
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "opt",
+   "find": "`{\"type\": \"any\"}`",
+   "replace": "`{\"type\": \"any\"}`, letting Claude choose among available tools"
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "set_option",
+   "match": "no tool_choice is",
+   "text": "No `tool_choice`; the system prompt instruction suffices"
+  },
+  {
+   "id": "connectry:q-2.3-easy-4",
+   "action": "set_option",
+   "match": "the agent s",
+   "text": "The system prompt is too short to describe when each tool should be used"
+  },
+  {
+   "id": "connectry:q-2.3-easy-4",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The context window is too small to hold the conversation history"
+  },
+  {
+   "id": "connectry:q-2.3-easy-4",
+   "action": "set_option",
+   "match": "the tools are",
+   "text": "The tool JSON schemas are missing required parameter definitions"
+  },
+  {
+   "id": "connectry:q-2.3-easy-4",
+   "action": "set_option",
+   "match": "too many tools",
+   "text": "Too many tools make it hard for the model to pick the right one"
+  },
+  {
+   "id": "connectry:q-2.3-hard-1",
+   "action": "set_option",
+   "match": "add input sanitization",
+   "text": "Sanitize market data before it reaches the coordinator, and set `tool_choice: auto` on the `ExecutionAgent` so it decides on its own whether to place an order"
+  },
+  {
+   "id": "connectry:q-2.3-hard-1",
+   "action": "set_option",
+   "match": "set tool_choice type",
+   "text": "Force `tool_choice: {\"type\": \"tool\", \"name\": \"place_order\"}` on the `ExecutionAgent` so orders are placed predictably, and record every decision via `log_decision`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-1",
+   "action": "set_option",
+   "match": "grant the coordinator",
+   "text": "Give the coordinator access to all tools, including `place_order`, so it can intercept and veto erroneous `ExecutionAgent` calls before they execute"
+  },
+  {
+   "id": "connectry:q-2.3-hard-1",
+   "action": "set_option",
+   "match": "isolate the executionagent",
+   "text": "Isolate the `ExecutionAgent`'s context from the `RiskAnalysisAgent`, require human confirmation before any `place_order` call, and limit its tools to `place_order` and `cancel_order`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_option",
+   "match": "auto auto auto",
+   "text": "`[{\"type\":\"auto\"}, {\"type\":\"auto\"}, {\"type\":\"auto\"}]`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_option",
+   "match": "type tool name parse_document any",
+   "text": "`[{\"type\":\"tool\",\"name\":\"parse_document\"}, {\"type\":\"any\"}, {\"type\":\"tool\",\"name\":\"emit_result\"}]`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_option",
+   "match": "any any type",
+   "text": "`[{\"type\":\"any\"}, {\"type\":\"any\"}, {\"type\":\"tool\",\"name\":\"emit_result\"}]`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_option",
+   "match": "type tool name parse_document auto",
+   "text": "`[{\"type\":\"tool\",\"name\":\"parse_document\"}, {\"type\":\"auto\"}, {\"type\":\"tool\",\"name\":\"emit_result\"}]`"
+  },
+  {
+   "id": "connectry:q-2.3-hard-4",
+   "action": "set_option",
+   "match": "alternative y is superior because each",
+   "text": "Alternative Y is better: each subagent has exactly one tool, so within-subagent selection ambiguity disappears entirely"
+  },
+  {
+   "id": "connectry:q-2.3-hard-4",
+   "action": "set_option",
+   "match": "alternative x is",
+   "text": "Alternative X is better: each subagent chooses among only 6 tools, and the coordinator routes among 4 choices instead of 24"
+  },
+  {
+   "id": "connectry:q-2.3-hard-4",
+   "action": "set_option",
+   "match": "both alternatives are",
+   "text": "Both are equivalent: the total number of tools across the system is identical, so overall selection difficulty is the same"
+  },
+  {
+   "id": "connectry:q-2.3-hard-4",
+   "action": "set_option",
+   "match": "alternative y is superior",
+   "text": "Alternative Y is better: more agents can work in parallel, which raises overall throughput with the same set of tools"
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "set_option",
+   "match": "coordinator auto each subagent type",
+   "text": "Coordinator: `auto`; each subagent: `{\"type\": \"tool\", \"name\": \"<its tool>\"}`"
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "set_option",
+   "match": "coordinator any each",
+   "text": "Coordinator: `any`; each subagent: `auto` with its specialized tool available"
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "set_option",
+   "match": "coordinator auto each subagent auto",
+   "text": "Coordinator: `auto`; each subagent: `auto` with its specialized tool available"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "set_option",
+   "match": "project scoped mcp",
+   "text": "Project scope: a `.mcp.json` file at the root of each repository"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "set_option",
+   "match": "system scoped usr",
+   "text": "System scope: a shared config file at `/usr/local/etc/claude/mcp.json`"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "set_option",
+   "match": "environment scoped export",
+   "text": "Environment scope: `export MCP_SERVERS=slack` in each shell profile"
+  },
+  {
+   "id": "connectry:q-2.4-easy-2",
+   "action": "set_option",
+   "match": "user scoped configured",
+   "text": "User scope: `claude mcp add --scope user`, stored in `~/.claude.json`"
+  },
+  {
+   "id": "connectry:q-2.4-hard-4",
+   "action": "set_option",
+   "match": "stdio it is",
+   "text": "stdio — communication stays inside the process boundary and never crosses the network, which makes it the more secure choice."
+  },
+  {
+   "id": "connectry:q-2.4-hard-4",
+   "action": "set_option",
+   "match": "streamable http it operates",
+   "text": "Streamable HTTP — replicas connect over the network to one long-lived server process whose lifecycle is independent of any agent pod."
+  },
+  {
+   "id": "connectry:q-2.4-hard-4",
+   "action": "set_option",
+   "match": "stdio kubernetes can",
+   "text": "stdio — Kubernetes shared memory volumes let multiple agent pods attach to the same stdio server process at the same time."
+  },
+  {
+   "id": "connectry:q-2.4-hard-4",
+   "action": "set_option",
+   "match": "streamable http it",
+   "text": "Streamable HTTP — its built-in load balancing shards connections across server replicas, scaling horizontally without any configuration."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_option",
+   "match": "claude code spawns",
+   "text": "Claude Code spawns the stdio process at session start and owns its lifecycle; after a crash, calls to it fail, so design the agent to handle MCP tool errors."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_option",
+   "match": "claude code keeps",
+   "text": "Claude Code keeps a pool of pre-warmed server processes and swaps in a spare when one exits, so the agent needs no special error handling."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_option",
+   "match": "claude code automatically",
+   "text": "Claude Code answers queued calls from a cache of the server's recent tool results after a crash, so the agent needs no special error handling."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_option",
+   "match": "for stdio servers",
+   "text": "Claude Code spawns a fresh stdio process for every tool call and discards it afterward, so a crash affects only the single in-flight call."
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "set_option",
+   "match": "use bash with",
+   "text": "Use Bash with `sed -n` to find the line number, then pass that line number to Edit as the location of the change"
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "set_option",
+   "match": "use grep with",
+   "text": "Use Grep with context flags to find the function, then widen `old_string` with nearby lines until unique"
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "set_option",
+   "match": "use replace_all true",
+   "text": "Set `replace_all: true` on `return null;` so that all 12 occurrences are changed together in a single Edit call"
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "set_option",
+   "match": "use read to",
+   "text": "Re-read the file with Read, then rewrite it with Write, since Edit cannot handle a non-unique `old_string` at all"
+  },
+  {
+   "id": "connectry:q-2.5-hard-3",
+   "action": "set_option",
+   "match": "set the bash",
+   "text": "Set the Bash timeout to 600,000 ms (10 minutes) and hold all other tool calls until the test run has finished"
+  },
+  {
+   "id": "connectry:q-2.5-hard-3",
+   "action": "set_option",
+   "match": "run the test",
+   "text": "Run the tests with `run_in_background: true`, keep using Read and Grep, and review results once notified"
+  },
+  {
+   "id": "connectry:q-2.5-hard-3",
+   "action": "set_option",
+   "match": "split the test",
+   "text": "Split the test suite into smaller chunks and run each chunk with Bash one after another to stay under the timeout"
+  },
+  {
+   "id": "connectry:q-2.5-hard-3",
+   "action": "set_option",
+   "match": "use grep to",
+   "text": "Use Grep to scan the test files and predict which tests will pass or fail, without actually running the suite"
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "set_option",
+   "match": "use read on",
+   "text": "Use Read on every file one after another, building up a list of findings as each file is processed"
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "set_option",
+   "match": "use glob to",
+   "text": "Use Glob to list all 2,000+ files, then call Grep separately on each single file for each of the three patterns"
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "set_option",
+   "match": "run three parallel",
+   "text": "Run three parallel Grep calls in `files_with_matches` mode with glob filters, then Read only the flagged files"
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "set_option",
+   "match": "use bash with",
+   "text": "Use Bash to run three separate `grep -r` commands, one per pattern, and pipe all results into a summary file"
+  },
+  {
+   "id": "connectry:q-2.5-medium-5",
+   "action": "set_option",
+   "match": "use grep on",
+   "text": "Use Grep on the script file to check its contents first, then decide from that whether to run it"
+  },
+  {
+   "id": "connectry:q-2.5-medium-5",
+   "action": "set_option",
+   "match": "use read to",
+   "text": "Use Read to open the script file and judge from its contents whether it will succeed, without ever running it"
+  },
+  {
+   "id": "connectry:q-2.5-medium-5",
+   "action": "set_option",
+   "match": "use bash with",
+   "text": "Use Bash with `run_in_background: true`, because the task does not need the command's result immediately"
+  },
+  {
+   "id": "connectry:q-2.5-medium-5",
+   "action": "set_option",
+   "match": "use bash to",
+   "text": "Run `bash /scripts/migrate.sh` synchronously with Bash; 10 seconds is within the 2-minute default timeout"
+  },
+  {
+   "id": "connectry:q-3.1-easy-1",
+   "action": "set_option",
+   "match": "claude md in the root",
+   "text": "./CLAUDE.md at the root of each project"
+  },
+  {
+   "id": "connectry:q-3.1-easy-1",
+   "action": "set_option",
+   "match": "claude rules claude",
+   "text": ".claude/rules/CLAUDE.md in the project"
+  },
+  {
+   "id": "connectry:q-3.1-easy-1",
+   "action": "set_option",
+   "match": "claude md in",
+   "text": "~/CLAUDE.md directly in the home directory"
+  },
+  {
+   "id": "connectry:q-3.1-easy-1",
+   "action": "set_option",
+   "match": "claude claude md",
+   "text": "~/.claude/CLAUDE.md in the home folder"
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_option",
+   "match": "store separate rule",
+   "text": "Put rule files under `.claude/rules/`; Claude Code discovers and loads them automatically."
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_option",
+   "match": "place multiple claude",
+   "text": "Place multiple CLAUDE.md files in different subdirectories and combine them into one via symbolic links."
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_option",
+   "match": "create a claude",
+   "text": "Create a CLAUDE.json manifest at the project root that lists the paths of the individual rule files."
+  },
+  {
+   "id": "connectry:q-3.1-easy-4",
+   "action": "set_option",
+   "match": "add each rule",
+   "text": "Register each rule file's path in a `claude.config` array in the project's package.json manifest."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_option",
+   "match": "delete all directory",
+   "text": "Delete all directory-level CLAUDE.md files, merge everything into ./CLAUDE.md, and use YAML `paths` filters on `.claude/rules/` files for path-specific rules."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_option",
+   "match": "replace the entire",
+   "text": "Replace the whole hierarchy with one root CLAUDE.md that holds every rule inline, and delete every `.claude/rules/` file to eliminate import complexity."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_option",
+   "match": "keep all files",
+   "text": "Keep every file as-is but prefix each rule with a priority comment stating its intended scope, and tell developers to read those comments to see what applies."
+  },
+  {
+   "id": "connectry:q-3.1-hard-4",
+   "action": "set_option",
+   "match": "audit the claude",
+   "text": "Remove obsolete or duplicated `.claude/rules/` files, keep only differing rules in backend/CLAUDE.md, move repeated root content into rule files, and drop unwanted user-level overrides."
+  },
+  {
+   "id": "connectry:q-3.1-medium-4",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "No difference: Claude Code reads both files and merges them into one instruction set, so the rule behaves the same in either place."
+  },
+  {
+   "id": "connectry:q-3.1-medium-4",
+   "action": "set_option",
+   "match": "placing it in claude claude md makes",
+   "text": "~/.claude/CLAUDE.md applies it to every project on the machine; ./CLAUDE.md scopes it to that project and shares it with anyone who clones it."
+  },
+  {
+   "id": "connectry:q-3.1-medium-4",
+   "action": "set_option",
+   "match": "placing it in claude md",
+   "text": "./CLAUDE.md turns it into a higher-priority rule that overrides contradicting user-level preferences in every project on the machine."
+  },
+  {
+   "id": "connectry:q-3.1-medium-4",
+   "action": "set_option",
+   "match": "placing it in",
+   "text": "~/.claude/CLAUDE.md means Claude Code applies the rule only in projects where no project-level CLAUDE.md exists, as a fallback."
+  },
+  {
+   "id": "connectry:q-3.2-easy-4",
+   "action": "set_option",
+   "match": "it creates a",
+   "text": "It copies the command file into the user-level commands directory so it is available in every project."
+  },
+  {
+   "id": "connectry:q-3.2-easy-4",
+   "action": "set_option",
+   "match": "it runs the",
+   "text": "It runs the command in an isolated forked context without the current conversation's history."
+  },
+  {
+   "id": "connectry:q-3.2-easy-4",
+   "action": "set_option",
+   "match": "it forks the",
+   "text": "It forks the current git repository into a separate branch before the command starts executing."
+  },
+  {
+   "id": "connectry:q-3.2-easy-4",
+   "action": "set_option",
+   "match": "it enables the",
+   "text": "It lets the command spawn several parallel subagents that each work on one part of the overall task."
+  },
+  {
+   "id": "connectry:q-3.2-medium-4",
+   "action": "set_option",
+   "match": "claude returns an",
+   "text": "Claude Code stops with an error message stating that `$ARGUMENTS` is a required argument for the command."
+  },
+  {
+   "id": "connectry:q-3.2-medium-4",
+   "action": "set_option",
+   "match": "the arguments placeholder",
+   "text": "`$ARGUMENTS` is replaced with an empty string, and Claude runs the prompt with that empty substitution."
+  },
+  {
+   "id": "connectry:q-3.2-medium-4",
+   "action": "set_option",
+   "match": "claude prompts the",
+   "text": "Claude Code prompts the user interactively for the missing argument before sending the prompt."
+  },
+  {
+   "id": "connectry:q-3.2-medium-4",
+   "action": "set_option",
+   "match": "the command is",
+   "text": "The command is skipped entirely, and nothing is sent to Claude until an argument is supplied."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "set_option",
+   "match": "a file with no frontmatter is never",
+   "text": "A rule file without frontmatter is never loaded; a file with `paths:` is loaded in every session."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "set_option",
+   "match": "a file with no frontmatter is",
+   "text": "A file without frontmatter applies to every file; a `paths:` file only to files matching its glob patterns."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "set_option",
+   "match": "both files are",
+   "text": "Both files are always loaded; the `paths:` field only documents intent and has no effect on loading."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "set_option",
+   "match": "a file with no",
+   "text": "A file without frontmatter applies only to the root directory; a `paths:` file applies recursively below it."
+  },
+  {
+   "id": "connectry:q-3.3-easy-4",
+   "action": "set_option",
+   "match": "rename the file",
+   "text": "Rename the file to `react-rules.tsx.md` so its name signals the `.tsx` scope."
+  },
+  {
+   "id": "connectry:q-3.3-easy-4",
+   "action": "set_option",
+   "match": "move the file",
+   "text": "Move the file into a `tsx/` subdirectory of `.claude/rules/` to scope it to `.tsx` files."
+  },
+  {
+   "id": "connectry:q-3.3-easy-4",
+   "action": "set_option",
+   "match": "add a yaml frontmatter block at the top of the file with a",
+   "text": "Add YAML frontmatter at the top with a `paths:` list containing `**/*.tsx`."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "set_option",
+   "match": "only migration helpers",
+   "text": "Only `migration-helpers.md` is active because its glob is the most specific match; no tension exists in this setup."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "set_option",
+   "match": "all three sources",
+   "text": "All three are active; `strict-null-checks.md` enforces strict null rules that contradict the `src/legacy/CLAUDE.md` migration guidance."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "set_option",
+   "match": "src legacy claude",
+   "text": "`src/legacy/CLAUDE.md` overrides both `.claude/rules/` files because directory-level CLAUDE.md files take higher precedence."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "set_option",
+   "match": "strict null checks",
+   "text": "Both rule files are active, but `src/legacy/CLAUDE.md` is ignored because `.claude/rules/` files take precedence over it."
+  },
+  {
+   "id": "connectry:q-3.3-hard-4",
+   "action": "set_option",
+   "match": "four files load",
+   "text": "Four files load faster than one file with four patterns, which noticeably improves Claude's response time."
+  },
+  {
+   "id": "connectry:q-3.3-hard-4",
+   "action": "set_option",
+   "match": "four separate files allow",
+   "text": "Each rule set can be versioned, toggled, or updated alone, and hook rules never contaminate API context."
+  },
+  {
+   "id": "connectry:q-3.3-hard-4",
+   "action": "set_option",
+   "match": "one file with",
+   "text": "One file with four `paths:` entries would make Claude apply all four rule sets to every file in the project."
+  },
+  {
+   "id": "connectry:q-3.3-hard-4",
+   "action": "set_option",
+   "match": "four separate files",
+   "text": "Separate files are required because Claude reads only the first `paths:` entry in a rule file's frontmatter."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "set_option",
+   "match": "only the most",
+   "text": "Only the most specific source, `src/api/CLAUDE.md`, is used; the other two are suppressed for this file."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "set_option",
+   "match": "all three are",
+   "text": "All three load additively: root `CLAUDE.md` as the baseline, plus `src/api/CLAUDE.md` and the path-matched `api-rules.md`."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "set_option",
+   "match": "claude rules api",
+   "text": "`.claude/rules/api-rules.md` takes the highest precedence and overrides both CLAUDE.md files for matching paths."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "set_option",
+   "match": "directory level claude",
+   "text": "Directory-level CLAUDE.md files load first and always override any `.claude/rules/` files that match the same path."
+  },
+  {
+   "id": "connectry:q-3.3-medium-5",
+   "action": "set_option",
+   "match": "yaml frontmatter does",
+   "text": "YAML frontmatter does not support more than three entries in a `paths:` list, so the extra patterns are dropped."
+  },
+  {
+   "id": "connectry:q-3.3-medium-5",
+   "action": "set_option",
+   "match": "the rule file",
+   "text": "The patterns match nearly every file, so it acts like a rule with no frontmatter; conditional loading is moot."
+  },
+  {
+   "id": "connectry:q-3.3-medium-5",
+   "action": "set_option",
+   "match": "using wildcards in",
+   "text": "Using `**` wildcards in `paths:` patterns causes noticeable performance degradation in large, deep codebases."
+  },
+  {
+   "id": "connectry:q-3.3-medium-5",
+   "action": "set_option",
+   "match": "the paths field",
+   "text": "The `paths:` field must contain absolute file paths; glob patterns like these are not evaluated."
+  },
+  {
+   "id": "connectry:q-3.4-easy-2",
+   "action": "set_option",
+   "match": "direct execution because",
+   "text": "Direct execution, because experienced architects know OAuth patterns well enough to implement without planning."
+  },
+  {
+   "id": "connectry:q-3.4-easy-2",
+   "action": "set_option",
+   "match": "direct execution starting",
+   "text": "Direct execution, starting with the database schema and then working outward to the other layers."
+  },
+  {
+   "id": "connectry:q-3.4-easy-2",
+   "action": "set_option",
+   "match": "plan mode because",
+   "text": "Plan mode, because the multi-system scope and irreversibility make upfront planning essential."
+  },
+  {
+   "id": "connectry:q-3.4-easy-2",
+   "action": "set_option",
+   "match": "direct execution with",
+   "text": "Direct execution, with a rollback script prepared in advance in case the migration goes wrong."
+  },
+  {
+   "id": "connectry:q-3.4-easy-3",
+   "action": "set_option",
+   "match": "the task is read",
+   "text": "The task is read-only and therefore carries no risk that upfront planning could reduce."
+  },
+  {
+   "id": "connectry:q-3.4-easy-3",
+   "action": "set_option",
+   "match": "the task is simple",
+   "text": "The task is simple and well-defined: one field, one migration file, and a clearly bounded scope."
+  },
+  {
+   "id": "connectry:q-3.4-easy-3",
+   "action": "set_option",
+   "match": "plan mode is",
+   "text": "Plan mode is reserved for architectural decisions, and adding a field is an ordinary feature task."
+  },
+  {
+   "id": "connectry:q-3.4-easy-3",
+   "action": "set_option",
+   "match": "plan mode requires",
+   "text": "Plan mode is only justified when a task affects at least five files, and this one touches two."
+  },
+  {
+   "id": "connectry:q-3.4-easy-4",
+   "action": "set_option",
+   "match": "plan mode because any",
+   "text": "Plan mode, because any refactor that touches multiple files requires a documented plan up front."
+  },
+  {
+   "id": "connectry:q-3.4-easy-4",
+   "action": "set_option",
+   "match": "direct execution because",
+   "text": "Direct execution: the refactor is clearly scoped to four known files with no design ambiguity."
+  },
+  {
+   "id": "connectry:q-3.4-easy-4",
+   "action": "set_option",
+   "match": "direct execution only",
+   "text": "Direct execution, but only after the developer confirms that no other files import the function."
+  },
+  {
+   "id": "connectry:q-3.4-hard-1",
+   "action": "set_option",
+   "match": "direct execution is",
+   "text": "Direct execution, because CI/CD, Docker, and Kubernetes are well-documented technologies with abundant examples."
+  },
+  {
+   "id": "connectry:q-3.4-hard-1",
+   "action": "set_option",
+   "match": "plan mode is warranted because",
+   "text": "Plan mode: three migration tracks over 12 services, Helm is new to the team, and bad sequencing risks outages."
+  },
+  {
+   "id": "connectry:q-3.4-hard-1",
+   "action": "set_option",
+   "match": "plan mode is",
+   "text": "Plan mode, but only after directly executing one microservice as a proof of concept that informs the plan."
+  },
+  {
+   "id": "connectry:q-3.4-hard-1",
+   "action": "set_option",
+   "match": "the explore subagent",
+   "text": "The Explore subagent alone suffices; once it maps the 12 services, Claude can execute directly without a plan."
+  },
+  {
+   "id": "connectry:q-3.4-hard-2",
+   "action": "set_option",
+   "match": "enter plan mode",
+   "text": "Enter plan mode immediately and generate a comprehensive cleanup plan from common code-quality heuristics."
+  },
+  {
+   "id": "connectry:q-3.4-hard-2",
+   "action": "set_option",
+   "match": "begin direct execution",
+   "text": "Start direct execution by removing unused imports and dead code across all 200 files right away."
+  },
+  {
+   "id": "connectry:q-3.4-hard-2",
+   "action": "set_option",
+   "match": "use the explore",
+   "text": "Use the Explore subagent, then plan mode to set scope and priorities, with approval before any edits."
+  },
+  {
+   "id": "connectry:q-3.4-hard-2",
+   "action": "set_option",
+   "match": "refuse the task",
+   "text": "Refuse the task, because 'clean up the codebase' is too vague to act on safely in a production system."
+  },
+  {
+   "id": "connectry:q-3.4-hard-3",
+   "action": "set_option",
+   "match": "the senior engineer",
+   "text": "The senior engineer is right: planning overhead is negligible, so its benefit always outweighs its cost."
+  },
+  {
+   "id": "connectry:q-3.4-hard-3",
+   "action": "set_option",
+   "match": "the junior engineer",
+   "text": "The junior engineer is right: rapid direct iteration is always faster than planning, even for complex tasks."
+  },
+  {
+   "id": "connectry:q-3.4-hard-3",
+   "action": "set_option",
+   "match": "both are wrong",
+   "text": "Both are wrong: plan for multi-step, cross-cutting, or high-risk tasks; execute directly when simple, bounded, and low-risk."
+  },
+  {
+   "id": "connectry:q-3.4-hard-3",
+   "action": "set_option",
+   "match": "plan mode should",
+   "text": "Neither is right: choose plan mode by file count, so any task touching more than five files warrants it."
+  },
+  {
+   "id": "connectry:q-3.4-hard-4",
+   "action": "set_option",
+   "match": "direct execution starting",
+   "text": "Direct execution, starting with the existing WebSocket layer and discovering OT requirements iteratively along the way."
+  },
+  {
+   "id": "connectry:q-3.4-hard-4",
+   "action": "set_option",
+   "match": "plan mode immediately",
+   "text": "Plan mode immediately, generating a plan from the feature description without investigating the codebase first."
+  },
+  {
+   "id": "connectry:q-3.4-hard-4",
+   "action": "set_option",
+   "match": "explore subagent to",
+   "text": "Explore the WebSocket and persistence layers, then use plan mode for OT, delta schema, and sync, with checkpoints."
+  },
+  {
+   "id": "connectry:q-3.4-hard-4",
+   "action": "set_option",
+   "match": "direct execution using",
+   "text": "Direct execution using an off-the-shelf OT library, since choosing a library removes the main source of complexity."
+  },
+  {
+   "id": "connectry:q-3.4-medium-2",
+   "action": "set_option",
+   "match": "direct execution is appropriate because tax",
+   "text": "Direct execution fits because tax logic is always simple; plan mode would only add value for complex tax rules."
+  },
+  {
+   "id": "connectry:q-3.4-medium-2",
+   "action": "set_option",
+   "match": "direct execution is",
+   "text": "Direct execution fits: the bug is located, the fix is given, and the scope is one function; planning only adds latency."
+  },
+  {
+   "id": "connectry:q-3.4-medium-2",
+   "action": "set_option",
+   "match": "plan mode is",
+   "text": "Plan mode is actually warranted here, because tax calculations touch financial data and are therefore high-stakes work."
+  },
+  {
+   "id": "connectry:q-3.4-medium-2",
+   "action": "set_option",
+   "match": "neither mode applies",
+   "text": "Neither mode applies; the developer should make the fix themselves since they already know the correct formula."
+  },
+  {
+   "id": "connectry:q-3.4-medium-3",
+   "action": "set_option",
+   "match": "immediately enter plan",
+   "text": "Enter plan mode right away and produce a plan from reasonable defaults for all of the unspecified parameters."
+  },
+  {
+   "id": "connectry:q-3.4-medium-3",
+   "action": "set_option",
+   "match": "begin direct execution",
+   "text": "Start direct execution with sensible defaults for every parameter the developer left unspecified."
+  },
+  {
+   "id": "connectry:q-3.4-medium-3",
+   "action": "set_option",
+   "match": "use the explore",
+   "text": "Use the Explore subagent on the middleware and routes, then ask clarifying questions on open requirements."
+  },
+  {
+   "id": "connectry:q-3.4-medium-3",
+   "action": "set_option",
+   "match": "refuse the task",
+   "text": "Decline to start until the developer has fully specified every parameter, including limits and route scope."
+  },
+  {
+   "id": "connectry:q-3.4-medium-4",
+   "action": "set_option",
+   "match": "direct execution starting",
+   "text": "Direct execution, starting with the largest service class and then proceeding through the remaining files one by one."
+  },
+  {
+   "id": "connectry:q-3.4-medium-4",
+   "action": "set_option",
+   "match": "run the explore",
+   "text": "Map all SQL usage with the Explore subagent, then use plan mode to define the interface, migration order, and rollback strategy."
+  },
+  {
+   "id": "connectry:q-3.4-medium-4",
+   "action": "set_option",
+   "match": "plan mode immediately",
+   "text": "Plan mode immediately, generating a generic repository-pattern template without investigating the codebase first."
+  },
+  {
+   "id": "connectry:q-3.4-medium-4",
+   "action": "set_option",
+   "match": "ask the developer",
+   "text": "Ask the developer to produce a complete list of all 40+ affected files before Claude begins any of the work."
+  },
+  {
+   "id": "connectry:q-3.4-medium-5",
+   "action": "set_option",
+   "match": "both warrant plan",
+   "text": "Both tasks warrant plan mode, because each one changes the database model and therefore carries schema risk."
+  },
+  {
+   "id": "connectry:q-3.4-medium-5",
+   "action": "set_option",
+   "match": "task 1 warrants",
+   "text": "Task 1 needs plan mode because API changes are public contracts; Task 2 is direct, since event sourcing is well understood."
+  },
+  {
+   "id": "connectry:q-3.4-medium-5",
+   "action": "set_option",
+   "match": "task 1 is",
+   "text": "Task 1 is direct (bounded two-file change); Task 2 needs plan mode (architectural shift, broad scope, cascading risk)."
+  },
+  {
+   "id": "connectry:q-3.4-medium-5",
+   "action": "set_option",
+   "match": "neither warrants plan",
+   "text": "Neither task warrants plan mode, because both have well-known solutions that Claude can apply directly."
+  },
+  {
+   "id": "connectry:q-3.5-easy-1",
+   "action": "set_option",
+   "match": "discard the conversation",
+   "text": "Discard the conversation entirely and start over from scratch with a newly written system prompt."
+  },
+  {
+   "id": "connectry:q-3.5-easy-1",
+   "action": "set_option",
+   "match": "provide specific feedback",
+   "text": "Name the O(n²) bottleneck specifically and ask for a more efficient algorithm such as quicksort or mergesort."
+  },
+  {
+   "id": "connectry:q-3.5-easy-1",
+   "action": "set_option",
+   "match": "add more examples",
+   "text": "Add more examples of unrelated sorting problems to the prompt so that Claude has more surrounding context to work from."
+  },
+  {
+   "id": "connectry:q-3.5-easy-1",
+   "action": "set_option",
+   "match": "increase the temperature",
+   "text": "Increase the temperature parameter so Claude explores a wider variety of possible solutions."
+  },
+  {
+   "id": "connectry:q-3.5-easy-2",
+   "action": "set_option",
+   "match": "describe the tone",
+   "text": "Describe the desired tone in abstract terms, such as 'professional yet friendly' and 'confident'."
+  },
+  {
+   "id": "connectry:q-3.5-easy-2",
+   "action": "set_option",
+   "match": "provide two or",
+   "text": "Include two or three approved descriptions as input/output examples of format and voice."
+  },
+  {
+   "id": "connectry:q-3.5-easy-2",
+   "action": "set_option",
+   "match": "append a long",
+   "text": "Append a long list of adjectives that together describe the brand's overall personality and voice."
+  },
+  {
+   "id": "connectry:q-3.5-easy-2",
+   "action": "set_option",
+   "match": "ask claude which",
+   "text": "Ask Claude which tone it would recommend for the brand, then simply accept whatever it suggests."
+  },
+  {
+   "id": "connectry:q-3.5-easy-3",
+   "action": "set_option",
+   "match": "combining all tasks",
+   "text": "Combining all tasks into one prompt maximizes efficiency and should be the standard approach for such work."
+  },
+  {
+   "id": "connectry:q-3.5-easy-3",
+   "action": "set_option",
+   "match": "the developer should start",
+   "text": "Start simple, for example with the architecture alone, verify it, then add complexity in later turns."
+  },
+  {
+   "id": "connectry:q-3.5-easy-3",
+   "action": "set_option",
+   "match": "claude performs better",
+   "text": "Claude performs best when given the full specification upfront, so this single-prompt approach is optimal."
+  },
+  {
+   "id": "connectry:q-3.5-easy-3",
+   "action": "set_option",
+   "match": "the developer should",
+   "text": "The developer should first ask Claude to estimate a complexity score before deciding how to go on."
+  },
+  {
+   "id": "connectry:q-3.5-easy-4",
+   "action": "set_option",
+   "match": "simply say try",
+   "text": "Simply reply 'Try again' without adding any further context about what was wrong with it."
+  },
+  {
+   "id": "connectry:q-3.5-easy-4",
+   "action": "set_option",
+   "match": "tell claude the",
+   "text": "Tell Claude the email is 'not quite right' and ask it to rewrite the draft in another way."
+  },
+  {
+   "id": "connectry:q-3.5-easy-4",
+   "action": "set_option",
+   "match": "point out specifically",
+   "text": "Say the tone is too formal, quote phrases to change, and describe the target register."
+  },
+  {
+   "id": "connectry:q-3.5-easy-4",
+   "action": "set_option",
+   "match": "clear the conversation",
+   "text": "Clear the conversation and rewrite the original request from scratch, without any examples."
+  },
+  {
+   "id": "connectry:q-3.5-hard-1",
+   "action": "set_option",
+   "match": "continue refining stage",
+   "text": "Keep refining Stage 3's prompt with ever more specific instructions until the misrepresentation finally stops."
+  },
+  {
+   "id": "connectry:q-3.5-hard-1",
+   "action": "set_option",
+   "match": "replace stage 3",
+   "text": "Replace Stage 3 with a retrieval-augmented generation (RAG) step so that its output is better grounded in sources."
+  },
+  {
+   "id": "connectry:q-3.5-hard-1",
+   "action": "set_option",
+   "match": "investigate whether the",
+   "text": "Check whether Stage 2's structured output is precise enough for Stage 3, and restructure its schema first if not."
+  },
+  {
+   "id": "connectry:q-3.5-hard-1",
+   "action": "set_option",
+   "match": "add a fourth",
+   "text": "Add a fourth stage that post-processes Stage 3's output and corrects any misrepresentations it finds."
+  },
+  {
+   "id": "connectry:q-3.5-hard-2",
+   "action": "set_option",
+   "match": "high precision with low recall indicates the assistant is over",
+   "text": "High precision with low recall means the assistant is over-cautious, so the prompt should be made more restrictive."
+  },
+  {
+   "id": "connectry:q-3.5-hard-2",
+   "action": "set_option",
+   "match": "high precision with low recall indicates",
+   "text": "High precision with low recall means under-caution; add the false negatives as examples annotated with why they need review."
+  },
+  {
+   "id": "connectry:q-3.5-hard-2",
+   "action": "set_option",
+   "match": "the precision recall",
+   "text": "The precision/recall tradeoff is a model limitation that cannot be addressed through prompt engineering at all."
+  },
+  {
+   "id": "connectry:q-3.5-hard-2",
+   "action": "set_option",
+   "match": "the engineer should",
+   "text": "The engineer should add more 'approved' examples to balance the dataset before running further iterations."
+  },
+  {
+   "id": "connectry:q-3.5-hard-3",
+   "action": "set_option",
+   "match": "limit the agent",
+   "text": "Cap the agent at a maximum of five refinement cycles, regardless of the quality of its output."
+  },
+  {
+   "id": "connectry:q-3.5-hard-3",
+   "action": "set_option",
+   "match": "implement a checkpointing",
+   "text": "Check each cycle against a fixed rubric and roll back to the last passing checkpoint on regression."
+  },
+  {
+   "id": "connectry:q-3.5-hard-3",
+   "action": "set_option",
+   "match": "give the agent",
+   "text": "Give the agent the full conversation history so it can refer back to its earlier, better versions of the contract."
+  },
+  {
+   "id": "connectry:q-3.5-hard-3",
+   "action": "set_option",
+   "match": "replace the self",
+   "text": "Replace self-review with a separate critic agent that runs in a different conversation context."
+  },
+  {
+   "id": "connectry:q-3.5-hard-4",
+   "action": "set_option",
+   "match": "human evaluation is",
+   "text": "Human evaluation is subjective and should be disregarded whenever automated metrics show high performance."
+  },
+  {
+   "id": "connectry:q-3.5-hard-4",
+   "action": "set_option",
+   "match": "rouge is the",
+   "text": "ROUGE is the gold standard for summarization; increase the weight of ROUGE-L so it also captures readability."
+  },
+  {
+   "id": "connectry:q-3.5-hard-4",
+   "action": "set_option",
+   "match": "the automated metric",
+   "text": "ROUGE misses readability; make human or rubric-based readability judgments a primary signal in the test loop."
+  },
+  {
+   "id": "connectry:q-3.5-hard-4",
+   "action": "set_option",
+   "match": "the team should",
+   "text": "The team should add more ground-truth summaries to the test set so that the ROUGE metric becomes more reliable."
+  },
+  {
+   "id": "connectry:q-3.5-medium-1",
+   "action": "set_option",
+   "match": "add be thorough",
+   "text": "Add 'Be thorough' to the prompt so that Claude asks more questions before it produces any schema."
+  },
+  {
+   "id": "connectry:q-3.5-medium-1",
+   "action": "set_option",
+   "match": "explicitly instruct claude",
+   "text": "System-prompt Claude to ask about domain, scale, and access patterns, and to wait for answers first."
+  },
+  {
+   "id": "connectry:q-3.5-medium-1",
+   "action": "set_option",
+   "match": "include a sample",
+   "text": "Include a sample schema in the prompt so Claude can model the level of detail that is expected of it."
+  },
+  {
+   "id": "connectry:q-3.5-medium-1",
+   "action": "set_option",
+   "match": "use a higher",
+   "text": "Use a higher temperature so that Claude is more likely to output questions rather than a full schema."
+  },
+  {
+   "id": "connectry:q-3.5-medium-2",
+   "action": "set_option",
+   "match": "the team should only",
+   "text": "The team should show Claude only the passing cases so it learns what correct behavior looks like."
+  },
+  {
+   "id": "connectry:q-3.5-medium-2",
+   "action": "set_option",
+   "match": "the failing test",
+   "text": "Failing tests give objective feedback that pinpoints specific gaps, enabling targeted fixes."
+  },
+  {
+   "id": "connectry:q-3.5-medium-2",
+   "action": "set_option",
+   "match": "because 70 of",
+   "text": "Since 70% of the tests pass, the implementation is acceptable and needs no further refinement."
+  },
+  {
+   "id": "connectry:q-3.5-medium-2",
+   "action": "set_option",
+   "match": "the team should increase",
+   "text": "The team should grow the suite to 200 test cases before refining, to ensure statistical significance."
+  },
+  {
+   "id": "connectry:q-3.5-medium-3",
+   "action": "set_option",
+   "match": "continue iterating six",
+   "text": "Keep iterating; six rounds is not enough, and ten rounds is a common threshold before considering a restart."
+  },
+  {
+   "id": "connectry:q-3.5-medium-3",
+   "action": "set_option",
+   "match": "evaluate whether the",
+   "text": "Check whether the prompt's framing causes the flaw and rewrite it with a flat example plus a negative example."
+  },
+  {
+   "id": "connectry:q-3.5-medium-3",
+   "action": "set_option",
+   "match": "accept the nested",
+   "text": "Accept the nested structure, since it is functionally equivalent, and document the behavior for downstream consumers."
+  },
+  {
+   "id": "connectry:q-3.5-medium-3",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a different Claude model and check whether the preference for deeply nested output changes."
+  },
+  {
+   "id": "connectry:q-3.5-medium-4",
+   "action": "set_option",
+   "match": "the interview pattern forces",
+   "text": "The interview pattern makes Claude produce output faster by skipping the planning phase that would come first."
+  },
+  {
+   "id": "connectry:q-3.5-medium-4",
+   "action": "set_option",
+   "match": "the interview pattern allows",
+   "text": "Claude asks about unknowns the manager hasn't considered, like target users and goals, before committing to a plan."
+  },
+  {
+   "id": "connectry:q-3.5-medium-4",
+   "action": "set_option",
+   "match": "the interview pattern is",
+   "text": "The interview pattern is required by the Anthropic API whenever the user is not a domain expert."
+  },
+  {
+   "id": "connectry:q-3.5-medium-4",
+   "action": "set_option",
+   "match": "the interview pattern instructs",
+   "text": "The interview pattern has Claude produce several alternative plans so the product manager can pick one."
   }
  ],
  "hold": []
