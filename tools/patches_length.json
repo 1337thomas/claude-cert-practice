@@ -22245,6 +22245,1223 @@
    "action": "set_option",
    "match": "A single Bash",
    "text": "A single Bash command running `sed -i` across all files to perform the replacement."
+  },
+  {
+   "id": "milind:Q480",
+   "action": "set_option",
+   "match": "maintain two separate",
+   "text": "Maintain two separate `.mcp.json` files, one for local development and one for CI/CD, and swap them manually"
+  },
+  {
+   "id": "milind:Q480",
+   "action": "set_option",
+   "match": "hard code us east 1 in",
+   "text": "Hard-code `us-east-1` in `.mcp.json` and override it in CI/CD with a separate pipeline-specific config file"
+  },
+  {
+   "id": "milind:Q480",
+   "action": "set_option",
+   "match": "use environment variable",
+   "text": "Use `${AWS_REGION}` expansion in `.mcp.json` and set `AWS_REGION` per environment in the shell or CI/CD"
+  },
+  {
+   "id": "milind:Q480",
+   "action": "set_option",
+   "match": "store the region",
+   "text": "Store the region in the MCP server code itself and build and deploy a separate server image per environment"
+  },
+  {
+   "id": "milind:Q481",
+   "action": "set_option",
+   "match": "return error slotunavailable",
+   "text": "Return `{\"error\": \"SlotUnavailable\", \"requested_slot\": \"14:00\", \"next_available_slots\": [\"15:00\", \"16:00\"]}`"
+  },
+  {
+   "id": "milind:Q481",
+   "action": "set_option",
+   "match": "return success false code",
+   "text": "Return `{\"success\": false, \"code\": 409}` so the agent sees the standard HTTP conflict status for the slot"
+  },
+  {
+   "id": "milind:Q481",
+   "action": "set_option",
+   "match": "return success false retry",
+   "text": "Return `{\"success\": false, \"retry\": true}` to tell the agent the booking may succeed if it tries again"
+  },
+  {
+   "id": "milind:Q481",
+   "action": "set_option",
+   "match": "raise an exception",
+   "text": "Raise a `SlotBookedException` from the tool and let the agent catch it and decide how to proceed on its own"
+  },
+  {
+   "id": "milind:Q483",
+   "action": "set_option",
+   "match": "rename translate_text to",
+   "text": "Rename `translate_text` to `convert_language` so the word \"translate\" no longer attracts summary-in-another-language requests"
+  },
+  {
+   "id": "milind:Q483",
+   "action": "set_option",
+   "match": "merge both tools",
+   "text": "Merge both tools into a single `process_text` tool with a `mode` parameter that selects translation or summarization"
+  },
+  {
+   "id": "milind:Q483",
+   "action": "set_option",
+   "match": "add to translate_text s",
+   "text": "Add to `translate_text`'s description: \"Keeps full content in another language; for condensed output, use summarize_text.\""
+  },
+  {
+   "id": "milind:Q484",
+   "action": "set_option",
+   "match": "github server project",
+   "text": "GitHub server: each project's `.mcp.json` (project scope). Jira server: `~/.claude.json` (user scope)."
+  },
+  {
+   "id": "milind:Q484",
+   "action": "set_option",
+   "match": "both servers claude json",
+   "text": "Both servers: `~/.claude.json` (user scope), so one central file manages them for every project."
+  },
+  {
+   "id": "milind:Q484",
+   "action": "set_option",
+   "match": "both servers project",
+   "text": "Both servers: the projects' `.mcp.json` files (project scope), for explicit project-level control."
+  },
+  {
+   "id": "milind:Q484",
+   "action": "set_option",
+   "match": "github server claude json",
+   "text": "GitHub server: `~/.claude.json` (user scope). Jira server: the backend project's `.mcp.json`."
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_option",
+   "match": "tool_choice type auto",
+   "text": "`tool_choice: {\"type\": \"auto\"}` with a system prompt rule to check drug interactions before any medication advice"
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_option",
+   "match": "tool_choice type tool",
+   "text": "`tool_choice: {\"type\": \"tool\", \"name\": \"check_drug_interactions\"}` on the medication-recommendation turn"
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_option",
+   "match": "tool_choice type any",
+   "text": "`tool_choice: {\"type\": \"any\"}` on that turn, forcing a tool call and relying on the model to pick the right tool"
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_option",
+   "match": "remove all other",
+   "text": "Remove all other tools except `check_drug_interactions` from the request during medication-recommendation turns"
+  },
+  {
+   "id": "milind:Q487",
+   "action": "set_option",
+   "match": "return a structured",
+   "text": "Return `{\"error\": \"SyntaxError\", \"file\": \"main.py\", \"line\": 42, \"column\": 8, \"message\": \"invalid syntax\"}`"
+  },
+  {
+   "id": "milind:Q487",
+   "action": "set_option",
+   "match": "strip the ansi",
+   "text": "Strip the ANSI color codes from the raw compiler string and return the cleaned plain-text output exactly as is"
+  },
+  {
+   "id": "milind:Q487",
+   "action": "set_option",
+   "match": "return the error",
+   "text": "Return the compiler output as base64-encoded text so the escape codes cannot be corrupted in transit"
+  },
+  {
+   "id": "milind:Q487",
+   "action": "set_option",
+   "match": "increase the agent s",
+   "text": "Increase the agent's context window so it has more room to parse the full raw compiler output"
+  },
+  {
+   "id": "milind:Q488",
+   "action": "set_option",
+   "match": "all three servers in claude json",
+   "text": "All three servers in `~/.claude.json` (user scope), configured identically for all 10 developers."
+  },
+  {
+   "id": "milind:Q488",
+   "action": "set_option",
+   "match": "documentation server in claude json",
+   "text": "Docs server in `~/.claude.json`; design-asset and data-catalog servers in their own project's `.mcp.json`."
+  },
+  {
+   "id": "milind:Q488",
+   "action": "set_option",
+   "match": "all three servers in each",
+   "text": "All three servers in each project's `.mcp.json`, for explicit project-level control over every server."
+  },
+  {
+   "id": "milind:Q488",
+   "action": "set_option",
+   "match": "documentation server in",
+   "text": "Docs server in both projects' `.mcp.json` files; design-asset and data-catalog servers in `~/.claude.json`."
+  },
+  {
+   "id": "milind:Q489",
+   "action": "set_option",
+   "match": "limit the tool",
+   "text": "Add a system prompt instruction that limits the tool to at most 3 calls per conversation session."
+  },
+  {
+   "id": "milind:Q489",
+   "action": "set_option",
+   "match": "remove the tool",
+   "text": "Remove the tool entirely and have the agent answer support questions from its own training knowledge."
+  },
+  {
+   "id": "milind:Q489",
+   "action": "set_option",
+   "match": "change the tool",
+   "text": "Rename the tool to `search_once` so the name itself signals that one call per conversation is expected."
+  },
+  {
+   "id": "milind:Q489",
+   "action": "set_option",
+   "match": "add to the",
+   "text": "Add to the description: \"Use targeted queries; combine related sub-questions. Rate-limited to 5 calls/minute.\""
+  },
+  {
+   "id": "milind:Q49",
+   "action": "set_option",
+   "match": "better security because",
+   "text": "Better security, because subagents can no longer read or tamper with each other's intermediate outputs"
+  },
+  {
+   "id": "milind:Q49",
+   "action": "set_option",
+   "match": "consistent error handling",
+   "text": "Consistent error handling, observability, and controlled information flow across inter-agent messages"
+  },
+  {
+   "id": "milind:Q49",
+   "action": "set_option",
+   "match": "reduced api costs",
+   "text": "Lower API costs, because routing through one coordinator reduces the total number of model calls made"
+  },
+  {
+   "id": "milind:Q49",
+   "action": "set_option",
+   "match": "faster execution because",
+   "text": "Faster execution, because the coordinator can optimize message routing between subagents in real time"
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_option",
+   "match": "all steps tool_choice type any",
+   "text": "All steps: `tool_choice: {\"type\": \"any\"}`, with system prompt instructions naming the mandatory tools for Steps 2 and 4."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_option",
+   "match": "all steps tool_choice type tool",
+   "text": "All steps: `tool_choice: {\"type\": \"tool\", \"name\": \"validate_schema\"}` so validation is considered on every call."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_option",
+   "match": "steps 1 and 3 tool_choice type auto",
+   "text": "Steps 1 and 3: `{\"type\": \"auto\"}`. Step 2: `{\"type\": \"tool\", \"name\": \"validate_schema\"}`. Step 4: same, `write_to_warehouse`."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_option",
+   "match": "steps 1 and 3 tool_choice",
+   "text": "Steps 1 and 3: `{\"type\": \"any\"}`. Steps 2 and 4: `{\"type\": \"any\"}` plus a system prompt naming the required tool."
+  },
+  {
+   "id": "milind:Q492",
+   "action": "set_option",
+   "match": "added the server",
+   "text": "Copied the server entry into the `.mcp.json` file of every single project directory they work in."
+  },
+  {
+   "id": "milind:Q492",
+   "action": "set_option",
+   "match": "configured the server",
+   "text": "Configured the server in user scope (`~/.claude.json`) instead of the project's `.mcp.json`."
+  },
+  {
+   "id": "milind:Q492",
+   "action": "set_option",
+   "match": "set a global",
+   "text": "Set a global `MCP_GLOBAL_SERVER` environment variable pointing to the shared server config file."
+  },
+  {
+   "id": "milind:Q492",
+   "action": "set_option",
+   "match": "reinstalled the mcp",
+   "text": "Reinstalled the MCP server package for each new project so that it registers itself globally."
+  },
+  {
+   "id": "milind:Q493",
+   "action": "set_option",
+   "match": "add idempotent to",
+   "text": "Rename the tool to `send_notification_idempotent` so the name signals that repeated calls are safe."
+  },
+  {
+   "id": "milind:Q493",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt instruction telling the model not to send an identical notification twice in a row."
+  },
+  {
+   "id": "milind:Q493",
+   "action": "set_option",
+   "match": "remove the tool",
+   "text": "Replace the tool with a `schedule_notification` tool that queues and batches all outgoing sends for later."
+  },
+  {
+   "id": "milind:Q493",
+   "action": "set_option",
+   "match": "add to the",
+   "text": "Add to the description: \"NOT idempotent; each call sends one notification.\" Add a `dedupe_key` parameter."
+  },
+  {
+   "id": "milind:Q494",
+   "action": "set_option",
+   "match": "return error filelocked with",
+   "text": "Return `{\"error\": \"FileLocked\"}` as the complete response, with no additional fields or details at all"
+  },
+  {
+   "id": "milind:Q494",
+   "action": "set_option",
+   "match": "return error filelocked file",
+   "text": "Return `{\"error\": \"FileLocked\", \"locked_by_pid\": 12345, \"retryable\": true, \"retry_after_seconds\": 5}`"
+  },
+  {
+   "id": "milind:Q494",
+   "action": "set_option",
+   "match": "return success false",
+   "text": "Return `{\"success\": false, \"message\": \"Try again later\"}` as a generic, human-readable failure"
+  },
+  {
+   "id": "milind:Q494",
+   "action": "set_option",
+   "match": "return a 503",
+   "text": "Return an HTTP 503 status code so the agent knows the file is only temporarily unavailable"
+  },
+  {
+   "id": "milind:Q494",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and suggested action—giving",
+   "replace": "and, optionally, a suggested action—giving"
+  },
+  {
+   "id": "milind:Q495",
+   "action": "set_option",
+   "match": "pass different tool_choice",
+   "text": "Pass `tool_choice` per API call: `{\"type\": \"auto\"}` for exploration, `{\"type\": \"tool\", \"name\": \"generate_report\"}` for reports."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "set_option",
+   "match": "use tool_choice type tool",
+   "text": "Use `tool_choice: {\"type\": \"tool\", \"name\": \"generate_report\"}` on all calls, since a report is the end goal."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "set_option",
+   "match": "create two separate",
+   "text": "Split it into two agents, one for exploration and one for report generation, each with a fixed tool_choice."
+  },
+  {
+   "id": "milind:Q496",
+   "action": "set_option",
+   "match": "db_password vault secret db password using",
+   "text": "`\"DB_PASSWORD\": \"vault:secret/db#password\"`, resolved at startup through a secrets-manager URI scheme"
+  },
+  {
+   "id": "milind:Q496",
+   "action": "set_option",
+   "match": "db_password null and",
+   "text": "`\"DB_PASSWORD\": null`, relying on the MCP server's own process environment to inject the value at runtime"
+  },
+  {
+   "id": "milind:Q496",
+   "action": "set_option",
+   "match": "db_password redacted as",
+   "text": "`\"DB_PASSWORD\": \"**REDACTED**\"` as a placeholder that a separate deploy-time script fills in later"
+  },
+  {
+   "id": "milind:Q496",
+   "action": "set_option",
+   "match": "db_password db_password using",
+   "text": "`\"DB_PASSWORD\": \"${DB_PASSWORD}\"`, with the value set in the shell environment or CI/CD secrets"
+  },
+  {
+   "id": "milind:Q498",
+   "action": "set_option",
+   "match": "return created false",
+   "text": "Return `{\"created\": false, \"retry\": false}` so the agent knows that retrying the same call will not help"
+  },
+  {
+   "id": "milind:Q498",
+   "action": "set_option",
+   "match": "return an http",
+   "text": "Return an HTTP 422 status code so the agent knows the request was understood but could not be processed"
+  },
+  {
+   "id": "milind:Q498",
+   "action": "set_option",
+   "match": "throw a validationexception",
+   "text": "Throw a `ValidationException` and let the agent catch it and recover through a fallback prompt of its own"
+  },
+  {
+   "id": "milind:Q498",
+   "action": "set_option",
+   "match": "return error validationfailed",
+   "text": "Return `{\"error\": \"ValidationFailed\", \"fields\": {\"email\": \"InvalidFormat\", \"username\": \"AlreadyTaken\"}}`"
+  },
+  {
+   "id": "milind:Q498",
+   "action": "edit",
+   "field": "explanation",
+   "find": "why it failed, and what value was provided",
+   "replace": "and why it failed (optionally, the value that was provided)"
+  },
+  {
+   "id": "milind:Q499",
+   "action": "set_option",
+   "match": "add real time in",
+   "text": "Add \"REAL-TIME\" in all caps to the `get_weather_current` name so the model reads it as live data."
+  },
+  {
+   "id": "milind:Q499",
+   "action": "set_option",
+   "match": "add to get_weather_current s",
+   "text": "Add to `get_weather_current`'s description: \"Live conditions for right now. For later dates, use get_weather_forecast.\""
+  },
+  {
+   "id": "milind:Q499",
+   "action": "set_option",
+   "match": "add to get_weather_forecast s",
+   "text": "Add to `get_weather_forecast`'s description: \"Do not use this tool for questions about today's weather.\""
+  },
+  {
+   "id": "milind:Q499",
+   "action": "set_option",
+   "match": "merge both tools",
+   "text": "Merge both tools into one `get_weather` tool with a `mode` parameter set to \"current\" or \"forecast\"."
+  },
+  {
+   "id": "milind:Q499",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(\"right now,\" \"NOT for future\")",
+   "replace": "(\"right now,\" \"for later dates\")"
+  },
+  {
+   "id": "milind:Q50",
+   "action": "set_option",
+   "match": "compress all tool",
+   "text": "Compress every tool result to 100 characters before it is appended to the conversation history"
+  },
+  {
+   "id": "milind:Q50",
+   "action": "set_option",
+   "match": "spawn subagents for",
+   "text": "Spawn subagents for verbose exploration phases so their tool results stay in isolated contexts"
+  },
+  {
+   "id": "milind:Q50",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Increase the context window size in the API configuration so all 120 results continue to fit"
+  },
+  {
+   "id": "milind:Q50",
+   "action": "set_option",
+   "match": "clear the conversation",
+   "text": "Clear the whole conversation history every 20 tool calls so the window cannot fill up completely"
+  },
+  {
+   "id": "milind:Q500",
+   "action": "set_option",
+   "match": "mcp resources are cheaper",
+   "text": "MCP resources are cheaper to call than MCP tools, so they lower the API cost of listing the reports."
+  },
+  {
+   "id": "milind:Q500",
+   "action": "set_option",
+   "match": "mcp resources can",
+   "text": "MCP resources are cached automatically by the framework, whereas the results of MCP tools are not cached."
+  },
+  {
+   "id": "milind:Q500",
+   "action": "set_option",
+   "match": "mcp resources do",
+   "text": "MCP resources do not require user permissions, which makes them simpler to configure than MCP tools."
+  },
+  {
+   "id": "milind:Q500",
+   "action": "set_option",
+   "match": "mcp resources are designed",
+   "text": "MCP resources are designed as content catalogs; listing reports is a catalog read, not an action."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_option",
+   "match": "any prevents the",
+   "text": "`\"any\"` prevents the agent from using more than one tool per turn, making it unsuitable for retrieval."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_option",
+   "match": "the per workflow approach",
+   "text": "The per-workflow approach lets each workflow run on a different model version with its own settings."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_option",
+   "match": "system prompt rules",
+   "text": "Adversarial user messages can override system prompt rules; forcing `log_modification` via tool_choice is structural."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_option",
+   "match": "any is deprecated",
+   "text": "`\"any\"` is deprecated in the latest API version, so new integrations should not rely on it anymore."
+  },
+  {
+   "id": "milind:Q502",
+   "action": "set_option",
+   "match": "return rows",
+   "text": "Return `{\"rows\": [], \"timeout\": true}` so the agent can tell a timeout apart from an empty result"
+  },
+  {
+   "id": "milind:Q502",
+   "action": "set_option",
+   "match": "return null instead",
+   "text": "Return null instead of an empty array so the agent can tell a timeout apart from an empty result"
+  },
+  {
+   "id": "milind:Q502",
+   "action": "set_option",
+   "match": "throw a timeoutexception",
+   "text": "Throw a `TimeoutException` from the tool and let the agent use its own judgment on what to do next"
+  },
+  {
+   "id": "milind:Q502",
+   "action": "set_option",
+   "match": "return error querytimeout",
+   "text": "Return `{\"error\": \"QueryTimeout\", \"timeout_seconds\": 30, \"retryable\": true, \"suggested_action\": \"split the query\"}`"
+  },
+  {
+   "id": "milind:Q502",
+   "action": "edit",
+   "field": "explanation",
+   "find": "context (which query timed out)",
+   "replace": "context (the timeout limit)"
+  },
+  {
+   "id": "milind:Q504",
+   "action": "set_option",
+   "match": "add cron to",
+   "text": "Add \"cron\" to the tool name and rely on the model's training knowledge of standard cron syntax."
+  },
+  {
+   "id": "milind:Q504",
+   "action": "set_option",
+   "match": "add a validation",
+   "text": "Add a validation step that rejects invalid cron strings and asks the agent to retry the call."
+  },
+  {
+   "id": "milind:Q504",
+   "action": "set_option",
+   "match": "add to the",
+   "text": "Add to the description: \"6-field cron, seconds first, e.g. '0 30 9 * * MON-FRI'. 5-field cron is not supported.\""
+  },
+  {
+   "id": "milind:Q504",
+   "action": "set_option",
+   "match": "replace the cron_expression",
+   "text": "Replace `cron_expression` with six integer parameters (second, minute, hour, etc.) to avoid ambiguity."
+  },
+  {
+   "id": "milind:Q505",
+   "action": "set_option",
+   "match": "raise an exception",
+   "text": "Raise an exception on the first malformed row and halt the entire import until the file is fixed."
+  },
+  {
+   "id": "milind:Q505",
+   "action": "set_option",
+   "match": "return only success",
+   "text": "Return only `{\"success\": true}`, since 950 of the rows were imported into the data warehouse successfully."
+  },
+  {
+   "id": "milind:Q505",
+   "action": "set_option",
+   "match": "return imported_rows 950 and",
+   "text": "Return `{\"imported_rows\": 950}` and log skipped rows to a separate file the agent must read itself."
+  },
+  {
+   "id": "milind:Q505",
+   "action": "set_option",
+   "match": "return imported_rows 950 skipped_rows",
+   "text": "Return `{\"imported_rows\": 950, \"skipped_rows\": 50, \"errors\": [{\"row\": 23, \"reason\": \"MissingField\"}]}`."
+  },
+  {
+   "id": "milind:Q505",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The `warning` field explicitly flags",
+   "replace": "The nonzero `skipped_rows` count explicitly flags"
+  },
+  {
+   "id": "milind:Q506",
+   "action": "set_option",
+   "match": "expose the service",
+   "text": "Expose the catalog as MCP resources the agent can browse, and deployments as MCP tools taking service and environment."
+  },
+  {
+   "id": "milind:Q506",
+   "action": "set_option",
+   "match": "expose everything as",
+   "text": "Expose everything as MCP tools so the agent has one consistent interface for both reading and writing data."
+  },
+  {
+   "id": "milind:Q506",
+   "action": "set_option",
+   "match": "expose the catalog as a",
+   "text": "Expose the catalog as one large tool that returns the full list, then cache that whole result inside the agent's context window."
+  },
+  {
+   "id": "milind:Q506",
+   "action": "set_option",
+   "match": "use mcp resources",
+   "text": "Use MCP resources for deployments so pending ones show up at startup, and use tools only for catalog queries."
+  },
+  {
+   "id": "milind:Q507",
+   "action": "set_option",
+   "match": "cache the tool s",
+   "text": "Cache the tool's response on the client side and invalidate the cached copy on a fixed timer."
+  },
+  {
+   "id": "milind:Q507",
+   "action": "set_option",
+   "match": "expose the open",
+   "text": "Expose the open issue summaries as MCP resources available at connection time, not as a tool."
+  },
+  {
+   "id": "milind:Q507",
+   "action": "set_option",
+   "match": "move the list_open_issues",
+   "text": "Move the `list_open_issues` logic into the system prompt so the issue list sits in every context."
+  },
+  {
+   "id": "milind:Q507",
+   "action": "set_option",
+   "match": "reduce the payload",
+   "text": "Reduce the payload size returned by the tool so its latency impact on each session is smaller."
+  },
+  {
+   "id": "milind:Q508",
+   "action": "set_option",
+   "match": "expose each article",
+   "text": "Expose each article as a tool that accepts a path argument so the agent navigates the hierarchy on demand."
+  },
+  {
+   "id": "milind:Q508",
+   "action": "set_option",
+   "match": "expose the documentation",
+   "text": "Expose domains, topics, and article stubs as MCP resources; fetch full articles via tools when needed."
+  },
+  {
+   "id": "milind:Q508",
+   "action": "set_option",
+   "match": "flatten the hierarchy",
+   "text": "Flatten the hierarchy into a single resource with all article content to minimize what the agent must examine."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "set_option",
+   "match": "use a describe_schema tool so",
+   "text": "Use a `describe_schema` tool so the agent requests schema details only for the tables it actually needs."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "set_option",
+   "match": "use a describe_schema tool but",
+   "text": "Use a `describe_schema` tool but call it automatically in a system prompt hook so the full database schema is preloaded."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "set_option",
+   "match": "expose the database",
+   "text": "Expose the schema (tables, columns, types, relationships) as an MCP resource the agent reads before writing SQL."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "set_option",
+   "match": "embed the schema",
+   "text": "Embed the schema in a static file and include it in the agent's instructions instead of using MCP at all."
+  },
+  {
+   "id": "milind:Q510",
+   "action": "set_option",
+   "match": "the agent s prompt",
+   "text": "The agent's prompt is poorly written; adding few-shot examples will teach it to skip these three calls."
+  },
+  {
+   "id": "milind:Q510",
+   "action": "set_option",
+   "match": "the tools are",
+   "text": "The tools are returning too much data; the fix is to add filtering parameters to every one of the tools."
+  },
+  {
+   "id": "milind:Q510",
+   "action": "set_option",
+   "match": "the reference data",
+   "text": "The data belongs in MCP resources instead of tools, so the agent gets it without exploratory calls."
+  },
+  {
+   "id": "milind:Q510",
+   "action": "set_option",
+   "match": "the agent s context",
+   "text": "The context window is too small; a model with a larger context window would let it cache these results."
+  },
+  {
+   "id": "milind:Q511",
+   "action": "set_option",
+   "match": "resources are for data under",
+   "text": "Resource when the data is under 10 KB; tool result when it is larger, to avoid bloating the payload sent at connection time."
+  },
+  {
+   "id": "milind:Q511",
+   "action": "set_option",
+   "match": "resources are for",
+   "text": "Resource when the data requires authentication; tool result when it is public and any caller can retrieve it."
+  },
+  {
+   "id": "milind:Q511",
+   "action": "set_option",
+   "match": "data should be",
+   "text": "Resource when data is browsable, structural, or slowly changing; tool result when it needs parameters or side effects."
+  },
+  {
+   "id": "milind:Q511",
+   "action": "set_option",
+   "match": "resources are always",
+   "text": "Resource in nearly every case, since it reduces latency; tool result only when a write operation is involved."
+  },
+  {
+   "id": "milind:Q512",
+   "action": "set_option",
+   "match": "no the",
+   "text": "No — the agent can use one MCP server at a time, so the team must first build a gateway that aggregates all three."
+  },
+  {
+   "id": "milind:Q512",
+   "action": "set_option",
+   "match": "no tools",
+   "text": "No — tools from different servers share one namespace, so conflicting tool names must be renamed first."
+  },
+  {
+   "id": "milind:Q512",
+   "action": "set_option",
+   "match": "yes tools",
+   "text": "Yes — tools from all configured MCP servers are available together, so one loop can use Jira, GitHub, and CI."
+  },
+  {
+   "id": "milind:Q512",
+   "action": "set_option",
+   "match": "yes but only",
+   "text": "Yes, but only if all three servers are hosted on the same domain to satisfy MCP browser-origin policies."
+  },
+  {
+   "id": "milind:Q513",
+   "action": "set_option",
+   "match": "one resource per",
+   "text": "One resource per product, because fine granularity gives precise access and avoids loading irrelevant data."
+  },
+  {
+   "id": "milind:Q513",
+   "action": "set_option",
+   "match": "one resource for",
+   "text": "One resource for the entire catalog, because the agent then sees all of the data at connection time with no navigation."
+  },
+  {
+   "id": "milind:Q513",
+   "action": "set_option",
+   "match": "resources organized by",
+   "text": "One resource per top-level category with summary metadata, so the agent sees the structure without the full dataset."
+  },
+  {
+   "id": "milind:Q513",
+   "action": "set_option",
+   "match": "no resources at",
+   "text": "No resources at all, because a fast-changing catalog should be retrieved via tools with caching headers."
+  },
+  {
+   "id": "milind:Q514",
+   "action": "set_option",
+   "match": "parallelize the four",
+   "text": "Parallelize the four tool calls so wall-clock time drops to the duration of the slowest single call."
+  },
+  {
+   "id": "milind:Q514",
+   "action": "set_option",
+   "match": "preload the tool",
+   "text": "Preload the tool results into the system prompt at agent initialization so that no tool calls are needed at all."
+  },
+  {
+   "id": "milind:Q514",
+   "action": "set_option",
+   "match": "expose runbooks services",
+   "text": "Expose runbooks, services, rotations, and escalation policies as MCP resources available at connection time."
+  },
+  {
+   "id": "milind:Q514",
+   "action": "set_option",
+   "match": "increase the agent s",
+   "text": "Increase the agent's tool-call budget so it can run the calls faster without hitting rate limits."
+  },
+  {
+   "id": "milind:Q515",
+   "action": "set_option",
+   "match": "always build custom",
+   "text": "Build a custom MCP server for production use, because community servers cannot be audited for security."
+  },
+  {
+   "id": "milind:Q515",
+   "action": "set_option",
+   "match": "adopt the community",
+   "text": "Adopt the community server, and add the emoji filter as a contributed extension or a thin custom tool layer."
+  },
+  {
+   "id": "milind:Q515",
+   "action": "set_option",
+   "match": "build a fully",
+   "text": "Build a fully custom server from scratch so that the emoji filter and all Slack operations share one codebase."
+  },
+  {
+   "id": "milind:Q515",
+   "action": "set_option",
+   "match": "use the community",
+   "text": "Use the community server with most tools disabled, then re-implement the rest in a custom server."
+  },
+  {
+   "id": "milind:Q517",
+   "action": "set_option",
+   "match": "cache the documentation",
+   "text": "Cache the documentation output and reuse it for 24 hours instead of regenerating it on each run"
+  },
+  {
+   "id": "milind:Q517",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the number of files the skill reads so that each documentation run completes much faster"
+  },
+  {
+   "id": "milind:Q517",
+   "action": "set_option",
+   "match": "run the skill",
+   "text": "Run the skill with a smaller context window so that each documentation run finishes more quickly"
+  },
+  {
+   "id": "milind:Q517",
+   "action": "set_option",
+   "match": "add context fork",
+   "text": "Add `context: fork` so the skill runs in an isolated subagent outside the main conversation"
+  },
+  {
+   "id": "milind:Q518",
+   "action": "set_option",
+   "match": "a single claude md",
+   "text": "A single root CLAUDE.md that lists all three sets of guidelines under separate, clearly labeled section headings"
+  },
+  {
+   "id": "milind:Q518",
+   "action": "set_option",
+   "match": "three separate claude rules",
+   "text": "Three `.claude/rules/` files, each with a `paths` field matching `src/**`, `scripts/**`, or `**/*.test.*`"
+  },
+  {
+   "id": "milind:Q518",
+   "action": "set_option",
+   "match": "one claude md with",
+   "text": "One CLAUDE.md with `if src: ... elif scripts: ... elif test:` conditional logic around each block"
+  },
+  {
+   "id": "milind:Q518",
+   "action": "set_option",
+   "match": "three separate claude md",
+   "text": "Three CLAUDE.md files: one in `src/`, one in `scripts/`, and one in the project root for tests"
+  },
+  {
+   "id": "milind:Q519",
+   "action": "set_option",
+   "match": "run test generation",
+   "text": "Run test generation in a separate session from code review so the two tasks do not share context"
+  },
+  {
+   "id": "milind:Q519",
+   "action": "set_option",
+   "match": "provide the existing",
+   "text": "Give Claude the existing test files as context and ask for tests only for uncovered scenarios"
+  },
+  {
+   "id": "milind:Q519",
+   "action": "set_option",
+   "match": "delete the test",
+   "text": "Delete the test cache before each run so Claude does not reuse previously generated test ideas"
+  },
+  {
+   "id": "milind:Q519",
+   "action": "set_option",
+   "match": "use no test history flag",
+   "text": "Pass the `--no-test-history` flag so Claude ignores earlier test suggestions in the pipeline"
+  },
+  {
+   "id": "milind:Q52",
+   "action": "set_option",
+   "match": "create a shared",
+   "text": "Create a shared authentication service that all three subagents call in parallel at startup"
+  },
+  {
+   "id": "milind:Q52",
+   "action": "set_option",
+   "match": "merge all three",
+   "text": "Merge all three subagents into one so authentication runs only once for the whole task"
+  },
+  {
+   "id": "milind:Q52",
+   "action": "set_option",
+   "match": "remove authentication from",
+   "text": "Remove authentication from the subagents entirely, since the coordinator has already verified the user"
+  },
+  {
+   "id": "milind:Q52",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "Authenticate once in the coordinator and pass the verified identity token to each subagent's prompt"
+  },
+  {
+   "id": "milind:Q520",
+   "action": "set_option",
+   "match": "directory level claude md is",
+   "text": "Directory-level CLAUDE.md by default, since one file per directory is simpler to find and to maintain"
+  },
+  {
+   "id": "milind:Q520",
+   "action": "set_option",
+   "match": "claude rules files are",
+   "text": "`.claude/rules/` files by default, since glob patterns are more flexible than directory placement"
+  },
+  {
+   "id": "milind:Q520",
+   "action": "set_option",
+   "match": "use directory level for",
+   "text": "Directory-level CLAUDE.md files for large projects, and a single root CLAUDE.md for small projects"
+  },
+  {
+   "id": "milind:Q520",
+   "action": "set_option",
+   "match": "use directory level claude md",
+   "text": "Directory CLAUDE.md for standards tied to one directory tree; `.claude/rules/` for a file type across directories"
+  },
+  {
+   "id": "milind:Q521",
+   "action": "set_option",
+   "match": "create a claude md",
+   "text": "Create a separate CLAUDE.md file inside each of the two directories that holds that directory's conventions"
+  },
+  {
+   "id": "milind:Q521",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "Use one rule file whose instructions tell Claude to detect the directory context and pick a framework"
+  },
+  {
+   "id": "milind:Q521",
+   "action": "set_option",
+   "match": "create two separate",
+   "text": "Two `.claude/rules/` files whose `paths` globs are `web/**/*.test.*` for Jest and `api/**/*.py` for pytest"
+  },
+  {
+   "id": "milind:Q521",
+   "action": "set_option",
+   "match": "add both conventions",
+   "text": "Add both conventions to the root CLAUDE.md, each under a comment naming its target directory"
+  },
+  {
+   "id": "milind:Q522",
+   "action": "set_option",
+   "match": "import reduces the",
+   "text": "It reduces the CLAUDE.md file size, so fewer tokens are loaded into context at session start"
+  },
+  {
+   "id": "milind:Q522",
+   "action": "set_option",
+   "match": "import creates a",
+   "text": "It keeps one source of truth: edits to the imported file reach every CLAUDE.md that imports it"
+  },
+  {
+   "id": "milind:Q522",
+   "action": "set_option",
+   "match": "import loads content",
+   "text": "It loads content faster than inline text, because imported files are cached between sessions"
+  },
+  {
+   "id": "milind:Q522",
+   "action": "set_option",
+   "match": "import enables version",
+   "text": "It enables version pinning, so each CLAUDE.md can lock a specific revision of the standards file"
+  },
+  {
+   "id": "milind:Q523",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Ask Claude in the prompt to \"output JSON with severity levels\" for every finding it reports"
+  },
+  {
+   "id": "milind:Q523",
+   "action": "set_option",
+   "match": "post process plain text",
+   "text": "Post-process the plain-text output with a script that extracts severity information per finding"
+  },
+  {
+   "id": "milind:Q523",
+   "action": "set_option",
+   "match": "use format structured",
+   "text": "Use `--format structured --severity-levels error,warning,info` on the claude command line"
+  },
+  {
+   "id": "milind:Q523",
+   "action": "set_option",
+   "match": "define a json",
+   "text": "Define a findings JSON schema and pass it with `--output-format json --json-schema \"$(cat schema.json)\"`"
+  },
+  {
+   "id": "milind:Q524",
+   "action": "set_option",
+   "match": "user level claude md takes",
+   "text": "The user-level CLAUDE.md takes precedence, because personal settings override shared ones"
+  },
+  {
+   "id": "milind:Q524",
+   "action": "set_option",
+   "match": "the most recently",
+   "text": "The most recently edited CLAUDE.md takes precedence, because it reflects the newest intent"
+  },
+  {
+   "id": "milind:Q524",
+   "action": "set_option",
+   "match": "both configurations are",
+   "text": "Both files load; conflicting instructions give unpredictable results, so clarify scope in the project CLAUDE.md"
+  },
+  {
+   "id": "milind:Q524",
+   "action": "set_option",
+   "match": "project level claude md takes",
+   "text": "The project-level CLAUDE.md takes precedence, because team standards override personal ones"
+  },
+  {
+   "id": "milind:Q525",
+   "action": "set_option",
+   "match": "direct execution remove",
+   "text": "Direct execution: remove the endpoint right away, then run the full test suite to see what actually breaks"
+  },
+  {
+   "id": "milind:Q525",
+   "action": "set_option",
+   "match": "direct execution with",
+   "text": "Direct execution: remove the endpoint, with an immediate rollback if any existing tests fail"
+  },
+  {
+   "id": "milind:Q525",
+   "action": "set_option",
+   "match": "neither deprecated",
+   "text": "Neither, since removing a deprecated endpoint is a routine change that doesn't need Claude Code"
+  },
+  {
+   "id": "milind:Q525",
+   "action": "set_option",
+   "match": "plan mode",
+   "text": "Plan mode: explore all callers, map the impact, and design a migration plan before removing anything"
+  },
+  {
+   "id": "milind:Q527",
+   "action": "set_option",
+   "match": "whether the command file",
+   "text": "Whether the command file is committed to the repository and the colleague has pulled the latest changes"
+  },
+  {
+   "id": "milind:Q527",
+   "action": "set_option",
+   "match": "whether both machines",
+   "text": "Whether both machines are running the same Claude Code version from the same release channel"
+  },
+  {
+   "id": "milind:Q527",
+   "action": "set_option",
+   "match": "whether the colleague s",
+   "text": "Whether the colleague's user permissions in settings allow running custom slash commands"
+  },
+  {
+   "id": "milind:Q527",
+   "action": "set_option",
+   "match": "whether the command requires",
+   "text": "Whether the command depends on an API key that is set in one developer's shell environment but not the other's"
+  },
+  {
+   "id": "milind:Q528",
+   "action": "set_option",
+   "match": "claude code cannot",
+   "text": "Claude Code cannot run inside Docker containers because it needs direct access to the host machine"
+  },
+  {
+   "id": "milind:Q528",
+   "action": "set_option",
+   "match": "the docker container",
+   "text": "The Docker container lacks enough memory for Claude Code to load and index the whole Python codebase"
+  },
+  {
+   "id": "milind:Q528",
+   "action": "set_option",
+   "match": "documentation generation requires",
+   "text": "Documentation generation requires a GUI environment with a display, which the container does not provide"
+  },
+  {
+   "id": "milind:Q528",
+   "action": "set_option",
+   "match": "the command is",
+   "text": "The command lacks the `-p` flag, so Claude Code starts an interactive session and waits for input"
+  },
+  {
+   "id": "milind:Q529",
+   "action": "set_option",
+   "match": "projects must manually",
+   "text": "Each project must manually update its `@`-import paths to point at the new revision of the file"
+  },
+  {
+   "id": "milind:Q529",
+   "action": "set_option",
+   "match": "import is a",
+   "text": "Nothing, because `@`-import is a one-time copy and later changes to the source don't propagate"
+  },
+  {
+   "id": "milind:Q529",
+   "action": "set_option",
+   "match": "projects get a",
+   "text": "Each project receives a notification in Claude Code prompting it to refresh its imports"
+  },
+  {
+   "id": "milind:Q529",
+   "action": "set_option",
+   "match": "all projects that",
+   "text": "They get the updated standards automatically the next time Claude Code loads their CLAUDE.md"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "set_option",
+   "match": "start a new",
+   "text": "Start a new session seeded with a summary of the prior review findings as context"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "set_option",
+   "match": "resume the existing",
+   "text": "Resume the existing session, because it already has knowledge of the codebase"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "set_option",
+   "match": "fork the existing",
+   "text": "Fork the existing session to keep the review context while exploring the migration files"
+  },
+  {
+   "id": "milind:Q53",
+   "action": "set_option",
+   "match": "always resume",
+   "text": "Resume by default, since starting new sessions wastes the analysis already done"
+  },
+  {
+   "id": "milind:Q530",
+   "action": "set_option",
+   "match": "always use skills",
+   "text": "Use a skill, since skills are more configurable and can bundle scripts alongside the rule"
+  },
+  {
+   "id": "milind:Q530",
+   "action": "set_option",
+   "match": "always use claude md",
+   "text": "Use CLAUDE.md for this and every workflow, since it has broader scope than any skill"
+  },
+  {
+   "id": "milind:Q530",
+   "action": "set_option",
+   "match": "use skills for",
+   "text": "Use skills for team-wide rules and CLAUDE.md for each developer's personal preferences"
+  },
+  {
+   "id": "milind:Q530",
+   "action": "set_option",
+   "match": "claude md for always applicable",
+   "text": "CLAUDE.md for universal standards such as this rule; skills for on-demand, task-specific workflows"
+  },
+  {
+   "id": "milind:Q531",
+   "action": "set_option",
+   "match": "implementing a cache",
+   "text": "Implementing cache invalidation for a distributed system with open questions on triggers and consistency"
+  },
+  {
+   "id": "milind:Q531",
+   "action": "set_option",
+   "match": "fixing a spelling",
+   "text": "Fixing a spelling error in a code comment that a linter flagged in the project's main module"
+  },
+  {
+   "id": "milind:Q531",
+   "action": "set_option",
+   "match": "adding a standard",
+   "text": "Adding a standard null check to a well-understood utility function before it dereferences its input argument"
+  },
+  {
+   "id": "milind:Q531",
+   "action": "set_option",
+   "match": "updating a version",
+   "text": "Updating the version number in a configuration file after the team agreed on the next release"
+  },
+  {
+   "id": "milind:Q533",
+   "action": "set_option",
+   "match": "all three",
+   "text": "All three: root CLAUDE.md, `.claude/CLAUDE.md`, and `src/api/CLAUDE.md` load and supplement each other"
+  },
+  {
+   "id": "milind:Q533",
+   "action": "set_option",
+   "match": "only src api claude md",
+   "text": "Only `src/api/CLAUDE.md`, because the most specific file replaces all of the higher-level ones"
+  },
+  {
+   "id": "milind:Q533",
+   "action": "set_option",
+   "match": "only root claude md the",
+   "text": "Only the root CLAUDE.md, because the root file takes precedence over every other location"
+  },
+  {
+   "id": "milind:Q533",
+   "action": "set_option",
+   "match": "only root claude md",
+   "text": "Only the root CLAUDE.md and `.claude/CLAUDE.md`, since directory-level files need an explicit `@`-import"
   }
  ],
  "hold": []
