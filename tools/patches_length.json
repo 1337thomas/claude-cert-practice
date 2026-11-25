@@ -36088,6 +36088,1183 @@
    "action": "set_option",
    "match": "subagents lack tool",
    "text": "Subagents have no tool access of their own and so cannot initiate any network calls to other agents directly."
+  },
+  {
+   "id": "connectry:q-1.2-hard-2",
+   "action": "set_option",
+   "match": "run a b e f in parallel first",
+   "text": "Start A, B, E and F in parallel; start C as soon as A finishes and D once both A and B have finished"
+  },
+  {
+   "id": "connectry:q-1.2-hard-2",
+   "action": "set_option",
+   "match": "run all six",
+   "text": "Run all six agents one after another in the order A, B, C, D, E, F so that no dependency is violated"
+  },
+  {
+   "id": "connectry:q-1.2-hard-2",
+   "action": "set_option",
+   "match": "run a b",
+   "text": "Run A, B, E and F in parallel, then run C, D and the E/F continuations one by one to avoid race conditions"
+  },
+  {
+   "id": "connectry:q-1.2-hard-2",
+   "action": "set_option",
+   "match": "run a and",
+   "text": "Run A and B in parallel; once both have finished, start C, D, E and F together in a second parallel wave"
+  },
+  {
+   "id": "connectry:q-1.2-hard-3",
+   "action": "set_option",
+   "match": "reduce the coordinator",
+   "text": "Set the coordinator's retry limit to zero so that a failed subagent invocation is not re-run at all"
+  },
+  {
+   "id": "connectry:q-1.2-hard-3",
+   "action": "set_option",
+   "match": "require subagents to",
+   "text": "Have each subagent query for existing records before writing and use its own judgment to skip duplicates"
+  },
+  {
+   "id": "connectry:q-1.2-hard-3",
+   "action": "set_option",
+   "match": "implement idempotency keys",
+   "text": "Give each invocation a unique task ID as idempotency key, guarded by a database uniqueness constraint"
+  },
+  {
+   "id": "connectry:q-1.2-hard-3",
+   "action": "set_option",
+   "match": "switch from parallel",
+   "text": "Switch from parallel to sequential subagent execution so a retry cannot overlap the original attempt"
+  },
+  {
+   "id": "connectry:q-1.2-hard-4",
+   "action": "set_option",
+   "match": "immediately terminate all",
+   "text": "Terminate all three subagents immediately without cleanup, since the user's stop signal overrides every other concern"
+  },
+  {
+   "id": "connectry:q-1.2-hard-4",
+   "action": "set_option",
+   "match": "allow all three",
+   "text": "Let all three subagents run to completion before acknowledging the stop, so the workflow always finishes what it starts"
+  },
+  {
+   "id": "connectry:q-1.2-hard-4",
+   "action": "set_option",
+   "match": "cancel the no",
+   "text": "Cancel the side-effect-free one, roll back the partial write, let the commit finish atomically, then void partial state"
+  },
+  {
+   "id": "connectry:q-1.2-hard-4",
+   "action": "set_option",
+   "match": "delegate the stop",
+   "text": "Let each subagent decide on its own whether to continue or abort based on its own state, without coordinator involvement"
+  },
+  {
+   "id": "connectry:q-1.2-hard-5",
+   "action": "set_option",
+   "match": "design 2 is always",
+   "text": "Design 2 is faster, because parallel subagents inherently finish sooner than sequential tool calls in one agent"
+  },
+  {
+   "id": "connectry:q-1.2-hard-5",
+   "action": "set_option",
+   "match": "design 2 provides",
+   "text": "Each subagent holds only the tools it needs, so an injection or model error is confined to that one subagent"
+  },
+  {
+   "id": "connectry:q-1.2-hard-5",
+   "action": "set_option",
+   "match": "design 2 is cheaper",
+   "text": "Design 2 is cheaper, because each specialized subagent processes fewer input tokens than one agent with every tool"
+  },
+  {
+   "id": "connectry:q-1.2-hard-5",
+   "action": "set_option",
+   "match": "design 2 eliminates",
+   "text": "Design 2 removes the need for error handling, because specialized subagents do not fail on tasks in their specialty"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_option",
+   "match": "present both values",
+   "text": "Present both values with their source attribution and flag the conflict in the final answer"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_option",
+   "match": "let the two",
+   "text": "Let the two conflicting subagents debate the fact directly with each other until they converge"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_option",
+   "match": "discard both conflicting",
+   "text": "Discard both conflicting answers and keep only the outputs from the two non-conflicting subagents"
+  },
+  {
+   "id": "connectry:q-1.2-medium-5",
+   "action": "set_option",
+   "match": "apply a deterministic",
+   "text": "Apply a fixed resolution rule such as confidence score or majority vote, then output a single answer"
+  },
+  {
+   "id": "connectry:q-1.3-easy-2",
+   "action": "set_option",
+   "match": "the subagent automatically",
+   "text": "The subagent automatically inherits the coordinator's full conversation history, credentials included"
+  },
+  {
+   "id": "connectry:q-1.3-easy-2",
+   "action": "set_option",
+   "match": "the subagent shares",
+   "text": "The subagent shares the coordinator's system prompt but not its message history or its tool results"
+  },
+  {
+   "id": "connectry:q-1.3-easy-2",
+   "action": "set_option",
+   "match": "the subagent starts",
+   "text": "The subagent starts with an isolated context holding only what the coordinator passes in the Agent call"
+  },
+  {
+   "id": "connectry:q-1.3-easy-2",
+   "action": "set_option",
+   "match": "the subagent inherits",
+   "text": "The subagent inherits all tool results from the coordinator's current turn, but none of the older messages"
+  },
+  {
+   "id": "connectry:q-1.3-hard-1",
+   "action": "set_option",
+   "match": "switch all subagents",
+   "text": "Switch all ten subagents to sequential execution so that a timeout in one no longer blocks the others"
+  },
+  {
+   "id": "connectry:q-1.3-hard-1",
+   "action": "set_option",
+   "match": "implement a timeout",
+   "text": "Time out slow subagents in the coordinator and synthesize partial results, flagging the missing part"
+  },
+  {
+   "id": "connectry:q-1.3-hard-1",
+   "action": "set_option",
+   "match": "increase the maximum",
+   "text": "Raise the context window of the timing-out subagent so it can process its large section more quickly"
+  },
+  {
+   "id": "connectry:q-1.3-hard-1",
+   "action": "set_option",
+   "match": "move the synthesis",
+   "text": "Move the synthesis step into the timing-out subagent so the coordinator no longer waits on its result"
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "set_option",
+   "match": "sanitise all patient",
+   "text": "Sanitise all patient records before they reach any subagent, and log every tool call for post-hoc review"
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "set_option",
+   "match": "restrict the billing",
+   "text": "Limit the billing subagent to `database_write` and require human approval for any irreversible action"
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "set_option",
+   "match": "add a second",
+   "text": "Add a second reviewer subagent that checks the billing subagent's outputs before they are committed"
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "set_option",
+   "match": "encrypt all data",
+   "text": "Encrypt all data passed to subagents so that any exfiltrated content stays unreadable to the attacker"
+  },
+  {
+   "id": "connectry:q-1.3-hard-3",
+   "action": "set_option",
+   "match": "the subagents have",
+   "text": "Subagents run with different context window sizes, so some truncate the taxonomy definition. Fix: reduce batch size."
+  },
+  {
+   "id": "connectry:q-1.3-hard-3",
+   "action": "set_option",
+   "match": "each subagent has",
+   "text": "Subagent contexts are isolated, so the coordinator's taxonomy is not visible. Fix: pass it in every Agent call."
+  },
+  {
+   "id": "connectry:q-1.3-hard-3",
+   "action": "set_option",
+   "match": "the json serialisation",
+   "text": "The JSON serialisation of each batch differs between calls. Fix: switch the product descriptions to CSV encoding."
+  },
+  {
+   "id": "connectry:q-1.3-hard-3",
+   "action": "set_option",
+   "match": "the model used",
+   "text": "Subagent sampling is non-deterministic by default. Fix: set `temperature: 0` on the coordinator to stabilise outputs."
+  },
+  {
+   "id": "connectry:q-1.3-hard-4",
+   "action": "set_option",
+   "match": "scope each subagent",
+   "text": "Scope each subagent's tools to its task, require human confirmation before `execute_trade`, and schema-check outputs"
+  },
+  {
+   "id": "connectry:q-1.3-hard-4",
+   "action": "set_option",
+   "match": "run all subagents",
+   "text": "Give all subagents the full tool set, but run them in a sandbox that records every tool call for a later audit trail"
+  },
+  {
+   "id": "connectry:q-1.3-hard-4",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "Use one highly trusted subagent holding all the tools, shrinking the attack surface by minimising the number of agents"
+  },
+  {
+   "id": "connectry:q-1.3-hard-4",
+   "action": "set_option",
+   "match": "encrypt all trade",
+   "text": "Encrypt all trade parameters passed to subagents so that a compromised subagent cannot read the values it operates on"
+  },
+  {
+   "id": "connectry:q-1.3-medium-1",
+   "action": "set_option",
+   "match": "invoke the agent tool three",
+   "text": "Emit three Agent tool calls in the same model response, so the runtime executes them concurrently"
+  },
+  {
+   "id": "connectry:q-1.3-medium-1",
+   "action": "set_option",
+   "match": "invoke the agent",
+   "text": "Invoke the Agent tool for the first subagent, wait for its result, then invoke the second and the third"
+  },
+  {
+   "id": "connectry:q-1.3-medium-1",
+   "action": "set_option",
+   "match": "set parallel true",
+   "text": "Set `parallel: true` on each Agent tool call to tell the runtime to execute the subagents concurrently"
+  },
+  {
+   "id": "connectry:q-1.3-medium-1",
+   "action": "set_option",
+   "match": "use separate api",
+   "text": "Create a separate API client for each subagent and call them from within the coordinator's system prompt"
+  },
+  {
+   "id": "connectry:q-1.4-easy-3",
+   "action": "set_option",
+   "match": "to reduce the",
+   "text": "To cut API calls by batching the fetch, transform and store steps into a single model turn"
+  },
+  {
+   "id": "connectry:q-1.4-easy-3",
+   "action": "set_option",
+   "match": "to allow the",
+   "text": "To let the model decide on its own which step to execute next, without any developer intervention"
+  },
+  {
+   "id": "connectry:q-1.4-easy-3",
+   "action": "set_option",
+   "match": "to ensure each",
+   "text": "To hand each step a well-defined, validated payload from the last one, avoiding silent failures"
+  },
+  {
+   "id": "connectry:q-1.4-easy-3",
+   "action": "set_option",
+   "match": "to compress the",
+   "text": "To compress the accumulated conversation history so each step still fits in the context window"
+  },
+  {
+   "id": "connectry:q-1.4-hard-1",
+   "action": "set_option",
+   "match": "a pretooluse hook",
+   "text": "A PreToolUse hook on `execute_transfer` that checks both success flags, the stored limit and the unchanged beneficiary ID"
+  },
+  {
+   "id": "connectry:q-1.4-hard-1",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system prompt that lists all three preconditions and relies on the model to verify them before calling `execute_transfer`"
+  },
+  {
+   "id": "connectry:q-1.4-hard-1",
+   "action": "set_option",
+   "match": "a validator that",
+   "text": "A validator that runs after the workflow completes and flags any non-compliant transfer executions for manual review"
+  },
+  {
+   "id": "connectry:q-1.4-hard-1",
+   "action": "set_option",
+   "match": "a posttooluse hook",
+   "text": "A PostToolUse hook on `check_limits` that calls `execute_transfer` directly when limits are met, bypassing the tool flow"
+  },
+  {
+   "id": "connectry:q-1.4-hard-2",
+   "action": "set_option",
+   "match": "use a single",
+   "text": "Run all three subagents in one shared large context window so they can detect inconsistencies in each other's state"
+  },
+  {
+   "id": "connectry:q-1.4-hard-2",
+   "action": "set_option",
+   "match": "wrap each subagent",
+   "text": "Wrap each subagent call in a try/except block, log the error, and retry the failed subagent up to three times"
+  },
+  {
+   "id": "connectry:q-1.4-hard-2",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt to each subagent instructing it to validate its input payload carefully before processing it"
+  },
+  {
+   "id": "connectry:q-1.4-hard-2",
+   "action": "set_option",
+   "match": "add json schema",
+   "text": "Enforce JSON schema validation in code at every handoff, checking each subagent's input and output before moving on"
+  },
+  {
+   "id": "connectry:q-1.4-hard-3",
+   "action": "set_option",
+   "match": "store the full",
+   "text": "Keep the conversation history in memory and replay it on restart, relying on tool-call caching to skip completed calls"
+  },
+  {
+   "id": "connectry:q-1.4-hard-3",
+   "action": "set_option",
+   "match": "use a message",
+   "text": "Publish each step's output to a message queue; on restart, replay all messages from the beginning to rebuild state"
+  },
+  {
+   "id": "connectry:q-1.4-hard-3",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt instruction telling the model to track its own progress and resume from the last completed step"
+  },
+  {
+   "id": "connectry:q-1.4-hard-3",
+   "action": "set_option",
+   "match": "persist a durable",
+   "text": "Persist step status, outputs and external IDs durably after each step; on restart, load it and skip completed steps"
+  },
+  {
+   "id": "connectry:q-1.4-hard-4",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The system prompt instruction is the primary control; the hook is redundant and should be removed to simplify the code"
+  },
+  {
+   "id": "connectry:q-1.4-hard-4",
+   "action": "set_option",
+   "match": "the test proves",
+   "text": "The test proves prompt injection makes system prompt instructions useless, so they should not be relied on in any workflow"
+  },
+  {
+   "id": "connectry:q-1.4-hard-4",
+   "action": "set_option",
+   "match": "both controls are",
+   "text": "The layers are complementary: the prompt cuts unsafe attempts in normal use, the hook deterministically blocks the rest"
+  },
+  {
+   "id": "connectry:q-1.4-hard-4",
+   "action": "set_option",
+   "match": "the hook is",
+   "text": "The hook is the primary control; the system prompt instruction is redundant and can be removed to simplify the workflow"
+  },
+  {
+   "id": "connectry:q-1.4-medium-1",
+   "action": "set_option",
+   "match": "write a system",
+   "text": "Write a system prompt that explicitly lists the required step order and instructs the model to follow it"
+  },
+  {
+   "id": "connectry:q-1.4-medium-1",
+   "action": "set_option",
+   "match": "use a try",
+   "text": "Wrap `apply_redaction` in a try/except block that catches the KeyError when `sensitivity_level` is absent and logs it"
+  },
+  {
+   "id": "connectry:q-1.4-medium-1",
+   "action": "set_option",
+   "match": "add a posttooluse",
+   "text": "Add a PostToolUse hook on `classify_document` that sets a global flag, and rely on the model to check that flag first"
+  },
+  {
+   "id": "connectry:q-1.4-medium-1",
+   "action": "set_option",
+   "match": "implement a pretooluse",
+   "text": "Add a PreToolUse hook on `apply_redaction` that checks state for a valid `sensitivity_level` and aborts if missing"
+  },
+  {
+   "id": "connectry:q-1.4-medium-2",
+   "action": "set_option",
+   "match": "re run web_search",
+   "text": "Re-run `web_search` at the start of the synthesis step to retrieve the same URLs a second time"
+  },
+  {
+   "id": "connectry:q-1.4-medium-2",
+   "action": "set_option",
+   "match": "ask the model",
+   "text": "Add a reminder to the system prompt asking the model to remember the URLs from the earlier search step"
+  },
+  {
+   "id": "connectry:q-1.4-medium-2",
+   "action": "set_option",
+   "match": "store the structured",
+   "text": "Store `web_search`'s structured output (URLs, snippets) in state and inject it into the synthesis message"
+  },
+  {
+   "id": "connectry:q-1.4-medium-2",
+   "action": "set_option",
+   "match": "add a posttooluse",
+   "text": "Add a PostToolUse hook on `web_search` that sends the URLs to an external database for the model to query later"
+  },
+  {
+   "id": "connectry:q-1.4-medium-3",
+   "action": "set_option",
+   "match": "when regulatory compliance",
+   "text": "When regulatory compliance requires a hard guarantee that unsafe content is not published under any circumstances"
+  },
+  {
+   "id": "connectry:q-1.4-medium-3",
+   "action": "set_option",
+   "match": "when the moderation",
+   "text": "When the score is the model's own heuristic judgment and contextual nuance matters more than exact thresholds"
+  },
+  {
+   "id": "connectry:q-1.4-medium-3",
+   "action": "set_option",
+   "match": "when the publish",
+   "text": "When the publish action has irreversible consequences, such as sending emails or charging a customer's card"
+  },
+  {
+   "id": "connectry:q-1.4-medium-3",
+   "action": "set_option",
+   "match": "when you need",
+   "text": "When every tool call has to be audited and documented for review by an internal security review board"
+  },
+  {
+   "id": "connectry:q-1.5-medium-4",
+   "action": "set_option",
+   "match": "hooks are faster",
+   "text": "Hooks are evaluated faster than the model can parse and apply an instruction written into the system prompt"
+  },
+  {
+   "id": "connectry:q-1.5-medium-4",
+   "action": "set_option",
+   "match": "a hook can",
+   "text": "A hook checks the role in code and aborts deterministically; a prompt rule relies on the model obeying it"
+  },
+  {
+   "id": "connectry:q-1.5-medium-4",
+   "action": "set_option",
+   "match": "system prompts cannot",
+   "text": "System prompts cannot reference session context variables such as the role, so hooks are the only possible option"
+  },
+  {
+   "id": "connectry:q-1.5-medium-4",
+   "action": "set_option",
+   "match": "hooks are versioned",
+   "text": "Hooks are versioned together with the tool definitions, which makes them easier to audit than system prompt text"
+  },
+  {
+   "id": "connectry:q-1.6-hard-1",
+   "action": "set_option",
+   "match": "static two phase",
+   "text": "Static two-phase pattern: Phase 1 runs the three analyses in parallel, Phase 2 recommends, with the re-run as a fixed branch"
+  },
+  {
+   "id": "connectry:q-1.6-hard-1",
+   "action": "set_option",
+   "match": "dynamic decomposition with",
+   "text": "Phase 1 fans out the three analyses in parallel; a Phase 2 integration agent dynamically re-triggers compliance as needed"
+  },
+  {
+   "id": "connectry:q-1.6-hard-1",
+   "action": "set_option",
+   "match": "serial prompt chain",
+   "text": "Serial prompt chain: financial risk, then regulatory compliance, then IP rights, then the recommendation, with no parallelism"
+  },
+  {
+   "id": "connectry:q-1.6-hard-1",
+   "action": "set_option",
+   "match": "three fully independent",
+   "text": "Three fully independent pipelines, one per analysis type, each producing its own recommendation for a human to merge"
+  },
+  {
+   "id": "connectry:q-1.6-hard-2",
+   "action": "set_option",
+   "match": "strategy x is",
+   "text": "Strategy X, because parallel agents are inherently faster and the rate limit is merely a solvable infrastructure problem"
+  },
+  {
+   "id": "connectry:q-1.6-hard-2",
+   "action": "set_option",
+   "match": "strategy y is",
+   "text": "Strategy Y, because it makes fewer total API calls and avoids orchestration complexity, whatever the latency needs"
+  },
+  {
+   "id": "connectry:q-1.6-hard-2",
+   "action": "set_option",
+   "match": "strategy x has",
+   "text": "X is faster up to the rate limit but harder to orchestrate; Y is simpler but slower; requirements and headroom decide"
+  },
+  {
+   "id": "connectry:q-1.6-hard-2",
+   "action": "set_option",
+   "match": "both strategies are",
+   "text": "Both are equivalent, because the total number of API calls determines cost and latency equally regardless of concurrency"
+  },
+  {
+   "id": "connectry:q-1.6-hard-3",
+   "action": "set_option",
+   "match": "all four phases should use parallel",
+   "text": "All four phases use parallel per-file agents, maximizing throughput across all twenty repositories at every stage"
+  },
+  {
+   "id": "connectry:q-1.6-hard-3",
+   "action": "set_option",
+   "match": "phase 1 parallel",
+   "text": "1: parallel per-file scan; 2: serial rewrite in sequence; 3: parallel per-repo conflict agents; 4: parallel per-repo report agents"
+  },
+  {
+   "id": "connectry:q-1.6-hard-3",
+   "action": "set_option",
+   "match": "all four phases should",
+   "text": "All four phases use a single serial agent so that a consistent global view of the whole codebase is kept throughout"
+  },
+  {
+   "id": "connectry:q-1.6-hard-3",
+   "action": "set_option",
+   "match": "phase 1 serial",
+   "text": "1: serial scan across repos; 2: parallel isolated per-file rewrites; 3: serial cross-repo conflict resolution; 4: serial report"
+  },
+  {
+   "id": "connectry:q-1.6-medium-2",
+   "action": "set_option",
+   "match": "serial processing is",
+   "text": "Serial processing costs less in API usage than running a second round of parallel agents would"
+  },
+  {
+   "id": "connectry:q-1.6-medium-2",
+   "action": "set_option",
+   "match": "phase 2 requires",
+   "text": "Resolving cross-file conflicts needs context spanning files, which isolated parallel agents lack"
+  },
+  {
+   "id": "connectry:q-1.6-medium-2",
+   "action": "set_option",
+   "match": "the model cannot",
+   "text": "The model cannot process more than one file at a time within a single turn, so the work is split"
+  },
+  {
+   "id": "connectry:q-1.6-medium-2",
+   "action": "set_option",
+   "match": "parallel agents in",
+   "text": "Parallel agents in Phase 2 would violate the two-phase pattern's requirement for one integration pass"
+  },
+  {
+   "id": "connectry:q-1.6-medium-5",
+   "action": "set_option",
+   "match": "architect a because",
+   "text": "Architect A, since static chains are predictable, testable and cheap; use dynamic only if steps can't be fixed upfront"
+  },
+  {
+   "id": "connectry:q-1.6-medium-5",
+   "action": "set_option",
+   "match": "architect b because dynamic",
+   "text": "Architect B, since dynamic decomposition is more powerful and can replicate anything that a static prompt chain does"
+  },
+  {
+   "id": "connectry:q-1.6-medium-5",
+   "action": "set_option",
+   "match": "both positions are",
+   "text": "Neither architect, since the choice depends entirely on the specific use case and there is no sensible general default"
+  },
+  {
+   "id": "connectry:q-1.6-medium-5",
+   "action": "set_option",
+   "match": "architect b because",
+   "text": "Architect B, since modern models reason well enough to pick the optimal next step without a predefined sequence"
+  },
+  {
+   "id": "connectry:q-1.7-hard-1",
+   "action": "set_option",
+   "match": "naive compact without",
+   "text": "Naive compaction loses nuance; first prompt for a structured summary of decisions, rejected options and open questions"
+  },
+  {
+   "id": "connectry:q-1.7-hard-1",
+   "action": "set_option",
+   "match": "the context window",
+   "text": "The context window is too small; switch to a model with a larger context window so `/compact` is no longer needed"
+  },
+  {
+   "id": "connectry:q-1.7-hard-1",
+   "action": "set_option",
+   "match": "the model hallucinates",
+   "text": "The model hallucinates during compaction; disable `/compact` and manually delete older messages from the session instead"
+  },
+  {
+   "id": "connectry:q-1.7-hard-1",
+   "action": "set_option",
+   "match": "session forks should",
+   "text": "The verbose history is lost; create a session fork before every `/compact` so the original history stays recoverable"
+  },
+  {
+   "id": "connectry:q-1.7-hard-2",
+   "action": "set_option",
+   "match": "take the output",
+   "text": "Adopt the output of the fork with the longest message history, since more conversation implies more refinement"
+  },
+  {
+   "id": "connectry:q-1.7-hard-2",
+   "action": "set_option",
+   "match": "concatenate all three",
+   "text": "Concatenate all three forks' assistant messages into one user message and let the coordinator process them"
+  },
+  {
+   "id": "connectry:q-1.7-hard-2",
+   "action": "set_option",
+   "match": "discard all forks",
+   "text": "Discard all three forks and start over, since contradictory session states cannot be merged safely"
+  },
+  {
+   "id": "connectry:q-1.7-hard-2",
+   "action": "set_option",
+   "match": "ask each fork",
+   "text": "Have each fork write a structured decision log; the coordinator settles conflicts by the original constraints"
+  },
+  {
+   "id": "connectry:q-1.7-hard-3",
+   "action": "set_option",
+   "match": "always fork a",
+   "text": "Fork by default, since historical context adds value and a fresh session discards knowledge that cannot be rebuilt"
+  },
+  {
+   "id": "connectry:q-1.7-hard-3",
+   "action": "set_option",
+   "match": "fork when the",
+   "text": "Fork when history holds foundational context; start fresh when it is net-negative: too large, stale or cluttered"
+  },
+  {
+   "id": "connectry:q-1.7-hard-3",
+   "action": "set_option",
+   "match": "start fresh whenever",
+   "text": "Start fresh whenever a session exceeds 30k tokens to keep latency low, and fork only sessions below that threshold"
+  },
+  {
+   "id": "connectry:q-1.7-hard-3",
+   "action": "set_option",
+   "match": "fork for all",
+   "text": "Fork for every experiment and start fresh only for production tasks, regardless of the current context state"
+  },
+  {
+   "id": "connectry:q-1.7-hard-4",
+   "action": "set_option",
+   "match": "append a note",
+   "text": "Append a note saying the old guidance is superseded; Claude will apply the correction retroactively to all prior reasoning"
+  },
+  {
+   "id": "connectry:q-1.7-hard-4",
+   "action": "set_option",
+   "match": "run compact so",
+   "text": "Run `/compact` so the superseded guidance gets summarized away before any further compliance work begins"
+  },
+  {
+   "id": "connectry:q-1.7-hard-4",
+   "action": "set_option",
+   "match": "fork the session",
+   "text": "Fork, then in the fork replace or annotate every superseded message, check consistency, and verify with a review prompt"
+  },
+  {
+   "id": "connectry:q-1.7-hard-4",
+   "action": "set_option",
+   "match": "start a fresh",
+   "text": "Start a fresh session and manually re-enter only the firm-specific context that is still valid, dropping the rest"
+  },
+  {
+   "id": "connectry:q-1.7-medium-1",
+   "action": "set_option",
+   "match": "delete all tool",
+   "text": "Delete all tool-result messages from the history to reduce the token count before the next request"
+  },
+  {
+   "id": "connectry:q-1.7-medium-1",
+   "action": "set_option",
+   "match": "lower max_tokens on",
+   "text": "Lower `max_tokens` on future requests so the model generates shorter responses and saves context space"
+  },
+  {
+   "id": "connectry:q-1.7-medium-1",
+   "action": "set_option",
+   "match": "start a fresh",
+   "text": "Start a fresh session and paste the last ten assistant messages in as the new system prompt"
+  },
+  {
+   "id": "connectry:q-1.7-medium-1",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Have Claude summarize decisions, open questions and state, then `/compact` or swap the history for it"
+  },
+  {
+   "id": "connectry:q-1.7-medium-3",
+   "action": "set_option",
+   "match": "immediately continue work",
+   "text": "Continue immediately, since Claude automatically detects outdated information in the history and flags it"
+  },
+  {
+   "id": "connectry:q-1.7-medium-3",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Have Claude summarize what it knows, review that for stale facts, and inject corrections before going on"
+  },
+  {
+   "id": "connectry:q-1.7-medium-3",
+   "action": "set_option",
+   "match": "run compact to",
+   "text": "Run `/compact` to clear the old context and restart cleanly from the current state of the codebase"
+  },
+  {
+   "id": "connectry:q-1.7-medium-3",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Increase the context window size so all historical context plus the new changes fit in simultaneously"
+  },
+  {
+   "id": "connectry:q-1.7-medium-4",
+   "action": "set_option",
+   "match": "whenever session b",
+   "text": "Whenever Session B grows beyond 50% of the model's context window, regardless of what it contains"
+  },
+  {
+   "id": "connectry:q-1.7-medium-4",
+   "action": "set_option",
+   "match": "when session a",
+   "text": "Whenever Session A and Session B share any overlapping topics that could leak between them"
+  },
+  {
+   "id": "connectry:q-1.7-medium-4",
+   "action": "set_option",
+   "match": "when the session has",
+   "text": "When the session has been idle for more than 48 hours, since its cached context will have expired"
+  },
+  {
+   "id": "connectry:q-1.7-medium-4",
+   "action": "set_option",
+   "match": "when the session s",
+   "text": "When its noise and dead ends would mislead future reasoning more than its useful context helps"
+  },
+  {
+   "id": "connectry:q-1.7-medium-5",
+   "action": "set_option",
+   "match": "only the system",
+   "text": "Only the system prompt, since Claude can infer the earlier conversation history from it"
+  },
+  {
+   "id": "connectry:q-1.7-medium-5",
+   "action": "set_option",
+   "match": "the full ordered",
+   "text": "The full ordered messages array and system prompt, so the model gets the same context"
+  },
+  {
+   "id": "connectry:q-1.7-medium-5",
+   "action": "set_option",
+   "match": "only the last",
+   "text": "Only the last assistant message, so redundant tokens are not sent again on each resume"
+  },
+  {
+   "id": "connectry:q-1.7-medium-5",
+   "action": "set_option",
+   "match": "the session id",
+   "text": "The session ID and current date, which are enough for Claude to reconstruct the context"
+  },
+  {
+   "id": "connectry:q-2.1-easy-1",
+   "action": "set_option",
+   "match": "tool descriptions are",
+   "text": "Descriptions are Claude's main signal for choosing a tool; without them it can only guess from the name."
+  },
+  {
+   "id": "connectry:q-2.1-easy-1",
+   "action": "set_option",
+   "match": "the tool names",
+   "text": "The tool names are too short and ambiguous; longer, more verbose names would fix the confusion on their own."
+  },
+  {
+   "id": "connectry:q-2.1-easy-1",
+   "action": "set_option",
+   "match": "claude always calls",
+   "text": "Claude defaults to the first tool listed when unsure, so `get_user` should be moved further down the list."
+  },
+  {
+   "id": "connectry:q-2.1-easy-1",
+   "action": "set_option",
+   "match": "the anthropic api",
+   "text": "The Anthropic API requires at least three registered tools before its disambiguation logic activates."
+  },
+  {
+   "id": "connectry:q-2.1-easy-2",
+   "action": "set_option",
+   "match": "searches the catalog",
+   "text": "\"Searches the catalog. Pass the user's question as the query and the tool will look up whatever products seem relevant.\""
+  },
+  {
+   "id": "connectry:q-2.1-easy-2",
+   "action": "set_option",
+   "match": "a tool for",
+   "text": "\"A tool for products. Input: query (string). Output: list of objects. Can be called whenever products are mentioned.\""
+  },
+  {
+   "id": "connectry:q-2.1-easy-2",
+   "action": "set_option",
+   "match": "searches the read",
+   "text": "\"Searches the read-only product catalog by keyword; returns matches with name, SKU and price. Use for product or pricing questions. Does not modify data.\""
+  },
+  {
+   "id": "connectry:q-2.1-easy-2",
+   "action": "set_option",
+   "match": "call this function",
+   "text": "\"Call this function with a string. It will return some objects from the database. Please read the source code for full details.\""
+  },
+  {
+   "id": "connectry:q-2.1-easy-4",
+   "action": "set_option",
+   "match": "docalendarstuff verb first",
+   "text": "`doCalendarStuff` — verb-first camelCase communicates the action intent to the model."
+  },
+  {
+   "id": "connectry:q-2.1-easy-4",
+   "action": "set_option",
+   "match": "calendartool pascalcase is",
+   "text": "`CalendarTool` — PascalCase is the standard naming convention for tools in the Anthropic API."
+  },
+  {
+   "id": "connectry:q-2.1-easy-4",
+   "action": "set_option",
+   "match": "create_calendar_event snake_case with",
+   "text": "`create_calendar_event` — snake_case verb-noun naming that states the action and its object."
+  },
+  {
+   "id": "connectry:q-2.1-easy-4",
+   "action": "set_option",
+   "match": "c short names",
+   "text": "`c` — very short tool names reduce token usage and improve tool-selection performance."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "set_option",
+   "match": "add this is",
+   "text": "Add 'This is the most commonly used tool' to the `get_transaction_history` description to raise its selection priority."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "set_option",
+   "match": "add a routing",
+   "text": "Add a system prompt routing rule to prefer `get_pending_transactions` whenever the word 'pending' appears in the message."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "set_option",
+   "match": "add cross references",
+   "text": "Cross-reference the descriptions: history excludes pending (use get_pending_transactions), pending names history, balance is settled-only."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "set_option",
+   "match": "merge get_transaction_history and",
+   "text": "Merge `get_transaction_history` and `get_pending_transactions` into a single tool with a `status` filter parameter instead."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "This is far more robust",
+   "replace": "Here that means: history excludes pending charges and points to `get_pending_transactions`, pending points back to history, and balance states it reflects settled charges only. This is far more robust"
+  },
+  {
+   "id": "connectry:q-2.1-hard-2",
+   "action": "set_option",
+   "match": "split into run_read_query",
+   "text": "Split it into `run_read_query` (SELECT only) and `run_write_query` (INSERT/UPDATE only, rejects DROP/TRUNCATE/ALTER), each described explicitly."
+  },
+  {
+   "id": "connectry:q-2.1-hard-2",
+   "action": "set_option",
+   "match": "rename the tool",
+   "text": "Rename the tool to `run_safe_sql_query` so that its name signals the intended safe, non-destructive usage to the model."
+  },
+  {
+   "id": "connectry:q-2.1-hard-2",
+   "action": "set_option",
+   "match": "add a confirm",
+   "text": "Add a required `confirm` boolean parameter that Claude must set to `true` before any SQL query is actually executed."
+  },
+  {
+   "id": "connectry:q-2.1-hard-2",
+   "action": "set_option",
+   "match": "move all sql",
+   "text": "Move the SQL safety rules into a system prompt instruction that lists forbidden keywords such as DROP and TRUNCATE."
+  },
+  {
+   "id": "connectry:q-2.1-hard-3",
+   "action": "set_option",
+   "match": "remove send_customer_email from",
+   "text": "Remove `send_customer_email` from the tool suite and handle all email sending outside the agent loop instead."
+  },
+  {
+   "id": "connectry:q-2.1-hard-3",
+   "action": "set_option",
+   "match": "add a ticket_id",
+   "text": "Add a required `ticket_id` parameter to `send_customer_email` so the call fails at the API level without a ticket."
+  },
+  {
+   "id": "connectry:q-2.1-hard-3",
+   "action": "set_option",
+   "match": "set the tool",
+   "text": "Set the `input_schema` of `send_customer_email` to `null` so that Claude cannot call the tool autonomously."
+  },
+  {
+   "id": "connectry:q-2.1-hard-3",
+   "action": "set_option",
+   "match": "in the send_customer_email",
+   "text": "State in `send_customer_email`'s description that a ticket must exist first, and cross-reference it from `create_support_ticket`."
+  },
+  {
+   "id": "connectry:q-2.1-hard-4",
+   "action": "set_option",
+   "match": "increase max_tokens to",
+   "text": "Raise `max_tokens` to 8192 on every API call so Claude has more space to reason through all 20 tool descriptions."
+  },
+  {
+   "id": "connectry:q-2.1-hard-4",
+   "action": "set_option",
+   "match": "dynamically inject only",
+   "text": "Use a lightweight intent-based router to inject only the tools relevant to the current task instead of all 20."
+  },
+  {
+   "id": "connectry:q-2.1-hard-4",
+   "action": "set_option",
+   "match": "write longer descriptions",
+   "text": "Write longer, more detailed descriptions for each of the 20 tools so the extra detail helps Claude disambiguate."
+  },
+  {
+   "id": "connectry:q-2.1-hard-4",
+   "action": "set_option",
+   "match": "assign a numeric",
+   "text": "Add a numeric relevance score to each tool's name, e.g. `95_search_web`, so Claude ranks the tools by priority."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "set_option",
+   "match": "add explicit disambiguation",
+   "text": "Scope both descriptions: knowledge base for internal company info, tried first; web search for public info not in it."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "set_option",
+   "match": "remove search_web entirely",
+   "text": "Remove `search_web` entirely so that Claude has no choice but to use the internal knowledge base for every answer."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "set_option",
+   "match": "merge the two",
+   "text": "Merge both into one `search` tool with a `source` parameter that can be set to either `internal` or `web`."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "set_option",
+   "match": "prefix both tool",
+   "text": "Prefix both names with a priority number, e.g. `1_search_knowledge_base` and `2_search_web`, to signal their order."
+  },
+  {
+   "id": "connectry:q-2.1-medium-2",
+   "action": "set_option",
+   "match": "rename the parameter",
+   "text": "Rename the parameter from `recipients` to `recipientList` so that its name clearly implies the value is a list."
+  },
+  {
+   "id": "connectry:q-2.1-medium-2",
+   "action": "set_option",
+   "match": "change the parameter",
+   "text": "Change the parameter type to `string` in the schema so Claude consistently passes a string, then split it server-side."
+  },
+  {
+   "id": "connectry:q-2.1-medium-2",
+   "action": "set_option",
+   "match": "update the description",
+   "text": "Update the description to: `\"Array of email strings, e.g. [\\\"a@x.com\\\"]; an array even for one recipient, not a comma-separated string.\"`"
+  },
+  {
+   "id": "connectry:q-2.1-medium-2",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system prompt instruction telling Claude to use arrays for all list-like parameters of every tool."
+  },
+  {
+   "id": "connectry:q-2.1-medium-3",
+   "action": "set_option",
+   "match": "add deprecated use",
+   "text": "Add `\"DEPRECATED: use get_order_status instead\"` to the `get_order_history` description to steer Claude away from it."
+  },
+  {
+   "id": "connectry:q-2.1-medium-3",
+   "action": "set_option",
+   "match": "increase the max_tokens",
+   "text": "Increase the `max_tokens` parameter so Claude has more space to reason about which of the two tools to choose."
+  },
+  {
+   "id": "connectry:q-2.1-medium-3",
+   "action": "set_option",
+   "match": "swap the order",
+   "text": "Swap the order of the two tools in the `tools` array so that `get_order_status` is listed and considered first."
+  },
+  {
+   "id": "connectry:q-2.1-medium-3",
+   "action": "set_option",
+   "match": "update get_order_status description",
+   "text": "Describe `get_order_status` as live tracking of a current order, `get_order_history` as past orders not for tracking."
+  },
+  {
+   "id": "connectry:q-2.1-medium-4",
+   "action": "set_option",
+   "match": "date_range an object",
+   "text": "\"date_range: An object with start and end dates covering the period you want to query. Both fields should be provided.\""
+  },
+  {
+   "id": "connectry:q-2.1-medium-4",
+   "action": "set_option",
+   "match": "date_range object with",
+   "text": "\"date_range: Object with required `start`/`end` as YYYY-MM-DD strings (ISO 8601), e.g. {start: '2024-01-15', end: '2024-03-31'}; no future dates.\""
+  },
+  {
+   "id": "connectry:q-2.1-medium-4",
+   "action": "set_option",
+   "match": "date_range required please",
+   "text": "\"date_range: Required. Please format both the start and end dates correctly, or the external API will return an error.\""
+  },
+  {
+   "id": "connectry:q-2.1-medium-4",
+   "action": "set_option",
+   "match": "date_range see api",
+   "text": "\"date_range: Start and end of the query period. See the external API documentation for the exact date format requirements.\""
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "five tools will",
+   "text": "Five tools are faster than one, because the API processes several small schemas more quickly than a single larger one."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "separate tools allow",
+   "text": "Each tool gets a focused description of its preconditions, side effects and returns, removing the action choice."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "the anthropic api",
+   "text": "The Anthropic API allows only one action per tool and rejects tool schemas that contain enum parameters of this kind."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "having more tools",
+   "text": "Having more tools available raises the probability that Claude calls at least one of them when a task needs it."
+  },
+  {
+   "id": "connectry:q-2.2-easy-3",
+   "action": "set_option",
+   "match": "iserror true content type text text error_type rate_limit",
+   "text": "`{ \"isError\": true, \"content\": [{ \"type\": \"text\", \"text\": \"{\\\"error_type\\\": \\\"rate_limit\\\", \\\"retryable\\\": true, \\\"message\\\": \\\"Retry after 5s.\\\"}\" }] }`"
+  },
+  {
+   "id": "connectry:q-2.2-easy-3",
+   "action": "set_option",
+   "match": "iserror false content",
+   "text": "`{ \"isError\": false, \"content\": [{ \"type\": \"text\", \"text\": \"{\\\"status\\\": 429, \\\"message\\\": \\\"Too Many Requests from upstream API.\\\"}\" }] }`"
+  },
+  {
+   "id": "connectry:q-2.2-easy-3",
+   "action": "set_option",
+   "match": "iserror true content type text text error occurred",
+   "text": "`{ \"isError\": true, \"content\": [{ \"type\": \"text\", \"text\": \"{\\\"error\\\": \\\"Error occurred.\\\", \\\"details\\\": \\\"Upstream API call failed.\\\"}\" }] }`"
+  },
+  {
+   "id": "connectry:q-2.2-hard-2",
+   "action": "set_option",
+   "match": "the error uses",
+   "text": "It uses `permission` instead of `validation`; change the error type to `validation`, since bad credentials are an input error."
+  },
+  {
+   "id": "connectry:q-2.2-hard-2",
+   "action": "set_option",
+   "match": "the iserror true",
+   "text": "`isError: true` reveals that an authentication mechanism exists; return `isError: false` with a neutral message instead."
+  },
+  {
+   "id": "connectry:q-2.2-hard-2",
+   "action": "set_option",
+   "match": "the message is",
+   "text": "The message is too short for the agent to retry correctly; add the expected password hash format to the error message."
+  },
+  {
+   "id": "connectry:q-2.2-hard-2",
+   "action": "set_option",
+   "match": "the message confirms",
+   "text": "It confirms the username exists and reveals the lockout policy and attempt count; return a generic 'Authentication failed'."
+  },
+  {
+   "id": "connectry:q-2.2-hard-4",
+   "action": "set_option",
+   "match": "the proposal is acceptable",
+   "text": "Acceptable for simple agents, but production use should upgrade to structured fields, because they slightly improve performance."
+  },
+  {
+   "id": "connectry:q-2.2-hard-4",
+   "action": "set_option",
+   "match": "the proposal is correct",
+   "text": "Correct for human-facing display, but it should add a numeric error code so the agent can branch, like HTTP status codes."
+  },
+  {
+   "id": "connectry:q-2.2-hard-4",
+   "action": "set_option",
+   "match": "the proposal is flawed",
+   "text": "Flawed only because `isError: true` is not set consistently; once fixed, a readable message suffices for all five outcomes."
+  },
+  {
+   "id": "connectry:q-2.2-hard-4",
+   "action": "set_option",
+   "match": "the proposal is",
+   "text": "Flawed: parsing strings is brittle, no `retryable` field separates outage from not-found, and audits need structured logs."
+  },
+  {
+   "id": "connectry:q-2.2-medium-2",
+   "action": "set_option",
+   "match": "error_type validation retryable",
+   "text": "`{ \"error_type\": \"validation\", \"retryable\": false, \"message\": \"Invalid email address.\", \"details\": { \"field\": \"email\" } }`"
+  },
+  {
+   "id": "connectry:q-2.2-medium-2",
+   "action": "set_option",
+   "match": "code 400 message",
+   "text": "`{ \"code\": 400, \"message\": \"Bad input\", \"details\": \"Field 'email' must be a valid email address.\" }`"
+  },
+  {
+   "id": "connectry:q-2.2-medium-2",
+   "action": "set_option",
+   "match": "status error description",
+   "text": "`{ \"status\": \"error\", \"description\": \"The input was incorrect. Please check the email field and try again.\" }`"
+  },
+  {
+   "id": "connectry:q-2.2-medium-2",
+   "action": "set_option",
+   "match": "error true type",
+   "text": "`{ \"error\": true, \"type\": 3, \"hint\": \"fix input\", \"field\": \"email\", \"received\": \"not-an-email\" }`"
   }
  ],
  "hold": []
