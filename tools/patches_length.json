@@ -32668,6 +32668,1145 @@
    "field": "explanation",
    "find": "Options A, C, and D describe",
    "replace": "Options A, B, and D describe"
+  },
+  {
+   "id": "milind:Q996",
+   "action": "set_option",
+   "match": "use a smaller",
+   "text": "Use a smaller batch size so fewer files are read before the agent acts on its findings"
+  },
+  {
+   "id": "milind:Q996",
+   "action": "set_option",
+   "match": "read file 15",
+   "text": "Re-read file 15 in full immediately before writing code that depends on its signature"
+  },
+  {
+   "id": "milind:Q996",
+   "action": "set_option",
+   "match": "the agent should write",
+   "text": "Record the exact signature in a scratchpad on discovery and cite that record later"
+  },
+  {
+   "id": "milind:Q996",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "Process the files in a semantically ordered sequence so related modules are read together"
+  },
+  {
+   "id": "milind:Q997",
+   "action": "set_option",
+   "match": "context leakage and",
+   "text": "Context leakage (another record's data shaped the decision) and silent suppression (the error was hidden)"
+  },
+  {
+   "id": "milind:Q997",
+   "action": "set_option",
+   "match": "over escalation and",
+   "text": "Over-escalation (the error went to too many handlers) and unauthorized default assumption (an unapproved policy call)"
+  },
+  {
+   "id": "milind:Q997",
+   "action": "set_option",
+   "match": "full termination and",
+   "text": "Full termination (the run halted on a recoverable error) and over-escalation (a human was paged needlessly)"
+  },
+  {
+   "id": "milind:Q997",
+   "action": "set_option",
+   "match": "silent suppression the",
+   "text": "Silent suppression (the 503 never reached the orchestrator) and unauthorized default assumption (it decided eligibility itself)"
+  },
+  {
+   "id": "milind:Q999",
+   "action": "set_option",
+   "match": "stratifying by field",
+   "text": "Stratifying by field only, since field type is the primary driver of extraction difficulty across all document types"
+  },
+  {
+   "id": "milind:Q999",
+   "action": "set_option",
+   "match": "stratifying by document",
+   "text": "Stratifying by document type only, since field-level splits would create too many small, statistically noisy subsets"
+  },
+  {
+   "id": "milind:Q999",
+   "action": "set_option",
+   "match": "stratifying by both",
+   "text": "Stratifying by both document type and field, since automation decisions are made per type-field pair (e.g., invoice dates)"
+  },
+  {
+   "id": "milind:Q999",
+   "action": "set_option",
+   "match": "random split without",
+   "text": "Random split without stratification, trusting that 1,200 samples provide sufficient coverage of every type and field"
+  },
+  {
+   "id": "milindgaharwar:16908042",
+   "action": "set_option",
+   "match": "when the skill produces",
+   "text": "When the skill produces verbose output that would otherwise flood the main session's context"
+  },
+  {
+   "id": "milindgaharwar:16908042",
+   "action": "set_option",
+   "match": "when the skill reads",
+   "text": "When the skill reads many files, since a forked context cannot see the project's working directory"
+  },
+  {
+   "id": "milindgaharwar:16908042",
+   "action": "set_option",
+   "match": "when the skill writes",
+   "text": "When the skill writes files, since changes made in a forked context are discarded when it ends"
+  },
+  {
+   "id": "milindgaharwar:16908042",
+   "action": "set_option",
+   "match": "when the skill needs",
+   "text": "When the skill must ask the developer clarifying questions mid-run, which needs the main conversation"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-1",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Increase the context window so the agent can keep every customer's lookups distinct"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-1",
+   "action": "set_option",
+   "match": "scope each conversation",
+   "text": "Scope context to one customer; clear or isolate prior lookups on a subject change"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-1",
+   "action": "set_option",
+   "match": "remove the lookup_order",
+   "text": "Remove the lookup_order tool and have the agent ask customers for their order details"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-1",
+   "action": "set_option",
+   "match": "instruct the model",
+   "text": "Instruct the model in the system prompt to double-check customer identity each turn"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-10",
+   "action": "set_option",
+   "match": "nothing so the",
+   "text": "Nothing, so the report can proceed using the remaining sources with no mention of the gap"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-10",
+   "action": "set_option",
+   "match": "a silent retry",
+   "text": "A silent retry loop in the subagent that keeps going until the source succeeds"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-10",
+   "action": "set_option",
+   "match": "a propagated error",
+   "text": "A propagated error with context for choosing retry, exclusion with a noted gap, or abort"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-10",
+   "action": "set_option",
+   "match": "a generic failure",
+   "text": "A generic failure flag with no detail, so the coordinator logic stays simple"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-11",
+   "action": "set_option",
+   "match": "plan mode with",
+   "text": "Plan mode with an approval step before each review is emitted"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-11",
+   "action": "set_option",
+   "match": "a cron job",
+   "text": "A cron job that emails the full session transcript to the team"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-12",
+   "action": "set_option",
+   "match": "define explicit review",
+   "text": "Define explicit criteria and a severity bar, with in- and out-of-scope examples"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-12",
+   "action": "set_option",
+   "match": "post findings to",
+   "text": "Post the findings to a separate channel so they stop cluttering the pull request thread"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-12",
+   "action": "set_option",
+   "match": "run the review",
+   "text": "Run the review only on large pull requests, where style nits make up a smaller share"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-12",
+   "action": "set_option",
+   "match": "cap output at",
+   "text": "Cap the output at five findings per review so engineers see only the top comments"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-13",
+   "action": "set_option",
+   "match": "make the field required",
+   "text": "Make the field required and let extraction fail whenever the date is missing"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-13",
+   "action": "set_option",
+   "match": "make the field nullable",
+   "text": "Make it nullable so absence is explicit, with conditional validation by type"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-13",
+   "action": "set_option",
+   "match": "omit the field",
+   "text": "Omit the field from the schema and let the model add it only when one is found"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-13",
+   "action": "set_option",
+   "match": "default it to",
+   "text": "Default it to today's date so downstream date checks still have a value to use"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-14",
+   "action": "set_option",
+   "match": "generate then manually",
+   "text": "Generate, then have a person manually review every record before it is stored"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-14",
+   "action": "set_option",
+   "match": "generate three times",
+   "text": "Generate three times and keep the majority answer for each extracted field"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-14",
+   "action": "set_option",
+   "match": "enforce a json",
+   "text": "Enforce a schema via tool use, validate, then retry with the error fed back"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-14",
+   "action": "set_option",
+   "match": "generate with temperature",
+   "text": "Generate with temperature zero and accept the first result without further checks"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-15",
+   "action": "set_option",
+   "match": "accuracy should be",
+   "text": "Accuracy should be measured per field rather than per record, so the figure is miscomputed"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-15",
+   "action": "set_option",
+   "match": "97 is too",
+   "text": "97% is too low to report for a production extraction pipeline of this kind"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-15",
+   "action": "set_option",
+   "match": "validation and accuracy",
+   "text": "Validation and accuracy are unrelated, so passing validation tells you nothing either way"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-15",
+   "action": "set_option",
+   "match": "it excludes the",
+   "text": "It excludes the failures, so it measures only where the system already succeeded"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-2",
+   "action": "set_option",
+   "match": "an empty string",
+   "text": "An empty string, so the agent simply moves on without a failure message"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-2",
+   "action": "set_option",
+   "match": "a message asking",
+   "text": "A message asking the user to try again later, passed through verbatim"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-2",
+   "action": "set_option",
+   "match": "a structured error",
+   "text": "A structured error with a category and retryable flag for the agent"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-2",
+   "action": "set_option",
+   "match": "the exception stack",
+   "text": "The full exception stack trace, so the agent sees exactly what failed"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-3",
+   "action": "set_option",
+   "match": "the customer writes",
+   "text": "The customer writes in a language the agent supports, though not in English"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-3",
+   "action": "set_option",
+   "match": "the order is",
+   "text": "The order in question was placed more than thirty days before the ticket"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-3",
+   "action": "set_option",
+   "match": "the conversation exceeds",
+   "text": "The conversation has run past five turns, whether or not the issue is progressing"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-3",
+   "action": "set_option",
+   "match": "the request falls",
+   "text": "The request falls outside policy, or progress stalls after bounded attempts"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-4",
+   "action": "set_option",
+   "match": "rewrite both tool",
+   "text": "Rewrite both descriptions to state when each applies and how they differ"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-4",
+   "action": "set_option",
+   "match": "reorder the tools",
+   "text": "Reorder the tools so lookup_order comes first in the tool configuration"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-4",
+   "action": "set_option",
+   "match": "merge them into",
+   "text": "Merge them into one tool with a mode flag the model sets on every call"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-4",
+   "action": "set_option",
+   "match": "increase the model",
+   "text": "Increase the model's temperature so it explores the other tool more often"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-5",
+   "action": "set_option",
+   "match": "in the root",
+   "text": "In the root CLAUDE.md so the backend conventions load in every session"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-5",
+   "action": "set_option",
+   "match": "in a path",
+   "text": "In a .claude/rules/ file whose paths frontmatter matches backend files"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-5",
+   "action": "set_option",
+   "match": "in each engineer",
+   "text": "In each engineer's user-level ~/.claude/CLAUDE.md configuration"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-5",
+   "action": "set_option",
+   "match": "in the repository",
+   "text": "In the repository wiki, linked from the README for Claude to follow"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-6",
+   "action": "set_option",
+   "match": "for every change",
+   "text": "For every change, since planning first is the safer default anyway"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-6",
+   "action": "set_option",
+   "match": "only when the",
+   "text": "When the model is unfamiliar with the project's language or framework"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-6",
+   "action": "set_option",
+   "match": "when the change",
+   "text": "When a large or risky change needs human review of the approach"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-6",
+   "action": "set_option",
+   "match": "when the context",
+   "text": "When the context window is nearly full and the session needs a reset"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-7",
+   "action": "set_option",
+   "match": "a shared document",
+   "text": "A shared wiki page describing each step of the review"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-7",
+   "action": "set_option",
+   "match": "a longer claude",
+   "text": "A longer CLAUDE.md that spells out the full procedure"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-7",
+   "action": "set_option",
+   "match": "a saved chat",
+   "text": "A saved chat transcript that teammates resume as needed"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-8",
+   "action": "set_option",
+   "match": "have subagents return",
+   "text": "Subagents return cited, structured findings while raw sources stay at the edge"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-8",
+   "action": "set_option",
+   "match": "give the coordinator",
+   "text": "Give the coordinator a larger model with a bigger context window to hold them"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-8",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the subagents to one so only a single set of documents comes back"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-8",
+   "action": "set_option",
+   "match": "truncate each document",
+   "text": "Truncate each returned document to its first page before handing it to the coordinator"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-9",
+   "action": "set_option",
+   "match": "the synthesis model",
+   "text": "The synthesis model is too small to keep track of that many sources at once"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-9",
+   "action": "set_option",
+   "match": "the handoff format",
+   "text": "The handoff format separates each claim from its source between stages"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-9",
+   "action": "set_option",
+   "match": "the search subagent",
+   "text": "The search subagent returns too many results for synthesis to sort out"
+  },
+  {
+   "id": "amey:architect-foundations-mock1-9",
+   "action": "set_option",
+   "match": "reports are generated",
+   "text": "Reports are generated before the analysis subagents have finished"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-1",
+   "action": "set_option",
+   "match": "an agent that",
+   "text": "An agent that plans the sequence of steps on each run"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-1",
+   "action": "set_option",
+   "match": "four agents one",
+   "text": "Four autonomous agents, one per step, handing off work"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-1",
+   "action": "set_option",
+   "match": "a single prompt",
+   "text": "A single prompt that asks for all four steps at once"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-10",
+   "action": "set_option",
+   "match": "raise the temperature",
+   "text": "Raise the temperature so the model adapts more readily to unusual inputs"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-10",
+   "action": "set_option",
+   "match": "use a larger",
+   "text": "Switch to a larger model that generalizes better to unusual formats"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-10",
+   "action": "set_option",
+   "match": "add examples covering",
+   "text": "Add examples of the unusual formats and a rule for missing fields"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-10",
+   "action": "set_option",
+   "match": "ask the model",
+   "text": "Add an instruction asking the model to take extra care with unusual inputs"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-11",
+   "action": "set_option",
+   "match": "it exposes more",
+   "text": "It exposes more than five tools to the model at once"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-11",
+   "action": "set_option",
+   "match": "the model repeatedly",
+   "text": "The model repeatedly picks a tool that cannot satisfy the request"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-11",
+   "action": "set_option",
+   "match": "the tools are",
+   "text": "The tools are implemented across several different backend services"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-11",
+   "action": "set_option",
+   "match": "the tools return",
+   "text": "The tools return large payloads that fill the context"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-13",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "Authority is unbounded, so least privilege cannot be applied"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-13",
+   "action": "set_option",
+   "match": "it will be",
+   "text": "It will be slow, because every request runs a full database query"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-13",
+   "action": "set_option",
+   "match": "it uses too",
+   "text": "It uses too many tokens describing the full database schema"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-13",
+   "action": "set_option",
+   "match": "it cannot return",
+   "text": "It cannot return structured output, only raw query text"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-14",
+   "action": "set_option",
+   "match": "the model version",
+   "text": "The model version was changed partway through the run"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-14",
+   "action": "set_option",
+   "match": "the temperature is",
+   "text": "The temperature is too low for a long sequence of steps"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-14",
+   "action": "set_option",
+   "match": "the tools have",
+   "text": "The tools have become slower as the run went on"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-15",
+   "action": "set_option",
+   "match": "nothing the model",
+   "text": "Nothing, since the model retains whatever matters across the compaction boundary"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-15",
+   "action": "set_option",
+   "match": "the context window",
+   "text": "The context window must be enlarged before the compaction step is triggered"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-15",
+   "action": "set_option",
+   "match": "the decisions and",
+   "text": "Key decisions and constraints go into an explicit carried-forward summary"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-15",
+   "action": "set_option",
+   "match": "the run must",
+   "text": "The run must restart in a brand-new session as soon as compaction happens"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-2",
+   "action": "set_option",
+   "match": "it loses the",
+   "text": "It loses the parent's context unless the handoff carries it explicitly"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-2",
+   "action": "set_option",
+   "match": "it requires a",
+   "text": "It requires a larger model than the parent agent is running"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-2",
+   "action": "set_option",
+   "match": "it cannot use",
+   "text": "It cannot use tools, so all tool calls stay with the parent"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-2",
+   "action": "set_option",
+   "match": "it doubles token",
+   "text": "It doubles the token cost in every case, whatever the task happens to be"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-3",
+   "action": "set_option",
+   "match": "a more capable",
+   "text": "A more capable model that is less likely to make mistakes"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-3",
+   "action": "set_option",
+   "match": "a longer system",
+   "text": "A longer system prompt describing caution with production data"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-3",
+   "action": "set_option",
+   "match": "a retry policy",
+   "text": "A retry policy that repeats the step until it succeeds"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-3",
+   "action": "set_option",
+   "match": "a checkpoint where",
+   "text": "A checkpoint where a person authorises it, or a reversible mechanism"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-4",
+   "action": "set_option",
+   "match": "the final output",
+   "text": "The final output, compared against the expected end result"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-4",
+   "action": "set_option",
+   "match": "the total token",
+   "text": "The total token count consumed across the run"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-4",
+   "action": "set_option",
+   "match": "the model version",
+   "text": "The model version and settings used for the run"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-5",
+   "action": "set_option",
+   "match": "in the team",
+   "text": "In a pinned message in the team's chat channel"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-5",
+   "action": "set_option",
+   "match": "in the ci",
+   "text": "In the CI pipeline's configuration file"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-6",
+   "action": "set_option",
+   "match": "exploratory debugging of",
+   "text": "Exploratory debugging of an unfamiliar production failure"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-6",
+   "action": "set_option",
+   "match": "designing a new",
+   "text": "Designing the architecture of a new module from scratch"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-6",
+   "action": "set_option",
+   "match": "pair programming with",
+   "text": "Pair programming alongside a developer in their editor"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-6",
+   "action": "set_option",
+   "match": "a repeatable well",
+   "text": "A repeatable, well-specified check run on every pull request"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-7",
+   "action": "set_option",
+   "match": "running a deterministic",
+   "text": "Running deterministic code at a fixed point, outside the model"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-7",
+   "action": "set_option",
+   "match": "storing reusable instructions",
+   "text": "Storing reusable instructions that the model can load on demand"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-7",
+   "action": "set_option",
+   "match": "holding project context",
+   "text": "Holding project context that loads at session start"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-7",
+   "action": "set_option",
+   "match": "selecting the model",
+   "text": "Selecting which model handles each kind of request"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-8",
+   "action": "set_option",
+   "match": "requesting the shape",
+   "text": "Requesting the exact shape in the prompt and parsing the result"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-8",
+   "action": "set_option",
+   "match": "post processing prose",
+   "text": "Post-processing the prose output with regular expressions"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-8",
+   "action": "set_option",
+   "match": "declaring the shape",
+   "text": "Declaring a schema the model must satisfy, then validating it"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-8",
+   "action": "set_option",
+   "match": "lowering the temperature",
+   "text": "Lowering the temperature so the output format varies less"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-9",
+   "action": "set_option",
+   "match": "omit the field",
+   "text": "Omit the field silently when it is missing"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-9",
+   "action": "set_option",
+   "match": "supply a plausible",
+   "text": "Supply a plausible default value instead"
+  },
+  {
+   "id": "amey:architect-foundations-mock2-9",
+   "action": "set_option",
+   "match": "return an empty",
+   "text": "Return an empty string whenever it is absent"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-1",
+   "action": "set_option",
+   "match": "healthy retry behavior",
+   "text": "Healthy retry behavior that protects the run against transient errors"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-1",
+   "action": "set_option",
+   "match": "the tool is",
+   "text": "The tool returns too quickly for its result to be recorded"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-1",
+   "action": "set_option",
+   "match": "the agent is",
+   "text": "The agent is not retaining the result, which points at state design"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-1",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model is too capable and over-verifies its own work"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-10",
+   "action": "set_option",
+   "match": "duplication of code",
+   "text": "Duplication of code across the two implementations"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-10",
+   "action": "set_option",
+   "match": "higher latency",
+   "text": "Higher latency from loading two similar tool definitions"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-10",
+   "action": "set_option",
+   "match": "the model has",
+   "text": "The model has no reliable basis to choose between them"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-10",
+   "action": "set_option",
+   "match": "increased token cost",
+   "text": "Increased token cost from the duplicate definitions"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-11",
+   "action": "set_option",
+   "match": "return the closest",
+   "text": "Return the closest result it can find for the given arguments"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-11",
+   "action": "set_option",
+   "match": "return a clear",
+   "text": "Return a clear error stating what was wrong with the call"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-11",
+   "action": "set_option",
+   "match": "return an empty",
+   "text": "Return an empty result so the caller sees nothing matched"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-11",
+   "action": "set_option",
+   "match": "raise an exception",
+   "text": "Raise an exception that terminates the run immediately"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-12",
+   "action": "set_option",
+   "match": "remove it because",
+   "text": "Remove it, since unused authority is needless risk"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-12",
+   "action": "set_option",
+   "match": "leave it since",
+   "text": "Leave it enabled, since a later use case may need it"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-12",
+   "action": "set_option",
+   "match": "document that it",
+   "text": "Document in its description that it must not be used"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-12",
+   "action": "set_option",
+   "match": "rename it to",
+   "text": "Rename it so the model is discouraged from calling it"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-13",
+   "action": "set_option",
+   "match": "the agent begins",
+   "text": "The agent repeats work or contradicts earlier decisions"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-13",
+   "action": "set_option",
+   "match": "the run takes",
+   "text": "The run takes noticeably longer to finish than was expected"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-13",
+   "action": "set_option",
+   "match": "token cost rises",
+   "text": "Token cost per turn rises above the usual level"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-13",
+   "action": "set_option",
+   "match": "a tool returns",
+   "text": "A tool call returns an error partway through the run"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-14",
+   "action": "set_option",
+   "match": "it reduces token",
+   "text": "It reduces token cost by letting the agent skip steps that turn out to be unneeded"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-14",
+   "action": "set_option",
+   "match": "without it there",
+   "text": "Without it, done can't be told from failure, so it can't stop or be measured"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-14",
+   "action": "set_option",
+   "match": "it makes the",
+   "text": "It makes the system prompt shorter and easier for the model to follow"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-14",
+   "action": "set_option",
+   "match": "it is required",
+   "text": "It is required by the platform before an agent can be deployed"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-15",
+   "action": "set_option",
+   "match": "a more capable",
+   "text": "A more capable model that rarely makes such errors"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-15",
+   "action": "set_option",
+   "match": "more examples in",
+   "text": "More examples of correct output added to the prompt"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-15",
+   "action": "set_option",
+   "match": "a longer context",
+   "text": "A longer context window so nothing is forgotten"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-2",
+   "action": "set_option",
+   "match": "their combined length",
+   "text": "Their combined length relative to the window"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-2",
+   "action": "set_option",
+   "match": "whether they use",
+   "text": "Whether each of them needs a distinct set of tools to call"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-2",
+   "action": "set_option",
+   "match": "whether they can",
+   "text": "Whether the two can run in parallel at all"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-3",
+   "action": "set_option",
+   "match": "a larger model",
+   "text": "A larger model that makes fewer wrong decisions"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-3",
+   "action": "set_option",
+   "match": "a longer prompt",
+   "text": "A longer prompt with more detailed instructions"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-3",
+   "action": "set_option",
+   "match": "more tools",
+   "text": "More tools, so the agent has better options to pick from"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-3",
+   "action": "set_option",
+   "match": "making the action",
+   "text": "Making the action reversible or gated behind confirmation"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-4",
+   "action": "set_option",
+   "match": "better results because",
+   "text": "Better results, because more project context is available"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-4",
+   "action": "set_option",
+   "match": "the instructions that",
+   "text": "Key instructions compete with material that is outdated"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-4",
+   "action": "set_option",
+   "match": "no effect since",
+   "text": "No real effect, since it is read once at the session start"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-4",
+   "action": "set_option",
+   "match": "faster responses",
+   "text": "Faster responses, since less has to be inferred each turn"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-5",
+   "action": "set_option",
+   "match": "it is long",
+   "text": "It is long enough to cover the whole procedure in full depth"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-5",
+   "action": "set_option",
+   "match": "it encodes a",
+   "text": "It encodes a genuinely repeated procedure and is reviewable"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-5",
+   "action": "set_option",
+   "match": "it is written",
+   "text": "It is written by the most senior engineer on the team"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-5",
+   "action": "set_option",
+   "match": "it covers every",
+   "text": "It covers every edge case the team could encounter"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-6",
+   "action": "set_option",
+   "match": "it is faster",
+   "text": "It is faster to load at the start of each Claude Code session"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-6",
+   "action": "set_option",
+   "match": "it uses less",
+   "text": "It uses less context than each developer's own per-user configuration"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-6",
+   "action": "set_option",
+   "match": "it cannot be",
+   "text": "It cannot be overridden by any individual developer locally"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-6",
+   "action": "set_option",
+   "match": "it is versioned",
+   "text": "It is versioned, reviewed, and applies to everyone, including CI"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-7",
+   "action": "set_option",
+   "match": "define a fallback",
+   "text": "A fallback: retry, then fail explicitly rather than passing it on"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-7",
+   "action": "set_option",
+   "match": "ignore it since",
+   "text": "Ignore it, since a failure rate that low is acceptable in production"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-7",
+   "action": "set_option",
+   "match": "disable validation to",
+   "text": "Disable validation for this call so the rare failures stop surfacing"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-7",
+   "action": "set_option",
+   "match": "increase the output",
+   "text": "Increase the output token limit so responses are no longer cut off"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-8",
+   "action": "set_option",
+   "match": "it is cheaper",
+   "text": "It is cheaper, since fewer tokens are spent on later steps"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-8",
+   "action": "set_option",
+   "match": "it removes the",
+   "text": "It removes the need to define a schema up front for the model's output"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-8",
+   "action": "set_option",
+   "match": "the failure is",
+   "text": "Failures are caught where retry or rejection is still possible"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-8",
+   "action": "set_option",
+   "match": "it improves model",
+   "text": "It improves the model's accuracy on later extraction calls"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-9",
+   "action": "set_option",
+   "match": "a larger model",
+   "text": "A larger model that tracks source positions better"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-9",
+   "action": "set_option",
+   "match": "a longer prompt",
+   "text": "A longer prompt asking the model to note sources"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-9",
+   "action": "set_option",
+   "match": "a second extraction",
+   "text": "A second extraction pass that locates each value"
+  },
+  {
+   "id": "amey:architect-foundations-mock3-9",
+   "action": "set_option",
+   "match": "the schema to",
+   "text": "A provenance field in the schema that the model must fill"
+  },
+  {
+   "id": "amey:architect-foundations-practice-1",
+   "action": "set_option",
+   "match": "raise max_tokens so",
+   "text": "Raise max_tokens so the loop has enough room to finish and reach a final answer on its own"
+  },
+  {
+   "id": "amey:architect-foundations-practice-1",
+   "action": "set_option",
+   "match": "remove the lookup_order",
+   "text": "Remove the lookup_order tool so the agent has no way to re-call it on one order"
+  },
+  {
+   "id": "amey:architect-foundations-practice-1",
+   "action": "set_option",
+   "match": "add explicit loop",
+   "text": "Cap tool iterations, detect repeated identical calls, and escalate when progress stalls"
+  },
+  {
+   "id": "amey:architect-foundations-practice-1",
+   "action": "set_option",
+   "match": "lower the temperature",
+   "text": "Lower the temperature so the agent is less inclined to re-check the same order"
+  },
+  {
+   "id": "amey:architect-foundations-practice-10",
+   "action": "set_option",
+   "match": "add a fourth",
+   "text": "Add a fourth, better-documented file-reading tool that the model should prefer"
+  },
+  {
+   "id": "amey:architect-foundations-practice-10",
+   "action": "set_option",
+   "match": "fine tune the",
+   "text": "Fine-tune the model on the tool list so it learns which reader to pick"
+  },
+  {
+   "id": "amey:architect-foundations-practice-10",
+   "action": "set_option",
+   "match": "randomize which tool",
+   "text": "Randomize which reader the harness dispatches to, so no tool is favored"
+  },
+  {
+   "id": "amey:architect-foundations-practice-10",
+   "action": "set_option",
+   "match": "consolidate to one",
+   "text": "Merge into one file-reading tool, or sharply differentiate the remaining descriptions"
+  },
+  {
+   "id": "milindgaharwar:16908042",
+   "action": "set_explanation",
+   "text": "`context: fork` runs a skill in an isolated subagent context: the skill content becomes the subagent's prompt, and it does not see the main conversation history. Avoid it when the skill needs conversational continuity with the main session, for example a skill that asks the developer clarifying questions mid-execution. Verbose output is actually a reason to fork (it keeps the main context clean), and a forked skill can still read and write project files."
   }
  ],
  "hold": []
