@@ -41954,6 +41954,192 @@
    "action": "set_option",
    "match": "have the synthesis",
    "text": "Have the synthesis agent guess the most likely source of each claim based on writing style"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-041",
+   "action": "set_option",
+   "match": "a production database write",
+   "text": "A production database-write tool that each specialist calls to store its claims"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-041",
+   "action": "set_option",
+   "match": "a summary that omits",
+   "text": "A free-form summary per specialist that omits empty fields to keep merges short"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-041",
+   "action": "set_option",
+   "match": "a detailed report template",
+   "text": "A labeled prose report template per field, plus a parser that tolerates gaps"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-041",
+   "action": "set_option",
+   "match": "a required no side",
+   "text": "A required no-side-effect structured result schema plus validation"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-042",
+   "action": "set_option",
+   "match": "a live approval workflow",
+   "text": "A live approval workflow that batches requests until the response deadline"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-042",
+   "action": "set_option",
+   "match": "a low latency interactive",
+   "text": "A low-latency interactive loop where each call needs the last result"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-045",
+   "action": "set_option",
+   "match": "a stratified sample",
+   "text": "A stratified sample of the claims the router already labeled low confidence"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-045",
+   "action": "set_option",
+   "match": "a random sample of",
+   "text": "A random sample of ordinary claims that passed without being flagged"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-045",
+   "action": "set_option",
+   "match": "no human review",
+   "text": "No human review after launch, relying on the confidence labels alone"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-045",
+   "action": "set_option",
+   "match": "only claims from",
+   "text": "Extra review of every claim produced by the specialist with the most flags"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_option",
+   "match": "ask for prose",
+   "text": "Ask for a prose change summary and skip parsing to avoid schema failures"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_option",
+   "match": "give the reviewer",
+   "text": "Give the reviewer every production write tool and rely on the system prompt"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_option",
+   "match": "force the deployment tool",
+   "text": "Force the deployment tool in validation-only mode and parse its typed response"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-050",
+   "action": "set_option",
+   "match": "retry all five",
+   "text": "Retry all five suites from scratch after the stated delay for one consistent run"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-050",
+   "action": "set_option",
+   "match": "mark the stage",
+   "text": "Mark the stage complete on the two passing suites and defer the other three"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-050",
+   "action": "set_option",
+   "match": "preserve completed suite",
+   "text": "Preserve the completed suite results with their identities and provenance"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-050",
+   "action": "set_option",
+   "match": "return a retryable",
+   "text": "Return a retryable rate-limit category with remaining scope and retry timing"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-051",
+   "action": "set_option",
+   "match": "remove configuration auditing",
+   "text": "Disable the CI configuration audit so the missing rule no longer fails the run"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-051",
+   "action": "set_option",
+   "match": "move shared reviewer",
+   "text": "Move the policy into versioned project guidance or scoped rules and test that CI loads it"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-051",
+   "action": "set_option",
+   "match": "keep the policy",
+   "text": "Keep it in maintainer memory and add compliant examples so CI infers it from precedent"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-051",
+   "action": "set_option",
+   "match": "copy it into",
+   "text": "Paste the rule text into the model output after each review so CI can read it"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-053",
+   "action": "set_option",
+   "match": "an automatic merge",
+   "text": "An automatic merge command issued once the reviewer finds no blocking issues"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-053",
+   "action": "set_option",
+   "match": "a versioned prose",
+   "text": "Versioned prose with file paths, quoted evidence and severity headings, matched by wording"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-053",
+   "action": "set_option",
+   "match": "a general quality",
+   "text": "A single overall quality score per run that CI compares against a threshold"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-056",
+   "action": "set_option",
+   "match": "require an iso",
+   "text": "Require an ISO date and let the model infer it from release context with low confidence"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-056",
+   "action": "set_option",
+   "match": "drop records with",
+   "text": "Drop records without an effective date before they reach the output file"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-056",
+   "action": "set_option",
+   "match": "use an unrestricted",
+   "text": "Use an unrestricted free-form string so the model can record whatever it finds"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-058",
+   "action": "set_option",
+   "match": "allow in place",
+   "text": "Allow in-place correction and have the generator add a self-reported change summary as audit trail"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-058",
+   "action": "set_option",
+   "match": "increase the retry",
+   "text": "Raise the generator's retry limit so failing records are regenerated until they pass"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-058",
+   "action": "set_option",
+   "match": "delete the source",
+   "text": "Delete the original version after correction and keep only the fixed record"
+  },
+  {
+   "id": "rohitg00:lesson-17#4",
+   "action": "set_option",
+   "match": "block a write",
+   "text": "Block a write to any path that lies outside the task's declared file scope"
   }
  ],
  "hold": []
