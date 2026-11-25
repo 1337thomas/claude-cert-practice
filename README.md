@@ -2,13 +2,17 @@
 
 Unofficial practice exams for Anthropic Claude certifications. Single-file static HTML — no backend, no tracking, works offline.
 
-**Supported exams:** CCAO-F (Associate – Foundations), CCDV-F (Developer – Foundations), CCAR-F (Architect – Foundations), CCAR-P (Architect – Professional)
+**Supported exams:** CCAO-F (Associate – Foundations), CCDV-F (Developer – Foundations), CCDV-P (Developer – Professional), CCAR-F (Architect – Foundations), CCAR-P (Architect – Professional)
+
+CCAO-F, CCDV-F and CCAR-P follow the exam guides v1.1 effective 7 December 2026 (70 items, 60 scored, new domain weights). CCDV-P follows exam guide v1.0 (November 2026).
 
 **[Start practicing](https://1337thomas.github.io/claude-cert-practice/)**
 
 ## Features
 
-- Exam mode (timed, scored at the end) and learning mode (answer and explanation after each question)
+- Exam mode (timed, scored at the end; submitted automatically when time runs out, unanswered questions count as wrong) and learning mode (answer and explanation after each question, no time limit)
+- Random exams are drawn in the official domain weights; results show percent correct by domain, like the real score report
+- CCDV-P: original scenario questions with a rationale for every option, grouped into fixed mock exams
 - Explanations from the original authors for nearly every question
 - "Report a problem" link on every question opens a pre-filled GitHub issue with the question ID
 
@@ -34,7 +38,8 @@ Questions collected from community repositories:
 - mrKindly/claude-certified-developer (CCDV-F)
 - DaNiELChIoRo/CCDVFTrainer (CCDV-F)
 
-This repo is a collection only. Question content © respective authors under original licenses.
+The CCDV-P questions are original to this repo (MIT), see `tools/newsrc/ORIGINAL.md`. All other questions are collected:
+question content © respective authors under original licenses.
 
 ## License
 

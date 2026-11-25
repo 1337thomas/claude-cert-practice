@@ -9,8 +9,12 @@ patches.json:
              {"id", "action": "edit", "field": "q|explanation|opt", "find": str, "replace": str} |
              {"id", "action": "set_option", "match": "<old option prefix>", "text": str} |
              {"id", "action": "set_explanation", "text": str} |
-             {"id", "action": "note", "text": str}   # appended to explanation as a correction note
-  ]}
+             {"id", "action": "note", "text": str} |  # appended to explanation as a correction note
+             {"id", "action": "set_domain", "from": str, "to": str}   # re-file one item under a new blueprint
+  ],
+   "domains": {"<exam>": {"<old domain label>": "<new domain label>"}},  # blueprint renames, applied first
+   "hold": [ids],  # not reviewed yet: dropped from the final bank
+   "reviews": [{"id", "date", "verdict", "sources", "change"?}]}  # audit trail for original questions; not applied
 Every patch must hit exactly once, otherwise the script fails (so stale patches can't silently no-op).
 """
 import json, re, sys, collections
@@ -29,6 +33,13 @@ def opt(q, prefix):
     assert len(hits) == 1, (q['id'], prefix, [o['text'][:60] for o in q['options']])
     return hits[0]
 
+
+for e, ren in P.get('domains', {}).items():
+    hit = collections.Counter(q['domain'] for q in bank[e] if q['domain'] in ren)
+    assert set(hit) == set(ren), ('stale domain rename', e, set(ren) - set(hit))
+    for q in bank[e]:
+        q['domain'] = ren.get(q['domain'], q['domain'])
+    stats['domain-renamed'] += sum(hit.values())
 
 for g in P.get('global', []):
     rx = re.compile(g['pattern'])
@@ -60,6 +71,9 @@ for p in P['items']:
         for o in q['options']: o['correct'] = any(o is h for h in hits)
     elif a == 'set_option':
         opt(q, p['match'])['text'] = p['text']
+    elif a == 'set_domain':
+        assert q['domain'] == p['from'], (p['id'], q['domain'], p['from'])
+        q['domain'] = p['to']
     elif a == 'set_explanation':
         q['explanation'] = p['text']
     elif a == 'note':

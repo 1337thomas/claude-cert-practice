@@ -1,0 +1,5 @@
+tools/upstream/
+tools/pylib/
+__pycache__/
+*.pyc
+tools/newsrc/_draft/
