@@ -25783,6 +25783,1134 @@
    "action": "set_option",
    "match": "pass the complete",
    "text": "Pass the complete 42-field result so Claude has full context for later"
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_option",
+   "match": "Define all security",
+   "text": "Define all security rules once in the organization CI pipeline and enforce them only there"
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_option",
+   "match": "Each developer adds",
+   "text": "Have each developer add the shared security rules to their own ~/.claude/CLAUDE.md file"
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_option",
+   "match": "Create a shared",
+   "text": "@-import a shared security rules file in each project; put project-specific rules in .claude/rules/"
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_option",
+   "match": "Use a centralized",
+   "text": "Define the rules in a shared settings.json and pull it into each project with an `extends` key"
+  },
+  {
+   "id": "milind:Q711",
+   "action": "set_option",
+   "match": "Add \"only report",
+   "text": "Add \"only report high-confidence findings\" to the comment-accuracy instruction"
+  },
+  {
+   "id": "milind:Q711",
+   "action": "set_option",
+   "match": "Increase the model",
+   "text": "Increase the model temperature so the reviewer flags fewer minor comment issues"
+  },
+  {
+   "id": "milind:Q711",
+   "action": "set_option",
+   "match": "Replace the vague",
+   "text": "Replace it with: flag a comment only if it contradicts the code's behavior"
+  },
+  {
+   "id": "milind:Q711",
+   "action": "set_option",
+   "match": "Add \"be conservative\"",
+   "text": "Add \"be conservative\" to the prompt so the reviewer hesitates before flagging comments"
+  },
+  {
+   "id": "milind:Q712",
+   "action": "set_option",
+   "match": "Provide 2-4 few-shot",
+   "text": "Provide 2-4 few-shot examples of invoices with both fields, showing which value maps to total"
+  },
+  {
+   "id": "milind:Q712",
+   "action": "set_option",
+   "match": "Add more detailed",
+   "text": "Add more detailed natural-language instructions explaining how a subtotal differs from a total"
+  },
+  {
+   "id": "milind:Q712",
+   "action": "set_option",
+   "match": "Add a confidence",
+   "text": "Add a confidence threshold so the total field is only populated when Claude is highly confident"
+  },
+  {
+   "id": "milind:Q712",
+   "action": "set_option",
+   "match": "Use a larger",
+   "text": "Switch to a larger model with more reasoning capability to tell subtotal and total apart"
+  },
+  {
+   "id": "milind:Q714",
+   "action": "set_option",
+   "match": "Add a system",
+   "text": "Add a system prompt line: \"Return null if you cannot find the vendor name\""
+  },
+  {
+   "id": "milind:Q714",
+   "action": "set_option",
+   "match": "Set the field",
+   "text": "Set the field as optional with a default value of \"Unknown\" for missing vendors"
+  },
+  {
+   "id": "milind:Q714",
+   "action": "set_option",
+   "match": "Make `vendor_name` nullable",
+   "text": "Make `vendor_name` nullable so null is a valid value when no vendor is present"
+  },
+  {
+   "id": "milind:Q715",
+   "action": "set_option",
+   "match": "Reduce the severity",
+   "text": "Reduce the severity threshold for error-handling findings in the review prompt"
+  },
+  {
+   "id": "milind:Q715",
+   "action": "set_option",
+   "match": "Add a few-shot",
+   "text": "Add a few-shot example showing this internal pattern is valid error handling here"
+  },
+  {
+   "id": "milind:Q715",
+   "action": "set_option",
+   "match": "Add \"ignore error",
+   "text": "Add \"ignore error handling issues\" to the prompt to suppress this false-positive category"
+  },
+  {
+   "id": "milind:Q715",
+   "action": "set_option",
+   "match": "Ask the agent",
+   "text": "Ask the agent to \"be more careful about error handling patterns\" before it flags them"
+  },
+  {
+   "id": "milind:Q716",
+   "action": "set_option",
+   "match": "`tool_use` with JSON",
+   "text": "`tool_use` with JSON schema, since the API enforces the structure instead of just requesting it"
+  },
+  {
+   "id": "milind:Q716",
+   "action": "set_option",
+   "match": "Prompt instructions — they're",
+   "text": "Prompt instructions, since they're simpler and in practice just as reliable as tool_use"
+  },
+  {
+   "id": "milind:Q716",
+   "action": "set_option",
+   "match": "Both are equivalent;",
+   "text": "Both are equivalent, so choose based on implementation preference and team familiarity"
+  },
+  {
+   "id": "milind:Q716",
+   "action": "set_option",
+   "match": "Prompt instructions for",
+   "text": "Prompt instructions for simple schemas, and tool_use only for complex nested schemas"
+  },
+  {
+   "id": "milind:Q717",
+   "action": "set_option",
+   "match": "Add few-shot examples",
+   "text": "Add few-shot examples showing correct extraction from each citation format"
+  },
+  {
+   "id": "milind:Q717",
+   "action": "set_option",
+   "match": "Add format detection",
+   "text": "Add format-detection logic and route each citation format to its own separate prompt"
+  },
+  {
+   "id": "milind:Q717",
+   "action": "set_option",
+   "match": "Only process papers",
+   "text": "Only process papers that use the inline citation format and skip all the others"
+  },
+  {
+   "id": "milind:Q717",
+   "action": "set_option",
+   "match": "Add a preprocessing",
+   "text": "Add a preprocessing step that normalizes all citation formats to inline citations"
+  },
+  {
+   "id": "milind:Q718",
+   "action": "set_option",
+   "match": "Synchronous API —",
+   "text": "Synchronous API, to ensure the 10,000 reports are processed as fast as possible"
+  },
+  {
+   "id": "milind:Q718",
+   "action": "set_option",
+   "match": "Streaming API —",
+   "text": "Streaming API, so the dashboard can show real-time progress during the run"
+  },
+  {
+   "id": "milind:Q718",
+   "action": "set_option",
+   "match": "Either Batches or",
+   "text": "Either Batches or synchronous API, since they're equivalent for this use case"
+  },
+  {
+   "id": "milind:Q718",
+   "action": "set_option",
+   "match": "Message Batches API",
+   "text": "Message Batches API: 50% cheaper, and its 24-hour window fits the 48-hour gap"
+  },
+  {
+   "id": "milind:Q719",
+   "action": "set_option",
+   "match": "A pre-merge CI",
+   "text": "A pre-merge CI check that must finish before a developer can merge"
+  },
+  {
+   "id": "milind:Q719",
+   "action": "set_option",
+   "match": "Weekly nightly technical",
+   "text": "Weekly technical debt report generation run overnight on the main branch"
+  },
+  {
+   "id": "milind:Q719",
+   "action": "set_option",
+   "match": "Monthly compliance document",
+   "text": "Monthly compliance analysis of the previous month's signed documents"
+  },
+  {
+   "id": "milind:Q719",
+   "action": "set_option",
+   "match": "Overnight test case",
+   "text": "Overnight test case generation for code merged during the previous day"
+  },
+  {
+   "id": "milind:Q72",
+   "action": "set_option",
+   "match": "Add a firewall",
+   "text": "Add a firewall rule between subagent processes to block direct network connections"
+  },
+  {
+   "id": "milind:Q72",
+   "action": "set_option",
+   "match": "Instruct subagents in",
+   "text": "Instruct subagents in their system prompts not to call or contact other agents directly"
+  },
+  {
+   "id": "milind:Q72",
+   "action": "set_option",
+   "match": "Monitor agent logs",
+   "text": "Monitor agent logs and manually intervene whenever direct communication occurs"
+  },
+  {
+   "id": "milind:Q72",
+   "action": "set_option",
+   "match": "Configure each subagent's",
+   "text": "Leave the Agent tool out of each subagent's `AgentDefinition` so it cannot reach other agents"
+  },
+  {
+   "id": "milind:Q720",
+   "action": "set_option",
+   "match": "Split the PR",
+   "text": "Split the PR into smaller sub-PRs of 5-8 files each and review them one by one"
+  },
+  {
+   "id": "milind:Q720",
+   "action": "set_option",
+   "match": "Split into focused",
+   "text": "Review each file on its own for local issues, then run a separate cross-file pass"
+  },
+  {
+   "id": "milind:Q720",
+   "action": "set_option",
+   "match": "Use a larger",
+   "text": "Use a larger context window so all 25 files can be analyzed simultaneously"
+  },
+  {
+   "id": "milind:Q720",
+   "action": "set_option",
+   "match": "Run 3 independent",
+   "text": "Run 3 independent single-pass reviews and keep the majority finding for each pattern"
+  },
+  {
+   "id": "milind:Q721",
+   "action": "set_option",
+   "match": "Make `invoice_total` required",
+   "text": "Make `invoice_total` required and `line_item_total` optional in the schema"
+  },
+  {
+   "id": "milind:Q721",
+   "action": "set_option",
+   "match": "Add instructions: \"Make",
+   "text": "Add a prompt instruction: \"Make sure the line items sum to the invoice total\""
+  },
+  {
+   "id": "milind:Q721",
+   "action": "set_option",
+   "match": "Add a `calculated_total`",
+   "text": "Extract `calculated_total` next to `stated_total` and add a `conflict_detected` boolean"
+  },
+  {
+   "id": "milind:Q721",
+   "action": "set_option",
+   "match": "Add validation logic",
+   "text": "Add validation logic in post-processing that catches sum mismatches after extraction"
+  },
+  {
+   "id": "milind:Q722",
+   "action": "set_option",
+   "match": "The false positive",
+   "text": "The false positive rate is within the acceptable range for this type of review"
+  },
+  {
+   "id": "milind:Q722",
+   "action": "set_option",
+   "match": "\"Be conservative\" and",
+   "text": "Both phrases are vague and don't define which issue types to report or skip"
+  },
+  {
+   "id": "milind:Q722",
+   "action": "set_option",
+   "match": "The model ignores",
+   "text": "The model ignores meta-instructions like these and follows only the task description"
+  },
+  {
+   "id": "milind:Q722",
+   "action": "set_option",
+   "match": "Confidence scoring is",
+   "text": "Confidence scoring is not supported in this context, so the threshold has no effect"
+  },
+  {
+   "id": "milind:Q723",
+   "action": "set_option",
+   "match": "Ask Claude to",
+   "text": "Ask Claude to \"use industry-standard severity levels\" when classifying each finding"
+  },
+  {
+   "id": "milind:Q723",
+   "action": "set_option",
+   "match": "Let developers calibrate",
+   "text": "Let developers calibrate severity manually after they review the findings"
+  },
+  {
+   "id": "milind:Q723",
+   "action": "set_option",
+   "match": "Define severity criteria",
+   "text": "Define criteria for each severity level, each with a concrete code example"
+  },
+  {
+   "id": "milind:Q724",
+   "action": "set_option",
+   "match": "Add few-shot examples",
+   "text": "Add few-shot examples showing correct extraction from both headered and prose contracts"
+  },
+  {
+   "id": "milind:Q724",
+   "action": "set_option",
+   "match": "Process only documents",
+   "text": "Process only documents with explicit headers and send the rest to manual review"
+  },
+  {
+   "id": "milind:Q724",
+   "action": "set_option",
+   "match": "Add a preprocessing",
+   "text": "Add a preprocessing step that inserts section headers into the flowing prose"
+  },
+  {
+   "id": "milind:Q724",
+   "action": "set_option",
+   "match": "Use two separate",
+   "text": "Use two separate extraction prompts, one for structured and one for prose contracts"
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_option",
+   "match": "The Batches API requires",
+   "text": "The Batches API requires a minimum of 100 requests in each submitted batch"
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_option",
+   "match": "The Batches API does",
+   "text": "Tools can't be executed mid-request; each batch request is single-turn"
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_option",
+   "match": "The Batches API has",
+   "text": "The Batches API has a lower token limit per request than the synchronous API"
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_option",
+   "match": "The Batches API cannot",
+   "text": "The Batches API cannot accept image or PDF content blocks in its requests"
+  },
+  {
+   "id": "milind:Q726",
+   "action": "set_option",
+   "match": "Separate extraction passes",
+   "text": "Separate extraction passes for each date format, each with its own prompt"
+  },
+  {
+   "id": "milind:Q726",
+   "action": "set_option",
+   "match": "Few-shot examples demonstrating",
+   "text": "Few-shot examples covering each date format, including the written-out form"
+  },
+  {
+   "id": "milind:Q727",
+   "action": "set_option",
+   "match": "A `developer_feedback` field",
+   "text": "A `developer_feedback` free-text field that developers fill in after review"
+  },
+  {
+   "id": "milind:Q727",
+   "action": "set_option",
+   "match": "A `model_confidence` field",
+   "text": "A `model_confidence` field holding the model's 0-1 confidence per finding"
+  },
+  {
+   "id": "milind:Q727",
+   "action": "set_option",
+   "match": "A `false_positive_likelihood` field",
+   "text": "A `false_positive_likelihood` field estimated for each finding"
+  },
+  {
+   "id": "milind:Q727",
+   "action": "set_option",
+   "match": "A `detected_pattern` field",
+   "text": "A `detected_pattern` field naming the code construct behind each finding"
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_option",
+   "match": "System prompt instruction",
+   "text": "A system prompt instruction, because it's simpler to implement and easier to maintain"
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_option",
+   "match": "They are equivalent",
+   "text": "They're equally reliable, since Claude follows system prompt ordering rules"
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_option",
+   "match": "Forced selection is",
+   "text": "Forced selection only for the last step; instructions work fine for the first step"
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_option",
+   "match": "`tool_choice: {\"type\": \"tool\",",
+   "text": "`tool_choice` forcing extract_document_type, a deterministic guarantee it runs first"
+  },
+  {
+   "id": "milind:Q729",
+   "action": "set_option",
+   "match": "Always — retrying",
+   "text": "On every failure, since each retry adds context that improves the next attempt"
+  },
+  {
+   "id": "milind:Q729",
+   "action": "set_option",
+   "match": "Never — if",
+   "text": "Rarely, since a field that failed once will usually fail again the same way"
+  },
+  {
+   "id": "milind:Q729",
+   "action": "set_option",
+   "match": "Only when the",
+   "text": "When the failure was caused by an API error such as a timeout or rate limit"
+  },
+  {
+   "id": "milind:Q729",
+   "action": "set_option",
+   "match": "When the extraction",
+   "text": "When the data is in the document but was missed or misformatted, not when it's absent"
+  },
+  {
+   "id": "milind:Q73",
+   "action": "set_option",
+   "match": "Copy the analysis",
+   "text": "Copy the analysis to a file and start a completely new session from it"
+  },
+  {
+   "id": "milind:Q73",
+   "action": "set_option",
+   "match": "Append the subsystem",
+   "text": "Append the subsystem investigation request to the current session's history"
+  },
+  {
+   "id": "milind:Q73",
+   "action": "set_option",
+   "match": "Summarize the architecture",
+   "text": "Summarize the architecture analysis to 500 words before forking the session"
+  },
+  {
+   "id": "milind:Q73",
+   "action": "set_option",
+   "match": "Use `fork_session` to",
+   "text": "Use `fork_session` to branch from the current state, keeping the analysis as baseline"
+  },
+  {
+   "id": "milind:Q730",
+   "action": "set_option",
+   "match": "Sunday evening —",
+   "text": "Sunday evening, since the 24-hour window starts from submission"
+  },
+  {
+   "id": "milind:Q730",
+   "action": "set_option",
+   "match": "Monday at 6",
+   "text": "Monday at 6 AM, as a same-day morning submission before the review"
+  },
+  {
+   "id": "milind:Q730",
+   "action": "set_option",
+   "match": "Sunday morning —",
+   "text": "Sunday morning, a full 24-hour window before Monday morning"
+  },
+  {
+   "id": "milind:Q730",
+   "action": "set_option",
+   "match": "Saturday night —",
+   "text": "Saturday night, to leave a full 48-hour buffer before Monday morning"
+  },
+  {
+   "id": "milind:Q731",
+   "action": "set_option",
+   "match": "Make `diagnosis_code` nullable",
+   "text": "Make `diagnosis_code` nullable so absent codes come back as null"
+  },
+  {
+   "id": "milind:Q731",
+   "action": "set_option",
+   "match": "Add a list",
+   "text": "Add the full list of valid ICD-10 codes to the schema as an enum"
+  },
+  {
+   "id": "milind:Q731",
+   "action": "set_option",
+   "match": "Add validation that",
+   "text": "Add validation that rejects any code not in the ICD-10 standard"
+  },
+  {
+   "id": "milind:Q731",
+   "action": "set_option",
+   "match": "Add instruction: \"Do",
+   "text": "Add the instruction: \"Do not guess diagnosis codes\" to the prompt"
+  },
+  {
+   "id": "milind:Q732",
+   "action": "set_option",
+   "match": "It correlates batch",
+   "text": "It links each batch result back to the request that produced it"
+  },
+  {
+   "id": "milind:Q732",
+   "action": "set_option",
+   "match": "It groups related",
+   "text": "It groups related documents so they are processed together in one call"
+  },
+  {
+   "id": "milind:Q732",
+   "action": "set_option",
+   "match": "It enables caching",
+   "text": "It enables caching of results for repeated submissions of a request"
+  },
+  {
+   "id": "milind:Q733",
+   "action": "set_option",
+   "match": "Few-shot examples can",
+   "text": "Over-generalization: the examples lack boundary cases showing where the pattern is safe"
+  },
+  {
+   "id": "milind:Q733",
+   "action": "set_option",
+   "match": "Few-shot examples for",
+   "text": "Few-shot examples written for C code don't transfer correctly to C++ code"
+  },
+  {
+   "id": "milind:Q733",
+   "action": "set_option",
+   "match": "The model version",
+   "text": "The model version needs to be updated for better C++ language awareness"
+  },
+  {
+   "id": "milind:Q735",
+   "action": "set_option",
+   "match": "\"Our standards\" is",
+   "text": "\"Our standards\" is undefined, so generic best practices get applied"
+  },
+  {
+   "id": "milind:Q735",
+   "action": "set_option",
+   "match": "The model is",
+   "text": "The model hasn't been trained on the team's internal coding standards"
+  },
+  {
+   "id": "milind:Q735",
+   "action": "set_option",
+   "match": "Code review requires",
+   "text": "Code review requires fine-tuning on the team's own codebase"
+  },
+  {
+   "id": "milind:Q735",
+   "action": "set_option",
+   "match": "The false positive",
+   "text": "A high false positive rate is inherent to automated code review tasks"
+  },
+  {
+   "id": "milind:Q736",
+   "action": "set_option",
+   "match": "Identify the failed",
+   "text": "Resubmit only the 47 failures, found via `custom_id`, as chunked documents"
+  },
+  {
+   "id": "milind:Q736",
+   "action": "set_option",
+   "match": "Resubmit the entire",
+   "text": "Resubmit the entire batch of 500 so all results come from the same run"
+  },
+  {
+   "id": "milind:Q736",
+   "action": "set_option",
+   "match": "Process the 47",
+   "text": "Process the 47 failed documents synchronously with the same full-length input"
+  },
+  {
+   "id": "milind:Q736",
+   "action": "set_option",
+   "match": "Accept the 453",
+   "text": "Accept the 453 successful results and drop the 47 failures from the report"
+  },
+  {
+   "id": "milind:Q737",
+   "action": "set_option",
+   "match": "Single pass with",
+   "text": "A single review pass with every file of the PR provided simultaneously"
+  },
+  {
+   "id": "milind:Q737",
+   "action": "set_option",
+   "match": "Three independent passes",
+   "text": "Three independent passes over all files, with majority-vote consensus"
+  },
+  {
+   "id": "milind:Q737",
+   "action": "set_option",
+   "match": "One pass per",
+   "text": "One pass per reviewer persona, using different Claude instances in parallel"
+  },
+  {
+   "id": "milind:Q737",
+   "action": "set_option",
+   "match": "Two-pass: Pass 1",
+   "text": "Two passes: per-file local bugs, then a cross-file integration pass"
+  },
+  {
+   "id": "milind:Q738",
+   "action": "set_option",
+   "match": "Source documents have",
+   "text": "They map varied source formats onto consistent output for the strict schema"
+  },
+  {
+   "id": "milind:Q738",
+   "action": "set_option",
+   "match": "Format normalization makes",
+   "text": "Format normalization makes the strict schema more flexible about accepted values"
+  },
+  {
+   "id": "milind:Q738",
+   "action": "set_option",
+   "match": "Normalization rules reduce",
+   "text": "Normalization rules reduce the number of required fields the schema needs"
+  },
+  {
+   "id": "milind:Q738",
+   "action": "set_option",
+   "match": "Normalization improves model",
+   "text": "Normalization improves model performance by reducing overall context length"
+  },
+  {
+   "id": "milind:Q739",
+   "action": "set_option",
+   "match": "Always, for code",
+   "text": "Always, for code generated in that session, whose reasoning it keeps"
+  },
+  {
+   "id": "milind:Q739",
+   "action": "set_option",
+   "match": "Only for security-critical",
+   "text": "Only for security-critical code, where an extra review justifies the cost"
+  },
+  {
+   "id": "milind:Q739",
+   "action": "set_option",
+   "match": "Only when the code",
+   "text": "Only when the code is complex enough to need a second perspective on it"
+  },
+  {
+   "id": "milind:Q739",
+   "action": "set_option",
+   "match": "Only when the first",
+   "text": "Only when the first instance is unavailable or has hit its rate limit"
+  },
+  {
+   "id": "milind:Q74",
+   "action": "set_option",
+   "match": "Peer-to-peer communication uses",
+   "text": "Peer-to-peer communication uses noticeably more API tokens than coordinator routing"
+  },
+  {
+   "id": "milind:Q74",
+   "action": "set_option",
+   "match": "Coordinators can compress",
+   "text": "The coordinator can compress messages passed between agents to reduce latency"
+  },
+  {
+   "id": "milind:Q74",
+   "action": "set_option",
+   "match": "The coordinator provides",
+   "text": "A single point for error handling, logging, and policy enforcement"
+  },
+  {
+   "id": "milind:Q740",
+   "action": "set_option",
+   "match": "Refine the prompt",
+   "text": "Refine the prompt and schema on a representative sample of 20-50 documents"
+  },
+  {
+   "id": "milind:Q740",
+   "action": "set_option",
+   "match": "Submit all 50,000",
+   "text": "Submit all 50,000 contracts in a single batch and fix failures afterwards"
+  },
+  {
+   "id": "milind:Q740",
+   "action": "set_option",
+   "match": "Process 1,000 documents",
+   "text": "Process the first 1,000 documents synchronously to get initial results"
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_option",
+   "match": "Schema syntax errors",
+   "text": "tool_use with JSON schemas removes syntax errors; semantic errors like wrong sums persist"
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_option",
+   "match": "Semantic errors are",
+   "text": "Semantic errors are the more severe kind, while syntax errors are only cosmetic"
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_option",
+   "match": "Syntax errors are",
+   "text": "Syntax errors are eliminated by few-shot examples, semantic errors by schemas"
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_option",
+   "match": "They are the",
+   "text": "They are the same type of error, just named differently by different tools"
+  },
+  {
+   "id": "milind:Q742",
+   "action": "set_option",
+   "match": "Make the field",
+   "text": "Make the field a free-text string instead of an enum so any type fits"
+  },
+  {
+   "id": "milind:Q742",
+   "action": "set_option",
+   "match": "Mark the field",
+   "text": "Mark the field as optional and leave it empty for unrecognized types"
+  },
+  {
+   "id": "milind:Q742",
+   "action": "set_option",
+   "match": "Add \"other\" to",
+   "text": "Add \"other\" to the enum plus a `contract_type_detail` string field"
+  },
+  {
+   "id": "milind:Q742",
+   "action": "set_option",
+   "match": "Add all possible",
+   "text": "Add every contract type seen in the corpus as an additional enum value"
+  },
+  {
+   "id": "milind:Q743",
+   "action": "set_option",
+   "match": "Submit batches in",
+   "text": "Submit batches in fixed 24-hour cycles, regardless of the 30-hour SLA"
+  },
+  {
+   "id": "milind:Q743",
+   "action": "set_option",
+   "match": "Submit batches within",
+   "text": "Submit within 6 hours of receipt, the SLA minus the 24-hour maximum"
+  },
+  {
+   "id": "milind:Q743",
+   "action": "set_option",
+   "match": "Submit immediately but",
+   "text": "Submit immediately and set a 30-hour timeout on the batch"
+  },
+  {
+   "id": "milind:Q743",
+   "action": "set_option",
+   "match": "Use synchronous API",
+   "text": "Use the synchronous API, since batch processing can't guarantee the SLA"
+  },
+  {
+   "id": "milind:Q744",
+   "action": "set_option",
+   "match": "Few-shot examples demonstrate",
+   "text": "They show how to reason through ambiguous cases instructions don't cover"
+  },
+  {
+   "id": "milind:Q744",
+   "action": "set_option",
+   "match": "Examples are processed",
+   "text": "Examples are processed faster by the model than written instructions"
+  },
+  {
+   "id": "milind:Q744",
+   "action": "set_option",
+   "match": "Examples bypass the",
+   "text": "Examples bypass the model's safety filters for security-related code"
+  },
+  {
+   "id": "milind:Q744",
+   "action": "set_option",
+   "match": "Examples enable parallel",
+   "text": "Examples enable parallel processing of multiple security checks at once"
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_option",
+   "match": "List tools in",
+   "text": "List the tools in priority order so Claude starts with the first one"
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_option",
+   "match": "Change `tool_choice` to `\"any\"`",
+   "text": "Change `tool_choice` to `\"any\"` so at least one tool is called"
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_option",
+   "match": "Change `tool_choice` to `\"required\"`",
+   "text": "Change `tool_choice` to `\"required\"` so a tool call is mandatory"
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_option",
+   "match": "Add \"always call",
+   "text": "Add \"always call at least one tool\" to the system prompt instructions"
+  },
+  {
+   "id": "milind:Q746",
+   "action": "set_option",
+   "match": "Add format normalization",
+   "text": "Add European number-format rules plus few-shot examples of German invoices"
+  },
+  {
+   "id": "milind:Q746",
+   "action": "set_option",
+   "match": "Build a separate",
+   "text": "Build a separate extraction pipeline dedicated to European supplier invoices"
+  },
+  {
+   "id": "milind:Q746",
+   "action": "set_option",
+   "match": "Preprocess all invoices",
+   "text": "Preprocess every invoice to convert its number formats before extraction"
+  },
+  {
+   "id": "milind:Q746",
+   "action": "set_option",
+   "match": "Add language detection",
+   "text": "Add language detection and route German invoices to a different Claude model"
+  },
+  {
+   "id": "milind:Q747",
+   "action": "set_option",
+   "match": "Exclude handwritten forms",
+   "text": "Exclude handwritten forms from automated processing and handle them manually"
+  },
+  {
+   "id": "milind:Q747",
+   "action": "set_option",
+   "match": "Request better handwriting",
+   "text": "Request better handwriting-recognition preprocessing from the OCR vendor"
+  },
+  {
+   "id": "milind:Q747",
+   "action": "set_option",
+   "match": "Implement stratified random",
+   "text": "Stratify sampling by document type and calibrate per-type thresholds for human review"
+  },
+  {
+   "id": "milind:Q748",
+   "action": "set_option",
+   "match": "Severity criteria are processed",
+   "text": "Severity criteria are handled by a different model component than confidence values"
+  },
+  {
+   "id": "milind:Q748",
+   "action": "set_option",
+   "match": "Examples reduce token",
+   "text": "Concrete examples reduce token consumption, which improves model performance"
+  },
+  {
+   "id": "milind:Q748",
+   "action": "set_option",
+   "match": "Severity criteria are evaluated",
+   "text": "Explicit severity criteria are evaluated deterministically by the model"
+  },
+  {
+   "id": "milind:Q748",
+   "action": "set_option",
+   "match": "Concrete examples for",
+   "text": "The examples give clear boundaries to match code against, unlike self-rated confidence"
+  },
+  {
+   "id": "milind:Q749",
+   "action": "set_option",
+   "match": "Retry is never",
+   "text": "Date-field errors can't be fixed by retry and require manual correction"
+  },
+  {
+   "id": "milind:Q749",
+   "action": "set_option",
+   "match": "Retry effectiveness depends",
+   "text": "Retry effectiveness depends mainly on the language of the source document"
+  },
+  {
+   "id": "milind:Q749",
+   "action": "set_option",
+   "match": "Retry will be",
+   "text": "It helps if both dates exist and were confused; not if the document has only one date"
+  },
+  {
+   "id": "milind:Q749",
+   "action": "set_option",
+   "match": "Retry is always",
+   "text": "Retry fixes any date confusion once the model sees the error message"
+  },
+  {
+   "id": "milind:Q75",
+   "action": "set_option",
+   "match": "The synthesis agent has",
+   "text": "The synthesis agent has a maximum processing length of three paragraphs per pass"
+  },
+  {
+   "id": "milind:Q75",
+   "action": "set_option",
+   "match": "The \"lost in",
+   "text": "The \"lost in the middle\" effect: content mid-input is processed less reliably"
+  },
+  {
+   "id": "milind:Q750",
+   "action": "set_option",
+   "match": "Remove the `detected_pattern`",
+   "text": "Remove the `detected_pattern` field, since its analysis has now been completed"
+  },
+  {
+   "id": "milind:Q750",
+   "action": "set_option",
+   "match": "Add a few-shot",
+   "text": "Add a few-shot example marking optional chaining as valid null handling"
+  },
+  {
+   "id": "milind:Q750",
+   "action": "set_option",
+   "match": "Disable all null-check",
+   "text": "Disable all null-check findings globally across the whole review prompt"
+  },
+  {
+   "id": "milind:Q750",
+   "action": "set_option",
+   "match": "Increase the confidence",
+   "text": "Increase the confidence threshold required for null-check findings"
+  },
+  {
+   "id": "milind:Q751",
+   "action": "set_option",
+   "match": "Process large documents",
+   "text": "Send large documents through the synchronous API and small ones via batch"
+  },
+  {
+   "id": "milind:Q751",
+   "action": "set_option",
+   "match": "Group documents by",
+   "text": "Group by size and chunk oversized documents, tracked by `custom_id`"
+  },
+  {
+   "id": "milind:Q751",
+   "action": "set_option",
+   "match": "Submit all 10,000",
+   "text": "Submit all 10,000 documents in a single batch regardless of their size"
+  },
+  {
+   "id": "milind:Q751",
+   "action": "set_option",
+   "match": "Pre-filter to exclude",
+   "text": "Pre-filter the corpus to drop documents longer than 10 pages"
+  },
+  {
+   "id": "milind:Q752",
+   "action": "set_option",
+   "match": "Disable all unused",
+   "text": "Disable unused-variable findings entirely, since most are intentional"
+  },
+  {
+   "id": "milind:Q752",
+   "action": "set_option",
+   "match": "Add a note:",
+   "text": "Add a note to the prompt: \"Be careful about unused variable detection\""
+  },
+  {
+   "id": "milind:Q752",
+   "action": "set_option",
+   "match": "Add a post-processing",
+   "text": "Add a post-processing filter that removes all unused-variable findings"
+  },
+  {
+   "id": "milind:Q752",
+   "action": "set_option",
+   "match": "Add an explicit",
+   "text": "Add a rule to skip closure-captured variables, with a code example"
+  },
+  {
+   "id": "milind:Q753",
+   "action": "set_option",
+   "match": "Always use free-text",
+   "text": "Use free-text for every field, since it's more flexible for edge cases"
+  },
+  {
+   "id": "milind:Q753",
+   "action": "set_option",
+   "match": "Use enum for required",
+   "text": "Use enum for required fields and free-text for all optional fields"
+  },
+  {
+   "id": "milind:Q753",
+   "action": "set_option",
+   "match": "Use enum for categorical",
+   "text": "Enum for closed category sets, free-text for open-ended names or text"
+  },
+  {
+   "id": "milind:Q753",
+   "action": "set_option",
+   "match": "Always use enum",
+   "text": "Use enum for every field, since that reduces hallucinated values"
+  },
+  {
+   "id": "milind:Q755",
+   "action": "set_option",
+   "match": "Add a few-shot",
+   "text": "Add a few-shot example contrasting constructor-set fields with raw input"
+  },
+  {
+   "id": "milind:Q755",
+   "action": "set_option",
+   "match": "Add \"skip null",
+   "text": "Add \"skip null check findings\" to the review prompt for this codebase"
+  },
+  {
+   "id": "milind:Q755",
+   "action": "set_option",
+   "match": "Add \"Line 47\"",
+   "text": "Add \"Line 47\" of this file to a persistent exclusion list for future reviews"
+  },
+  {
+   "id": "milind:Q755",
+   "action": "set_option",
+   "match": "Ask the developer",
+   "text": "Ask the developer to add a null-assertion comment next to the variable"
+  },
+  {
+   "id": "milind:Q756",
+   "action": "set_option",
+   "match": "Exclude narrative records",
+   "text": "Exclude the 150 narrative records from the batch extraction run"
+  },
+  {
+   "id": "milind:Q756",
+   "action": "set_option",
+   "match": "Test on a",
+   "text": "Test on 20-50 mixed records, add narrative examples, then batch all 1,000"
+  },
+  {
+   "id": "milind:Q756",
+   "action": "set_option",
+   "match": "Separate the records",
+   "text": "Separate the records by type and submit two batches with different prompts"
+  },
+  {
+   "id": "milind:Q757",
+   "action": "set_option",
+   "match": "Spot-check 5 random",
+   "text": "Spot-check 5 random documents per month across the whole pipeline"
+  },
+  {
+   "id": "milind:Q757",
+   "action": "set_option",
+   "match": "Sample only documents",
+   "text": "Sample the documents that fail schema validation for review"
+  },
+  {
+   "id": "milind:Q757",
+   "action": "set_option",
+   "match": "Stratified random sampling",
+   "text": "Stratified random sampling across all document types and field types"
+  },
+  {
+   "id": "milind:Q757",
+   "action": "set_option",
+   "match": "Sample only low-confidence",
+   "text": "Sample the low-confidence extractions that get routed to human review"
+  },
+  {
+   "id": "milind:Q758",
+   "action": "set_option",
+   "match": "Three examples is",
+   "text": "Three examples is the minimum threshold for consistent few-shot behavior"
+  },
+  {
+   "id": "milind:Q758",
+   "action": "set_option",
+   "match": "The negative example",
+   "text": "The negative example marked the boundary the positive one overshot"
+  },
+  {
+   "id": "milind:Q758",
+   "action": "set_option",
+   "match": "More examples always",
+   "text": "Adding more examples improves performance regardless of their content"
+  },
+  {
+   "id": "milind:Q758",
+   "action": "set_option",
+   "match": "The ratio of",
+   "text": "The 2:1 ratio of positive to negative examples is the optimal mix"
   }
  ],
  "hold": []
