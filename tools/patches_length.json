@@ -38419,6 +38419,1158 @@
    "action": "set_option",
    "match": "the interview pattern instructs",
    "text": "The interview pattern has Claude produce several alternative plans so the product manager can pick one."
+  },
+  {
+   "id": "connectry:q-3.5-medium-5",
+   "action": "set_option",
+   "match": "add a summarization",
+   "text": "Add a summarization step after each turn that compresses the history while keeping every correction in condensed form."
+  },
+  {
+   "id": "connectry:q-3.5-medium-5",
+   "action": "set_option",
+   "match": "continue iterating unpredictability",
+   "text": "Keep iterating with further corrections, since unpredictability is normal during active development and settles over time."
+  },
+  {
+   "id": "connectry:q-3.5-medium-5",
+   "action": "set_option",
+   "match": "recognize that the",
+   "text": "Start over with a clean, consolidated system prompt that holds all learned requirements and drops the old corrections."
+  },
+  {
+   "id": "connectry:q-3.5-medium-5",
+   "action": "set_option",
+   "match": "reduce the system",
+   "text": "Cut the system prompt down to a single short sentence so that no remaining instruction can contradict any other one."
+  },
+  {
+   "id": "connectry:q-3.6-hard-2",
+   "action": "set_option",
+   "match": "add a temperature",
+   "text": "Add a `--temperature 0` flag to the Claude Code call so the output becomes deterministic and stops containing syntax errors"
+  },
+  {
+   "id": "connectry:q-3.6-hard-2",
+   "action": "set_option",
+   "match": "after claude code",
+   "text": "Parse `testCode`, run a syntax check such as `python -m py_compile`, and on failure re-invoke Claude Code with the error appended"
+  },
+  {
+   "id": "connectry:q-3.6-hard-2",
+   "action": "set_option",
+   "match": "switch from output",
+   "text": "Switch from `--output-format json` to plain text output and extract the code block with a regex, which is more robust than JSON"
+  },
+  {
+   "id": "connectry:q-3.6-hard-2",
+   "action": "set_option",
+   "match": "increase the max",
+   "text": "Raise the `--max-tokens` limit for the Claude Code call so it has enough room to produce complete, syntactically valid code"
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "set_option",
+   "match": "it is shorter",
+   "text": "It is shorter and more compact, so Claude can parse the instruction faster and follow it more reliably."
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "set_option",
+   "match": "it replaces a",
+   "text": "It swaps a subjective judgment call for a measurable threshold, reducing inconsistency across runs."
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "set_option",
+   "match": "claude automatically tracks",
+   "text": "Claude tracks numeric confidence scores internally, so the number triggers a built-in API feature for flagging."
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "set_option",
+   "match": "qualitative guidance is",
+   "text": "Qualitative guidance tends to be ignored by Claude, so every prompt criterion should be phrased as a number."
+  },
+  {
+   "id": "connectry:q-4.1-easy-2",
+   "action": "set_option",
+   "match": "claude s temperature",
+   "text": "The sampling temperature is set too high, so Claude's moderation decisions vary randomly between requests."
+  },
+  {
+   "id": "connectry:q-4.1-easy-2",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The system prompt is too short; moderation prompts need at least 500 words to give Claude enough context."
+  },
+  {
+   "id": "connectry:q-4.1-easy-2",
+   "action": "set_option",
+   "match": "claude cannot perform",
+   "text": "Content moderation of this kind requires a fine-tuned model and cannot be handled reliably through prompting."
+  },
+  {
+   "id": "connectry:q-4.1-easy-2",
+   "action": "set_option",
+   "match": "the prompt lacks",
+   "text": "The prompt never defines what counts as 'harmful,' so Claude interprets the term differently by context."
+  },
+  {
+   "id": "connectry:q-4.1-easy-3",
+   "action": "set_option",
+   "match": "classify the feedback",
+   "text": "Classify the feedback based on your overall sense of the customer's mood, weighing tone, word choice and context."
+  },
+  {
+   "id": "connectry:q-4.1-easy-3",
+   "action": "set_option",
+   "match": "classify as positive if overall",
+   "text": "Classify as Positive if the overall sentiment is good, Negative if it is bad, and Neutral if it is neither clearly good nor bad."
+  },
+  {
+   "id": "connectry:q-4.1-easy-3",
+   "action": "set_option",
+   "match": "classify as positive if the feedback",
+   "text": "Classify as Positive if it has praise or thanks and no complaint; Negative if it has an explicit complaint or refund request; else Neutral."
+  },
+  {
+   "id": "connectry:q-4.1-easy-3",
+   "action": "set_option",
+   "match": "use your best",
+   "text": "Use your best judgment to decide whether the feedback is positive, neutral, or negative, as an experienced support agent would."
+  },
+  {
+   "id": "connectry:q-4.1-easy-4",
+   "action": "set_option",
+   "match": "the labels excellent",
+   "text": "The labels are qualitative and do not tie each score to observable criteria, so grading becomes inconsistent."
+  },
+  {
+   "id": "connectry:q-4.1-easy-4",
+   "action": "set_option",
+   "match": "the scale should",
+   "text": "The scale should use letter grades (A–F) instead of numbers, since letters are easier for Claude to apply consistently."
+  },
+  {
+   "id": "connectry:q-4.1-easy-4",
+   "action": "set_option",
+   "match": "five point scales",
+   "text": "Five-point scales are too granular for automated grading; a binary pass/fail scale would produce more reliable results."
+  },
+  {
+   "id": "connectry:q-4.1-easy-4",
+   "action": "set_option",
+   "match": "claude cannot assign",
+   "text": "Claude cannot reliably assign numeric scores and will tend to return the text labels instead of the numbers 1–5."
+  },
+  {
+   "id": "connectry:q-4.1-hard-2",
+   "action": "set_option",
+   "match": "redesign step 3",
+   "text": "Redesign Step 3's prompt with explicit report structure requirements and accept Step 2's false positives as normal for fact-checking."
+  },
+  {
+   "id": "connectry:q-4.1-hard-2",
+   "action": "set_option",
+   "match": "redesign step 2",
+   "text": "Give Step 2 explicit criteria (e.g., 'Disputed = two authoritative sources contradict each other with citations') and Step 3 an output schema."
+  },
+  {
+   "id": "connectry:q-4.1-hard-2",
+   "action": "set_option",
+   "match": "merge steps 2",
+   "text": "Merge Steps 2 and 3 into a single combined prompt so that classification errors can no longer propagate from one step into the next one downstream."
+  },
+  {
+   "id": "connectry:q-4.1-hard-2",
+   "action": "set_option",
+   "match": "add a human",
+   "text": "Add a human review gate between Steps 2 and 3 that catches 'Disputed' false positives before they ever reach the report-generation step."
+  },
+  {
+   "id": "connectry:q-4.1-hard-3",
+   "action": "set_option",
+   "match": "criterion iv is redundant",
+   "text": "It is redundant, because following the Given/When/Then format already makes every generated criterion testable as a pass/fail check."
+  },
+  {
+   "id": "connectry:q-4.1-hard-3",
+   "action": "set_option",
+   "match": "criterion iv creates",
+   "text": "It produces a machine-readable flag that CI or reviewers can act on without re-reading the criterion; 'make criteria testable' yields none."
+  },
+  {
+   "id": "connectry:q-4.1-hard-3",
+   "action": "set_option",
+   "match": "criterion iv instructs",
+   "text": "It makes Claude refuse to generate any criterion it is unsure about, which lowers the output volume and with it the share of vague criteria."
+  },
+  {
+   "id": "connectry:q-4.1-hard-3",
+   "action": "set_option",
+   "match": "criterion iv is",
+   "text": "It is harmful, because it teaches Claude to express self-doubt, which lowers confidence in all criteria, including the clearly testable ones."
+  },
+  {
+   "id": "connectry:q-4.1-hard-4",
+   "action": "set_option",
+   "match": "variant c is",
+   "text": "Variant C is longer and gives Claude more context about the policy, and more context consistently improves accuracy on compliance judgments."
+  },
+  {
+   "id": "connectry:q-4.1-hard-4",
+   "action": "set_option",
+   "match": "variant c decomposes",
+   "text": "It decomposes the judgment into per-requirement criteria with confidence thresholds, evidence quotes and a deterministic aggregation rule, making results reproducible and auditable."
+  },
+  {
+   "id": "connectry:q-4.1-hard-4",
+   "action": "set_option",
+   "match": "variant c avoids",
+   "text": "Variant C eliminates false positives entirely, because requiring a verbatim evidence quote for every requirement prevents any misjudgment by Claude."
+  },
+  {
+   "id": "connectry:q-4.1-hard-4",
+   "action": "set_option",
+   "match": "variants a and",
+   "text": "Variants A and B make Claude invent policy requirements, whereas Variant C lists them; the output table and threshold add little beyond that."
+  },
+  {
+   "id": "connectry:q-4.1-medium-1",
+   "action": "set_option",
+   "match": "add be thorough",
+   "text": "Append 'Be thorough and do not miss any important entity' to the existing instruction so that Claude checks the whole filing more carefully."
+  },
+  {
+   "id": "connectry:q-4.1-medium-1",
+   "action": "set_option",
+   "match": "replace the vague",
+   "text": "Replace it with an explicit list: 'Extract (1) company names, (2) jurisdiction codes (e.g., US-NY), (3) monetary amounts with currency.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-1",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Ask Claude to read the whole filing twice before it starts extracting, so that entities missed in the first pass are caught in the second."
+  },
+  {
+   "id": "connectry:q-4.1-medium-1",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a larger model, since the missed entities point to a model capacity limit rather than to an underspecified extraction prompt."
+  },
+  {
+   "id": "connectry:q-4.1-medium-2",
+   "action": "set_option",
+   "match": "add write a very",
+   "text": "Add: 'Write a very good, polished product description that highlights what makes the item special and appeals to our customers.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-2",
+   "action": "set_option",
+   "match": "add use a",
+   "text": "Add: 'Use a consistent, professional tone throughout the whole description, in line with our brand voice and style guide.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-2",
+   "action": "set_option",
+   "match": "add write exactly",
+   "text": "Add: 'Write exactly 120 words in a friendly, conversational tone. Lead with the main benefit, list three features as bullets, end with a call to action.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-2",
+   "action": "set_option",
+   "match": "add write a description",
+   "text": "Add: 'Write a description that customers will enjoy reading and that makes them want to learn more about the product.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-3",
+   "action": "set_option",
+   "match": "ask claude to be",
+   "text": "Ask Claude to 'be more structured' and to present the key risks in a clear, well-organized way that analysts can scan quickly."
+  },
+  {
+   "id": "connectry:q-4.1-medium-3",
+   "action": "set_option",
+   "match": "use a lower",
+   "text": "Lower the temperature so that Claude describes the risks more consistently across calls, with the same wording and level of detail."
+  },
+  {
+   "id": "connectry:q-4.1-medium-3",
+   "action": "set_option",
+   "match": "ask claude to sort",
+   "text": "Ask Claude to sort the identified risks alphabetically so that summaries from different calls list them in one consistent order."
+  },
+  {
+   "id": "connectry:q-4.1-medium-3",
+   "action": "set_option",
+   "match": "specify a rubric",
+   "text": "Specify: 'Report risks in these four categories, in order: Market, Operational, Regulatory, Financial; for each, give Yes/No and a one-sentence summary if Yes.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-4",
+   "action": "set_option",
+   "match": "change the prompt to flag code",
+   "text": "Change the prompt to: 'Flag code that looks very buggy, and stay quiet about anything that merely looks slightly unusual or odd.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-4",
+   "action": "set_option",
+   "match": "ask claude to",
+   "text": "Keep 'Flag any code that looks buggy' and append 'Ignore style issues' at the end of the prompt to remove style false positives."
+  },
+  {
+   "id": "connectry:q-4.1-medium-4",
+   "action": "set_option",
+   "match": "replace claude with",
+   "text": "Replace Claude with a static analysis linter, since a prompt cannot be made precise enough to separate real bugs from mere style issues."
+  },
+  {
+   "id": "connectry:q-4.1-medium-4",
+   "action": "set_option",
+   "match": "change the prompt to flag lines",
+   "text": "Change it to: 'Flag (a) unhandled null/undefined dereferences, (b) off-by-one loop bounds, (c) uncaught exceptions from external calls. Do NOT flag style issues.'"
+  },
+  {
+   "id": "connectry:q-4.1-medium-5",
+   "action": "set_option",
+   "match": "provide a few",
+   "text": "Provide a few-shot rubric: define each label with explicit criteria and add two or three example clauses per category."
+  },
+  {
+   "id": "connectry:q-4.1-medium-5",
+   "action": "set_option",
+   "match": "run the same",
+   "text": "Run each clause through Claude five times and take the majority vote as the final label for borderline clauses."
+  },
+  {
+   "id": "connectry:q-4.1-medium-5",
+   "action": "set_option",
+   "match": "instruct claude to",
+   "text": "Instruct Claude to default to 'requires review' whenever it is uncertain, so borderline clauses consistently land in one category."
+  },
+  {
+   "id": "connectry:q-4.1-medium-5",
+   "action": "set_option",
+   "match": "use a longer",
+   "text": "Use a longer system prompt with more background on contract law so that Claude understands the clauses in greater depth."
+  },
+  {
+   "id": "connectry:q-4.2-easy-3",
+   "action": "set_option",
+   "match": "they force claude",
+   "text": "They make Claude look up the matching JSON schema at runtime and check its own output against it before replying."
+  },
+  {
+   "id": "connectry:q-4.2-easy-3",
+   "action": "set_option",
+   "match": "they demonstrate the",
+   "text": "They show the exact output format, including field presence and no surrounding prose, so Claude mirrors that structure."
+  },
+  {
+   "id": "connectry:q-4.2-easy-3",
+   "action": "set_option",
+   "match": "they increase claude",
+   "text": "They raise Claude's internal confidence score for the extraction, which reduces hallucinated fields and stray commentary."
+  },
+  {
+   "id": "connectry:q-4.2-easy-3",
+   "action": "set_option",
+   "match": "they add runtime",
+   "text": "They act as a runtime validation layer that automatically rejects responses not matching the demonstrated structure."
+  },
+  {
+   "id": "connectry:q-4.2-hard-1",
+   "action": "set_option",
+   "match": "always include the",
+   "text": "Include the examples, because a rise from 91% to 97% is meaningful and format consistency justifies the extra token cost here."
+  },
+  {
+   "id": "connectry:q-4.2-hard-1",
+   "action": "set_option",
+   "match": "never include examples",
+   "text": "Leave the examples out, because cost-sensitive pipelines should rely on fine-tuning rather than few-shot examples for format consistency."
+  },
+  {
+   "id": "connectry:q-4.2-hard-1",
+   "action": "set_option",
+   "match": "quantify the cost",
+   "text": "Weigh the extra cost (8 × 500 = 4,000 tokens per request × 10,000 requests/day) against the value of ~600 fewer malformed outputs a day."
+  },
+  {
+   "id": "connectry:q-4.2-hard-1",
+   "action": "set_option",
+   "match": "add all eight",
+   "text": "Add all eight examples and also fine-tune the model, so the examples are 'baked in' and the improvement comes at zero runtime cost."
+  },
+  {
+   "id": "connectry:q-4.2-hard-2",
+   "action": "set_option",
+   "match": "five examples is",
+   "text": "Five examples is the wrong number for this task; multi-step legal reasoning needs exactly seven examples to cover all major clause types."
+  },
+  {
+   "id": "connectry:q-4.2-hard-2",
+   "action": "set_option",
+   "match": "the examples demonstrate",
+   "text": "The examples show answers but not the reasoning; for complex tasks they need full chain-of-thought with intermediate steps."
+  },
+  {
+   "id": "connectry:q-4.2-hard-2",
+   "action": "set_option",
+   "match": "legal contract analysis",
+   "text": "Legal contract analysis requires tool calls, because few-shot text examples cannot teach reasoning over structured, multi-clause documents."
+  },
+  {
+   "id": "connectry:q-4.2-hard-2",
+   "action": "set_option",
+   "match": "the examples are",
+   "text": "The examples are too long and overflow the context window; they should be shortened to single-sentence answers to free up enough space."
+  },
+  {
+   "id": "connectry:q-4.2-hard-3",
+   "action": "set_option",
+   "match": "replace the two",
+   "text": "Replace the two 'BLOCK' examples with ten more 'ALLOW' examples so that the model learns what acceptable content looks like more thoroughly."
+  },
+  {
+   "id": "connectry:q-4.2-hard-3",
+   "action": "set_option",
+   "match": "add more block",
+   "text": "Add more 'BLOCK' examples covering subtle boundary cases, each with a brief rationale for why it fails policy, and rebalance the class ratio toward 'BLOCK'."
+  },
+  {
+   "id": "connectry:q-4.2-hard-3",
+   "action": "set_option",
+   "match": "switch from few",
+   "text": "Switch to zero-shot prompting with a detailed policy description, since few-shot examples cannot teach nuanced distinctions between borderline cases."
+  },
+  {
+   "id": "connectry:q-4.2-hard-3",
+   "action": "set_option",
+   "match": "keep the current",
+   "text": "Keep the current examples and lower the API temperature to 0.0 so that the model makes more conservative blocking decisions on subtle content."
+  },
+  {
+   "id": "connectry:q-4.2-hard-4",
+   "action": "set_option",
+   "match": "design b outperforms on typical",
+   "text": "On typical cases, because six examples outweigh prose rules on common inputs; the principle is that examples replace instructions."
+  },
+  {
+   "id": "connectry:q-4.2-hard-4",
+   "action": "set_option",
+   "match": "design b outperforms",
+   "text": "On edge cases and atypical formats, because examples show how rules apply to hard cases while prose leaves that gap to the model; showing beats telling."
+  },
+  {
+   "id": "connectry:q-4.2-hard-4",
+   "action": "set_option",
+   "match": "design a outperforms",
+   "text": "On none: Design A outperforms on all inputs, because a more detailed system prompt dominates few-shot examples; the principle is explicitness."
+  },
+  {
+   "id": "connectry:q-4.2-hard-4",
+   "action": "set_option",
+   "match": "both designs perform",
+   "text": "On none: both perform identically, because the same rules are encoded in both prompts; the principle is that representation does not matter."
+  },
+  {
+   "id": "connectry:q-4.2-medium-1",
+   "action": "set_option",
+   "match": "claude will always",
+   "text": "Claude will treat 'Neutral' as an invalid label, because no example demonstrates it, and force every review into Positive or Negative."
+  },
+  {
+   "id": "connectry:q-4.2-medium-1",
+   "action": "set_option",
+   "match": "claude may perform",
+   "text": "Claude may handle mixed or hedged reviews poorly, because the examples never show how to resolve the boundary between classes."
+  },
+  {
+   "id": "connectry:q-4.2-medium-1",
+   "action": "set_option",
+   "match": "five examples is",
+   "text": "Five examples are too few tokens to anchor Claude's behavior; few-shot sets need enough volume before they influence output at all."
+  },
+  {
+   "id": "connectry:q-4.2-medium-1",
+   "action": "set_option",
+   "match": "claude will memorize",
+   "text": "Claude will memorize the five examples verbatim and fail on inputs that do not closely match one of them word for word."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_option",
+   "match": "claude forgets its",
+   "text": "Claude stops following its system prompt after about ten turns; the fix is to repeat the full system prompt every five turns."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_option",
+   "match": "as the conversation",
+   "text": "Early examples lose influence as the conversation grows; re-inject them periodically or use a longer-context model."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_option",
+   "match": "claude s temperature",
+   "text": "Claude's sampling temperature rises over a long conversation, adding randomness; set a lower temperature explicitly at the API level."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_option",
+   "match": "the few shot",
+   "text": "Few-shot examples are incompatible with multi-turn conversations; they should be removed and replaced with dedicated tool calls."
+  },
+  {
+   "id": "connectry:q-4.2-medium-3",
+   "action": "set_option",
+   "match": "examples should always",
+   "text": "Examples should be written in the same programming language and style as the code that the assistant will later review in production."
+  },
+  {
+   "id": "connectry:q-4.2-medium-3",
+   "action": "set_option",
+   "match": "negative examples demonstrating",
+   "text": "Negative examples, showing inputs that should trigger a non-default action, are needed when the task is to detect failures."
+  },
+  {
+   "id": "connectry:q-4.2-medium-3",
+   "action": "set_option",
+   "match": "at least half",
+   "text": "At least half of the examples should demonstrate tool calls rather than direct text responses for a review-type task."
+  },
+  {
+   "id": "connectry:q-4.2-medium-3",
+   "action": "set_option",
+   "match": "few shot examples",
+   "text": "Few-shot examples should be sampled randomly from production data rather than being hand-crafted by the prompt engineer."
+  },
+  {
+   "id": "connectry:q-4.2-medium-4",
+   "action": "set_option",
+   "match": "the eight examples",
+   "text": "Eight examples are too many for this task; reducing the set to four examples will remove the approval bias."
+  },
+  {
+   "id": "connectry:q-4.2-medium-4",
+   "action": "set_option",
+   "match": "recency bias is",
+   "text": "Recency bias lets the early 'approve' block dominate, since Claude attends more strongly to earlier tokens."
+  },
+  {
+   "id": "connectry:q-4.2-medium-4",
+   "action": "set_option",
+   "match": "clustering all examples",
+   "text": "Grouping same-class examples creates a sequence-level prior; interleave the classes throughout the example set."
+  },
+  {
+   "id": "connectry:q-4.2-medium-4",
+   "action": "set_option",
+   "match": "the reject examples",
+   "text": "The two 'reject' examples should be removed so that Claude receives one consistent signal for all borderline cases."
+  },
+  {
+   "id": "connectry:q-4.2-medium-5",
+   "action": "set_option",
+   "match": "claude will refuse",
+   "text": "Claude will refuse very short inputs, because they are shorter than any example it was shown and fall outside the demonstrated range."
+  },
+  {
+   "id": "connectry:q-4.2-medium-5",
+   "action": "set_option",
+   "match": "the format or",
+   "text": "Output format and depth may not scale to inputs far from the examples' length; add at least one short-input and one long-input example."
+  },
+  {
+   "id": "connectry:q-4.2-medium-5",
+   "action": "set_option",
+   "match": "using only 50",
+   "text": "Claude will produce outputs of exactly 50 words for every input, because it copies the length of the examples regardless of input size."
+  },
+  {
+   "id": "connectry:q-4.2-medium-5",
+   "action": "set_option",
+   "match": "length variation in",
+   "text": "Length variation in the examples is irrelevant, because few-shot learning transfers the output label but not response length or depth."
+  },
+  {
+   "id": "connectry:q-4.3-easy-2",
+   "action": "set_option",
+   "match": "include the field",
+   "text": "Include the field in `required` and state in its description that `0` should be used as the default value when unknown"
+  },
+  {
+   "id": "connectry:q-4.3-easy-2",
+   "action": "set_option",
+   "match": "omit the field",
+   "text": "Omit the field from the schema entirely so that Claude does not know it exists and cannot invent a value for it"
+  },
+  {
+   "id": "connectry:q-4.3-easy-2",
+   "action": "set_option",
+   "match": "list the field",
+   "text": "List the field in `properties` but not in `required`, and allow `null` via a type union such as `[\"number\", \"null\"]`"
+  },
+  {
+   "id": "connectry:q-4.3-easy-2",
+   "action": "set_option",
+   "match": "add the field",
+   "text": "Add the field to `required` and tell Claude in the system prompt to skip it whenever the value is not in the source"
+  },
+  {
+   "id": "connectry:q-4.3-hard-1",
+   "action": "set_option",
+   "match": "add amount_usd to",
+   "text": "Add `amount_usd` to `required` and change its type to `[\"number\", \"null\"]` so Claude must emit either a number or an explicit null"
+  },
+  {
+   "id": "connectry:q-4.3-hard-1",
+   "action": "set_option",
+   "match": "remove amount_usd from",
+   "text": "Remove `amount_usd` from `properties` entirely so that Claude does not attempt to populate it, even on quantitative events"
+  },
+  {
+   "id": "connectry:q-4.3-hard-1",
+   "action": "set_option",
+   "match": "keep amount_usd absent",
+   "text": "Keep `amount_usd` out of `required`, type it `[\"number\", \"null\"]`, and say in its description to omit it without a figure"
+  },
+  {
+   "id": "connectry:q-4.3-hard-1",
+   "action": "set_option",
+   "match": "move amount_usd inside",
+   "text": "Move `amount_usd` into the `metadata` sub-object and list it in `metadata.required` next to `fiscal_quarter` for validation"
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "prefilling and tool",
+   "text": "Prefilling and tool use are equivalent for nested JSON, because both rely on Claude's ability to generate valid JSON syntax in the end"
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "prefilling locks the",
+   "text": "Prefilling fixes only the opening tokens and does not enforce nested fields; a forced tool call with a validated `input_schema` does, so the engineer is right"
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "prefilling is strictly",
+   "text": "Prefilling is strictly superior here, because it avoids the extra round-trip to the API that every forced tool call requires"
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "forced tool use",
+   "text": "Forced tool use is unreliable for nested objects, because Claude cannot handle schemas with more than two levels of nesting"
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_option",
+   "match": "switch to tool_choice",
+   "text": "Switch to `tool_choice: {\"type\": \"auto\"}` so that Claude has full flexibility to choose the right tool based on the document content"
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_option",
+   "match": "classify the document",
+   "text": "Classify the document type in a first call, then call again with only the matching tool registered and `tool_choice` forcing it"
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_option",
+   "match": "merge all three",
+   "text": "Merge the three schemas into one `extract_document` tool with a `document_type` discriminator field and force that tool via `tool_choice`"
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_option",
+   "match": "add stronger routing",
+   "text": "Add stronger routing instructions to the system prompt and set `temperature` to 0 so that Claude reliably selects the correct tool"
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "tool use suppresses",
+   "text": "Tool use suppresses all reasoning output; enable extended thinking (`\"thinking\": {\"type\": \"enabled\"}`) instead of keeping a `reasoning` field"
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "the reasoning field",
+   "text": "The old prompt named the field explicitly; add `reasoning` as a string to the tool's `properties` and `required`, and Claude will fill it"
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "claude never produces",
+   "text": "Claude cannot produce reasoning inside a tool call; capture it instead from the `stop_reason` and `usage` fields of the API response"
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "json mode produces",
+   "text": "JSON mode produces a `reasoning` field automatically and tool use does not, so the migration must keep JSON mode to preserve reasoning"
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "set_option",
+   "match": "prefilling is incompatible",
+   "text": "Prefilling is incompatible with arrays; it works reliably for JSON objects, so array items get truncated"
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "set_option",
+   "match": "the max_tokens limit",
+   "text": "The `max_tokens` limit is too low, so generation is cut off before Claude can complete all five items in the array"
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "set_option",
+   "match": "prefilling bypasses the",
+   "text": "Prefilling bypasses the tokenizer for the prefilled part, which corrupts the JSON structure after the second item"
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "set_option",
+   "match": "prefilling locks the",
+   "text": "Prefilling fixes the format but not the content; Claude still judges from the prompt how many items are enough"
+  },
+  {
+   "id": "connectry:q-4.3-medium-5",
+   "action": "set_option",
+   "match": "add escrow_agent to",
+   "text": "Add `\"escrow_agent\"` to the `role` enum array so the new value is explicitly allowed and validated"
+  },
+  {
+   "id": "connectry:q-4.3-medium-5",
+   "action": "set_option",
+   "match": "change role to",
+   "text": "Change `role` to type `string` and drop the enum so that any free-form role name is accepted"
+  },
+  {
+   "id": "connectry:q-4.3-medium-5",
+   "action": "set_option",
+   "match": "make role nullable",
+   "text": "Make `role` nullable so that Claude can emit `null` whenever a role does not match a known value"
+  },
+  {
+   "id": "connectry:q-4.3-medium-5",
+   "action": "set_option",
+   "match": "add a second",
+   "text": "Keep the enum, add `\"other\"` plus a nullable `custom_role` string, and set `role` to `\"other\"` for unknown roles"
+  },
+  {
+   "id": "connectry:q-4.4-easy-2",
+   "action": "set_option",
+   "match": "1",
+   "text": "1 retry attempt"
+  },
+  {
+   "id": "connectry:q-4.4-easy-2",
+   "action": "set_option",
+   "match": "5 10",
+   "text": "5–10 retry attempts"
+  },
+  {
+   "id": "connectry:q-4.4-easy-2",
+   "action": "set_option",
+   "match": "2 3",
+   "text": "2–3 retry attempts"
+  },
+  {
+   "id": "connectry:q-4.4-easy-2",
+   "action": "set_option",
+   "match": "unlimited until the",
+   "text": "No fixed retry limit"
+  },
+  {
+   "id": "connectry:q-4.4-easy-3",
+   "action": "set_option",
+   "match": "validation failed try",
+   "text": "\"Validation failed for the submitted record. Please correct it and try again.\""
+  },
+  {
+   "id": "connectry:q-4.4-easy-3",
+   "action": "set_option",
+   "match": "error occurred in",
+   "text": "\"An unexpected error occurred in the pipeline while processing your input.\""
+  },
+  {
+   "id": "connectry:q-4.4-easy-3",
+   "action": "set_option",
+   "match": "bad input",
+   "text": "\"Bad input: the JSON payload did not pass schema validation (code 422).\""
+  },
+  {
+   "id": "connectry:q-4.4-easy-4",
+   "action": "set_option",
+   "match": "a hard coded",
+   "text": "A hard-coded sleep of 5 seconds between retries so that repeated calls are spread out over time"
+  },
+  {
+   "id": "connectry:q-4.4-easy-4",
+   "action": "set_option",
+   "match": "a detected_pattern tracker",
+   "text": "A detected_pattern tracker that records repeated tool calls together with their arguments"
+  },
+  {
+   "id": "connectry:q-4.4-easy-4",
+   "action": "set_option",
+   "match": "increasing the temperature",
+   "text": "Raising the temperature of Claude's sampler after each retry so that it tries a different call"
+  },
+  {
+   "id": "connectry:q-4.4-easy-4",
+   "action": "set_option",
+   "match": "disabling all tools",
+   "text": "Disabling all tools after the first failure so that Claude cannot call the same tool again"
+  },
+  {
+   "id": "connectry:q-4.4-hard-1",
+   "action": "set_option",
+   "match": "agent a retries",
+   "text": "Agent A retries indefinitely until Agent B succeeds and logs each attempt; a human who monitors the logs and notices the repetition then intervenes manually."
+  },
+  {
+   "id": "connectry:q-4.4-hard-1",
+   "action": "set_option",
+   "match": "the orchestrator sends",
+   "text": "The orchestrator returns `is_error: true` with the schema diff, counts retries per call, checks detected_pattern for repeated (tool, args) pairs, and after 3 failures escalates to a human."
+  },
+  {
+   "id": "connectry:q-4.4-hard-1",
+   "action": "set_option",
+   "match": "the orchestrator catches",
+   "text": "The orchestrator catches the error, rewrites Claude's last assistant message to remove the bad tool call, and re-runs from that point without telling Claude."
+  },
+  {
+   "id": "connectry:q-4.4-hard-2",
+   "action": "set_option",
+   "match": "treat it identically",
+   "text": "Treat it like a schema error: return `isError: true` with the message and let Claude retry with corrected parameters"
+  },
+  {
+   "id": "connectry:q-4.4-hard-2",
+   "action": "set_option",
+   "match": "recognise that this",
+   "text": "Treat it as a state-of-the-world constraint that Claude cannot fix by retrying; escalate to a human or abort"
+  },
+  {
+   "id": "connectry:q-4.4-hard-2",
+   "action": "set_option",
+   "match": "increase the retry",
+   "text": "Raise the retry limit to 10 for this pipeline, because financial errors usually need more attempts before they resolve"
+  },
+  {
+   "id": "connectry:q-4.4-hard-2",
+   "action": "set_option",
+   "match": "retry automatically after",
+   "text": "Retry automatically after a 60-second delay, so that the account balance has enough time to change in the meantime"
+  },
+  {
+   "id": "connectry:q-4.4-hard-3",
+   "action": "set_option",
+   "match": "only the http",
+   "text": "The HTTP status code and response time of the last tool response, since they show whether the failure is transient"
+  },
+  {
+   "id": "connectry:q-4.4-hard-3",
+   "action": "set_option",
+   "match": "the retry counter",
+   "text": "The retry counter for the (tool, args) pair, the detected_pattern history, the reversibility of call 3, and the error's specificity"
+  },
+  {
+   "id": "connectry:q-4.4-hard-3",
+   "action": "set_option",
+   "match": "the total number",
+   "text": "The total number of assistant turns in the conversation so far, compared against a fixed per-session turn budget"
+  },
+  {
+   "id": "connectry:q-4.4-hard-3",
+   "action": "set_option",
+   "match": "whether the model",
+   "text": "Whether the model's confidence score for its last tool_use block exceeds 0.9, as reported in the API response"
+  },
+  {
+   "id": "connectry:q-4.4-hard-4",
+   "action": "set_option",
+   "match": "stack traces are too",
+   "text": "They are too long and overflow the context window, and they slow down every single retry; the alternative is to truncate each trace to its first 50 characters"
+  },
+  {
+   "id": "connectry:q-4.4-hard-4",
+   "action": "set_option",
+   "match": "stack traces expose",
+   "text": "They leak internal details (security risk) and give no parameter-level guidance; return a structured error naming the failed field with a corrective hint"
+  },
+  {
+   "id": "connectry:q-4.4-hard-4",
+   "action": "set_option",
+   "match": "stack traces are",
+   "text": "They break the API's JSON formatting and get rejected, and Claude cannot decode them; the alternative is to base64-encode the trace before returning it"
+  },
+  {
+   "id": "connectry:q-4.4-hard-4",
+   "action": "set_option",
+   "match": "stack traces cause",
+   "text": "They make Claude believe its own code is buggy so it stops responding, and they confuse users; the alternative is to prefix the trace with 'ignore this'"
+  },
+  {
+   "id": "connectry:q-4.4-medium-2",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's context window is too small to keep the earlier error message in view; increase `max_tokens` for the retry call"
+  },
+  {
+   "id": "connectry:q-4.4-medium-2",
+   "action": "set_option",
+   "match": "the error message",
+   "text": "The error lacked actionable guidance; it should state the conflicting value and suggest checking for an existing record"
+  },
+  {
+   "id": "connectry:q-4.4-medium-2",
+   "action": "set_option",
+   "match": "the retry logic",
+   "text": "The retry logic fires too quickly for the database to release the key; add a delay of a few seconds between attempts"
+  },
+  {
+   "id": "connectry:q-4.4-medium-2",
+   "action": "set_option",
+   "match": "the tool schema",
+   "text": "The tool schema is missing a description for `user_id`; adding one will tell Claude which values are allowed"
+  },
+  {
+   "id": "connectry:q-4.4-medium-3",
+   "action": "set_option",
+   "match": "both should be",
+   "text": "Retry both immediately with the same parameters, since both errors are usually resolved by simply sending the same request again"
+  },
+  {
+   "id": "connectry:q-4.4-medium-3",
+   "action": "set_option",
+   "match": "both should escalate",
+   "text": "Escalate both to a human immediately without retrying, since any API error in a pipeline signals a problem that needs review"
+  },
+  {
+   "id": "connectry:q-4.4-medium-3",
+   "action": "set_option",
+   "match": "a 503 should",
+   "text": "Retry a 503 unchanged, ideally with backoff; put a 400's validation error in the tool_result so Claude can fix the request"
+  },
+  {
+   "id": "connectry:q-4.4-medium-3",
+   "action": "set_option",
+   "match": "a 400 should",
+   "text": "Retry a 400 with the same parameters after a short delay, and retry a 503 with new parameters that Claude regenerates for it"
+  },
+  {
+   "id": "connectry:q-4.4-medium-4",
+   "action": "set_option",
+   "match": "total elapsed wall",
+   "text": "The total elapsed wall-clock time since the first failed tool call exceeds a fixed limit of 30 seconds"
+  },
+  {
+   "id": "connectry:q-4.4-medium-4",
+   "action": "set_option",
+   "match": "the same sequence",
+   "text": "The same sequence of tool calls with matching arguments repeats more often than the configured retry threshold"
+  },
+  {
+   "id": "connectry:q-4.4-medium-4",
+   "action": "set_option",
+   "match": "claude s response",
+   "text": "Claude's response text contains the word 'retry' or a similar phrase announcing another attempt at the call"
+  },
+  {
+   "id": "connectry:q-4.4-medium-4",
+   "action": "set_option",
+   "match": "the number of",
+   "text": "The number of assistant turns since the first failure exceeds a fixed limit of 10 turns in the current conversation"
+  },
+  {
+   "id": "connectry:q-4.4-medium-5",
+   "action": "set_option",
+   "match": "the tool returns",
+   "text": "The tool returns a well-structured validation error that clearly names the offending field and constraint"
+  },
+  {
+   "id": "connectry:q-4.4-medium-5",
+   "action": "set_option",
+   "match": "a transient network",
+   "text": "A transient network timeout occurs on the first attempt of a call that is safe to repeat with the same input"
+  },
+  {
+   "id": "connectry:q-4.4-medium-5",
+   "action": "set_option",
+   "match": "the retry limit",
+   "text": "The retry limit has been reached and the action has an irreversible side effect, such as sending a payment"
+  },
+  {
+   "id": "connectry:q-4.4-medium-5",
+   "action": "set_option",
+   "match": "the tool schema",
+   "text": "The tool schema description is missing optional metadata such as examples or a version note for one field"
+  },
+  {
+   "id": "connectry:q-4.5-easy-1",
+   "action": "set_option",
+   "match": "correlation_token",
+   "text": "trace_id"
+  },
+  {
+   "id": "connectry:q-4.5-easy-3",
+   "action": "set_option",
+   "match": "10 discount on",
+   "text": "10% discount on input tokens"
+  },
+  {
+   "id": "connectry:q-4.5-easy-3",
+   "action": "set_option",
+   "match": "free processing for",
+   "text": "No charge under 1,000 requests"
+  },
+  {
+   "id": "connectry:q-4.5-hard-2",
+   "action": "set_option",
+   "match": "exclude all 12",
+   "text": "Exclude all 12,000 errored samples from the training dataset permanently, so that no partially processed data adds noise"
+  },
+  {
+   "id": "connectry:q-4.5-hard-2",
+   "action": "set_option",
+   "match": "use custom_id to",
+   "text": "Use `custom_id` to find the errored inputs, sanitize or restructure their prompts, resubmit them as a new batch, and log which were reprocessed"
+  },
+  {
+   "id": "connectry:q-4.5-hard-2",
+   "action": "set_option",
+   "match": "assign a default",
+   "text": "Assign a default neutral label to all 12,000 errored samples, so that the dataset keeps its full size and class coverage"
+  },
+  {
+   "id": "connectry:q-4.5-hard-2",
+   "action": "set_option",
+   "match": "resubmit the entire",
+   "text": "Resubmit the entire 500,000-sample batch so that every item is processed in the same run with identical prompts"
+  },
+  {
+   "id": "connectry:q-4.5-hard-3",
+   "action": "set_option",
+   "match": "route all three workloads through the message",
+   "text": "Route all three workloads through the Message Batches API to capture the 50% discount on the full volume of daily requests"
+  },
+  {
+   "id": "connectry:q-4.5-hard-3",
+   "action": "set_option",
+   "match": "route product page",
+   "text": "Route page generation and recommendation explanations to the real-time API, and catalog enrichment to the Message Batches API"
+  },
+  {
+   "id": "connectry:q-4.5-hard-3",
+   "action": "set_option",
+   "match": "route nightly catalog",
+   "text": "Route nightly catalog enrichment and the recommendation explanations to the Batches API, and page generation to the real-time API"
+  },
+  {
+   "id": "connectry:q-4.5-hard-3",
+   "action": "set_option",
+   "match": "route all three workloads through the real",
+   "text": "Route all three workloads through the real-time API and use aggressive prompt caching to offset the higher per-token cost"
+  },
+  {
+   "id": "connectry:q-4.5-hard-4",
+   "action": "set_option",
+   "match": "store the full",
+   "text": "Store the full patient summary content inside the `custom_id` field so each result can be traced directly to its source"
+  },
+  {
+   "id": "connectry:q-4.5-hard-4",
+   "action": "set_option",
+   "match": "assign each summary",
+   "text": "Use a pseudonymous document ID as `custom_id` and keep the mapping to patient records in a separate secure table"
+  },
+  {
+   "id": "connectry:q-4.5-hard-4",
+   "action": "set_option",
+   "match": "use sequential integers",
+   "text": "Use sequential integers as `custom_id` values and rely on submission order to reconstruct the mapping after results return"
+  },
+  {
+   "id": "connectry:q-4.5-hard-4",
+   "action": "set_option",
+   "match": "submit all 30",
+   "text": "Submit the summaries in 3 batches of 10,000 without `custom_id` and match results to inputs by comparing response content"
+  },
+  {
+   "id": "connectry:q-4.5-medium-4",
+   "action": "set_option",
+   "match": "poll every 30",
+   "text": "Keep polling every 30 seconds throughout the processing window so that results are retrieved without any delay"
+  },
+  {
+   "id": "connectry:q-4.5-medium-4",
+   "action": "set_option",
+   "match": "always wait the",
+   "text": "Wait the full 24 hours after submission before attempting to retrieve any results from the batch at all"
+  },
+  {
+   "id": "connectry:q-4.5-medium-4",
+   "action": "set_option",
+   "match": "submit the same",
+   "text": "Submit the same batch twice so whichever copy finishes first can be used, and cancel the other one at that point"
+  },
+  {
+   "id": "connectry:q-4.6-easy-1",
+   "action": "set_option",
+   "match": "the model runs",
+   "text": "The model runs out of context window space during review, so the code it wrote earlier is no longer fully visible"
+  },
+  {
+   "id": "connectry:q-4.6-easy-1",
+   "action": "set_option",
+   "match": "the model carries",
+   "text": "The model brings the same assumptions and biases from generation into review, so it tends to agree with its output"
+  },
+  {
+   "id": "connectry:q-4.6-easy-1",
+   "action": "set_option",
+   "match": "single instance review",
+   "text": "Single-instance review is inherently lower in quality than human review, regardless of how the review prompt is designed"
+  },
+  {
+   "id": "connectry:q-4.6-easy-1",
+   "action": "set_option",
+   "match": "the model cannot",
+   "text": "The model cannot re-read code it has already written in the same session and reviews its own summary of the change instead"
+  },
+  {
+   "id": "connectry:q-4.6-easy-2",
+   "action": "set_option",
+   "match": "it runs on",
+   "text": "It runs on a different physical server than the generation instance, so its processing is fully isolated"
+  },
+  {
+   "id": "connectry:q-4.6-easy-2",
+   "action": "set_option",
+   "match": "it uses a",
+   "text": "It uses a smaller, faster model than the generator, so the review adds as little latency as possible"
+  },
+  {
+   "id": "connectry:q-4.6-easy-2",
+   "action": "set_option",
+   "match": "it starts with",
+   "text": "It starts with a fresh context and has no access to the generating instance's reasoning or intermediate steps"
+  },
+  {
+   "id": "connectry:q-4.6-easy-2",
+   "action": "set_option",
+   "match": "it always uses",
+   "text": "It uses a different model family than the generator, so the two instances share none of the same training biases"
   }
  ],
  "hold": []
