@@ -40765,6 +40765,1195 @@
    "action": "set_option",
    "match": "Allocate reviews inversely",
    "text": "Allocate reviews inversely to accuracy, favouring error-prone types while keeping coverage of all types."
+  },
+  {
+   "id": "connectry:q-5.5-medium-3",
+   "action": "set_option",
+   "match": "lower the auto",
+   "text": "Lower the auto-approve threshold to 0.5 so that fewer documents end up being auto-approved by the model"
+  },
+  {
+   "id": "connectry:q-5.5-medium-3",
+   "action": "set_option",
+   "match": "apply a post",
+   "text": "Recalibrate scores post hoc (Platt scaling or isotonic regression), then set the threshold on that scale"
+  },
+  {
+   "id": "connectry:q-5.5-medium-3",
+   "action": "set_option",
+   "match": "disable confidence based",
+   "text": "Disable confidence-based routing and send every document to human review until the model has been retrained"
+  },
+  {
+   "id": "connectry:q-5.5-medium-3",
+   "action": "set_option",
+   "match": "increase the auto",
+   "text": "Raise the auto-approve threshold to 0.9, matching the bucket where reported confidence and accuracy line up"
+  },
+  {
+   "id": "connectry:q-5.5-medium-4",
+   "action": "set_option",
+   "match": "auto approve all",
+   "text": "Auto-approve every extracted field whose model confidence exceeds 0.75, regardless of the field type"
+  },
+  {
+   "id": "connectry:q-5.5-medium-4",
+   "action": "set_option",
+   "match": "require human review",
+   "text": "Require clinician review for every extracted field unconditionally, since the whole domain is regulated"
+  },
+  {
+   "id": "connectry:q-5.5-medium-4",
+   "action": "set_option",
+   "match": "auto approve low",
+   "text": "Auto-approve demographics at ≥0.95 confidence; route all diagnosis and billing-code fields to review"
+  },
+  {
+   "id": "connectry:q-5.5-medium-4",
+   "action": "set_option",
+   "match": "auto approve if",
+   "text": "Auto-approve the document when its average field confidence exceeds 0.80, ignoring per-field scores"
+  },
+  {
+   "id": "connectry:q-5.5-medium-5",
+   "action": "set_option",
+   "match": "the drop is",
+   "text": "The drop is within normal statistical variance for a single field type, so no action is needed yet"
+  },
+  {
+   "id": "connectry:q-5.5-medium-5",
+   "action": "set_option",
+   "match": "the model update",
+   "text": "A date-parsing regression the confidence scores miss; lower the date-field threshold and retrain or roll back"
+  },
+  {
+   "id": "connectry:q-5.5-medium-5",
+   "action": "set_option",
+   "match": "human reviewers are",
+   "text": "Human reviewers have become less accurate on date fields, which drags down the measured accuracy figure"
+  },
+  {
+   "id": "connectry:q-5.5-medium-5",
+   "action": "set_option",
+   "match": "the accuracy tracking",
+   "text": "The accuracy tracker miscalculates date fields because of a date-format mismatch in its comparison"
+  },
+  {
+   "id": "connectry:q-5.6-easy-2",
+   "action": "set_option",
+   "match": "claim source mapping",
+   "text": "Claim-source mapping that links every statistic to its page in the report"
+  },
+  {
+   "id": "connectry:q-5.6-easy-2",
+   "action": "set_option",
+   "match": "conflict annotation between",
+   "text": "Conflict annotation between the competing market forecasts in the report"
+  },
+  {
+   "id": "connectry:q-5.6-easy-2",
+   "action": "set_option",
+   "match": "flagging that the",
+   "text": "Flagging that the data dates from January 2023 and may now be stale"
+  },
+  {
+   "id": "connectry:q-5.6-easy-2",
+   "action": "set_option",
+   "match": "expressing uncertainty by",
+   "text": "Expressing uncertainty by listing every plausible market outcome instead"
+  },
+  {
+   "id": "connectry:q-5.6-easy-3",
+   "action": "edit",
+   "field": "opt",
+   "find": "Citation drift",
+   "replace": "Citation drift across summarization steps"
+  },
+  {
+   "id": "connectry:q-5.6-easy-3",
+   "action": "edit",
+   "field": "opt",
+   "find": "Temporal degradation",
+   "replace": "Temporal degradation of source data"
+  },
+  {
+   "id": "connectry:q-5.6-easy-3",
+   "action": "edit",
+   "field": "opt",
+   "find": "Conflict collapse",
+   "replace": "Conflict collapse in multi-step synthesis"
+  },
+  {
+   "id": "connectry:q-5.6-easy-4",
+   "action": "set_option",
+   "match": "state the 2021",
+   "text": "State the 2021 figure as today's population, as a plain fact without any qualification or date"
+  },
+  {
+   "id": "connectry:q-5.6-easy-4",
+   "action": "set_option",
+   "match": "refuse to answer",
+   "text": "Decline to answer, because the training data on this might be outdated"
+  },
+  {
+   "id": "connectry:q-5.6-easy-4",
+   "action": "set_option",
+   "match": "provide the 2021",
+   "text": "Give the 2021 figure, note its training-data date, and suggest checking a current source"
+  },
+  {
+   "id": "connectry:q-5.6-easy-4",
+   "action": "set_option",
+   "match": "provide the figure",
+   "text": "Give the figure and add a generic disclaimer that AI responses may be wrong"
+  },
+  {
+   "id": "connectry:q-5.6-hard-1",
+   "action": "set_option",
+   "match": "add a post",
+   "text": "Add a post-processing step that re-queries PubMed to reconstruct citations from the final summary text, because medical claims need verified sources"
+  },
+  {
+   "id": "connectry:q-5.6-hard-1",
+   "action": "set_option",
+   "match": "redefine the synthesis",
+   "text": "Require source_pmids on every claim in the Synthesis Agent's output schema, validated before handoff, since lost citations can harm patients"
+  },
+  {
+   "id": "connectry:q-5.6-hard-1",
+   "action": "set_option",
+   "match": "instruct the formatting",
+   "text": "Have the Formatting Agent append a 'Based on PubMed research' footer to the output, because clinicians mainly need to know which evidence base was used"
+  },
+  {
+   "id": "connectry:q-5.6-hard-1",
+   "action": "set_option",
+   "match": "replace the four",
+   "text": "Replace the four agents with one large-context call that receives all abstracts at once, because that removes the handoff where the PMIDs get lost"
+  },
+  {
+   "id": "connectry:q-5.6-hard-2",
+   "action": "set_option",
+   "match": "root cause step",
+   "text": "Root cause: Step 3's context window is too small for 20 summaries. Fix: raise the token limit for the Step 3 call."
+  },
+  {
+   "id": "connectry:q-5.6-hard-2",
+   "action": "set_option",
+   "match": "root cause the",
+   "text": "Root cause: the pipeline has no audit log. Fix: log every Claude input and output to a database for later lookup."
+  },
+  {
+   "id": "connectry:q-5.6-hard-2",
+   "action": "set_option",
+   "match": "root cause publication",
+   "text": "Root cause: Step 2 discards the timestamps. Fix: have Step 2 emit a sources array carrying each publication_timestamp."
+  },
+  {
+   "id": "connectry:q-5.6-hard-2",
+   "action": "set_option",
+   "match": "root cause claude",
+   "text": "Root cause: LLM summarization inherently loses metadata. Fix: replace Claude with a deterministic extraction algorithm."
+  },
+  {
+   "id": "connectry:q-5.6-hard-3",
+   "action": "set_option",
+   "match": "average all figures",
+   "text": "Average the figures from all twelve reports into one defensible aggregate, then add a footnote noting that figures may vary because of differing methodologies"
+  },
+  {
+   "id": "connectry:q-5.6-hard-3",
+   "action": "set_option",
+   "match": "exclude the three",
+   "text": "Exclude the three methodologically inconsistent reports and the two conflicting national reports, and base the synthesis only on the seven consistent ones"
+  },
+  {
+   "id": "connectry:q-5.6-hard-3",
+   "action": "set_option",
+   "match": "produce the synthesis",
+   "text": "Structured output: cited aggregate of the seven consistent reports, the three flagged as non-comparable, both 2022 totals side by side, expert review advised"
+  },
+  {
+   "id": "connectry:q-5.6-hard-3",
+   "action": "set_option",
+   "match": "present the most",
+   "text": "Present the most recent report's figures as definitive, since newer data on the same topic supersedes older data and makes earlier reports obsolete"
+  },
+  {
+   "id": "connectry:q-5.6-hard-4",
+   "action": "set_option",
+   "match": "when the downstream",
+   "text": "When the task is exploratory research where users want a quick orientation, verify claims themselves, and are told about the side-channel model"
+  },
+  {
+   "id": "connectry:q-5.6-hard-4",
+   "action": "set_option",
+   "match": "when the system",
+   "text": "When the system serves compliance reporting, because the side-channel database lookup gives auditors records that satisfy regulatory requirements"
+  },
+  {
+   "id": "connectry:q-5.6-hard-4",
+   "action": "set_option",
+   "match": "when the synthesized",
+   "text": "When the synthesized text is short enough that the model is unlikely to hallucinate claims that would need source checking"
+  },
+  {
+   "id": "connectry:q-5.6-hard-4",
+   "action": "set_option",
+   "match": "when all source",
+   "text": "When all source documents come from the same publisher, so there are no conflicting claims that would need annotating"
+  },
+  {
+   "id": "connectry:q-5.6-medium-1",
+   "action": "set_option",
+   "match": "store all retrieved",
+   "text": "Store all retrieved documents in a shared vector store and let Agent C re-query it whenever it needs a source"
+  },
+  {
+   "id": "connectry:q-5.6-medium-1",
+   "action": "set_option",
+   "match": "have agent b",
+   "text": "Have Agent B emit claim objects with a source_id field that Agent C must preserve and surface in its output"
+  },
+  {
+   "id": "connectry:q-5.6-medium-1",
+   "action": "set_option",
+   "match": "instruct agent c",
+   "text": "Instruct Agent C via its system prompt to prefix every claim with 'according to the retrieved documents'"
+  },
+  {
+   "id": "connectry:q-5.6-medium-1",
+   "action": "set_option",
+   "match": "log all agent",
+   "text": "Log all agent inputs and outputs to an audit database and generate the citations post hoc from those logs"
+  },
+  {
+   "id": "connectry:q-5.6-medium-2",
+   "action": "set_option",
+   "match": "present the most",
+   "text": "Present the position of whichever database was updated most recently as the authoritative answer for the attorney"
+  },
+  {
+   "id": "connectry:q-5.6-medium-2",
+   "action": "set_option",
+   "match": "present a blended",
+   "text": "Present a blended synthesis stating that the precedent's validity is uncertain, without naming individual databases"
+  },
+  {
+   "id": "connectry:q-5.6-medium-2",
+   "action": "set_option",
+   "match": "explicitly state database",
+   "text": "Attribute each view: X says overturned in 2019, Y says still valid, Z has no entry; advise attorney review"
+  },
+  {
+   "id": "connectry:q-5.6-medium-2",
+   "action": "set_option",
+   "match": "return an error",
+   "text": "Return an error to the attorney, because conflicting sources prevent the tool from giving any reliable answer"
+  },
+  {
+   "id": "connectry:q-5.6-medium-3",
+   "action": "set_option",
+   "match": "claude cannot generate",
+   "text": "Claude cannot generate accurate citations without live internet access to look up the source report"
+  },
+  {
+   "id": "connectry:q-5.6-medium-3",
+   "action": "set_option",
+   "match": "the intermediate summaries",
+   "text": "The intermediate summaries already stripped the source context needed to map claims back to original sections"
+  },
+  {
+   "id": "connectry:q-5.6-medium-3",
+   "action": "set_option",
+   "match": "the final claude",
+   "text": "The final call's context window is too small to hold the original 50-page report alongside the summary"
+  },
+  {
+   "id": "connectry:q-5.6-medium-3",
+   "action": "set_option",
+   "match": "citations require structured",
+   "text": "Citations require structured data types that plain-text summarization steps are unable to produce"
+  },
+  {
+   "id": "preporato:cca-f#1",
+   "action": "set_option",
+   "match": "an instruction for",
+   "text": "An instruction telling the refund agent to ask the customer to repeat the order details and reason"
+  },
+  {
+   "id": "preporato:cca-f#1",
+   "action": "set_option",
+   "match": "the full raw",
+   "text": "The full raw transcript plus every prior tool output, so that the refund agent cannot miss any detail"
+  },
+  {
+   "id": "preporato:cca-f#1",
+   "action": "set_option",
+   "match": "the specific facts",
+   "text": "The order id, total, purchase date and stated reason, written explicitly into the delegation prompt"
+  },
+  {
+   "id": "preporato:cca-f#1",
+   "action": "set_option",
+   "match": "nothing extra because",
+   "text": "Nothing extra, because subagents automatically read the coordinator's conversation history when spawned"
+  },
+  {
+   "id": "preporato:cca-f#10",
+   "action": "set_option",
+   "match": "send a follow",
+   "text": "Send a follow-up request with the paused assistant response appended unchanged so Claude can resume"
+  },
+  {
+   "id": "preporato:cca-f#10",
+   "action": "set_option",
+   "match": "raise max_tokens and",
+   "text": "Raise `max_tokens` and resend the original request so the search can finish within a single turn"
+  },
+  {
+   "id": "preporato:cca-f#10",
+   "action": "set_option",
+   "match": "treat pause_turn the",
+   "text": "Treat `pause_turn` like `end_turn` and return the response, since the search results are already final"
+  },
+  {
+   "id": "preporato:cca-f#10",
+   "action": "set_option",
+   "match": "run the web",
+   "text": "Run the web search locally and return its results to Claude as a `tool_result` block in the next turn"
+  },
+  {
+   "id": "preporato:cca-f#11",
+   "action": "set_option",
+   "match": "collapse it to",
+   "text": "Collapse it into a single model call with the policy in context, plus a light validation step if needed"
+  },
+  {
+   "id": "preporato:cca-f#11",
+   "action": "set_option",
+   "match": "move every subagent",
+   "text": "Move every subagent to the most capable model so that fewer retries are needed across the chain"
+  },
+  {
+   "id": "preporato:cca-f#11",
+   "action": "set_option",
+   "match": "run the six",
+   "text": "Run the six subagents in parallel under a coordinator so total latency drops to a single step"
+  },
+  {
+   "id": "preporato:cca-f#11",
+   "action": "set_option",
+   "match": "cache each subagent",
+   "text": "Cache each subagent's output so repeated pipeline steps are not recomputed for later questions"
+  },
+  {
+   "id": "preporato:cca-f#12",
+   "action": "set_option",
+   "match": "one prompt asking",
+   "text": "One comprehensive prompt that asks Claude to determine the root cause directly from the error spike alone"
+  },
+  {
+   "id": "preporato:cca-f#12",
+   "action": "set_option",
+   "match": "a fixed pipeline",
+   "text": "A fixed pipeline that runs the code, config, infrastructure and third-party API checks in a set order every time"
+  },
+  {
+   "id": "preporato:cca-f#12",
+   "action": "set_option",
+   "match": "dynamic decomposition plan",
+   "text": "Dynamic decomposition: plan each next step from the last finding, with token and iteration caps in code"
+  },
+  {
+   "id": "preporato:cca-f#12",
+   "action": "set_option",
+   "match": "run every conceivable",
+   "text": "Run every conceivable check in parallel at once, with no coordinator deciding what should be looked at next"
+  },
+  {
+   "id": "preporato:cca-f#13",
+   "action": "set_option",
+   "match": "setting max_tokens to",
+   "text": "Setting `max_tokens` to 50 on every call so no single turn can overspend"
+  },
+  {
+   "id": "preporato:cca-f#13",
+   "action": "set_option",
+   "match": "asking claude each",
+   "text": "Asking Claude at the end of each turn how many tokens it has used so far in the task"
+  },
+  {
+   "id": "preporato:cca-f#13",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system-prompt instruction telling Claude to keep the whole task under 50,000 tokens"
+  },
+  {
+   "id": "preporato:cca-f#13",
+   "action": "set_option",
+   "match": "track cumulative input",
+   "text": "Sum input and output tokens from each response's usage field inside the loop"
+  },
+  {
+   "id": "preporato:cca-f#13",
+   "action": "set_option",
+   "match": "stop the loop",
+   "text": "Stop the loop in code at the budget, after a wrap-up instruction at about 80%"
+  },
+  {
+   "id": "preporato:cca-f#15",
+   "action": "set_option",
+   "match": "put the token",
+   "text": "Put the API token in `CLAUDE.md` so Claude can pass it along to the server when needed"
+  },
+  {
+   "id": "preporato:cca-f#15",
+   "action": "set_option",
+   "match": "paste the raw",
+   "text": "Paste the raw token straight into the committed `.mcp.json` so setup is a single step for everyone"
+  },
+  {
+   "id": "preporato:cca-f#15",
+   "action": "set_option",
+   "match": "define the server",
+   "text": "Define the server in the project's `.mcp.json` and commit that file to the repository"
+  },
+  {
+   "id": "preporato:cca-f#15",
+   "action": "set_option",
+   "match": "reference the token",
+   "text": "Reference the token in `.mcp.json` as `${INTERNAL_API_TOKEN}`; each developer sets the variable"
+  },
+  {
+   "id": "preporato:cca-f#15",
+   "action": "set_option",
+   "match": "have each developer",
+   "text": "Have each developer add the server with local scope by following steps on a wiki page"
+  },
+  {
+   "id": "preporato:cca-f#16",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system-prompt line telling Claude to use `update_customer` whenever a customer record must be changed"
+  },
+  {
+   "id": "preporato:cca-f#16",
+   "action": "set_option",
+   "match": "rewrite both descriptions",
+   "text": "Rewrite both descriptions to say what each does and when to use the other, marking `get_customer` read-only"
+  },
+  {
+   "id": "preporato:cca-f#16",
+   "action": "set_option",
+   "match": "rename get_customer to",
+   "text": "Rename `get_customer` to `fetch_customer` so its name no longer resembles `update_customer`"
+  },
+  {
+   "id": "preporato:cca-f#16",
+   "action": "set_option",
+   "match": "remove get_customer from",
+   "text": "Remove `get_customer` from the agent's tool list so Claude cannot pick the read tool by mistake"
+  },
+  {
+   "id": "preporato:cca-f#17",
+   "action": "set_option",
+   "match": "a hook in",
+   "text": "A `PostToolUse` hook matching `Edit|Write` that each developer adds to `~/.claude/settings.json`"
+  },
+  {
+   "id": "preporato:cca-f#17",
+   "action": "set_option",
+   "match": "a claude md",
+   "text": "A line in the repository's root `CLAUDE.md` telling Claude to run Prettier after every file edit"
+  },
+  {
+   "id": "preporato:cca-f#17",
+   "action": "set_option",
+   "match": "a posttooluse hook in",
+   "text": "A `PostToolUse` hook on `Edit|Write` in the committed `.claude/settings.json` that runs Prettier"
+  },
+  {
+   "id": "preporato:cca-f#17",
+   "action": "set_option",
+   "match": "a pretooluse hook",
+   "text": "A `PreToolUse` hook matching `Edit|Write` in the committed `.claude/settings.json` that runs Prettier"
+  },
+  {
+   "id": "preporato:cca-f#18",
+   "action": "set_option",
+   "match": "a sessionend hook",
+   "text": "A `SessionEnd` hook that runs the whole test suite and exits with code 2 when any test fails"
+  },
+  {
+   "id": "preporato:cca-f#18",
+   "action": "set_option",
+   "match": "a stop hook",
+   "text": "A `Stop` hook that runs the tests and, on failure, exits 2 with the failures on stderr"
+  },
+  {
+   "id": "preporato:cca-f#18",
+   "action": "set_option",
+   "match": "a posttooluse hook",
+   "text": "A `PostToolUse` hook that runs the whole test suite after every file Claude reads"
+  },
+  {
+   "id": "preporato:cca-f#18",
+   "action": "set_option",
+   "match": "a userpromptsubmit hook",
+   "text": "A `UserPromptSubmit` hook that runs the test suite before each new prompt is handled"
+  },
+  {
+   "id": "preporato:cca-f#19",
+   "action": "set_option",
+   "match": "the file has",
+   "text": "The file is already written; Claude gets the hook's stderr and can act on it, e.g. by removing the key"
+  },
+  {
+   "id": "preporato:cca-f#19",
+   "action": "set_option",
+   "match": "claude code shuts",
+   "text": "Claude Code ends the session immediately so that the leaked key cannot be used any further"
+  },
+  {
+   "id": "preporato:cca-f#19",
+   "action": "set_option",
+   "match": "nothing happens because",
+   "text": "Nothing happens, because exit code 2 is ignored for `PostToolUse` hooks and only logged"
+  },
+  {
+   "id": "preporato:cca-f#19",
+   "action": "set_option",
+   "match": "the write is",
+   "text": "The write is cancelled and rolled back, so the file containing the key is never created"
+  },
+  {
+   "id": "preporato:cca-f#20",
+   "action": "set_option",
+   "match": "one prompt for",
+   "text": "One prompt covering the whole migration, then a careful review of the final combined diff"
+  },
+  {
+   "id": "preporato:cca-f#20",
+   "action": "set_option",
+   "match": "direct execution file",
+   "text": "Direct execution, migrating file by file and fixing problems as they appear along the way"
+  },
+  {
+   "id": "preporato:cca-f#20",
+   "action": "set_option",
+   "match": "a claude md",
+   "text": "A `CLAUDE.md` rule telling Claude to use async/await for all API client calls in this repo"
+  },
+  {
+   "id": "preporato:cca-f#20",
+   "action": "set_option",
+   "match": "plan mode let",
+   "text": "Plan Mode: Claude explores the code and proposes a migration plan to review before edits"
+  },
+  {
+   "id": "preporato:cca-f#21",
+   "action": "set_option",
+   "match": "disable model invocation",
+   "text": "`disable-model-invocation: true`, so the skill runs only when a user invokes it"
+  },
+  {
+   "id": "preporato:cca-f#21",
+   "action": "set_option",
+   "match": "allowed tools read",
+   "text": "`allowed-tools: Read`, so the skill is limited to reading files instead of running tools"
+  },
+  {
+   "id": "preporato:cca-f#21",
+   "action": "edit",
+   "field": "opt",
+   "find": "`model: haiku`",
+   "replace": "`model: haiku`, so a smaller model summarizes the audit output more briefly"
+  },
+  {
+   "id": "preporato:cca-f#23",
+   "action": "set_option",
+   "match": "you are a",
+   "text": "'You are a world-class senior security engineer with twenty years of experience reviewing large production codebases.'"
+  },
+  {
+   "id": "preporato:cca-f#23",
+   "action": "set_option",
+   "match": "be extremely thorough",
+   "text": "'Be extremely thorough, check every single line carefully, and never miss any issue, however small or minor it may be.'"
+  },
+  {
+   "id": "preporato:cca-f#23",
+   "action": "set_option",
+   "match": "be conservative with",
+   "text": "'Be conservative with your comments and only raise an issue when you are confident it really matters.'"
+  },
+  {
+   "id": "preporato:cca-f#23",
+   "action": "set_option",
+   "match": "report only these",
+   "text": "'Report only SQL injection, XSS, auth bypass and code secrets of high or critical severity; skip formatting and naming.'"
+  },
+  {
+   "id": "preporato:cca-f#24",
+   "action": "set_option",
+   "match": "an instruction don",
+   "text": "An instruction in the system prompt: 'Don't be fooled by keywords; judge whether there is a real safety risk.'"
+  },
+  {
+   "id": "preporato:cca-f#24",
+   "action": "set_option",
+   "match": "two to four",
+   "text": "Two to four examples: the firewall ticket labeled not-safety with a reason, a real safety case, an ambiguous one"
+  },
+  {
+   "id": "preporato:cca-f#24",
+   "action": "set_option",
+   "match": "twenty examples of",
+   "text": "Twenty additional examples of genuine safety tickets so that the classifier learns what real physical risks look like"
+  },
+  {
+   "id": "preporato:cca-f#24",
+   "action": "set_option",
+   "match": "a lower temperature",
+   "text": "A lower temperature, so that the model is less likely to flag a ticket on the strength of one matching keyword"
+  },
+  {
+   "id": "preporato:cca-f#26",
+   "action": "set_option",
+   "match": "the failed output",
+   "text": "The failed output plus a short instruction telling the model to try the extraction again"
+  },
+  {
+   "id": "preporato:cca-f#26",
+   "action": "set_option",
+   "match": "the original document again",
+   "text": "The original document again, with the same prompt and no other changes to the request"
+  },
+  {
+   "id": "preporato:cca-f#26",
+   "action": "set_option",
+   "match": "the original document the",
+   "text": "The source document, the failed output and the specific error, asking for a fix to `invoice_date` only"
+  },
+  {
+   "id": "preporato:cca-f#26",
+   "action": "set_option",
+   "match": "the same request",
+   "text": "The same request sent to a more capable model, which is less likely to invent a date"
+  },
+  {
+   "id": "preporato:cca-f#27",
+   "action": "set_option",
+   "match": "reject it because",
+   "text": "Reject it, because requests in a message batch cannot include a system prompt or any tool definitions"
+  },
+  {
+   "id": "preporato:cca-f#27",
+   "action": "set_option",
+   "match": "approve it the",
+   "text": "Approve it: the same model quality at half the price, with no change needed anywhere in the chat flow"
+  },
+  {
+   "id": "preporato:cca-f#27",
+   "action": "set_option",
+   "match": "approve it provided",
+   "text": "Approve it, provided the app polls the batch endpoint for new results every second while each user waits"
+  },
+  {
+   "id": "preporato:cca-f#27",
+   "action": "set_option",
+   "match": "reject it batches",
+   "text": "Reject it: batches have no latency guarantee (most finish within an hour, up to 24 h), so live users can't wait"
+  },
+  {
+   "id": "preporato:cca-f#27",
+   "action": "edit",
+   "field": "explanation",
+   "find": "B ignores the latency.",
+   "replace": "Costs can come down instead through prompt caching or by routing routine messages to a cheaper model tier. B ignores the latency."
+  },
+  {
+   "id": "preporato:cca-f#28",
+   "action": "set_option",
+   "match": "a chain of",
+   "text": "A chain of focused prompts (extract, validate, normalize, classify, summarize) with per-step checks"
+  },
+  {
+   "id": "preporato:cca-f#28",
+   "action": "set_option",
+   "match": "the same single prompt on",
+   "text": "The same single prompt, moved to a more capable model that is better at handling multi-part tasks"
+  },
+  {
+   "id": "preporato:cca-f#28",
+   "action": "set_option",
+   "match": "ask for the",
+   "text": "The same prompt reordered to ask for the executive summary first and the 30 contract fields afterwards"
+  },
+  {
+   "id": "preporato:cca-f#28",
+   "action": "set_option",
+   "match": "the same single prompt with",
+   "text": "The same single prompt, but with each of the four requirements marked as IMPORTANT in capital letters"
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "set_option",
+   "match": "retrieve 80 passages",
+   "text": "Retrieve 80 passages instead of 40 so the answer is more likely to be included"
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "set_option",
+   "match": "re rank the",
+   "text": "Re-rank the passages and pass only the few most relevant ones"
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "set_option",
+   "match": "raise the temperature",
+   "text": "Raise the temperature so the model explores more of the passages"
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "set_option",
+   "match": "put the passages",
+   "text": "Put the passages first and the question and instructions at the end"
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a model with a larger context window that holds all 40 easily"
+  },
+  {
+   "id": "preporato:cca-f#3",
+   "action": "set_option",
+   "match": "keep returning an",
+   "text": "Keep returning an empty list in both cases and let the agent decide on its own whether to retry the search"
+  },
+  {
+   "id": "preporato:cca-f#3",
+   "action": "set_option",
+   "match": "return a structured",
+   "text": "Return a structured error for the timeout (type, retryable: true, what was tried) and an empty success for no match"
+  },
+  {
+   "id": "preporato:cca-f#3",
+   "action": "set_option",
+   "match": "return the closest",
+   "text": "Return the closest-matching policy in both cases so the agent always has something concrete to cite"
+  },
+  {
+   "id": "preporato:cca-f#3",
+   "action": "set_option",
+   "match": "raise an exception",
+   "text": "Raise an exception in both cases so that the coordinator ends the conversation with the customer"
+  },
+  {
+   "id": "preporato:cca-f#30",
+   "action": "set_option",
+   "match": "decline to answer",
+   "text": "Decline to answer until someone reconciles the two documents and confirms the correct warranty period"
+  },
+  {
+   "id": "preporato:cca-f#30",
+   "action": "set_option",
+   "match": "state 24 months",
+   "text": "State 24 months without mentioning the conflict, since the newer document automatically supersedes the old one"
+  },
+  {
+   "id": "preporato:cca-f#30",
+   "action": "set_option",
+   "match": "give the answer",
+   "text": "Give both values with their documents and dates, mark the newer as likely current, and flag the conflict"
+  },
+  {
+   "id": "preporato:cca-f#30",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two documented values and tell the customer that the warranty period is 18 months"
+  },
+  {
+   "id": "preporato:cca-f#4",
+   "action": "set_option",
+   "match": "start fresh sessions",
+   "text": "Start fresh sessions for both and paste the last assistant message into each one's system prompt"
+  },
+  {
+   "id": "preporato:cca-f#4",
+   "action": "set_option",
+   "match": "fork the session",
+   "text": "Fork the session for the customer and resume the original session for the supervisor's test run"
+  },
+  {
+   "id": "preporato:cca-f#4",
+   "action": "set_option",
+   "match": "resume the same",
+   "text": "Resume the same session for both, so the customer and the supervisor share one up-to-date history"
+  },
+  {
+   "id": "preporato:cca-f#4",
+   "action": "set_option",
+   "match": "resume the customer",
+   "text": "Resume the customer's session to restore its history; fork a separate copy for the supervisor"
+  },
+  {
+   "id": "preporato:cca-f#6",
+   "action": "set_option",
+   "match": "checkpoint progress to",
+   "text": "Checkpoint progress in a manifest (done and pending repos, results so far) and resume from it"
+  },
+  {
+   "id": "preporato:cca-f#6",
+   "action": "set_option",
+   "match": "give the scanners",
+   "text": "Give the scanners larger context windows so they remember what the previous run already covered"
+  },
+  {
+   "id": "preporato:cca-f#6",
+   "action": "set_option",
+   "match": "run the audit",
+   "text": "Run the audit weekly instead of nightly so a crash affects fewer runs and creates fewer duplicates"
+  },
+  {
+   "id": "preporato:cca-f#6",
+   "action": "set_option",
+   "match": "make ticket creation",
+   "text": "Make ticket creation idempotent, keyed by repository and finding id, so replays can't duplicate"
+  },
+  {
+   "id": "preporato:cca-f#6",
+   "action": "set_option",
+   "match": "ask the coordinator",
+   "text": "Ask the coordinator at startup which repositories it had already finished before last night's crash"
+  },
+  {
+   "id": "preporato:cca-f#7",
+   "action": "set_option",
+   "match": "replace the scanner",
+   "text": "Replace the scanner tools with Bash alone, since Bash can do everything the other tools can do"
+  },
+  {
+   "id": "preporato:cca-f#7",
+   "action": "set_option",
+   "match": "give the scanners",
+   "text": "Give the scanners every tool but add a system-prompt rule that forbids writes and ticket creation"
+  },
+  {
+   "id": "preporato:cca-f#7",
+   "action": "set_option",
+   "match": "keep each scanner",
+   "text": "Keep each scanner on the read-only tools its job needs; only the coordinator opens tickets"
+  },
+  {
+   "id": "preporato:cca-f#7",
+   "action": "set_option",
+   "match": "accept the proposal",
+   "text": "Accept the proposal, because more tools make each scanner more capable on unusual repositories"
+  },
+  {
+   "id": "preporato:cca-f#8",
+   "action": "set_option",
+   "match": "nothing the scanners",
+   "text": "Nothing different; the scanners simply needed a more capable model to cover the largest files"
+  },
+  {
+   "id": "preporato:cca-f#8",
+   "action": "set_option",
+   "match": "a longer narrative",
+   "text": "A longer narrative summary from each scanner describing what it looked at during the scan"
+  },
+  {
+   "id": "preporato:cca-f#8",
+   "action": "set_option",
+   "match": "a confidence score",
+   "text": "A self-reported confidence score from each scanner, carried through into the merged report"
+  },
+  {
+   "id": "preporato:cca-f#8",
+   "action": "set_option",
+   "match": "a coverage annotation",
+   "text": "A coverage note from every scanner (files reviewed, files skipped and why, counts) in the merged report"
+  },
+  {
+   "id": "preporato:cca-f#9",
+   "action": "set_option",
+   "match": "the loop should",
+   "text": "The loop should set `tool_choice` to `any` after the first call so Claude keeps returning tool calls"
+  },
+  {
+   "id": "preporato:cca-f#9",
+   "action": "set_option",
+   "match": "the assistant turn",
+   "text": "The assistant turn with the `tool_use` block is never appended, so the `tool_result` has no matching call"
+  },
+  {
+   "id": "preporato:cca-f#9",
+   "action": "set_option",
+   "match": "tool_result blocks belong",
+   "text": "The `tool_result` blocks belong in the system prompt rather than in a user message of the conversation"
+  },
+  {
+   "id": "preporato:cca-f#9",
+   "action": "set_option",
+   "match": "max_tokens is too",
+   "text": "A `max_tokens` of 1024 is too low for a tool loop, so the follow-up request is rejected by the API"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#1",
+   "action": "set_option",
+   "match": "rewrite the system",
+   "text": "Rewrite the verification rule in the system prompt in bold, capitalized text so it stands out"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#1",
+   "action": "set_option",
+   "match": "lower the model",
+   "text": "Lower the model's temperature so it follows the documented tool order more consistently"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#1",
+   "action": "set_option",
+   "match": "add five few",
+   "text": "Add five few-shot examples to the system prompt that show identity verification happening first"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#10",
+   "action": "set_option",
+   "match": "no problem iserror",
+   "text": "No problem; `isError: true` is a sufficient signal, and the agent can work out the cause on its own"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#10",
+   "action": "set_option",
+   "match": "the agent can",
+   "text": "The agent can't tell retryable from non-retryable failures; add `errorCategory` and `isRetryable` fields"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#10",
+   "action": "set_option",
+   "match": "replace iserror with",
+   "text": "Replace `isError` with a standard HTTP status code so that the agent can map each failure to a known class"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#10",
+   "action": "set_option",
+   "match": "log the error",
+   "text": "Log the details server-side only, since the agent doesn't need to know why a tool call failed"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#11",
+   "action": "set_option",
+   "match": "ask the new",
+   "text": "Ask the new engineer to copy the tech lead's `~/.claude/CLAUDE.md` file to their machine"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#11",
+   "action": "set_option",
+   "match": "move the conventions",
+   "text": "Move the conventions into a project-level `CLAUDE.md` that is committed to the repo"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#11",
+   "action": "set_option",
+   "match": "repeat the conventions",
+   "text": "Have the tech lead repeat the conventions verbally in stand-up each day for new joiners"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#11",
+   "action": "set_option",
+   "match": "add the conventions",
+   "text": "Add the conventions to the repository README instead, since every engineer reads it first"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#15",
+   "action": "set_option",
+   "match": "repeat the same",
+   "text": "Repeat the same \"clean up\" instruction more forcefully, stressing that it must be consistent"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#15",
+   "action": "edit",
+   "field": "opt",
+   "find": "Lower `max_tokens`",
+   "replace": "Lower `max_tokens` so Claude has less room to restructure the function's logic"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#15",
+   "action": "set_option",
+   "match": "request five attempts",
+   "text": "Request five cleaned-up attempts in one go and manually pick the best one"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#17",
+   "action": "set_option",
+   "match": "test driven iteration",
+   "text": "Test-driven iteration loop"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#17",
+   "action": "edit",
+   "field": "opt",
+   "find": "Prompt chaining",
+   "replace": "Prompt chaining in stages"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#17",
+   "action": "set_option",
+   "match": "direct execution with",
+   "text": "Direct execution, long prompt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#19",
+   "action": "set_option",
+   "match": "nothing claude should",
+   "text": "Nothing; Claude can infer the failures on its own"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "merge the two",
+   "text": "Merge the two tools into one `get_account` tool that returns both the status and the full details"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "expand both descriptions",
+   "text": "Expand both descriptions with input formats, example queries and clear \"use this vs. that\" boundaries"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "add a keyword",
+   "text": "Add a keyword-based pre-router in front of the agent that picks the right tool for each billing question"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "force tool_choice to",
+   "text": "Force `tool_choice` to the one named tool that should handle billing questions for every request"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#20",
+   "action": "set_option",
+   "match": "the convention only",
+   "text": "The convention only ever applies to files within that one directory and to nothing outside of it"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#20",
+   "action": "set_option",
+   "match": "the convention needs",
+   "text": "The convention should follow path patterns that may later extend past this directory"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#20",
+   "action": "set_option",
+   "match": "the convention is",
+   "text": "The convention is short enough to fit in a single line of Markdown instructions"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#20",
+   "action": "set_option",
+   "match": "there s no",
+   "text": "There's no meaningful difference between the two, so either location works exactly the same"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#24",
+   "action": "set_option",
+   "match": "an empty result",
+   "text": "An empty result set marked as a success, so that the coordinator can keep the whole pipeline moving"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#24",
+   "action": "set_option",
+   "match": "structured error context",
+   "text": "Structured error context: failure type, what was tried, partial results, possible alternatives"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#24",
+   "action": "set_option",
+   "match": "a generic search",
+   "text": "A generic \"search unavailable\" string that the coordinator can pass on to the user directly as is"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#24",
+   "action": "set_option",
+   "match": "nothing silently retry",
+   "text": "Nothing; it should silently retry indefinitely until the search eventually succeeds on its own"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#25",
+   "action": "set_option",
+   "match": "give the synthesis agent full",
+   "text": "Give the synthesis agent full access to all search tools so it can verify any fact directly"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#25",
+   "action": "set_option",
+   "match": "give the synthesis agent one",
+   "text": "Give the synthesis agent a scoped `verify_fact` tool for simple checks; route complex ones via the coordinator"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#25",
+   "action": "set_option",
+   "match": "batch all verifications",
+   "text": "Batch all verifications to run together at the very end of the pipeline, after synthesis"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#25",
+   "action": "set_option",
+   "match": "remove verification entirely",
+   "text": "Remove verification from the synthesis step entirely to save time on every report"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#26",
+   "action": "set_option",
+   "match": "use whichever source",
+   "text": "Silently use whichever source is more recent and drop the other one"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#26",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two figures and report the mean as the statistic"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#26",
+   "action": "set_option",
+   "match": "preserve both values",
+   "text": "Keep both values with source attribution and flag the discrepancy"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#26",
+   "action": "set_option",
+   "match": "omit the statistic",
+   "text": "Omit the statistic entirely from the report to avoid the conflict"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#27",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "Have the coordinator manually re-attribute each claim to its source after the report is written"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#27",
+   "action": "set_option",
+   "match": "require subagents to",
+   "text": "Require subagents to output structured claim-source mappings (claim, excerpt, source, date) for synthesis"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#27",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the number of subagents so there are fewer sources to attribute in the final report"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#27",
+   "action": "set_option",
+   "match": "have the synthesis",
+   "text": "Have the synthesis agent guess the most likely source of each claim based on writing style"
   }
  ],
  "hold": []
