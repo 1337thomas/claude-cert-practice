@@ -11672,6 +11672,1228 @@
    "action": "set_option",
    "match": "pattern y because appending",
    "text": "Pattern Y, because appending ~24,000 tokens of raw findings dilutes the orchestrator's attention and wastes context budget."
+  },
+  {
+   "id": "milind:Q1048",
+   "action": "set_option",
+   "match": "CLAUDE.md files have",
+   "text": "CLAUDE.md has a hard 4,096-token limit enforced by the CLI; move the docs into a `.claude/docs/` directory instead."
+  },
+  {
+   "id": "milind:Q1048",
+   "action": "set_option",
+   "match": "Embedding large static",
+   "text": "It loads into every session's context although most tasks never need it; serve the docs on demand via MCP or `@` files."
+  },
+  {
+   "id": "milind:Q1048",
+   "action": "set_option",
+   "match": "Third-party API docs",
+   "text": "Third-party API docs are copyrighted material, so storing them in CLAUDE.md breaks their licenses; link to vendor sites."
+  },
+  {
+   "id": "milind:Q1048",
+   "action": "set_option",
+   "match": "CLAUDE.md is parsed",
+   "text": "CLAUDE.md is parsed as Markdown, so large code blocks cause syntax errors in the Claude Code parser; split them up."
+  },
+  {
+   "id": "milind:Q1049",
+   "action": "set_option",
+   "match": "The Batch API offers",
+   "text": "Lower per-token cost for high-volume async work; the risk is partial batch failure, so reconcile and resubmit failed items."
+  },
+  {
+   "id": "milind:Q1049",
+   "action": "set_option",
+   "match": "The Batch API removes",
+   "text": "The Batch API removes the need for a schema entirely; the risk is schema drift between batches submitted on two separate days."
+  },
+  {
+   "id": "milind:Q1049",
+   "action": "set_option",
+   "match": "The synchronous loop",
+   "text": "The synchronous loop is preferable here because it validates in real time; batches are meant for unstructured tasks."
+  },
+  {
+   "id": "milind:Q1049",
+   "action": "set_option",
+   "match": "The Batch API is",
+   "text": "The Batch API is faster per request; the risk is that it does not support JSON schema output, so fields are parsed by hand."
+  },
+  {
+   "id": "milind:Q105",
+   "action": "set_option",
+   "match": "Create a completely",
+   "text": "Create a separate Word analysis subagent alongside the existing PDF subagent"
+  },
+  {
+   "id": "milind:Q105",
+   "action": "set_option",
+   "match": "Add Word processing",
+   "text": "Add Word processing to the coordinator and pass the results to the existing subagent"
+  },
+  {
+   "id": "milind:Q105",
+   "action": "set_option",
+   "match": "Have the coordinator",
+   "text": "Have the coordinator convert all Word documents to PDF before passing them to the subagent"
+  },
+  {
+   "id": "milind:Q105",
+   "action": "set_option",
+   "match": "Update the subagent's",
+   "text": "Add a Word tool to the subagent's `AgentDefinition` and describe it in its system prompt"
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_option",
+   "match": "Configure permission rules",
+   "text": "Settings rules that deny or ask for `Bash(rm -rf:*)` and `Bash(git clean:*)`, plus a few-shot scoped-cleanup example."
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_option",
+   "match": "Replace the `bash`",
+   "text": "Replace the `bash` tool with a `make clean` wrapper tool that can only ever run the project's Makefile clean target."
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_option",
+   "match": "Instruct the agent",
+   "text": "A system prompt instruction that the agent must ask the developer to confirm every single shell command before running it."
+  },
+  {
+   "id": "milind:Q1050",
+   "action": "set_option",
+   "match": "Add a `--dangerously-skip-permissions`",
+   "text": "Launch with `--dangerously-skip-permissions` so the developer can review each command in real time and reject risky ones."
+  },
+  {
+   "id": "milind:Q1051",
+   "action": "set_option",
+   "match": "Catch all errors",
+   "text": "Catch all errors in the tool and return a generic `\"An error occurred\"` string so Claude never sees raw error codes."
+  },
+  {
+   "id": "milind:Q1051",
+   "action": "set_option",
+   "match": "Document error codes",
+   "text": "Document the error codes in CLAUDE.md instead of the tool schema so they are available whichever tool is called."
+  },
+  {
+   "id": "milind:Q1051",
+   "action": "set_option",
+   "match": "Add a global",
+   "text": "Add a global error-handling agent that intercepts all tool responses and resolves errors before the agent sees them."
+  },
+  {
+   "id": "milind:Q1051",
+   "action": "set_option",
+   "match": "Enumerate all known",
+   "text": "Document known error codes in the tool `description` and return structured errors with `code`, `message`, `suggested_action`."
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_option",
+   "match": "Claude cannot produce",
+   "text": "Claude cannot produce multiple JSON blocks in one response, so two of the three outputs would be lost or truncated."
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_option",
+   "match": "A single pass",
+   "text": "A single pass dilutes attention across three analyses and drops the validation checkpoint before synthesis."
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_option",
+   "match": "Three-pass pipelines always",
+   "text": "The single prompt is slower, because three separate passes could run in parallel and cut the wall-clock time."
+  },
+  {
+   "id": "milind:Q1052",
+   "action": "set_option",
+   "match": "Single-prompt approaches are",
+   "text": "A single prompt costs more, because the model must reprocess the full output length as input tokens in later steps."
+  },
+  {
+   "id": "milind:Q1053",
+   "action": "set_option",
+   "match": "Have the worker",
+   "text": "Have the worker emit one structured object per source with `claim`, `support_strength` and `contradicts` fields."
+  },
+  {
+   "id": "milind:Q1053",
+   "action": "set_option",
+   "match": "Limit the worker",
+   "text": "Limit the worker to returning only the three most relevant sources so conflicting claims never reach the orchestrator."
+  },
+  {
+   "id": "milind:Q1053",
+   "action": "set_option",
+   "match": "Use a higher",
+   "text": "Use a higher temperature during synthesis so the model explores more reconciliations instead of anchoring on the last source."
+  },
+  {
+   "id": "milind:Q1053",
+   "action": "set_option",
+   "match": "Sort sources by",
+   "text": "Sort sources by domain authority score before inserting them into the orchestrator's context so strong sources come first."
+  },
+  {
+   "id": "milind:Q1054",
+   "action": "set_option",
+   "match": "Store all sensitive",
+   "text": "Store all sensitive instructions in a separate MCP server that Claude queries only when needed, outside the system prompt."
+  },
+  {
+   "id": "milind:Q1054",
+   "action": "set_option",
+   "match": "Encrypt the system",
+   "text": "Encrypt the system prompt at rest so that it cannot be exfiltrated through the API response, even after an injection."
+  },
+  {
+   "id": "milind:Q1054",
+   "action": "set_option",
+   "match": "Implement an output-scanning",
+   "text": "An output-scanning hook that detects internal pricing patterns, such as tier names, and blocks or redacts responses."
+  },
+  {
+   "id": "milind:Q1054",
+   "action": "set_option",
+   "match": "Use a separate",
+   "text": "A separate guard LLM call before every user message that classifies whether the message is a prompt injection attempt."
+  },
+  {
+   "id": "milind:Q1055",
+   "action": "set_option",
+   "match": "The agent should retry",
+   "text": "The failed write; the agent should retry it up to five times before moving on to the remaining six files."
+  },
+  {
+   "id": "milind:Q1055",
+   "action": "set_option",
+   "match": "The developer should",
+   "text": "The missed failure; the developer should manually verify all 14 files after every task to catch partial completions."
+  },
+  {
+   "id": "milind:Q1055",
+   "action": "set_option",
+   "match": "The agent should",
+   "text": "The write order; the agent should sort its file writes alphabetically to reduce the chance of dependency failures."
+  },
+  {
+   "id": "milind:Q1055",
+   "action": "set_option",
+   "match": "The agent reporting",
+   "text": "The false success report; diff a write manifest against actual writes and report partial completion."
+  },
+  {
+   "id": "milind:Q1056",
+   "action": "set_option",
+   "match": "Instruct Claude to",
+   "text": "Instruct Claude to convert every relative date to an absolute one by assuming that the signing date is today's date."
+  },
+  {
+   "id": "milind:Q1056",
+   "action": "set_option",
+   "match": "Change the `effective_date`",
+   "text": "Change `effective_date` from type `date` to `string` so that the field accepts any value without validation."
+  },
+  {
+   "id": "milind:Q1056",
+   "action": "set_option",
+   "match": "Filter out documents",
+   "text": "Filter out all documents that contain relative date expressions before they ever reach the extraction pipeline."
+  },
+  {
+   "id": "milind:Q1056",
+   "action": "set_option",
+   "match": "Add a `date_resolution_status`",
+   "text": "Add a `date_resolution_status` enum, a `RELATIVE_UNRESOLVED` few-shot example, and an `effective_date_raw` field."
+  },
+  {
+   "id": "milind:Q1056",
+   "action": "edit",
+   "field": "explanation",
+   "find": "A status enum plus a raw-expression companion field",
+   "replace": "A status enum (`ABSOLUTE`, `RELATIVE_UNRESOLVED`, `ABSENT`) plus a raw-expression companion field"
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_option",
+   "match": "Wrap the Claude",
+   "text": "Wrap the Claude call in a retry loop that re-runs it up to three times whenever JSON parsing of the output fails."
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_option",
+   "match": "Switch to `--output-format",
+   "text": "Switch to `--output-format text` and extract the structured fields from the text output with a post-processing regex."
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_option",
+   "match": "Sanitize the git",
+   "text": "Sanitize the git log by stripping all non-alphanumeric characters before the log is passed to Claude for processing."
+  },
+  {
+   "id": "milind:Q1057",
+   "action": "set_option",
+   "match": "Pass the raw",
+   "text": "Pass the git log as data rather than inside the instructions, and add `--json-schema` with a release-notes schema."
+  },
+  {
+   "id": "milind:Q1058",
+   "action": "set_option",
+   "match": "Store all sub-agent",
+   "text": "Store all sub-agent findings in a graph database and let a separate provenance agent reconstruct citation chains from it."
+  },
+  {
+   "id": "milind:Q1058",
+   "action": "set_option",
+   "match": "Instruct the orchestrator",
+   "text": "Instruct the orchestrator to infer source URLs from context clues in the findings using its own parametric knowledge."
+  },
+  {
+   "id": "milind:Q1058",
+   "action": "set_option",
+   "match": "Require each sub-agent",
+   "text": "Have sub-agents return `{claim, source_url, passage_excerpt, retrieval_timestamp}` objects that are forwarded unchanged."
+  },
+  {
+   "id": "milind:Q1058",
+   "action": "set_option",
+   "match": "Add a post-processing",
+   "text": "Add a post-processing step in which a citation retrieval model matches claims in the final report to likely source URLs."
+  },
+  {
+   "id": "milind:Q1059",
+   "action": "set_option",
+   "match": "Each engineer should",
+   "text": "In each engineer's personal `~/.claude/settings.json`, with the skill installed locally, so everyone keeps individual control."
+  },
+  {
+   "id": "milind:Q1059",
+   "action": "set_option",
+   "match": "Place read-only bash",
+   "text": "In the committed project `.claude/settings.json`, so every engineer inherits the same rules and skill; overrides stay personal."
+  },
+  {
+   "id": "milind:Q1059",
+   "action": "set_option",
+   "match": "Embed all permission",
+   "text": "In CLAUDE.md as natural-language rules, so they are applied as instructions rather than as machine-readable configuration."
+  },
+  {
+   "id": "milind:Q1059",
+   "action": "set_option",
+   "match": "Use environment variables",
+   "text": "In environment variables set per CI/CD environment, so engineers' local machines receive no pre-configured permissions."
+  },
+  {
+   "id": "milind:Q1060",
+   "action": "set_option",
+   "match": "Remove `create_ticket` from",
+   "text": "Remove `create_ticket` from the agent's tools and route all ticket creation through a separate escalation agent."
+  },
+  {
+   "id": "milind:Q1060",
+   "action": "set_option",
+   "match": "Add a `prerequisite_searches_completed`",
+   "text": "Add a required `prerequisite_searches_completed` flag to `create_ticket`, a search-first description, and a few-shot example."
+  },
+  {
+   "id": "milind:Q1060",
+   "action": "set_option",
+   "match": "Increase the system",
+   "text": "Lengthen the system prompt with detailed instructions about when the agent must search the knowledge base before creating a ticket."
+  },
+  {
+   "id": "milind:Q1060",
+   "action": "set_option",
+   "match": "Add a `confidence_threshold`",
+   "text": "Add a `confidence_threshold` parameter to `search_knowledge_base` so it returns only results above 90% relevance."
+  },
+  {
+   "id": "milind:Q1061",
+   "action": "set_option",
+   "match": "Introduce a three-state",
+   "text": "A three-state pattern per field, `{value, presence: PRESENT | EXPLICITLY_ABSENT | NOT_MENTIONED}`, with few-shot examples."
+  },
+  {
+   "id": "milind:Q1061",
+   "action": "set_option",
+   "match": "Add a post-processing",
+   "text": "A post-processing keyword scan for negation phrases like \"no known\" that retroactively sets fields to a different null variant."
+  },
+  {
+   "id": "milind:Q1061",
+   "action": "set_option",
+   "match": "Use two separate",
+   "text": "Two separate extraction prompts, one for present fields and one for absent fields, whose outputs are merged afterwards."
+  },
+  {
+   "id": "milind:Q1061",
+   "action": "set_option",
+   "match": "Replace `null` with",
+   "text": "Replace `null` with the string `\"unknown\"` for all missing fields so that downstream systems can filter on that value."
+  },
+  {
+   "id": "milind:Q1062",
+   "action": "set_option",
+   "match": "Strategy Z; support",
+   "text": "Strategy Z; support conversations are too unpredictable to compress any context safely, so keep all 60 turns."
+  },
+  {
+   "id": "milind:Q1062",
+   "action": "set_option",
+   "match": "Strategy Y with",
+   "text": "Strategy Y with a summary schema that keeps unresolved issues, timestamped symptoms, commitments and attempted fixes as fields."
+  },
+  {
+   "id": "milind:Q1062",
+   "action": "set_option",
+   "match": "Strategy X combined",
+   "text": "Strategy X combined with a full-text search index so the agent can retrieve older turns on demand when it needs them."
+  },
+  {
+   "id": "milind:Q1062",
+   "action": "set_option",
+   "match": "Strategy X; the",
+   "text": "Strategy X; the last 20 turns contain enough context for active support issues, and older turns are rarely relevant."
+  },
+  {
+   "id": "milind:Q1063",
+   "action": "set_option",
+   "match": "R first, then",
+   "text": "R first, then P, then Q; model size is the biggest latency lever, and caching and scoping add only small gains."
+  },
+  {
+   "id": "milind:Q1063",
+   "action": "set_option",
+   "match": "Q first (scope",
+   "text": "Q first to remove unneeded work, then P to cut per-request overhead, then R only if testing shows quality holds."
+  },
+  {
+   "id": "milind:Q1063",
+   "action": "set_option",
+   "match": "P first, then",
+   "text": "P first, then Q, then R; prompt caching is the highest-impact optimization for a latency-bound CI check like this."
+  },
+  {
+   "id": "milind:Q1063",
+   "action": "set_option",
+   "match": "All three should",
+   "text": "All three at once, since applying P, Q and R together in one rollout gives the maximum overall speedup."
+  },
+  {
+   "id": "milind:Q1064",
+   "action": "set_option",
+   "match": "Each worker agent",
+   "text": "Give workers only the context and scoped, short-lived tokens their subtask needs, never master credentials."
+  },
+  {
+   "id": "milind:Q1064",
+   "action": "set_option",
+   "match": "Pass the full",
+   "text": "Keep passing the full system prompt so workers have complete context for edge cases that may arise in their subtasks."
+  },
+  {
+   "id": "milind:Q1064",
+   "action": "set_option",
+   "match": "Store API keys",
+   "text": "Move the API keys from the system prompt into the user turn so they are not forwarded during worker initialization."
+  },
+  {
+   "id": "milind:Q1064",
+   "action": "set_option",
+   "match": "Encrypt the system",
+   "text": "Encrypt the system prompt before passing it to workers and keep the decryption key in an environment variable."
+  },
+  {
+   "id": "milind:Q1065",
+   "action": "set_option",
+   "match": "Define a structured",
+   "text": "An `up_sql`/`down_sql` output schema, a PostgreSQL parser check, and shadow-database CI runs proving `down_sql` reverts `up_sql`."
+  },
+  {
+   "id": "milind:Q1065",
+   "action": "set_option",
+   "match": "Use few-shot examples",
+   "text": "Few-shot examples of reversible migrations so rollback SQL is always included, plus manual spot checks of 10% in production."
+  },
+  {
+   "id": "milind:Q1065",
+   "action": "set_option",
+   "match": "Add a post-generation",
+   "text": "A post-generation LLM review call that checks each migration for correctness and reversibility before it is accepted."
+  },
+  {
+   "id": "milind:Q1065",
+   "action": "set_option",
+   "match": "Use a detailed",
+   "text": "A detailed system prompt on PostgreSQL 15 syntax, semantics and reversibility, relying on Claude's training to comply."
+  },
+  {
+   "id": "milind:Q1066",
+   "action": "set_option",
+   "match": "Increase the number",
+   "text": "Increase the number of few-shot examples to ten so the model is exposed to a wider range of test patterns."
+  },
+  {
+   "id": "milind:Q1066",
+   "action": "set_option",
+   "match": "Add a chain-of-thought",
+   "text": "Make the agent list an edge case inventory (nulls, boundaries, error paths, type mismatches) first and cover all of it."
+  },
+  {
+   "id": "milind:Q1066",
+   "action": "set_option",
+   "match": "Instruct the agent",
+   "text": "Instruct the agent to write its tests in TDD style so that it reasons about behavior before looking at the implementation."
+  },
+  {
+   "id": "milind:Q1066",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Lower the temperature to 0.1 so the agent becomes more conservative and less likely to skip edge cases."
+  },
+  {
+   "id": "milind:Q1067",
+   "action": "set_option",
+   "match": "Instruct the orchestrator",
+   "text": "Instruct the orchestrator in its system prompt to be skeptical of any tool result that contains instruction-like language."
+  },
+  {
+   "id": "milind:Q1067",
+   "action": "set_option",
+   "match": "Implement a tool-result",
+   "text": "Wrap external content in delimited `<tool_result>` tags and tell the orchestrator tagged content is data, not instructions."
+  },
+  {
+   "id": "milind:Q1067",
+   "action": "set_option",
+   "match": "Use a separate",
+   "text": "Use a separate classification model to scan every tool result for injection attempts before it reaches the orchestrator."
+  },
+  {
+   "id": "milind:Q1067",
+   "action": "set_option",
+   "match": "Limit the web-browsing",
+   "text": "Limit the web-browsing sub-agent to returning structured JSON only, so it can no longer pass raw page text to the orchestrator."
+  },
+  {
+   "id": "milind:Q1068",
+   "action": "set_option",
+   "match": "Add an optional",
+   "text": "Add an optional `sub_items` array to each line item, defaulting to empty, and emit a `schema_version` field in every response."
+  },
+  {
+   "id": "milind:Q1068",
+   "action": "set_option",
+   "match": "Use a union",
+   "text": "Make `line_items` a union of a flat array or a nested object and let Claude choose the representation for each invoice's structure."
+  },
+  {
+   "id": "milind:Q1068",
+   "action": "set_option",
+   "match": "Process invoices with",
+   "text": "Route invoices with nested items through a separate pipeline with its own schema and merge both result sets before delivery."
+  },
+  {
+   "id": "milind:Q1068",
+   "action": "set_option",
+   "match": "Create a completely",
+   "text": "Create a completely new schema version and migrate all downstream consumers to it simultaneously in one release."
+  },
+  {
+   "id": "milind:Q1069",
+   "action": "set_option",
+   "match": "`--dangerously-skip-permissions` is correct",
+   "text": "Use `--dangerously-skip-permissions` freely; CI environments are isolated, so bypassing every check carries little risk."
+  },
+  {
+   "id": "milind:Q1069",
+   "action": "set_option",
+   "match": "The correct solution",
+   "text": "Allowlist expected tools via `.claude/settings.json` or `--allowedTools`; the flag would let injected commands run unchecked."
+  },
+  {
+   "id": "milind:Q1069",
+   "action": "set_option",
+   "match": "Run Claude in",
+   "text": "Run Claude in a Docker container without network access; that contains the blast radius and makes the flag safe to use."
+  },
+  {
+   "id": "milind:Q1069",
+   "action": "set_option",
+   "match": "Use the `--output-format",
+   "text": "Add `--output-format json`, which suppresses permission prompts in CI mode, so the bypass flag is not needed at all."
+  },
+  {
+   "id": "milind:Q107",
+   "action": "set_option",
+   "match": "Compresses the conversation",
+   "text": "Summarizes the conversation history to free context while keeping the investigation's key thread"
+  },
+  {
+   "id": "milind:Q107",
+   "action": "set_option",
+   "match": "Deletes all tool",
+   "text": "Deletes all tool call results from the conversation history but keeps the user and assistant turns"
+  },
+  {
+   "id": "milind:Q107",
+   "action": "set_option",
+   "match": "Exports the conversation",
+   "text": "Exports the conversation to a compressed archive file and starts a fresh, empty session"
+  },
+  {
+   "id": "milind:Q107",
+   "action": "set_option",
+   "match": "Reduces the `max_tokens`",
+   "text": "Lowers the `max_tokens` parameter for all subsequent API calls to save the remaining context"
+  },
+  {
+   "id": "milind:Q1070",
+   "action": "set_option",
+   "match": "Use separate system",
+   "text": "Separate system prompts for each agent type, each with strongly worded constraints about the forbidden domain."
+  },
+  {
+   "id": "milind:Q1070",
+   "action": "set_option",
+   "match": "Deploy each agent",
+   "text": "Separate integrations with distinct tool sets and logs: no code tools for Support, no PII tools for Code Generation."
+  },
+  {
+   "id": "milind:Q1070",
+   "action": "set_option",
+   "match": "Add a routing",
+   "text": "A routing layer that inspects each user message and blocks cross-domain requests before they reach either agent."
+  },
+  {
+   "id": "milind:Q1070",
+   "action": "set_option",
+   "match": "Use a single",
+   "text": "One shared agent with a role-switching mechanism triggered by a user-supplied `agent_type` parameter on each request."
+  },
+  {
+   "id": "milind:Q1071",
+   "action": "set_option",
+   "match": "Increase the system",
+   "text": "Increase system prompt specificity by listing every deprecated API together with the date it was deprecated."
+  },
+  {
+   "id": "milind:Q1071",
+   "action": "set_option",
+   "match": "Run a separate",
+   "text": "Run a separate Claude call that reviews the generated code for deprecated API usage and outputs a corrected version."
+  },
+  {
+   "id": "milind:Q1071",
+   "action": "set_option",
+   "match": "Add a post-generation",
+   "text": "Add a post-generation lint step that flags deprecated APIs and asks Claude to regenerate with the error message."
+  },
+  {
+   "id": "milind:Q1071",
+   "action": "set_option",
+   "match": "In CLAUDE.md, list",
+   "text": "A \"NEVER USE\" section in CLAUDE.md mapping each deprecated API to its replacement, plus a few-shot swap example."
+  },
+  {
+   "id": "milind:Q1072",
+   "action": "set_option",
+   "match": "Add a classification",
+   "text": "A lightweight Claude call returns a `{complexity, rationale}` classification that the orchestrator branches on."
+  },
+  {
+   "id": "milind:Q1072",
+   "action": "set_option",
+   "match": "Use a rules-based",
+   "text": "A rules-based keyword classifier, e.g. \"comprehensive\" or \"detailed\" means deep research, to avoid adding LLM latency."
+  },
+  {
+   "id": "milind:Q1072",
+   "action": "set_option",
+   "match": "Let the user",
+   "text": "A UI toggle that lets the user select the research depth before submitting the query, which is passed to the orchestrator."
+  },
+  {
+   "id": "milind:Q1072",
+   "action": "set_option",
+   "match": "Always spawn 5",
+   "text": "Spawn five shallow-search workers for every query, since deep research costs too much latency in interactive use."
+  },
+  {
+   "id": "milind:Q1073",
+   "action": "set_option",
+   "match": "Add `--no-interactive` flag",
+   "text": "Add the `--no-interactive` flag so Claude cannot make additional API calls from within the workflow run."
+  },
+  {
+   "id": "milind:Q1073",
+   "action": "set_option",
+   "match": "Rotate the GITHUB_TOKEN",
+   "text": "Rotate the `GITHUB_TOKEN` after every workflow run so that a stolen token expires before it can be used."
+  },
+  {
+   "id": "milind:Q1073",
+   "action": "set_option",
+   "match": "Use `pull_request` events",
+   "text": "Use `pull_request` instead of `pull_request_target` for untrusted code, with no write access or secrets before review."
+  },
+  {
+   "id": "milind:Q1073",
+   "action": "set_option",
+   "match": "Wrap all Claude",
+   "text": "Wrap all Claude CLI calls in a try/catch block so the token cannot be exfiltrated through error messages."
+  },
+  {
+   "id": "milind:Q1074",
+   "action": "set_option",
+   "match": "Extended thinking reduces",
+   "text": "It lowers accuracy because the model second-guesses itself; it should not be used in customer-facing apps at all."
+  },
+  {
+   "id": "milind:Q1074",
+   "action": "set_option",
+   "match": "Extended thinking is",
+   "text": "It is incompatible with tool use; enabling it would stop the agent from calling the lookup and ticketing tools."
+  },
+  {
+   "id": "milind:Q1074",
+   "action": "set_option",
+   "match": "Extended thinking produces",
+   "text": "It produces long answers that overwhelm customers; enable it only for queries with more than 50 words."
+  },
+  {
+   "id": "milind:Q1074",
+   "action": "set_option",
+   "match": "Extended thinking significantly",
+   "text": "It adds latency and token cost to every query; reserve it for complex multi-step cases such as log diagnosis."
+  },
+  {
+   "id": "milind:Q1075",
+   "action": "set_option",
+   "match": "Single-prompt chaining is",
+   "text": "Single-prompt chaining is slower than separate calls; use three separate synchronous calls in sequence instead."
+  },
+  {
+   "id": "milind:Q1075",
+   "action": "set_option",
+   "match": "If Step 1",
+   "text": "Step 1 errors cascade silently into Steps 2 and 3; run separate stages with schema validation and human review between."
+  },
+  {
+   "id": "milind:Q1075",
+   "action": "set_option",
+   "match": "Three-step prompts exceed",
+   "text": "Three steps exceed the context window for large financial documents; summarize each document before any processing step."
+  },
+  {
+   "id": "milind:Q1075",
+   "action": "set_option",
+   "match": "Batching all three",
+   "text": "One prompt reduces explainability for audits; use separate prompts so that each step leaves its own audit trail."
+  },
+  {
+   "id": "milind:Q1076",
+   "action": "set_option",
+   "match": "Computer use with",
+   "text": "Injected wiki content could use the VPN to reach other internal hosts; allow access to the wiki host only."
+  },
+  {
+   "id": "milind:Q1076",
+   "action": "set_option",
+   "match": "The agent might",
+   "text": "The agent might accidentally close browser windows and disrupt other workflows running on the developer's machine."
+  },
+  {
+   "id": "milind:Q1076",
+   "action": "set_option",
+   "match": "Screen capture during",
+   "text": "Screen capture may record credentials visible in other applications; run the agent in a headless VM instead."
+  },
+  {
+   "id": "milind:Q1076",
+   "action": "set_option",
+   "match": "The legacy wiki",
+   "text": "The legacy wiki may hold outdated documentation that degrades the quality of the code comments the agent writes."
+  },
+  {
+   "id": "milind:Q1077",
+   "action": "set_option",
+   "match": "The cache is partially",
+   "text": "The cache is partially invalidated: only the CLAUDE.md section is re-cached while the 50 code examples stay cached."
+  },
+  {
+   "id": "milind:Q1077",
+   "action": "set_option",
+   "match": "Prompt caching does",
+   "text": "Nothing changes, because prompt caching does not apply to CLAUDE.md content, only to the API system prompt."
+  },
+  {
+   "id": "milind:Q1077",
+   "action": "set_option",
+   "match": "The cache is automatically",
+   "text": "The cache entry is updated in place with the new CLAUDE.md content automatically, with no cost impact."
+  },
+  {
+   "id": "milind:Q1077",
+   "action": "set_option",
+   "match": "Any change to",
+   "text": "The prefix change invalidates the cache, so the next requests pay full input cost; batch CLAUDE.md edits off-peak."
+  },
+  {
+   "id": "milind:Q1078",
+   "action": "set_option",
+   "match": "Enable extended thinking",
+   "text": "Log the `thinking` blocks of extended thinking with ID, timestamp and query hash, keeping them out of the reply."
+  },
+  {
+   "id": "milind:Q1078",
+   "action": "set_option",
+   "match": "Log the full",
+   "text": "Log the full conversation history to a compliance database; the reasoning can be reconstructed from that context."
+  },
+  {
+   "id": "milind:Q1078",
+   "action": "set_option",
+   "match": "Add a system",
+   "text": "Instruct Claude to append a [REASONING] block to each response that is stripped before delivery to the customer."
+  },
+  {
+   "id": "milind:Q1078",
+   "action": "set_option",
+   "match": "Use a separate",
+   "text": "Use a separate post-hoc explanation model that generates a reasoning trace for each response for the compliance log."
+  },
+  {
+   "id": "milind:Q1079",
+   "action": "set_option",
+   "match": "Cache only the",
+   "text": "Cache only the user query portion of each call, because system prompts are too dynamic to be cached reliably."
+  },
+  {
+   "id": "milind:Q1079",
+   "action": "set_option",
+   "match": "Cache the shared",
+   "text": "Cache the shared 12,000-token prefix across all 160,000 monthly sub-agent calls, cutting input cost by about 50-70%."
+  },
+  {
+   "id": "milind:Q1079",
+   "action": "set_option",
+   "match": "Cache the final",
+   "text": "Cache the final synthesized report of each research request and return it whenever an identical research query arrives."
+  },
+  {
+   "id": "milind:Q1079",
+   "action": "set_option",
+   "match": "Use batch processing",
+   "text": "Use batch processing instead of caching, since the 50% batch discount is larger than any caching benefit here."
+  },
+  {
+   "id": "milind:Q1079",
+   "action": "edit",
+   "field": "explanation",
+   "find": "typically exceeds or complements the batch discount.",
+   "replace": "typically exceeds or complements the batch discount. The 50-70% estimate depends on the ratio of system prompt to dynamic content per call."
+  },
+  {
+   "id": "milind:Q108",
+   "action": "set_option",
+   "match": "A pointer to",
+   "text": "A pointer to the raw tool results stored in shared memory for each agent to read"
+  },
+  {
+   "id": "milind:Q108",
+   "action": "set_option",
+   "match": "A structured list",
+   "text": "A structured list of findings, each with claim, evidence, URL, title, section and date"
+  },
+  {
+   "id": "milind:Q108",
+   "action": "set_option",
+   "match": "A single concatenated",
+   "text": "A single concatenated text blob with all findings merged into one running summary"
+  },
+  {
+   "id": "milind:Q108",
+   "action": "set_option",
+   "match": "Three separate filtered",
+   "text": "Three separate filtered text blocks, one prepared per synthesis agent by the coordinator"
+  },
+  {
+   "id": "milind:Q1080",
+   "action": "set_option",
+   "match": "Disable the `run_tests`",
+   "text": "Disable the `run_tests` tool entirely and rely on static analysis of the generated code instead of execution."
+  },
+  {
+   "id": "milind:Q1080",
+   "action": "set_option",
+   "match": "The existing sandboxing",
+   "text": "None in the app; the sandbox design is sufficient, and the escape is a Docker vulnerability that Docker must patch."
+  },
+  {
+   "id": "milind:Q1080",
+   "action": "set_option",
+   "match": "Run the Docker",
+   "text": "Harden the container: `--no-new-privileges`, dropped capabilities, read-only mounts, a seccomp profile, a non-root user."
+  },
+  {
+   "id": "milind:Q1080",
+   "action": "set_option",
+   "match": "Replace Docker with",
+   "text": "Replace Docker with VM-based sandboxes such as Firecracker microVMs, since Docker cannot isolate untrusted code."
+  },
+  {
+   "id": "milind:Q1081",
+   "action": "set_option",
+   "match": "The Validator should",
+   "text": "Pass the 7 successes on, re-queue only the 3 failed IDs to the Planner with error details, and cap retries."
+  },
+  {
+   "id": "milind:Q1081",
+   "action": "set_option",
+   "match": "Have the Executor",
+   "text": "Have the Executor retry all 10 subtasks regardless of which ones failed, so the result set stays consistent."
+  },
+  {
+   "id": "milind:Q1081",
+   "action": "set_option",
+   "match": "Surface all errors",
+   "text": "Surface every error to the end user and require manual intervention for each of the three failed subtasks."
+  },
+  {
+   "id": "milind:Q1082",
+   "action": "set_option",
+   "match": "The agent must",
+   "text": "Fetch the amount via `lookup_order` before the threshold check; treat user-stated amounts as unverified."
+  },
+  {
+   "id": "milind:Q1082",
+   "action": "set_option",
+   "match": "Implement a hard",
+   "text": "Implement a hard cap of $500 on all automated refunds, regardless of what the refund policy itself allows."
+  },
+  {
+   "id": "milind:Q1082",
+   "action": "set_option",
+   "match": "Require customers to",
+   "text": "Require the customer to confirm the order amount by replying with the exact figure twice before processing."
+  },
+  {
+   "id": "milind:Q1082",
+   "action": "set_option",
+   "match": "Instruct the agent",
+   "text": "Instruct the agent in the system prompt to treat the most recently stated order value as authoritative."
+  },
+  {
+   "id": "milind:Q1083",
+   "action": "set_option",
+   "match": "(1) Sanitize web",
+   "text": "Strip HTML comments and hidden text from web content, plus a post-generation security review of the code."
+  },
+  {
+   "id": "milind:Q1083",
+   "action": "set_option",
+   "match": "Limit web searches",
+   "text": "Restrict web searches to an allowlist of documentation domains, plus a post-generation security review of the code."
+  },
+  {
+   "id": "milind:Q1083",
+   "action": "set_option",
+   "match": "Use a separate",
+   "text": "Run web-search-informed code generation in a separate sandboxed Claude instance so that any compromised output is isolated."
+  },
+  {
+   "id": "milind:Q1083",
+   "action": "set_option",
+   "match": "Disable the `web_search`",
+   "text": "Disable the `web_search` tool entirely and rely only on CLAUDE.md, with all external data sources turned off."
+  },
+  {
+   "id": "milind:Q1084",
+   "action": "set_option",
+   "match": "Deploy one MCP",
+   "text": "One MCP server per agent with full data access, plus cross-agent access controls enforced by API gateway policies."
+  },
+  {
+   "id": "milind:Q1084",
+   "action": "set_option",
+   "match": "Use a single",
+   "text": "A single MCP server where agents authenticate with different API keys that map to different data scopes."
+  },
+  {
+   "id": "milind:Q1084",
+   "action": "set_option",
+   "match": "Deploy a single",
+   "text": "A single MCP server with all data sources, plus system prompt instructions telling each agent what to access."
+  },
+  {
+   "id": "milind:Q1084",
+   "action": "set_option",
+   "match": "Deploy a `customer_records_mcp`",
+   "text": "`customer_records_mcp` for all four agents and `financial_transactions_mcp` only for billing and analytics."
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "set_option",
+   "match": "Fine-tuning is always",
+   "text": "Fine-tuning wins for any pipeline above 1,000 daily requests because it removes prompt engineering complexity."
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "set_option",
+   "match": "Use few-shot for",
+   "text": "Use few-shot for accuracy and fine-tuning for latency; deploy both and route each request according to its SLA requirements."
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "set_option",
+   "match": "Few-shot is always",
+   "text": "Few-shot wins in every case, because fine-tuning is too expensive for any production use case at this volume."
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "set_option",
+   "match": "Few-shot prompting is",
+   "text": "Few-shot for a changing schema, 500 examples and no ML tooling; fine-tuning once few-shot plateaus on a stable schema."
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Neither approach is universally preferable",
+   "replace": "Missing ML infrastructure also favors few-shot, while a measured, insufficient few-shot accuracy plateau is what justifies considering fine-tuning. Neither approach is universally preferable"
+  },
+  {
+   "id": "milind:Q1086",
+   "action": "set_option",
+   "match": "Disable all logging",
+   "text": "Disable all logging for agents that handle HR data, since compliance rules permit no logging of such data."
+  },
+  {
+   "id": "milind:Q1086",
+   "action": "set_option",
+   "match": "Switch from Kubernetes",
+   "text": "Move from Kubernetes to a VM-based deployment, where per-tenant log isolation is easier to enforce."
+  },
+  {
+   "id": "milind:Q1086",
+   "action": "set_option",
+   "match": "Instruct agents to",
+   "text": "Instruct agents in their system prompts to redact PII from their own logs using natural-language rules."
+  },
+  {
+   "id": "milind:Q1086",
+   "action": "set_option",
+   "match": "(1) Implement structured",
+   "text": "Redact tagged PII in the logging layer, give workers only needed fields, and isolate logs with namespaces and network policies."
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "set_option",
+   "match": "Use temperature 0",
+   "text": "Temperature 0 alone; aliases such as `claude-sonnet-4-5` are equivalent to pinned versions for determinism."
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "set_option",
+   "match": "Generate documentation twice",
+   "text": "Generate the docs twice per run and keep the first result if both match; otherwise fail the pipeline run."
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "set_option",
+   "match": "Set temperature to 0 and",
+   "text": "Temperature 0 and a pinned model version, documenting that minor non-determinism may still occur and is to be accepted."
+  },
+  {
+   "id": "milind:Q1087",
+   "action": "set_option",
+   "match": "Set temperature to",
+   "text": "Temperature 0, a dated snapshot ID, a strict output schema, and a content-hash check that fails on unexpected drift."
+  },
+  {
+   "id": "milind:Q1088",
+   "action": "set_option",
+   "match": "The agent is becoming",
+   "text": "The agent grows more capable through in-context learning over time; the lower CSAT comes from unrelated factors."
+  },
+  {
+   "id": "milind:Q1088",
+   "action": "set_option",
+   "match": "The agent is",
+   "text": "Confident but wrong resolutions that close tickets; confirm by auditing about 50 low-CSAT resolved tickets for correctness."
+  },
+  {
+   "id": "milind:Q1088",
+   "action": "set_option",
+   "match": "The escalation threshold",
+   "text": "The escalation threshold drifted through context compression over time; recalibrate by clearing conversation history."
+  },
+  {
+   "id": "milind:Q1088",
+   "action": "set_option",
+   "match": "The knowledge base",
+   "text": "The knowledge base has not been updated, so the agent resolves tickets with outdated information; review when it was last refreshed."
+  },
+  {
+   "id": "milind:Q1089",
+   "action": "set_option",
+   "match": "Train a language-detection",
+   "text": "Train a language-detection classifier and route non-English surveys to a separate pipeline with language-specific prompts."
+  },
+  {
+   "id": "milind:Q1089",
+   "action": "set_option",
+   "match": "Accept the performance",
+   "text": "Accept the gap; English is likely the majority language and an F1 of 0.71-0.74 is acceptable for minority languages."
+  },
+  {
+   "id": "milind:Q1089",
+   "action": "set_option",
+   "match": "Translate all survey",
+   "text": "Translate all responses to English before extraction, then translate the extracted field values back afterwards."
+  },
+  {
+   "id": "milind:Q1089",
+   "action": "set_option",
+   "match": "Add multilingual few-shot",
+   "text": "Add 2-3 few-shot examples per non-English language using the same schema, then check whether detection or normalization lags."
+  },
+  {
+   "id": "milind:Q1089",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Multilingual few-shot examples directly address this",
+   "replace": "Multilingual few-shot examples, plus an explicit instruction that the schema applies uniformly across languages, directly address this"
+  },
+  {
+   "id": "milind:Q109",
+   "action": "set_option",
+   "match": "The agent should have offered",
+   "text": "The agent should have offered retention options, such as a discount, before cancelling"
+  },
+  {
+   "id": "milind:Q109",
+   "action": "set_option",
+   "match": "The agent should have refused",
+   "text": "The agent should have refused to process the cancellation until a manager had approved it"
+  },
+  {
+   "id": "milind:Q109",
+   "action": "set_option",
+   "match": "The agent should have added",
+   "text": "The agent should have added the customer to a do-not-contact list after cancelling"
+  },
+  {
+   "id": "milind:Q109",
+   "action": "set_option",
+   "match": "The agent should have asked",
+   "text": "The agent should have asked the customer for detailed feedback before cancelling"
+  },
+  {
+   "id": "milind:Q1090",
+   "action": "set_option",
+   "match": "PII redaction should",
+   "text": "PII redaction does not belong at a proxy layer, since it may corrupt structured data; handle it in each application."
+  },
+  {
+   "id": "milind:Q1090",
+   "action": "set_option",
+   "match": "The dissenting architect",
+   "text": "The dissenter is right; all teams should call the Claude API directly so that no single point of failure exists."
+  },
+  {
+   "id": "milind:Q1090",
+   "action": "set_option",
+   "match": "The proxy architecture",
+   "text": "Keep the proxy but mitigate the SPOF: active-active failover, a circuit breaker for direct fallback, and a stateless design."
+  },
+  {
+   "id": "milind:Q1090",
+   "action": "set_option",
+   "match": "The proxy should",
+   "text": "Use the proxy for audit logging only; leave redaction, version pinning and rate limiting to each team's own code."
+  },
+  {
+   "id": "milind:Q1091",
+   "action": "set_option",
+   "match": "Enforce a maximum",
+   "text": "Enforce a maximum of five tool calls per conversation to prevent runaway agentic loops from escalating."
+  },
+  {
+   "id": "milind:Q1091",
+   "action": "set_option",
+   "match": "Apply the principle",
+   "text": "Minimal footprint: narrowest tool scopes, confirmation before irreversible actions, and static checks on every script."
+  },
+  {
+   "id": "milind:Q1091",
+   "action": "set_option",
+   "match": "Run the entire",
+   "text": "Run the entire pipeline in read-only mode and require a human to approve every code execution in advance."
+  },
+  {
+   "id": "milind:Q1091",
+   "action": "set_option",
+   "match": "Deploy the system",
+   "text": "Ship with a trial-period flag that logs all actions but executes none until the team has reviewed the observed behavior."
+  },
+  {
+   "id": "milind:Q1092",
+   "action": "set_option",
+   "match": "A session database",
+   "text": "A session database that the agent queries for earlier details at the start of each turn"
+  },
+  {
+   "id": "milind:Q1092",
+   "action": "set_option",
+   "match": "Longer conversation history",
+   "text": "Longer conversation history retention so that early turns are kept and stay unsummarized"
+  },
+  {
+   "id": "milind:Q1092",
+   "action": "set_option",
+   "match": "A periodic \"context",
+   "text": "A periodic \"context refresh\" tool call that re-reads the entire earlier transcript"
+  },
+  {
+   "id": "milind:Q1092",
+   "action": "set_option",
+   "match": "A \"case facts\"",
+   "text": "A \"case facts\" block at the top of every prompt, outside the summarized history"
+  },
+  {
+   "id": "milind:Q1093",
+   "action": "set_option",
+   "match": "Both synchronous and",
+   "text": "Synchronous and batch processing both work equally well for an automated CI review step"
+  },
+  {
+   "id": "milind:Q1093",
+   "action": "set_option",
+   "match": "Synchronous API with",
+   "text": "Synchronous calls via `-p`; batches have no latency SLA and may take up to 24 hours"
+  },
+  {
+   "id": "milind:Q1093",
+   "action": "set_option",
+   "match": "Message Batches API",
+   "text": "The Message Batches API, since its 50% cost savings outweigh the extra processing latency"
+  },
+  {
+   "id": "milind:Q1093",
+   "action": "set_option",
+   "match": "Streaming API for",
+   "text": "The Streaming API, so that the review output appears in the CI job log in real time"
   }
  ],
  "hold": []
