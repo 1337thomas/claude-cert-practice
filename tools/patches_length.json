@@ -31521,6 +31521,1153 @@
    "action": "set_option",
    "match": "the api will",
    "text": "The API automatically flags empty results as errors, causing a failure"
+  },
+  {
+   "id": "milind:Q942",
+   "action": "set_option",
+   "match": "address only the",
+   "text": "Address only the most severe issue (the billing overcharge) and close the case"
+  },
+  {
+   "id": "milind:Q942",
+   "action": "set_option",
+   "match": "escalate because 4",
+   "text": "Escalate to a human agent, since four separate issues exceed a single agent's scope"
+  },
+  {
+   "id": "milind:Q942",
+   "action": "set_option",
+   "match": "ask the customer",
+   "text": "Ask the customer to pick one issue now and open a separate new contact for each of the others"
+  },
+  {
+   "id": "milind:Q942",
+   "action": "set_option",
+   "match": "decompose into 4",
+   "text": "Split into 4 investigation items on shared customer context, then send one unified response"
+  },
+  {
+   "id": "milind:Q943",
+   "action": "set_option",
+   "match": "export the full",
+   "text": "Export the full session transcript and resume it in a model with a larger context window"
+  },
+  {
+   "id": "milind:Q943",
+   "action": "set_option",
+   "match": "accept that the",
+   "text": "Accept that the session must end at the context limit and report the partial results"
+  },
+  {
+   "id": "milind:Q943",
+   "action": "set_option",
+   "match": "use compact to",
+   "text": "Run /compact to shrink the history, then continue from the scratchpad files"
+  },
+  {
+   "id": "milind:Q943",
+   "action": "set_option",
+   "match": "terminate the session",
+   "text": "Terminate the session and start a fresh one that re-reads the whole codebase from scratch"
+  },
+  {
+   "id": "milind:Q944",
+   "action": "set_option",
+   "match": "the coordinator assigned",
+   "text": "The coordinator gave a broad topic without listing required subdomains, so coverage narrowed"
+  },
+  {
+   "id": "milind:Q944",
+   "action": "set_option",
+   "match": "the subagent chose",
+   "text": "The subagent misread the coordinator's assignment and chose the wrong topic area"
+  },
+  {
+   "id": "milind:Q944",
+   "action": "set_option",
+   "match": "web search algorithms",
+   "text": "The web search tool's ranking is biased toward robotics content and skewed the results"
+  },
+  {
+   "id": "milind:Q944",
+   "action": "set_option",
+   "match": "15 findings is",
+   "text": "Fifteen findings are too few for a topic this broad; the subagent should have returned many more"
+  },
+  {
+   "id": "milind:Q945",
+   "action": "set_option",
+   "match": "periodically ask the",
+   "text": "Have the agent periodically ask the customer to reconfirm their preferred resolution"
+  },
+  {
+   "id": "milind:Q945",
+   "action": "set_option",
+   "match": "add validation that",
+   "text": "Add a validation step that confirms the resolution method with the customer before processing"
+  },
+  {
+   "id": "milind:Q945",
+   "action": "set_option",
+   "match": "always default to",
+   "text": "Default to a refund in all cases and ask the customer for confirmation at the end"
+  },
+  {
+   "id": "milind:Q945",
+   "action": "set_option",
+   "match": "extract the customer",
+   "text": "Record the preference in a persistent case-facts block when stated: \"store credit (turn 3)\""
+  },
+  {
+   "id": "milind:Q946",
+   "action": "set_option",
+   "match": "use publication_date only",
+   "text": "Use only `publication_date` for both source types and drop the other academic dates"
+  },
+  {
+   "id": "milind:Q946",
+   "action": "set_option",
+   "match": "use separate schemas",
+   "text": "Use two separate schemas, one for news articles and one for academic papers"
+  },
+  {
+   "id": "milind:Q946",
+   "action": "set_option",
+   "match": "store all dates",
+   "text": "Store all dates as free-text strings in one combined `dates` field for every source"
+  },
+  {
+   "id": "milind:Q946",
+   "action": "set_option",
+   "match": "use a required",
+   "text": "Use a required `publication_date` plus an optional typed `additional_dates` list"
+  },
+  {
+   "id": "milind:Q947",
+   "action": "set_option",
+   "match": "in structured knowledge",
+   "text": "In structured, indexed knowledge files summarizing each codebase's patterns"
+  },
+  {
+   "id": "milind:Q947",
+   "action": "set_option",
+   "match": "in the conversation",
+   "text": "In the conversation history of the most recent session, which can be resumed later"
+  },
+  {
+   "id": "milind:Q947",
+   "action": "set_option",
+   "match": "in individual session",
+   "text": "In individual per-session log files that have to be located by date when needed"
+  },
+  {
+   "id": "milind:Q947",
+   "action": "set_option",
+   "match": "historical findings are",
+   "text": "Nowhere; the new analysis should re-derive patterns from the codebases directly"
+  },
+  {
+   "id": "milind:Q948",
+   "action": "set_option",
+   "match": "only when the escalation",
+   "text": "Only when the escalation queue is longer than 30 minutes and the customer is waiting on the line"
+  },
+  {
+   "id": "milind:Q948",
+   "action": "set_option",
+   "match": "when the request",
+   "text": "When part of the request is clearly resolvable and another part needs policy interpretation"
+  },
+  {
+   "id": "milind:Q948",
+   "action": "set_option",
+   "match": "never always escalate",
+   "text": "The agent should either fully resolve or fully escalate the case, not mix the two"
+  },
+  {
+   "id": "milind:Q948",
+   "action": "set_option",
+   "match": "only when the customer",
+   "text": "Only when the customer explicitly asks for whatever can be resolved right away"
+  },
+  {
+   "id": "milind:Q949",
+   "action": "set_option",
+   "match": "temporal organization with",
+   "text": "Temporal organization with explicit date ranges, so change over time isn't read as contradiction"
+  },
+  {
+   "id": "milind:Q949",
+   "action": "set_option",
+   "match": "alphabetical organization of",
+   "text": "Alphabetical organization by topic so readers can quickly locate each subject area"
+  },
+  {
+   "id": "milind:Q949",
+   "action": "set_option",
+   "match": "organization by source",
+   "text": "Organization by source quality, presenting peer-reviewed findings before other sources"
+  },
+  {
+   "id": "milind:Q949",
+   "action": "set_option",
+   "match": "organization by finding",
+   "text": "Organization by finding confidence, presenting the highest-confidence findings first"
+  },
+  {
+   "id": "milind:Q95",
+   "action": "set_option",
+   "match": "the query lacks",
+   "text": "The query lacks sufficient context for the web_search agent to find a reliable answer"
+  },
+  {
+   "id": "milind:Q95",
+   "action": "set_option",
+   "match": "the coordinator unnecessarily",
+   "text": "It forces the full pipeline onto a simple fact the model could answer from its own knowledge"
+  },
+  {
+   "id": "milind:Q95",
+   "action": "set_option",
+   "match": "the coordinator will",
+   "text": "The coordinator will misroute the query to a customer support subagent instead of the research flow"
+  },
+  {
+   "id": "milind:Q95",
+   "action": "set_option",
+   "match": "the prompt constraint",
+   "text": "The fixed ordering stops the coordinator from calling any tools for this kind of query"
+  },
+  {
+   "id": "milind:Q950",
+   "action": "set_option",
+   "match": "spawn a subagent",
+   "text": "Spawn a subagent for the new alert so the main context stays free"
+  },
+  {
+   "id": "milind:Q950",
+   "action": "set_option",
+   "match": "abandon the current",
+   "text": "Abandon the current root cause investigation and switch fully to the new alert"
+  },
+  {
+   "id": "milind:Q950",
+   "action": "set_option",
+   "match": "continue the current",
+   "text": "Finish the current investigation first and queue the new alert until it completes"
+  },
+  {
+   "id": "milind:Q950",
+   "action": "set_option",
+   "match": "start a completely",
+   "text": "Start a completely new session for the alert and pause the current investigation"
+  },
+  {
+   "id": "milind:Q951",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's temperature is set too high, causing it to hallucinate policy numbers"
+  },
+  {
+   "id": "milind:Q951",
+   "action": "set_option",
+   "match": "the lost in",
+   "text": "\"Lost in the middle\": early identifiers get less attention than recently appended tool results"
+  },
+  {
+   "id": "milind:Q951",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model exceeds its maximum token limit, so the earliest turns are truncated from the front"
+  },
+  {
+   "id": "milind:Q954",
+   "action": "set_option",
+   "match": "the orchestrator should",
+   "text": "The orchestrator should treat a subagent error as an empty result and continue the workflow"
+  },
+  {
+   "id": "milind:Q954",
+   "action": "set_option",
+   "match": "error messages should",
+   "text": "Error messages should be surfaced verbatim to the end user so the failure stays transparent"
+  },
+  {
+   "id": "milind:Q954",
+   "action": "set_option",
+   "match": "agents should never",
+   "text": "Subagents should retry the lookup internally until it succeeds instead of returning an error"
+  },
+  {
+   "id": "milind:Q954",
+   "action": "set_option",
+   "match": "subagents should structure",
+   "text": "Subagents should return structured errors that separate access failures from empty results"
+  },
+  {
+   "id": "milind:Q955",
+   "action": "set_option",
+   "match": "disable progressive summarization",
+   "text": "Disable progressive summarization entirely and switch to a model with a larger context window"
+  },
+  {
+   "id": "milind:Q955",
+   "action": "set_option",
+   "match": "increase summarization frequency",
+   "text": "Increase summarization frequency so that each summary pass covers fewer turns of the conversation"
+  },
+  {
+   "id": "milind:Q955",
+   "action": "set_option",
+   "match": "establish a persistent",
+   "text": "Keep agreed terms in a persistent structured block, written at agreement time and never summarized"
+  },
+  {
+   "id": "milind:Q955",
+   "action": "set_option",
+   "match": "instruct the summarizer",
+   "text": "Instruct the summarizer prompt to pay special attention to monetary values and fee waivers"
+  },
+  {
+   "id": "milind:Q956",
+   "action": "set_option",
+   "match": "the agent needed",
+   "text": "The agent needed a higher-quality base model to handle unusual vendor edge cases"
+  },
+  {
+   "id": "milind:Q956",
+   "action": "set_option",
+   "match": "human review thresholds",
+   "text": "Human review thresholds should have been set at 99% rather than 94% before automating"
+  },
+  {
+   "id": "milind:Q956",
+   "action": "set_option",
+   "match": "the test set",
+   "text": "The test set was too small to give a statistically significant estimate of accuracy"
+  },
+  {
+   "id": "milind:Q956",
+   "action": "set_option",
+   "match": "aggregate accuracy masked",
+   "text": "Aggregate accuracy masked per-vendor errors; accuracy should have been stratified by vendor and layout"
+  },
+  {
+   "id": "milind:Q957",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Average the two figures and present $5.15B as the consensus market size estimate"
+  },
+  {
+   "id": "milind:Q957",
+   "action": "set_option",
+   "match": "annotate both figures",
+   "text": "Present both figures with their sources and publication dates and flag the discrepancy"
+  },
+  {
+   "id": "milind:Q957",
+   "action": "set_option",
+   "match": "omit both figures",
+   "text": "Omit both figures and state only that market size data is contested among sources"
+  },
+  {
+   "id": "milind:Q957",
+   "action": "set_option",
+   "match": "use the most",
+   "text": "Use the most recent figure ($6.1B) and drop the older one to avoid confusing the report's readers"
+  },
+  {
+   "id": "milind:Q958",
+   "action": "set_option",
+   "match": "run the agent",
+   "text": "Run the agent twice on the same task and compare both outputs for consistency"
+  },
+  {
+   "id": "milind:Q958",
+   "action": "set_option",
+   "match": "limit the agent",
+   "text": "Limit the agent to reading no more than 20 files per session to keep context small"
+  },
+  {
+   "id": "milind:Q958",
+   "action": "set_option",
+   "match": "use a larger",
+   "text": "Use a larger context window so all file contents stay in active context at once"
+  },
+  {
+   "id": "milind:Q958",
+   "action": "set_option",
+   "match": "have the agent",
+   "text": "Have the agent keep a scratchpad file of confirmed findings (paths, functions) as they are found"
+  },
+  {
+   "id": "milind:Q96",
+   "action": "set_option",
+   "match": "error service unavailable",
+   "text": "`{\"error\": \"service unavailable\", \"source\": \"google_scholar\", \"query\": \"...\"}`"
+  },
+  {
+   "id": "milind:Q96",
+   "action": "set_option",
+   "match": "nothing the subagent",
+   "text": "Nothing — the subagent should keep retrying internally until the Google Scholar search succeeds"
+  },
+  {
+   "id": "milind:Q96",
+   "action": "set_option",
+   "match": "error_type timeout attempted_query",
+   "text": "`{\"error_type\": \"timeout\", \"attempted_query\": \"...\", \"partial_results\": [...], \"alternatives\": [...]}`"
+  },
+  {
+   "id": "milind:Q96",
+   "action": "set_option",
+   "match": "results",
+   "text": "`{\"results\": [], \"source\": \"google_scholar\", \"query\": \"...\", \"count\": 0}`"
+  },
+  {
+   "id": "milind:Q960",
+   "action": "set_option",
+   "match": "field level confidence",
+   "text": "Scores must be calibrated on labeled validation data before use as thresholds"
+  },
+  {
+   "id": "milind:Q960",
+   "action": "set_option",
+   "match": "confidence scores should",
+   "text": "Confidence scores should not drive routing decisions; only rule-based checks are reliable"
+  },
+  {
+   "id": "milind:Q960",
+   "action": "set_option",
+   "match": "the model needs",
+   "text": "The model needs retraining on more invoices before its confidence scores become meaningful"
+  },
+  {
+   "id": "milind:Q960",
+   "action": "set_option",
+   "match": "the threshold is",
+   "text": "The threshold is too high and should be lowered to reduce the human review workload"
+  },
+  {
+   "id": "milind:Q961",
+   "action": "set_option",
+   "match": "the user s",
+   "text": "The user's sentiment score drops below 0.5, indicating rising frustration with the agent's answers"
+  },
+  {
+   "id": "milind:Q961",
+   "action": "set_option",
+   "match": "the agent s inability",
+   "text": "The agent can no longer make progress toward resolution, which on its own warrants escalation"
+  },
+  {
+   "id": "milind:Q961",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "None; without an explicit user request it should restart the decision tree from step 1"
+  },
+  {
+   "id": "milind:Q961",
+   "action": "set_option",
+   "match": "the session complexity",
+   "text": "The session exceeds a configurable maximum turn count set for complex technical cases"
+  },
+  {
+   "id": "milind:Q962",
+   "action": "set_option",
+   "match": "source attribution was",
+   "text": "The pipeline kept no structured claim-source mappings, so attribution was lost in summarization"
+  },
+  {
+   "id": "milind:Q962",
+   "action": "set_option",
+   "match": "the model lacks",
+   "text": "The model lacks the ability to track provenance for facts inside generated summaries"
+  },
+  {
+   "id": "milind:Q962",
+   "action": "set_option",
+   "match": "summarization should have",
+   "text": "Summarization should have been disabled for all quantitative data such as market shares"
+  },
+  {
+   "id": "milind:Q962",
+   "action": "set_option",
+   "match": "the agent summarized",
+   "text": "The agent summarized too many sources at once, more than it is able to attribute"
+  },
+  {
+   "id": "milind:Q963",
+   "action": "set_option",
+   "match": "summarizing each tool",
+   "text": "Summarizing each tool result on its own may lose relationships across the results"
+  },
+  {
+   "id": "milind:Q963",
+   "action": "set_option",
+   "match": "numbers dates account",
+   "text": "Exact amounts, dates, and account IDs may be rounded, paraphrased, or dropped"
+  },
+  {
+   "id": "milind:Q963",
+   "action": "set_option",
+   "match": "the model may",
+   "text": "The model may refuse to summarize tool results that contain regulated financial data"
+  },
+  {
+   "id": "milind:Q963",
+   "action": "set_option",
+   "match": "the one sentence",
+   "text": "The one-sentence limit may make the summaries too terse for end users to read"
+  },
+  {
+   "id": "milind:Q964",
+   "action": "set_option",
+   "match": "run all file",
+   "text": "Run all file reads in a single agent to avoid the overhead and drift of delegation"
+  },
+  {
+   "id": "milind:Q964",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the number of files each subagent reads to prevent its context from overflowing"
+  },
+  {
+   "id": "milind:Q964",
+   "action": "set_option",
+   "match": "have subagents write",
+   "text": "Have subagents write confirmed findings to a shared scratchpad file, not only their response text"
+  },
+  {
+   "id": "milind:Q964",
+   "action": "set_option",
+   "match": "use a larger",
+   "text": "Use a larger context window so the orchestrator can hold all subagent outputs at once"
+  },
+  {
+   "id": "milind:Q965",
+   "action": "set_option",
+   "match": "policy gap escalation",
+   "text": "A policy gap escalation, because the system has no defined rule for handling multiple matches"
+  },
+  {
+   "id": "milind:Q965",
+   "action": "set_option",
+   "match": "multiple matches requiring",
+   "text": "An ambiguity trigger: multiple matches should pause execution until a disambiguating identifier is given"
+  },
+  {
+   "id": "milind:Q965",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "A complexity escalation, because identity resolution is inherently too complex for an agent"
+  },
+  {
+   "id": "milind:Q965",
+   "action": "set_option",
+   "match": "sentiment based escalation",
+   "text": "A sentiment-based escalation, because the query returned results the customer did not expect"
+  },
+  {
+   "id": "milind:Q969",
+   "action": "set_option",
+   "match": "the subagent demonstrates",
+   "text": "The subagent can demonstrate compliance with the team's documented error handling policy"
+  },
+  {
+   "id": "milind:Q969",
+   "action": "set_option",
+   "match": "the orchestrator can display",
+   "text": "The orchestrator can show the end user a more detailed and accurate error message"
+  },
+  {
+   "id": "milind:Q969",
+   "action": "set_option",
+   "match": "the orchestrator can make",
+   "text": "The orchestrator can retry, split the query, or reuse partial results instead of starting over"
+  },
+  {
+   "id": "milind:Q969",
+   "action": "set_option",
+   "match": "structured errors are",
+   "text": "Structured errors are easier to log, search, and audit afterwards in the team's observability stack"
+  },
+  {
+   "id": "milind:Q97",
+   "action": "set_option",
+   "match": "to restart a",
+   "text": "To restart a failed API call from the last successful tool call in the session"
+  },
+  {
+   "id": "milind:Q97",
+   "action": "set_option",
+   "match": "to import findings",
+   "text": "To import the findings of a completed session as a summary into a new conversation"
+  },
+  {
+   "id": "milind:Q97",
+   "action": "set_option",
+   "match": "to run a",
+   "text": "To reopen a prior session in read-only mode so it can be reviewed without making any new tool calls"
+  },
+  {
+   "id": "milind:Q97",
+   "action": "set_option",
+   "match": "to continue a",
+   "text": "To continue a specific named prior session with its full history, tool results, and state"
+  },
+  {
+   "id": "milind:Q970",
+   "action": "set_option",
+   "match": "source attribution rules",
+   "text": "Source attribution — the rules and the metadata should each be labeled with their original source"
+  },
+  {
+   "id": "milind:Q970",
+   "action": "set_option",
+   "match": "content type rendering",
+   "text": "Content type rendering — tables for metadata, numbered lists for rules, prose for analysis"
+  },
+  {
+   "id": "milind:Q970",
+   "action": "set_option",
+   "match": "temporal ordering policy",
+   "text": "Temporal ordering — policy rules should be presented before the post metadata"
+  },
+  {
+   "id": "milind:Q971",
+   "action": "set_option",
+   "match": "compact produces a",
+   "text": "It is lossy: structural facts survive, but exact embedded numbers can be lost"
+  },
+  {
+   "id": "milind:Q971",
+   "action": "set_option",
+   "match": "compact should not",
+   "text": "/compact should not be used while an active document analysis session is in progress"
+  },
+  {
+   "id": "milind:Q971",
+   "action": "set_option",
+   "match": "the agent is",
+   "text": "The agent is hallucinating because it cannot access any documents after compaction"
+  },
+  {
+   "id": "milind:Q971",
+   "action": "set_option",
+   "match": "compact completely erases",
+   "text": "/compact erases all prior conversation content, so any later reference is a guess"
+  },
+  {
+   "id": "milind:Q973",
+   "action": "set_option",
+   "match": "access failures and",
+   "text": "Access failures and valid empty results must return structurally distinguishable responses"
+  },
+  {
+   "id": "milind:Q973",
+   "action": "set_option",
+   "match": "agents should never",
+   "text": "Agents should not close cases based solely on an empty result from a single query"
+  },
+  {
+   "id": "milind:Q973",
+   "action": "set_option",
+   "match": "database permission errors",
+   "text": "Database permission errors should automatically trigger escalation to a human on-call reviewer"
+  },
+  {
+   "id": "milind:Q973",
+   "action": "set_option",
+   "match": "all database queries",
+   "text": "All database queries should be retried at least three times before results are returned"
+  },
+  {
+   "id": "milind:Q974",
+   "action": "set_option",
+   "match": "silent data transformations",
+   "text": "Silent transformations break error tracing: there is no record of where a date was reformatted"
+  },
+  {
+   "id": "milind:Q974",
+   "action": "set_option",
+   "match": "agent b is",
+   "text": "Agent B is working outside its designated role and should have refused to perform the transformation"
+  },
+  {
+   "id": "milind:Q974",
+   "action": "set_option",
+   "match": "iso 8601 format",
+   "text": "ISO-8601 cannot represent every date format required by regulatory compliance rules"
+  },
+  {
+   "id": "milind:Q974",
+   "action": "set_option",
+   "match": "formatting inconsistency between",
+   "text": "Formatting inconsistencies between agents will cause pipeline failures once volume grows"
+  },
+  {
+   "id": "milind:Q975",
+   "action": "set_option",
+   "match": "increasing the session",
+   "text": "Increasing the session timeout so that interruptions during long analyses are less likely"
+  },
+  {
+   "id": "milind:Q975",
+   "action": "set_option",
+   "match": "maintaining a crash",
+   "text": "A crash recovery manifest recording completed steps, findings, and next action, read on restart"
+  },
+  {
+   "id": "milind:Q975",
+   "action": "set_option",
+   "match": "checkpointing the full",
+   "text": "Checkpointing the full context window to disk at regular intervals for later reloading"
+  },
+  {
+   "id": "milind:Q975",
+   "action": "set_option",
+   "match": "using a stateless",
+   "text": "Using a stateless agent design so each step can be re-executed independently after any crash occurs"
+  },
+  {
+   "id": "milind:Q976",
+   "action": "set_option",
+   "match": "the model needs",
+   "text": "Retraining the model specifically on tax amount extraction before thresholds were set"
+  },
+  {
+   "id": "milind:Q976",
+   "action": "set_option",
+   "match": "the confidence threshold",
+   "text": "Testing whether a lower threshold across all fields would have caught the tax amount errors"
+  },
+  {
+   "id": "milind:Q976",
+   "action": "set_option",
+   "match": "field level confidence",
+   "text": "Validating per-field scores against actual accuracy on a held-out set"
+  },
+  {
+   "id": "milind:Q976",
+   "action": "set_option",
+   "match": "tax amounts should",
+   "text": "Mandatory human review of all tax amounts, regardless of their confidence score"
+  },
+  {
+   "id": "milind:Q977",
+   "action": "set_option",
+   "match": "request clarification from",
+   "text": "Ask the user to clarify which of the three figures should be treated as the consensus"
+  },
+  {
+   "id": "milind:Q977",
+   "action": "set_option",
+   "match": "present 2 1b as",
+   "text": "Present $2.1B as the consensus, because it has the largest number of agreeing sources behind it"
+  },
+  {
+   "id": "milind:Q977",
+   "action": "set_option",
+   "match": "present all three",
+   "text": "Present all three figures with sources and likely reasons for the gap, not one consensus"
+  },
+  {
+   "id": "milind:Q977",
+   "action": "set_option",
+   "match": "present 2 1b because",
+   "text": "Present $2.1B because the official press release is the most authoritative source"
+  },
+  {
+   "id": "milind:Q978",
+   "action": "set_option",
+   "match": "summarize tool results",
+   "text": "Summarize each tool result immediately after the call using a secondary, cheaper model before storing"
+  },
+  {
+   "id": "milind:Q978",
+   "action": "set_option",
+   "match": "increase the context",
+   "text": "Increase the context window size so that more full tool results can be accommodated"
+  },
+  {
+   "id": "milind:Q978",
+   "action": "set_option",
+   "match": "trim verbose tool",
+   "text": "Trim verbose tool outputs to key excerpts (relevant passage plus URL) before they enter context"
+  },
+  {
+   "id": "milind:Q978",
+   "action": "set_option",
+   "match": "limit the agent",
+   "text": "Limit the agent to five search tool calls per session so that context cannot fill up"
+  },
+  {
+   "id": "milind:Q979",
+   "action": "set_option",
+   "match": "regulatory agents should",
+   "text": "Regulatory review agents should avoid /compact so the full session history stays intact"
+  },
+  {
+   "id": "milind:Q979",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should have re-read the full regulatory document after every compaction step"
+  },
+  {
+   "id": "milind:Q979",
+   "action": "set_option",
+   "match": "specific rule citations",
+   "text": "Keep rule citations in a structured block outside the compacted context"
+  },
+  {
+   "id": "milind:Q98",
+   "action": "set_option",
+   "match": "use single agent",
+   "text": "Use single-agent for small context windows and multi-agent for large context windows"
+  },
+  {
+   "id": "milind:Q98",
+   "action": "set_option",
+   "match": "use multi agent only",
+   "text": "Use multi-agent only when subagents are deployed on separate machines or containers"
+  },
+  {
+   "id": "milind:Q98",
+   "action": "set_option",
+   "match": "use multi agent when",
+   "text": "Multi-agent for independent parallel workstreams; single-agent for sequential tasks"
+  },
+  {
+   "id": "milind:Q98",
+   "action": "set_option",
+   "match": "always use multi",
+   "text": "Use multi-agent by default, since it is more capable than a single agent for any task"
+  },
+  {
+   "id": "milind:Q980",
+   "action": "set_option",
+   "match": "measure accuracy stratified",
+   "text": "Measure accuracy stratified by subject domain and paper section before assuming 93% holds everywhere"
+  },
+  {
+   "id": "milind:Q980",
+   "action": "set_option",
+   "match": "test the pipeline",
+   "text": "Test the pipeline on papers from the last 12 months to confirm it handles recent work"
+  },
+  {
+   "id": "milind:Q981",
+   "action": "set_option",
+   "match": "the summarizer prompt",
+   "text": "The summarizer prompt was too vague, letting the model omit the specific agreed values"
+  },
+  {
+   "id": "milind:Q981",
+   "action": "set_option",
+   "match": "the model lacks",
+   "text": "The model lacks the ability to retain exact numeric values reliably across a 45-turn session"
+  },
+  {
+   "id": "milind:Q981",
+   "action": "set_option",
+   "match": "the session should",
+   "text": "The session should have been ended and restarted before summarization was triggered"
+  },
+  {
+   "id": "milind:Q982",
+   "action": "set_option",
+   "match": "recency bias from",
+   "text": "Recency bias: recent tool results outweigh the earlier content being queried"
+  },
+  {
+   "id": "milind:Q982",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "Hallucination: the model invented a plausible timeout value that appears nowhere in the session"
+  },
+  {
+   "id": "milind:Q982",
+   "action": "set_option",
+   "match": "the 30s value",
+   "text": "Correct supersession: the 30s value is right, since it replaced the turn 17 value later"
+  },
+  {
+   "id": "milind:Q982",
+   "action": "set_option",
+   "match": "the model has",
+   "text": "Entity confusion: the model mixed up two different system components with similar timeouts"
+  },
+  {
+   "id": "milind:Q983",
+   "action": "set_option",
+   "match": "the orchestrator should",
+   "text": "The orchestrator should have a dedicated fallback agent ready for every specialist agent"
+  },
+  {
+   "id": "milind:Q983",
+   "action": "set_option",
+   "match": "subagents should include",
+   "text": "Subagents should return failure_type, input_received, and error_detail fields in error responses"
+  },
+  {
+   "id": "milind:Q983",
+   "action": "set_option",
+   "match": "all subagent errors",
+   "text": "All subagent errors should be routed to human review for manual classification first"
+  },
+  {
+   "id": "milind:Q983",
+   "action": "set_option",
+   "match": "orchestrators should not",
+   "text": "Orchestrators should not attempt to diagnose subagent failures; they should simply retry and escalate"
+  },
+  {
+   "id": "milind:Q984",
+   "action": "set_option",
+   "match": "the orchestrator should",
+   "text": "The orchestrator should have persisted each subagent's assignment and findings, not just completion"
+  },
+  {
+   "id": "milind:Q984",
+   "action": "set_option",
+   "match": "subagents should retain",
+   "text": "Subagents should retain their own context indefinitely so they can answer later queries"
+  },
+  {
+   "id": "milind:Q984",
+   "action": "set_option",
+   "match": "subagents should report",
+   "text": "Subagents should report findings directly to the user, bypassing the orchestrator entirely"
+  },
+  {
+   "id": "milind:Q985",
+   "action": "set_option",
+   "match": "escalation based on",
+   "text": "Sentiment-based escalation is appropriate only for human agents, not for automated agents"
+  },
+  {
+   "id": "milind:Q985",
+   "action": "set_option",
+   "match": "the threshold should",
+   "text": "The threshold should be lowered to 0.65 so that more frustrated users get escalated"
+  },
+  {
+   "id": "milind:Q985",
+   "action": "set_option",
+   "match": "sentiment scores are",
+   "text": "Sentiment is an unreliable proxy; inability to progress or explicit requests should trigger it"
+  },
+  {
+   "id": "milind:Q985",
+   "action": "set_option",
+   "match": "the agent should",
+   "text": "The agent should have softened its tone and escalated at the same time once sentiment fell below 0.80"
+  },
+  {
+   "id": "milind:Q986",
+   "action": "set_option",
+   "match": "a confusion matrix",
+   "text": "A confusion matrix computed for the overall extraction task across all fields"
+  },
+  {
+   "id": "milind:Q986",
+   "action": "set_option",
+   "match": "a held out",
+   "text": "A labeled held-out validation set to measure per-field accuracy and calibrate thresholds"
+  },
+  {
+   "id": "milind:Q986",
+   "action": "set_option",
+   "match": "a larger training",
+   "text": "A larger training set to raise the model's confidence scores on every field"
+  },
+  {
+   "id": "milind:Q986",
+   "action": "set_option",
+   "match": "human review of",
+   "text": "Human review of a random 10% sample of outputs for each field type during the first production month"
+  },
+  {
+   "id": "milind:Q987",
+   "action": "set_option",
+   "match": "the raw data",
+   "text": "The raw measurement data and test configuration underlying the 2024 benchmark study"
+  },
+  {
+   "id": "milind:Q987",
+   "action": "set_option",
+   "match": "source attribution and",
+   "text": "Source attribution and temporal context, citing both figures with their source and date"
+  },
+  {
+   "id": "milind:Q987",
+   "action": "set_option",
+   "match": "confidence score and",
+   "text": "A confidence score and a statistical error margin for the reported 35ms latency measurement"
+  },
+  {
+   "id": "milind:Q987",
+   "action": "set_option",
+   "match": "vendor verification and",
+   "text": "Vendor verification of the 35ms figure and independent corroboration by a second lab"
+  },
+  {
+   "id": "milind:Q988",
+   "action": "set_option",
+   "match": "measure extraction accuracy",
+   "text": "Measure this field's accuracy on the non-standard English subset and set its threshold from that"
+  },
+  {
+   "id": "milind:Q988",
+   "action": "set_option",
+   "match": "add a post",
+   "text": "Add a post-processing rule that normalizes idioms and regional phrases before extraction"
+  },
+  {
+   "id": "milind:Q988",
+   "action": "set_option",
+   "match": "exclude non standard",
+   "text": "Exclude all non-standard English emails from automated processing and route them all to human staff"
+  },
+  {
+   "id": "milind:Q988",
+   "action": "set_option",
+   "match": "retrain the model",
+   "text": "Retrain the model on a corpus of non-standard business English emails before automating"
+  },
+  {
+   "id": "milind:Q989",
+   "action": "set_option",
+   "match": "conflicts between subagents",
+   "text": "Conflicts between subagents should trigger a full pipeline restart before reporting"
+  },
+  {
+   "id": "milind:Q989",
+   "action": "set_option",
+   "match": "the orchestrator correctly",
+   "text": "The orchestrator correctly picks the most recent value, since it best reflects the latest state"
+  },
+  {
+   "id": "milind:Q989",
+   "action": "set_option",
+   "match": "the orchestrator should surface",
+   "text": "Surface the conflict, attribute each figure to its subagent, and flag it for investigation"
+  },
+  {
+   "id": "milind:Q989",
+   "action": "set_option",
+   "match": "the orchestrator should",
+   "text": "The orchestrator should re-run both subagents and a third one to get a tiebreaker result"
+  },
+  {
+   "id": "milind:Q99",
+   "action": "set_option",
+   "match": "use database transactions",
+   "text": "Use database transactions to roll back all agents to the last consistent state"
+  },
+  {
+   "id": "milind:Q99",
+   "action": "set_option",
+   "match": "have each agent",
+   "text": "Have agents export structured state at checkpoints and the coordinator load it on restart"
+  },
+  {
+   "id": "milind:Q99",
+   "action": "set_option",
+   "match": "re run the",
+   "text": "Re-run the entire pipeline from scratch whenever any agent fails, for a clean state"
+  },
+  {
+   "id": "milind:Q99",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "Have the coordinator keep an in-memory copy of every agent's state to restore from after a crash"
+  },
+  {
+   "id": "milind:Q990",
+   "action": "set_option",
+   "match": "maintain separate persistent",
+   "text": "Keep goals and decisions in persistent blocks, trim tool output, summarize open questions"
+  },
+  {
+   "id": "milind:Q990",
+   "action": "set_option",
+   "match": "summarize each day",
+   "text": "Summarize each day's full session into a single recap before starting the next day's planning"
+  },
+  {
+   "id": "milind:Q990",
+   "action": "set_option",
+   "match": "use a rag",
+   "text": "Use a RAG system to retrieve relevant context on demand instead of keeping persistent blocks"
+  },
+  {
+   "id": "milind:Q990",
+   "action": "set_option",
+   "match": "store all content",
+   "text": "Store all content chronologically in one context window and rely on the model's attention"
+  },
+  {
+   "id": "milind:Q991",
+   "action": "set_option",
+   "match": "the agent should present",
+   "text": "The agent should present only the 3-year TCO figure and leave out the individual component-level costs"
+  },
+  {
+   "id": "milind:Q991",
+   "action": "set_option",
+   "match": "vendor names should",
+   "text": "Vendor names should be anonymized in financial comparisons to avoid introducing bias"
+  },
+  {
+   "id": "milind:Q991",
+   "action": "set_option",
+   "match": "pricing comparisons across",
+   "text": "A multi-component vendor comparison needs a table; prose hides the per-component breakdown"
+  },
+  {
+   "id": "milind:Q993",
+   "action": "set_option",
+   "match": "context degradation the",
+   "text": "Context degradation: accumulated content eroded earlier conclusions without new evidence"
+  },
+  {
+   "id": "milind:Q993",
+   "action": "set_option",
+   "match": "the agent s",
+   "text": "The agent's temperature setting is too high, producing random variation in its answers"
+  },
+  {
+   "id": "milind:Q993",
+   "action": "set_option",
+   "match": "the agent found",
+   "text": "The agent found new evidence in the last five files that correctly updated its assessment"
+  },
+  {
+   "id": "milind:Q995",
+   "action": "set_option",
+   "match": "the consultant report",
+   "text": "The consultant figure had no source attribution, so the disputed claim couldn't be traced back"
+  },
+  {
+   "id": "milind:Q995",
+   "action": "set_option",
+   "match": "trade association surveys",
+   "text": "Trade association surveys should have been given less weight than the government data"
+  },
+  {
+   "id": "milind:Q995",
+   "action": "set_option",
+   "match": "the agent should have",
+   "text": "The agent should have checked the publication dates of all three sources before synthesizing them"
+  },
+  {
+   "id": "milind:Q969",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Options A, C, and D describe",
+   "replace": "Options A, B, and D describe"
   }
  ],
  "hold": []
