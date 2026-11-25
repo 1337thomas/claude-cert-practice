@@ -41956,6 +41956,1072 @@
    "text": "Have the synthesis agent guess the most likely source of each claim based on writing style"
   },
   {
+   "id": "utkarsh1agarwal:exam-1#29",
+   "action": "set_option",
+   "match": "restart the entire",
+   "text": "Restart the entire pipeline from scratch so every agent rebuilds all of its findings from a clean state"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#29",
+   "action": "set_option",
+   "match": "each agent exports",
+   "text": "Agents export state to a known file; on resume the coordinator loads and re-injects that manifest"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#29",
+   "action": "set_option",
+   "match": "rely on the",
+   "text": "Resume the same session and rely on the model's memory of what each subagent finished before the crash"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#29",
+   "action": "set_option",
+   "match": "manually re type",
+   "text": "Have a developer re-type a summary of prior progress into the coordinator's next prompt by hand"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#32",
+   "action": "set_option",
+   "match": "bash with no",
+   "text": "`Read`"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#33",
+   "action": "set_option",
+   "match": "mcp tools are",
+   "text": "Claude Code ranks built-in tools above MCP tools by a fixed priority that can't change"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#33",
+   "action": "set_option",
+   "match": "the mcp tool",
+   "text": "Its description doesn't make a strong case for why it beats the familiar built-in `Grep`"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#33",
+   "action": "set_option",
+   "match": "the mcp server",
+   "text": "The MCP server has a network misconfiguration, so the tool is often unreachable"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#33",
+   "action": "set_option",
+   "match": "grep needs to",
+   "text": "`Grep` has to be removed from the tool list before any MCP alternative can be chosen"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#34",
+   "action": "set_option",
+   "match": "retry edit with",
+   "text": "Retry `Edit` with the exact same input until the match succeeds"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#34",
+   "action": "set_option",
+   "match": "use read to",
+   "text": "`Read` the full file, then `Write` back the corrected version"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#34",
+   "action": "set_option",
+   "match": "use grep to",
+   "text": "Use `Grep` to force a unique match, then rerun the same `Edit` call"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#34",
+   "action": "set_option",
+   "match": "skip the edit",
+   "text": "Skip the edit and ask the user to make the change manually instead"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#35",
+   "action": "set_option",
+   "match": "claude json with",
+   "text": "`~/.claude.json` with the token hardcoded in the server entry"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#35",
+   "action": "set_option",
+   "match": "directly inside claude",
+   "text": "Inside the project's `CLAUDE.md` as a documented server setting"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#35",
+   "action": "set_option",
+   "match": "a comment at",
+   "text": "A comment at the top of the source file that calls the server"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#37",
+   "action": "set_option",
+   "match": "restart with no",
+   "text": "Restart with no context and re-explore the codebase from the beginning"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#37",
+   "action": "set_option",
+   "match": "maintain a scratchpad",
+   "text": "Keep a scratchpad file of key findings the agent can refer back to"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#37",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a different model mid-session so its reasoning is refreshed"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#37",
+   "action": "edit",
+   "field": "opt",
+   "find": "Increase `max_tokens`",
+   "replace": "Increase `max_tokens` so answers can include more class-level detail"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#39",
+   "action": "set_option",
+   "match": "add ten few",
+   "text": "Add ten few-shot examples right away instead of changing the tool itself"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#39",
+   "action": "set_option",
+   "match": "split process_data into",
+   "text": "Split `process_data` into three purpose-specific tools, one for each of its jobs"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#39",
+   "action": "set_option",
+   "match": "remove the tool",
+   "text": "Remove `process_data` entirely and let the agent do the jobs in plain text"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#39",
+   "action": "set_option",
+   "match": "rename it without",
+   "text": "Rename `process_data` to something clearer while keeping its current scope"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#40",
+   "action": "set_option",
+   "match": "the model needs",
+   "text": "The context window is too small for 18 tool definitions; use a larger-context model"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#40",
+   "action": "set_option",
+   "match": "too many available",
+   "text": "Too many tools at once raise selection complexity; scope the tool set per task or role"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#40",
+   "action": "set_option",
+   "match": "bash should be",
+   "text": "`Bash` is the most dangerous tool and drives the misuse; remove it from the tool set"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#40",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The tools are under-specified; list all 18 more explicitly in the system prompt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#42",
+   "action": "set_option",
+   "match": "verbose and debug",
+   "text": "`--verbose` and `--debug` for full diagnostics"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#42",
+   "action": "set_option",
+   "match": "output format json",
+   "text": "`--output-format json` with `--json-schema`"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#42",
+   "action": "set_option",
+   "match": "print alone is",
+   "text": "`--print` alone with the default text output"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#42",
+   "action": "edit",
+   "field": "opt",
+   "find": "`--format text`",
+   "replace": "`--format text` with a custom parsing regex"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#43",
+   "action": "set_option",
+   "match": "the context window",
+   "text": "The context window is too small to hold both the bug fix and the full PR diff under review"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#43",
+   "action": "set_option",
+   "match": "the same session",
+   "text": "The same session keeps its generation reasoning and rarely challenges its own decisions"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#43",
+   "action": "set_option",
+   "match": "output format json",
+   "text": "`--output-format json` wasn't set, so the findings weren't structured enough to check"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#43",
+   "action": "set_option",
+   "match": "the model needs",
+   "text": "The model needs more few-shot examples of good reviews before it can spot logic issues"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#44",
+   "action": "set_option",
+   "match": "add be even",
+   "text": "Add \"be even more careful\" to the prompt so the model raises its reporting bar further"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#44",
+   "action": "set_option",
+   "match": "define explicit categorical",
+   "text": "Define explicit criteria for that category; consider disabling it temporarily while iterating"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#44",
+   "action": "set_option",
+   "match": "lower the sampling",
+   "text": "Lower the sampling temperature so that the review flags fewer borderline issues across categories"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#44",
+   "action": "set_option",
+   "match": "permanently disable all",
+   "text": "Permanently disable every review category and switch the pipeline to manual review"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#45",
+   "action": "set_option",
+   "match": "nothing each run",
+   "text": "Nothing extra, so that each run stays fully independent of all earlier reviews"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#45",
+   "action": "set_option",
+   "match": "the prior review",
+   "text": "Prior findings, with instructions to report only new or unaddressed issues"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#45",
+   "action": "set_option",
+   "match": "the full git",
+   "text": "The full git history of the repository so the model can see how the PR evolved"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#45",
+   "action": "set_option",
+   "match": "a count of",
+   "text": "A counter of previous review runs so the model knows how many passes came before"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#46",
+   "action": "set_option",
+   "match": "use a model",
+   "text": "Switch to a model with a larger context window so all 15 files get equal attention"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#46",
+   "action": "set_option",
+   "match": "require developers to",
+   "text": "Require developers to split their work into smaller PRs of only a few files each"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#46",
+   "action": "set_option",
+   "match": "run the same",
+   "text": "Run the same single-pass review three times and keep only findings that win a majority vote"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#47",
+   "action": "edit",
+   "field": "opt",
+   "find": "Both",
+   "replace": "Both, since batch results come back fast enough for either one"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#47",
+   "action": "set_option",
+   "match": "only the pre",
+   "text": "Only the pre-merge check, because it runs on every single PR"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#47",
+   "action": "set_option",
+   "match": "neither since batch",
+   "text": "Neither, because the Batches API can't be called from CI jobs"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#5",
+   "action": "set_option",
+   "match": "a sentiment classification",
+   "text": "A sentiment classification score showing how upset the customer is"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#5",
+   "action": "set_option",
+   "match": "the full unedited",
+   "text": "The full unedited transcript of every single turn in the prior conversation"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#5",
+   "action": "set_option",
+   "match": "a timestamp of",
+   "text": "A timestamp of when escalation occurred and which agent triggered it"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#6",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system prompt clause telling the model that any refund above $500 requires human escalation"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#6",
+   "action": "set_option",
+   "match": "a pre call",
+   "text": "A pre-call hook that blocks `process_refund` calls above $500 and routes them to escalation"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#6",
+   "action": "set_option",
+   "match": "a few shot",
+   "text": "Several few-shot examples showing refunds above $500 being denied and escalated"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#6",
+   "action": "set_option",
+   "match": "reducing max_tokens so",
+   "text": "Reducing `max_tokens` so the model can't produce refund amounts with many digits"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#9",
+   "action": "set_option",
+   "match": "the threshold is",
+   "text": "The 6/10 threshold is set too high and should be lowered to around 4/10 instead"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#9",
+   "action": "set_option",
+   "match": "self reported confidence",
+   "text": "Self-reported confidence is poorly calibrated and often highest on the hardest cases"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#9",
+   "action": "set_option",
+   "match": "confidence scores should",
+   "text": "Confidence scores should be averaged over the whole conversation, not per turn"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#9",
+   "action": "set_option",
+   "match": "the threshold should",
+   "text": "Escalation should instead be triggered by how many tool calls the agent has made"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#35",
+   "action": "set_option",
+   "match": "embed the metadata",
+   "text": "Embed the full metadata directly in the system prompt of every session, ahead of the task"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#35",
+   "action": "set_option",
+   "match": "cache the metadata",
+   "text": "Cache the metadata in the project's `CLAUDE.md` file and refresh it whenever it changes"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#35",
+   "action": "set_option",
+   "match": "expose the repository",
+   "text": "Expose the metadata as an MCP resource instead of a tool, so it's referenced without a tool call"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#35",
+   "action": "set_option",
+   "match": "require developers to",
+   "text": "Require developers to paste the full metadata into their initial request at the start of each task"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#36",
+   "action": "set_option",
+   "match": "validate the input",
+   "text": "Validate input inside the tool and reject anything but a single file path with a clear error"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#36",
+   "action": "set_option",
+   "match": "expand the tool",
+   "text": "Expand the tool's description with a prominent warning against passing directory paths to it"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#36",
+   "action": "set_option",
+   "match": "remove the tool",
+   "text": "Remove the tool entirely and require that this kind of analysis be done manually by developers"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#37",
+   "action": "set_option",
+   "match": "the prompt needs",
+   "text": "The prompt needs clearer, more specific language about how to detect memory leaks in this service"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#37",
+   "action": "set_option",
+   "match": "too many simultaneously",
+   "text": "Too many similar tools at once raise selection complexity; narrow which ones are live for focused tasks"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#37",
+   "action": "set_option",
+   "match": "the static analysis",
+   "text": "The static-analysis tool's description should be made more generic so it fits more kinds of tasks"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#37",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "The agent needs a larger context window so it can properly weigh all 22 tool definitions against each other"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#38",
+   "action": "set_option",
+   "match": "remove fetch_openapi_spec since",
+   "text": "Remove `fetch_openapi_spec` entirely, since the search tool is more efficient for every kind of lookup"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#38",
+   "action": "set_option",
+   "match": "make fetch_openapi_spec return",
+   "text": "Make `fetch_openapi_spec` return only a short summary of the spec instead of the full 200KB document"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#38",
+   "action": "set_option",
+   "match": "sharpen search_api_endpoints s",
+   "text": "Sharpen `search_api_endpoints`'s description to say when it beats the full spec, with example queries"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#38",
+   "action": "set_option",
+   "match": "raise the model",
+   "text": "Raise the model's temperature to encourage broader exploration across all of the available tools"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#39",
+   "action": "set_option",
+   "match": "a pretooluse hook",
+   "text": "A `PreToolUse` hook that checks each call's tool and target path, blocking mismatches such as renames in migrations"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#39",
+   "action": "set_option",
+   "match": "set tool_choice to",
+   "text": "Set `tool_choice` to force one specific refactoring tool for every CI/CD invocation, regardless of the kind of change"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#39",
+   "action": "set_option",
+   "match": "increase max_tokens so",
+   "text": "Increase `max_tokens` so the agent has more room to reason about which of the three tools fits before choosing"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#39",
+   "action": "set_option",
+   "match": "move all refactoring",
+   "text": "Move all refactoring guidance out of `CLAUDE.md` into a `/refactor` skill that must be invoked manually each time"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#40",
+   "action": "set_option",
+   "match": "add normalization logic",
+   "text": "Add normalization logic inside the coordinator that translates all three failure formats into one internal shape"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#40",
+   "action": "set_option",
+   "match": "standardize what every",
+   "text": "Standardize failure reports (`errorCategory`, `isRetryable`, context); that tool-design fix enables reliable retries"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#40",
+   "action": "set_option",
+   "match": "merge all the",
+   "text": "Merge all the subagents into one larger agent so there's only one place errors can come from and one format"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#42",
+   "action": "set_option",
+   "match": "running the analyses",
+   "text": "Running the five analyses in parallel, since parallel work is inherently more thorough than sequential work"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#42",
+   "action": "set_option",
+   "match": "each of the",
+   "text": "Each review agent is a fully independent Claude Code invocation with no context from the session that wrote the code"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#42",
+   "action": "set_option",
+   "match": "consolidating the five",
+   "text": "Consolidating the five sets of findings afterward, which lets duplicate and conflicting issues get filtered out"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#42",
+   "action": "set_option",
+   "match": "using json output",
+   "text": "Using JSON output format, which makes findings more reliable regardless of how the sessions are structured"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#43",
+   "action": "set_option",
+   "match": "the model understands",
+   "text": "The model knows the schema's shape but not each field's purpose; add 2–3 few-shot examples of correct assignment"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#43",
+   "action": "set_option",
+   "match": "an evidence_required list",
+   "text": "An `evidence_required` list should be added to the schema to force more precise field content automatically"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#43",
+   "action": "set_option",
+   "match": "force tool_choice onto",
+   "text": "`tool_choice` should be forced onto the findings tool so that no ambiguity remains about which field gets what"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#44",
+   "action": "set_option",
+   "match": "add even stronger",
+   "text": "Add even stronger wording to the prompt: \"be even more conservative about pattern consistency\""
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#44",
+   "action": "set_option",
+   "match": "temporarily disable the",
+   "text": "Pause just that category, keep the rest active, and restore it after tightening its criteria"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#44",
+   "action": "set_option",
+   "match": "lower the model",
+   "text": "Lower the model's temperature so that its review output becomes more deterministic across runs"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#44",
+   "action": "set_option",
+   "match": "require developers to",
+   "text": "Require developers to write a detailed justification every time they dismiss a review comment"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#45",
+   "action": "set_option",
+   "match": "a claude rules",
+   "text": "A `.claude/rules/` file with `paths` frontmatter scoped to source file patterns such as `src/**/*.{js,ts}`"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#45",
+   "action": "set_option",
+   "match": "two separate root",
+   "text": "Two separate root files, `code-review-CLAUDE.md` and `docs-review-CLAUDE.md`, with CI picking one by PR label"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#45",
+   "action": "set_option",
+   "match": "move the code",
+   "text": "Move the code standards into an MCP tool that the model can optionally call when it judges them relevant"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#45",
+   "action": "set_option",
+   "match": "leave everything in",
+   "text": "Leave everything in the root `CLAUDE.md` and trust the model to disregard whatever guidance doesn't apply"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "mcp json doesn",
+   "text": "`.mcp.json` doesn't support `${VAR}`-style expansion at all; the token has to be hardcoded instead"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "the variable is",
+   "text": "The job-level variable isn't exported into the environment of the process that actually runs Claude Code"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "the mcp server",
+   "text": "The MCP server's URL in `.mcp.json` points at the wrong endpoint, so the token is rejected there"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "claude code s",
+   "text": "Claude Code expands `${VAR}` in `.mcp.json` only for stdio servers, so remote tool configs get no token"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "edit",
+   "field": "explanation",
+   "find": "or a permissions block (D)",
+   "replace": "or a stdio-only expansion limit (D), since expansion also works in remote servers' `url` and `headers`"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#47",
+   "action": "set_option",
+   "match": "stop re running",
+   "text": "Stop re-running the review after the first commit and only ever review the final version of the PR once"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#47",
+   "action": "set_option",
+   "match": "after each run",
+   "text": "Persist findings with line references; on each run drop those whose lines no longer exist and post only new issues"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#48",
+   "action": "set_option",
+   "match": "add stricter json",
+   "text": "Add stricter JSON-schema constraints that reject `performance_impact_ms` values outside a plausible range"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#48",
+   "action": "set_option",
+   "match": "add a post",
+   "text": "Add a post-generation check that each performance claim is backed by evidence in the PR, such as a benchmark"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#48",
+   "action": "set_option",
+   "match": "remove the performance_impact_ms",
+   "text": "Remove the `performance_impact_ms` field from the schema entirely so that speculation becomes impossible"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#48",
+   "action": "set_option",
+   "match": "lower the model",
+   "text": "Lower the model's temperature so that its quantitative performance claims become less speculative"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#49",
+   "action": "set_option",
+   "match": "citations and structured",
+   "text": "Citations can't be combined with schema-enforced JSON output in one request; grounded excerpts need an explicit schema field"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#49",
+   "action": "set_option",
+   "match": "the right fix",
+   "text": "Add a `source_excerpt` string field to the findings schema, filled from the policy text in context, instead of layering on citations"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#49",
+   "action": "set_option",
+   "match": "citations work seamlessly",
+   "text": "Citations work together with schema-enforced tool-use output in the same request, so the suggestion can be implemented as proposed"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#49",
+   "action": "set_option",
+   "match": "enabling citations will",
+   "text": "Enabling citations will automatically populate each finding's `remediation` field with the correct fix, whatever schema is in use"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#50",
+   "action": "set_option",
+   "match": "add a labels",
+   "text": "Add a `labels` field to `.claude/rules/` frontmatter so Claude Code detects the PR's GitHub labels and loads matching rules"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#50",
+   "action": "set_option",
+   "match": "create separate skills",
+   "text": "One skill per review type (e.g. `/review-performance`), with the CI job reading PR labels via the GitHub API and invoking the match"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#50",
+   "action": "set_option",
+   "match": "keep everything in",
+   "text": "Keep everything in one prompt and add `if`/`then` conditional logic for each PR type to the review-invocation script"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#51",
+   "action": "set_option",
+   "match": "make the field",
+   "text": "Make `approval_date` nullable across the board, for every document type that the pipeline handles"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#51",
+   "action": "set_option",
+   "match": "classify the document",
+   "text": "Classify estimate vs. purchase order first and require `approval_date` only for purchase orders"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#51",
+   "action": "set_option",
+   "match": "add stricter validation",
+   "text": "Add stricter validation that requires the date to match a known approver's signature date"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#51",
+   "action": "set_option",
+   "match": "lower the model",
+   "text": "Lower the model's temperature so the extraction is less inclined to fabricate missing dates"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#52",
+   "action": "set_option",
+   "match": "make the field",
+   "text": "Make the tax-ID field optional and validate it downstream instead of at extraction time"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#52",
+   "action": "set_option",
+   "match": "tighten the regex",
+   "text": "Tighten the regex further so that more implausible-looking ID formats are rejected at extraction"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#52",
+   "action": "set_option",
+   "match": "cross check extracted",
+   "text": "Cross-check IDs against the vendor registry or require a field citing where the ID was read"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#52",
+   "action": "set_option",
+   "match": "raise the model",
+   "text": "Raise the model's temperature to encourage more varied output when IDs are re-extracted"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#54",
+   "action": "set_option",
+   "match": "add 3 5",
+   "text": "Add 3–5 few-shot examples showing correctly structured `line_items` arrays to the retry prompt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#54",
+   "action": "set_option",
+   "match": "include the original",
+   "text": "Put the document, the failed output, and the exact validation error into the retry prompt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#54",
+   "action": "set_option",
+   "match": "lower the model",
+   "text": "Lower the model's temperature so that each retry is more conservative than the attempt before it"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#54",
+   "action": "set_option",
+   "match": "increase max_tokens to",
+   "text": "Increase `max_tokens` to give the model more room to reconsider its line items on every retry"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#55",
+   "action": "set_option",
+   "match": "make the field",
+   "text": "Make `dispute_resolution_clause` optional instead of required so nulls stop failing validation"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#55",
+   "action": "set_option",
+   "match": "keep raising max_tokens",
+   "text": "Keep raising `max_tokens` until late-page fields are captured, regardless of the cost impact"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#55",
+   "action": "set_option",
+   "match": "run multi page",
+   "text": "Run two extraction passes, one for early-page fields and one for fields expected later on"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#56",
+   "action": "set_option",
+   "match": "add an explicit",
+   "text": "Classify each document as licensing, purchase, or hybrid first, then route it based on that result"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#56",
+   "action": "set_option",
+   "match": "merge both tools",
+   "text": "Merge both tools into a single, multi-purpose extraction tool that covers both document types"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#58",
+   "action": "set_option",
+   "match": "yes process the",
+   "text": "Yes — process the full daily batch via the Batches API; a 3-hour window will comfortably cover it"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#58",
+   "action": "set_option",
+   "match": "partially only use",
+   "text": "Partially — batch only invoices submitted early enough that a worst-case delay still beats 5 PM"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#58",
+   "action": "set_option",
+   "match": "no the batches",
+   "text": "No — with no latency SLA and up to 24 hours per batch, it can't reliably meet a same-day hard deadline"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#58",
+   "action": "set_option",
+   "match": "yes but only",
+   "text": "Yes, but only if every individual invoice document stays under the per-request file size limit"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#60",
+   "action": "set_option",
+   "match": "a random uuid",
+   "text": "A random UUID attached to each extraction, purely for tracing every record back to its source document"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#60",
+   "action": "set_option",
+   "match": "a source_metadata field",
+   "text": "A `source_metadata` field with document format, OCR confidence, vendor name, and vendor country"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#60",
+   "action": "set_option",
+   "match": "a free text",
+   "text": "A free-text note field where the model can explain its own extraction choices in its own words"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#60",
+   "action": "set_option",
+   "match": "a counter tracking",
+   "text": "A counter tracking how many retries each extraction needed before it finally passed validation"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-009",
+   "action": "set_option",
+   "match": "a formatter command",
+   "text": "Running a formatter command the project already requires on every change"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-009",
+   "action": "set_option",
+   "match": "a one line",
+   "text": "A one-line, bounded typo fix whose correct test is already obvious"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-009",
+   "action": "set_option",
+   "match": "a read only",
+   "text": "A read-only codebase question would otherwise flood the main context"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-011",
+   "action": "set_option",
+   "match": "allow missing fields",
+   "text": "Let the model fill missing fields with plausible values so records stay complete"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-011",
+   "action": "set_option",
+   "match": "use a no",
+   "text": "Use a no-side-effect extraction tool or structured-output mechanism, then validate it"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-011",
+   "action": "set_option",
+   "match": "request a fenced",
+   "text": "Request fenced JSON in plain text and apply permissive parsing with defaults when it deviates"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-011",
+   "action": "set_option",
+   "match": "force a production",
+   "text": "Force a call to a production write tool so that its input arguments provide the JSON"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-013",
+   "action": "set_option",
+   "match": "a request to",
+   "text": "The final artifact together with a request to improve its writing style and readability"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-013",
+   "action": "set_option",
+   "match": "the artifact sources",
+   "text": "The artifact, sources, and rubric plus the generator's full decision trace and self-rating"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-013",
+   "action": "set_option",
+   "match": "the artifact source evidence",
+   "text": "The artifact, source evidence, rubric, and required finding schema in a fresh context"
+  },
+  {
+   "id": "rohitg00:ccar-f-d-013",
+   "action": "set_option",
+   "match": "only the final",
+   "text": "Only the generator's final confidence percentage and a summary of its own conclusions"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-014",
+   "action": "set_option",
+   "match": "high impact refund",
+   "text": "Refund recommendations with high financial impact"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-014",
+   "action": "set_option",
+   "match": "outputs below a",
+   "text": "Outputs below a fixed self-reported confidence threshold"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-014",
+   "action": "set_option",
+   "match": "cases with unusually",
+   "text": "Cases whose input records are unusually long"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-020",
+   "action": "set_option",
+   "match": "use broad shell",
+   "text": "Use a broad shell find-and-replace across the whole repository to change the function"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-020",
+   "action": "set_option",
+   "match": "search for analogous",
+   "text": "Copy the most common analogous implementation into the file and rely on the full test suite"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-020",
+   "action": "set_option",
+   "match": "search the public",
+   "text": "Search the public web for a reference implementation instead of reading the repository"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-023",
+   "action": "set_option",
+   "match": "one global append",
+   "text": "One global append-only rule that applies to every file in the repository"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-023",
+   "action": "set_option",
+   "match": "a team shell",
+   "text": "An untracked team shell alias that picks migration or adapter checks by path"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-024",
+   "action": "set_option",
+   "match": "a skill loaded",
+   "text": "A Skill that Claude loads when the migration-review workflow is relevant"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-024",
+   "action": "set_option",
+   "match": "a project command",
+   "text": "A project command that pastes the whole procedure and scripts inline into its prompt"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-024",
+   "action": "set_option",
+   "match": "a hidden post",
+   "text": "A hook that runs the review as a hidden side effect after every file write"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-024",
+   "action": "set_option",
+   "match": "a secret value",
+   "text": "A CLAUDE.md section holding the method plus the credentials its scripts use"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-032",
+   "action": "set_option",
+   "match": "add ten specialists",
+   "text": "Add ten specialists at once to maximize coverage, then prune the ones that underperform"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-032",
+   "action": "set_option",
+   "match": "start several specialists",
+   "text": "Run several specialists on the same sources and treat their agreement as the quality signal"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-032",
+   "action": "set_option",
+   "match": "establish a single",
+   "text": "Baseline the single agent on quality, repeated work, context growth, latency, and cost"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-032",
+   "action": "set_option",
+   "match": "remove the evaluation",
+   "text": "Drop the evaluation set and judge the multi-agent design on reviewers' impressions"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-036",
+   "action": "set_option",
+   "match": "load all 900",
+   "text": "Load all 900 definitions and let service-side authorization block what isn't permitted"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-036",
+   "action": "set_option",
+   "match": "hide authorization inside",
+   "text": "Put the authorization rules into the tool descriptions for Claude to enforce"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-036",
+   "action": "set_option",
+   "match": "give the researcher",
+   "text": "Give the researcher write access across the catalog to improve recall"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-038",
+   "action": "set_option",
+   "match": "as an unrestricted",
+   "text": "As an unrestricted deployment command available to every researcher"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-038",
+   "action": "set_option",
+   "match": "as a secret",
+   "text": "As a hidden section with credentials inside the root CLAUDE.md guidance"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-038",
+   "action": "set_option",
+   "match": "as a project",
+   "text": "As a hook injecting the rubric into prompts and writing a free-form report"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-039",
+   "action": "set_option",
+   "match": "a consensus rule",
+   "text": "A consensus rule requiring at least two specialists to back each claim before synthesis"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-039",
+   "action": "set_option",
+   "match": "a single model",
+   "text": "A single model-confidence threshold that every specialist's claim must clear first"
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-039",
+   "action": "set_option",
+   "match": "a longer report",
+   "text": "A longer, more detailed report template that each specialist fills in for every claim"
+  },
+  {
    "id": "rohitg00:ccar-f-m1-041",
    "action": "set_option",
    "match": "a production database write",
