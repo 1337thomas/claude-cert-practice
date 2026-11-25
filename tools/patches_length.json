@@ -24636,6 +24636,1153 @@
    "action": "set_option",
    "match": "The field is",
    "text": "Claude Code fills the missing `line_items` field with an empty array by default"
+  },
+  {
+   "id": "milind:Q602",
+   "action": "set_option",
+   "match": "usage skill name",
+   "text": "`usage: \"/generate-migration <migration-name>\"`"
+  },
+  {
+   "id": "milind:Q602",
+   "action": "set_option",
+   "match": "argument hint migration",
+   "text": "`argument-hint: \"migration name, e.g. add_users\"`"
+  },
+  {
+   "id": "milind:Q602",
+   "action": "set_option",
+   "match": "help provide a",
+   "text": "`help: \"Provide a migration name, e.g. add_users\"`"
+  },
+  {
+   "id": "milind:Q603",
+   "action": "set_option",
+   "match": "rules files are",
+   "text": "Rule files are cached, so changes only apply after Claude Code restarts"
+  },
+  {
+   "id": "milind:Q603",
+   "action": "set_option",
+   "match": "the ts extension",
+   "text": "Glob patterns in `paths` cannot filter on the `.ts` file extension"
+  },
+  {
+   "id": "milind:Q603",
+   "action": "set_option",
+   "match": "the rule file",
+   "text": "Path-scoped rule files must be explicitly imported from CLAUDE.md"
+  },
+  {
+   "id": "milind:Q603",
+   "action": "set_option",
+   "match": "the glob pattern",
+   "text": "The glob `api/**/*.ts` lacks the `src/` prefix, so it misses this file"
+  },
+  {
+   "id": "milind:Q605",
+   "action": "set_option",
+   "match": "claude code cannot",
+   "text": "Claude Code cannot create git commits in non-interactive mode, so a later step must commit"
+  },
+  {
+   "id": "milind:Q605",
+   "action": "set_option",
+   "match": "ci mode disables",
+   "text": "CI mode disables all file modification for safety, so a script must apply the fixes"
+  },
+  {
+   "id": "milind:Q605",
+   "action": "set_option",
+   "match": "claude code automatically",
+   "text": "Claude Code pushes its commits automatically in CI mode, so no push step is needed"
+  },
+  {
+   "id": "milind:Q605",
+   "action": "set_option",
+   "match": "each ci run",
+   "text": "Each CI run has no memory of earlier runs, so the prompt must supply all linting context"
+  },
+  {
+   "id": "milind:Q607",
+   "action": "set_option",
+   "match": "reducing token usage",
+   "text": "Reducing token usage by replacing one long prompt with several shorter ones"
+  },
+  {
+   "id": "milind:Q607",
+   "action": "set_option",
+   "match": "surfacing unstated requirements",
+   "text": "Surfacing unstated requirements and decisions the developer may have missed"
+  },
+  {
+   "id": "milind:Q607",
+   "action": "set_option",
+   "match": "forcing the developer",
+   "text": "Forcing the developer to write a formal specification before code is generated"
+  },
+  {
+   "id": "milind:Q607",
+   "action": "set_option",
+   "match": "preventing claude from",
+   "text": "Stopping Claude from making assumptions while it implements the feature"
+  },
+  {
+   "id": "milind:Q609",
+   "action": "set_option",
+   "match": "piping output through",
+   "text": "Piping the output through `jq` to strip everything that is not JSON"
+  },
+  {
+   "id": "milind:Q609",
+   "action": "set_option",
+   "match": "setting a maximum",
+   "text": "Setting a maximum token limit so verbose output gets truncated early"
+  },
+  {
+   "id": "milind:Q609",
+   "action": "set_option",
+   "match": "adding be concise",
+   "text": "Adding \"be concise and return only the JSON fields\" to the prompt"
+  },
+  {
+   "id": "milind:Q609",
+   "action": "set_option",
+   "match": "using output format",
+   "text": "Using `--output-format json` with a `--json-schema` definition"
+  },
+  {
+   "id": "milind:Q610",
+   "action": "set_option",
+   "match": "multiple separate direct",
+   "text": "Separate direct-execution sessions, one per file, each with a fresh context"
+  },
+  {
+   "id": "milind:Q610",
+   "action": "set_option",
+   "match": "direct execution for",
+   "text": "Direct execution across all 40+ files at once, letting Claude order the edits"
+  },
+  {
+   "id": "milind:Q610",
+   "action": "set_option",
+   "match": "explore subagent for",
+   "text": "Explore subagent to discover, plan mode to plan, then direct execution per file"
+  },
+  {
+   "id": "milind:Q610",
+   "action": "set_option",
+   "match": "plan mode only",
+   "text": "Plan mode alone, since it handles exploration, planning and execution itself"
+  },
+  {
+   "id": "milind:Q618",
+   "action": "set_option",
+   "match": "plan mode requires",
+   "text": "Plan mode requires a --plan CLI flag and cannot be switched on during a session"
+  },
+  {
+   "id": "milind:Q618",
+   "action": "set_option",
+   "match": "add always use",
+   "text": "Add \"always use plan mode\" to CLAUDE.md so that every request is planned first"
+  },
+  {
+   "id": "milind:Q618",
+   "action": "set_option",
+   "match": "use plan mode",
+   "text": "Pick plan mode for complex multi-file work, direct execution for simple fixes"
+  },
+  {
+   "id": "milind:Q618",
+   "action": "set_option",
+   "match": "plan mode is",
+   "text": "Plan mode triggers automatically once a change touches more than three files"
+  },
+  {
+   "id": "milind:Q62",
+   "action": "set_option",
+   "match": "hooks provide deterministic",
+   "text": "A hook normalizes deterministically before Claude sees the data, so formats stay consistent"
+  },
+  {
+   "id": "milind:Q62",
+   "action": "set_option",
+   "match": "hooks are faster",
+   "text": "Hooks run faster than the model, so moving the conversion into code mainly cuts response latency"
+  },
+  {
+   "id": "milind:Q62",
+   "action": "set_option",
+   "match": "claude cannot understand",
+   "text": "Claude cannot interpret Unix timestamps, so they must be converted before it sees them"
+  },
+  {
+   "id": "milind:Q62",
+   "action": "set_option",
+   "match": "system prompts cannot",
+   "text": "System prompts cannot include data-format rules, so a hook is the only place for them"
+  },
+  {
+   "id": "milind:Q63",
+   "action": "set_option",
+   "match": "step by step",
+   "text": "Fixed procedures stop subagents from adapting when intermediate results are unexpected"
+  },
+  {
+   "id": "milind:Q63",
+   "action": "set_option",
+   "match": "subagents cannot execute",
+   "text": "Subagents cannot execute multi-step prompts and stop after completing the first step"
+  },
+  {
+   "id": "milind:Q63",
+   "action": "set_option",
+   "match": "the instructions are",
+   "text": "The instructions are so detailed that the subagent will tend to ignore them entirely"
+  },
+  {
+   "id": "milind:Q63",
+   "action": "set_option",
+   "match": "procedural prompts increase",
+   "text": "Procedural prompts inflate token usage disproportionately on every subagent call"
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_option",
+   "match": "use the explore",
+   "text": "Use the Explore subagent to discover better implementations elsewhere in the repo"
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_option",
+   "match": "add a separate",
+   "text": "Add a separate CI step that rejects low-quality code after the iteration ends"
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_option",
+   "match": "switch entirely to",
+   "text": "Switch fully to plan mode and drop test-driven iteration for the rest of the task"
+  },
+  {
+   "id": "milind:Q630",
+   "action": "set_option",
+   "match": "add explicit code",
+   "text": "Add explicit quality criteria to the loop, or an independent review pass"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_option",
+   "match": "use output format",
+   "text": "Use --output-format json so partial results are captured even on a timeout"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_option",
+   "match": "skip large prs",
+   "text": "Skip large PRs and only review those below a set diff-size threshold"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_option",
+   "match": "increase the timeout",
+   "text": "Raise the job timeout high enough to cover the largest possible PR"
+  },
+  {
+   "id": "milind:Q638",
+   "action": "set_option",
+   "match": "split the review",
+   "text": "Split the review into focused passes that each finish within the timeout"
+  },
+  {
+   "id": "milind:Q64",
+   "action": "set_option",
+   "match": "resume the session and",
+   "text": "Resume the session and use `git diff` to show Claude only what changed"
+  },
+  {
+   "id": "milind:Q64",
+   "action": "set_option",
+   "match": "fork the session",
+   "text": "Fork the session to compare the pre-merge and post-merge security states"
+  },
+  {
+   "id": "milind:Q64",
+   "action": "set_option",
+   "match": "start a new",
+   "text": "Start a new session with a structured summary of prior findings injected"
+  },
+  {
+   "id": "milind:Q64",
+   "action": "set_option",
+   "match": "resume the session 3",
+   "text": "Resume the session, since 3 days is well within the acceptable session lifetime"
+  },
+  {
+   "id": "milind:Q647",
+   "action": "set_option",
+   "match": "include do not",
+   "text": "Add \"Do not execute commands; only describe what you would do\" to the template"
+  },
+  {
+   "id": "milind:Q647",
+   "action": "set_option",
+   "match": "slash commands automatically",
+   "text": "Slash commands automatically run in plan mode when they contain destructive steps"
+  },
+  {
+   "id": "milind:Q647",
+   "action": "set_option",
+   "match": "use the dry",
+   "text": "Pass a --dry-run flag when invoking the slash command so nothing executes"
+  },
+  {
+   "id": "milind:Q647",
+   "action": "set_option",
+   "match": "add mode plan",
+   "text": "Add \"mode: plan\" to the command file's YAML frontmatter to force planning"
+  },
+  {
+   "id": "milind:Q65",
+   "action": "set_option",
+   "match": "accept the output",
+   "text": "Accept the output, since regulatory compliance was not in the original query scope"
+  },
+  {
+   "id": "milind:Q65",
+   "action": "set_option",
+   "match": "run the entire",
+   "text": "Rerun the entire pipeline from scratch with \"regulatory compliance\" added to the query"
+  },
+  {
+   "id": "milind:Q65",
+   "action": "set_option",
+   "match": "ask the synthesis",
+   "text": "Have the synthesis agent fill the gap from its own knowledge and flag it for review"
+  },
+  {
+   "id": "milind:Q65",
+   "action": "set_option",
+   "match": "re delegate a",
+   "text": "Re-delegate a targeted regulatory-compliance query to the subagents, then re-synthesize"
+  },
+  {
+   "id": "milind:Q651",
+   "action": "set_option",
+   "match": "run claude interactively",
+   "text": "Run Claude interactively on the diff, then paste its summary of the changed files and their purpose into the PR"
+  },
+  {
+   "id": "milind:Q651",
+   "action": "set_option",
+   "match": "p describe these",
+   "text": "-p \"Describe these changes and each file's purpose as JSON: $(git diff --stat) $(git diff)\" --output-format json"
+  },
+  {
+   "id": "milind:Q651",
+   "action": "set_option",
+   "match": "p cat eof",
+   "text": "-p \"JSON PR description for: $(git diff --stat) $(git diff)\" --output-format json --json-schema \"$(cat pr-schema.json)\""
+  },
+  {
+   "id": "milind:Q651",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Constructing the prompt with a heredoc enables clean multi-line prompt construction in shell scripts.",
+   "replace": "Embedding both the `--stat` overview and the full diff in the prompt gives Claude the file-level summary and the details in one place; option B returns JSON but enforces no schema."
+  },
+  {
+   "id": "milind:Q658",
+   "action": "set_option",
+   "match": "create multiple skill",
+   "text": "Create a separate skill variant in .claude/skills/ for each individual researcher"
+  },
+  {
+   "id": "milind:Q658",
+   "action": "set_option",
+   "match": "keep the skill",
+   "text": "Keep the skill in .claude/skills/ and put personal style in user-level CLAUDE.md"
+  },
+  {
+   "id": "milind:Q658",
+   "action": "set_option",
+   "match": "move the skill",
+   "text": "Move the skill to ~/.claude/skills/ so each researcher keeps their own copy"
+  },
+  {
+   "id": "milind:Q66",
+   "action": "set_option",
+   "match": "a programmatic prerequisite",
+   "text": "Code blocks `process_refund` until verification succeeds; a prompt relies on Claude complying"
+  },
+  {
+   "id": "milind:Q66",
+   "action": "set_option",
+   "match": "programmatic prerequisites use",
+   "text": "Programmatic prerequisites rely on database locks, whereas prompt instructions rely on LLM reasoning"
+  },
+  {
+   "id": "milind:Q66",
+   "action": "set_option",
+   "match": "they are functionally",
+   "text": "They are functionally equivalent, since both enforce the same compliance guarantee in practice"
+  },
+  {
+   "id": "milind:Q66",
+   "action": "set_option",
+   "match": "prompt instructions are",
+   "text": "Prompt instructions are processed first, and programmatic prerequisites serve as fallbacks"
+  },
+  {
+   "id": "milind:Q661",
+   "action": "set_option",
+   "match": "claude claude md in",
+   "text": "The project's .claude/CLAUDE.md file"
+  },
+  {
+   "id": "milind:Q661",
+   "action": "set_option",
+   "match": "claude claude md",
+   "text": "~/.claude/CLAUDE.md, user-level memory"
+  },
+  {
+   "id": "milind:Q661",
+   "action": "set_option",
+   "match": "claude rules formatting",
+   "text": ".claude/rules/formatting.md in the repo"
+  },
+  {
+   "id": "milind:Q663",
+   "action": "set_option",
+   "match": "p flag with output",
+   "text": "-p with --output-format json and --json-schema"
+  },
+  {
+   "id": "milind:Q663",
+   "action": "set_option",
+   "match": "non interactive json",
+   "text": "--non-interactive with --json-output and --schema"
+  },
+  {
+   "id": "milind:Q663",
+   "action": "set_option",
+   "match": "p flag with",
+   "text": "-p with --structured-output and --output-schema"
+  },
+  {
+   "id": "milind:Q663",
+   "action": "set_option",
+   "match": "batch mode format",
+   "text": "--batch mode with --format json and --schema"
+  },
+  {
+   "id": "milind:Q67",
+   "action": "set_option",
+   "match": "high stakes irreversible",
+   "text": "Irreversible, high-stakes actions need a code-enforced human approval checkpoint"
+  },
+  {
+   "id": "milind:Q67",
+   "action": "set_option",
+   "match": "the transfer amount",
+   "text": "The $10,000 amount exceeds the typical per-request limits of payment APIs"
+  },
+  {
+   "id": "milind:Q67",
+   "action": "set_option",
+   "match": "financial transactions require",
+   "text": "Financial transactions require a specific, certified model version to execute"
+  },
+  {
+   "id": "milind:Q67",
+   "action": "set_option",
+   "match": "claude should calculate",
+   "text": "Claude should calculate its own transfer risk score before it proceeds"
+  },
+  {
+   "id": "milind:Q670",
+   "action": "set_option",
+   "match": "use deduplicate flag",
+   "text": "Pass a --deduplicate flag so CI mode suppresses repeated findings"
+  },
+  {
+   "id": "milind:Q670",
+   "action": "set_option",
+   "match": "store findings in",
+   "text": "Store findings in a database and have CI query it before each run"
+  },
+  {
+   "id": "milind:Q670",
+   "action": "set_option",
+   "match": "clear the session",
+   "text": "Clear the session cache between runs so stale findings are dropped"
+  },
+  {
+   "id": "milind:Q670",
+   "action": "set_option",
+   "match": "include prior review",
+   "text": "Include prior findings in the prompt context for each new run"
+  },
+  {
+   "id": "milind:Q671",
+   "action": "set_option",
+   "match": "use direct execution",
+   "text": "Use direct execution mode with a JSON template pasted into the prompt"
+  },
+  {
+   "id": "milind:Q671",
+   "action": "set_option",
+   "match": "add json format",
+   "text": "Add JSON format instructions and an example object to CLAUDE.md"
+  },
+  {
+   "id": "milind:Q671",
+   "action": "set_option",
+   "match": "use p flag",
+   "text": "Use -p with --output-format json and a --json-schema file"
+  },
+  {
+   "id": "milind:Q671",
+   "action": "set_option",
+   "match": "create a skill",
+   "text": "Create a skill that sets `output-format: json` in its frontmatter"
+  },
+  {
+   "id": "milind:Q673",
+   "action": "set_option",
+   "match": "direct execution for",
+   "text": "Direct execution, making the edit right away"
+  },
+  {
+   "id": "milind:Q673",
+   "action": "set_option",
+   "match": "explore subagent for",
+   "text": "Explore subagent to map the config files first"
+  },
+  {
+   "id": "milind:Q673",
+   "action": "set_option",
+   "match": "create a skill",
+   "text": "A new skill dedicated to configuration changes"
+  },
+  {
+   "id": "milind:Q673",
+   "action": "set_option",
+   "match": "plan mode to",
+   "text": "Plan mode to analyze the change's impact first"
+  },
+  {
+   "id": "milind:Q675",
+   "action": "set_option",
+   "match": "params topic",
+   "text": "`params: [\"topic to research\"]`"
+  },
+  {
+   "id": "milind:Q675",
+   "action": "set_option",
+   "match": "arguments topic",
+   "text": "`usage: \"/research <topic-name>\"`"
+  },
+  {
+   "id": "milind:Q675",
+   "action": "set_option",
+   "match": "input research topic",
+   "text": "`input-hint: \"topic to research\"`"
+  },
+  {
+   "id": "milind:Q676",
+   "action": "set_option",
+   "match": "claude code generates",
+   "text": "Claude Code generates the code first and then asks whether you want changes"
+  },
+  {
+   "id": "milind:Q676",
+   "action": "set_option",
+   "match": "claude code runs",
+   "text": "Claude Code reruns the test suite iteratively until all of the tests pass"
+  },
+  {
+   "id": "milind:Q676",
+   "action": "set_option",
+   "match": "claude code interviews",
+   "text": "Claude Code interviews other team members via API to gather requirements"
+  },
+  {
+   "id": "milind:Q676",
+   "action": "set_option",
+   "match": "claude code asks",
+   "text": "Claude Code asks clarifying questions to understand requirements before coding"
+  },
+  {
+   "id": "milind:Q679",
+   "action": "set_option",
+   "match": "explore subagent makes",
+   "text": "It can make code changes while it explores, saving a separate edit pass"
+  },
+  {
+   "id": "milind:Q679",
+   "action": "set_option",
+   "match": "explore subagent provides",
+   "text": "It does verbose discovery in isolation from the main conversation"
+  },
+  {
+   "id": "milind:Q679",
+   "action": "set_option",
+   "match": "explore subagent is",
+   "text": "It is faster than plan mode because it skips reading most of the files"
+  },
+  {
+   "id": "milind:Q679",
+   "action": "set_option",
+   "match": "explore subagent can",
+   "text": "It can pull in external documentation that plan mode cannot reach"
+  },
+  {
+   "id": "milind:Q68",
+   "action": "set_option",
+   "match": "modify the refund",
+   "text": "Modify the refund amount down to $500, then allow the call to execute"
+  },
+  {
+   "id": "milind:Q68",
+   "action": "set_option",
+   "match": "raise a runtime",
+   "text": "Raise a runtime exception that terminates the whole agent session"
+  },
+  {
+   "id": "milind:Q68",
+   "action": "set_option",
+   "match": "block the process_refund",
+   "text": "Block the call and route it to `escalate_to_human` with the refund details"
+  },
+  {
+   "id": "milind:Q68",
+   "action": "set_option",
+   "match": "allow the refund",
+   "text": "Allow the refund to proceed and log the amount for a later audit review"
+  },
+  {
+   "id": "milind:Q681",
+   "action": "set_option",
+   "match": "separate claude rules",
+   "text": "Per-team .claude/rules/ files with globs, shared rules in CLAUDE.md"
+  },
+  {
+   "id": "milind:Q681",
+   "action": "set_option",
+   "match": "directory level claude",
+   "text": "Directory-level CLAUDE.md files placed in each team's own directory"
+  },
+  {
+   "id": "milind:Q681",
+   "action": "set_option",
+   "match": "separate skills for",
+   "text": "A separate skill for each team's conventions, loaded when relevant"
+  },
+  {
+   "id": "milind:Q681",
+   "action": "set_option",
+   "match": "one large claude",
+   "text": "One large CLAUDE.md containing every team's conventions in sections"
+  },
+  {
+   "id": "milind:Q683",
+   "action": "set_option",
+   "match": "writing tests after",
+   "text": "Writing the tests only after the code is complete and has been reviewed"
+  },
+  {
+   "id": "milind:Q683",
+   "action": "set_option",
+   "match": "providing concrete i",
+   "text": "Giving I/O examples, generating code, running tests, refining on failures"
+  },
+  {
+   "id": "milind:Q683",
+   "action": "set_option",
+   "match": "using plan mode",
+   "text": "Using plan mode to design the full test suite before writing any code"
+  },
+  {
+   "id": "milind:Q683",
+   "action": "set_option",
+   "match": "creating a skill",
+   "text": "Creating a skill that auto-generates test files for each new piece of code"
+  },
+  {
+   "id": "milind:Q684",
+   "action": "set_option",
+   "match": "use p flag with independent",
+   "text": "Use -p with independent invocations, relying on session isolation"
+  },
+  {
+   "id": "milind:Q684",
+   "action": "set_option",
+   "match": "use parallel flag",
+   "text": "Use the --parallel flag so each PR gets its own isolated session partition"
+  },
+  {
+   "id": "milind:Q684",
+   "action": "set_option",
+   "match": "use batch mode",
+   "text": "Use batch mode with the --isolate flag set on every review job"
+  },
+  {
+   "id": "milind:Q684",
+   "action": "set_option",
+   "match": "use p flag",
+   "text": "Use -p with a shared session ID across reviews for efficiency"
+  },
+  {
+   "id": "milind:Q686",
+   "action": "set_option",
+   "match": "add the rule",
+   "text": "Add the rollback rule to the user-level ~/.claude/CLAUDE.md file"
+  },
+  {
+   "id": "milind:Q686",
+   "action": "set_option",
+   "match": "create a skill",
+   "text": "Create a skill that checks every migration for rollback logic"
+  },
+  {
+   "id": "milind:Q686",
+   "action": "set_option",
+   "match": "add a claude",
+   "text": "Place a CLAUDE.md in every directory that contains migration files"
+  },
+  {
+   "id": "milind:Q687",
+   "action": "set_option",
+   "match": "use sequential resolution",
+   "text": "Sequential fixes for same-file issues, parallel for unrelated files"
+  },
+  {
+   "id": "milind:Q687",
+   "action": "set_option",
+   "match": "fix issues one",
+   "text": "Fix the issues one at a time, in alphabetical order by file name"
+  },
+  {
+   "id": "milind:Q687",
+   "action": "set_option",
+   "match": "create a single",
+   "text": "Create a single plan covering all issues and apply it simultaneously"
+  },
+  {
+   "id": "milind:Q687",
+   "action": "set_option",
+   "match": "fix all issues",
+   "text": "Fix all issues in parallel regardless of whether they might conflict"
+  },
+  {
+   "id": "milind:Q688",
+   "action": "set_option",
+   "match": "neither loads because",
+   "text": "Neither rule set loads, since the match is ambiguous"
+  },
+  {
+   "id": "milind:Q688",
+   "action": "set_option",
+   "match": "only the prompt",
+   "text": "Only the prompt template rules, as the more specific match"
+  },
+  {
+   "id": "milind:Q688",
+   "action": "set_option",
+   "match": "only the api",
+   "text": "Only the API integration rules, as the first matching glob"
+  },
+  {
+   "id": "milind:Q688",
+   "action": "set_option",
+   "match": "both prompt template",
+   "text": "Both the prompt template and the API integration rules"
+  },
+  {
+   "id": "milind:Q69",
+   "action": "set_option",
+   "match": "have the coordinator",
+   "text": "Have the coordinator summarize the search findings before passing them on"
+  },
+  {
+   "id": "milind:Q69",
+   "action": "set_option",
+   "match": "pass the web",
+   "text": "Pass the search agent's session ID so synthesis can retrieve the findings"
+  },
+  {
+   "id": "milind:Q69",
+   "action": "set_option",
+   "match": "include the complete",
+   "text": "Put the full structured findings (claim, excerpt, URL, date) in its prompt"
+  },
+  {
+   "id": "milind:Q69",
+   "action": "set_option",
+   "match": "store findings in",
+   "text": "Store findings in a shared database and give synthesis a query tool for them"
+  },
+  {
+   "id": "milind:Q690",
+   "action": "set_option",
+   "match": "the skill creates",
+   "text": "The skill creates and checks out a new git branch before it starts executing"
+  },
+  {
+   "id": "milind:Q690",
+   "action": "set_option",
+   "match": "the skill runs",
+   "text": "The skill runs in an isolated context separate from the main conversation"
+  },
+  {
+   "id": "milind:Q690",
+   "action": "set_option",
+   "match": "the skill forks",
+   "text": "The skill forks the Claude Code process so its steps run in parallel"
+  },
+  {
+   "id": "milind:Q690",
+   "action": "set_option",
+   "match": "the skill saves",
+   "text": "The skill saves a conversation checkpoint that can be restored later"
+  },
+  {
+   "id": "milind:Q691",
+   "action": "set_option",
+   "match": "one root claude",
+   "text": "One root CLAUDE.md holding every rule for all twelve services, grouped in sections"
+  },
+  {
+   "id": "milind:Q691",
+   "action": "set_option",
+   "match": "root claude md",
+   "text": "Org-wide rules in root CLAUDE.md, service rules in path-scoped .claude/rules/"
+  },
+  {
+   "id": "milind:Q691",
+   "action": "set_option",
+   "match": "twelve directory level",
+   "text": "Twelve directory-level CLAUDE.md files only, one inside each service"
+  },
+  {
+   "id": "milind:Q691",
+   "action": "set_option",
+   "match": "all rules in",
+   "text": "All rules in each developer's ~/.claude/CLAUDE.md, kept in sync manually"
+  },
+  {
+   "id": "milind:Q693",
+   "action": "set_option",
+   "match": "the skill crashes",
+   "text": "The skill aborts with an unhandled tool error"
+  },
+  {
+   "id": "milind:Q693",
+   "action": "set_option",
+   "match": "the write operation succeeds",
+   "text": "The write succeeds without any permission prompt"
+  },
+  {
+   "id": "milind:Q693",
+   "action": "set_option",
+   "match": "the write operation",
+   "text": "The write is blocked since it is not in allowed-tools"
+  },
+  {
+   "id": "milind:Q693",
+   "action": "set_option",
+   "match": "claude code prompts",
+   "text": "Claude Code prompts the user for permission"
+  },
+  {
+   "id": "milind:Q694",
+   "action": "set_option",
+   "match": "set execution false",
+   "text": "Set `execution: false` in CLAUDE.md, then remove it once trust is built"
+  },
+  {
+   "id": "milind:Q694",
+   "action": "set_option",
+   "match": "use p flag",
+   "text": "Run with -p and a --dry-run flag initially, then drop the flag later"
+  },
+  {
+   "id": "milind:Q694",
+   "action": "set_option",
+   "match": "start with a",
+   "text": "Start with a read-only permission set, then expand it as confidence grows"
+  },
+  {
+   "id": "milind:Q694",
+   "action": "set_option",
+   "match": "use plan mode",
+   "text": "Use plan mode exclusively at first, then move to direct execution later"
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_option",
+   "match": "architecture rules apply to",
+   "text": "Architecture rules apply to every file in the PR once any file matches"
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_option",
+   "match": "architecture rules apply only",
+   "text": "Architecture rules apply to src/core/ files only, not to src/utils/ files"
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_option",
+   "match": "the ci pipeline",
+   "text": "The CI pipeline must explicitly specify which rule files to apply"
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_option",
+   "match": "path specific rules",
+   "text": "Path-specific rules are ignored entirely when running in CI mode"
+  },
+  {
+   "id": "milind:Q696",
+   "action": "set_option",
+   "match": "switch to plan",
+   "text": "Switch to plan mode and redesign the overall approach before continuing"
+  },
+  {
+   "id": "milind:Q696",
+   "action": "set_option",
+   "match": "rewrite the entire",
+   "text": "Have Claude rewrite the entire function from scratch in a fresh session"
+  },
+  {
+   "id": "milind:Q696",
+   "action": "set_option",
+   "match": "examine the failing",
+   "text": "Share the failing case's details and have Claude fix just that case"
+  },
+  {
+   "id": "milind:Q696",
+   "action": "set_option",
+   "match": "add more examples",
+   "text": "Keep adding more I/O examples until Claude produces code that passes"
+  },
+  {
+   "id": "milind:Q699",
+   "action": "set_option",
+   "match": "edit claude commands",
+   "text": "Edit the shared .claude/commands/review.md directly to add the checks"
+  },
+  {
+   "id": "milind:Q699",
+   "action": "set_option",
+   "match": "create claude commands",
+   "text": "Create ~/.claude/commands/review-extended.md building on the shared one"
+  },
+  {
+   "id": "milind:Q699",
+   "action": "set_option",
+   "match": "override with claude",
+   "text": "Override it with a same-named ~/.claude/commands/review.md file"
+  },
+  {
+   "id": "milind:Q699",
+   "action": "set_option",
+   "match": "add their checks",
+   "text": "Add their extra checks to ~/.claude/CLAUDE.md as personal review instructions"
+  },
+  {
+   "id": "milind:Q70",
+   "action": "set_option",
+   "match": "hardware and infrastructure",
+   "text": "Hardware and infrastructure requirements for running each of the subagents"
+  },
+  {
+   "id": "milind:Q70",
+   "action": "set_option",
+   "match": "the api authentication",
+   "text": "The API authentication credentials for each of the subagent endpoints"
+  },
+  {
+   "id": "milind:Q70",
+   "action": "set_option",
+   "match": "research goals quality",
+   "text": "Research goals, quality criteria, coverage needs and when to refine"
+  },
+  {
+   "id": "milind:Q70",
+   "action": "set_option",
+   "match": "the exact sequence",
+   "text": "The exact sequence of subagent calls and the parameters for each one"
+  },
+  {
+   "id": "milind:Q702",
+   "action": "set_option",
+   "match": "path specific rule",
+   "text": "A path-specific rule with the glob `**/components/**/*.tsx`"
+  },
+  {
+   "id": "milind:Q702",
+   "action": "set_option",
+   "match": "both approaches work",
+   "text": "Both approaches work equally well for these component files"
+  },
+  {
+   "id": "milind:Q702",
+   "action": "set_option",
+   "match": "create directory level",
+   "text": "Directory-level CLAUDE.md files in all three component directories"
+  },
+  {
+   "id": "milind:Q702",
+   "action": "set_option",
+   "match": "directory level claude md because",
+   "text": "A directory-level CLAUDE.md, since it is simpler to configure"
+  },
+  {
+   "id": "milind:Q703",
+   "action": "set_option",
+   "match": "tag each finding",
+   "text": "Tag each finding with a unique ID and deduplicate them externally"
+  },
+  {
+   "id": "milind:Q703",
+   "action": "set_option",
+   "match": "delete the previous",
+   "text": "Delete the previous review comments before re-running the review"
+  },
+  {
+   "id": "milind:Q703",
+   "action": "set_option",
+   "match": "include prior review",
+   "text": "Include the prior review findings in the prompt context"
+  },
+  {
+   "id": "milind:Q703",
+   "action": "set_option",
+   "match": "use skip duplicates",
+   "text": "Pass a --skip-duplicates flag so repeated findings are suppressed"
+  },
+  {
+   "id": "milind:Q705",
+   "action": "set_option",
+   "match": "everything in claude",
+   "text": "Everything in .claude/CLAUDE.md, with conditional sections for backend, frontend and personal"
+  },
+  {
+   "id": "milind:Q705",
+   "action": "set_option",
+   "match": "claude claude md",
+   "text": "~/.claude/CLAUDE.md for personal, .claude/CLAUDE.md for style, path-scoped .claude/rules/ per area"
+  },
+  {
+   "id": "milind:Q705",
+   "action": "set_option",
+   "match": "separate claude md",
+   "text": "Separate CLAUDE.md files at every directory level, from the root down to each feature folder"
+  },
+  {
+   "id": "milind:Q705",
+   "action": "set_option",
+   "match": "one skill per",
+   "text": "One skill per context: a backend skill, a frontend skill and a shared style skill for everyone"
+  },
+  {
+   "id": "milind:Q706",
+   "action": "set_option",
+   "match": "the explore subagent replaces",
+   "text": "The explore subagent replaces plan mode entirely once a task is large"
+  },
+  {
+   "id": "milind:Q706",
+   "action": "set_option",
+   "match": "they cannot be",
+   "text": "They cannot be used together, since plan mode blocks all subagents"
+  },
+  {
+   "id": "milind:Q706",
+   "action": "set_option",
+   "match": "the explore subagent can",
+   "text": "Explore can be used inside plan mode for isolated discovery before finalizing"
+  },
+  {
+   "id": "milind:Q706",
+   "action": "set_option",
+   "match": "plan mode automatically",
+   "text": "Plan mode invokes the explore subagent automatically on every request"
+  },
+  {
+   "id": "milind:Q708",
+   "action": "set_option",
+   "match": "rate limiting between",
+   "text": "Rate limiting between invocations, so reviews do not overlap"
+  },
+  {
+   "id": "milind:Q708",
+   "action": "set_option",
+   "match": "session context isolation",
+   "text": "Session context isolation, so each invocation starts fresh"
+  },
+  {
+   "id": "milind:Q708",
+   "action": "set_option",
+   "match": "automatic context compression",
+   "text": "Automatic context compression that kicks in at high volume"
+  },
+  {
+   "id": "milind:Q708",
+   "action": "set_option",
+   "match": "shared context pooling",
+   "text": "Shared context pooling across invocations for efficiency"
+  },
+  {
+   "id": "milind:Q709",
+   "action": "set_option",
+   "match": "write the transformation",
+   "text": "Write the transformation by hand and ask Claude to optimize it afterwards"
+  },
+  {
+   "id": "milind:Q709",
+   "action": "set_option",
+   "match": "use plan mode",
+   "text": "Use plan mode to design the transformation, then implement it in one shot"
+  },
+  {
+   "id": "milind:Q709",
+   "action": "set_option",
+   "match": "describe the transformation",
+   "text": "Describe the transformation in natural language and let Claude work it out"
+  },
+  {
+   "id": "milind:Q709",
+   "action": "set_option",
+   "match": "provide concrete i",
+   "text": "Provide I/O examples as test cases, then generate, test and iterate on failures"
+  },
+  {
+   "id": "milind:Q71",
+   "action": "set_option",
+   "match": "cache the full",
+   "text": "Cache the full result and pass Claude only a reference key to look it up"
+  },
+  {
+   "id": "milind:Q71",
+   "action": "set_option",
+   "match": "log the irrelevant",
+   "text": "Log the irrelevant fields separately and pass nothing at all to Claude"
+  },
+  {
+   "id": "milind:Q71",
+   "action": "set_option",
+   "match": "filter the result",
+   "text": "Filter it to the 5 relevant fields before adding it to conversation history"
+  },
+  {
+   "id": "milind:Q71",
+   "action": "set_option",
+   "match": "pass the complete",
+   "text": "Pass the complete 42-field result so Claude has full context for later"
   }
  ],
  "hold": []
