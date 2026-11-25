@@ -33807,6 +33807,1112 @@
    "id": "milindgaharwar:16908042",
    "action": "set_explanation",
    "text": "`context: fork` runs a skill in an isolated subagent context: the skill content becomes the subagent's prompt, and it does not see the main conversation history. Avoid it when the skill needs conversational continuity with the main session, for example a skill that asks the developer clarifying questions mid-execution. Verbose output is actually a reason to fork (it keeps the main context clean), and a forked skill can still read and write project files."
+  },
+  {
+   "id": "amey:architect-foundations-practice-12",
+   "action": "set_option",
+   "match": "The task has",
+   "text": "The task has many sequential steps, and a single agent would take too long to finish them"
+  },
+  {
+   "id": "amey:architect-foundations-practice-12",
+   "action": "set_option",
+   "match": "Subagents are faster",
+   "text": "Subagents complete the work faster than one agent, since their calls execute in parallel"
+  },
+  {
+   "id": "amey:architect-foundations-practice-12",
+   "action": "set_option",
+   "match": "The output must",
+   "text": "The final output must be assembled from several distinct sections written separately"
+  },
+  {
+   "id": "amey:architect-foundations-practice-13",
+   "action": "set_option",
+   "match": "Increase the context",
+   "text": "Increase the context window so the agent can see more of its own history"
+  },
+  {
+   "id": "amey:architect-foundations-practice-13",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Switch to a larger, more capable model that is better at planning tool use"
+  },
+  {
+   "id": "amey:architect-foundations-practice-13",
+   "action": "set_option",
+   "match": "Remove one of",
+   "text": "Remove one of the two tools so the agent no longer has a choice to make"
+  },
+  {
+   "id": "amey:architect-foundations-practice-14",
+   "action": "set_option",
+   "match": "It calls more",
+   "text": "It routes requests across more than one model"
+  },
+  {
+   "id": "amey:architect-foundations-practice-14",
+   "action": "set_option",
+   "match": "It produces structured",
+   "text": "It returns structured output instead of prose"
+  },
+  {
+   "id": "amey:architect-foundations-practice-14",
+   "action": "set_option",
+   "match": "It runs longer",
+   "text": "Its runs regularly last longer than a minute"
+  },
+  {
+   "id": "amey:architect-foundations-practice-15",
+   "action": "set_option",
+   "match": "Surface the unverifiable",
+   "text": "Surface the step for human confirmation before acting on its result"
+  },
+  {
+   "id": "amey:architect-foundations-practice-15",
+   "action": "set_option",
+   "match": "Proceed, since the",
+   "text": "Proceed with the result, since the model's output is right in most cases"
+  },
+  {
+   "id": "amey:architect-foundations-practice-15",
+   "action": "set_option",
+   "match": "Retry the step",
+   "text": "Retry the step until two independent runs produce the same result"
+  },
+  {
+   "id": "amey:architect-foundations-practice-15",
+   "action": "set_option",
+   "match": "Log the step",
+   "text": "Log the step for later review and continue with the next action"
+  },
+  {
+   "id": "amey:architect-foundations-practice-16",
+   "action": "set_option",
+   "match": "An agent, for",
+   "text": "An agent, since it keeps the design flexible for whatever requirements arrive later"
+  },
+  {
+   "id": "amey:architect-foundations-practice-16",
+   "action": "set_option",
+   "match": "A deterministic implementation,",
+   "text": "Deterministic code, with model calls reserved for any genuinely ambiguous parts"
+  },
+  {
+   "id": "amey:architect-foundations-practice-16",
+   "action": "set_option",
+   "match": "An agent with",
+   "text": "An agent with a low step limit, so its cost and runtime stay predictable"
+  },
+  {
+   "id": "amey:architect-foundations-practice-16",
+   "action": "set_option",
+   "match": "A multi-agent design",
+   "text": "A multi-agent design, so each processing concern is handled by its own agent"
+  },
+  {
+   "id": "amey:architect-foundations-practice-17",
+   "action": "set_option",
+   "match": "Reducing the number",
+   "text": "Reducing the number of tools so fewer code paths can go wrong"
+  },
+  {
+   "id": "amey:architect-foundations-practice-17",
+   "action": "set_option",
+   "match": "Using a single",
+   "text": "Using a single model for every step so behavior stays uniform"
+  },
+  {
+   "id": "amey:architect-foundations-practice-17",
+   "action": "set_option",
+   "match": "Increasing the step",
+   "text": "Raising the step limit so runs reach completion more often"
+  },
+  {
+   "id": "amey:architect-foundations-practice-18",
+   "action": "set_option",
+   "match": "In each developer's",
+   "text": "In each developer's personal ~/.claude/CLAUDE.md file"
+  },
+  {
+   "id": "amey:architect-foundations-practice-18",
+   "action": "set_option",
+   "match": "In the pull",
+   "text": "In the pull request template used for every change"
+  },
+  {
+   "id": "amey:architect-foundations-practice-18",
+   "action": "set_option",
+   "match": "In a pinned",
+   "text": "In a pinned message in the team's engineering chat"
+  },
+  {
+   "id": "amey:architect-foundations-practice-19",
+   "action": "set_option",
+   "match": "It is well",
+   "text": "It is well defined and repeatable, so it can run unattended"
+  },
+  {
+   "id": "amey:architect-foundations-practice-19",
+   "action": "set_option",
+   "match": "It is complex",
+   "text": "It is complex and benefits from close step-by-step supervision"
+  },
+  {
+   "id": "amey:architect-foundations-practice-19",
+   "action": "set_option",
+   "match": "It requires many",
+   "text": "It requires many different tools across several systems"
+  },
+  {
+   "id": "amey:architect-foundations-practice-19",
+   "action": "set_option",
+   "match": "It produces a",
+   "text": "It produces a long output that is easier to read in a file"
+  },
+  {
+   "id": "amey:architect-foundations-practice-2",
+   "action": "set_option",
+   "match": "In the system",
+   "text": "In the system prompt, phrased firmly as a non-negotiable rule with the $200 limit spelled out"
+  },
+  {
+   "id": "amey:architect-foundations-practice-2",
+   "action": "set_option",
+   "match": "In the model's",
+   "text": "In the model's reasoning, since it reads the refund policy document before every refund decision"
+  },
+  {
+   "id": "amey:architect-foundations-practice-2",
+   "action": "set_option",
+   "match": "In quarterly staff",
+   "text": "In quarterly staff training, so the support team knows to watch agent refunds above the cap"
+  },
+  {
+   "id": "amey:architect-foundations-practice-2",
+   "action": "set_option",
+   "match": "Enforced in the",
+   "text": "Enforced at the tool layer, which rejects amounts over the cap and routes larger cases to escalation"
+  },
+  {
+   "id": "amey:architect-foundations-practice-20",
+   "action": "set_option",
+   "match": "Skills are always",
+   "text": "Skills are generally preferable, since they cost far less context than any subagent would"
+  },
+  {
+   "id": "amey:architect-foundations-practice-20",
+   "action": "set_option",
+   "match": "Whether the need",
+   "text": "Whether it is reusable know-how or a separate line of work that needs its own context"
+  },
+  {
+   "id": "amey:architect-foundations-practice-20",
+   "action": "set_option",
+   "match": "Whether the task",
+   "text": "Whether the task is long enough that it would not finish within a single session"
+  },
+  {
+   "id": "amey:architect-foundations-practice-20",
+   "action": "set_option",
+   "match": "Whether the repository",
+   "text": "Whether the repository already has a CLAUDE.md that could hold the same instructions"
+  },
+  {
+   "id": "amey:architect-foundations-practice-21",
+   "action": "set_option",
+   "match": "To hold instructions",
+   "text": "To hold standing instructions the model should follow throughout the session"
+  },
+  {
+   "id": "amey:architect-foundations-practice-21",
+   "action": "set_option",
+   "match": "To store project",
+   "text": "To store project context and conventions that Claude loads at every session start"
+  },
+  {
+   "id": "amey:architect-foundations-practice-21",
+   "action": "set_option",
+   "match": "To define which",
+   "text": "To define which model and effort level Claude Code uses for a given task"
+  },
+  {
+   "id": "amey:architect-foundations-practice-22",
+   "action": "set_option",
+   "match": "The others need",
+   "text": "The other engineers need more capable machines to run Claude Code at full quality"
+  },
+  {
+   "id": "amey:architect-foundations-practice-22",
+   "action": "set_option",
+   "match": "The repository is",
+   "text": "The repository is too large for Claude Code to index consistently for each user"
+  },
+  {
+   "id": "amey:architect-foundations-practice-22",
+   "action": "set_option",
+   "match": "The others are",
+   "text": "The other engineers use different terminals, which changes how Claude Code behaves"
+  },
+  {
+   "id": "amey:architect-foundations-practice-22",
+   "action": "set_option",
+   "match": "The working conventions",
+   "text": "The working conventions live in one person's local setup, not in the repository"
+  },
+  {
+   "id": "amey:architect-foundations-practice-23",
+   "action": "set_option",
+   "match": "Ask for the",
+   "text": "Ask for the schema in the prompt and validate the output afterwards"
+  },
+  {
+   "id": "amey:architect-foundations-practice-23",
+   "action": "set_option",
+   "match": "Ask for JSON",
+   "text": "Ask for JSON in the prompt and repair malformed output in code"
+  },
+  {
+   "id": "amey:architect-foundations-practice-23",
+   "action": "set_option",
+   "match": "Use a lower",
+   "text": "Use a lower temperature so the output format stays consistent"
+  },
+  {
+   "id": "amey:architect-foundations-practice-24",
+   "action": "set_option",
+   "match": "Raise the temperature",
+   "text": "Raise the temperature so the model handles unfamiliar formats more flexibly"
+  },
+  {
+   "id": "amey:architect-foundations-practice-24",
+   "action": "set_option",
+   "match": "Add examples covering",
+   "text": "Add examples of the rare formats and define what to return when a field is absent"
+  },
+  {
+   "id": "amey:architect-foundations-practice-24",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Switch to a larger model that generalizes better to formats it has rarely seen before"
+  },
+  {
+   "id": "amey:architect-foundations-practice-24",
+   "action": "set_option",
+   "match": "Ask the model",
+   "text": "Add an instruction telling the model to take extra care with unusual inputs"
+  },
+  {
+   "id": "amey:architect-foundations-practice-25",
+   "action": "set_option",
+   "match": "Nothing, since the",
+   "text": "Nothing, since the model will simply leave out any field it cannot find in the source document"
+  },
+  {
+   "id": "amey:architect-foundations-practice-25",
+   "action": "set_option",
+   "match": "A default value",
+   "text": "A plausible default value, so every downstream consumer still receives a usable field value"
+  },
+  {
+   "id": "amey:architect-foundations-practice-25",
+   "action": "set_option",
+   "match": "An explicit representation",
+   "text": "An explicit marker for absence, so a missing value differs from one left unfilled"
+  },
+  {
+   "id": "amey:architect-foundations-practice-25",
+   "action": "set_option",
+   "match": "A free-text field",
+   "text": "A free-text notes field where the model can describe in its own words what it could not find"
+  },
+  {
+   "id": "amey:architect-foundations-practice-26",
+   "action": "set_option",
+   "match": "Randomising the order",
+   "text": "Randomising the order of documents so no batch position biases the results"
+  },
+  {
+   "id": "amey:architect-foundations-practice-26",
+   "action": "set_option",
+   "match": "Increasing the output",
+   "text": "Increasing the output token limit so no extraction is cut off midway through"
+  },
+  {
+   "id": "amey:architect-foundations-practice-26",
+   "action": "set_option",
+   "match": "Running each document",
+   "text": "Running each document twice and keeping whichever result validates first"
+  },
+  {
+   "id": "amey:architect-foundations-practice-27",
+   "action": "set_option",
+   "match": "Separate the sections",
+   "text": "Split it into clearly delimited sections for instruction, input, and output format"
+  },
+  {
+   "id": "amey:architect-foundations-practice-27",
+   "action": "edit",
+   "field": "opt",
+   "find": "Shorten it",
+   "replace": "Shorten it so the model has less prose to work through before answering"
+  },
+  {
+   "id": "amey:architect-foundations-practice-27",
+   "action": "set_option",
+   "match": "Move it into",
+   "text": "Move the whole prompt into the system prompt so its instructions carry more authority"
+  },
+  {
+   "id": "amey:architect-foundations-practice-27",
+   "action": "set_option",
+   "match": "Add emphasis to",
+   "text": "Add emphasis such as capitals or bold markers to the output format requirement"
+  },
+  {
+   "id": "amey:architect-foundations-practice-28",
+   "action": "set_option",
+   "match": "It contains more",
+   "text": "It contains more than ten tools, which exceeds what a model can handle"
+  },
+  {
+   "id": "amey:architect-foundations-practice-28",
+   "action": "set_option",
+   "match": "The tools return",
+   "text": "The tools return JSON objects rather than plain-text summaries for the model"
+  },
+  {
+   "id": "amey:architect-foundations-practice-28",
+   "action": "set_option",
+   "match": "The tools are",
+   "text": "The tools are implemented across several services owned by different teams"
+  },
+  {
+   "id": "amey:architect-foundations-practice-29",
+   "action": "set_option",
+   "match": "With a description",
+   "text": "With a description that warns the model to be careful before calling it"
+  },
+  {
+   "id": "amey:architect-foundations-practice-29",
+   "action": "set_option",
+   "match": "So that it requires",
+   "text": "So that it requires extra parameters, making accidental calls less likely"
+  },
+  {
+   "id": "amey:architect-foundations-practice-29",
+   "action": "set_option",
+   "match": "So that it is",
+   "text": "So that it is declared last, after every read-only tool in the list"
+  },
+  {
+   "id": "amey:architect-foundations-practice-3",
+   "action": "set_option",
+   "match": "Provenance is lost",
+   "text": "Provenance is lost at handoffs: claims and their sources aren't passed together in structured form"
+  },
+  {
+   "id": "amey:architect-foundations-practice-3",
+   "action": "set_option",
+   "match": "The report subagent's",
+   "text": "The report subagent runs on a model too small to track which source supports which claim"
+  },
+  {
+   "id": "amey:architect-foundations-practice-3",
+   "action": "set_option",
+   "match": "The web is",
+   "text": "The web sources are unreliable, so the claims they return often contradict each other"
+  },
+  {
+   "id": "amey:architect-foundations-practice-3",
+   "action": "set_option",
+   "match": "Too many subagents",
+   "text": "Too many subagents run in parallel, so their results reach the coordinator out of order"
+  },
+  {
+   "id": "amey:architect-foundations-practice-30",
+   "action": "set_option",
+   "match": "Increase the context",
+   "text": "Increase the context window so the full payload fits with room to spare"
+  },
+  {
+   "id": "amey:architect-foundations-practice-30",
+   "action": "set_option",
+   "match": "Summarise the payload",
+   "text": "Summarise the payload with a second model call before it enters context"
+  },
+  {
+   "id": "amey:architect-foundations-practice-30",
+   "action": "set_option",
+   "match": "Call the tool",
+   "text": "Call the tool less often so the payload enters the context fewer times"
+  },
+  {
+   "id": "amey:architect-foundations-practice-31",
+   "action": "set_option",
+   "match": "The implementation language",
+   "text": "The implementation language and framework the tool is built on"
+  },
+  {
+   "id": "amey:architect-foundations-practice-31",
+   "action": "set_option",
+   "match": "The service level",
+   "text": "The service level agreement and expected latency of each call"
+  },
+  {
+   "id": "amey:architect-foundations-practice-31",
+   "action": "set_option",
+   "match": "The name of",
+   "text": "The name of the owning team and how to reach them about any failures"
+  },
+  {
+   "id": "amey:architect-foundations-practice-32",
+   "action": "set_option",
+   "match": "The model version",
+   "text": "The model version was silently swapped partway through the long run"
+  },
+  {
+   "id": "amey:architect-foundations-practice-32",
+   "action": "set_option",
+   "match": "Context has accumulated",
+   "text": "Accumulated context has made relevant material compete with stale material"
+  },
+  {
+   "id": "amey:architect-foundations-practice-32",
+   "action": "set_option",
+   "match": "The temperature was",
+   "text": "The temperature was set too low, so later outputs grew repetitive"
+  },
+  {
+   "id": "amey:architect-foundations-practice-32",
+   "action": "set_option",
+   "match": "The tools became",
+   "text": "The tools became slower over time, so later tool results came back incomplete"
+  },
+  {
+   "id": "amey:architect-foundations-practice-33",
+   "action": "set_option",
+   "match": "Rely on the",
+   "text": "Rely on the model to remember what mattered, since key points survive compaction"
+  },
+  {
+   "id": "amey:architect-foundations-practice-33",
+   "action": "set_option",
+   "match": "Increase the context",
+   "text": "Increase the context window so that compaction does not trigger during the task"
+  },
+  {
+   "id": "amey:architect-foundations-practice-33",
+   "action": "set_option",
+   "match": "Write the decisions",
+   "text": "Record must-keep decisions and constraints in an explicit summary carried forward"
+  },
+  {
+   "id": "amey:architect-foundations-practice-33",
+   "action": "set_option",
+   "match": "Restart the task",
+   "text": "Restart the task after compaction and let the model rebuild its state from scratch"
+  },
+  {
+   "id": "amey:architect-foundations-practice-34",
+   "action": "set_option",
+   "match": "A larger model",
+   "text": "A larger, more capable model that makes fewer errors on the hard cases"
+  },
+  {
+   "id": "amey:architect-foundations-practice-34",
+   "action": "set_option",
+   "match": "A longer prompt",
+   "text": "A longer prompt that spells out every single requirement in complete detail"
+  },
+  {
+   "id": "amey:architect-foundations-practice-34",
+   "action": "set_option",
+   "match": "More examples in",
+   "text": "More examples in the prompt covering the expected output format"
+  },
+  {
+   "id": "amey:architect-foundations-practice-35",
+   "action": "set_option",
+   "match": "Total tokens consumed",
+   "text": "Total tokens consumed per run, tracked against the budget set for the system"
+  },
+  {
+   "id": "amey:architect-foundations-practice-35",
+   "action": "set_option",
+   "match": "Average response time",
+   "text": "Average end-to-end response time across all runs, compared with the latency target"
+  },
+  {
+   "id": "amey:architect-foundations-practice-35",
+   "action": "set_option",
+   "match": "The number of",
+   "text": "The number of tool calls per run, with alerts when it rises above the baseline"
+  },
+  {
+   "id": "amey:architect-foundations-practice-4",
+   "action": "set_option",
+   "match": "Give the coordinator",
+   "text": "Give the coordinator a bigger context window so the full document dumps fit alongside its plan"
+  },
+  {
+   "id": "amey:architect-foundations-practice-4",
+   "action": "set_option",
+   "match": "Have subagents return",
+   "text": "Have subagents return structured findings with citations, keeping full documents out of the coordinator"
+  },
+  {
+   "id": "amey:architect-foundations-practice-4",
+   "action": "set_option",
+   "match": "Have the coordinator",
+   "text": "Have the coordinator silently drop its oldest messages whenever the context limit approaches"
+  },
+  {
+   "id": "amey:architect-foundations-practice-4",
+   "action": "set_option",
+   "match": "Run the analysis",
+   "text": "Run the analysis twice and forward whichever answer is shorter, so that less text reaches the coordinator"
+  },
+  {
+   "id": "amey:architect-foundations-practice-5",
+   "action": "set_option",
+   "match": "Everything in one",
+   "text": "Everything in one root CLAUDE.md, so every convention loads in every session"
+  },
+  {
+   "id": "amey:architect-foundations-practice-5",
+   "action": "set_option",
+   "match": "Each engineer's personal",
+   "text": "Each engineer's personal user-level CLAUDE.md, adapted to the area they work in"
+  },
+  {
+   "id": "amey:architect-foundations-practice-5",
+   "action": "set_option",
+   "match": "The commit rule",
+   "text": "Commit rule in the project CLAUDE.md; per-area conventions in path-scoped .claude/rules/ files"
+  },
+  {
+   "id": "amey:architect-foundations-practice-5",
+   "action": "set_option",
+   "match": "A wiki page",
+   "text": "A wiki page linked from the README that documents each area's conventions"
+  },
+  {
+   "id": "amey:architect-foundations-practice-6",
+   "action": "set_option",
+   "match": "Interactive mode with",
+   "text": "Interactive mode, with an engineer copying the final review output into the CI job"
+  },
+  {
+   "id": "amey:architect-foundations-practice-6",
+   "action": "set_option",
+   "match": "Plan mode, which",
+   "text": "Plan mode, whose step-by-step plan output is structured enough for CI to parse"
+  },
+  {
+   "id": "amey:architect-foundations-practice-6",
+   "action": "set_option",
+   "match": "A shell script",
+   "text": "A shell script that greps the human-readable transcript for known finding patterns"
+  },
+  {
+   "id": "amey:architect-foundations-practice-6",
+   "action": "set_option",
+   "match": "Non-interactive mode with",
+   "text": "Print mode (-p) with --output-format json and a schema for validated results"
+  },
+  {
+   "id": "amey:architect-foundations-practice-7",
+   "action": "set_option",
+   "match": "Define explicit review",
+   "text": "Define explicit criteria (what to flag, what to ignore, a severity bar) with worked examples"
+  },
+  {
+   "id": "amey:architect-foundations-practice-7",
+   "action": "set_option",
+   "match": "Run the review",
+   "text": "Run the review twice and post only the findings that appear in both of the independent runs"
+  },
+  {
+   "id": "amey:architect-foundations-practice-7",
+   "action": "set_option",
+   "match": "Cap the reviewer",
+   "text": "Cap the reviewer at three findings per pull request so only the top issues get posted"
+  },
+  {
+   "id": "amey:architect-foundations-practice-7",
+   "action": "set_option",
+   "match": "Route all findings",
+   "text": "Route all findings to a separate channel so they stop cluttering the pull request view"
+  },
+  {
+   "id": "amey:architect-foundations-practice-7",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and (D) is surrender.",
+   "replace": "and rerouting (D) hides the noise rather than fixing it."
+  },
+  {
+   "id": "amey:architect-foundations-practice-8",
+   "action": "set_option",
+   "match": "Make every field",
+   "text": "Make every field required, so the model is forced to find a value for each one in every invoice"
+  },
+  {
+   "id": "amey:architect-foundations-practice-8",
+   "action": "set_option",
+   "match": "Make purchase_order nullable,",
+   "text": "Make purchase_order nullable and validate its presence where the document type requires it"
+  },
+  {
+   "id": "amey:architect-foundations-practice-8",
+   "action": "set_option",
+   "match": "Make everything optional",
+   "text": "Make all fields optional, so invoices without a PO number pass validation without errors"
+  },
+  {
+   "id": "amey:architect-foundations-practice-8",
+   "action": "set_option",
+   "match": "Have the model",
+   "text": "Have the model generate a plausible PO number when one is missing, so the record stays complete"
+  },
+  {
+   "id": "amey:architect-foundations-practice-9",
+   "action": "set_option",
+   "match": "Accuracy should be",
+   "text": "Accuracy should be measured only on the hardest documents, since those are where real failures occur"
+  },
+  {
+   "id": "amey:architect-foundations-practice-9",
+   "action": "set_option",
+   "match": "98% is below",
+   "text": "98% falls below the accepted industry benchmark for field extraction, so it hides a real quality gap"
+  },
+  {
+   "id": "amey:architect-foundations-practice-9",
+   "action": "set_option",
+   "match": "Validation-clean documents are",
+   "text": "Validation-clean documents are a biased sample; measure on a labeled sample drawn from all documents"
+  },
+  {
+   "id": "amey:architect-foundations-practice-9",
+   "action": "set_option",
+   "match": "Field accuracy is",
+   "text": "Field accuracy is not a meaningful metric; document-level pass rates are what count for extraction quality"
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#1",
+   "action": "set_option",
+   "match": "Present the response",
+   "text": "Present the response content to the user as the final answer, since the turn has ended."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#1",
+   "action": "set_option",
+   "match": "Execute the requested",
+   "text": "Run the requested tool(s), append the results to the history, and send a new request."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#1",
+   "action": "set_option",
+   "match": "Terminate the loop",
+   "text": "Terminate the loop immediately, since tool_use means the model has hit an error state."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#1",
+   "action": "set_option",
+   "match": "Wait for the",
+   "text": "Pause and wait for the user to manually approve continuing before any further request."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#2",
+   "action": "set_option",
+   "match": "The subagents ignored",
+   "text": "The subagents ignored parts of their instructions and silently skipped several of the subtopics."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#2",
+   "action": "set_option",
+   "match": "The coordinator's task",
+   "text": "The coordinator decomposed the task too narrowly, so the missing scope was never assigned."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#2",
+   "action": "set_option",
+   "match": "The model's context",
+   "text": "The model's context window is too small to hold all findings that span such a broad topic."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#2",
+   "action": "set_option",
+   "match": "The synthesis step",
+   "text": "The synthesis step used the wrong output format and dropped whole sections while merging."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#3",
+   "action": "set_option",
+   "match": "Add a programmatic",
+   "text": "Add a programmatic gate (e.g., a hook) that blocks the refund tool until verification has completed."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#3",
+   "action": "set_option",
+   "match": "Reword the system",
+   "text": "Reword the system prompt to state the verification requirement more forcefully and in capitals."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#3",
+   "action": "set_option",
+   "match": "Add a few",
+   "text": "Add more few-shot examples showing the verification call made before every refund call."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/check#3",
+   "action": "set_option",
+   "match": "Increase the model's",
+   "text": "Raise the model's reasoning effort so it plans the tool order more carefully in this workflow."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#11",
+   "action": "set_option",
+   "match": "The loop is",
+   "text": "The loop parses natural-language phrasing for termination instead of checking stop_reason."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#11",
+   "action": "set_option",
+   "match": "The model's temperature",
+   "text": "The model's temperature is set too high, which makes its closing phrasing inconsistent across runs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#11",
+   "action": "set_option",
+   "match": "The tool results",
+   "text": "The tool results aren't being appended to the conversation history between the loop's iterations."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#11",
+   "action": "set_option",
+   "match": "The loop needs",
+   "text": "The loop needs a lower max_tokens setting so that responses end at more predictable points."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#12",
+   "action": "set_option",
+   "match": "Design the coordinator",
+   "text": "Have the coordinator analyze each query's requirements and invoke only the subagents it needs."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#12",
+   "action": "set_option",
+   "match": "Reduce the number",
+   "text": "Reduce the number of subagents in the system so that every pipeline run is inherently shorter."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#12",
+   "action": "set_option",
+   "match": "Let each subagent",
+   "text": "Let each subagent decide whether to hand work to the next, taking the coordinator out of routing."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#12",
+   "action": "set_option",
+   "match": "Cache prior pipeline",
+   "text": "Cache prior pipeline results so that repeated simple queries can skip the full pipeline run."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#14",
+   "action": "set_option",
+   "match": "Implement an iterative",
+   "text": "Add an iterative refinement loop: evaluate synthesis for coverage gaps and re-delegate targeted queries."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#14",
+   "action": "set_option",
+   "match": "Have the coordinator",
+   "text": "Decompose broadly, then check the synthesized output against the original scope before finalizing."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#14",
+   "action": "set_option",
+   "match": "Increase each subagent's",
+   "text": "Increase each subagent's max_tokens so that every finding it returns is more thorough and detailed."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#14",
+   "action": "set_option",
+   "match": "Add more subagents",
+   "text": "Add more subagents to the pipeline so that more of the topic gets covered through sheer volume of searches."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#15",
+   "action": "set_option",
+   "match": "Implement a PostToolUse",
+   "text": "Add a PostToolUse hook that normalizes the heterogeneous formats before the model sees them."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#15",
+   "action": "set_option",
+   "match": "Add few-shot examples",
+   "text": "Add few-shot examples showing correct interpretation of each date and status format."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#15",
+   "action": "set_option",
+   "match": "Ask each backend",
+   "text": "Ask each backend team to change their APIs so all tools return one common format."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#18",
+   "action": "set_option",
+   "match": "A structured handoff",
+   "text": "A structured handoff summary with customer ID, root cause, refund amount, and recommended action."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#18",
+   "action": "set_option",
+   "match": "A copy of",
+   "text": "A copy of the full conversation transcript pasted into the ticket so the human agent can read it all."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#18",
+   "action": "set_option",
+   "match": "A confidence score",
+   "text": "A confidence score showing how certain the agent was that escalating was the right call to make."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#18",
+   "action": "set_option",
+   "match": "A faster escalation",
+   "text": "A faster escalation trigger so that the handoff happens much earlier in the customer's conversation."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "set_option",
+   "match": "The subagent received",
+   "text": "The subagent received no findings in its prompt, so it generated plausible-looking content instead."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "set_option",
+   "match": "The synthesis subagent's",
+   "text": "The synthesis subagent's AgentDefinition granted it web-search tools that it then used incorrectly."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "set_option",
+   "match": "The coordinator's allowedTools",
+   "text": "The coordinator's allowedTools was missing \"Task\", so the subagent ran without its configuration."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "set_option",
+   "match": "The findings exceeded",
+   "text": "The findings exceeded the subagent's context window and were silently truncated before synthesis."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#22",
+   "action": "set_option",
+   "match": "Coordinator prompts should",
+   "text": "Coordinator prompts should state research goals and quality criteria, not step-by-step procedures."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#22",
+   "action": "set_option",
+   "match": "Coordinators should never",
+   "text": "Coordinators should not constrain subagent behavior at all, since subagents work best fully autonomous."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#22",
+   "action": "set_option",
+   "match": "Search queries should",
+   "text": "Search queries should be generated by a separate query-planning subagent, not by the coordinator."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#22",
+   "action": "set_option",
+   "match": "The coordinator should",
+   "text": "The coordinator should run the searches itself rather than delegating them to a subagent."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#23",
+   "action": "set_option",
+   "match": "Prompt chaining —",
+   "text": "Prompt chaining: the breakdown is known upfront, so review each file, then run a cross-file pass."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#23",
+   "action": "set_option",
+   "match": "Dynamic decomposition —",
+   "text": "Dynamic decomposition: the subtasks can only be determined after seeing what the first file reveals."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#23",
+   "action": "set_option",
+   "match": "No decomposition —",
+   "text": "No decomposition: a single pass with a larger context window keeps every file in view together."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#23",
+   "action": "set_option",
+   "match": "Fork the session",
+   "text": "Fork the session 12 times, once per file, so each review runs in parallel, then merge the results."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#24",
+   "action": "set_option",
+   "match": "Dynamic decomposition —",
+   "text": "Dynamic decomposition: map the module, find high-impact untested areas, adapt the plan as you go."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#24",
+   "action": "set_option",
+   "match": "Prompt chaining —",
+   "text": "Prompt chaining: write one test file per source file, working through them in strict alphabetical order."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#24",
+   "action": "set_option",
+   "match": "Delegate the entire",
+   "text": "Delegate the entire task to a single subagent and let it work without any decomposition at all."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#24",
+   "action": "set_option",
+   "match": "Use plan mode",
+   "text": "Use plan mode to produce a fixed task list up front, then execute it without any later revision."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#4",
+   "action": "set_option",
+   "match": "Checking response.stop_reason after",
+   "text": "Checking response.stop_reason after every request to decide whether the loop should continue."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#4",
+   "action": "set_option",
+   "match": "Continuing the loop",
+   "text": "Continuing the loop whenever stop_reason is \"tool_use\" and the requested tools have been run."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#4",
+   "action": "set_option",
+   "match": "Using an arbitrary",
+   "text": "Using an arbitrary iteration cap as the main mechanism for deciding the loop is done."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#4",
+   "action": "set_option",
+   "match": "Appending tool results",
+   "text": "Appending tool results to the conversation history before sending the next request to Claude."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#5",
+   "action": "set_option",
+   "match": "It's a hard",
+   "text": "It's a hard technical limitation of the Agent SDK, which cannot connect subagents directly."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#5",
+   "action": "set_option",
+   "match": "It gives the",
+   "text": "It gives one place for observability, consistent error handling, and controlled information flow."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#5",
+   "action": "set_option",
+   "match": "It reduces the",
+   "text": "It caps the number of subagents that can be spawned, which keeps overall token costs down."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#5",
+   "action": "set_option",
+   "match": "It's required so",
+   "text": "It's required so that subagents automatically inherit each other's context through the hub."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#7",
+   "action": "set_option",
+   "match": "The synthesis subagent has",
+   "text": "The synthesis subagent sees none of those findings unless they were put in its prompt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#7",
+   "action": "set_option",
+   "match": "The system will",
+   "text": "The system will throw a configuration error at spawn time because the context is missing."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#9",
+   "action": "set_option",
+   "match": "When you want to permanently",
+   "text": "When you want to permanently delete a prior session's history and start over from scratch."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#9",
+   "action": "set_option",
+   "match": "When you want to explore",
+   "text": "When you want to explore divergent approaches from a shared baseline in isolation."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#9",
+   "action": "set_option",
+   "match": "When the underlying",
+   "text": "When the underlying source files have not changed at all since the session was last paused."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#9",
+   "action": "set_option",
+   "match": "When you need",
+   "text": "When you need a subagent to automatically inherit the coordinator's full conversation context."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Rewrite both descriptions",
+   "text": "Rewrite both descriptions with input formats, example queries, and clear boundaries between the two."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Rename the tools",
+   "text": "Rename both tools to something more distinctive so the model tells them apart by name alone."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Reduce the number",
+   "text": "Merge the two tools into one so the agent no longer has to choose between them at all."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Increase the model's",
+   "text": "Increase the model's temperature so it explores more varied tool choices across calls."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#2",
+   "action": "set_option",
+   "match": "Nothing — isError",
+   "text": "Nothing; isError: true is all the agent needs to decide how it should recover from the failure."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#2",
+   "action": "set_option",
+   "match": "It gives the",
+   "text": "It can't tell the agent a transient, retryable failure from a permission or business-rule one."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#2",
+   "action": "set_option",
+   "match": "isError should be",
+   "text": "isError should be a descriptive string rather than a boolean so it can carry more detail."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#2",
+   "action": "set_option",
+   "match": "The message field",
+   "text": "The message field is redundant alongside isError and should be removed to save tokens."
   }
  ],
  "hold": []
