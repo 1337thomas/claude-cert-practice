@@ -3386,6 +3386,477 @@
    "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
   },
   {
+   "id": "milind:Q486",
+   "action": "edit",
+   "field": "q",
+   "find": "Which `tool_choice` setting prevents this omission?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` setting prevents this omission?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "edit",
+   "field": "q",
+   "find": "What tool_choice configuration does this require?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What tool_choice configuration does this require?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "edit",
+   "field": "q",
+   "find": "How do you configure tool_choice for each task type",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). How do you configure tool_choice for each task type",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "edit",
+   "field": "q",
+   "find": "Why is the per-workflow tool_choice approach preferable?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Why is the per-workflow tool_choice approach preferable?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q728",
+   "action": "edit",
+   "field": "q",
+   "find": "Which is more reliable:",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which is more reliable:",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q745",
+   "action": "edit",
+   "field": "q",
+   "find": "Which configuration change achieves this?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which configuration change achieves this?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q759",
+   "action": "edit",
+   "field": "q",
+   "find": "When is it appropriate",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). When is it appropriate",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q769",
+   "action": "edit",
+   "field": "q",
+   "find": "When should you apply",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). When should you apply",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "edit",
+   "field": "q",
+   "find": "What will the model most likely do",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What will the model most likely do",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat architectural change best guarantees",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What architectural change best guarantees",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat is the most accurate explanation",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What is the most accurate explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` setting ensures",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` setting ensures",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` sequence",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` sequence",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat `tool_choice` setting should the coordinator use",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What `tool_choice` setting should the coordinator use",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool_choice setting achieves this?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which tool_choice setting achieves this?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool_choice setting fits?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which tool_choice setting fits?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_explanation",
+   "text": "For safety-critical mandatory tool calls, the exam guide recommends forced specific-tool invocation: `{\"type\": \"tool\", \"name\": \"check_drug_interactions\"}` guarantees the check happens regardless of model preference. Option A relies on instruction-following—unacceptable for a patient-safety constraint; option C forces some tool call but the model could pick a different tool; option D is overly restrictive if other tools are also needed during the recommendation turn.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_explanation",
+   "text": "The exam guide supports different tool_choice settings per API call (per step). Free-choice steps use \"auto\" for flexibility; mandatory-tool steps use forced specific-tool invocation. This gives each step exactly the control it requires. Option A uses \"any\" which doesn't guarantee the specific tool; option B forces validate_schema on all steps, breaking collection and transformation; option D uses \"any\" for mandatory steps, relying on instructions.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "set_explanation",
+   "text": "`tool_choice` is configured at the API call level, not globally per agent. The same agent can receive different tool_choice values on different calls depending on the task phase. This is the exam guide's per-turn tool_choice pattern applied to task-type switching. Option A forces tool use even when \"auto\" (no forced tool) is appropriate for exploration; option C forces report generation on exploratory calls, disrupting analysis; option D adds unnecessary architectural complexity.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_explanation",
+   "text": "Forced tool selection is deterministic; prompt instructions are probabilistic. For a required first-step extraction that subsequent steps depend on, the reliability of forced selection is worth the implementation. The exam guide notes this pattern: \"Using tool_choice forced selection to ensure a specific tool is called first.\"\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_explanation",
+   "text": "`tool_choice: \"any\"` guarantees at least one tool call. `\"required\"` is not a valid `tool_choice` value. System prompt instructions are probabilistic. Tool ordering doesn't affect whether tools are called.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q759",
+   "action": "set_explanation",
+   "text": "`\"auto\"` is appropriate when Claude's judgment about whether to extract is valuable — for example, detecting and communicating about blank or corrupted documents rather than producing empty extractions. For standard extraction pipelines where every document should produce structured output, `\"any\"` is more appropriate. The choice depends on whether occasional text responses are acceptable or destructive to downstream processing.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q769",
+   "action": "set_explanation",
+   "text": "The distinction is whether context-dependence exists. When the right tool depends on document content → `\"any\"` (Claude can inspect content and select). When a specific tool must ALWAYS run (pipeline initialization, mandatory first steps) → forced selection regardless of content. This is the fundamental design decision for multi-step extraction architectures.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_explanation",
+   "text": "Forced tool calls with strict enums create a constraint violation when the real-world value falls outside the defined set. The model's behavior in this case is unpredictable — it may pick the least-wrong option, which is a silent semantic error. The `enum + \"other\" + detail` pattern is the recommended escape hatch: it preserves enum constraints for known values while providing a structured path for novel ones, making the failure mode explicit rather than silent.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "set_explanation",
+   "text": "Setting `tool_choice` to `{\"type\": \"any\"}` forces the model to call at least one tool from the provided list before responding. The model still selects which tool to use, but it cannot skip tool use entirely. This is the correct setting when you need guaranteed grounding in external data rather than parametric knowledge.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_explanation",
+   "text": "Stage 1 requires a guaranteed call to a specific tool (`parse_document`), so forced tool choice is the minimum necessary constraint. Stage 2 requires conditional tool use—Claude should decide based on context—so `auto` is the minimum constraint (it allows both calling and not calling the tool). Stage 3 requires a guaranteed call to a specific tool (`emit_result`), so forced tool choice again. Option D is the only sequence that satisfies all three requirements with the minimum constraint at each stage.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "set_explanation",
+   "text": "The coordinator should use `auto` so it can decide intelligently which subagent to invoke based on context. Each subagent, however, should use a forced `tool_choice` for its own single capability tool so it always executes its specialized function rather than attempting to answer from parametric knowledge. This design matches coordinator-level reasoning with subagent-level reliability.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "set_explanation",
+   "text": "Forced tool selection requires the model to call that specific named tool on this turn, which is exactly what's needed to guarantee a particular step (like metadata extraction) runs first.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "set_explanation",
+   "text": "tool_choice: \"any\" forces the model to call a tool but leaves the choice of which tool up to the model — exactly right when multiple valid extraction schemas exist and you don't yet know which applies.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_explanation",
+   "text": "The exam guide distinguishes structural enforcement from instruction-based enforcement: for compliance-critical operations like modification logging, `{\"type\": \"tool\", \"name\": \"log_modification\"}` provides a guarantee that survives adversarial user inputs, whereas system-prompt rules can be worked around. Option A is factually incorrect—\"any\" allows any number of tools; option B is unrelated to tool_choice semantics; option D is incorrect: `any` is not deprecated by an API version; whether forced tool use is accepted depends on the model (see note).\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "D-Begründung präzisiert (modellabhängig, nicht API-Version) + Modellhinweis."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "from its parametric knowledge alone.",
+   "replace": "from its parametric knowledge alone, while still letting it choose which of the four tools fits.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Forced `search` (C) erzwingt ebenfalls einen Tool-Call; Stamm verlangt nun freie Toolwahl, damit nur `any` passt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Modellhinweis ergänzt; D-Begründung um Entfernung von temperature ergänzt.",
+   "text": "Separating classification from extraction via a two-call pipeline eliminates the ambiguity at the root of the problem. The first lightweight call determines document type; the second call registers only the matching tool and forces it with `tool_choice`. Claude has no choice but to use the correct schema because it is the only tool available. This is the standard pattern for deterministic multi-schema routing. Option D does not help either: routing instructions stay probabilistic, and API version 2026-10-21 removes `temperature` entirely (sending it returns a 400 error on every model).\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there the second call uses `auto` with only the matching tool and `strict: true`, or Structured Outputs with the matching schema."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "what is the correct way to recover the reasoning field?",
+   "replace": "what is the correct way to get a rationale back into the output?",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Ein `reasoning`-Feld im Tool-Input kann auf Haiku 5.5 eine reasoning_extraction-Ablehnung auslösen; Frage auf Begründung/Erklärung umgestellt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "The old prompt named the field explicitly",
+   "text": "The new schema never declares such a field; add a short `explanation` string to the tool's `properties` and `required`, and Claude fills it",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Doku: kurze Erklärung statt `reasoning`-Feld anfordern (\"Ask for an explanation, not reasoning\")."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Erklärung an neue Option B, reasoning_extraction und Modellgrenzen angepasst.",
+   "text": "The rationale did not disappear because of an inherent tool-use limitation: it disappeared because the new schema does not declare a field for it. Claude fills the fields that are declared in the `input_schema`, so adding a required string field restores a rationale as part of the structured output. Ask for a short `explanation` (or the evidence behind the result) rather than a `reasoning` field: on current models a field that asks for the model's reasoning or thinking might lead to a `reasoning_extraction` refusal. Option A is wrong: a forced tool call skips thinking (the response starts with the `tool_use` block), and manual extended thinking (`type: \"enabled\"`) does not support forced `tool_choice`. Options C and D misdescribe the API: `stop_reason` and `usage` carry no rationale, and JSON mode never added fields on its own.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_option",
+   "match": "Set `tool_choice` to `\"any\"`",
+   "text": "Use Structured Outputs (`output_config.format`) for the classification.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Eigentliches Ziel ist garantiert parsebares JSON; Structured Outputs statt erzwungenem tool_choice (Variante b)."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung für Structured Outputs neu geschrieben.",
+   "text": "With `tool_choice: \"auto\"` the model decides whether to call a tool, so a pipeline that always needs a structured classification cannot rely on it. Structured Outputs (`output_config.format` with a JSON schema) constrain the response itself through constrained decoding, so every reply is schema-compliant JSON and no retries are needed for schema violations. A system prompt instruction (D) is advisory, a retry loop (B) only treats the symptom and adds latency and cost, and more tools (A) make prose replies no less likely. Forcing a tool call (`tool_choice: \"any\"`) is not a general fix either: Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject forced `tool_choice` with a 400 error."
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_option",
+   "match": "Force a no-side-effect extraction contract",
+   "text": "Use Structured Outputs for the typed record; keep publish tools undistributed",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Typisierter Change Record = garantiert schema-konformes JSON; Structured Outputs statt erzwungenem Tool (Variante b)."
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung für Structured Outputs neu geschrieben.",
+   "text": "The typed-output requirement does not justify action authority. Structured Outputs (`output_config.format` with a JSON schema) guarantee a schema-compliant change record without giving the CI step any tool that can act, while publish and deploy tools stay out of this stage and behind a separate approved one. A prose summary (B) drops the typed record, distributing production write tools (C) relies on the system prompt for safety, and forcing the deployment tool (D) hands action authority to a stage that should only describe the change."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "They have defined a single `extract_data` tool whose parameters mirror the target schema.",
+   "replace": "They have defined an `extract_data` tool with `strict: true` whose parameters mirror the target schema, plus two helper tools, `lookup_customer` and `log_event`, that the agent may also call.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Mit nur einem Tool erzwingt auch `any` den Aufruf (zwei richtige Antworten); weitere Tools aufgenommen, Schema-Garantie auf strict gestützt."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` configuration guarantees",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` configuration guarantees",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung neu: forced tool garantiert den Aufruf, strict die Schema-Konformität; any kann ein Hilfstool wählen.",
+   "text": "Forcing `tool_choice` to `{\"type\": \"tool\", \"name\": \"extract_data\"}` makes the response start with a call to exactly that tool, so Claude does not reply with free text. Because the tool has `strict: true`, its input is constrained to the schema, so the JSON always matches it; the forced call alone guarantees the call, not schema compliance. With `{\"type\": \"any\"}` (C) Claude must call a tool but may pick `lookup_customer` or `log_event`; `auto` (B) and a system prompt instruction (D) still allow a prose reply.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use Structured Outputs (`output_config.format`) for a fixed JSON response, or `auto` plus `strict: true`."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "edit",
+   "field": "q",
+   "find": "A system uses Claude to auto-complete multi-step forms.",
+   "replace": "A system uses Claude Sonnet 4.5, which still accepts a prefilled assistant turn, to auto-complete multi-step forms.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/working-with-messages",
+   "why": "Prefill liefert ab Claude 4.6 eine 400; Stamm auf Legacy-Modell Sonnet 4.5 eingegrenzt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "Prefilling fixes only the opening tokens",
+   "text": "Prefilling fixes only the opening tokens, not nested fields; a forced tool call with `strict: true` enforces the schema, so the engineer is right",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Ohne strict garantiert ein input_schema keine Schema-Konformität; Garantie auf strict tool use gestützt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung auf strict tool use umgestellt, Correction zu Prefill präzisiert.",
+   "text": "Prefilling is a prompt-level technique: it fixes where the generation starts but imposes no structural constraint, so Claude may still produce nested fields that violate types, enums, or required properties. A forced tool call with `strict: true` uses constrained decoding, which guarantees that the tool input matches the schema exactly at every nesting level. An `input_schema` without `strict` gives no such guarantee and still needs validation. For a production form-completion pipeline the senior engineer is therefore right. A, C and D rest on false premises: the two approaches are not equivalent, a forced call needs no extra round-trip, and nesting depth is not limited to two levels.\n\n**Correction (per current docs):** the API accepts a prefill only on Claude 4.5 and earlier models; all later models (for example Claude Sonnet 4.6, Opus 4.6 and the 5.x models) return a 400 error. There, use Structured Outputs (`output_config.format`) or strict tool use; on Claude Opus 5.5, Sonnet 5.5 and Fable/Mythos 5.x combine `strict: true` with `tool_choice: \"auto\"`, because forced `tool_choice` is rejected."
+  },
+  {
+   "id": "milind:Q802",
+   "action": "remove",
+   "src": "editorial",
+   "why": "drei vertretbare deterministische Nachfilter, Doku ohne Aussage"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Lösung ohne Doku-Grundlage"
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Fine-Tuning laut CCAR-F-Guide nicht im Prüfungsstoff"
+  },
+  {
+   "id": "aliquanto:d6-44",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-46",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "davidalex89:associate/d2/quiz#14",
+   "action": "edit",
+   "field": "explanation",
+   "find": "This is the trap the official Sample 1 question is built around: asking the model",
+   "replace": "Asking the model",
+   "src": "editorial",
+   "why": "Verweis auf „the official Sample 1 question“ entfernt."
+  },
+  {
+   "id": "milind:Q1030",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The exam guide explicitly states: \"Domain 1: Agentic Architecture & Orchestration (27%), Domain 2: Tool Design & MCP Integration (18%), Domain 3: Claude Code Configuration & Workflows (20%), Domain 4: Prompt Engineering & Structured Output (20%), Domain 5: Context Management & Reliability (15%).\"",
+   "replace": "The exam guide's blueprint table lists Domain 1: Agentic Architecture & Orchestration at 27%, Domain 2: Tool Design & MCP Integration at 18%, Domain 3: Claude Code Configuration & Workflows at 20%, Domain 4: Prompt Engineering & Structured Output at 20%, and Domain 5: Context Management & Reliability at 15%.",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Werte stimmen mit Guide v1.1 überein; Tabellenwerte waren als wörtliches Zitat formatiert."
+  },
+  {
+   "id": "milind:Q1031",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The exam guide states: \"Your results are reported as a scaled score of 100–1,000. The minimum passing score is 720.\"",
+   "replace": "The exam guide states: \"The score is reported on a scaled range of 100–1,000, and the cut score is 720.\"",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Wert 720 stimmt; Zitat an den Wortlaut von Guide v1.1 angeglichen."
+  },
+  {
+   "id": "milind:Q1032",
+   "action": "edit",
+   "field": "explanation",
+   "find": "\"During the exam, 4 scenarios will be presented and picked at random from the full set of the 6 scenarios below.\"",
+   "replace": "\"During the exam, 4 scenarios are presented and picked at random from the full set of the 6 scenarios below.\"",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "6/4 stimmt; Zitat an den Wortlaut von Guide v1.1 angeglichen."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Merge the two tools into one",
+   "text": "Give both tools one identical generic description so the model treats them equally.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Merge ist nach „Consolidate related operations into fewer tools“ vertretbar; durch eindeutig falsche Beschreibungsstrategie ersetzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The temperature option (D) would not fix this either",
+   "replace": "An identical generic description (C) removes exactly the signal Claude needs, and the temperature option (D) would not fix this either",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung um ersetzten Distraktor C ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "Merge the two tools into one",
+   "text": "Delete both descriptions entirely so that the agent has to decide based on the two tool names alone",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Merge zu `get_account` ist nach „Consolidate related operations into fewer tools“ vertretbar; durch eindeutig falsche Option ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung um ersetzten Distraktor A und D ergänzt.",
+   "text": "Tool description quality is the primary, lowest-effort lever for fixing tool-selection confusion. Always fix descriptions before reaching for few-shot examples or architectural changes. Deleting the descriptions (A) removes the very signal Claude needs, since descriptions are \"by far the most important factor in tool performance\". A keyword pre-router (C) adds brittle architecture before the cheap fix is tried, and forcing one named tool (D) breaks every non-billing request."
+  },
+  {
    "id": "milind:Q485",
    "action": "set_option",
    "match": "Step 1: Glob with a date filter",
