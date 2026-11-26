@@ -1286,6 +1286,718 @@
    "replace": "from the coordinator's broader investigation. (Fork subagents, which inherit the conversation, are a separate opt-in; a standard subagent starts with a fresh context.)",
    "src": "https://code.claude.com/docs/en/sub-agents",
    "why": "Hinweis auf Fork-Subagents ergaenzt."
+  },
+  {
+   "id": "milind:Q701",
+   "action": "edit",
+   "field": "opt",
+   "find": "[\"*.test.ts\", \"*.spec.ts\", \"*.test.tsx\"]",
+   "replace": "[\"/*.test.ts\", \"/*.spec.ts\", \"/*.test.tsx\"]",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Laut Glob-Tabelle trifft *.test.ts überall; mit führendem / nur im Basisverzeichnis, damit ist C eindeutig falsch."
+  },
+  {
+   "id": "milind:Q701",
+   "action": "set_option",
+   "match": "`paths: [\"tests/**\"]`",
+   "text": "`paths: [\"tests/**/*.test.ts\", \"tests/**/*.spec.ts\", \"tests/**/*.test.tsx\"]`",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Länge angeglichen; bleibt falsch (nur tests/, ohne .test.tsx)."
+  },
+  {
+   "id": "milind:Q701",
+   "action": "edit",
+   "field": "opt",
+   "find": "`paths: [\"**/*test*\"]`",
+   "replace": "`paths: [\"**/*test*\", \"**/*spec*\", \"**/*.tsx\"]`",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Länge angeglichen; bleibt falsch (trifft auch Nicht-Testdateien)."
+  },
+  {
+   "id": "milind:Q701",
+   "action": "set_explanation",
+   "text": "The `**/` globs match test files at any depth, and the three patterns cover `.test.ts`, `.spec.ts`, and `.test.tsx` files throughout the repository. A leading `/` anchors a pattern to the base directory, so `/*.test.ts` (C) only matches test files at the repository root. `tests/**` patterns (A) miss test files outside `tests/` and all `.test.tsx` files, and `*test*`, `*spec*`, and `*.tsx` (B) also match non-test files such as `latest.ts`, `inspector.ts`, or any component. Note: a bare `*.test.ts` without a leading `/` would also match at any depth; `**/` just makes the intent explicit. (code.claude.com/docs/en/memory)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung behauptete, Muster ohne **/ träfen nur die Wurzel; laut Glob-Tabelle falsch."
+  },
+  {
+   "id": "milind:Q555",
+   "action": "set_option",
+   "match": "In a shared template CLAUDE.md",
+   "text": "In the managed-policy CLAUDE.md that IT deploys to every developer's machine",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Für organisationsweite Richtlinien sieht die Doku die managed CLAUDE.md vor, nicht einen @-Import pro Projekt."
+  },
+  {
+   "id": "milind:Q555",
+   "action": "set_explanation",
+   "text": "Claude Code's managed-policy CLAUDE.md (for example `/etc/claude-code/CLAUDE.md` or `C:\\Program Files\\ClaudeCode\\CLAUDE.md`, or the `claudeMd` key in managed settings) holds organization-wide instructions such as security and data-handling policies. IT deploys it to every machine, it loads in every session, and developers cannot exclude it. A per-developer `~/.claude/CLAUDE.md` (D) is unmanaged, CLI flags (A) depend on every invocation, and CI-only configuration (B) misses interactive sessions. Note that CLAUDE.md is guidance, not enforcement: to hard-block an action, add managed settings such as `permissions.deny` or a hook. (code.claude.com/docs/en/memory)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung auf managed CLAUDE.md umgestellt, inkl. Hinweis, dass CLAUDE.md nicht erzwingt."
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_option",
+   "match": "@-import a shared security rules file",
+   "text": "Deploy them via the managed CLAUDE.md; put project-specific rules in each .claude/rules/ folder",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Ein @-Import pro Projekt widerspricht „without requiring each project to configure them“; die Doku nennt dafür die managed CLAUDE.md."
+  },
+  {
+   "id": "milind:Q710",
+   "action": "set_explanation",
+   "text": "A managed-policy CLAUDE.md, deployed once by IT (or via the `claudeMd` key in managed settings), loads in every session on every machine without any per-project setup, and developers cannot exclude it. Project-specific security rules go into each project's `.claude/rules/` and load on top, because all discovered instruction files are combined rather than overriding each other. CI-only rules (A) miss interactive work, per-developer `~/.claude/CLAUDE.md` copies (B) are unmanaged, and `settings.json` has no `extends` key (D). For hard technical enforcement (blocking tools or paths), use managed settings such as `permissions.deny`. (code.claude.com/docs/en/memory)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung auf managed CLAUDE.md umgestellt."
+  },
+  {
+   "id": "milind:Q558",
+   "action": "edit",
+   "field": "q",
+   "find": "The skill needs Bash to run security scanning tools.",
+   "replace": "The skill needs Bash to run security scanning tools. Its SKILL.md frontmatter, copied from a read-only review skill, contains `allowed-tools: Read, Grep` and `disallowed-tools: Bash`.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Szenario so präzisiert, dass die Ursache dokumentiert ist (disallowed-tools entfernt Tools)."
+  },
+  {
+   "id": "milind:Q558",
+   "action": "set_option",
+   "match": "Add `Bash` to the `allowed-tools`",
+   "text": "Remove `Bash` from the `disallowed-tools` list in the skill's frontmatter",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools gibt nur ohne Rückfrage frei und schaltet nichts frei; disallowed-tools entfernt Tools."
+  },
+  {
+   "id": "milind:Q558",
+   "action": "set_option",
+   "match": "Add Bash to the system-wide allowed tools",
+   "text": "Add `Bash` to the `allowed-tools` list in the skill's SKILL.md frontmatter",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Bisherige Lösung als plausibler, nach Doku falscher Distraktor."
+  },
+  {
+   "id": "milind:Q558",
+   "action": "set_explanation",
+   "text": "`disallowed-tools` removes the listed tools from Claude's available pool while the skill is active, so Bash simply does not exist during this skill. Removing `Bash` from that list fixes the error. Adding `Bash` to `allowed-tools` (D) does not help: `allowed-tools` only lets Claude use a tool without asking permission; it does not restrict or restore tools. Dropping `context: fork` (B) does not lift the `disallowed-tools` entry, and replacing Bash with Grep (A) cannot run the scanners. (code.claude.com/docs/en/skills)",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung nach Skills-Doku neu (allowed-tools vs. disallowed-tools)."
+  },
+  {
+   "id": "milind:Q806",
+   "action": "edit",
+   "field": "q",
+   "find": "The skill doesn't have access to existing test files.",
+   "replace": "The skill's instructions never tell Claude to look at the existing test files.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Prämisse „kein Zugriff“ falsch: Read/Grep/Glob sind verfügbar, allowed-tools gibt nur frei."
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_option",
+   "match": "Add `allowed-tools: Read, Grep, Glob`",
+   "text": "Add a SKILL.md step that has it search the existing tests before writing new ones",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Richtige Option stützte sich auf allowed-tools als Zugriffsgewährung."
+  },
+  {
+   "id": "milind:Q806",
+   "action": "set_explanation",
+   "text": "Nothing in the skill tells Claude to look at the existing tests, so it never does. Adding an explicit step to SKILL.md that searches the existing tests first changes what Claude does when the skill runs. `allowed-tools` would only pre-approve tools so they run without a permission prompt; it neither grants nor restricts access. An exclusion list (B) or a static list in CLAUDE.md (D) goes stale as tests change, and deleting tests (C) destroys work. (code.claude.com/docs/en/skills)",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung ohne die falsche Zugriffs-Prämisse neu; Correction-Absatz integriert."
+  },
+  {
+   "id": "milind:Q554",
+   "action": "set_option",
+   "match": "The output fails validation",
+   "text": "Claude is re-prompted; if none validates, no `structured_output` is returned",
+   "src": "https://code.claude.com/docs/en/agent-sdk/structured-outputs",
+   "why": "Laut Doku wird bei Schemaverstoß erneut angefragt; ohne gültige Ausgabe fehlt structured_output."
+  },
+  {
+   "id": "milind:Q554",
+   "action": "set_explanation",
+   "text": "With `--json-schema`, Claude Code validates the output against the schema and re-prompts Claude when it does not match. If no attempt validates within the retry limit, the run ends without valid structured output: the JSON response has no `structured_output` field (the Agent SDK reports the subtype `error_max_structured_output_retries`). Your CI script must check that the field is present before using it. Invalid output is never passed on as if it were valid (C), nothing is dropped silently (D), and `-p` runs never pause for interactive repair (A). (code.claude.com/docs/en/headless, code.claude.com/docs/en/agent-sdk/structured-outputs)",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "Erklärung an Doku angepasst (Validierung + Retry, fehlendes structured_output)."
+  },
+  {
+   "id": "milind:Q601",
+   "action": "set_option",
+   "match": "Output is constrained to the schema",
+   "text": "Claude is re-prompted until `line_items` validates or the retry limit is hit",
+   "src": "https://code.claude.com/docs/en/agent-sdk/structured-outputs",
+   "why": "Laut Doku Validierung mit Re-Prompt, kein Constrained Decoding in der CLI."
+  },
+  {
+   "id": "milind:Q601",
+   "action": "set_explanation",
+   "text": "`--json-schema` validates Claude's output against the schema. A response without the required `line_items` field fails validation, and Claude is re-prompted to fix it. If no attempt validates within the retry limit, the run ends without a `structured_output` field, so the pipeline must check for that field. Claude Code never fills missing fields with `null` (A) or an empty array (D), and it does not fail on the first invalid attempt (C). (code.claude.com/docs/en/headless, code.claude.com/docs/en/agent-sdk/structured-outputs)",
+   "src": "https://code.claude.com/docs/en/agent-sdk/structured-outputs",
+   "why": "Erklärung behauptete Erzwingung bei der Generierung; Doku beschreibt Validierung mit Retry."
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_option",
+   "match": "Architecture rules apply to every file",
+   "text": "Architecture rules load at startup in CI, whatever files the PR touches",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Distraktor geschärft; laut Doku laden Pfadregeln erst beim Lesen/Bearbeiten passender Dateien."
+  },
+  {
+   "id": "milind:Q695",
+   "action": "set_explanation",
+   "text": "A path-scoped rule loads when Claude reads, writes, or edits a file that matches its `paths` globs, in CI just as interactively. Only rules without `paths` load at startup (A). Reviewing `src/core/` files loads the architecture guidelines for those files; a change that touches only `src/utils/` never loads them. CI does not need to list rule files explicitly (C), and path-specific rules are not switched off in `-p` mode (D). (code.claude.com/docs/en/memory)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung präzisiert: Laden beim Lesen/Bearbeiten passender Dateien."
+  },
+  {
+   "id": "milind:Q521",
+   "action": "set_option",
+   "match": "Create a separate CLAUDE.md file inside each",
+   "text": "Put the Jest and the pytest conventions in two separate files and `@`-import both from the root CLAUDE.md file",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Alte Option A (CLAUDE.md pro Verzeichnis) war laut Erklärung ebenfalls gültig; jetzt eindeutig falsch."
+  },
+  {
+   "id": "milind:Q521",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Path-specific rules with directory-scoped patterns ensure Jest conventions load only when editing files under `web/` and pytest conventions load only for files under `api/`. Root CLAUDE.md conventions would load for both directories. Directory-level CLAUDE.md files would work but are less explicit about the file type scoping within each directory.",
+   "replace": "Path-specific rules with directory-scoped patterns ensure Jest conventions load only when Claude reads or edits matching files under `web/` and pytest conventions only for files under `api/`. Root CLAUDE.md conventions (D) would load for both directories, and so would files `@`-imported from the root CLAUDE.md (A), because imports are expanded at launch alongside the importing file. (code.claude.com/docs/en/memory)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung an neue Option A angepasst; Laden beim Lesen statt nur beim Bearbeiten."
+  },
+  {
+   "id": "milind:Q658",
+   "action": "edit",
+   "field": "q",
+   "find": "a .claude/skills/synthesize.md skill",
+   "replace": "a .claude/skills/synthesize/SKILL.md skill",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Skills liegen als Ordner mit SKILL.md unter .claude/skills/<name>/."
+  },
+  {
+   "id": "milind:Q675",
+   "action": "edit",
+   "field": "opt",
+   "find": "argument-hint: \"topic to research\"",
+   "replace": "`argument-hint: \"topic to research\"`",
+   "src": "editorial",
+   "why": "Richtige Option als einzige ohne Backticks war ein Formhinweis."
+  },
+  {
+   "id": "milind:Q675",
+   "action": "set_option",
+   "match": "`input-hint",
+   "text": "`input-hint: \"the topic to research\"`",
+   "src": "editorial",
+   "why": "Länge nach Backtick-Korrektur von C angeglichen."
+  },
+  {
+   "id": "milind:Q703",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von milind:Q670 (gleiche Frage, Q670 bleibt; Q703 hatte die deutlich kürzeste richtige Option)."
+  },
+  {
+   "id": "milind:Q716",
+   "action": "edit",
+   "field": "q",
+   "find": "(2) `tool_use` with JSON schema.",
+   "replace": "(2) `tool_use` with a JSON schema and `strict: true`.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Garantie gilt nur mit strict tool use."
+  },
+  {
+   "id": "milind:Q716",
+   "action": "set_explanation",
+   "text": "With `strict: true`, the API uses constrained decoding so tool inputs always match the schema exactly; prompt instructions only request a format and cannot guarantee it. Without `strict`, a tool schema strongly guides the output but does not guarantee it, so you would still need validation and retries. Prompt instructions are not \"just as reliable\" (B), the approaches are not equivalent (C), and schema complexity is not the deciding factor (D). (platform.claude.com/docs/en/build-with-claude/structured-outputs)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung: Garantie nur mit strict/Structured Outputs."
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_option",
+   "match": "tool_use with JSON schemas removes syntax errors",
+   "text": "`strict: true` stops syntax and schema errors, not semantic ones like bad sums",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Ohne strict ist Schema-Konformität nicht garantiert."
+  },
+  {
+   "id": "milind:Q741",
+   "action": "set_explanation",
+   "text": "Strict tool use (`strict: true`) or Structured Outputs guarantee output that parses and matches the schema, but they cannot check meaning: line items that do not sum to the total or values in the wrong field still pass. Without `strict`, even schema violations remain possible, so validation is needed either way. Developers who switch to schema-based output may wrongly assume all errors are solved and skip semantic validation. Few-shot examples do not eliminate syntax errors (C), and the two error types are neither equivalent (D) nor ranked as described in B. (platform.claude.com/docs/en/build-with-claude/structured-outputs)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung an strict/Structured Outputs angepasst."
+  },
+  {
+   "id": "milind:Q796",
+   "action": "set_option",
+   "match": "A structural error the schema allows",
+   "text": "A structural error the schema allows; an array type with `items` plus `strict: true` enforces it",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Durchsetzung der Array-Hülle nur mit strict garantiert."
+  },
+  {
+   "id": "milind:Q796",
+   "action": "set_explanation",
+   "text": "The JSON parses fine, so this is not a syntax error (D): the schema simply does not pin down the structure. Defining `line_items` as `\"type\": \"array\"` with an `\"items\"` schema states the requirement, and strict tool use (`strict: true`) or Structured Outputs make the API enforce it through constrained decoding. Without `strict`, the schema guides but does not guarantee the shape, so validate and retry. The error is neither document-specific reasoning (A) nor a downstream validation problem (B). (platform.claude.com/docs/en/build-with-claude/structured-outputs)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung behauptete, tool_use eliminiere Typfehler; das gilt nur mit strict."
+  },
+  {
+   "id": "milind:Q857",
+   "action": "edit",
+   "field": "q",
+   "find": "A Customer Support pipeline uses `tool_use` with a schema",
+   "replace": "A Customer Support pipeline uses strict tool use (`strict: true`) with a schema",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Enum-Garantie (Lösung C) gilt nur mit strict; ohne strict wäre B möglich."
+  },
+  {
+   "id": "milind:Q857",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Enum constraints prevent the model from inventing new values,",
+   "replace": "With `strict: true`, constrained decoding prevents the model from inventing values outside the enum,",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung an strict angepasst."
+  },
+  {
+   "id": "milind:Q851",
+   "action": "edit",
+   "field": "q",
+   "find": "uses a JSON schema with `additionalProperties: false`.",
+   "replace": "validates its output against a JSON schema with `additionalProperties: false` after generation (strict mode is not enabled).",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Prämisse „attempts fail validation“ gilt nur ohne strict; das steht jetzt im Stamm."
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_option",
+   "match": "Tools can't be executed mid-request",
+   "text": "Tools can't run mid-request; each batch item gets exactly one response",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "„single-turn“ irreführend: Batch-Requests dürfen Multi-Turn-Verläufe und Tools enthalten."
+  },
+  {
+   "id": "milind:Q725",
+   "action": "set_explanation",
+   "text": "The exam guide states that the batch API does not support multi-turn tool calling within a single request: it cannot execute tools mid-request and return results. A batch item may still contain a multi-turn history, a system prompt, and tool definitions, but the model answers it exactly once; any tool call in that answer has to be executed by you and sent back as a new request. There is no minimum batch size (A), the per-request limits match the Messages API (C), and images and PDFs are supported (D). (platform.claude.com/docs/en/build-with-claude/batch-processing)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Erklärung präzisiert (Multi-Turn-Inhalt erlaubt, aber nur eine Antwort pro Item)."
+  },
+  {
+   "id": "milind:Q803",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The 24-hour max processing time fits within the 48-hour deadline when batching promptly.",
+   "replace": "The 24-hour max processing time fits within the 48-hour deadline when batching promptly. One batch holds at most 100,000 requests or 256 MB, so 5,000 long reports may need to be split into several batches submitted at the same time.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Hinweis auf das 256-MB-Limit pro Batch ergänzt."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_option",
+   "match": "No — each batch item is one request/response",
+   "text": "No — each batch item is one request/response; follow-up calls need a new request or batch.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "„must use the standard API“ überzogen: Folge-Turns lassen sich auch als weiterer Batch einreichen."
+  },
+  {
+   "id": "milind:Q833",
+   "action": "set_explanation",
+   "text": "Each batch item is a single request that gets exactly one response. Batch requests can include tool definitions and conversation history, but the batch never executes a tool and continues: if a response contains a tool call, your code must run the tool and send the result back in a new request, either synchronously or as an item in a later batch round. That adds a full batch turnaround per tool round, which is why tool-heavy, iterative workflows usually fit the synchronous API better. Pre-declaring follow-ups (B) does not execute them, tool definitions are supported (C), and items do not run multi-turn tool loops (D). (platform.claude.com/docs/en/build-with-claude/batch-processing)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Erklärung: kein Zwang zur synchronen API, aber kein Tool-Loop im Batch."
+  },
+  {
+   "id": "milind:Q726",
+   "action": "set_option",
+   "match": "A preprocessing step that normalizes",
+   "text": "A stricter output schema that rejects any date not already written in ISO format",
+   "src": "editorial",
+   "why": "Alte Option C (Normalisierung) nannte die Erklärung selbst „also valid“."
+  },
+  {
+   "id": "milind:Q726",
+   "action": "edit",
+   "field": "explanation",
+   "find": "A preprocessing normalization step (C) is also valid but adds pipeline complexity; examples are the more direct solution within the extraction prompt.",
+   "replace": "A schema that rejects non-ISO dates (C) only turns the misses into failures instead of teaching the model to extract them.",
+   "src": "editorial",
+   "why": "Erklärung an neue Option C angepasst."
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_option",
+   "match": "Resume Session 1 with `--resume`",
+   "text": "Resume Session 1 with `--resume`, which re-runs all of its tool calls from the start",
+   "src": "https://code.claude.com/docs/en/sessions",
+   "why": "Alte Option D war vertretbar (Sessions werden lokal gespeichert); jetzt mit falscher Mechanik."
+  },
+  {
+   "id": "milind:Q890",
+   "action": "set_explanation",
+   "text": "`--resume` restores the saved conversation of a session; it does not re-run earlier tool calls (D). After a week, resuming would also reload a long, partly stale history. For cross-session knowledge transfer, structured scratchpad files are the most reliable mechanism: they hold the validated findings in a compact form that can be injected explicitly into Session 2. Re-analyzing everything (A) wastes the earlier work, and loading the full exported history (B) floods the context. (code.claude.com/docs/en/sessions)",
+   "src": "https://code.claude.com/docs/en/sessions",
+   "why": "Erklärung an neue Option D angepasst."
+  },
+  {
+   "id": "milind:Q933",
+   "action": "set_option",
+   "match": "Mention it at the end of the final synthesis prompt",
+   "text": "Repeat the finding in several mid-session turns so it shows up more often in history",
+   "src": "editorial",
+   "why": "Alte Option D (Finding im Synthese-Prompt) war laut Erklärung nahezu gleichwertig."
+  },
+  {
+   "id": "milind:Q933",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ensures they're prominently represented.",
+   "replace": "ensures they're prominently represented. Repeating the finding in mid-session turns (D) leaves it buried in the middle of a long history, restarting (A) throws away the rest of the session, and the model does not weigh all turns equally (B).",
+   "src": "editorial",
+   "why": "Erklärung an neue Option D angepasst."
+  },
+  {
+   "id": "milind:Q651",
+   "action": "set_option",
+   "match": "-p \"Generate a PR description for these changes\"",
+   "text": "-p \"Generate a PR description for these changes\" --output-format json --json-schema \"$(cat pr-schema.json)\" with only `git diff --name-only` piped in",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "Alte Option C (Diff per stdin + Schema) war praktisch gleichwertig zur Lösung."
+  },
+  {
+   "id": "milind:Q651",
+   "action": "edit",
+   "field": "explanation",
+   "find": "option B returns JSON but enforces no schema.",
+   "replace": "option B returns JSON but enforces no schema, and option C pipes in only the file names, so Claude cannot describe what each change does.",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "Erklärung an neue Option C angepasst."
+  },
+  {
+   "id": "milind:Q694",
+   "action": "set_option",
+   "match": "Start with a read-only permission set",
+   "text": "Revoke Claude Code's Git push rights at first, then grant them once trust grows",
+   "src": "https://code.claude.com/docs/en/permission-modes",
+   "why": "Alte Option C (Read-only-Rechte) ist faktisch Plan Mode und damit vertretbar."
+  },
+  {
+   "id": "milind:Q694",
+   "action": "edit",
+   "field": "explanation",
+   "find": "This aligns with the guidance to use plan mode for complex tasks regardless.",
+   "replace": "This aligns with the guidance to use plan mode for complex tasks regardless. Plan mode is itself a permission mode (`plan`); withholding Git push rights (C) still lets Claude edit files and run commands locally.",
+   "src": "https://code.claude.com/docs/en/permission-modes",
+   "why": "Erklärung an neue Option C angepasst."
+  },
+  {
+   "id": "milind:Q822",
+   "action": "edit",
+   "field": "q",
+   "find": "The compliance team cannot disable the category entirely.",
+   "replace": "The compliance team wants the category kept in the schema for the long term.",
+   "src": "editorial",
+   "why": "Stamm widersprach der Lösung („temporarily disable“)."
+  },
+  {
+   "id": "milind:Q87",
+   "action": "edit",
+   "field": "q",
+   "find": " In a multi-agent system, a document analysis subagent encounters a document in an unsupported format. What should it return to the coordinator?",
+   "replace": " What should it return to the coordinator?",
+   "src": "editorial",
+   "why": "Doppelt formuliertes Szenario im Stamm entfernt (Zusatzfund)."
+  },
+  {
+   "id": "milind:Q743",
+   "action": "edit",
+   "field": "explanation",
+   "find": "SLA minus max batch time = maximum allowable delay before submission.",
+   "replace": "SLA minus max batch time = maximum allowable delay before submission; the guide's 4-hour cycle simply stays safely inside that limit.",
+   "src": "editorial",
+   "why": "4-h-Zitat und 6-h-Rechnung in Einklang gebracht."
+  },
+  {
+   "id": "milind:Q758",
+   "action": "edit",
+   "field": "q",
+   "find": "You add 3 examples: one showing a genuine missing error case, one showing",
+   "replace": "You add 3 examples: two showing genuine missing error cases, one showing",
+   "src": "editorial",
+   "why": "Stamm nannte 3 Beispiele, zählte aber nur 2 auf."
+  },
+  {
+   "id": "milind:Q758",
+   "action": "edit",
+   "field": "opt",
+   "find": "the positive one overshot",
+   "replace": "the positive ones overshot",
+   "src": "editorial",
+   "why": "An zwei positive Beispiele angepasst."
+  },
+  {
+   "id": "milind:Q758",
+   "action": "edit",
+   "field": "explanation",
+   "find": "provided both a positive (genuine issue) and a negative (acceptable pattern).",
+   "replace": "provided positives (genuine issues) and a negative (acceptable pattern).",
+   "src": "editorial",
+   "why": "An zwei positive Beispiele angepasst."
+  },
+  {
+   "id": "milind:Q747",
+   "action": "edit",
+   "field": "q",
+   "find": "Your technical debt report generates well but the insights team",
+   "replace": "Your document extraction pipeline performs well overall, but the insights team",
+   "src": "editorial",
+   "why": "Stamm-Anfang gehörte zu einer anderen Frage."
+  },
+  {
+   "id": "milind:Q865",
+   "action": "edit",
+   "field": "explanation",
+   "find": "not semantic accuracy — as established in Q689.",
+   "replace": "not semantic accuracy.",
+   "src": "editorial",
+   "why": "Toter Querverweis auf Q689 entfernt."
+  },
+  {
+   "id": "milind:Q507",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Resources are surfaced to the agent at connection time, eliminating the need for an explicit exploratory call.",
+   "replace": "The client can list resources as soon as it connects (`resources/list`), and the host application decides how they enter the context (in Claude Code, by `@`-mentioning a resource), so no exploratory tool call is needed.",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q508",
+   "action": "edit",
+   "field": "explanation",
+   "find": "that agents benefit from seeing at connection time without issuing calls.",
+   "replace": "that agents benefit from seeing before they act, without issuing tool calls; the host application lists them after connecting and decides how they enter the context.",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "edit",
+   "field": "explanation",
+   "find": "means the agent has structural context from the moment of connection, enabling",
+   "replace": "lets the host application supply it as context up front (in Claude Code, by `@`-referencing the resource), enabling",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q509",
+   "action": "edit",
+   "field": "explanation",
+   "find": "by making structural knowledge available at connection time.",
+   "replace": "by making structural knowledge available without a tool call.",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q510",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Resources are delivered to the agent at connection time, eliminating the need for the agent to discover environmental context through tool calls.",
+   "replace": "Resources can be listed as soon as the client connects, and the host application decides how they enter the context (in Claude Code, via `@` mentions), so the agent does not have to discover environmental context through tool calls.",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q514",
+   "action": "edit",
+   "field": "explanation",
+   "find": "the agent receives the catalog at connection time rather than discovering it through sequential calls.",
+   "replace": "the catalog is available to the host application from connection time and can be brought into context (in Claude Code, via `@` mentions) instead of being discovered through sequential calls.",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "MCP-Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "milind:Q484",
+   "action": "edit",
+   "field": "explanation",
+   "find": "cross-project shared services (GitHub, available to all developers)",
+   "replace": "services each developer uses across all projects (GitHub; user scope is private to each developer's account, so every developer adds it once)",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "User Scope ist privat pro Entwickler, nicht teamweit geteilt."
+  },
+  {
+   "id": "milind:Q488",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The documentation server is used by all 10 developers across both projects, so it belongs in user-level config.",
+   "replace": "The documentation server is used by all 10 developers across both projects, so each developer adds it once in user scope, which is private to that developer and available in all of their projects.",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "User Scope ist privat pro Entwickler, nicht teamweit geteilt."
+  },
+  {
+   "id": "milind:Q647",
+   "action": "edit",
+   "field": "explanation",
+   "find": "since command files do not have a mode-selection frontmatter field.",
+   "replace": "since command files do not have a mode-selection frontmatter field. An instruction is guidance, not enforcement; to make execution impossible, list tools such as `Bash` under `disallowed-tools` in the frontmatter.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Hinweis ergänzt, dass die Prompt-Anweisung nichts technisch erzwingt."
+  },
+  {
+   "id": "milind:Q711",
+   "action": "edit",
+   "field": "explanation",
+   "find": "use they don't define what counts as a real issue.",
+   "replace": "use they don't define what counts as a real issue. The temperature option (B) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q824",
+   "action": "edit",
+   "field": "explanation",
+   "find": "g categories, inflating false positives elsewhere.",
+   "replace": "g categories, inflating false positives elsewhere. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q829",
+   "action": "edit",
+   "field": "explanation",
+   "find": "al: they require different remediation strategies.",
+   "replace": "al: they require different remediation strategies. The temperature option (A) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q844",
+   "action": "edit",
+   "field": "explanation",
+   "find": "curring determines the appropriate retry strategy.",
+   "replace": "curring determines the appropriate retry strategy. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q846",
+   "action": "edit",
+   "field": "explanation",
+   "find": "he problem rather than solving it architecturally.",
+   "replace": "he problem rather than solving it architecturally. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q867",
+   "action": "edit",
+   "field": "explanation",
+   "find": "model rather than fixing the classification logic.",
+   "replace": "model rather than fixing the classification logic. The temperature option (A) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q951",
+   "action": "edit",
+   "field": "explanation",
+   "find": " summarized history is the recommended mitigation.",
+   "replace": " summarized history is the recommended mitigation. The temperature option (A) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q993",
+   "action": "edit",
+   "field": "explanation",
+   "find": " and does not drift even as more content is added.",
+   "replace": " and does not drift even as more content is added. The temperature option (B) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-mock1-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ion is the fix for confusion between similar tools",
+   "replace": "ion is the fix for confusion between similar tools. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q821",
+   "action": "edit",
+   "field": "explanation",
+   "find": "miscategorization caused by ambiguous definitions.",
+   "replace": "miscategorization caused by ambiguous definitions. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q826",
+   "action": "edit",
+   "field": "explanation",
+   "find": "gning the examples to cover the decision boundary.",
+   "replace": "gning the examples to cover the decision boundary. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-mock2-10",
+   "action": "edit",
+   "field": "explanation",
+   "find": " the gap, and exhortation (D) is not specification",
+   "replace": " the gap, and exhortation (D) is not specification. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-mock2-8",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(B), and temperature (D) leave the shape to chance",
+   "replace": "(B), and temperature (D) leave the shape to chance. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-practice-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ion, and temperature (D) does not bound iteration.",
+   "replace": "ion, and temperature (D) does not bound iteration. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "milind:Q858",
+   "action": "edit",
+   "field": "explanation",
+   "find": "simultaneously, which is the core quality benefit.",
+   "replace": "simultaneously, which is the core quality benefit. The temperature arguments (B, D) fail as well: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model). Reproducibility today comes from pinned model snapshots and validation, not sampling settings.",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-mock2-14",
+   "action": "edit",
+   "field": "explanation",
+   "find": "low temperature (C) reduces variety rather than quality",
+   "replace": "temperature (C) is not a quality lever and is removed in API version 2026-10-21 (400 on every model)",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte frei einstellbare temperature voraus."
+  },
+  {
+   "id": "amey:architect-foundations-mock1-14",
+   "action": "set_explanation",
+   "text": "Schema enforcement plus a validation-retry loop is the reliability pattern the guide describes. Strict tool use (`strict: true`) or Structured Outputs guarantee the schema; validation then catches semantic errors, and retrying with the error fed back fixes most of them. Reviewing every record (A) does not scale, majority voting (B) triples cost without checking anything, and temperature zero (D) accepts unchecked output; API version 2026-10-21 also removes `temperature` entirely (400 on every model).",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "strict/Structured Outputs als Garantie ergänzt, temperature-Hinweis korrigiert."
   }
  ],
  "hold": []
