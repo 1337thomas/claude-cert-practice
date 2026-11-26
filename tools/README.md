@@ -19,7 +19,10 @@ Never edit the embedded bank by hand: every content decision lives in `patches.j
    S (correct option clearly the shortest), has an option more than 35 % off the question's mean option length,
    or if across the reworked questions of an exam the correct option is the longest or the shortest in more than
    35 % of items (same limits as `lint_original.py`).
-4. `inject.py index.html <final2.json> index.html` – write the bank back into the page.
+3d. `patch.py <final2.json> patches_content.json <final3.json>` – apply the content review of the reworked questions
+   (rekeys, corrected options/explanations, removed duplicates, each with `src` doc URL and `why`). It runs after
+   the length rework so its matches see the final option texts; options it changes must keep passing the length gate.
+4. `inject.py index.html <final3.json> index.html` – write the bank back into the page.
 
 `lint_original.py newsrc/original_<exam>.json --hold patches.json` checks the original questions (schema,
 per-option rationale, multi-response wording, answer-length bias, mock sets against the blueprint weights).
