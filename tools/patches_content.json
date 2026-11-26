@@ -1998,6 +1998,912 @@
    "text": "Schema enforcement plus a validation-retry loop is the reliability pattern the guide describes. Strict tool use (`strict: true`) or Structured Outputs guarantee the schema; validation then catches semantic errors, and retrying with the error fed back fixes most of them. Reviewing every record (A) does not scale, majority voting (B) triples cost without checking anything, and temperature zero (D) accepts unchecked output; API version 2026-10-21 also removes `temperature` entirely (400 on every model).",
    "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
    "why": "strict/Structured Outputs als Garantie ergänzt, temperature-Hinweis korrigiert."
+  },
+  {
+   "id": "amey:architect-foundations-practice-24",
+   "action": "edit",
+   "field": "explanation",
+   "find": "e gap, and exhortation (D) is not a specification.",
+   "replace": "e gap, and exhortation (D) is not a specification. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "amey:architect-foundations-practice-32",
+   "action": "edit",
+   "field": "explanation",
+   "find": "low temperature (C) reduces variety rather than quality",
+   "replace": "temperature (C) is not a quality lever and is removed in API version 2026-10-21 (400 on every model)",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte frei einstellbare temperature voraus."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#11",
+   "action": "edit",
+   "field": "explanation",
+   "find": "onses without addressing what decides termination.",
+   "replace": "onses without addressing what decides termination. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "daries is the highest-leverage, lowest-effort fix.",
+   "replace": "daries is the highest-leverage, lowest-effort fix. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-3.5-easy-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "sive improvement without discarding prior context.",
+   "replace": "sive improvement without discarding prior context. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-3.5-medium-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ions) and the condition (before producing output).",
+   "replace": "ions) and the condition (before producing output). The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-3.6-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "its own output when given explicit error feedback.",
+   "replace": "its own output when given explicit error feedback. The temperature option (A) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-4.1-easy-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "r illegal activity') produces consistent behavior.",
+   "replace": "r illegal activity') produces consistent behavior. The temperature option (A) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-4.1-medium-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "es order but not category coverage or specificity.",
+   "replace": "es order but not category coverage or specificity. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-4.2-hard-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "resentation relative to the current 3:1 imbalance.",
+   "replace": "resentation relative to the current 3:1 imbalance. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-4.4-easy-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "the loop and escalates rather than retrying again.",
+   "replace": "the loop and escalates rather than retrying again. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-5.1-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "cal information from progressive information loss.",
+   "replace": "cal information from progressive information loss. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "preporato:cca-f#24",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ndomness and leaves the misunderstanding in place.",
+   "replace": "ndomness and leaves the misunderstanding in place. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "preporato:cca-f#29",
+   "action": "edit",
+   "field": "explanation",
+   "find": "affects randomness and does nothing for attention.",
+   "replace": "affects randomness and does nothing for attention. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "g. This is the exam's single most-repeated lesson.",
+   "replace": "g. This is the exam's single most-repeated lesson. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#44",
+   "action": "edit",
+   "field": "explanation",
+   "find": "-positive category protects trust while iterating.",
+   "replace": "-positive category protects trust while iterating. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#38",
+   "action": "edit",
+   "field": "explanation",
+   "find": "h tool isn't being reached for in the first place.",
+   "replace": "h tool isn't being reached for in the first place. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#44",
+   "action": "edit",
+   "field": "explanation",
+   "find": " friction without addressing the underlying noise.",
+   "replace": " friction without addressing the underlying noise. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#48",
+   "action": "edit",
+   "field": "explanation",
+   "find": "or a lower temperature (D) don't reliably provide.",
+   "replace": "or a lower temperature (D) don't reliably provide. Note: API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung setzte einstellbare temperature voraus; Entfernung ab 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#51",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ever going to have a real date in the first place.",
+   "replace": "ever going to have a real date in the first place. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#52",
+   "action": "edit",
+   "field": "explanation",
+   "find": " whether the specific digits are actually correct.",
+   "replace": " whether the specific digits are actually correct. The temperature option (D) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#54",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ainst, which is why it keeps failing the same way.",
+   "replace": "ainst, which is why it keeps failing the same way. The temperature option (C) would not fix this either, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "connectry:q-2.2-hard-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "across models, temperatures, and context states",
+   "replace": "across models, prompts, and context states",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung behandelte temperature als frei variierbaren Faktor (ab 2026-10-21 entfernt)."
+  },
+  {
+   "id": "amey:architect-foundations-practice-23",
+   "action": "set_option",
+   "match": "Declare the schema as a tool the model must call",
+   "text": "Use Structured Outputs (`output_config.format`) and validate on receipt",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Garantierte Schema-Konformität nur mit Structured Outputs/strict; \"tool the model must call\" setzte erzwungenes tool_choice voraus."
+  },
+  {
+   "id": "amey:architect-foundations-practice-23",
+   "action": "set_explanation",
+   "text": "Structured Outputs (`output_config.format` with a JSON schema) constrain decoding, so every response matches the schema; strict tool use (`strict: true`) gives the same guarantee for tool inputs. Validation on receipt still catches semantic errors the schema cannot express. Prompt requests (B) and downstream repair (C) leave the shape to chance, and temperature (D) does not control format; API version 2026-10-21 also removes `temperature`, `top_p` and `top_k` entirely (400 on every model).",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung an neue richtige Option (Structured Outputs) angepasst, temperature-Hinweis ergänzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "edit",
+   "field": "q",
+   "find": "You've defined a strict JSON schema and are using tool_use to enforce it for an invoice-extraction tool.",
+   "replace": "You've defined a JSON schema for an invoice-extraction tool and enforce it with strict tool use (`strict: true`).",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Garantie aus Lösung B gilt nur mit strict: true; Stamm entsprechend präzisiert."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/check#2",
+   "action": "set_explanation",
+   "text": "With strict tool use (`strict: true`), constrained decoding guarantees that the tool input parses and matches the schema, eliminating syntax and schema errors (without `strict`, conformance is likely but not guaranteed). It says nothing about whether the values are semantically correct: a total that does not match its line items is still schema-valid, so a self-consistency check (comparing the calculated total with the stated total) is still needed. A overstates the guarantee, C ignores it, and D only tightens types, which still cannot check the arithmetic.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung behauptete Schema-Garantie ohne strict."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "set_option",
+   "match": "The coordinator's allowedTools was missing",
+   "text": "The coordinator's allowedTools was missing \"Agent\", so the subagent ran without its configuration.",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Tool heißt seit v2.1.63 Agent (Task nur Alias)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d1/quiz#19",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Option C is wrong: without \"Task\" the coordinator couldn't have spawned the subagent at all.",
+   "replace": "Option C is wrong: `allowedTools` only auto-approves the tools it lists and never changes a subagent's configuration, and the Agent tool (formerly Task) needs no approval anyway.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Erklärung nannte Task und unterstellte, allowedTools steuere das Spawnen."
+  },
+  {
+   "id": "connectry:q-1.3-easy-2",
+   "action": "set_explanation",
+   "text": "Subagents have isolated contexts: they do not see the coordinator's conversation history or tool results. The only content passed from coordinator to subagent is the Agent tool's prompt string, so anything the subagent needs must be written into that prompt. The subagent also starts with its own system prompt and project instructions such as CLAUDE.md, but never with the coordinator's history, so credentials received earlier in the session stay out of its context.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Task-Bezeichnung ersetzt; \"only information\" präzisiert (eigener Systemprompt und CLAUDE.md laden zusätzlich)."
+  },
+  {
+   "id": "connectry:q-1.3-hard-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "set a deadline on each Task invocation",
+   "replace": "set a deadline on each Agent call",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Task heißt seit v2.1.63 Agent."
+  },
+  {
+   "id": "connectry:q-1.3-hard-3",
+   "action": "set_explanation",
+   "text": "Because subagents have isolated contexts, they receive only what is explicitly passed in the Agent call. If the taxonomy is defined in the coordinator's system prompt or memory, subagents are unaware of it and may infer different categories independently. The fix is to include the canonical taxonomy in every Agent call (or in the subagent's own system prompt), so all subagents work from the same definition. Option D would not fix this either: the subagents never saw the taxonomy, and API version 2026-10-21 removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Task-Bezeichnung ersetzt, temperature-Hinweis ergänzt."
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(1) `allowed_tools: [\"database_write\"]` — this deterministically removes `file_read` and `send_email`",
+   "replace": "(1) restricting the subagent's tool set to `database_write` (the `tools` field of its AgentDefinition, or `disallowed_tools`) — this deterministically removes `file_read` and `send_email`",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "allowed_tools gibt nur frei und entfernt keine Tools; Einschränkung über tools/disallowed_tools."
+  },
+  {
+   "id": "connectry:q-1.3-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": " apply least-privilege and explicit authorisation.",
+   "replace": " apply least-privilege and explicit authorisation. Listing tools in `allowed_tools` alone would not achieve this: it only auto-approves them, and unlisted tools stay available.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Hinweis zur Semantik von allowed_tools ergänzt."
+  },
+  {
+   "id": "connectry:q-1.3-hard-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(1) `allowed_tools` scoping ensures each subagent can only invoke tools needed for its specific subtask",
+   "replace": "(1) scoping each subagent's tool set (the `tools` field of its AgentDefinition; `allowed_tools` would only auto-approve, not restrict) ensures each subagent can only invoke tools needed for its specific subtask",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "allowed_tools gibt nur frei; Einschränkung über tools."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "edit",
+   "field": "q",
+   "find": "Which argument BEST supports splitting into five separate tools?",
+   "replace": "Which argument BEST supports keeping the single `document_tool`?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Doku empfiehlt das Gegenteil der alten Lösung: verwandte Aktionen in einem Tool mit action-Parameter bündeln."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "Five tools are faster than one",
+   "text": "One tool is faster than five, because the API parses a single larger schema more quickly than several smaller ones.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Falsches Argument für ein Tool (Performance-Mythos)."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "Each tool gets a focused description",
+   "text": "Grouping related operations behind one `action` parameter gives Claude fewer tools and less selection ambiguity.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Doku: \"Consolidate related operations into fewer tools ... with an action parameter.\""
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "The Anthropic API allows only one action per tool",
+   "text": "The Anthropic API rejects tool sets in which several tools share a noun such as `document` in their names.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erfundene API-Beschränkung als Fehlannahme."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_option",
+   "match": "Having more tools available",
+   "text": "With a single tool, Claude no longer needs a description, because the `action` enum alone tells it what to do.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Widerspricht der Doku (Beschreibungen sind der wichtigste Faktor)."
+  },
+  {
+   "id": "connectry:q-2.1-medium-5",
+   "action": "set_explanation",
+   "text": "Anthropic's tool-definition guidance recommends consolidating related operations into fewer tools: rather than `create_document`, `read_document` and so on, group them into a single tool with an `action` parameter, because fewer, more capable tools reduce selection ambiguity (B). The single tool still needs a detailed description that covers each action's preconditions and side effects (for example, that `delete` is irreversible), so D is wrong. Schema size does not make one tool faster (A), and the API places no restriction on shared nouns in tool names (C).",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung an neu ausgerichtete Frage angepasst."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "set_option",
+   "match": "Merge `get_transaction_history`",
+   "text": "Shorten all three descriptions to one line each, so Claude relies on the tool names, which already say exactly what each returns.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Merge mit status-Parameter ist nach Konsolidierungsempfehlung vertretbar; durch eindeutig falsche Beschreibungsänderung ersetzt."
+  },
+  {
+   "id": "connectry:q-2.1-hard-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "This is far more robust than keyword routing, merging, or artificial priority signals.",
+   "replace": "This is far more robust than keyword routing (B), artificial priority signals (A), or thinner descriptions (D), which remove the very detail Claude needs.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung an ersetzten Distraktor D angepasst."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "set_option",
+   "match": "Merge both into one `search` tool",
+   "text": "Give both tools the same generic description, 'Searches for information,' so Claude treats them as equals.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Ein search-Tool mit source-Parameter ist nach Konsolidierungsempfehlung vertretbar; durch eindeutig falsche Beschreibungsstrategie ersetzt."
+  },
+  {
+   "id": "connectry:q-2.1-medium-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "emoving tools or changing the interface structure.",
+   "replace": "emoving tools or changing the interface structure. Identical generic descriptions (C) remove exactly the signal Claude needs, removing `search_web` (B) loses legitimate public lookups, and priority prefixes in names (D) carry no meaning for selection.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung um ersetzten Distraktor C ergänzt."
+  },
+  {
+   "id": "connectry:q-3.3-hard-3",
+   "action": "set_option",
+   "match": "Only `frontend-react.md` and `all-typescript.md`",
+   "text": "Only `frontend-react.md`; its more specific glob overrides the broader `all-typescript.md` rule.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "A nannte dieselbe Dateimenge wie die Lösung D (zwei richtige Antworten); jetzt eindeutig falsch (Rules sind additiv)."
+  },
+  {
+   "id": "connectry:q-3.3-hard-3",
+   "action": "set_option",
+   "match": "`frontend-react.md`, `all-typescript.md`, and `test-patterns.md`",
+   "text": "`frontend-react.md`, `all-typescript.md` and `test-patterns.md`, since `.tsx` matches a test glob.",
+   "src": "editorial",
+   "why": "Längenangleichung."
+  },
+  {
+   "id": "connectry:q-3.3-hard-3",
+   "action": "set_option",
+   "match": "All six rule files",
+   "text": "All six rule files, because a `.tsx` file matches every TypeScript-related pattern listed.",
+   "src": "editorial",
+   "why": "Längenangleichung."
+  },
+  {
+   "id": "connectry:q-3.3-hard-3",
+   "action": "set_option",
+   "match": "`frontend-react.md` and `all-typescript.md` are active",
+   "text": "`frontend-react.md` and `all-typescript.md`; the other four globs do not match `Header.tsx`.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Richtige Option gekürzt (vorher Klasse A, 150 Zeichen)."
+  },
+  {
+   "id": "connectry:q-3.3-hard-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ve rule files (`frontend-react.md` and `all-typescript.md`).",
+   "replace": "ve rule files (`frontend-react.md` and `all-typescript.md`). Matching rules are additive: a more specific glob does not override a broader one. (A path-scoped rule loads once Claude reads, writes or edits a matching file.)",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung um neuen Distraktor A und Ladezeitpunkt ergänzt."
+  },
+  {
+   "id": "connectry:q-3.3-easy-4",
+   "action": "set_explanation",
+   "text": "Adding YAML frontmatter with a `paths:` list is the documented mechanism. The minimal addition is:\n```yaml\n---\npaths:\n  - '**/*.tsx'\n---\n```\nThis scopes the rule to any `.tsx` file in the project. `paths` is the only field Claude Code reads from a rule; any other field, such as `scope:` (C), is ignored, so the rule would still load for every file. File names (A) and subdirectories of `.claude/rules/` (B) do not scope a rule: all `.md` files are discovered recursively and, without `paths`, load at launch.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklärung nannte die falsche Option C \"structurally correct\"."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Rule files without frontmatter are unconditionally loaded for every editing context.",
+   "replace": "Rule files without `paths` frontmatter are loaded at launch and apply to every file.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Ladezeitpunkt präzisiert."
+  },
+  {
+   "id": "connectry:q-3.3-easy-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Claude activates them only when the file currently being edited matches",
+   "replace": "Claude loads them only when it reads, writes, or edits a file that matches",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Pfadregeln laden schon beim Lesen, nicht erst beim Bearbeiten."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(3) `src/legacy/CLAUDE.md` is loaded as an ancestor directory file.",
+   "replace": "(3) `src/legacy/CLAUDE.md` loads on demand once Claude reads or edits a file in `src/legacy/`.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Unterverzeichnis-CLAUDE.md lädt bei Bedarf, nicht als Vorfahren-Datei beim Start."
+  },
+  {
+   "id": "connectry:q-3.3-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The correct fix is to add a negative exclusion to `strict-null-checks.md` (e.g., exclude `src/legacy/**`) or to remove the broad `src/**/*.ts` pattern and list only non-legacy paths.",
+   "replace": "The fix is to replace the broad `src/**/*.ts` pattern in `strict-null-checks.md` with paths that leave out `src/legacy/`.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Ausschlussmuster in paths ist nicht dokumentiert; nur die belegte Variante bleibt."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(2) `src/api/CLAUDE.md` is loaded because it is in an ancestor directory of the file;",
+   "replace": "(2) `src/api/CLAUDE.md` loads on demand once Claude reads or edits a file in `src/api/`;",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Unterverzeichnis-CLAUDE.md lädt bei Bedarf."
+  },
+  {
+   "id": "connectry:q-3.3-medium-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(3) `.claude/rules/api-rules.md` is loaded because the file matches `src/api/**/*.ts`.",
+   "replace": "(3) `.claude/rules/api-rules.md` loads when Claude reads or edits a file matching `src/api/**/*.ts`.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Pfadregeln laden beim Lesen, Schreiben oder Bearbeiten."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_option",
+   "match": "Claude Code spawns the stdio process at session start",
+   "text": "Claude Code owns the stdio process; after a crash it restarts only via `/mcp` reconnect or, in `-p`/SDK, on the next call, so handle MCP tool errors.",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Alte Lösung (\"calls fail\") ignorierte den automatischen Neustart in -p/SDK und den Reconnect über /mcp."
+  },
+  {
+   "id": "connectry:q-2.4-medium-5",
+   "action": "set_explanation",
+   "text": "Claude Code starts stdio MCP servers as child processes and manages their lifecycle. If a server process exits mid-session, an interactive session marks it as failed until you select Reconnect in `/mcp` (or run `/mcp reconnect all`); in `claude -p` and the Agent SDK, Claude Code starts the server again the next time Claude calls one of its tools. Either way, calls can fail while the server is down, so robust agent workflows must handle MCP tool errors (e.g., `isError: true` results or transport-level failures) with retries or fallback paths. There is no pool of spare processes (B), no result cache (C), and no fresh process per call (D).",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Erklärung um Modus-Unterschied (interaktiv vs. -p/SDK) ergänzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#14",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Resources expose content catalogs directly, which is precisely the mechanism for giving agents visibility into available data without requiring exploratory tool calls.",
+   "replace": "Resources expose content catalogs directly, which is precisely the mechanism for giving agents visibility into available data without requiring exploratory tool calls. The client can list them as soon as it connects, and the host decides how they enter the context (in Claude Code, by `@`-mentioning a resource, which attaches it without a tool call).",
+   "src": "https://modelcontextprotocol.io/specification/2025-06-18/server/resources",
+   "why": "Resources landen nicht automatisch im Kontext; der Host entscheidet (Claude Code: @-Erwähnung)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#35",
+   "action": "edit",
+   "field": "explanation",
+   "find": "veloper input (D) don't actually solve as cleanly.",
+   "replace": "veloper input (D) don't actually solve as cleanly. Resources do not load into context by themselves: in Claude Code you reference one with an `@server:protocol://resource` mention, which fetches it as an attachment instead of a tool round-trip.",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Resources landen nicht automatisch im Kontext; Referenz per @-Erwähnung ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "edit",
+   "field": "q",
+   "find": "A review job's MCP tool config in `.mcp.json` includes",
+   "replace": "The compliance server's HTTP entry in `.mcp.json` includes",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Stamm auf Remote-Server präzisiert (headers als Ort für das Token)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "The job-level variable",
+   "text": "`auth_token` is not a server field Claude Code reads; the token belongs in `headers`, e.g. `Authorization`",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Alte Lösung (keine Vererbung der Job-Variable) unplausibel; auth_token ist kein Feld, ${VAR} wirkt in command, args, env, url, headers."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_option",
+   "match": "The MCP server's URL",
+   "text": "CI processes never inherit job-level variables, so `${COMPLIANCE_API_TOKEN}` expands to an empty string",
+   "src": "editorial",
+   "why": "Alte (unplausible) Lösung als Fehlannahme."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#46",
+   "action": "set_explanation",
+   "text": "Claude Code expands `${VAR}` (and `${VAR:-default}`) in a server's `command`, `args`, `env`, `url` and `headers` values, and a remote server receives credentials through `headers`, for example `\"Authorization\": \"Bearer ${COMPLIANCE_API_TOKEN}\"`. `auth_token` is not one of those fields, so the token never reaches the server even though the variable is set (B). Expansion is supported (A), it is not limited to stdio servers (D), and processes started within a CI job do inherit the job's environment variables (C).",
+   "src": "https://code.claude.com/docs/en/mcp",
+   "why": "Erklärung für neu aufgebaute Frage."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d3/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "which prompts developers for required parameters when they invoke the skill without arguments.",
+   "replace": "which is only a hint shown during autocomplete to indicate the expected arguments; it blocks nothing.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "argument-hint ist laut Doku nur ein Autocomplete-Hinweis."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#50",
+   "action": "set_option",
+   "match": "Use shell environment variables in the CI job",
+   "text": "Add a `pr_type` key to `.claude/settings.json` so Claude Code picks the matching section of `CLAUDE.md` for the PR",
+   "src": "https://code.claude.com/docs/en/settings",
+   "why": "A war laut Erklärung \"real but clunkier\" (zweite vertretbare Antwort); durch nicht existierendes Setting ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#50",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Swapping `CLAUDE.md` files via environment variables (A) is a real but clunkier alternative to the same end,",
+   "replace": "There is no `pr_type` setting that selects sections of `CLAUDE.md` (A),",
+   "src": "https://code.claude.com/docs/en/settings",
+   "why": "Erklärung an ersetzten Distraktor A angepasst."
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "edit",
+   "field": "q",
+   "find": "in the 900-line file.",
+   "replace": "in the 900-line file. The dedicated Glob and Grep tools are available.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen auf macOS/Linux/WSL standardmäßig; Stamm eingegrenzt."
+  },
+  {
+   "id": "connectry:q-2.5-hard-1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "is then used as the `old_string` in the Edit call.",
+   "replace": "is then used as the `old_string` in the Edit call. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Glob/Grep; Standardverhalten macOS/Linux/WSL ergänzt."
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "Performance and thoroughness are equally important.",
+   "replace": "Performance and thoroughness are equally important. The dedicated Glob and Grep tools are available.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen auf macOS/Linux/WSL standardmäßig (dort wäre Bash-grep der Standardweg); Stamm eingegrenzt."
+  },
+  {
+   "id": "connectry:q-2.5-hard-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "lagged files then need deeper Read-based analysis.",
+   "replace": "lagged files then need deeper Read-based analysis. Bash `grep -r` (D) can find the same matches, but it dumps every matching line into one file that then has to be read back, whereas `files_with_matches` returns only paths and the three Grep calls run in parallel. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Abgrenzung zu D und Standardverhalten ergänzt."
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "edit",
+   "field": "q",
+   "find": "from earlier exploration in this session.",
+   "replace": "from earlier exploration in this session. The dedicated Glob and Grep tools are available.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Grep; Stamm eingegrenzt."
+  },
+  {
+   "id": "connectry:q-5.4-hard-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ext knowledge while staying within context bounds.",
+   "replace": "ext knowledge while staying within context bounds. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Glob/Grep; Standardverhalten macOS/Linux/WSL ergänzt."
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "edit",
+   "field": "q",
+   "find": "on earlier exploration tasks.",
+   "replace": "on earlier exploration tasks. The dedicated Glob and Grep tools are available.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Grep; Stamm eingegrenzt."
+  },
+  {
+   "id": "connectry:q-5.4-medium-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "is needed without loading irrelevant file content.",
+   "replace": "is needed without loading irrelevant file content. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Glob/Grep; Standardverhalten macOS/Linux/WSL ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#32",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool is correct?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool is correct?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung Grep fehlt auf macOS/Linux/WSL standardmäßig; Stamm eingegrenzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#32",
+   "action": "edit",
+   "field": "explanation",
+   "find": ", which is what's needed to find function callers.",
+   "replace": ", which is what's needed to find function callers. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Glob/Grep; Standardverhalten macOS/Linux/WSL ergänzt."
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "before diving into specific modules.",
+   "replace": "before diving into specific modules. The dedicated Glob and Grep tools are available.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Lösung stützt sich auf Glob; Stamm eingegrenzt."
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_option",
+   "match": "Delegate the entire exploration",
+   "text": "Open the largest files first, since file size best shows which modules matter most",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Delegation an einen (Explore-)Subagent ist dokumentiertes Muster und damit kein eindeutig falscher Distraktor."
+  },
+  {
+   "id": "connectry:q-5.4-easy-1",
+   "action": "set_explanation",
+   "text": "Incremental exploration starts with a cheap structural overview: Glob matches file names and paths, so it maps the layout without loading any file contents. From there, targeted Grep searches and Reads of the relevant files follow. Reading everything (A) floods the context, broad Grep searches over all files (C) return noise before you know what to look for, and file size (D) says little about which modules matter. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Erklärung an ersetzten Distraktor D angepasst, unbelegte feste Reihenfolge \"Glob → Read → Grep\" entfernt."
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_option",
+   "match": "Explore one service at a time",
+   "text": "Explore one service at a time with targeted searches and reads, writing each service's findings to a scratchpad file first",
+   "src": "editorial",
+   "why": "Unübliche feste Reihenfolge \"Glob → Read → Grep\" entfernt; Kernaussage (seriell + Scratchpad) bleibt."
+  },
+  {
+   "id": "connectry:q-5.4-medium-5",
+   "action": "set_explanation",
+   "text": "Systematic service-by-service exploration with incremental scratchpad writing is the correct pattern. Each service gets focused attention through targeted searches and reads, and its findings are written to a file before the next service begins, so they survive even as the context fills up. Loading everything first (A) and interleaving all eight services (B) mix unrelated material in one context. Spawning eight sub-subagents (D) loses the shared picture the subagent is supposed to build and returns eight reports at once into its already busy context.",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Erklärung an angepasste Option angepasst; D-Begründung ohne die (falsche) Annahme, Subagents könnten nicht spawnen."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#34",
+   "action": "edit",
+   "field": "explanation",
+   "find": "When `Edit`'s anchor text isn't unique, `Read` + `Write` is the reliable fallback for a full-file rewrite.",
+   "replace": "When `Edit`'s anchor text isn't unique, `Read` + `Write` is the reliable fallback for a full-file rewrite. The usual first step is a longer `old_string` with enough surrounding context to be unique (or `replace_all` when every occurrence should change); Read + Write is the fallback when that is impractical.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Dokumentierter erster Schritt (längeres old_string / replace_all) ergänzt."
+  },
+  {
+   "id": "connectry:q-4.5-hard-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "200,000 items require 20 batches of 10,000.",
+   "replace": "With up to 100,000 requests (or 256 MB) per batch, the 200,000 items fit into a few batches.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Batch-Limit liegt bei 100.000 Requests bzw. 256 MB."
+  },
+  {
+   "id": "connectry:q-4.5-medium-4",
+   "action": "set_option",
+   "match": "Poll with exponential backoff",
+   "text": "Poll with exponential backoff starting at a few minutes, and fetch the results once the batch has ended",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Batches API hat keine dokumentierten Webhooks."
+  },
+  {
+   "id": "connectry:q-4.5-medium-4",
+   "action": "set_explanation",
+   "text": "Aggressive polling every 30 seconds wastes requests for a workload that typically takes hours. The better approach is exponential backoff (e.g., check after 5 minutes, then 10, then 20), which still detects completion promptly, and then retrieving the results once processing has ended. The Message Batches API has no documented completion webhook, so polling the batch status is the mechanism. Waiting the full 24 hours (C) delays results needlessly, and submitting duplicates (D) doubles cost.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Webhook-Hinweis entfernt (nicht dokumentiert)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "set_option",
+   "match": "Submit each document individually",
+   "text": "Submit a batch every 8 hours, since a batch rarely needs its full 24 hours to finish.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Ein-Dokument-Batches sofort einreichen hielte die SLA ebenfalls (zweite richtige Antwort); durch klar falsche Kadenz ersetzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d4/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Option C forfeits the batching that makes the discount possible.",
+   "replace": "Option C allows 8 hours of queueing plus up to 24 hours of processing, which can reach 32 hours, and again relies on \"usually faster\".",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Erklärung an ersetzten Distraktor C angepasst; alte Aussage zum Rabatt war ungenau."
+  },
+  {
+   "id": "preporato:cca-f#9",
+   "action": "edit",
+   "field": "explanation",
+   "find": "D and A change settings that have nothing to do with a malformed history.",
+   "replace": "D and A change settings that have nothing to do with a malformed history (and a forced `tool_choice` such as `any` is itself rejected with a 400 error on Claude Opus 5.5, Sonnet 5.5 and the Fable/Mythos 5.x models).",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung verschwieg, dass any auf neueren Modellen 400 liefert."
+  },
+  {
+   "id": "connectry:q-4.4-hard-2",
+   "action": "set_option",
+   "match": "Treat it like a schema error",
+   "text": "Treat it like a schema error: return `is_error: true` with the message and let Claude retry with corrected parameters",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls",
+   "why": "API-tool_result nutzt is_error; isError ist die MCP-Schreibweise."
+  },
+  {
+   "id": "connectry:q-4.4-medium-2",
+   "action": "edit",
+   "field": "q",
+   "find": "receives `isError: true` with the message",
+   "replace": "receives a `tool_result` with `is_error: true` and the message",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls",
+   "why": "API-tool_result nutzt is_error; isError ist die MCP-Schreibweise."
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "edit",
+   "field": "q",
+   "find": "A developer prefills the assistant turn",
+   "replace": "On Claude Sonnet 4.5, which still accepts prefill, a developer prefills the assistant turn",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+   "why": "Prefill liefert 400 bei 5er-Modellen, Sonnet/Opus 4.6; Stamm auf Legacy-Modell eingegrenzt."
+  },
+  {
+   "id": "connectry:q-4.3-medium-4",
+   "action": "set_explanation",
+   "text": "Prefilling is a soft structural guide. It fixes the opening of the response but tells Claude nothing about how many items must appear. If the prompt does not state the expected count or instruct Claude to extract all occurrences, Claude may stop after what it judges to be a reasonable set. Structured Outputs (`output_config.format`) or a strict tool (`strict: true`) with an array field guarantee the JSON shape, but the item count still depends on clear instructions such as 'extract ALL entities'. Note that prefilled responses return a 400 error starting with the Claude 4.6 models, including all Claude 5 models; Sonnet 4.5, Haiku 4.5 and older models still accept them.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung: Garantie nur mit strict/Structured Outputs; Prefill-Hinweis präzisiert."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_option",
+   "match": "Early examples lose influence",
+   "text": "Early examples lose influence as the conversation grows; re-inject them near recent turns or compact older history.",
+   "src": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+   "why": "\"longer-context model\" behebt Context Rot nicht; Abhilfe an Doku angeglichen."
+  },
+  {
+   "id": "connectry:q-4.2-medium-2",
+   "action": "set_explanation",
+   "text": "As the conversation grows, the few-shot examples become a shrinking part of an ever longer context, and a model's ability to recall any given part of its context decreases as tokens accumulate (context rot). Re-injecting the examples close to the current turn, or compacting older history, restores their influence. The model does not stop following its system prompt after a fixed number of turns (A), few-shot examples work in multi-turn conversations (D), and sampling temperature does not drift during a conversation (C); API version 2026-10-21 also removes `temperature`, `top_p` and `top_k` entirely (400 on every model).",
+   "src": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+   "why": "Unscharfe \"lost in the middle\"-Begründung durch Context Rot ersetzt, temperature-Hinweis ergänzt."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "edit",
+   "field": "q",
+   "find": "(3) a compliance checklist (2,000 tokens at the end).",
+   "replace": "(3) a compliance checklist (2,000 tokens at the end, directly before the latest user message).",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+   "why": "Stamm widersprüchlich: Checkliste stand nicht am Ende des Kontexts; Lage präzisiert."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "edit",
+   "field": "q",
+   "find": "Given the 'lost in the middle' phenomenon,",
+   "replace": "Given how attention behaves over long contexts,",
+   "src": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+   "why": "Lösung beruht nicht mehr auf \"lost in the middle\"; Stamm angeglichen."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_option",
+   "match": "The 40,000-token log pushes the rules",
+   "text": "The 40,000-token log dilutes the rules despite position 0, while the checklist sits beside the latest message; re-pin the rules at the end.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+   "why": "Begründung \"Position 0 rutscht in die Mitte\" war falsch; Context Rot + Nähe zur Anfrage."
+  },
+  {
+   "id": "connectry:q-5.1-hard-1",
+   "action": "set_explanation",
+   "text": "Position 0 is not a low-attention zone in itself, but as the 40,000-token log grows, the rules have to compete with far more tokens: a model's ability to recall any given part of its context decreases as the context grows (context rot). The checklist, by contrast, sits directly before the latest user message, where instructions work best; Anthropic's long-context guidance recommends placing long material first and the query and instructions at the end. The fix is to restate a concise version of the regulatory rules at the end as well (for example next to the checklist each turn) and to keep the growing log out of the way. Attention is not uniform (A), position 0 is not the weakest zone (C), and shortening the rules (D) misreads the cause.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+   "why": "Erklärung an korrigierte Begründung angepasst."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_option",
+   "match": "Keep issue, commitments and tried steps",
+   "text": "Keep issue, commitments and tried steps in a structured case-facts block re-sent with every request, and summarize the rest.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "why": "Systemprompt jede Runde ändern macht den Prompt-Cache ungültig; Ort des Blocks offen gelassen."
+  },
+  {
+   "id": "connectry:q-5.1-medium-4",
+   "action": "set_explanation",
+   "text": "Structured pinning separates critical, non-compressible data (issue, commitments, tried steps) from the conversational body that can tolerate summarization. Re-sending these fields as a structured case-facts block with every request ensures they are never lost to progressive compression, while the rest of the conversation can be summarized as needed. Place the block after the stable part of the prompt (for example at the start of the latest user turn) rather than rewriting the system prompt each turn: cache hits require an identical prefix, so a changing system prompt invalidates the prompt cache for everything after it. Waiting for a context error (B), summarizing the critical fields away (C), and a five-turn window (D) all lose information.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "why": "Erklärung um Cache-Folgen ergänzt; \"high-attention zone\"-Begründung entfernt (Widerspruch zu q-5.1-hard-1)."
+  },
+  {
+   "id": "connectry:q-4.1-hard-4",
+   "action": "edit",
+   "field": "explanation",
+   "find": "the < 0.75 flag transforms calibrated uncertainty into a machine-readable signal",
+   "replace": "the < 0.75 flag turns the model's stated uncertainty into a machine-readable signal",
+   "src": "editorial",
+   "why": "Selbst berichtete Confidence ist nicht kalibriert; unbelegte Behauptung entfernt."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "set_option",
+   "match": "Raise the confidence threshold",
+   "text": "Lower the confidence threshold so that fewer conversations trigger escalation while the knowledge base is stale, and restore the original threshold once the queue has cleared.",
+   "src": "editorial",
+   "why": "Distraktor widersprach sich (höhere Schwelle = mehr Eskalationen)."
+  },
+  {
+   "id": "connectry:q-5.2-hard-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Raising the threshold would suppress",
+   "replace": "Lowering the threshold would suppress",
+   "src": "editorial",
+   "why": "Erklärung an korrigierten Distraktor angepasst."
+  },
+  {
+   "id": "connectry:q-5.5-medium-3",
+   "action": "set_option",
+   "match": "Lower the auto-approve threshold to 0.5",
+   "text": "Lower the auto-approve threshold to 0.5 so that more documents get auto-approved and the review queue shrinks",
+   "src": "editorial",
+   "why": "Distraktor war in sich unlogisch (niedrigere Schwelle genehmigt mehr)."
+  },
+  {
+   "id": "connectry:q-5.3-medium-3",
+   "action": "set_option",
+   "match": "Exception tunneling",
+   "text": "Exception tunneling; the fix is to retry the failed fetch at every boundary until it succeeds instead of passing any error along",
+   "src": "editorial",
+   "why": "Abhilfe in A deckte sich fast mit der Lösung; jetzt eindeutig falsch."
   }
  ],
  "hold": []
