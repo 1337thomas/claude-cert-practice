@@ -1,0 +1,178 @@
+{
+ "global": [],
+ "items": [
+  {
+   "id": "milind:Q118",
+   "action": "edit",
+   "field": "q",
+   "find": " An agent's tool call produces a 2,000-token result with detailed order history. Only the last 3 orders and the account status are relevant to the current request.",
+   "replace": "",
+   "src": "editorial",
+   "why": "Stamm wiederholt Szenario und Zahlen doppelt (Copy-Paste-Rest)."
+  },
+  {
+   "id": "milind:Q176",
+   "action": "edit",
+   "field": "explanation",
+   "find": "PreToolUse doesn't help here since the problem is post-write processing;",
+   "replace": "Moving the logic to a PreToolUse hook (B) changes when it runs, not what it receives: it would see the same binary content and fail the same way;",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Begruendung zu B war schief; PreToolUse sieht dieselben Eingabedaten, das Binaerproblem bleibt."
+  },
+  {
+   "id": "milind:Q256",
+   "action": "set_option",
+   "match": "Merge them into one `send_notification` tool",
+   "text": "Rename them `notify_email`, `notify_sms` and `notify_push` so they read as a group",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Konsolidierung in ein Tool ist laut Doku eine empfohlene Praxis und damit zweite vertretbare Antwort; neuer Distraktor (reines Umbenennen) loest das Problem nicht."
+  },
+  {
+   "id": "milind:Q256",
+   "action": "set_explanation",
+   "text": "With one-line descriptions, Claude cannot tell that the three channels are alternatives rather than complements. Tool descriptions should say when to use each tool relative to the others, so stating each channel's use case and that exactly one channel is chosen per notification (C) fixes the cause. A system-prompt rule (A) is a weaker, global patch that leaves the tools themselves ambiguous. A PostToolUse hook (B) runs after a call has already executed, so it cannot cancel later calls; blocking a call is a PreToolUse job. Renaming the tools (D) groups them visually but still gives Claude no rule for choosing between them.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklaerung an neuen Distraktor anpassen, B korrekt begruenden, Verweis auf nicht vorhandene 'check preferences'-Option entfernen."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_option",
+   "match": "Restrict the agent's OS-level file permissions",
+   "text": "Add `/var/app/data/` to `additionalDirectories` so Claude Code confines every Write or Edit call to it.",
+   "src": "https://code.claude.com/docs/en/permissions",
+   "why": "OS-Dateirechte erzwingen die Grenze ebenfalls (Stamm spricht sogar von 'infrastructure level'); neuer Distraktor: additionalDirectories erweitert den Zugriff, beschraenkt ihn nicht."
+  },
+  {
+   "id": "milind:Q294",
+   "action": "set_explanation",
+   "text": "A pre-tool-call (PreToolUse) hook validates the target path before the Write or Edit runs and denies the call, so the modification never happens, and it works without touching the system prompt. A post-tool-call hook (C) fires only after the file was already changed. A system-prompt instruction (D) is probabilistic and can be overridden. `additionalDirectories` (B) grants Claude access to extra directories; it widens what can be reached and does not confine writes to the listed path.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklaerung an neuen Distraktor B anpassen."
+  },
+  {
+   "id": "milind:Q373",
+   "action": "edit",
+   "field": "q",
+   "find": "An MCP tool returns a 50-field JSON object",
+   "replace": "A third-party MCP tool, whose server you cannot modify, returns a 50-field JSON object",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Ein fields-Parameter (D) waere bei eigenem Server ebenfalls vertretbar; Stamm schliesst Aenderungen am Server aus."
+  },
+  {
+   "id": "milind:Q373",
+   "action": "set_explanation",
+   "text": "A PostToolUse hook can replace the result Claude sees via `updatedToolOutput`, for MCP and built-in tools alike, so trimming each lookup to the 6 relevant fields stops the bloat before it accumulates over a multi-turn session. Adding a `fields` parameter (D) would be good tool design, but the server is third-party and cannot be changed. A system-prompt instruction to ignore fields (C) saves no tokens, because the fields are still in context. A larger context window (B) only postpones the problem and raises cost.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklaerung an eingegrenzten Stamm anpassen und updatedToolOutput (alle Tools) nennen."
+  },
+  {
+   "id": "milind:Q78",
+   "action": "edit",
+   "field": "q",
+   "find": "After reviewing the `AgentDefinition`, you realize `\"Task\"` is absent from `allowedTools`. What happens if you forget to include `\"Task\"` in the coordinator agent's `allowedTools` configuration?",
+   "replace": "A colleague blames this on `\"Agent\"` (formerly `\"Task\"`) being absent from the coordinator's `allowedTools`. What does leaving `\"Agent\"` out of `allowedTools` actually do?",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Stamm unterstellte allowedTools in der AgentDefinition und eine Kausalitaet, die laut Doku nicht besteht."
+  },
+  {
+   "id": "milind:Q78",
+   "action": "set_option",
+   "match": "The Agent tool is available by default",
+   "text": "Nothing changes: `Agent` needs no approval, so it runs whether or not it is listed",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Praezisiert die nach Doku richtige Option."
+  },
+  {
+   "id": "milind:Q78",
+   "action": "rekey",
+   "correct": "Nothing changes: `Agent` needs no approval",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Doku: Calls that need no approval run whether or not you list them, including Agent; allowedTools only auto-approves."
+  },
+  {
+   "id": "milind:Q78",
+   "action": "set_explanation",
+   "text": "`allowedTools` only auto-approves the tools it lists; it does not restrict Claude to them. Calls that need no approval run whether or not they are listed, and the Agent tool (formerly Task, which still works as an alias) is one of them, so leaving it out changes nothing (D). The thin single-agent response therefore has another cause, for example subagent descriptions too vague for Claude to delegate; clearer descriptions or naming the subagent in the prompt fix that. To actually stop spawning, put `Agent` in `disallowedTools`. A, B and C describe behaviors that don't exist.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Alte Erklaerung (Task muss in allowedTools stehen) widerspricht der Doku."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#28",
+   "action": "set_option",
+   "match": "It works normally; `Task` is always available",
+   "text": "It works normally; `Agent` needs no approval",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Richtige Option auf aktuellen Tool-Namen und den Grund (keine Freigabe noetig) praezisiert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#28",
+   "action": "rekey",
+   "correct": "It works normally; `Agent` needs no approval",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Doku: tools like Agent that don't ask before running run whether or not they are listed."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#28",
+   "action": "set_explanation",
+   "text": "`allowedTools` only auto-approves the listed tools and does not restrict Claude to them. The Agent tool (formerly Task) needs no approval, so its calls run whether or not it is listed, and delegation works normally (A). To prevent spawning, put `Agent` in `disallowedTools` instead.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Alte Erklaerung (Task muss in allowedTools stehen) widerspricht der Doku."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "You are reviewing the invocation code.\n\nWhich parameter on the Agent tool (formerly Task) invocation controls which tools the subagent is permitted to use?",
+   "replace": "You are reviewing the subagent's configuration.\n\nWhich setting controls which tools the subagent can use?",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Tool-Beschraenkung liegt nicht im Agent-Tool-Aufruf, sondern in der AgentDefinition."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "set_option",
+   "match": "tool_scope",
+   "text": "The `tool_scope` field in the AgentDefinition",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Optionen auf neue Fragestellung umgestellt (Feld existiert nicht)."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "set_option",
+   "match": "allowed_tools",
+   "text": "The `tools` field in the AgentDefinition",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Richtige Antwort laut Doku: tools restricts what the subagent can do."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "set_option",
+   "match": "permitted_actions",
+   "text": "The `allowedTools` option on the query",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Bisheriger Schluessel als Fehlannahme: allowedTools gibt nur frei, schraenkt nicht ein."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "set_option",
+   "match": "tool_filter",
+   "text": "The `tool_filter` field in the AgentDefinition",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Optionen auf neue Fragestellung umgestellt (Feld existiert nicht)."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "rekey",
+   "correct": "The `tools` field in the AgentDefinition",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Bisheriger Schluessel allowed_tools widerspricht der Doku."
+  },
+  {
+   "id": "connectry:q-1.3-easy-1",
+   "action": "set_explanation",
+   "text": "A subagent's tool access is set by the `tools` field of its AgentDefinition: listing `[\"WebSearch\"]` gives the subagent only that tool, while omitting the field inherits every tool available to subagents. `allowedTools` on the query only auto-approves the listed tools; it does not restrict which tools exist, so it cannot enforce least privilege. `tool_scope` and `tool_filter` are not AgentDefinition fields.",
+   "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
+   "why": "Erklaerung samt alter Correction-Notiz neu, passend zum neuen Schluessel."
+  }
+ ],
+ "hold": []
+}
