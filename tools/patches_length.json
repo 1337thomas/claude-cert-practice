@@ -43206,6 +43206,1161 @@
    "action": "set_option",
    "match": "block a write",
    "text": "Block a write to any path that lies outside the task's declared file scope"
+  },
+  {
+   "id": "amey:architect-professional-mock1-1",
+   "action": "set_option",
+   "match": "fine tune a",
+   "text": "Fine-tune a model on the full catalog each night so it learns the latest products"
+  },
+  {
+   "id": "amey:architect-professional-mock1-1",
+   "action": "set_option",
+   "match": "load the catalog",
+   "text": "Load the whole catalog into the system prompt and rely on prompt caching for cost"
+  },
+  {
+   "id": "amey:architect-professional-mock1-1",
+   "action": "set_option",
+   "match": "retrieval over an",
+   "text": "Retrieval over an index refreshed as the catalog changes, answering from that context"
+  },
+  {
+   "id": "amey:architect-professional-mock1-1",
+   "action": "set_option",
+   "match": "an autonomous agent",
+   "text": "An autonomous agent that browses the public website to answer each product question"
+  },
+  {
+   "id": "amey:architect-professional-mock1-10",
+   "action": "set_option",
+   "match": "workflows are always",
+   "text": "Workflows are inherently more accurate than agents, whatever the document format"
+  },
+  {
+   "id": "amey:architect-professional-mock1-10",
+   "action": "set_option",
+   "match": "agents cannot process",
+   "text": "Agents cannot reliably parse document attachments, so intake needs a fixed pipeline"
+  },
+  {
+   "id": "amey:architect-professional-mock1-10",
+   "action": "set_option",
+   "match": "workflows use less",
+   "text": "Workflows use less context per run, since each step sees just part of the file"
+  },
+  {
+   "id": "amey:architect-professional-mock1-10",
+   "action": "set_option",
+   "match": "the processing path",
+   "text": "The path is known upfront, so fixed orchestration is cheaper, testable, auditable"
+  },
+  {
+   "id": "amey:architect-professional-mock1-12",
+   "action": "set_option",
+   "match": "the final design",
+   "text": "The final design and its diagram, leaving out the options that were rejected"
+  },
+  {
+   "id": "amey:architect-professional-mock1-12",
+   "action": "set_option",
+   "match": "the decision the",
+   "text": "The decision, alternatives considered, tradeoffs, and the constraints behind it"
+  },
+  {
+   "id": "amey:architect-professional-mock1-12",
+   "action": "set_option",
+   "match": "the team members",
+   "text": "The team members involved, their roles, and who signed off on the final design"
+  },
+  {
+   "id": "amey:architect-professional-mock1-12",
+   "action": "set_option",
+   "match": "the implementation timeline",
+   "text": "The implementation timeline, with milestones and an owner for each delivery task"
+  },
+  {
+   "id": "amey:architect-professional-mock1-13",
+   "action": "set_option",
+   "match": "final outputs only",
+   "text": "Final outputs with timestamps and request IDs, kept for every conversation"
+  },
+  {
+   "id": "amey:architect-professional-mock1-13",
+   "action": "set_option",
+   "match": "aggregate latency metrics",
+   "text": "Aggregate latency and error-rate metrics, charted per day on a shared dashboard"
+  },
+  {
+   "id": "amey:architect-professional-mock1-13",
+   "action": "set_option",
+   "match": "user feedback only",
+   "text": "User feedback scores collected after each session and tied to the conversation"
+  },
+  {
+   "id": "amey:architect-professional-mock1-14",
+   "action": "set_option",
+   "match": "a recorded walkthrough",
+   "text": "A recorded walkthrough of the setup that new engineers can replay on demand"
+  },
+  {
+   "id": "amey:architect-professional-mock1-14",
+   "action": "set_option",
+   "match": "a shared chat",
+   "text": "A shared chat channel where the partner team can ask the original authors"
+  },
+  {
+   "id": "amey:architect-professional-mock1-14",
+   "action": "set_option",
+   "match": "individual coaching sessions",
+   "text": "Individual coaching sessions for each partner engineer during their first weeks"
+  },
+  {
+   "id": "amey:architect-professional-mock1-14",
+   "action": "set_option",
+   "match": "version controlled shared",
+   "text": "Versioned shared config, common skills and commands, and an onboarding path"
+  },
+  {
+   "id": "amey:architect-professional-mock1-15",
+   "action": "set_option",
+   "match": "separating read and",
+   "text": "Separate read and write tools, grant write per role, and require approval for writes"
+  },
+  {
+   "id": "amey:architect-professional-mock1-15",
+   "action": "set_option",
+   "match": "logging modifications for",
+   "text": "Log every modification to an immutable audit store for review by the security team"
+  },
+  {
+   "id": "amey:architect-professional-mock1-15",
+   "action": "set_option",
+   "match": "requiring a longer",
+   "text": "Add a longer system prompt telling the agent to be cautious with production records"
+  },
+  {
+   "id": "amey:architect-professional-mock1-15",
+   "action": "set_option",
+   "match": "running the agent",
+   "text": "Run the agent within business hours so that staff are present to catch any bad writes"
+  },
+  {
+   "id": "amey:architect-professional-mock1-2",
+   "action": "set_option",
+   "match": "the generation prompt",
+   "text": "The generation prompt, since it may be mis-ranking the retrieved products"
+  },
+  {
+   "id": "amey:architect-professional-mock1-2",
+   "action": "set_option",
+   "match": "the model version",
+   "text": "The model version, in case the provider changed it at the same time"
+  },
+  {
+   "id": "amey:architect-professional-mock1-2",
+   "action": "set_option",
+   "match": "the user interface",
+   "text": "The user interface, which may be displaying the results in the wrong order"
+  },
+  {
+   "id": "amey:architect-professional-mock1-2",
+   "action": "set_option",
+   "match": "chunking and embedding",
+   "text": "Chunking and embedding settings, and whether the index was rebuilt consistently"
+  },
+  {
+   "id": "amey:architect-professional-mock1-3",
+   "action": "set_option",
+   "match": "shorten all tool",
+   "text": "Shorten every tool description so the full set of 45 fits in less context"
+  },
+  {
+   "id": "amey:architect-professional-mock1-3",
+   "action": "set_option",
+   "match": "merge tools into",
+   "text": "Merge unrelated tools across systems into a few broad multi-mode tools"
+  },
+  {
+   "id": "amey:architect-professional-mock1-3",
+   "action": "set_option",
+   "match": "replace the agent",
+   "text": "Move the agent to a larger model that can choose among more tools"
+  },
+  {
+   "id": "amey:architect-professional-mock1-4",
+   "action": "set_option",
+   "match": "exact match against",
+   "text": "Exact match against reference summaries written by domain experts"
+  },
+  {
+   "id": "amey:architect-professional-mock1-4",
+   "action": "set_option",
+   "match": "a rubric covering",
+   "text": "A failure-mode rubric applied by model graders, audited by humans on a labeled set"
+  },
+  {
+   "id": "amey:architect-professional-mock1-4",
+   "action": "set_option",
+   "match": "average output length",
+   "text": "Average output length compared with the length of the reference summaries"
+  },
+  {
+   "id": "amey:architect-professional-mock1-4",
+   "action": "set_option",
+   "match": "user thumbs up",
+   "text": "Counting user thumbs-up ratings in production as the single quality signal"
+  },
+  {
+   "id": "amey:architect-professional-mock1-5",
+   "action": "set_option",
+   "match": "ship it and",
+   "text": "Ship it to all users at once and watch support complaints for any regressions"
+  },
+  {
+   "id": "amey:architect-professional-mock1-5",
+   "action": "set_option",
+   "match": "team vote followed",
+   "text": "Hold a team vote on the new wording, then roll it out to all users together"
+  },
+  {
+   "id": "amey:architect-professional-mock1-5",
+   "action": "set_option",
+   "match": "regression evaluation then",
+   "text": "Run regression evals, then A/B against the current prompt on set metrics, then roll out"
+  },
+  {
+   "id": "amey:architect-professional-mock1-5",
+   "action": "set_option",
+   "match": "rollout with a",
+   "text": "Roll it out with an in-app feedback form so users can flag any bad responses"
+  },
+  {
+   "id": "amey:architect-professional-mock1-6",
+   "action": "set_option",
+   "match": "a policy instructing",
+   "text": "A policy instructing clinicians not to type patient identifiers into search"
+  },
+  {
+   "id": "amey:architect-professional-mock1-6",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system prompt instructing the model to disregard any PHI it receives"
+  },
+  {
+   "id": "amey:architect-professional-mock1-6",
+   "action": "set_option",
+   "match": "restricting the feature",
+   "text": "Restricting the feature to structured queries with no free-text input"
+  },
+  {
+   "id": "amey:architect-professional-mock1-6",
+   "action": "set_option",
+   "match": "a de identification",
+   "text": "De-identify or tokenize PHI before the call, with local re-linking and audit logs"
+  },
+  {
+   "id": "amey:architect-professional-mock1-7",
+   "action": "set_option",
+   "match": "route by confidence",
+   "text": "Send low-confidence and high-impact cases to humans; let routine ones flow through"
+  },
+  {
+   "id": "amey:architect-professional-mock1-7",
+   "action": "set_option",
+   "match": "review every output",
+   "text": "Have a person review every output before release, regardless of its risk level"
+  },
+  {
+   "id": "amey:architect-professional-mock1-7",
+   "action": "set_option",
+   "match": "review a fixed",
+   "text": "Review a fixed 10% random sample of outputs each week, whatever their content"
+  },
+  {
+   "id": "amey:architect-professional-mock1-7",
+   "action": "set_option",
+   "match": "review only what",
+   "text": "Review just the outputs that users complain about after they are delivered"
+  },
+  {
+   "id": "amey:architect-professional-mock1-8",
+   "action": "set_option",
+   "match": "the highest observed",
+   "text": "The highest observed accuracy, taken from the best-performing document type"
+  },
+  {
+   "id": "amey:architect-professional-mock1-8",
+   "action": "set_option",
+   "match": "performance broken out",
+   "text": "Results by document type, the aggregate, the method, and the outcome after review"
+  },
+  {
+   "id": "amey:architect-professional-mock1-8",
+   "action": "set_option",
+   "match": "a refusal to",
+   "text": "A refusal to give any number, explaining that performance varies too much to quantify"
+  },
+  {
+   "id": "amey:architect-professional-mock1-8",
+   "action": "set_option",
+   "match": "an average weighted",
+   "text": "An average weighted toward the document types where the system looks best"
+  },
+  {
+   "id": "amey:architect-professional-mock1-9",
+   "action": "set_option",
+   "match": "response latency targets",
+   "text": "Response latency targets agreed with EU customers in the service contract"
+  },
+  {
+   "id": "amey:architect-professional-mock1-9",
+   "action": "set_option",
+   "match": "the choice of",
+   "text": "The choice of programming language and frameworks for each processing service"
+  },
+  {
+   "id": "amey:architect-professional-mock1-9",
+   "action": "set_option",
+   "match": "data minimization purpose",
+   "text": "Data minimization, purpose limitation, and deleting personal data on request"
+  },
+  {
+   "id": "amey:architect-professional-mock1-9",
+   "action": "set_option",
+   "match": "the number of",
+   "text": "The number of model providers the system is allowed to route requests to"
+  },
+  {
+   "id": "amey:architect-professional-mock2-1",
+   "action": "set_option",
+   "match": "the model family",
+   "text": "The choice of Claude model family, leaving the deployment route open"
+  },
+  {
+   "id": "amey:architect-professional-mock2-1",
+   "action": "set_option",
+   "match": "that a data",
+   "text": "That a data processing agreement with Anthropic is sufficient on its own"
+  },
+  {
+   "id": "amey:architect-professional-mock2-1",
+   "action": "set_option",
+   "match": "that request logging",
+   "text": "That request and response logging must be disabled on every model call"
+  },
+  {
+   "id": "amey:architect-professional-mock2-11",
+   "action": "set_option",
+   "match": "give the headline",
+   "text": "Give the headline accuracy figure from the most recent evaluation run"
+  },
+  {
+   "id": "amey:architect-professional-mock2-11",
+   "action": "set_option",
+   "match": "give the measure",
+   "text": "Give the measure tied to their decision and say what it leaves out"
+  },
+  {
+   "id": "amey:architect-professional-mock2-11",
+   "action": "set_option",
+   "match": "explain that this",
+   "text": "Explain that a solution like this cannot be reduced to a single number"
+  },
+  {
+   "id": "amey:architect-professional-mock2-11",
+   "action": "set_option",
+   "match": "give the model",
+   "text": "Give the model's public benchmark score as an independent quality signal"
+  },
+  {
+   "id": "amey:architect-professional-mock2-12",
+   "action": "edit",
+   "field": "opt",
+   "find": "License cost",
+   "replace": "The license cost of scaling from ten seats to two thousand seats"
+  },
+  {
+   "id": "amey:architect-professional-mock2-12",
+   "action": "set_option",
+   "match": "whether a larger",
+   "text": "Whether a larger model is needed to cope with the added request volume"
+  },
+  {
+   "id": "amey:architect-professional-mock2-12",
+   "action": "set_option",
+   "match": "the training rollout",
+   "text": "The training rollout plan for onboarding two thousand new users"
+  },
+  {
+   "id": "amey:architect-professional-mock2-13",
+   "action": "set_option",
+   "match": "match each task",
+   "text": "Match each task to the smallest model that meets its requirement, then evaluate"
+  },
+  {
+   "id": "amey:architect-professional-mock2-13",
+   "action": "set_option",
+   "match": "one model everywhere",
+   "text": "Use one model for every task so that the system stays simple to operate"
+  },
+  {
+   "id": "amey:architect-professional-mock2-13",
+   "action": "set_option",
+   "match": "the largest model",
+   "text": "Use the largest available model for every task to keep quality as high as possible"
+  },
+  {
+   "id": "amey:architect-professional-mock2-13",
+   "action": "set_option",
+   "match": "the newest model",
+   "text": "Use the newest model for every task, since it has the latest capabilities"
+  },
+  {
+   "id": "amey:architect-professional-mock2-14",
+   "action": "set_option",
+   "match": "as capacity to",
+   "text": "As capacity to fill as completely as possible so nothing relevant is left out"
+  },
+  {
+   "id": "amey:architect-professional-mock2-14",
+   "action": "set_option",
+   "match": "as a budget",
+   "text": "As a budget split deliberately between instructions, retrieval, and working state"
+  },
+  {
+   "id": "amey:architect-professional-mock2-14",
+   "action": "set_option",
+   "match": "as a concern",
+   "text": "As a concern that matters mainly when the inputs are long documents or transcripts"
+  },
+  {
+   "id": "amey:architect-professional-mock2-14",
+   "action": "set_option",
+   "match": "as a setting",
+   "text": "As a setting to raise to a larger window whenever answer quality starts to drop"
+  },
+  {
+   "id": "amey:architect-professional-mock2-15",
+   "action": "set_option",
+   "match": "a policy document",
+   "text": "A written policy document circulated once to every engineering team"
+  },
+  {
+   "id": "amey:architect-professional-mock2-15",
+   "action": "set_option",
+   "match": "a single training",
+   "text": "A single company-wide training session on using Claude Code well"
+  },
+  {
+   "id": "amey:architect-professional-mock2-15",
+   "action": "set_option",
+   "match": "committed project memory",
+   "text": "Committed CLAUDE.md and shared skills per repo, reviewed like code"
+  },
+  {
+   "id": "amey:architect-professional-mock2-15",
+   "action": "set_option",
+   "match": "requiring approval for",
+   "text": "Requiring approval from a lead before every Claude Code session starts"
+  },
+  {
+   "id": "amey:architect-professional-mock2-2",
+   "action": "set_option",
+   "match": "use the claude",
+   "text": "Use the Claude API directly and rebuild the identity and audit controls on top"
+  },
+  {
+   "id": "amey:architect-professional-mock2-2",
+   "action": "set_option",
+   "match": "use bedrock for",
+   "text": "Use Amazon Bedrock instead, as it offers broader feature parity with the API"
+  },
+  {
+   "id": "amey:architect-professional-mock2-2",
+   "action": "set_option",
+   "match": "let each team",
+   "text": "Let each team decide its own deployment path and its own access controls"
+  },
+  {
+   "id": "amey:architect-professional-mock2-3",
+   "action": "set_option",
+   "match": "lower token prices",
+   "text": "Lower per-token prices negotiated through a single central account"
+  },
+  {
+   "id": "amey:architect-professional-mock2-3",
+   "action": "set_option",
+   "match": "it removes the",
+   "text": "It removes the need to evaluate each consuming application on its own"
+  },
+  {
+   "id": "amey:architect-professional-mock2-3",
+   "action": "set_option",
+   "match": "it guarantees lower",
+   "text": "It cuts latency compared with each app calling the model API directly"
+  },
+  {
+   "id": "amey:architect-professional-mock2-3",
+   "action": "set_option",
+   "match": "authentication rate limiting",
+   "text": "Auth, rate limits, logging, and routing are applied in one place"
+  },
+  {
+   "id": "amey:architect-professional-mock2-4",
+   "action": "set_option",
+   "match": "the more capable",
+   "text": "The more capable design, since spare headroom is valuable as needs grow later"
+  },
+  {
+   "id": "amey:architect-professional-mock2-4",
+   "action": "set_option",
+   "match": "whether any stated",
+   "text": "Whether any requirement needs the extra capability, weighed against complexity cost"
+  },
+  {
+   "id": "amey:architect-professional-mock2-4",
+   "action": "set_option",
+   "match": "whichever the team",
+   "text": "Whichever of the two the team prefers to build and finds more familiar"
+  },
+  {
+   "id": "amey:architect-professional-mock2-4",
+   "action": "set_option",
+   "match": "the one with",
+   "text": "The design with more components, for flexibility as requirements change"
+  },
+  {
+   "id": "amey:architect-professional-mock2-5",
+   "action": "set_option",
+   "match": "acceptable if measured",
+   "text": "Acceptable if measured accuracy is very high on the evaluation set"
+  },
+  {
+   "id": "amey:architect-professional-mock2-5",
+   "action": "set_option",
+   "match": "not acceptable a",
+   "text": "Not acceptable: enforce it deterministically outside the model"
+  },
+  {
+   "id": "amey:architect-professional-mock2-5",
+   "action": "set_option",
+   "match": "acceptable with a",
+   "text": "Acceptable with a documented residual risk signed off by the owner"
+  },
+  {
+   "id": "amey:architect-professional-mock2-5",
+   "action": "set_option",
+   "match": "acceptable if a",
+   "text": "Acceptable if a larger, more capable model is used for that step"
+  },
+  {
+   "id": "amey:architect-professional-mock2-6",
+   "action": "set_option",
+   "match": "wherever the model",
+   "text": "Wherever the model's decisions score well in pre-release testing"
+  },
+  {
+   "id": "amey:architect-professional-mock2-6",
+   "action": "set_option",
+   "match": "as far as",
+   "text": "As far as the project budget allows automation to be built out"
+  },
+  {
+   "id": "amey:architect-professional-mock2-6",
+   "action": "set_option",
+   "match": "at whatever the",
+   "text": "At whatever point the client requests in the written specification"
+  },
+  {
+   "id": "amey:architect-professional-mock2-6",
+   "action": "set_option",
+   "match": "where accountability for",
+   "text": "Where accountability sits, leaving those decisions to a person"
+  },
+  {
+   "id": "amey:architect-professional-mock2-7",
+   "action": "set_option",
+   "match": "a defined success",
+   "text": "A defined success criterion and measured performance on representative data"
+  },
+  {
+   "id": "amey:architect-professional-mock2-7",
+   "action": "set_option",
+   "match": "a successful demonstration",
+   "text": "A successful demonstration to the sponsor on a set of chosen examples"
+  },
+  {
+   "id": "amey:architect-professional-mock2-7",
+   "action": "set_option",
+   "match": "sign off from",
+   "text": "Sign-off from the engineering team that built and tested the solution"
+  },
+  {
+   "id": "amey:architect-professional-mock2-7",
+   "action": "set_option",
+   "match": "a completed cost",
+   "text": "A completed cost model covering expected token usage at full production scale"
+  },
+  {
+   "id": "amey:architect-professional-mock2-8",
+   "action": "set_option",
+   "match": "it provides a",
+   "text": "It provides a reliable quality measure, as long as the cases are labeled"
+  },
+  {
+   "id": "amey:architect-professional-mock2-8",
+   "action": "set_option",
+   "match": "it is fine",
+   "text": "It is fine if the set is large enough to be statistically significant"
+  },
+  {
+   "id": "amey:architect-professional-mock2-8",
+   "action": "set_option",
+   "match": "it matters only",
+   "text": "It matters mainly in regulated contexts where audits examine the evals"
+  },
+  {
+   "id": "amey:architect-professional-mock2-9",
+   "action": "set_option",
+   "match": "implement it since",
+   "text": "Implement it as requested, since audit requirements take precedence"
+  },
+  {
+   "id": "amey:architect-professional-mock2-9",
+   "action": "set_option",
+   "match": "decline because logging",
+   "text": "Decline the request, because any logging creates privacy risk"
+  },
+  {
+   "id": "amey:architect-professional-mock2-9",
+   "action": "set_option",
+   "match": "log responses but",
+   "text": "Log the responses but not the prompts, to limit what is stored"
+  },
+  {
+   "id": "amey:architect-professional-mock2-9",
+   "action": "set_option",
+   "match": "establish what the",
+   "text": "Clarify what the audit needs, as prompts and replies may hold personal data"
+  },
+  {
+   "id": "amey:architect-professional-mock3-1",
+   "action": "set_option",
+   "match": "the model family",
+   "text": "The model family, which must be one whose reasoning can be explained"
+  },
+  {
+   "id": "amey:architect-professional-mock3-1",
+   "action": "set_option",
+   "match": "the cost model",
+   "text": "The cost model, since recurring audit work has to be budgeted for"
+  },
+  {
+   "id": "amey:architect-professional-mock3-1",
+   "action": "set_option",
+   "match": "the architecture which",
+   "text": "The architecture: traceable decisions and inspectable controls"
+  },
+  {
+   "id": "amey:architect-professional-mock3-1",
+   "action": "set_option",
+   "match": "the deployment region",
+   "text": "The deployment region, which must match the auditor's jurisdiction"
+  },
+  {
+   "id": "amey:architect-professional-mock3-10",
+   "action": "set_option",
+   "match": "that the technology",
+   "text": "That the technology is not yet mature enough for full automation"
+  },
+  {
+   "id": "amey:architect-professional-mock3-10",
+   "action": "set_option",
+   "match": "that automation is",
+   "text": "That automating decisions like these carries inherent, general risk"
+  },
+  {
+   "id": "amey:architect-professional-mock3-10",
+   "action": "set_option",
+   "match": "which specific decisions",
+   "text": "Which decisions are accountable or unverifiable, and the risks"
+  },
+  {
+   "id": "amey:architect-professional-mock3-10",
+   "action": "set_option",
+   "match": "that the budget",
+   "text": "That the current budget does not stretch to building full automation"
+  },
+  {
+   "id": "amey:architect-professional-mock3-11",
+   "action": "set_option",
+   "match": "the source code",
+   "text": "The full source code, with a README explaining how to build and deploy it"
+  },
+  {
+   "id": "amey:architect-professional-mock3-11",
+   "action": "set_option",
+   "match": "the evaluation suite",
+   "text": "The evaluation suite, criteria, an owner, and a routine for re-checking"
+  },
+  {
+   "id": "amey:architect-professional-mock3-11",
+   "action": "set_option",
+   "match": "a recorded demonstration",
+   "text": "A recorded demonstration of the solution handling typical requests"
+  },
+  {
+   "id": "amey:architect-professional-mock3-11",
+   "action": "set_option",
+   "match": "a list of",
+   "text": "A list of the prompts used, with notes on why each one was written"
+  },
+  {
+   "id": "amey:architect-professional-mock3-14",
+   "action": "set_option",
+   "match": "number of tool",
+   "text": "Number of tool invocations logged per engineer during the trial period"
+  },
+  {
+   "id": "amey:architect-professional-mock3-14",
+   "action": "set_option",
+   "match": "number of users",
+   "text": "Number of engineers onboarded and actively using it every week"
+  },
+  {
+   "id": "amey:architect-professional-mock3-14",
+   "action": "set_option",
+   "match": "hours spent in",
+   "text": "Hours spent in the tool by each engineer, taken from usage logs"
+  },
+  {
+   "id": "amey:architect-professional-mock3-15",
+   "action": "set_option",
+   "match": "the size of",
+   "text": "The overall size of the repository relative to the model's context window"
+  },
+  {
+   "id": "amey:architect-professional-mock3-15",
+   "action": "set_option",
+   "match": "the programming language",
+   "text": "The programming language, if it is less common in training data"
+  },
+  {
+   "id": "amey:architect-professional-mock3-15",
+   "action": "set_option",
+   "match": "the absence of",
+   "text": "Missing committed context on the codebase's conventions and structure"
+  },
+  {
+   "id": "amey:architect-professional-mock3-15",
+   "action": "set_option",
+   "match": "the number of",
+   "text": "The number of contributors whose styles are mixed in the codebase"
+  },
+  {
+   "id": "amey:architect-professional-mock3-2",
+   "action": "set_option",
+   "match": "moving later becomes",
+   "text": "Migrating later is costly, as the coupling reaches into application code"
+  },
+  {
+   "id": "amey:architect-professional-mock3-2",
+   "action": "set_option",
+   "match": "higher token cost",
+   "text": "Higher token cost than the same model bought through another cloud"
+  },
+  {
+   "id": "amey:architect-professional-mock3-2",
+   "action": "edit",
+   "field": "opt",
+   "find": "Lower accuracy",
+   "replace": "Lower accuracy than the same model offers on the first-party API"
+  },
+  {
+   "id": "amey:architect-professional-mock3-2",
+   "action": "edit",
+   "field": "opt",
+   "find": "Slower responses",
+   "replace": "Slower responses, because every call passes through the cloud provider's gateway"
+  },
+  {
+   "id": "amey:architect-professional-mock3-3",
+   "action": "set_option",
+   "match": "one deployment in",
+   "text": "One deployment in the cheaper region that serves users in both regions"
+  },
+  {
+   "id": "amey:architect-professional-mock3-3",
+   "action": "set_option",
+   "match": "a single deployment",
+   "text": "A single deployment with encryption in transit across the two regions"
+  },
+  {
+   "id": "amey:architect-professional-mock3-3",
+   "action": "set_option",
+   "match": "whichever region has",
+   "text": "Whichever single region offers the lowest latency for most users"
+  },
+  {
+   "id": "amey:architect-professional-mock3-4",
+   "action": "set_option",
+   "match": "choose the largest",
+   "text": "Choose the largest available model and optimise accuracy from there"
+  },
+  {
+   "id": "amey:architect-professional-mock3-4",
+   "action": "set_option",
+   "match": "establish the accuracy",
+   "text": "Establish the accuracy the use case needs and what an error costs"
+  },
+  {
+   "id": "amey:architect-professional-mock3-4",
+   "action": "set_option",
+   "match": "build the most",
+   "text": "Build the most elaborate pipeline the available budget can pay for"
+  },
+  {
+   "id": "amey:architect-professional-mock3-4",
+   "action": "set_option",
+   "match": "defer the question",
+   "text": "Defer the question until after the pilot has produced real data"
+  },
+  {
+   "id": "amey:architect-professional-mock3-5",
+   "action": "set_option",
+   "match": "one component needs",
+   "text": "One of the two components needs a larger, more capable model"
+  },
+  {
+   "id": "amey:architect-professional-mock3-5",
+   "action": "set_option",
+   "match": "the contract between",
+   "text": "Their contract is underspecified, notably for edge and error cases"
+  },
+  {
+   "id": "amey:architect-professional-mock3-5",
+   "action": "set_option",
+   "match": "the system needs",
+   "text": "The system needs additional components to mediate between them"
+  },
+  {
+   "id": "amey:architect-professional-mock3-5",
+   "action": "set_option",
+   "match": "the failure is",
+   "text": "The failure is transient and is best handled by retrying the whole call"
+  },
+  {
+   "id": "amey:architect-professional-mock3-6",
+   "action": "set_option",
+   "match": "nothing retention is",
+   "text": "Nothing, since keeping every interaction is the safer default"
+  },
+  {
+   "id": "amey:architect-professional-mock3-6",
+   "action": "set_option",
+   "match": "that storage is",
+   "text": "That storing every interaction will become expensive over time"
+  },
+  {
+   "id": "amey:architect-professional-mock3-6",
+   "action": "set_option",
+   "match": "that it will",
+   "text": "That writing every interaction will slow the system's responses"
+  },
+  {
+   "id": "amey:architect-professional-mock3-6",
+   "action": "set_option",
+   "match": "why the data",
+   "text": "Why it is needed, how long, and what obligations it creates"
+  },
+  {
+   "id": "amey:architect-professional-mock3-7",
+   "action": "set_option",
+   "match": "design so that",
+   "text": "Verify consequential outputs against an independent source"
+  },
+  {
+   "id": "amey:architect-professional-mock3-7",
+   "action": "set_option",
+   "match": "trust the confidence",
+   "text": "Trust the model's confidence signal and act on high-confidence outputs"
+  },
+  {
+   "id": "amey:architect-professional-mock3-7",
+   "action": "set_option",
+   "match": "ask the model",
+   "text": "Ask the same model to double-check its answer before it is used"
+  },
+  {
+   "id": "amey:architect-professional-mock3-7",
+   "action": "set_option",
+   "match": "use two models",
+   "text": "Query two models in parallel and accept the answer whenever they agree"
+  },
+  {
+   "id": "amey:architect-professional-mock3-8",
+   "action": "set_option",
+   "match": "the model version",
+   "text": "The model version and settings used for the evaluation run"
+  },
+  {
+   "id": "amey:architect-professional-mock3-8",
+   "action": "set_option",
+   "match": "the token cost",
+   "text": "The token cost of running the evaluation across the full set"
+  },
+  {
+   "id": "amey:architect-professional-mock3-8",
+   "action": "set_option",
+   "match": "what the 6",
+   "text": "What the 6% of failures look like and what each one costs"
+  },
+  {
+   "id": "amey:architect-professional-mock3-8",
+   "action": "set_option",
+   "match": "how long the",
+   "text": "How long the evaluation took to run from start to finish"
+  },
+  {
+   "id": "amey:architect-professional-mock3-9",
+   "action": "set_option",
+   "match": "nothing versions are",
+   "text": "Nothing, since model versions are designed to be backward compatible"
+  },
+  {
+   "id": "amey:architect-professional-mock3-9",
+   "action": "set_option",
+   "match": "increase monitoring for",
+   "text": "Increase monitoring for a week after the switch and watch for drift"
+  },
+  {
+   "id": "amey:architect-professional-mock3-9",
+   "action": "set_option",
+   "match": "roll back automatically",
+   "text": "Roll back automatically if user complaints rise after the update"
+  },
+  {
+   "id": "amey:architect-professional-mock3-9",
+   "action": "set_option",
+   "match": "re run the",
+   "text": "Re-run the eval suite before the change reaches production traffic"
+  },
+  {
+   "id": "amey:architect-professional-practice-1",
+   "action": "set_option",
+   "match": "log every update",
+   "text": "Log every update and deletion so they can be audited later"
+  },
+  {
+   "id": "amey:architect-professional-practice-1",
+   "action": "set_option",
+   "match": "add a confirmation",
+   "text": "Add a confirmation dialog before each update and each deletion"
+  },
+  {
+   "id": "amey:architect-professional-practice-1",
+   "action": "set_option",
+   "match": "restrict deletions to",
+   "text": "Restrict deletions to business hours, when staff can watch them"
+  },
+  {
+   "id": "amey:architect-professional-practice-1",
+   "action": "set_option",
+   "match": "remove the update",
+   "text": "Remove the update and delete capabilities from the agent"
+  },
+  {
+   "id": "amey:architect-professional-practice-10",
+   "action": "set_option",
+   "match": "ship a shared",
+   "text": "A shared versioned baseline (config, skills, onboarding) plus team-specific rules"
+  },
+  {
+   "id": "amey:architect-professional-practice-10",
+   "action": "set_option",
+   "match": "mandate that engineers",
+   "text": "Mandate that every engineer memorize the conventions used by all three teams"
+  },
+  {
+   "id": "amey:architect-professional-practice-10",
+   "action": "set_option",
+   "match": "prohibit claude code",
+   "text": "Prohibit Claude Code use until the teams' conventions have settled on their own"
+  },
+  {
+   "id": "amey:architect-professional-practice-10",
+   "action": "set_option",
+   "match": "let each engineer",
+   "text": "Let each engineer keep personal settings, with no shared team-level layer"
+  },
+  {
+   "id": "amey:architect-professional-practice-12",
+   "action": "set_option",
+   "match": "deploy on bedrock",
+   "text": "Deploy on Amazon Bedrock instead, for parity with the API's features"
+  },
+  {
+   "id": "amey:architect-professional-practice-12",
+   "action": "set_option",
+   "match": "use the claude",
+   "text": "Use the Claude API directly and replicate the existing controls"
+  },
+  {
+   "id": "amey:architect-professional-practice-12",
+   "action": "set_option",
+   "match": "deploy through vertex",
+   "text": "Use Vertex AI so existing identity, billing, and audit apply"
+  },
+  {
+   "id": "amey:architect-professional-practice-12",
+   "action": "set_option",
+   "match": "let each team",
+   "text": "Let each team choose its own deployment path and access setup"
+  },
+  {
+   "id": "amey:architect-professional-practice-13",
+   "action": "set_option",
+   "match": "it reduces token",
+   "text": "It reduces the per-token cost of every request sent to the model"
+  },
+  {
+   "id": "amey:architect-professional-practice-13",
+   "action": "set_option",
+   "match": "it removes the",
+   "text": "It removes the need to evaluate each application that calls it"
+  },
+  {
+   "id": "amey:architect-professional-practice-13",
+   "action": "set_option",
+   "match": "it guarantees lower",
+   "text": "It lowers latency compared with apps calling the model API directly"
+  },
+  {
+   "id": "amey:architect-professional-practice-13",
+   "action": "set_option",
+   "match": "authentication rate limiting",
+   "text": "Auth, rate limits, logging, and routing are enforced centrally"
+  },
+  {
+   "id": "amey:architect-professional-practice-14",
+   "action": "set_option",
+   "match": "accept the request",
+   "text": "Accept the request, return an ID at once, and deliver the result asynchronously"
+  },
+  {
+   "id": "amey:architect-professional-practice-14",
+   "action": "set_option",
+   "match": "force the model",
+   "text": "Cap the output so the model answers within the two-second timeout"
+  },
+  {
+   "id": "amey:architect-professional-practice-14",
+   "action": "set_option",
+   "match": "increase the legacy",
+   "text": "Raise the legacy system's timeout to cover the full reasoning time"
+  },
+  {
+   "id": "amey:architect-professional-practice-14",
+   "action": "set_option",
+   "match": "use the smallest",
+   "text": "Switch to the smallest, fastest model so it fits in two seconds"
+  },
+  {
+   "id": "amey:architect-professional-practice-15",
+   "action": "set_option",
+   "match": "using identical prompts",
+   "text": "Using identical prompts and settings on both cloud platforms"
+  },
+  {
+   "id": "amey:architect-professional-practice-15",
+   "action": "set_option",
+   "match": "establishing which behaviors",
+   "text": "Defining which behaviors must match and evaluating each platform"
+  },
+  {
+   "id": "amey:architect-professional-practice-15",
+   "action": "set_option",
+   "match": "choosing the cheaper",
+   "text": "Running both workloads on whichever of the two platforms is cheaper"
+  },
+  {
+   "id": "amey:architect-professional-practice-15",
+   "action": "set_option",
+   "match": "deploying to whichever",
+   "text": "Deploying each instance to whichever region is nearest its users"
+  },
+  {
+   "id": "amey:architect-professional-practice-16",
+   "action": "set_option",
+   "match": "which model to",
+   "text": "Which Claude model to use for the approval and its reasoning steps"
+  },
+  {
+   "id": "amey:architect-professional-practice-16",
+   "action": "set_option",
+   "match": "the expected token",
+   "text": "The expected token cost of running the end-to-end approval process"
+  },
+  {
+   "id": "amey:architect-professional-practice-16",
+   "action": "set_option",
+   "match": "which decisions carry",
+   "text": "Which decisions carry accountability and must stay with a person"
+  },
+  {
+   "id": "amey:architect-professional-practice-16",
+   "action": "set_option",
+   "match": "whether the agent",
+   "text": "Whether the agent can be built within the available delivery time"
+  },
+  {
+   "id": "amey:architect-professional-practice-17",
+   "action": "set_option",
+   "match": "the more capable",
+   "text": "The more capable design, since capability is the point of the system"
+  },
+  {
+   "id": "amey:architect-professional-practice-17",
+   "action": "set_option",
+   "match": "the design the",
+   "text": "The design the team finds more interesting to build and maintain"
+  },
+  {
+   "id": "amey:architect-professional-practice-17",
+   "action": "set_option",
+   "match": "the design with",
+   "text": "The design with more components, for flexibility as the system grows over time"
+  },
+  {
+   "id": "amey:architect-professional-practice-17",
+   "action": "set_option",
+   "match": "whether the extra",
+   "text": "Whether a stated requirement needs it, weighed against the cost of complexity"
+  },
+  {
+   "id": "amey:architect-professional-practice-18",
+   "action": "set_option",
+   "match": "unacceptable a required",
+   "text": "Unacceptable: the control must be enforced deterministically outside the model"
+  },
+  {
+   "id": "amey:architect-professional-practice-18",
+   "action": "set_option",
+   "match": "acceptable if evaluation",
+   "text": "Acceptable if evaluation shows consistently high accuracy on the control"
+  },
+  {
+   "id": "amey:architect-professional-practice-18",
+   "action": "set_option",
+   "match": "acceptable with a",
+   "text": "Acceptable with a written disclaimer filed with the regulator"
+  },
+  {
+   "id": "amey:architect-professional-practice-18",
+   "action": "set_option",
+   "match": "acceptable if a",
+   "text": "Acceptable if a larger model is used for the control decision"
   }
  ],
  "hold": []
