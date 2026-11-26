@@ -45512,6 +45512,1216 @@
    "action": "set_option",
    "match": "Switch every deployment",
    "text": "Switch every deployment to the most expensive model to compensate for the drift."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#7",
+   "action": "set_option",
+   "match": "the timestamp consumed",
+   "text": "The timestamp consumed a significant share of the context window, raising the input token cost per request."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#7",
+   "action": "set_option",
+   "match": "a cache prefix",
+   "text": "A varying first line breaks the exact prefix match, so the whole 8,000-token cached prefix misses on every request."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#7",
+   "action": "set_option",
+   "match": "timestamps are not",
+   "text": "Timestamps are not a supported content type in system prompts, so the cache_control block is silently ignored."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#7",
+   "action": "set_option",
+   "match": "the model began",
+   "text": "The model began reasoning about the timestamp in each request, which steadily increased its output tokens."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#8",
+   "action": "set_option",
+   "match": "move the entire",
+   "text": "Move the entire pipeline down one model tier and monitor aggregate accuracy across all documents for regressions."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#8",
+   "action": "set_option",
+   "match": "tier per step",
+   "text": "Tier per step: fast for classification, balanced for extraction, top tier for the 2% needing legal judgment."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#8",
+   "action": "set_option",
+   "match": "keep the top",
+   "text": "Keep the most capable tier on every step and negotiate a volume discount with the provider to lower the overall bill."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#8",
+   "action": "set_option",
+   "match": "cache the model",
+   "text": "Cache the model's responses per document so that repeated documents no longer incur any additional model cost."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#9",
+   "action": "set_option",
+   "match": "chain of thought",
+   "text": "Chain-of-thought is being applied correctly across the pipeline; the latency SLA should be renegotiated instead."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#9",
+   "action": "set_option",
+   "match": "technique became house",
+   "text": "CoT spread as house style, not a per-step choice; the six-way classifier has nothing to reason through."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#9",
+   "action": "set_option",
+   "match": "the classifier should",
+   "text": "The classifier should also get few-shot examples alongside chain-of-thought so each label is chosen reliably."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#9",
+   "action": "set_option",
+   "match": "the model tier",
+   "text": "The model tier is too slow for the pipeline's SLA and should be upgraded to a faster, higher-priced tier."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#9",
+   "action": "edit",
+   "field": "explanation",
+   "find": "the technique spread by habit after helping somewhere it genuinely applied.",
+   "replace": "the technique spread by habit after helping somewhere it genuinely applied, so every classifier call now pays output tokens and latency for reasoning that adds nothing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#1",
+   "action": "set_option",
+   "match": "add a warning",
+   "text": "Add a clear warning in the system prompt telling the agent not to write to the database at all."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#1",
+   "action": "set_option",
+   "match": "reconfigure the tool",
+   "text": "Reconfigure the tool to expose only read operations, removing write access from the agent."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#1",
+   "action": "set_option",
+   "match": "log all write",
+   "text": "Keep full access, but log every write attempt so the team can review them later for misuse."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#1",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a more capable model that is far less likely to make mistakes with write operations."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#2",
+   "action": "set_option",
+   "match": "write bespoke api",
+   "text": "Write bespoke API integration code separately for each client, and repeat it for every new client."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#2",
+   "action": "set_option",
+   "match": "expose the tools",
+   "text": "Expose the tools via one MCP server so any MCP-aware client, current or future, can connect."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#2",
+   "action": "set_option",
+   "match": "use agent to",
+   "text": "Use agent-to-agent communication, delegating each simple lookup to a separate specialist agent."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#2",
+   "action": "set_option",
+   "match": "hardcode the tool",
+   "text": "Hardcode the tool logic directly into each client's system prompt so every client behaves the same."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#3",
+   "action": "set_option",
+   "match": "a prompt engineering",
+   "text": "A prompt-engineering failure; the system prompt should state the rep's $50 refund limit more clearly and firmly."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#3",
+   "action": "set_option",
+   "match": "the confused deputy",
+   "text": "Confused deputy: the agent holds more authority than its user; pass the rep's identity through so the call is authorized as them."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#3",
+   "action": "set_option",
+   "match": "a model selection",
+   "text": "A model-selection failure; a more capable model would recognize the rep's $50 limit and refuse the larger refund."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/check#3",
+   "action": "set_option",
+   "match": "not a gap",
+   "text": "Not a real gap, provided every refund the assistant issues is logged in full against the shared service account."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#10",
+   "action": "set_option",
+   "match": "forty tool definitions",
+   "text": "Forty tool definitions consume too much of the context window on every single request the assistant makes."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#10",
+   "action": "set_option",
+   "match": "an over permissioned",
+   "text": "Over-permissioning is invisible until it fails: three clean weeks reflect the inputs tried, not all possible inputs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#10",
+   "action": "set_option",
+   "match": "openapi generated tool",
+   "text": "OpenAPI-generated tool definitions are lower quality than hand-written ones and confuse the model's tool selection."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#10",
+   "action": "set_option",
+   "match": "the assistant will",
+   "text": "The assistant will run noticeably faster with fewer tools available, which improves its response latency."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#10",
+   "action": "edit",
+   "field": "explanation",
+   "find": "it's invisible in normal operation, so absence of incidents is not evidence of safety.",
+   "replace": "it's invisible in normal operation, so absence of incidents is not evidence of safety. Three weeks of clean operation is evidence about the inputs tried, not the inputs that exist, and no test fails for \"could terminate an employee but hasn't.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#12",
+   "action": "set_option",
+   "match": "the chunks are",
+   "text": "The chunks are now too small to embed accurately once their section headings have been stripped out."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#12",
+   "action": "set_option",
+   "match": "chunks are semantically",
+   "text": "Chunks are semantically orphaned: text like \"this does not apply\" loses the heading it refers to."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#12",
+   "action": "set_option",
+   "match": "section boundary chunking",
+   "text": "Section-boundary chunking is the wrong strategy for a policy manual and should be replaced with fixed windows."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#12",
+   "action": "set_option",
+   "match": "the overlap between",
+   "text": "The overlap between neighboring chunks is too small and needs to be increased to keep clauses intact."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#13",
+   "action": "set_option",
+   "match": "because reranking is",
+   "text": "Because reranking is cheaper per document than retrieval, so it should be the stage that processes more."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#13",
+   "action": "set_option",
+   "match": "because retrieval is",
+   "text": "Because retrieval is fast but approximate and reranking slow but precise; a chunk never retrieved is lost."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#13",
+   "action": "set_option",
+   "match": "because over fetching",
+   "text": "Because over-fetching increases the number of distinct sources that get cited in the final generated answer."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#13",
+   "action": "set_option",
+   "match": "because vector stores",
+   "text": "Because vector stores return more accurate similarity scores when they are asked for a larger number of results."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#14",
+   "action": "set_option",
+   "match": "average response latency",
+   "text": "Average response latency across all queries, compared against the previous night's baseline."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#14",
+   "action": "set_option",
+   "match": "retrieval returning fewer",
+   "text": "Retrieval returning fewer than k results, and the rate of answers with zero sources."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#14",
+   "action": "set_option",
+   "match": "weekly customer complaint",
+   "text": "Weekly customer complaint volume, broken down by product line and by document type."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#14",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's average output token count per answer, tracked daily on the ops dashboard."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#15",
+   "action": "set_option",
+   "match": "add reranking to",
+   "text": "Add reranking to both, since accuracy improvements are worth their latency in any production step."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#15",
+   "action": "set_option",
+   "match": "add it to neither",
+   "text": "Add it to neither, since a 600ms step is too expensive to justify anywhere in a production system."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#15",
+   "action": "set_option",
+   "match": "add it to the legal",
+   "text": "Add it to the legal assistant only: the SLAs differ, and a fraud verdict after the transaction is worthless."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#15",
+   "action": "set_option",
+   "match": "add it to the fraud",
+   "text": "Add it to the fraud check only, since fraud decisions carry higher stakes than legal research does."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#16",
+   "action": "set_option",
+   "match": "oversampling the interesting",
+   "text": "Oversampling interesting cases: low-confidence outputs, escalations, retries, guardrail hits."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#16",
+   "action": "set_option",
+   "match": "reviewing a uniformly",
+   "text": "Reviewing a uniformly random slice of traffic and nothing else, so the sample stays free of bias."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#16",
+   "action": "set_option",
+   "match": "reviewing a representative",
+   "text": "Reviewing a representative slice to learn normal behavior, alongside the targeted oversampling."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#16",
+   "action": "set_option",
+   "match": "having engineers open",
+   "text": "Having engineers open whichever transcripts look unusual to them during a weekly review."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#17",
+   "action": "set_option",
+   "match": "direct api any",
+   "text": "Direct API, because any call out to an external service is by definition a tool call for the agent."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#17",
+   "action": "set_option",
+   "match": "mcp all claude",
+   "text": "MCP, because all Claude integrations should be standardized on the protocol regardless of their shape."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#17",
+   "action": "set_option",
+   "match": "agent to agent",
+   "text": "Agent-to-agent: you hand over a goal, not an operation; \"assess this claim's fraud risk\" has no signature."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#17",
+   "action": "set_option",
+   "match": "direct cli the",
+   "text": "Direct CLI, because the whole investigation can be wrapped in a single command-line call the agent runs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#18",
+   "action": "set_option",
+   "match": "proceed progressive discovery",
+   "text": "Proceed, since progressive discovery is the modern best practice and reduces cost in every agent setup."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#18",
+   "action": "set_option",
+   "match": "decline six tool",
+   "text": "Decline: six tools cost few tokens, the task uses most context anyway, and round trips add latency."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#18",
+   "action": "set_option",
+   "match": "proceed but only",
+   "text": "Proceed, but only if the toolset is expected to grow to around 80 tools within the next year."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#18",
+   "action": "set_option",
+   "match": "decline because progressive",
+   "text": "Decline, because progressive discovery cannot be configured for agents with fewer than ten tools."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#19",
+   "action": "set_option",
+   "match": "the embedding model",
+   "text": "The embedding model has degraded in place over the year and should be replaced with a newer one."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#19",
+   "action": "set_option",
+   "match": "indexing and chunking",
+   "text": "Indexing and chunking aren't one-time choices; revisit them whenever the source data changes shape."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#19",
+   "action": "set_option",
+   "match": "the corpus should",
+   "text": "The corpus should be frozen at its launch state so the tuned chunking strategy stays valid indefinitely."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#19",
+   "action": "set_option",
+   "match": "retrieval degradation of",
+   "text": "Retrieval degradation of this kind is unavoidable as a corpus grows and simply has to be tolerated."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#2",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "There is no gap; a single shared service account is the simplest and safest way to run the agent."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#2",
+   "action": "set_option",
+   "match": "every user inherits",
+   "text": "Every user inherits the admin rights, so a low-privileged employee can trigger admin actions through it."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#2",
+   "action": "set_option",
+   "match": "shared service accounts",
+   "text": "Shared service accounts are faster to authenticate, so the setup creates no security gap worth fixing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#2",
+   "action": "set_option",
+   "match": "the gap only",
+   "text": "The gap only matters if employees use the tool outside business hours, when nobody is monitoring the agent."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#3",
+   "action": "set_option",
+   "match": "always choose the",
+   "text": "Choose the more accurate retrieval strategy, accepting the extra 600ms regardless of what the SLA requires."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#3",
+   "action": "set_option",
+   "match": "evaluate whether the",
+   "text": "Weigh whether the accuracy gain justifies breaching the SLA here, and document the tradeoff explicitly."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#3",
+   "action": "set_option",
+   "match": "ignore the sla",
+   "text": "Treat the SLA as advisory and ignore it, since accuracy matters more than speed for fraud decisions."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#3",
+   "action": "set_option",
+   "match": "remove the sla",
+   "text": "Remove the SLA requirement from the design so the slower retrieval strategy can be adopted freely."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#4",
+   "action": "set_option",
+   "match": "increase the chunk",
+   "text": "Increase the fixed chunk size to 5,000 tokens so that each chunk contains several whole clauses."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#4",
+   "action": "set_option",
+   "match": "chunk along the",
+   "text": "Chunk along the contract's clauses or sections instead of a fixed window, with modest overlap."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#4",
+   "action": "set_option",
+   "match": "switch to keyword",
+   "text": "Switch to keyword-only search over the existing chunks and leave the chunking strategy unchanged."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#4",
+   "action": "set_option",
+   "match": "add more documents",
+   "text": "Add more contract documents to the corpus so retrieval has more matching clauses to draw on."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#5",
+   "action": "set_option",
+   "match": "increase the embedding",
+   "text": "Increase the embedding model size so that vectors capture fine-grained differences between codes."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#5",
+   "action": "set_option",
+   "match": "add or switch",
+   "text": "Add keyword/lexical search or a lexical-vector hybrid so exact-term queries such as codes match."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#5",
+   "action": "set_option",
+   "match": "remove vector search",
+   "text": "Remove vector search entirely and have users find articles through manual category browsing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#5",
+   "action": "set_option",
+   "match": "reduce the number",
+   "text": "Reduce the number of indexed documents so fewer semantically similar articles compete per query."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#6",
+   "action": "set_option",
+   "match": "the same tools",
+   "text": "The same tools must be available consistently across several Claude clients, with more expected later."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#6",
+   "action": "set_option",
+   "match": "the integration is",
+   "text": "The integration is a single, one-off connection to an internal system that will never be reused elsewhere."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#6",
+   "action": "set_option",
+   "match": "tool discovery and",
+   "text": "Standardized tool discovery and invocation across several integrations would cut bespoke glue code."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#6",
+   "action": "set_option",
+   "match": "the task requires",
+   "text": "The task requires no tool access at all, only text generation from information already in the prompt."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#7",
+   "action": "set_option",
+   "match": "tracking only the",
+   "text": "Tracking only the average latency across all requests, with an alert when the daily average rises."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#7",
+   "action": "set_option",
+   "match": "tracking latency percentiles",
+   "text": "Tracking p95/p99 latency, tool-call error rates, and alerts on anomalies like empty retrievals."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#7",
+   "action": "set_option",
+   "match": "reading every single",
+   "text": "Having the team read every single raw transcript manually each day to spot any failed requests."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#7",
+   "action": "set_option",
+   "match": "disabling logging to",
+   "text": "Disabling detailed logging to reduce overhead, and relying on user reports to surface any failures."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#8",
+   "action": "set_option",
+   "match": "keep loading all",
+   "text": "Keep loading all 80 tool definitions upfront, since more context gives the model a fuller picture."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#8",
+   "action": "set_option",
+   "match": "move to a",
+   "text": "Move to progressive discovery: start minimal and load full tool definitions only as needed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#8",
+   "action": "set_option",
+   "match": "remove all tools",
+   "text": "Remove all the tools and revert to a single augmented LLM call that answers from its own knowledge."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#8",
+   "action": "set_option",
+   "match": "switch to the",
+   "text": "Switch to the cheapest model tier so the lower per-token price offsets the tool definition overhead."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#9",
+   "action": "set_option",
+   "match": "leave the configuration",
+   "text": "Leave the configuration as-is, since tools that are never invoked cannot cause any real harm."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#9",
+   "action": "set_option",
+   "match": "reduce the agent",
+   "text": "Trim the configuration to the tools actually used to cut attack surface, and revisit if needs change."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#9",
+   "action": "set_option",
+   "match": "add 10 more",
+   "text": "Add ten more tools so the agent has more options available for the kinds of requests it may see later."
+  },
+  {
+   "id": "davidalex89:architect-professional/d3/quiz#9",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a larger model so it can better decide which of the 15 available tools to use."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#1",
+   "action": "set_option",
+   "match": "none accuracy is",
+   "text": "None; accuracy against the golden dataset is the only metric that matters before a customer-facing launch."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#1",
+   "action": "set_option",
+   "match": "the evaluation didn",
+   "text": "The evaluation lacked a security dimension, such as resistance to prompt injection and tool misuse."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#1",
+   "action": "set_option",
+   "match": "the golden dataset",
+   "text": "The golden dataset was too small and should have included many more customer conversations."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#1",
+   "action": "set_option",
+   "match": "the model tier",
+   "text": "The model tier was too weak to resist the attack, so a more capable tier would have prevented it."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#2",
+   "action": "set_option",
+   "match": "assume it s a model",
+   "text": "Assume it is a model mismatch and upgrade the tier immediately to restore the earlier quality."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#2",
+   "action": "set_option",
+   "match": "review whether the",
+   "text": "Check whether the prompt change added ambiguity or dropped context this input class needs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#2",
+   "action": "set_option",
+   "match": "assume it s",
+   "text": "Assume it is a hallucination and add an output filter without any further investigation."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#2",
+   "action": "set_option",
+   "match": "roll back all",
+   "text": "Roll back all recent changes across the system right away without investigating the cause."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#3",
+   "action": "set_option",
+   "match": "re run the",
+   "text": "Re-run the same query at a lower temperature and check whether the wrong answer changes."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#3",
+   "action": "set_option",
+   "match": "read the chunks",
+   "text": "Read the chunks actually retrieved: if they contain the wrong claim it's retrieval, if not, hallucination."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#3",
+   "action": "set_option",
+   "match": "upgrade the model",
+   "text": "Upgrade to a more capable model tier and check whether the incorrect answer still persists."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/check#3",
+   "action": "set_option",
+   "match": "compare the answer",
+   "text": "Compare the answer against the golden dataset's expected output for that same user query."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#10",
+   "action": "set_option",
+   "match": "a prompt failure",
+   "text": "A prompt failure that needs a fourth rewrite with clearer structure and better-chosen examples."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#10",
+   "action": "set_option",
+   "match": "a model mismatch",
+   "text": "A model mismatch: failures cluster on the hardest inputs and resist all prompt work."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#10",
+   "action": "set_option",
+   "match": "a retrieval failure",
+   "text": "A retrieval failure in how the multi-party contracts are chunked before they reach the classifier."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#10",
+   "action": "set_option",
+   "match": "a hallucination problem",
+   "text": "A hallucination problem that requires adding output validation against the source contract text."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#12",
+   "action": "set_option",
+   "match": "the grader has",
+   "text": "The grader model has degraded and now scores inaccurately against its original rubric."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#12",
+   "action": "set_option",
+   "match": "the grader still",
+   "text": "The grader is unchanged, but the product and what 'good' means have moved, so stable scores prove little."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#12",
+   "action": "set_option",
+   "match": "model graded evaluation",
+   "text": "Model-graded evaluation cannot be trusted for subjective tasks like support-reply quality at all."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#12",
+   "action": "set_option",
+   "match": "the 91 agreement",
+   "text": "The 91% agreement was too low to have justified shipping the grader in the first place."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#13",
+   "action": "set_option",
+   "match": "it will take",
+   "text": "It will take longer overall than fixing one thing at a time and checking each result."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#13",
+   "action": "set_option",
+   "match": "if the symptom",
+   "text": "If the symptom clears, you've learned nothing and kept two changes you can't justify."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#13",
+   "action": "set_option",
+   "match": "executives should not",
+   "text": "Executives should not be present on the call during active incident response work."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#13",
+   "action": "set_option",
+   "match": "re running the",
+   "text": "Re-running the index is unlikely to help, so that step only adds risk without benefit."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#13",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Changing three variables at once destroys",
+   "replace": "Changing three variables at once means the next occurrence leaves you with no more information than today; it destroys"
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#14",
+   "action": "set_option",
+   "match": "the reviewers need",
+   "text": "The reviewers need more training on the product before their scores can be compared at all."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#14",
+   "action": "set_option",
+   "match": "the accuracy metric",
+   "text": "Accuracy was never written down as a rubric, so each reviewer used a private definition."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#14",
+   "action": "set_option",
+   "match": "summarization quality is",
+   "text": "Summarization quality is inherently subjective, so it cannot be measured consistently by anyone."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#14",
+   "action": "set_option",
+   "match": "the sample of",
+   "text": "The sample of outputs the reviewers scored was too small to produce a stable level of agreement."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#15",
+   "action": "set_option",
+   "match": "the golden dataset",
+   "text": "The golden dataset was constructed incorrectly and should be rebuilt from scratch before release."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#15",
+   "action": "set_option",
+   "match": "a golden dataset",
+   "text": "It covers only what someone thought to include, so a live comparison on real traffic is needed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#15",
+   "action": "set_option",
+   "match": "golden datasets should",
+   "text": "Golden datasets should be replaced entirely by model-graded evaluation on sampled traffic."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#15",
+   "action": "set_option",
+   "match": "offline evaluation has",
+   "text": "Offline evaluation has no real value and can be skipped before shipping a prompt change."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#2",
+   "action": "set_option",
+   "match": "whichever output feels",
+   "text": "Whichever output the reviewers feel reads most fluently and naturally in a blind side-by-side check."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#2",
+   "action": "set_option",
+   "match": "a concrete task",
+   "text": "A concrete, task-specific definition of correctness measured consistently against data or a rubric."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#2",
+   "action": "set_option",
+   "match": "the number of",
+   "text": "The number of tokens generated per response, tracked as a proxy for answer completeness."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#2",
+   "action": "set_option",
+   "match": "the model s",
+   "text": "The model's self-reported confidence score, averaged across the whole evaluation set."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#3",
+   "action": "set_option",
+   "match": "exact match string",
+   "text": "Exact-match string comparison of each draft against a golden dataset of reference outputs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#3",
+   "action": "set_option",
+   "match": "human or model",
+   "text": "Human or model-graded rubric scoring, since correctness is a judgment call, not a string match."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#3",
+   "action": "set_option",
+   "match": "skipping evaluation since",
+   "text": "Skip formal evaluation entirely, since the task is subjective and no metric can capture its quality."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#3",
+   "action": "set_option",
+   "match": "measuring only latency",
+   "text": "Measure latency and cost per draft only, as those are the objective signals available here."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#4",
+   "action": "set_option",
+   "match": "there is no",
+   "text": "There is no real risk, since model-graded evaluation stays accurate once it has been set up."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#4",
+   "action": "set_option",
+   "match": "the grader itself",
+   "text": "The grader can drift from what \"good\" actually means over time, with no way to detect it."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#4",
+   "action": "set_option",
+   "match": "model graded evaluation",
+   "text": "Model-graded evaluation cannot scale to the volume that a high-stakes task produces."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#4",
+   "action": "set_option",
+   "match": "it will always",
+   "text": "It will consistently score outputs lower than human reviewers would score the same outputs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#5",
+   "action": "set_option",
+   "match": "hold everything else",
+   "text": "Hold everything else constant, set success metric and rollback triggers upfront, use a live baseline."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#5",
+   "action": "set_option",
+   "match": "roll the new",
+   "text": "Roll the new prompt out to 100% of traffic immediately, since the offline evaluation already passed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#5",
+   "action": "set_option",
+   "match": "decide success or",
+   "text": "Decide success or failure based on which version \"feels\" better after a quick look at the outputs."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#6",
+   "action": "set_option",
+   "match": "an ambiguous underspecified",
+   "text": "An ambiguous, underspecified prompt yielding inconsistent output on well-covered inputs: a prompt failure."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#6",
+   "action": "set_option",
+   "match": "a rag system",
+   "text": "Confident wrong RAG answers right after a document refresh, model and prompt unchanged: a retrieval failure."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#6",
+   "action": "set_option",
+   "match": "any wrong answer is automatically a model",
+   "text": "Any wrong answer at all is automatically a model mismatch, which calls for upgrading to a more capable model tier."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#6",
+   "action": "set_option",
+   "match": "any wrong answer is",
+   "text": "Any wrong answer at all is automatically a hallucination, which calls for adding more few-shot examples."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#7",
+   "action": "set_option",
+   "match": "nothing faster and",
+   "text": "Nothing went wrong, since faster and cheaper is the right default for every step in a workflow."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#7",
+   "action": "set_option",
+   "match": "the optimization wasn",
+   "text": "The step's SLA had latency to spare, so trading away accuracy to save time wasn't needed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#7",
+   "action": "set_option",
+   "match": "the sla should",
+   "text": "The SLA should have been removed entirely, so the step could not push teams to over-optimize."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#7",
+   "action": "set_option",
+   "match": "the model tier",
+   "text": "The model tier should have been upgraded instead of downgraded, regardless of what the SLA allows."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#8",
+   "action": "set_option",
+   "match": "it removes the",
+   "text": "It removes the need for any separate evaluation dataset, since production logs already reveal quality."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#8",
+   "action": "set_option",
+   "match": "it lets a",
+   "text": "Regressions show up on dashboards before users complain, and diagnosis follows evidence, not guesses."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#8",
+   "action": "set_option",
+   "match": "it automatically fixes",
+   "text": "It automatically fixes any problems it detects by rolling back the change that caused them."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#8",
+   "action": "set_option",
+   "match": "it replaces the",
+   "text": "It replaces the need for A/B testing, since every request's metrics are already captured."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#9",
+   "action": "set_option",
+   "match": "retrieval failure the",
+   "text": "Retrieval failure, because the index must be missing the real case the lawyer was looking for."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#9",
+   "action": "set_option",
+   "match": "hallucination retrieval supplied",
+   "text": "Hallucination: retrieval supplied correct context, and the model asserted a claim not grounded in it."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#9",
+   "action": "set_option",
+   "match": "prompt failure the",
+   "text": "Prompt failure, because the prompt didn't instruct the model to cite only real, verified cases."
+  },
+  {
+   "id": "davidalex89:architect-professional/d4/quiz#9",
+   "action": "set_option",
+   "match": "model mismatch legal",
+   "text": "Model mismatch, because accurate legal citation requires a more capable model tier than this one."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#1",
+   "action": "set_option",
+   "match": "none output filtering",
+   "text": "None; output filtering alone is sufficient, as long as it checks every final response thoroughly."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#1",
+   "action": "set_option",
+   "match": "a single layer",
+   "text": "A single layer: nothing stops injection reaching the model or a tool action running before the filter."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#1",
+   "action": "set_option",
+   "match": "the output filter",
+   "text": "The output filter should be removed, since it is redundant with the model's own built-in safety training."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#1",
+   "action": "set_option",
+   "match": "the gap only",
+   "text": "The gap only matters for text-only systems, since tool calls are checked by the output filter as well."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#2",
+   "action": "set_option",
+   "match": "nothing more human",
+   "text": "Nothing; more human oversight is better regardless of where in the workflow it is placed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#2",
+   "action": "set_option",
+   "match": "the checkpoints are",
+   "text": "The checkpoints are inverted: the reversible edit needs no approval, the hard-to-reverse loan decision does."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#2",
+   "action": "set_option",
+   "match": "loan approval should",
+   "text": "Loan approval must not involve Claude in any capacity, even with a human checkpoint added."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#2",
+   "action": "set_option",
+   "match": "draft summaries should",
+   "text": "Draft summaries need no review by anyone, and loan approvals can safely stay fully autonomous."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#3",
+   "action": "set_option",
+   "match": "data leakage phi",
+   "text": "Data leakage: PHI reached a channel without suitable access control, as a side effect of debugging."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#3",
+   "action": "set_option",
+   "match": "a prompt injection",
+   "text": "A prompt injection risk, since engineers could read the logged prompts and craft attacks from them."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/check#3",
+   "action": "set_option",
+   "match": "an inconsistency at",
+   "text": "An inconsistency-at-scale problem, since different teams may handle the logged patient records differently."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#1",
+   "action": "edit",
+   "field": "opt",
+   "find": "Hallucination",
+   "replace": "Hallucination, where the model invents an instruction that the ticket does not actually contain."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#1",
+   "action": "set_option",
+   "match": "prompt injection untrusted",
+   "text": "Prompt injection, where untrusted content tries to override the model's system prompt."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#1",
+   "action": "edit",
+   "field": "opt",
+   "find": "Model mismatch",
+   "replace": "Model mismatch, where the chosen model tier is too weak to recognize the request as unsafe."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#1",
+   "action": "set_option",
+   "match": "data leakage caused",
+   "text": "Data leakage caused directly by customer records memorized in the model's training data."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#10",
+   "action": "set_option",
+   "match": "the reviewer is providing 200",
+   "text": "The reviewer is providing 200 checkpoints' worth of oversight, which is thorough and safe."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#10",
+   "action": "set_option",
+   "match": "the reviewer is providing approximately",
+   "text": "Roughly zero oversight: the two decisions that mattered passed in the same rhythm as the other 198."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#10",
+   "action": "set_option",
+   "match": "the system should",
+   "text": "The system should generate fewer decisions per day so the single reviewer can keep up with the whole queue."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#10",
+   "action": "set_option",
+   "match": "the reviewer needs",
+   "text": "The reviewer needs better training on the approval interface to work through the queue faster."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#10",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Checkpoint value depends on scarcity:",
+   "replace": "Too many checkpoints destroy oversight as surely as too few. Checkpoint value depends on scarcity:"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#11",
+   "action": "set_option",
+   "match": "the primary application",
+   "text": "The primary application database with customer accounts."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#11",
+   "action": "set_option",
+   "match": "the public marketing",
+   "text": "The public marketing website and its landing pages."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#12",
+   "action": "set_option",
+   "match": "nothing automation does",
+   "text": "Nothing; automation does eliminate the inconsistency of individual human judgment."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#12",
+   "action": "set_option",
+   "match": "it has the",
+   "text": "Causation is backwards: skew in past decisions is learned and then applied consistently, at scale."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#12",
+   "action": "set_option",
+   "match": "automated systems are",
+   "text": "Automated systems are inherently more biased than the human decision-makers they replace."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#12",
+   "action": "set_option",
+   "match": "the concern only",
+   "text": "The concern only applies if the model was trained on claims data older than five years."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#13",
+   "action": "set_option",
+   "match": "the system isn",
+   "text": "\"The system isn't safe to launch without bias testing, and I can't sign off on it until that's done.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#13",
+   "action": "set_option",
+   "match": "the model learned",
+   "text": "\"Learned skew won't show in aggregate accuracy; a two-day stratified check, and the low-value tier launches Monday.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#13",
+   "action": "set_option",
+   "match": "bias testing is",
+   "text": "\"Bias testing is an industry best practice, and skipping it creates reputational and regulatory risk for us.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#13",
+   "action": "set_option",
+   "match": "i ll add",
+   "text": "\"I'll add logging on every auto-approval so we can investigate after launch if a problem appears.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#13",
+   "action": "edit",
+   "field": "explanation",
+   "find": "It names a mechanism, names why",
+   "replace": "The strong framing (B) says the model learned from historical decisions, so any skew in them is now automated; that aggregate accuracy can't detect group disparity; that a stratified check on the existing golden set takes two days; and that the low-value tier can launch Monday while the rest is routed until it clears. It names a mechanism, names why"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#14",
+   "action": "set_option",
+   "match": "whether the system",
+   "text": "Whether the system responds fast enough to fit within the application flow's latency budget."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#14",
+   "action": "set_option",
+   "match": "who bears the",
+   "text": "Who bears the cost of the 4%: a wrong denial costs the applicant a loan, the bank nothing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#14",
+   "action": "set_option",
+   "match": "whether the model",
+   "text": "Whether the chosen model tier is appropriate for the complexity of lending decisions."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#14",
+   "action": "set_option",
+   "match": "whether the training",
+   "text": "Whether the training data was large enough to cover the full range of loan applicants."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#2",
+   "action": "edit",
+   "field": "opt",
+   "find": "Hallucination",
+   "replace": "Hallucination, where the model invents applicant details that appear nowhere in the application."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#2",
+   "action": "set_option",
+   "match": "automation bias or",
+   "text": "Automation bias: the human checkpoint has stopped providing any real scrutiny of drafts."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#2",
+   "action": "edit",
+   "field": "opt",
+   "find": "Data leakage",
+   "replace": "Data leakage, where loan applicants' personal details are exposed through the approval workflow."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#2",
+   "action": "edit",
+   "field": "opt",
+   "find": "Prompt injection",
+   "replace": "Prompt injection, where applicant-supplied text manipulates the AI drafts toward approval."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#3",
+   "action": "set_option",
+   "match": "drafting an internal",
+   "text": "Drafting an internal meeting summary for the team to review."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#3",
+   "action": "set_option",
+   "match": "reformatting a table",
+   "text": "Reformatting a table in an internal planning document."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#3",
+   "action": "set_option",
+   "match": "suggesting three brainstormed",
+   "text": "Suggesting three brainstormed taglines for a campaign."
   }
  ],
  "hold": []
