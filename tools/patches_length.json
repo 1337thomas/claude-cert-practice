@@ -44361,6 +44361,1157 @@
    "action": "set_option",
    "match": "acceptable if a",
    "text": "Acceptable if a larger model is used for the control decision"
+  },
+  {
+   "id": "amey:architect-professional-practice-19",
+   "action": "set_option",
+   "match": "It uses more",
+   "text": "It routes different tasks to more than one model"
+  },
+  {
+   "id": "amey:architect-professional-practice-19",
+   "action": "set_option",
+   "match": "It has an",
+   "text": "It ships with a dedicated evaluation suite and test harness"
+  },
+  {
+   "id": "amey:architect-professional-practice-19",
+   "action": "set_option",
+   "match": "It includes a",
+   "text": "It includes a human approval step before actions run"
+  },
+  {
+   "id": "amey:architect-professional-practice-2",
+   "action": "set_option",
+   "match": "The retrieval and",
+   "text": "The retrieval and indexing layer: whether the refresh broke the index, chunking, or embeddings"
+  },
+  {
+   "id": "amey:architect-professional-practice-2",
+   "action": "set_option",
+   "match": "The model, which",
+   "text": "The model itself, which may have silently degraded or been swapped overnight"
+  },
+  {
+   "id": "amey:architect-professional-practice-2",
+   "action": "set_option",
+   "match": "The system prompt",
+   "text": "The system prompt wording, which may now conflict with the new document content"
+  },
+  {
+   "id": "amey:architect-professional-practice-2",
+   "action": "set_option",
+   "match": "The temperature setting",
+   "text": "The sampling settings, which may be making the model's answers sound overconfident"
+  },
+  {
+   "id": "amey:architect-professional-practice-20",
+   "action": "set_option",
+   "match": "A demonstration that",
+   "text": "A successful live demonstration that clearly impressed the business stakeholders"
+  },
+  {
+   "id": "amey:architect-professional-practice-20",
+   "action": "set_option",
+   "match": "Agreement from the",
+   "text": "Formal sign-off from the engineering team that built the solution"
+  },
+  {
+   "id": "amey:architect-professional-practice-20",
+   "action": "set_option",
+   "match": "A defined success",
+   "text": "A defined success criterion and measured performance on representative data"
+  },
+  {
+   "id": "amey:architect-professional-practice-20",
+   "action": "set_option",
+   "match": "A completed cost",
+   "text": "A completed cost estimate covering the expected production traffic"
+  },
+  {
+   "id": "amey:architect-professional-practice-21",
+   "action": "set_option",
+   "match": "It gives a",
+   "text": "It gives a reliable measure of quality for the cases users send most"
+  },
+  {
+   "id": "amey:architect-professional-practice-21",
+   "action": "set_option",
+   "match": "It is acceptable",
+   "text": "It is acceptable as long as the set is large enough to be significant"
+  },
+  {
+   "id": "amey:architect-professional-practice-21",
+   "action": "set_option",
+   "match": "It only matters",
+   "text": "It only matters for regulated systems that must report their accuracy"
+  },
+  {
+   "id": "amey:architect-professional-practice-22",
+   "action": "set_option",
+   "match": "Maintaining a regression",
+   "text": "A regression suite covering the behaviors the system must not lose"
+  },
+  {
+   "id": "amey:architect-professional-practice-22",
+   "action": "set_option",
+   "match": "Changing one thing",
+   "text": "Changing only one thing at a time so each effect can be attributed"
+  },
+  {
+   "id": "amey:architect-professional-practice-22",
+   "action": "set_option",
+   "match": "Reviewing changes more",
+   "text": "Having a second engineer review every prompt change more carefully"
+  },
+  {
+   "id": "amey:architect-professional-practice-22",
+   "action": "set_option",
+   "match": "Limiting how often",
+   "text": "Limiting how often prompts change to a fixed monthly release window"
+  },
+  {
+   "id": "amey:architect-professional-practice-23",
+   "action": "set_option",
+   "match": "Only a reported",
+   "text": "Only a reported incident or a user complaint about a clearly wrong answer"
+  },
+  {
+   "id": "amey:architect-professional-practice-23",
+   "action": "set_option",
+   "match": "A change to",
+   "text": "Any change to the model, prompt, data distribution, or requirement"
+  },
+  {
+   "id": "amey:architect-professional-practice-23",
+   "action": "set_option",
+   "match": "A fixed annual",
+   "text": "A fixed annual review schedule agreed in advance with the business owner"
+  },
+  {
+   "id": "amey:architect-professional-practice-23",
+   "action": "set_option",
+   "match": "A change in",
+   "text": "A change in cost, such as a price increase for the model the solution uses"
+  },
+  {
+   "id": "amey:architect-professional-practice-24",
+   "action": "set_option",
+   "match": "Implement it, since",
+   "text": "Implement full logging as asked, since audit requirements take precedence"
+  },
+  {
+   "id": "amey:architect-professional-practice-24",
+   "action": "set_option",
+   "match": "Refuse, since logging",
+   "text": "Refuse the request outright, since retaining any prompt content creates privacy risk"
+  },
+  {
+   "id": "amey:architect-professional-practice-24",
+   "action": "set_option",
+   "match": "Establish what the",
+   "text": "Establish what the audit requires, as prompts and responses may hold personal data"
+  },
+  {
+   "id": "amey:architect-professional-practice-24",
+   "action": "set_option",
+   "match": "Log responses only",
+   "text": "Log responses only, since prompts are where users enter personal data"
+  },
+  {
+   "id": "amey:architect-professional-practice-25",
+   "action": "set_option",
+   "match": "It is safe once",
+   "text": "It is safe once it has been scanned and filtered for known attack strings"
+  },
+  {
+   "id": "amey:architect-professional-practice-25",
+   "action": "set_option",
+   "match": "It is safe if it",
+   "text": "It is safe if it arrives over an encrypted channel from an authenticated, known host"
+  },
+  {
+   "id": "amey:architect-professional-practice-25",
+   "action": "set_option",
+   "match": "It is untrusted",
+   "text": "It remains untrusted, and the model's authority must be bounded whatever it says"
+  },
+  {
+   "id": "amey:architect-professional-practice-27",
+   "action": "set_option",
+   "match": "Provide the headline",
+   "text": "Provide the headline accuracy figure from the latest evaluation run"
+  },
+  {
+   "id": "amey:architect-professional-practice-27",
+   "action": "set_option",
+   "match": "Provide the measure",
+   "text": "Provide the measure tied to the decision they face, with its limits stated"
+  },
+  {
+   "id": "amey:architect-professional-practice-27",
+   "action": "set_option",
+   "match": "Explain that quality",
+   "text": "Explain that quality cannot be meaningfully summarised in a single number at all"
+  },
+  {
+   "id": "amey:architect-professional-practice-27",
+   "action": "set_option",
+   "match": "Provide the model's",
+   "text": "Provide the model's published benchmark score for comparable tasks"
+  },
+  {
+   "id": "amey:architect-professional-practice-28",
+   "action": "set_option",
+   "match": "The cost of",
+   "text": "The cost of the additional licenses needed to cover two thousand users"
+  },
+  {
+   "id": "amey:architect-professional-practice-28",
+   "action": "set_option",
+   "match": "The need for",
+   "text": "Whether a larger model is needed to handle the increased request load"
+  },
+  {
+   "id": "amey:architect-professional-practice-28",
+   "action": "set_option",
+   "match": "The training schedule",
+   "text": "The training schedule for onboarding all two thousand of the new users"
+  },
+  {
+   "id": "amey:architect-professional-practice-29",
+   "action": "set_option",
+   "match": "Full documentation at",
+   "text": "Complete documentation of the design and prompts handed over at delivery"
+  },
+  {
+   "id": "amey:architect-professional-practice-29",
+   "action": "set_option",
+   "match": "A longer warranty",
+   "text": "A longer warranty period during which the vendor fixes reported defects"
+  },
+  {
+   "id": "amey:architect-professional-practice-29",
+   "action": "set_option",
+   "match": "Training every user",
+   "text": "Training every user on the solution before the handover to operations"
+  },
+  {
+   "id": "amey:architect-professional-practice-29",
+   "action": "set_option",
+   "match": "A named owner",
+   "text": "A named owner with a routine for evaluation, monitoring, and updates"
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "set_option",
+   "match": "Shorter tool descriptions",
+   "text": "Shorter tool descriptions across the board so all forty definitions fit cheaply"
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "set_option",
+   "match": "Progressive discovery: agents",
+   "text": "Progressive discovery: agents load a small task-relevant toolset and search for more as needed"
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "set_option",
+   "match": "One mega-tool with",
+   "text": "One mega-tool whose mode parameter selects among all forty unrelated behaviors"
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "set_option",
+   "match": "Limit the platform",
+   "text": "Limit the platform to ten capabilities so each agent's tool list stays small"
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "each agent sees what its task needs.",
+   "replace": "each agent sees what its task needs, with search or namespacing to pull in other tools when needed."
+  },
+  {
+   "id": "amey:architect-professional-practice-30",
+   "action": "set_option",
+   "match": "Match each task",
+   "text": "Match each task to the smallest model that meets its requirement, then evaluate"
+  },
+  {
+   "id": "amey:architect-professional-practice-30",
+   "action": "set_option",
+   "match": "One model for",
+   "text": "Use one model for every task, to keep the solution simple to operate"
+  },
+  {
+   "id": "amey:architect-professional-practice-30",
+   "action": "set_option",
+   "match": "The largest model",
+   "text": "Use the largest available model for every task, to be safe on quality and accuracy"
+  },
+  {
+   "id": "amey:architect-professional-practice-30",
+   "action": "set_option",
+   "match": "The newest model",
+   "text": "Use the newest model for every task, since it supersedes older versions"
+  },
+  {
+   "id": "amey:architect-professional-practice-31",
+   "action": "set_option",
+   "match": "A capacity to",
+   "text": "A capacity to fill as fully as possible so the model can see every available detail"
+  },
+  {
+   "id": "amey:architect-professional-practice-31",
+   "action": "set_option",
+   "match": "A budget to",
+   "text": "A budget split deliberately between instructions, retrieved material, and state"
+  },
+  {
+   "id": "amey:architect-professional-practice-31",
+   "action": "set_option",
+   "match": "A limit that",
+   "text": "A limit that only matters once the solution handles very long documents"
+  },
+  {
+   "id": "amey:architect-professional-practice-31",
+   "action": "set_option",
+   "match": "A setting to",
+   "text": "A setting to raise to a larger window whenever output quality drops"
+  },
+  {
+   "id": "amey:architect-professional-practice-32",
+   "action": "set_option",
+   "match": "Appoint one team",
+   "text": "Appoint one team to own and approve all prompting across the solution"
+  },
+  {
+   "id": "amey:architect-professional-practice-32",
+   "action": "set_option",
+   "match": "Freeze the prompts",
+   "text": "Freeze all of the prompts in their current state until the divergence has been resolved"
+  },
+  {
+   "id": "amey:architect-professional-practice-32",
+   "action": "set_option",
+   "match": "Version the prompts",
+   "text": "Version prompts as artefacts with clear ownership, review, and evaluation on change"
+  },
+  {
+   "id": "amey:architect-professional-practice-32",
+   "action": "set_option",
+   "match": "Move all prompts",
+   "text": "Move all prompts into one shared system prompt that every team edits"
+  },
+  {
+   "id": "amey:architect-professional-practice-33",
+   "action": "set_option",
+   "match": "A written policy",
+   "text": "A written usage policy on Claude Code circulated to every developer by email each quarter"
+  },
+  {
+   "id": "amey:architect-professional-practice-33",
+   "action": "set_option",
+   "match": "A one-off training",
+   "text": "A one-off training session on Claude Code for every developer team in the org"
+  },
+  {
+   "id": "amey:architect-professional-practice-33",
+   "action": "set_option",
+   "match": "Requiring approval for",
+   "text": "Requiring a manager's approval each time a developer uses Claude Code"
+  },
+  {
+   "id": "amey:architect-professional-practice-33",
+   "action": "set_option",
+   "match": "Committed project memory",
+   "text": "Committed project memory and shared skills per repository, reviewed like code"
+  },
+  {
+   "id": "amey:architect-professional-practice-34",
+   "action": "set_option",
+   "match": "The number of",
+   "text": "The number of developers who completed the enablement training"
+  },
+  {
+   "id": "amey:architect-professional-practice-34",
+   "action": "set_option",
+   "match": "License utilization",
+   "text": "License utilization across the whole engineering organization"
+  },
+  {
+   "id": "amey:architect-professional-practice-34",
+   "action": "set_option",
+   "match": "The volume of",
+   "text": "The volume of tool calls and sessions logged per developer"
+  },
+  {
+   "id": "amey:architect-professional-practice-35",
+   "action": "set_option",
+   "match": "Whether the team",
+   "text": "Whether the team needs more training in prompting Claude Code for older codebases"
+  },
+  {
+   "id": "amey:architect-professional-practice-35",
+   "action": "set_option",
+   "match": "Whether the legacy service lacks",
+   "text": "Whether the legacy service lacks committed context and conventions the model needs"
+  },
+  {
+   "id": "amey:architect-professional-practice-35",
+   "action": "set_option",
+   "match": "Whether a larger",
+   "text": "Whether a larger model would understand the legacy code more reliably"
+  },
+  {
+   "id": "amey:architect-professional-practice-35",
+   "action": "set_option",
+   "match": "Whether the legacy service should",
+   "text": "Whether the legacy service should be rewritten first before the team uses Claude Code on it"
+  },
+  {
+   "id": "amey:architect-professional-practice-4",
+   "action": "set_option",
+   "match": "The proposed multi-agent",
+   "text": "The proposed multi-agent system, since both tasks involve reading and writing documents"
+  },
+  {
+   "id": "amey:architect-professional-practice-4",
+   "action": "set_option",
+   "match": "One agent with",
+   "text": "One agent with all tools and a routing prompt that decides which task each request is"
+  },
+  {
+   "id": "amey:architect-professional-practice-4",
+   "action": "set_option",
+   "match": "Two simple components:",
+   "text": "Two components: a retrieval-augmented answer service and a templated letter workflow, evaluated separately"
+  },
+  {
+   "id": "amey:architect-professional-practice-4",
+   "action": "set_option",
+   "match": "A single fine-tuned",
+   "text": "A single fine-tuned model trained on policy documents and past decline letters together"
+  },
+  {
+   "id": "amey:architect-professional-practice-5",
+   "action": "set_option",
+   "match": "Agents are a",
+   "text": "Agents are a newer pattern and are less proven in regulated production settings"
+  },
+  {
+   "id": "amey:architect-professional-practice-5",
+   "action": "set_option",
+   "match": "Workflows always outperform",
+   "text": "Workflows outperform agents on accuracy in general, so they are the safer default"
+  },
+  {
+   "id": "amey:architect-professional-practice-5",
+   "action": "set_option",
+   "match": "The team lacked",
+   "text": "The team lacked the time to build and test an agent before the intake deadline"
+  },
+  {
+   "id": "amey:architect-professional-practice-5",
+   "action": "set_option",
+   "match": "The intake path",
+   "text": "The intake path is fully known, so deterministic orchestration is cheaper, auditable, and reliable"
+  },
+  {
+   "id": "amey:architect-professional-practice-5",
+   "action": "edit",
+   "field": "explanation",
+   "find": "open-ended path, agent.",
+   "replace": "open-ended path, agent. Autonomy earns its complexity only where the model must choose the path."
+  },
+  {
+   "id": "amey:architect-professional-practice-6",
+   "action": "set_option",
+   "match": "Define a rubric",
+   "text": "Define a rubric of key failure modes, label a set with counsel, and pair model grading with human review"
+  },
+  {
+   "id": "amey:architect-professional-practice-6",
+   "action": "set_option",
+   "match": "Ship and count",
+   "text": "Ship to the legal team and treat the number of complaints received as the quality metric"
+  },
+  {
+   "id": "amey:architect-professional-practice-6",
+   "action": "set_option",
+   "match": "Exact string match",
+   "text": "Score each summary by exact string match against one approved reference summary per clause"
+  },
+  {
+   "id": "amey:architect-professional-practice-6",
+   "action": "set_option",
+   "match": "Grade outputs by",
+   "text": "Grade outputs by length, since concise summaries indicate better clause understanding"
+  },
+  {
+   "id": "amey:architect-professional-practice-7",
+   "action": "set_option",
+   "match": "Roll it out;",
+   "text": "Roll it out to all users, since the demos are representative of real usage patterns"
+  },
+  {
+   "id": "amey:architect-professional-practice-7",
+   "action": "set_option",
+   "match": "Run it against",
+   "text": "Run the regression set, then A/B it against the current prompt on live traffic"
+  },
+  {
+   "id": "amey:architect-professional-practice-7",
+   "action": "set_option",
+   "match": "Ask the team",
+   "text": "Ask the team to vote on whether the new prompt is better than the current one in use"
+  },
+  {
+   "id": "amey:architect-professional-practice-7",
+   "action": "set_option",
+   "match": "Roll out to",
+   "text": "Roll it out to everyone with a feedback banner to collect reactions from real users"
+  },
+  {
+   "id": "amey:architect-professional-practice-8",
+   "action": "set_option",
+   "match": "Trust clinicians to",
+   "text": "Trust clinicians to avoid typing patient identifiers, backed by a usage policy they sign"
+  },
+  {
+   "id": "amey:architect-professional-practice-8",
+   "action": "set_option",
+   "match": "A system prompt",
+   "text": "A system prompt instructing the model to forget any PHI it sees after answering"
+  },
+  {
+   "id": "amey:architect-professional-practice-8",
+   "action": "set_option",
+   "match": "A de-identification layer",
+   "text": "A de-identification layer that strips or tokenizes PHI before the API call and re-links it locally"
+  },
+  {
+   "id": "amey:architect-professional-practice-8",
+   "action": "set_option",
+   "match": "Blocking free-text queries",
+   "text": "Block free-text queries entirely and offer only structured, pre-approved query forms"
+  },
+  {
+   "id": "amey:architect-professional-practice-8",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and the control is auditable.",
+   "replace": "and the boundary is logged and periodically audited."
+  },
+  {
+   "id": "amey:architect-professional-practice-9",
+   "action": "set_option",
+   "match": "Promise 99.9% and",
+   "text": "Promise 99.9% to the sponsor and rely on upcoming model upgrades to close the gap"
+  },
+  {
+   "id": "amey:architect-professional-practice-9",
+   "action": "set_option",
+   "match": "Decline to discuss",
+   "text": "Decline to discuss accuracy numbers with non-engineers, since they will be misread"
+  },
+  {
+   "id": "amey:architect-professional-practice-9",
+   "action": "set_option",
+   "match": "Quietly redefine accuracy",
+   "text": "Quietly redefine accuracy so that the reported number reads above the 99.9% target"
+  },
+  {
+   "id": "amey:architect-professional-practice-9",
+   "action": "set_option",
+   "match": "Reframe the target",
+   "text": "Reframe the target as the end-to-end outcome of the system plus confidence-routed human review"
+  },
+  {
+   "id": "amey:architect-professional-practice-9",
+   "action": "edit",
+   "field": "explanation",
+   "find": "not a raw model metric.",
+   "replace": "not a raw model metric, with measured rates, costs, and the tradeoff curve made explicit."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#2",
+   "action": "set_option",
+   "match": "Build the most",
+   "text": "Build the most sophisticated multi-agent system available, so no capability is missing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#2",
+   "action": "set_option",
+   "match": "Ask which business",
+   "text": "Ask which business pillar (efficiency, transformation, productivity, cost, or SLA) matters most here."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#2",
+   "action": "set_option",
+   "match": "Default to whatever",
+   "text": "Default to whatever pattern was used on the last project, since it is already proven."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#2",
+   "action": "set_option",
+   "match": "Pick the cheapest",
+   "text": "Pick the cheapest model tier and build up from there until quality is acceptable."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#3",
+   "action": "set_option",
+   "match": "The subtasks were",
+   "text": "The subtasks were executed incorrectly and need better, more detailed prompts."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#3",
+   "action": "set_option",
+   "match": "The decomposition itself",
+   "text": "The decomposition was too narrow: the vendor scope was never assigned."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/check#3",
+   "action": "set_option",
+   "match": "The model tier",
+   "text": "The model tier was too weak for regulatory analysis and missed the vendor angle."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#1",
+   "action": "set_option",
+   "match": "Add more examples",
+   "text": "Add more examples to the single prompt so the model learns the expected output."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#1",
+   "action": "set_option",
+   "match": "Decompose the task",
+   "text": "Decompose it into a workflow of separate, scoped, independently testable steps."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#1",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Switch to a larger, more capable model while keeping the single-call structure."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#1",
+   "action": "set_option",
+   "match": "Reduce the temperature",
+   "text": "Reduce the temperature setting to zero so that every run returns the same result."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#10",
+   "action": "set_option",
+   "match": "A workflow lets",
+   "text": "A workflow can commit to a latency SLA, because its step count is bounded rather than open-ended."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#10",
+   "action": "set_option",
+   "match": "Workflows always produce",
+   "text": "Workflows produce higher-quality output than agents on every kind of task, so they are a safer default."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#10",
+   "action": "set_option",
+   "match": "A required compliance",
+   "text": "A mandatory compliance check is guaranteed to run as a line of code; an agent may skip it."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#10",
+   "action": "set_option",
+   "match": "Agents cannot be",
+   "text": "Agents cannot be integrated with external tools or retrieval, which the client's design depends on."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#11",
+   "action": "set_option",
+   "match": "One team is",
+   "text": "One team is more technically skilled than the other and simply built the better design."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#11",
+   "action": "set_option",
+   "match": "They're optimizing different",
+   "text": "They optimize different value pillars, efficiency versus productivity, so their designs differ."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#11",
+   "action": "set_option",
+   "match": "Team B's approach",
+   "text": "Team B's approach is simply an earlier, less mature version of Team A's design."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#11",
+   "action": "set_option",
+   "match": "Insurance claims cannot",
+   "text": "Insurance claims cannot be architected consistently, so divergence is to be expected."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#12",
+   "action": "set_option",
+   "match": "The output contract",
+   "text": "The output contract should have been prose rather than structured data for reviewers."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#12",
+   "action": "set_option",
+   "match": "The architecture omitted",
+   "text": "The design omitted a feedback stage, so expert-labelled corrections were simply discarded."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#12",
+   "action": "set_option",
+   "match": "The system should",
+   "text": "The system should have used a more capable model from the start to reduce corrections."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#12",
+   "action": "set_option",
+   "match": "The team should",
+   "text": "The team should have run a much larger offline evaluation before launch to collect the data."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#13",
+   "action": "set_option",
+   "match": "An agent that",
+   "text": "An agent that inspects each document and decides which classification tools to invoke next."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#13",
+   "action": "set_option",
+   "match": "A single augmented-LLM",
+   "text": "One augmented-LLM call per document, schema-validated, with low-confidence cases routed to review."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#13",
+   "action": "set_option",
+   "match": "A multi-agent system",
+   "text": "A multi-agent system with one worker per category, whose votes an orchestrator synthesizes."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#13",
+   "action": "set_option",
+   "match": "A fixed workflow",
+   "text": "A fixed workflow of six sequential LLM calls, each one checking a single candidate category in turn."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#14",
+   "action": "set_option",
+   "match": "Fixed decomposition, because",
+   "text": "Fixed decomposition, because cost analyses tend to follow one standard sequence of steps."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#14",
+   "action": "set_option",
+   "match": "Dynamic decomposition, because",
+   "text": "Dynamic decomposition, because each finding decides which question comes next."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#14",
+   "action": "set_option",
+   "match": "Fixed decomposition into",
+   "text": "Fixed decomposition into one subtask per cloud service, run in parallel and merged."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#15",
+   "action": "set_option",
+   "match": "Single agents are",
+   "text": "Single agents are faster than multi-agent systems in every case, regardless of the task."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#15",
+   "action": "set_option",
+   "match": "The subtasks aren't",
+   "text": "The subtasks depend on each other's findings, so there's no parallelism to gain, only overhead."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#15",
+   "action": "set_option",
+   "match": "Multi-agent systems can't",
+   "text": "Multi-agent systems can't share tools between agents, so each tool would be duplicated."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#15",
+   "action": "set_option",
+   "match": "Six is below",
+   "text": "Six tools is below the minimum threshold at which multi-agent orchestration even becomes possible."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#17",
+   "action": "set_option",
+   "match": "It ignores that",
+   "text": "It ignores that model spend per token will fall substantially over the system's lifetime."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#17",
+   "action": "set_option",
+   "match": "It omits the",
+   "text": "It omits the lawyer review time still required, which is part of the fully loaded cost."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#17",
+   "action": "set_option",
+   "match": "It should have",
+   "text": "It should have used transformation rather than cost as the pillar for this business case."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#17",
+   "action": "set_option",
+   "match": "It fails to",
+   "text": "It fails to account for the infrastructure cost of the vector database behind retrieval."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#2",
+   "action": "set_option",
+   "match": "To let the",
+   "text": "To let the system change its own goals over time without needing human oversight."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#2",
+   "action": "set_option",
+   "match": "To capture signal",
+   "text": "To route real-usage signal like corrections back into prompts, tools, or evals."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#2",
+   "action": "set_option",
+   "match": "To intentionally increase",
+   "text": "To intentionally increase latency so that each response is slowed down for safety."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#2",
+   "action": "set_option",
+   "match": "To bypass the",
+   "text": "To bypass the need for a separate evaluation stage once the system has been deployed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#3",
+   "action": "set_option",
+   "match": "The number and",
+   "text": "The number and order of steps varies by input and can't be enumerated in advance."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#3",
+   "action": "set_option",
+   "match": "The task is",
+   "text": "The task is a fixed five-step process that runs in the same order for every input it gets."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#3",
+   "action": "set_option",
+   "match": "The system needs",
+   "text": "The system must decide dynamically, from intermediate results, which tool to call next."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#3",
+   "action": "set_option",
+   "match": "Latency must be",
+   "text": "Latency must be as low and as predictable as possible for every request the system serves."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#4",
+   "action": "set_option",
+   "match": "It always produces",
+   "text": "It inherently produces lower-quality answers than a single agent on the same task."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#4",
+   "action": "set_option",
+   "match": "More total tokens",
+   "text": "Higher token use from repeated context per agent, and a failure surface that is harder to debug."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#4",
+   "action": "set_option",
+   "match": "It cannot be",
+   "text": "It cannot be combined with tools at all, so every worker must rely on its own knowledge."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#4",
+   "action": "set_option",
+   "match": "It removes the",
+   "text": "It removes the need for evaluation, since workers cross-check each other's results."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#6",
+   "action": "set_option",
+   "match": "The subtasks can't",
+   "text": "The subtasks can't be predicted, so a central model must split, delegate, and synthesize."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#6",
+   "action": "set_option",
+   "match": "There is only",
+   "text": "There is only ever one subtask to complete, so a single worker can handle the request."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#6",
+   "action": "set_option",
+   "match": "The task requires",
+   "text": "The task requires no tools at all, so workers only need to generate text from the prompt."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#7",
+   "action": "set_option",
+   "match": "Whether the accuracy/risk",
+   "text": "Whether unreviewed approvals carry acceptable risk given the SLA and cost of errors."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#7",
+   "action": "set_option",
+   "match": "Whether the model",
+   "text": "Whether the model in use is the newest available version for financial approvals."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#7",
+   "action": "set_option",
+   "match": "Whether Opus or",
+   "text": "Whether Opus or Haiku costs less per token at this volume of monthly expense reports."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#8",
+   "action": "set_option",
+   "match": "Propose a multi-agent",
+   "text": "Propose a multi-agent nursing assistant, since burnout is a complex, multi-faceted problem."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#8",
+   "action": "set_option",
+   "match": "Ask what specific",
+   "text": "Ask what work takes nurses' time, what it produces, what errors cost, and how fast it's needed."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#8",
+   "action": "edit",
+   "field": "explanation",
+   "find": "are what convert it into something buildable,",
+   "replace": "are what convert it into something buildable — then design against whichever is both burdensome and safely automatable —"
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#9",
+   "action": "set_option",
+   "match": "The workflow needs",
+   "text": "The workflow needs more branches to cover the edge cases that remain unhandled."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#9",
+   "action": "set_option",
+   "match": "The task has",
+   "text": "The task has outgrown the fixed-workflow pattern; its paths can no longer be enumerated."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#9",
+   "action": "set_option",
+   "match": "The team should",
+   "text": "The team should upgrade the model tier so the workflow makes fewer mistakes in its branches."
+  },
+  {
+   "id": "davidalex89:architect-professional/d1/quiz#9",
+   "action": "set_option",
+   "match": "Nothing is wrong;",
+   "text": "Nothing is wrong; branch count alone is not a meaningful architectural signal."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#1",
+   "action": "set_option",
+   "match": "Use the most",
+   "text": "Use the most capable model tier for every document so that both steps get top quality."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#1",
+   "action": "set_option",
+   "match": "Use a fast,",
+   "text": "Use a fast, cheap model to classify and escalate only complex disputes to a stronger one."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#1",
+   "action": "set_option",
+   "match": "Use the cheapest",
+   "text": "Use the cheapest model tier for both steps to keep the total cost of the pipeline minimal."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#1",
+   "action": "set_option",
+   "match": "Use a different",
+   "text": "Use a different model at random for each request to spread the load across all tiers."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#2",
+   "action": "set_option",
+   "match": "It doesn't matter",
+   "text": "It doesn't matter — token order is irrelevant to how the model reads and processes input."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#2",
+   "action": "set_option",
+   "match": "It allows prompt",
+   "text": "It lets prompt caching reuse the stable prefix across calls, cutting latency and cost."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#2",
+   "action": "set_option",
+   "match": "It changes which",
+   "text": "It changes which token budget the system prompt is counted against in billing."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#2",
+   "action": "set_option",
+   "match": "It automatically shortens",
+   "text": "It automatically shortens the conversation history sent with each new request."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#3",
+   "action": "set_option",
+   "match": "Aggregate accuracy across",
+   "text": "The easy 98% dominates the average, hiding a real regression on the hard cases."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#3",
+   "action": "set_option",
+   "match": "The team should",
+   "text": "The team should have measured latency instead of accuracy after making the tier change."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/check#3",
+   "action": "set_option",
+   "match": "The tier change",
+   "text": "The tier change was fine; the regression must have another cause elsewhere in the pipeline."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#11",
+   "action": "set_option",
+   "match": "The two stale assistants will",
+   "text": "The two stale assistants will throw errors that alert the team to the mismatch."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#11",
+   "action": "set_option",
+   "match": "The two stale assistants keep",
+   "text": "The stale assistants keep producing fluent, confident output and no test fails."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#11",
+   "action": "set_option",
+   "match": "The seven updated",
+   "text": "The seven updated assistants will now be inconsistent with each other's behavior."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#11",
+   "action": "set_option",
+   "match": "The escalation rule",
+   "text": "The escalation rule cannot be expressed in a modular, shared prompt component at all."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#12",
+   "action": "set_option",
+   "match": "Nothing — the",
+   "text": "Nothing — the structural schema check makes the prompt instruction fully redundant."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#12",
+   "action": "set_option",
+   "match": "The instruction sets",
+   "text": "The instruction makes conformance likely; without it, rare retries become a routine cost."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#12",
+   "action": "set_option",
+   "match": "Schema validation cannot",
+   "text": "Schema validation in code cannot work unless a matching instruction is in the prompt."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#12",
+   "action": "set_option",
+   "match": "The instruction is",
+   "text": "The instruction is what actually enforces the schema; the code validation only logs failures."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#2",
+   "action": "set_option",
+   "match": "Chain-of-thought reasoning before",
+   "text": "Chain-of-thought reasoning so the model works out the format before answering."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#2",
+   "action": "set_option",
+   "match": "Removing the system",
+   "text": "Removing the system prompt entirely so the format instruction stands alone."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#3",
+   "action": "set_option",
+   "match": "Zero-shot, since judgment",
+   "text": "Zero-shot, since judgment calls don't benefit from any extra instructions or examples."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#3",
+   "action": "set_option",
+   "match": "Chain-of-thought prompting that",
+   "text": "Chain-of-thought prompting that works through each condition before concluding."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#3",
+   "action": "set_option",
+   "match": "Reducing the prompt",
+   "text": "Reducing the prompt to a single yes/no instruction with no extra context."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#3",
+   "action": "set_option",
+   "match": "Increasing only the",
+   "text": "Increasing only the output token limit so the model has room to answer."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#4",
+   "action": "set_option",
+   "match": "An instruction telling",
+   "text": "An instruction in the system prompt telling the model to \"always respond in valid JSON.\""
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#4",
+   "action": "set_option",
+   "match": "A structural constraint",
+   "text": "Code-level schema validation of each response, with rejection or retry of non-conforming output."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#4",
+   "action": "set_option",
+   "match": "Repeating the same",
+   "text": "Repeating the same format instruction three times across the prompt for emphasis."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#4",
+   "action": "set_option",
+   "match": "Increasing the temperature",
+   "text": "Increasing the temperature setting so the model explores more output variants."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#6",
+   "action": "set_option",
+   "match": "Leave them as-is,",
+   "text": "Leave them as-is, since each prompt was tuned for its own use case over time."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#6",
+   "action": "set_option",
+   "match": "Factor the shared",
+   "text": "Factor shared logic into one reusable component or Skill that each deployment references."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#6",
+   "action": "set_option",
+   "match": "Merge all deployments",
+   "text": "Merge all deployments into a single undifferentiated prompt for every use case."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#6",
+   "action": "set_option",
+   "match": "Switch every deployment",
+   "text": "Switch every deployment to the most expensive model to compensate for the drift."
   }
  ],
  "hold": []
