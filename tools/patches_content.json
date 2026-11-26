@@ -2904,6 +2904,486 @@
    "text": "Exception tunneling; the fix is to retry the failed fetch at every boundary until it succeeds instead of passing any error along",
    "src": "editorial",
    "why": "Abhilfe in A deckte sich fast mit der Lösung; jetzt eindeutig falsch."
+  },
+  {
+   "id": "milind:Q202",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct built-in tool approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct built-in tool approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_explanation",
+   "text": "Grep is the built-in tool for content-based file search — finding files that contain a specific string or pattern. Glob is the built-in tool for path-based file discovery (finding files by name/extension patterns). Read opens and reads file content. The correct two-tool pipeline is: Grep (find files containing the string) then Read (open the matched files). Creating a shell script via Write to run grep is an unnecessary workaround when the built-in Grep tool handles this directly. Read does not support wildcard scanning. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q212",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the most efficient approach using built-in tools?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the most efficient approach using built-in tools?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_explanation",
+   "text": "Glob is a path-pattern tool — it filters by filename and path patterns, not content. The most efficient approach is tightening the Glob pattern itself: specifying subdirectories (`src/`), excluding known artifact directories, and using precise extension patterns. This keeps results small before any downstream processing. Using Read to check content type is expensive (opens every file); using Grep for path filtering misuses a content-search tool; creating a filter script via Write is unnecessary overhead when Glob patterns can express the constraint. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q228",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool should you use",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool should you use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q228",
+   "action": "set_explanation",
+   "text": "Glob is the purpose-built tool for file path pattern matching using glob syntax. When you need to find files by name, extension, or path pattern, Glob is the correct choice. Grep searches file contents, Read requires known paths, and Bash's `find` command is a fallback when Glob is insufficient. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q229",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool is most appropriate?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool is most appropriate?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_explanation",
+   "text": "Grep is designed for content search — finding patterns within file contents. Searching for function calls, import statements, or error messages across a codebase is Grep's primary use case. Glob finds files by path (not content); Read requires knowing the file path; Edit is for making changes. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q241",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach best builds codebase understanding incrementally",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach best builds codebase understanding incrementally",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_explanation",
+   "text": "Incremental understanding (Grep → Read → trace) is more efficient than exhaustive file reading. Grep identifies relevant entry points and patterns without loading file contents; Read follows the specific paths that matter; this approach scales to large codebases without context window explosion. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q247",
+   "action": "edit",
+   "field": "q",
+   "find": "What tool sequence should you use?",
+   "replace": "The dedicated Glob and Grep tools are available. What tool sequence should you use?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_explanation",
+   "text": "The incremental approach: first Grep for `validateUserInput` to find all direct usages and exports; then Grep for any names that export/re-export the function to trace through wrapper layers. This builds a complete call graph without reading entire files or loading irrelevant content. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q257",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool and approach is correct?",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool and approach is correct?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_explanation",
+   "text": "Grep is the correct tool for content-based searches like finding import statements. The pattern matches the import syntax with the specific module path. Glob finds files by path pattern (not content); Read requires knowing which files to read; `ls` only lists filenames. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q331",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the most efficient tool approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the most efficient tool approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q331",
+   "action": "set_explanation",
+   "text": "Grep for routing patterns identifies exactly which files contain route definitions without loading the entire codebase. Following up with Read on only the matched files provides the implementation details. This incremental approach scales efficiently: Grep first (broad, content-aware), then Read (targeted, deep). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q352",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of built-in tools is most efficient?",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of built-in tools is most efficient?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q352",
+   "action": "set_explanation",
+   "text": "Grep searching for `useState` across all React files is the single most efficient approach — it searches content directly without needing to enumerate files first. Providing the file pattern to Grep (e.g., `*.tsx`) makes it targeted. The Glob-then-Read approach requires two steps and loads entire file contents unnecessarily. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q365",
+   "action": "edit",
+   "field": "q",
+   "find": "When is it appropriate to use Bash",
+   "replace": "The dedicated Glob and Grep tools are available. When is it appropriate to use Bash",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q365",
+   "action": "set_explanation",
+   "text": "Built-in tools should be preferred for their intended purposes (file operations, content search, pattern matching). Bash is appropriate for operations requiring shell execution: running tests, build commands, git operations, or complex multi-step shell workflows that don't have a dedicated built-in tool equivalent. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q375",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q375",
+   "action": "set_explanation",
+   "text": "Reading all 847 files is unnecessary and context-exhausting. The correct pattern is Glob (file discovery) → Grep (content filtering) → Read (targeted deep read of relevant files only). This incremental approach builds understanding without loading irrelevant file contents. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q387",
+   "action": "edit",
+   "field": "q",
+   "find": "Which combination of built-in tools would you use",
+   "replace": "The dedicated Glob and Grep tools are available. Which combination of built-in tools would you use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q387",
+   "action": "set_explanation",
+   "text": "This is the canonical incremental built-in tools workflow: Grep (content-aware discovery) → Read (targeted full-file read) → Edit (precise modification). Each tool is used for its specific strength, minimizing unnecessary data loading while achieving the complete task. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q392",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool sequence is most efficient?",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool sequence is most efficient?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q392",
+   "action": "set_explanation",
+   "text": "Multi-step content analysis requires chained Grep operations: first find the candidate files (onClick components), then narrow within those files to find the specific anti-pattern (onClick without accessibility). This progressive filtering avoids loading irrelevant files while precisely identifying the target pattern. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q403",
+   "action": "edit",
+   "field": "q",
+   "find": "When should you choose to have an agent use",
+   "replace": "The dedicated Glob and Grep tools are available. When should you choose to have an agent use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q403",
+   "action": "set_explanation",
+   "text": "The tools serve complementary roles in code understanding. Grep is efficient for locating (confirming which file has the function) without loading irrelevant content. Read provides depth when you need the full implementation context — but only after Grep confirms where to look. This incremental approach avoids unnecessary file loading. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q405",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach finds all test files?",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach finds all test files?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q405",
+   "action": "set_explanation",
+   "text": "A recursive glob pattern like `**/*test*.py` matches all files with \"test\" in the name anywhere in the directory tree, regardless of nesting level or location. This handles the three-location scenario in a single operation. Multiple targeted globs work but are less efficient; Grep for imports finds test files by content but misses non-pytest tests. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q471",
+   "action": "edit",
+   "field": "q",
+   "find": "Which combination of built-in tools is most appropriate for this workflow?",
+   "replace": "The dedicated Glob and Grep tools are available. Which combination of built-in tools is most appropriate for this workflow?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q471",
+   "action": "set_explanation",
+   "text": "Grep searches file contents and can limit the search with its `glob` (or `type`) parameter, so one call finds every `.py` file that imports the module; Read then provides the full files for extracting the signatures. Listing all `.py` files with Glob first adds nothing, because Grep's filter already restricts the search. Glob matches file paths, not contents, so a pattern built from the module name (A) finds files named after it, not files that import it. Reading every file (C) floods the context, and `__init__.py` files (D) don't record which modules import what. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q478",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of built-in tools is most appropriate?",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of built-in tools is most appropriate?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q478",
+   "action": "set_explanation",
+   "text": "The exam guide recommends using purpose-built tools (Grep for search, Edit with replace_all for bulk replacement) over Bash workarounds. Grep identifies the files that actually contain the function, limiting Edit calls to matching files. Edit with `replace_all: true` handles all occurrences within each file. Option A uses Bash instead of Grep; option C is inefficient—Read+Write does not use Edit's diff capability and re-writes unchanged content; option D uses an opaque shell command instead of auditable tool calls. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tools should be used for steps 1, 2, and 3 respectively?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tools should be used for steps 1, 2, and 3 respectively?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_explanation",
+   "text": "The exam guide recommends built-in tools for their intended purposes: Glob for file discovery (with pattern matching), Bash for running external CLI tools (eslint) when no built-in alternative exists, and Write for creating output files. Using Write is preferable to Bash echo for file creation because it is more readable and auditable. Option A uses Bash for all three including file writing; option C uses Read+in-context analysis instead of the dedicated eslint tool; option D uses git diff which finds changed files but misses untracked new files. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q497",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool configuration achieves this most directly?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool configuration achieves this most directly?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q497",
+   "action": "set_explanation",
+   "text": "The Grep built-in tool supports a context parameter that includes surrounding lines around each match—equivalent to `grep -C N`—making it the purpose-built tool for this task. The exam guide recommends built-in tools over Bash alternatives when the built-in covers the use case. Option A uses Bash instead of the dedicated Grep tool; option C reads entire files unnecessarily when Grep can scope results; option D misuses Edit for a read-only search task. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q526",
+   "action": "edit",
+   "field": "q",
+   "find": "Write the SKILL.md frontmatter.",
+   "replace": "The dedicated Glob and Grep tools are available. Write the SKILL.md frontmatter.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q526",
+   "action": "set_explanation",
+   "text": "The correct SKILL.md frontmatter uses `context: fork` for isolation and `allowed-tools` as a YAML list. The exact field names matter: `context:` (not `fork:` or `run-in-fork:`) and `allowed-tools:` (not `tools:` or `allow:`). These are the documented frontmatter field names from the exam guide. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct tool to use?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct tool to use?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_explanation",
+   "text": "Grep is the tool for content-based search — finding specific text patterns inside files. Import statements are file content, not file names. Glob finds files by name pattern (not content). Read requires knowing which files to read. Grep scanning for the import string across all TypeScript files is the single most efficient approach. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool is most appropriate for discovering",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool is most appropriate for discovering",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-easy-1",
+   "action": "set_explanation",
+   "text": "Glob is the purpose-built tool for finding files by name pattern. The pattern `**/*.ts` matches all TypeScript files in any subdirectory. Glob returns results sorted by modification time, making it ideal as the first step in incremental codebase understanding (Glob → Read → Grep). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool should the agent use to find all files containing",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool should the agent use to find all files containing",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-easy-3",
+   "action": "set_explanation",
+   "text": "Grep searches file CONTENTS by regex pattern, making it the correct tool to find all files that contain a specific string like `AuthService`. It returns matching files efficiently without requiring individual file reads. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-medium-2",
+   "action": "edit",
+   "field": "q",
+   "find": "Which Grep configuration would most accurately",
+   "replace": "The dedicated Glob and Grep tools are available. Which Grep configuration would most accurately",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-medium-2",
+   "action": "set_explanation",
+   "text": "Grep with the specific pattern `export class DatabaseConnection`, filtered to TypeScript files using `type: 'ts'`, and `output_mode: 'files_with_matches'` is the most precise approach. It searches file contents for the exact export declaration and limits scope to TypeScript files, reducing noise. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-medium-3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of tools best implements",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of tools best implements",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-medium-3",
+   "action": "set_explanation",
+   "text": "The recommended incremental codebase understanding workflow is explicitly: Glob to find files → Read to understand → Grep to search. This sequence moves from broad discovery (file names) to deep understanding (file content) to targeted pattern search (content regex). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#8",
+   "action": "edit",
+   "field": "q",
+   "find": "Which two of the following correctly describe",
+   "replace": "The dedicated Glob and Grep tools are available. Which two of the following correctly describe",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#8",
+   "action": "set_explanation",
+   "text": "Grep is for content search (patterns inside file contents); Glob is for path/name pattern matching, not content search. Reaching for Bash instead of Grep/Glob for routine content or path search adds unnecessary complexity for no benefit. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#16",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach best manages context while producing an accurate answer?",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach best manages context while producing an accurate answer?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#16",
+   "action": "set_explanation",
+   "text": "Building understanding incrementally — Grep to find entry points, then Read to follow imports and trace flows — is the documented pattern, and every file that enters context earns its place by being on the path to the answer. Option A floods the context window with irrelevant files, making the relevant ones harder to attend to (and inviting lost-in-the-middle effects). Option C uses file size as a poor proxy for relevance. Option D describes exactly the context-degradation symptom to avoid: answering from \"typical patterns\" rather than the specific code. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#31",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool is correct?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool is correct?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#31",
+   "action": "set_explanation",
+   "text": "`Glob` matches file paths/names by pattern. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#38",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the recommended exploration pattern?",
+   "replace": "The dedicated Glob and Grep tools are available. What's the recommended exploration pattern?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#38",
+   "action": "set_explanation",
+   "text": "Starting with `Grep` for entry points, then `Read` to follow imports, builds understanding incrementally without reading everything upfront. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#41",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the most direct mechanism?",
+   "replace": "The dedicated Glob and Grep tools are available. What's the most direct mechanism?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#41",
+   "action": "set_explanation",
+   "text": "Configuring `.claude/settings.json` permissions so only the three read-only tools are allowed, with everything else denied by default, is a declarative, version-controlled restriction every developer's session inherits automatically — more direct and more maintainable than reimplementing the same allow logic inside a hook (B), a prompt note that depends on the model following it (A), or physically stripping tools from the whole project's registry (D). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
   }
  ],
  "hold": []
