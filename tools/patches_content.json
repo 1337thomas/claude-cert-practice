@@ -3885,6 +3885,12 @@
    "text": "`context: fork` runs the skill in a forked subagent context, so the verbose intermediate output stays out of the main conversation and only the result comes back. `disallowed-tools` removes Edit and Write from the pool while the skill is active, so the review cannot modify files. `allowed-tools` (B) only lets Claude use the listed tools without asking; it does not restrict which tools are available, so it neither makes the skill read-only nor isolates its output. `output: summary` (A) and `context: isolated` (D) are not skill frontmatter fields.",
    "src": "https://code.claude.com/docs/en/skills",
    "why": "allowed-tools is pre-approval, not restriction (skills doc: 'It does not restrict which tools are available')."
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "remove",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Keyed answer relies on the model's numeric self-reported confidence as a threshold; the current CCAR-F guide states 'LLM self-reported confidence is poorly calibrated' (Task 5.2), so the question teaches the opposite."
   }
  ],
  "hold": []
