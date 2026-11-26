@@ -3384,6 +3384,36 @@
    "text": "Configuring `.claude/settings.json` permissions so only the three read-only tools are allowed, with everything else denied by default, is a declarative, version-controlled restriction every developer's session inherits automatically — more direct and more maintainable than reimplementing the same allow logic inside a hook (B), a prompt note that depends on the model following it (A), or physically stripping tools from the whole project's registry (D). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
    "src": "https://code.claude.com/docs/en/tools-reference",
    "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_option",
+   "match": "Step 1: Glob with a date filter",
+   "text": "Step 1: Bash (`find . -name '*.ts' -mtime -1`). Step 2: Bash (`eslint` for each file). Step 3: Write the report.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob only matches name/path patterns (results sorted by modification time); it has no date filter, so the 24-hour condition needs find -mtime."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_explanation",
+   "text": "Glob matches file names and paths by pattern; it sorts results by modification time but cannot filter by date, so the 24-hour condition in step 1 needs Bash (`find -mtime -1`). Linting needs the external eslint CLI, which only Bash can run, and Write is the dedicated tool for creating the report file. Option A falls short at step 3, where `echo` through Bash replaces Write. Option C uses Grep, which searches file contents rather than modification times, replaces eslint with reading files in context, and edits a report file that does not exist yet. Option D uses `git diff`, which misses new untracked files. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Explanation aligned with the corrected answer (no Glob date filter)."
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "`context: fork` plus read-only",
+   "text": "`context: fork` plus `disallowed-tools` listing Edit and Write",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools only pre-approves tools and restricts nothing; disallowed-tools removes tools while the skill is active."
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_explanation",
+   "text": "`context: fork` runs the skill in a forked subagent context, so the verbose intermediate output stays out of the main conversation and only the result comes back. `disallowed-tools` removes Edit and Write from the pool while the skill is active, so the review cannot modify files. `allowed-tools` (B) only lets Claude use the listed tools without asking; it does not restrict which tools are available, so it neither makes the skill read-only nor isolates its output. `output: summary` (A) and `context: isolated` (D) are not skill frontmatter fields.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools is pre-approval, not restriction (skills doc: 'It does not restrict which tools are available')."
   }
  ],
  "hold": []
