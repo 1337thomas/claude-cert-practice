@@ -47958,6 +47958,904 @@
    "text": "Paste both definitions into every repository's `CLAUDE.md` so that they load in each session"
   },
   {
+   "id": "preporato:ccar-p#4",
+   "action": "set_option",
+   "match": "Three separate systems",
+   "text": "Three separate systems, one per analysis, whose reports nobody combines afterward"
+  },
+  {
+   "id": "preporato:ccar-p#4",
+   "action": "set_option",
+   "match": "One agent holding",
+   "text": "One agent holding all the tools and sources needed for all three analyses"
+  },
+  {
+   "id": "preporato:ccar-p#4",
+   "action": "set_option",
+   "match": "An orchestrator with",
+   "text": "An orchestrator with three scoped subagents in parallel, then a synthesis step"
+  },
+  {
+   "id": "preporato:ccar-p#4",
+   "action": "set_option",
+   "match": "One agent doing",
+   "text": "One agent running the three analyses in sequence within one shared context"
+  },
+  {
+   "id": "preporato:ccar-p#5",
+   "action": "set_option",
+   "match": "Put all 14",
+   "text": "Put all 14 regions' policies into every request so nothing relevant is missing"
+  },
+  {
+   "id": "preporato:ccar-p#5",
+   "action": "set_option",
+   "match": "Partition by data",
+   "text": "Tag documents by region and filter retrieval by the user's region first"
+  },
+  {
+   "id": "preporato:ccar-p#5",
+   "action": "set_option",
+   "match": "Fourteen agents that",
+   "text": "Run fourteen regional agents that negotiate with each other on every question"
+  },
+  {
+   "id": "preporato:ccar-p#5",
+   "action": "set_option",
+   "match": "Ask users to",
+   "text": "Ask users to mention their region and leave the retrieval setup unchanged"
+  },
+  {
+   "id": "preporato:ccar-p#6",
+   "action": "set_option",
+   "match": "Single requests shorter",
+   "text": "Single requests whose prompt is shorter than the minimum cacheable length"
+  },
+  {
+   "id": "preporato:ccar-p#6",
+   "action": "set_option",
+   "match": "Requests whose first",
+   "text": "Requests that begin with the current timestamp, followed by a long fixed policy text"
+  },
+  {
+   "id": "preporato:ccar-p#6",
+   "action": "set_option",
+   "match": "An agent loop",
+   "text": "An agent loop resending the same 12,000-token system prompt and tools each turn"
+  },
+  {
+   "id": "preporato:ccar-p#6",
+   "action": "set_option",
+   "match": "An endpoint where",
+   "text": "Many users asking about the same 50-page policy within minutes of each other"
+  },
+  {
+   "id": "preporato:ccar-p#6",
+   "action": "set_option",
+   "match": "A weekly job",
+   "text": "A weekly reporting job that sends one unique 3,000-token prompt per run"
+  },
+  {
+   "id": "preporato:ccar-p#7",
+   "action": "set_option",
+   "match": "A lower temperature",
+   "text": "Lower the sampling temperature so the six rules are applied more consistently"
+  },
+  {
+   "id": "preporato:ccar-p#7",
+   "action": "set_option",
+   "match": "Few-shot examples alone,",
+   "text": "Provide few-shot examples of past decisions alone, without stating the rules"
+  },
+  {
+   "id": "preporato:ccar-p#7",
+   "action": "set_option",
+   "match": "Have the model",
+   "text": "State each rule as a criterion, have the model reason first, then validate"
+  },
+  {
+   "id": "preporato:ccar-p#7",
+   "action": "set_option",
+   "match": "A zero-shot prompt",
+   "text": "Use a zero-shot prompt kept as short as possible so the rules stay in focus"
+  },
+  {
+   "id": "preporato:ccar-p#7",
+   "action": "edit",
+   "field": "explanation",
+   "find": "benefits from explicit reasoning before the answer",
+   "replace": "benefits from explicit reasoning before the answer (step by step or with extended thinking)"
+  },
+  {
+   "id": "preporato:ccar-p#8",
+   "action": "set_option",
+   "match": "Build 40 separate",
+   "text": "Build 40 separate assistants, one per process, and let users pick the right one"
+  },
+  {
+   "id": "preporato:ccar-p#8",
+   "action": "set_option",
+   "match": "Move to a",
+   "text": "Move to a model with a larger context window so all procedures fit comfortably"
+  },
+  {
+   "id": "preporato:ccar-p#8",
+   "action": "set_option",
+   "match": "Mark the most",
+   "text": "Mark the most important procedures in capitals so the model weighs them more"
+  },
+  {
+   "id": "preporato:ccar-p#8",
+   "action": "set_option",
+   "match": "Keep the system",
+   "text": "Keep the core role and rules; load each procedure as a Skill when relevant"
+  },
+  {
+   "id": "preporato:ccar-p#9",
+   "action": "set_option",
+   "match": "Structured outputs with",
+   "text": "Structured outputs with the schema, plus value validation and refusal/`max_tokens` handling"
+  },
+  {
+   "id": "preporato:ccar-p#9",
+   "action": "set_option",
+   "match": "A stronger instruction",
+   "text": "A stronger system-prompt instruction to follow the schema, plus valid JSON examples"
+  },
+  {
+   "id": "preporato:ccar-p#9",
+   "action": "set_option",
+   "match": "A retry loop",
+   "text": "A retry loop that resends the request until the response parses as valid JSON"
+  },
+  {
+   "id": "preporato:ccar-p#9",
+   "action": "set_option",
+   "match": "A regex that",
+   "text": "A regex post-processor that repairs broken JSON before downstream systems see it"
+  },
+  {
+   "id": "preporato:ccar-p#9",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Constrained decoding removes schema violations at the source",
+   "replace": "Structured outputs use constrained decoding, which guarantees schema-valid JSON and removes violations at the source"
+  },
+  {
+   "id": "aliquanto:d1-08",
+   "action": "set_option",
+   "match": "Accept, but add",
+   "text": "Accept, with chain-of-thought prompting to make the arithmetic dependable"
+  },
+  {
+   "id": "aliquanto:d1-08",
+   "action": "set_option",
+   "match": "Accept if temperature",
+   "text": "Accept, provided temperature is set to zero for fully deterministic totals"
+  },
+  {
+   "id": "aliquanto:d1-14",
+   "action": "set_option",
+   "match": "Give the orchestrator",
+   "text": "Give the orchestrator a larger context window and keep free-form worker notes"
+  },
+  {
+   "id": "aliquanto:d1-28",
+   "action": "set_option",
+   "match": "An augmented call",
+   "text": "An augmented call over a periodically refreshed competitor-news search index"
+  },
+  {
+   "id": "aliquanto:d1-38",
+   "action": "set_option",
+   "match": "Raise the confidence",
+   "text": "Raise the confidence threshold and send uncertain tickets to one general prompt"
+  },
+  {
+   "id": "aliquanto:d1-38",
+   "action": "set_option",
+   "match": "Run the billing",
+   "text": "Run the billing specialist first and stop if that portion is fully resolved"
+  },
+  {
+   "id": "aliquanto:d1-38",
+   "action": "set_option",
+   "match": "Broaden each specialist",
+   "text": "Broaden each specialist prompt so it also covers neighboring categories as a fallback"
+  },
+  {
+   "id": "aliquanto:d1-40",
+   "action": "set_option",
+   "match": "Clinicians draft, while",
+   "text": "Clinicians draft, while Claude checks each note for omissions before filing"
+  },
+  {
+   "id": "aliquanto:d1-40",
+   "action": "set_option",
+   "match": "Claude drafts, while clinicians",
+   "text": "Claude drafts, while clinicians review only a risk-ranked subset before filing"
+  },
+  {
+   "id": "aliquanto:d1-46",
+   "action": "set_option",
+   "match": "Delay the scope",
+   "text": "Delay the scope decision until a larger-context model becomes available"
+  },
+  {
+   "id": "aliquanto:d1-46",
+   "action": "set_option",
+   "match": "Support up to",
+   "text": "Support up to 50 pages; route longer ones to a defined fallback"
+  },
+  {
+   "id": "aliquanto:d1-47",
+   "action": "set_option",
+   "match": "Claude's learned reasoning",
+   "text": "Claude's learned reasoning approach for an identical request"
+  },
+  {
+   "id": "aliquanto:d1-47",
+   "action": "set_option",
+   "match": "The application's prompts",
+   "text": "The application's prompts and tool definitions, rewritten per route"
+  },
+  {
+   "id": "aliquanto:d1-68",
+   "action": "set_option",
+   "match": "The working-memory demand:",
+   "text": "Working-memory demand: cross-referencing two 300-page filings forces a staged design"
+  },
+  {
+   "id": "aliquanto:d1-68",
+   "action": "set_option",
+   "match": "Language register: formal",
+   "text": "Language register: formal English filings, which current models read reliably well"
+  },
+  {
+   "id": "aliquanto:d1-68",
+   "action": "set_option",
+   "match": "The comparison requires",
+   "text": "Retrieval dependency: prior filings must be fetched by entity and period"
+  },
+  {
+   "id": "aliquanto:d1-68",
+   "action": "set_option",
+   "match": "Delivery timing: users",
+   "text": "Delivery timing: users want results by morning, constraining the schedule, not the design"
+  },
+  {
+   "id": "aliquanto:d2-02",
+   "action": "set_option",
+   "match": "Truncate the policy",
+   "text": "Truncate the policy document to its first 1,000 tokens to shorten every request"
+  },
+  {
+   "id": "aliquanto:d2-02",
+   "action": "set_option",
+   "match": "Switch to the",
+   "text": "Switch to the smallest available model regardless of whether it fits the task"
+  },
+  {
+   "id": "aliquanto:d2-02",
+   "action": "set_option",
+   "match": "Place the static",
+   "text": "Place the static prompt and policy first and enable prompt caching"
+  },
+  {
+   "id": "aliquanto:d2-02",
+   "action": "set_option",
+   "match": "Move the policy",
+   "text": "Move the policy document into a few-shot example block within each request"
+  },
+  {
+   "id": "aliquanto:d2-20",
+   "action": "set_option",
+   "match": "Use prompt-only JSON",
+   "text": "Use prompt-only JSON instructions and simply accept occasional parsing failures"
+  },
+  {
+   "id": "aliquanto:d2-20",
+   "action": "set_option",
+   "match": "Use a repair",
+   "text": "Use a repair model and accept its result without any schema checks"
+  },
+  {
+   "id": "aliquanto:d2-20",
+   "action": "set_option",
+   "match": "Use permissive parsing",
+   "text": "Use permissive parsing and fill any missing fields with guessed defaults"
+  },
+  {
+   "id": "aliquanto:d2-24",
+   "action": "set_option",
+   "match": "Raise temperature to",
+   "text": "Raise temperature to explore more field interpretations before converging"
+  },
+  {
+   "id": "aliquanto:d2-24",
+   "action": "set_option",
+   "match": "Widen top-k to",
+   "text": "Widen top-k to admit more candidate tokens at each generation step"
+  },
+  {
+   "id": "aliquanto:d2-24",
+   "action": "set_option",
+   "match": "Keep default sampling",
+   "text": "Keep default sampling and rely on retries to produce identical text"
+  },
+  {
+   "id": "aliquanto:d2-26",
+   "action": "set_option",
+   "match": "Move the policy",
+   "text": "Move the policy after the user message and cache only the final request"
+  },
+  {
+   "id": "aliquanto:d2-26",
+   "action": "set_option",
+   "match": "Cache generated answers",
+   "text": "Cache the generated answers instead of the shared policy prefix"
+  },
+  {
+   "id": "aliquanto:d2-50",
+   "action": "set_option",
+   "match": "Delimit user content",
+   "text": "Wrap user content in unambiguous delimiters and treat those spans as data, not instructions"
+  },
+  {
+   "id": "aliquanto:d2-50",
+   "action": "set_option",
+   "match": "Strip all punctuation",
+   "text": "Strip all punctuation from user input before inserting it into the template"
+  },
+  {
+   "id": "aliquanto:d2-50",
+   "action": "set_option",
+   "match": "Place user content",
+   "text": "Put user content in a separate message role instead of splicing it into instructions"
+  },
+  {
+   "id": "aliquanto:d2-50",
+   "action": "set_option",
+   "match": "Lowercase user input",
+   "text": "Lowercase all user input so that imperative phrasing carries less weight"
+  },
+  {
+   "id": "aliquanto:d2-50",
+   "action": "set_option",
+   "match": "Limit user input",
+   "text": "Limit user input to 500 characters so long injection payloads no longer fit into the template"
+  },
+  {
+   "id": "aliquanto:d3-34",
+   "action": "set_option",
+   "match": "A shared vector",
+   "text": "A shared vector database both companies write their offers and order terms to"
+  },
+  {
+   "id": "aliquanto:d3-34",
+   "action": "set_option",
+   "match": "Merging both agents",
+   "text": "Merging both agents into one agent hosted by the larger of the two companies"
+  },
+  {
+   "id": "aliquanto:d3-34",
+   "action": "set_option",
+   "match": "Exposing each company's",
+   "text": "Exposing each company's ERP system to the other company's agent via MCP"
+  },
+  {
+   "id": "aliquanto:d3-34",
+   "action": "set_option",
+   "match": "An agent-to-agent protocol",
+   "text": "An agent-to-agent protocol for structured interaction between independent agents"
+  },
+  {
+   "id": "aliquanto:d4-03",
+   "action": "set_option",
+   "match": "The model weights",
+   "text": "The model weights behind the same version string have silently changed"
+  },
+  {
+   "id": "aliquanto:d4-03",
+   "action": "set_option",
+   "match": "The temperature setting",
+   "text": "The temperature setting is too low to produce accurate answers"
+  },
+  {
+   "id": "aliquanto:d4-03",
+   "action": "set_option",
+   "match": "The context window",
+   "text": "The model's context window has shrunk since the document refresh"
+  },
+  {
+   "id": "aliquanto:d4-05",
+   "action": "set_option",
+   "match": "Measure server processing",
+   "text": "Measure server processing time separately and use it as the user-facing SLA"
+  },
+  {
+   "id": "aliquanto:d4-09",
+   "action": "set_option",
+   "match": "Run the judge",
+   "text": "Run the judge repeatedly and accept it if its scores are internally consistent"
+  },
+  {
+   "id": "aliquanto:d4-13",
+   "action": "set_option",
+   "match": "Keep a permanent",
+   "text": "Keep a permanent internal-only deployment and skip customer validation"
+  },
+  {
+   "id": "aliquanto:d4-13",
+   "action": "set_option",
+   "match": "Hold a fixed",
+   "text": "Hold a fixed 10% rollout indefinitely, without any stop or expansion criteria"
+  },
+  {
+   "id": "aliquanto:d4-21",
+   "action": "set_option",
+   "match": "A larger output",
+   "text": "A larger output token limit plus additional automatic retry attempts"
+  },
+  {
+   "id": "aliquanto:d4-21",
+   "action": "set_option",
+   "match": "Message batching plus",
+   "text": "Message batching plus longer retained conversation history per request"
+  },
+  {
+   "id": "aliquanto:d4-21",
+   "action": "set_option",
+   "match": "A faster model",
+   "text": "A faster model plus a non-streaming buffer for the full response"
+  },
+  {
+   "id": "aliquanto:d4-28",
+   "action": "set_option",
+   "match": "Ship because the",
+   "text": "Ship the change because the primary quality metric improved materially"
+  },
+  {
+   "id": "aliquanto:d4-28",
+   "action": "set_option",
+   "match": "Raise the breached",
+   "text": "Raise the breached thresholds to the observed values and then approve the change"
+  },
+  {
+   "id": "aliquanto:d4-37",
+   "action": "set_option",
+   "match": "To avoid revising",
+   "text": "To avoid revising the evaluation set once production traffic is available"
+  },
+  {
+   "id": "aliquanto:d4-40",
+   "action": "set_option",
+   "match": "The incident is",
+   "text": "The incident is archived after one quiet production hour and no new alerts"
+  },
+  {
+   "id": "aliquanto:d5-19",
+   "action": "set_option",
+   "match": "Use a regular",
+   "text": "Use a regular API workspace with encryption instead of verifying contractual scope"
+  },
+  {
+   "id": "aliquanto:d5-19",
+   "action": "set_option",
+   "match": "Select any cloud",
+   "text": "Select any cloud route with a security certification and add access controls later"
+  },
+  {
+   "id": "aliquanto:d5-19",
+   "action": "set_option",
+   "match": "Submit PHI first",
+   "text": "Submit PHI first and de-identify only the generated summary shown to clinicians"
+  },
+  {
+   "id": "aliquanto:d5-19",
+   "action": "set_option",
+   "match": "Verify a signed",
+   "text": "Verify a signed BAA and that the exact service and configuration are eligible"
+  },
+  {
+   "id": "aliquanto:d5-31",
+   "action": "set_option",
+   "match": "Quarantine the output",
+   "text": "Quarantine the output and route it to a qualified reviewer for a decision"
+  },
+  {
+   "id": "aliquanto:d5-31",
+   "action": "set_option",
+   "match": "Permanently ban the",
+   "text": "Permanently ban the user because any uncertain score indicates intentional abuse"
+  },
+  {
+   "id": "aliquanto:d5-31",
+   "action": "set_option",
+   "match": "Release the output",
+   "text": "Release the output automatically because a probabilistic score is not enforceable"
+  },
+  {
+   "id": "aliquanto:d5-31",
+   "action": "set_option",
+   "match": "Delete the output",
+   "text": "Delete the output without recording the score, policy version, or disposition"
+  },
+  {
+   "id": "aliquanto:d5-59",
+   "action": "set_option",
+   "match": "Authorized targets and",
+   "text": "Targets and techniques pre-authorized, with live customer data off-limits unless sanctioned"
+  },
+  {
+   "id": "aliquanto:d5-59",
+   "action": "set_option",
+   "match": "Anything goes: real",
+   "text": "Anything goes, because real adversaries follow no rules of engagement either"
+  },
+  {
+   "id": "aliquanto:d5-59",
+   "action": "set_option",
+   "match": "Findings shared informally",
+   "text": "Findings shared informally with whichever engineer is closest to the affected system"
+  },
+  {
+   "id": "aliquanto:d5-59",
+   "action": "set_option",
+   "match": "Testing only the",
+   "text": "Testing limited to the public marketing site, where any damage to real customers would be lowest"
+  },
+  {
+   "id": "aliquanto:d5-59",
+   "action": "edit",
+   "field": "explanation",
+   "find": "pre-authorized scope protecting real customers",
+   "replace": "pre-authorized scope protecting real customers (production data and live interactions only with explicit sanction and safeguards)"
+  },
+  {
+   "id": "aliquanto:d6-10",
+   "action": "set_option",
+   "match": "Replace the engineering",
+   "text": "Replace the engineering document with one short executive version for all audiences"
+  },
+  {
+   "id": "aliquanto:d6-18",
+   "action": "set_option",
+   "match": "Use the executive",
+   "text": "Adopt the executive sponsor's description as standard and log the other as an exception"
+  },
+  {
+   "id": "aliquanto:d6-18",
+   "action": "set_option",
+   "match": "Map both current-state",
+   "text": "Map both variants, identify the decision owner, and validate when each version applies"
+  },
+  {
+   "id": "aliquanto:d6-27",
+   "action": "set_option",
+   "match": "Shortlist routes by",
+   "text": "Shortlist routes by feature breadth, then let procurement review controls and terms"
+  },
+  {
+   "id": "aliquanto:d6-27",
+   "action": "set_option",
+   "match": "Use governance and",
+   "text": "Use governance and compliance as gates, then compare latency, fit, support, and cost"
+  },
+  {
+   "id": "aliquanto:d6-33",
+   "action": "set_option",
+   "match": "Raise the aggregate",
+   "text": "Raise the aggregate target until the residual category drops out of routine reporting"
+  },
+  {
+   "id": "aliquanto:d6-41",
+   "action": "set_option",
+   "match": "A latency dashboard",
+   "text": "A latency dashboard comparing the response performance of both delivery routes"
+  },
+  {
+   "id": "aliquanto:d6-41",
+   "action": "set_option",
+   "match": "A procurement record",
+   "text": "A procurement record listing both provider contracts and their renewal dates"
+  },
+  {
+   "id": "aliquanto:d6-41",
+   "action": "set_option",
+   "match": "A network diagram",
+   "text": "A network diagram showing endpoints, subnets, and the firewall boundaries"
+  },
+  {
+   "id": "aliquanto:d6-41",
+   "action": "set_option",
+   "match": "A responsibility map",
+   "text": "A responsibility map of tasks, rationale, owners, and exception approval"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "set_option",
+   "match": "Deny that hallucination",
+   "text": "Deny that hallucination still exists in modern frontier models"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "set_option",
+   "match": "Agree and withdraw",
+   "text": "Agree that the risk is disqualifying and withdraw the proposal"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "set_option",
+   "match": "Acknowledge the failure",
+   "text": "Acknowledge the failure mode as real, then show the mitigations"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "set_option",
+   "match": "Change the subject",
+   "text": "Change the subject to pricing flexibility and contract incentives"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "set_option",
+   "match": "Never; partners must",
+   "text": "Never; partners must scope alone to prove their own competence"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "set_option",
+   "match": "On complex or",
+   "text": "On complex or novel deployments, to de-risk design and sizing early"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "set_option",
+   "match": "Only after the",
+   "text": "Only after the contract is signed, when design changes become expensive"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "set_option",
+   "match": "Only for deals",
+   "text": "Only for deals below a certain size, where partner capacity is thinnest"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "set_option",
+   "match": "Model-version swaps: proposed",
+   "text": "Model-version swaps: proposed by engineering with eval evidence, approved by the product owner"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "set_option",
+   "match": "Each prompt wording",
+   "text": "Each prompt wording change: approved personally and in writing by the executive sponsor beforehand"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "set_option",
+   "match": "Emergency kill-switch: exercisable",
+   "text": "Emergency kill-switch: on-call owner acts at once on pre-agreed criteria, with review afterward"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "set_option",
+   "match": "Emergency kill-switch: convened",
+   "text": "Emergency kill-switch: activated only after a convened committee approves each use"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "set_option",
+   "match": "Model-version swaps: decided",
+   "text": "Model-version swaps: decided by whichever engineer happens to run the upgrade that week"
+  },
+  {
+   "id": "aliquanto:d6-67",
+   "action": "edit",
+   "field": "explanation",
+   "find": "evidenced approval for consequential swaps",
+   "replace": "evidenced approval for consequential swaps (with compliance consulted when data handling changes)"
+  },
+  {
+   "id": "aliquanto:d7-01",
+   "action": "set_option",
+   "match": "Standardize the model",
+   "text": "Standardize the model choice while keeping individual permission rules"
+  },
+  {
+   "id": "aliquanto:d7-01",
+   "action": "set_option",
+   "match": "Publish a voluntary",
+   "text": "Publish a voluntary setup guide that each developer can adapt to local habits"
+  },
+  {
+   "id": "aliquanto:d7-02",
+   "action": "set_option",
+   "match": "Keep conventions in",
+   "text": "Keep conventions in chat history and list protected files in the README"
+  },
+  {
+   "id": "aliquanto:d7-02",
+   "action": "set_option",
+   "match": "Use project settings",
+   "text": "Use project settings for style guidance and CLAUDE.md to store the secret values"
+  },
+  {
+   "id": "aliquanto:d7-05",
+   "action": "set_option",
+   "match": "Set group and",
+   "text": "Set spend limits per group and per user, with usage attributed to each"
+  },
+  {
+   "id": "aliquanto:d7-16",
+   "action": "set_option",
+   "match": "Freeze the current",
+   "text": "Freeze the current library until users submit enough failure complaints"
+  },
+  {
+   "id": "aliquanto:d7-26",
+   "action": "set_option",
+   "match": "A retry loop",
+   "text": "A retry loop that re-asks Claude Code whenever the parser fails on the output"
+  },
+  {
+   "id": "aliquanto:d7-26",
+   "action": "set_option",
+   "match": "Load the project's",
+   "text": "Load the project's standards into the review config so findings are judged against them"
+  },
+  {
+   "id": "aliquanto:d7-26",
+   "action": "set_option",
+   "match": "Route all output",
+   "text": "Route every review through a second model that converts the free prose into structured JSON"
+  },
+  {
+   "id": "aliquanto:d7-26",
+   "action": "set_option",
+   "match": "A post-review meeting",
+   "text": "Add a post-review meeting where developers triage the raw findings by hand"
+  },
+  {
+   "id": "aliquanto:d7-26",
+   "action": "set_option",
+   "match": "Constrain the review",
+   "text": "Constrain the review to emit structured output for automated downstream processing"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-001",
+   "action": "set_option",
+   "match": "Build a constrained",
+   "text": "Build a constrained pilot now and defer authority and error-cost decisions until later"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-001",
+   "action": "set_option",
+   "match": "Run structured discovery",
+   "text": "Run discovery to define outcome, workflow, constraints, authority, measures, and non-goals"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-001",
+   "action": "set_option",
+   "match": "Select the most",
+   "text": "Select the most capable model first, then fit the workflow and authority around it"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-001",
+   "action": "set_option",
+   "match": "Create five specialist",
+   "text": "Create five specialist agents covering intake, triage, assessment, payout, and review"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-002",
+   "action": "set_option",
+   "match": "Use an adaptive",
+   "text": "Use an adaptive agent to plan and run the entire stable step sequence"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-002",
+   "action": "set_option",
+   "match": "Use Claude only",
+   "text": "Use Claude only for the bounded semantic classification judgment"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-002",
+   "action": "set_option",
+   "match": "Expose the full",
+   "text": "Expose the full tool catalog read-only and let the prompt enforce the sequence"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-002",
+   "action": "set_option",
+   "match": "Use deterministic orchestration",
+   "text": "Use deterministic orchestration in code for the known, stable sequence"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-003",
+   "action": "set_option",
+   "match": "Discard most of",
+   "text": "Discard most of the policy text so each request carries fewer input tokens"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-003",
+   "action": "set_option",
+   "match": "Raise temperature",
+   "text": "Raise the sampling temperature so responses are generated faster and cheaper"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-003",
+   "action": "set_option",
+   "match": "Place stable content",
+   "text": "Put stable content in a reusable prefix and apply current prompt-caching guidance"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-003",
+   "action": "set_option",
+   "match": "Route each request",
+   "text": "Have a smaller model summarize the repeated policy before each production call"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-004",
+   "action": "set_option",
+   "match": "Published per-token price",
+   "text": "List price per token and latency from a synthetic test request"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-004",
+   "action": "set_option",
+   "match": "Provider benchmark ranking",
+   "text": "Public provider benchmark rankings for each candidate model"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-004",
+   "action": "set_option",
+   "match": "End-to-end latency and",
+   "text": "End-to-end latency and full cost per accepted outcome"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-006",
+   "action": "set_option",
+   "match": "Keep every tool",
+   "text": "Keep every tool discoverable and prohibit refund or deletion calls in the prompt"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-006",
+   "action": "set_option",
+   "match": "Remove those tools",
+   "text": "Remove those two tools from tool discovery for the drafting role"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-006",
+   "action": "set_option",
+   "match": "Allow the calls",
+   "text": "Allow the calls under the existing credential but audit and alert on each use"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-007",
+   "action": "set_option",
+   "match": "Retrieval recall at",
+   "text": "Retrieval recall at K against labeled relevant passages"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-007",
+   "action": "set_option",
+   "match": "HTTP success rate",
+   "text": "HTTP success rate of the retrieval and generation calls"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-007",
+   "action": "set_option",
+   "match": "Final answer length",
+   "text": "Final answer length relative to the reference answers"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-007",
+   "action": "set_option",
+   "match": "The groundedness score",
+   "text": "Groundedness of the final answer against the retrieved passages"
+  },
+  {
    "id": "rohitg00:ccar-p-diag-008",
    "action": "set_option",
    "match": "stratify results",
