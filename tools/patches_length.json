@@ -46722,6 +46722,1240 @@
    "action": "set_option",
    "match": "suggesting three brainstormed",
    "text": "Suggesting three brainstormed taglines for a campaign."
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#4",
+   "action": "set_option",
+   "match": "data minimization only",
+   "text": "Data minimization: only the fields the current task actually needs should be included in what is sent to the model"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#4",
+   "action": "set_option",
+   "match": "least privilege for",
+   "text": "Least privilege for tool access, which limits the set of tools the agent is allowed to call"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#4",
+   "action": "set_option",
+   "match": "fedramp s authorization",
+   "text": "FedRAMP's authorization boundary, which defines the systems covered by a federal authorization"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#4",
+   "action": "set_option",
+   "match": "model tier selection",
+   "text": "Model tier selection, which matches the model's capability and cost to the difficulty of the task"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#5",
+   "action": "set_option",
+   "match": "using the fastest",
+   "text": "Use the fastest available model tier so that patient data spends as little time in processing as possible"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#5",
+   "action": "set_option",
+   "match": "ensuring phi flows",
+   "text": "Keep PHI in channels covered by appropriate agreements, with access logging sufficient to support an audit"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#5",
+   "action": "set_option",
+   "match": "avoiding all logging",
+   "text": "Avoid all logging of requests and responses so that no copy of patient data exists outside the workflow"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#5",
+   "action": "set_option",
+   "match": "using the cheapest",
+   "text": "Use the cheapest available infrastructure, since data handling is the model provider's responsibility under HIPAA"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#7",
+   "action": "set_option",
+   "match": "whether the system s",
+   "text": "Whether average and p95 latency stay acceptable when many candidates are screened at once"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#7",
+   "action": "set_option",
+   "match": "whether comparable cases",
+   "text": "Whether comparable candidates get comparable outcomes, measured directly instead of assumed"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#7",
+   "action": "set_option",
+   "match": "whether the system",
+   "text": "Whether the system runs on the newest model version, which has the most recent safety training"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#7",
+   "action": "set_option",
+   "match": "whether the interface",
+   "text": "Whether the candidate-facing interface is clear and visually consistent across devices"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#8",
+   "action": "set_option",
+   "match": "the output filter",
+   "text": "The output filter malfunctioned and needs stricter rules that flag vague confirmations like this one as suspicious"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#8",
+   "action": "set_option",
+   "match": "an output filter",
+   "text": "The harm occurred in the tool call, which no output filter can see; tool permissioning would have bounded it"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#8",
+   "action": "set_option",
+   "match": "the model should",
+   "text": "The model should have been a more capable tier, since stronger models resist injected instructions more reliably"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#8",
+   "action": "set_option",
+   "match": "the ticket should",
+   "text": "The ticket should have gone through human review before processing, so a person could spot the injected instructions"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#9",
+   "action": "set_option",
+   "match": "this is the",
+   "text": "This is the correct primary mitigation, since a clear and explicit instruction removes the ambiguity the attack relies on"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#9",
+   "action": "set_option",
+   "match": "it s worth",
+   "text": "Useful as one layer but weak as the primary defense; tool permissioning is what bounds what an injection can do"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#9",
+   "action": "set_option",
+   "match": "it will work",
+   "text": "It will work as long as the instruction is repeated at the end of the prompt, where it carries the most weight"
+  },
+  {
+   "id": "davidalex89:architect-professional/d5/quiz#9",
+   "action": "set_option",
+   "match": "prompt injection is",
+   "text": "Prompt injection is not a realistic risk here, because the system only processes internal support tickets"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#1",
+   "action": "set_option",
+   "match": "none since the",
+   "text": "None, because the request was specific enough to start designing and any details can be settled during the build phase"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#1",
+   "action": "set_option",
+   "match": "the architecture may",
+   "text": "The design may solve a problem that doesn't match what stakeholders meant, discovered only after real build work"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#1",
+   "action": "set_option",
+   "match": "skipping discovery always",
+   "text": "Skipping discovery tends to produce a faster result, so the main risk is a slightly less polished design"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#1",
+   "action": "set_option",
+   "match": "the risk only",
+   "text": "The risk mainly applies to regulated industries, where data requirements must be documented before design"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#2",
+   "action": "set_option",
+   "match": "nothing technical accuracy",
+   "text": "Nothing went wrong, because technical accuracy is what matters and the executive could have asked follow-up questions"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#2",
+   "action": "set_option",
+   "match": "the explanation wasn",
+   "text": "The explanation wasn't adapted to the audience; the executive needed business impact and risk in plain terms"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#2",
+   "action": "set_option",
+   "match": "the executive should",
+   "text": "The executive should have studied RAG architecture beforehand so the tradeoff could be discussed at full depth"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#2",
+   "action": "set_option",
+   "match": "the chunking strategy",
+   "text": "The chunking strategy itself must have been flawed, since a sound design would be easy for anyone to evaluate"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#3",
+   "action": "set_option",
+   "match": "nothing design quality",
+   "text": "Nothing, because design quality is fixed at design time and monitoring is an operational concern for another team"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#3",
+   "action": "set_option",
+   "match": "their own feedback",
+   "text": "Their own feedback loop: monitoring is where they would learn which of their design decisions actually held up"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#3",
+   "action": "set_option",
+   "match": "access to the",
+   "text": "Access to the codebase and production dashboards, which they would want for reference on future engagements"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/check#3",
+   "action": "set_option",
+   "match": "the ability to",
+   "text": "The ability to bill the client for additional hours spent tuning the system once it is in production"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#1",
+   "action": "set_option",
+   "match": "which model tier",
+   "text": "Which model tier offers the lowest cost per request at the expected monthly volume?"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#1",
+   "action": "set_option",
+   "match": "which cloud provider",
+   "text": "Which cloud provider and regions does the company already use for its production systems?"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#1",
+   "action": "set_option",
+   "match": "what s the",
+   "text": "Which Claude model is the newest, so the design can take advantage of its latest capabilities?"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#11",
+   "action": "set_option",
+   "match": "it isn t",
+   "text": "It isn't different, because the facts are identical and the conversation with stakeholders should therefore be the same"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#11",
+   "action": "set_option",
+   "match": "in week 2",
+   "text": "In week 2 the stakeholder can still rescope, extend or accept; at the review the gap can only be explained"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#11",
+   "action": "set_option",
+   "match": "week 2 reports",
+   "text": "Week 2 reports are less likely to be read closely by senior stakeholders, which limits the political fallout"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#11",
+   "action": "set_option",
+   "match": "the 10 gap",
+   "text": "The 10% gap will probably close on its own as the team keeps tuning prompts in the weeks before the milestone"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#12",
+   "action": "set_option",
+   "match": "a longer document",
+   "text": "A longer and more detailed document, which signals to reviewers that the work was done thoroughly"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#12",
+   "action": "set_option",
+   "match": "the condition under",
+   "text": "The condition for revisiting the decision, so a later architect can tell whether the constraint still applies"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#12",
+   "action": "set_option",
+   "match": "legal protection if",
+   "text": "Legal protection for the team if the architecture later fails and the decision is challenged"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#12",
+   "action": "set_option",
+   "match": "a record of",
+   "text": "A record of which team members preferred which option while the decision was being made"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Length (A) isn't a virtue",
+   "replace": "Here the decision should be revisited once the steps stop being known. Length (A) isn't a virtue"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#13",
+   "action": "set_option",
+   "match": "discovery because stakeholders",
+   "text": "Discovery, because stakeholders tend to resist structured questioning and push the team to move on to design quickly"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#13",
+   "action": "set_option",
+   "match": "monitoring architects often",
+   "text": "Monitoring: architects often leave at handoff, when nothing has met real traffic and every SLA is an estimate"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#13",
+   "action": "set_option",
+   "match": "design because it",
+   "text": "Design, because it is the phase most often delegated to the engineering team that will build it"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#13",
+   "action": "set_option",
+   "match": "iteration because systems",
+   "text": "Iteration, because systems rarely change after launch and so later revisions get little attention"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#14",
+   "action": "set_option",
+   "match": "the engineering team",
+   "text": "The engineering team acted carelessly and should have asked someone before removing an existing check"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#14",
+   "action": "set_option",
+   "match": "the handoff documentation",
+   "text": "The handoff didn't record which guardrails must survive and why, so the check looked like extra overhead"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#14",
+   "action": "set_option",
+   "match": "confidence thresholds should",
+   "text": "Confidence thresholds should be enforced in infrastructure, where later application changes can't remove them"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#14",
+   "action": "set_option",
+   "match": "the team should",
+   "text": "The team should not have been allowed to modify the system without sign-off from the original architect first"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#2",
+   "action": "set_option",
+   "match": "a summary of",
+   "text": "A summary of the model's context window size and how much of each document it can process at once"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#2",
+   "action": "set_option",
+   "match": "a concrete explanation",
+   "text": "What data flows where, what is retained and for how long, and which regulatory obligations apply"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#2",
+   "action": "set_option",
+   "match": "a description of",
+   "text": "A description of the orchestration pattern's code structure and how its components call each other"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#2",
+   "action": "set_option",
+   "match": "a comparison of",
+   "text": "A comparison of latency and throughput across model tiers under the expected production load"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#3",
+   "action": "set_option",
+   "match": "ship it anyway",
+   "text": "Ship it as is and treat the assumed SLA as aspirational, since it was never formally agreed"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#3",
+   "action": "set_option",
+   "match": "explicitly revisit and",
+   "text": "Revisit the SLA explicitly with stakeholders using production data, rather than letting it be missed silently"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#3",
+   "action": "set_option",
+   "match": "remove the sla",
+   "text": "Remove the SLA from the documentation, since it was only an informal prototype-stage assumption"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#3",
+   "action": "set_option",
+   "match": "blame the infrastructure",
+   "text": "Hand the problem to the infrastructure team to fix by scaling, without investigating where the latency comes from"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#4",
+   "action": "set_option",
+   "match": "nothing beyond the",
+   "text": "Nothing beyond the code itself, since well-written code and its comments document how the system works"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#4",
+   "action": "set_option",
+   "match": "the guardrails and",
+   "text": "The guardrails and SLAs that must be preserved, with enough detail for a new team to operate the system correctly"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#4",
+   "action": "set_option",
+   "match": "only the original",
+   "text": "The original discovery notes, so the new team can reconstruct the requirements on its own terms"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#4",
+   "action": "set_option",
+   "match": "a list of",
+   "text": "A list of every alternative pattern considered during design, presented without a recommendation"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#5",
+   "action": "set_option",
+   "match": "it s required",
+   "text": "It satisfies formal documentation requirements, although the content has little practical value once the system ships"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#5",
+   "action": "set_option",
+   "match": "it lets a",
+   "text": "It shows why the system has its current shape, so the tradeoff can be revisited when circumstances change"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#5",
+   "action": "set_option",
+   "match": "rejected alternatives should",
+   "text": "It keeps the record complete, but rejected alternatives should not be reopened once a decision has been made"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#5",
+   "action": "set_option",
+   "match": "it makes the",
+   "text": "It makes the document longer and more complete, which reviewers and auditors tend to read as a sign of rigor"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#7",
+   "action": "set_option",
+   "match": "none since it",
+   "text": "None, because the document was accurate when written and the original design intent hasn't changed"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#7",
+   "action": "set_option",
+   "match": "the document goes",
+   "text": "It drifts from reality and misleads people exactly when they rely on it, such as during an incident"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#7",
+   "action": "set_option",
+   "match": "architecture documents don",
+   "text": "Little risk, since architecture documents aren't expected to reflect changes made after handoff"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#7",
+   "action": "set_option",
+   "match": "the system will",
+   "text": "Little risk, because changes to the system are automatically reflected back into the architecture document"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#8",
+   "action": "set_option",
+   "match": "the stakeholders were",
+   "text": "The stakeholders weren't paying close attention when they reviewed and approved the requirements document"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#8",
+   "action": "set_option",
+   "match": "consensus on an",
+   "text": "Consensus on an abstraction: a word like 'triage' lets each listener hear their own answer, masking real disagreement"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#8",
+   "action": "set_option",
+   "match": "the requirements document",
+   "text": "The requirements document was too long for busy stakeholders to read carefully before approving it"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#8",
+   "action": "set_option",
+   "match": "ticket triage is",
+   "text": "Ticket triage is too vague a goal to build a system for until the business narrows its scope"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#9",
+   "action": "set_option",
+   "match": "the team should",
+   "text": "The team should not have added the reranker or the compliance audit write, since both pushed latency past the SLA"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#9",
+   "action": "set_option",
+   "match": "a prototype measurement",
+   "text": "A prototype measurement hardened into an unnegotiated commitment, without the conditions that produced 600ms"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#9",
+   "action": "set_option",
+   "match": "the production infrastructure",
+   "text": "The production infrastructure is under-provisioned and needs scaling to bring p95 back under one second"
+  },
+  {
+   "id": "davidalex89:architect-professional/d6/quiz#9",
+   "action": "set_option",
+   "match": "the sla should",
+   "text": "The SLA was unrealistic and should simply be deleted from the documentation rather than revisited"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#1",
+   "action": "set_option",
+   "match": "none since flexibility",
+   "text": "None, because individual flexibility lets each developer tune the tooling to their own workflow"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#1",
+   "action": "set_option",
+   "match": "inconsistent guardrails across",
+   "text": "Inconsistent guardrails: some setups may grant broader tool access or weaker checks than policy intends"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#1",
+   "action": "set_option",
+   "match": "claude code cannot",
+   "text": "Claude Code can't be configured per developer, so individual settings are silently ignored anyway"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#1",
+   "action": "set_option",
+   "match": "it will automatically",
+   "text": "Claude Code automatically synchronizes settings across the team's machines, so the differences resolve themselves"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#2",
+   "action": "set_option",
+   "match": "nothing ai tooling",
+   "text": "Nothing, because AI tooling can infer event order and causality from free-text logs without any structure"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#2",
+   "action": "set_option",
+   "match": "it has no",
+   "text": "AI-assisted triage is only as good as the underlying observability, so it knows no more than a human"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#2",
+   "action": "set_option",
+   "match": "it will fabricate",
+   "text": "It will reconstruct the missing timestamps and request correlation from the raw text automatically and reliably"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#2",
+   "action": "set_option",
+   "match": "unstructured logs are",
+   "text": "Unstructured logs are actually preferable for AI-assisted debugging, since they preserve more raw context"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#3",
+   "action": "set_option",
+   "match": "whether coverage can",
+   "text": "Whether coverage can be pushed above 95% by adding tests for the remaining branches"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#3",
+   "action": "set_option",
+   "match": "whether the tests assert",
+   "text": "Whether the tests assert what the code should do, not just what it currently does"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#3",
+   "action": "set_option",
+   "match": "whether the tests run",
+   "text": "Whether the suite runs fast enough to stay in the CI pipeline on every pull request"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/check#3",
+   "action": "set_option",
+   "match": "whether the test file",
+   "text": "Whether the test file and function naming follows the team's existing conventions"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#1",
+   "action": "set_option",
+   "match": "ask each developer",
+   "text": "Ask each developer to configure permissions individually according to their own preferences and workflow"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#1",
+   "action": "set_option",
+   "match": "standardize the shared",
+   "text": "Standardize permissions, available MCP servers and conventions in shared team-level configuration"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#1",
+   "action": "set_option",
+   "match": "disable all tooling",
+   "text": "Disable the AI tooling's tool access entirely, so there is nothing whose configuration can differ"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#1",
+   "action": "set_option",
+   "match": "give every developer",
+   "text": "Give every developer administrator-level access by default, so no one is blocked by permission prompts"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#3",
+   "action": "set_option",
+   "match": "the human reviewer",
+   "text": "The human reviewer still owns the merge decision and must verify that each comment is correct"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#3",
+   "action": "set_option",
+   "match": "no human review",
+   "text": "No further human review is needed once the AI has commented, provided the draft is thorough enough"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#3",
+   "action": "set_option",
+   "match": "the review comments",
+   "text": "The review comments can be applied automatically, since the AI already checked them against the code"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#3",
+   "action": "set_option",
+   "match": "the developer who",
+   "text": "The developer who wrote the code shouldn't see the AI's comments, so they don't bias the human review"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#4",
+   "action": "set_option",
+   "match": "automatically roll back",
+   "text": "Roll back the deploy automatically, since a ten-minute gap makes the deploy the most likely cause"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#4",
+   "action": "set_option",
+   "match": "treat the correlation",
+   "text": "Treat the correlation as a hypothesis and have a human confirm the root cause before deciding the fix"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#4",
+   "action": "set_option",
+   "match": "ignore the correlation",
+   "text": "Ignore the correlation, since AI-generated hypotheses about production incidents tend to be unreliable"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#4",
+   "action": "set_option",
+   "match": "disable logging to",
+   "text": "Turn down log verbosity so that future triage runs have less noise to correlate against deploys"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#6",
+   "action": "set_option",
+   "match": "nothing no incident",
+   "text": "Nothing, because no incident occurred and the developer unblocked themselves efficiently under time pressure"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#6",
+   "action": "set_option",
+   "match": "configuration drift produces",
+   "text": "Configuration drift is silent until an incident, so real posture is set by the least patient member"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#6",
+   "action": "set_option",
+   "match": "the eleven other",
+   "text": "The other eleven developers configured their environments too restrictively, which caused the friction"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#6",
+   "action": "set_option",
+   "match": "claude code should",
+   "text": "Claude Code shouldn't prompt for permission at all, because prompting is what causes this behavior"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#7",
+   "action": "set_option",
+   "match": "nothing reading large",
+   "text": "Nothing, because reading large volumes of unstructured text quickly is a genuine strength of these models"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#7",
+   "action": "set_option",
+   "match": "the dependency runs",
+   "text": "AI triage multiplies the observability you already have; without structured logs it has no better evidence than a human"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#7",
+   "action": "set_option",
+   "match": "ai tooling cannot",
+   "text": "AI tooling can't process raw log files directly, so every log would first have to be converted to JSON"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#7",
+   "action": "set_option",
+   "match": "the team should",
+   "text": "The team should adopt the tooling first and add structured logging afterward, once the tooling's results prove insufficient"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#8",
+   "action": "set_option",
+   "match": "the tooling will",
+   "text": "The tooling will run noticeably slower with a broader credential that touches production systems"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#8",
+   "action": "set_option",
+   "match": "a developer s",
+   "text": "The tool would exceed its operator's own permissions, creating a privilege-escalation path"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#8",
+   "action": "set_option",
+   "match": "production debugging should",
+   "text": "Production debugging should not involve AI-assisted tooling, whatever credential the tooling uses"
+  },
+  {
+   "id": "davidalex89:architect-professional/d7/quiz#8",
+   "action": "set_option",
+   "match": "the credential should",
+   "text": "The credential should be shared across all teams, so every team's tooling gets the same access"
+  },
+  {
+   "id": "preporato:ccar-p#1",
+   "action": "set_option",
+   "match": "an augmented llm",
+   "text": "An augmented LLM: retrieval over the manual feeding one model call that cites the passages it used"
+  },
+  {
+   "id": "preporato:ccar-p#1",
+   "action": "set_option",
+   "match": "an autonomous agent",
+   "text": "An autonomous agent that browses the manual page by page until it finds a passage that answers"
+  },
+  {
+   "id": "preporato:ccar-p#1",
+   "action": "set_option",
+   "match": "a multi agent",
+   "text": "A multi-agent research system with a planner and three specialists that each cover part of the manual"
+  },
+  {
+   "id": "preporato:ccar-p#1",
+   "action": "set_option",
+   "match": "a model fine",
+   "text": "A model fine-tuned on the manual every month so that its answers reflect the latest edition"
+  },
+  {
+   "id": "preporato:ccar-p#10",
+   "action": "set_option",
+   "match": "agent to agent",
+   "text": "Agent-to-agent delegation over a defined protocol with request/response contracts, authentication and failure isolation"
+  },
+  {
+   "id": "preporato:ccar-p#10",
+   "action": "set_option",
+   "match": "a direct api",
+   "text": "A direct API call to Claude with the supplier's current price list pasted into the prompt as context"
+  },
+  {
+   "id": "preporato:ccar-p#10",
+   "action": "set_option",
+   "match": "an mcp server",
+   "text": "An MCP server that gives your agent direct, read-only access to the supplier's pricing database"
+  },
+  {
+   "id": "preporato:ccar-p#10",
+   "action": "set_option",
+   "match": "a shared system",
+   "text": "A shared system prompt that both companies maintain so that the two agents follow the same rules"
+  },
+  {
+   "id": "preporato:ccar-p#11",
+   "action": "set_option",
+   "match": "fine tune a",
+   "text": "Fine-tune a dedicated tagging model instead, so no prompt or protocol layer needs maintaining"
+  },
+  {
+   "id": "preporato:ccar-p#11",
+   "action": "set_option",
+   "match": "build the mcp",
+   "text": "Build the MCP server first, since every new integration should go through MCP from the start"
+  },
+  {
+   "id": "preporato:ccar-p#11",
+   "action": "set_option",
+   "match": "use a direct",
+   "text": "Use a direct API integration now and revisit MCP if other surfaces later need the capability"
+  },
+  {
+   "id": "preporato:ccar-p#11",
+   "action": "set_option",
+   "match": "use agent to",
+   "text": "Use agent-to-agent delegation so a separate tagging agent can take on the work for the app"
+  },
+  {
+   "id": "preporato:ccar-p#13",
+   "action": "set_option",
+   "match": "add more examples",
+   "text": "Add more tool-selection examples to the system prompt so the model learns which tools fit which requests"
+  },
+  {
+   "id": "preporato:ccar-p#13",
+   "action": "set_option",
+   "match": "shorten every tool",
+   "text": "Shorten every tool description to one line so that all 300 definitions take up fewer tokens"
+  },
+  {
+   "id": "preporato:ccar-p#13",
+   "action": "set_option",
+   "match": "move to a",
+   "text": "Move to a model with a larger context window so that all 300 definitions fit with room to spare"
+  },
+  {
+   "id": "preporato:ccar-p#13",
+   "action": "set_option",
+   "match": "progressive discovery load",
+   "text": "Load tool definitions on demand with tool search and deferred loading, and scope servers per agent"
+  },
+  {
+   "id": "preporato:ccar-p#14",
+   "action": "set_option",
+   "match": "remove hr documents",
+   "text": "Remove the HR and legal documents from the index so the assistant can no longer retrieve them"
+  },
+  {
+   "id": "preporato:ccar-p#14",
+   "action": "set_option",
+   "match": "run retrieval and",
+   "text": "Run retrieval and tools as the calling user, with their permissions, and attribute each access to them in logs"
+  },
+  {
+   "id": "preporato:ccar-p#14",
+   "action": "set_option",
+   "match": "add a system",
+   "text": "Add a system-prompt rule telling the assistant not to discuss salaries or other HR topics"
+  },
+  {
+   "id": "preporato:ccar-p#14",
+   "action": "set_option",
+   "match": "filter out responses",
+   "text": "Filter out any response containing the word 'salary' or related compensation terms before sending it"
+  },
+  {
+   "id": "preporato:ccar-p#15",
+   "action": "set_option",
+   "match": "a larger embedding",
+   "text": "A larger embedding model that represents rare tokens such as error codes with more precision"
+  },
+  {
+   "id": "preporato:ccar-p#15",
+   "action": "set_option",
+   "match": "hybrid search keyword",
+   "text": "Hybrid search: keyword matching for exact identifiers plus semantic search, then re-ranking"
+  },
+  {
+   "id": "preporato:ccar-p#15",
+   "action": "set_option",
+   "match": "retrieve more chunks",
+   "text": "Retrieve more chunks per query so the exact error code has a better chance of being included"
+  },
+  {
+   "id": "preporato:ccar-p#15",
+   "action": "set_option",
+   "match": "fine tune the",
+   "text": "Fine-tune the generation model on error codes so it recognizes them when they appear in context"
+  },
+  {
+   "id": "preporato:ccar-p#17",
+   "action": "set_option",
+   "match": "the eval set",
+   "text": "Eval-set leakage inflated the score; tune on a separate dev set and report on a held-out, production-like set"
+  },
+  {
+   "id": "preporato:ccar-p#17",
+   "action": "set_option",
+   "match": "the model is",
+   "text": "The model tier is too small to generalize to production traffic; upgrading the tier will close the gap"
+  },
+  {
+   "id": "preporato:ccar-p#17",
+   "action": "set_option",
+   "match": "production traffic is",
+   "text": "Production traffic is lower quality than the test set; filter out malformed requests before they reach the model"
+  },
+  {
+   "id": "preporato:ccar-p#17",
+   "action": "set_option",
+   "match": "200 examples is",
+   "text": "200 examples is too few to be reliable; add another 20 of the same kind and rerun the evaluation"
+  },
+  {
+   "id": "preporato:ccar-p#18",
+   "action": "set_option",
+   "match": "run 15 more",
+   "text": "Run another 15 spot checks on each of the variants to confirm that the improvement holds up consistently"
+  },
+  {
+   "id": "preporato:ccar-p#18",
+   "action": "set_option",
+   "match": "ask the stakeholders",
+   "text": "Ask the stakeholders which version they prefer after showing them side-by-side example outputs from both"
+  },
+  {
+   "id": "preporato:ccar-p#18",
+   "action": "set_option",
+   "match": "test one variable",
+   "text": "Test one variable at a time with a preset metric and sample size; ship each only if significant"
+  },
+  {
+   "id": "preporato:ccar-p#18",
+   "action": "set_option",
+   "match": "ship all three",
+   "text": "Ship all three together, since the spot checks were positive and the release can be rolled back if needed"
+  },
+  {
+   "id": "preporato:ccar-p#19",
+   "action": "set_option",
+   "match": "raise the number",
+   "text": "Raise the number of retrieved passages so the model has more policy text to draw the answer from"
+  },
+  {
+   "id": "preporato:ccar-p#19",
+   "action": "set_option",
+   "match": "the index is",
+   "text": "The index is stale and still holds an older version of the refund policy, so rebuild it from the current documents"
+  },
+  {
+   "id": "preporato:ccar-p#19",
+   "action": "set_option",
+   "match": "retrieval failure re",
+   "text": "Retrieval is failing, so re-chunk and re-embed the corpus so the relevant passages rank higher"
+  },
+  {
+   "id": "preporato:ccar-p#19",
+   "action": "set_option",
+   "match": "generation is poorly",
+   "text": "Generation is poorly grounded: answer only from the retrieved passages with citations, and evaluate faithfulness"
+  },
+  {
+   "id": "preporato:ccar-p#2",
+   "action": "set_option",
+   "match": "extraction with schema",
+   "text": "Extraction with schema validation; posting to the ERP with retries; a dashboard of monthly invoice volume and processing time"
+  },
+  {
+   "id": "preporato:ccar-p#2",
+   "action": "set_option",
+   "match": "email intake and ocr extraction with schema",
+   "text": "Email intake and OCR; validated extraction; ERP posting with an exceptions queue; evals, user corrections and monitoring fed back into design"
+  },
+  {
+   "id": "preporato:ccar-p#2",
+   "action": "set_option",
+   "match": "email intake and ocr extraction",
+   "text": "Email intake and OCR; extraction with the most capable model and schema validation; posting to the ERP with an exceptions queue"
+  },
+  {
+   "id": "preporato:ccar-p#2",
+   "action": "set_option",
+   "match": "email intake a multi",
+   "text": "Email intake; a multi-agent extraction team with a reviewer agent; posting to the ERP; a launch announcement to all users"
+  },
+  {
+   "id": "preporato:ccar-p#20",
+   "action": "set_option",
+   "match": "retrieve 30 chunks",
+   "text": "Retrieve 30 chunks instead of 5, so that the paragraph with the exception is more likely to be included"
+  },
+  {
+   "id": "preporato:ccar-p#20",
+   "action": "set_option",
+   "match": "move to a",
+   "text": "Move to a more capable model that can infer the usual exceptions to a policy rule without seeing them"
+  },
+  {
+   "id": "preporato:ccar-p#20",
+   "action": "set_option",
+   "match": "tell the model",
+   "text": "Tell the model in the system prompt to remember that policies usually have exceptions and mention them"
+  },
+  {
+   "id": "preporato:ccar-p#20",
+   "action": "set_option",
+   "match": "re chunk along",
+   "text": "Re-chunk by document structure, whole sections with some overlap, so rules keep their exceptions"
+  },
+  {
+   "id": "preporato:ccar-p#21",
+   "action": "set_option",
+   "match": "an output filter",
+   "text": "An output filter that blocks any outgoing reply that contains a customer's full account number"
+  },
+  {
+   "id": "preporato:ccar-p#21",
+   "action": "set_option",
+   "match": "few shot examples",
+   "text": "Few-shot examples showing the agent declining suspicious or unusually large refund requests"
+  },
+  {
+   "id": "preporato:ccar-p#21",
+   "action": "set_option",
+   "match": "a system prompt",
+   "text": "A system-prompt rule telling the agent not to issue large refunds to unverified customers"
+  },
+  {
+   "id": "preporato:ccar-p#21",
+   "action": "set_option",
+   "match": "a persona instruction",
+   "text": "A persona instruction describing the agent as careful, skeptical and protective of the company's funds"
+  },
+  {
+   "id": "preporato:ccar-p#21",
+   "action": "set_option",
+   "match": "tool permissions that",
+   "text": "Tool permissions capping refunds at $100 per call, with larger amounts routed to human approval"
+  },
+  {
+   "id": "preporato:ccar-p#22",
+   "action": "set_option",
+   "match": "have a human",
+   "text": "Have a human review every comment, with the model only pre-sorting the queue by likely category"
+  },
+  {
+   "id": "preporato:ccar-p#22",
+   "action": "set_option",
+   "match": "automate routine decisions",
+   "text": "Automate routine decisions with sampled QA, and route legal threats and below-threshold cases to human reviewers"
+  },
+  {
+   "id": "preporato:ccar-p#22",
+   "action": "set_option",
+   "match": "remove humans entirely",
+   "text": "Remove humans entirely and let the model decide every case, including legal threats, on its own"
+  },
+  {
+   "id": "preporato:ccar-p#22",
+   "action": "set_option",
+   "match": "let the model",
+   "text": "Let the model escalate a comment to a human reviewer whenever its own self-reported confidence falls below a set level"
+  },
+  {
+   "id": "preporato:ccar-p#22",
+   "action": "edit",
+   "field": "explanation",
+   "find": "C leaves legal threats unhandled.",
+   "replace": "C leaves legal threats with no human handling at all."
+  },
+  {
+   "id": "preporato:ccar-p#24",
+   "action": "set_option",
+   "match": "data leakage through",
+   "text": "Data leakage via logs: redact personal data before logging, restrict access, set a retention limit"
+  },
+  {
+   "id": "preporato:ccar-p#24",
+   "action": "set_option",
+   "match": "ask the model",
+   "text": "Instruct the model to leave personal data out of its responses so that the stored logs stay clean of it"
+  },
+  {
+   "id": "preporato:ccar-p#24",
+   "action": "set_option",
+   "match": "encrypt the stored",
+   "text": "Encrypt the stored logs at rest and in transit, and keep the existing read access for all 300 engineers"
+  },
+  {
+   "id": "preporato:ccar-p#24",
+   "action": "set_option",
+   "match": "no risk because",
+   "text": "No real risk, because the log platform is internal and only accessible to the company's own engineers"
+  },
+  {
+   "id": "preporato:ccar-p#25",
+   "action": "set_option",
+   "match": "a comparison of",
+   "text": "A comparison of benchmark scores across the candidate models, used to pick the strongest one for customer support"
+  },
+  {
+   "id": "preporato:ccar-p#25",
+   "action": "set_option",
+   "match": "a working prototype",
+   "text": "A working prototype on real support tickets to show the vice president by the end of next week"
+  },
+  {
+   "id": "preporato:ccar-p#25",
+   "action": "set_option",
+   "match": "discovery outputs a",
+   "text": "Discovery outputs: a measurable success criterion, constraints, data access, decision owners and a baseline"
+  },
+  {
+   "id": "preporato:ccar-p#25",
+   "action": "set_option",
+   "match": "a signed vendor",
+   "text": "A signed vendor contract with a model provider, so the team can start building without delays"
+  },
+  {
+   "id": "preporato:ccar-p#26",
+   "action": "set_option",
+   "match": "commit only to",
+   "text": "Commit only to 99.9% uptime, since availability is the part of the system the team can control"
+  },
+  {
+   "id": "preporato:ccar-p#26",
+   "action": "set_option",
+   "match": "promise 100 accuracy",
+   "text": "Promise 100% accuracy to secure approval, then tighten the prompts until production matches it"
+  },
+  {
+   "id": "preporato:ccar-p#26",
+   "action": "set_option",
+   "match": "refuse to set",
+   "text": "Decline to set any accuracy target, since model outputs are probabilistic and their correctness can't be guaranteed"
+  },
+  {
+   "id": "preporato:ccar-p#26",
+   "action": "set_option",
+   "match": "commit to measured",
+   "text": "Commit to measured targets, e.g. 96% accuracy per slice on a held-out set, plus an error budget and remediation"
+  },
+  {
+   "id": "preporato:ccar-p#26",
+   "action": "edit",
+   "field": "explanation",
+   "find": "error budgets and remediation (D).",
+   "replace": "error budgets, escalation paths and remediation (D), together with a plain explanation that LLM outputs have a measurable error rate."
+  },
+  {
+   "id": "preporato:ccar-p#27",
+   "action": "set_option",
+   "match": "we chose the",
+   "text": "'We chose the newest model available, so the assistant benefits from the latest capabilities as they ship.'"
+  },
+  {
+   "id": "preporato:ccar-p#27",
+   "action": "set_option",
+   "match": "the top tier",
+   "text": "'The top tier scores several points higher on industry reasoning and coding benchmarks than the others.'"
+  },
+  {
+   "id": "preporato:ccar-p#27",
+   "action": "set_option",
+   "match": "the balanced tier resolves",
+   "text": "'Balanced: 91% resolved at $0.02 each; top: 93% at $0.08, about $60,000/month more at our volume. We recommend balanced.'"
+  },
+  {
+   "id": "preporato:ccar-p#27",
+   "action": "set_option",
+   "match": "the balanced tier",
+   "text": "'The balanced tier is fine for our needs, and the team is comfortable recommending it going forward.'"
+  },
+  {
+   "id": "preporato:ccar-p#27",
+   "action": "edit",
+   "field": "explanation",
+   "find": "outcome, cost, and the recommendation that follows from them (C).",
+   "replace": "outcome, cost, and the recommendation that follows from them (C): at a million tickets a month the extra two points cost about $60,000, so the balanced tier with escalation for complex tickets is the better buy."
+  },
+  {
+   "id": "preporato:ccar-p#28",
+   "action": "set_option",
+   "match": "the architect s",
+   "text": "The architect's personal working notes and scratch files from the design phase"
+  },
+  {
+   "id": "preporato:ccar-p#28",
+   "action": "set_option",
+   "match": "the kickoff slide",
+   "text": "The kickoff slide deck with the original goals and the project timeline"
+  },
+  {
+   "id": "preporato:ccar-p#28",
+   "action": "set_option",
+   "match": "a raw export",
+   "text": "A raw export of the project chat channel covering design discussions"
+  },
+  {
+   "id": "preporato:ccar-p#28",
+   "action": "set_option",
+   "match": "runbooks covering escalation",
+   "text": "Runbooks covering escalation paths and the system's known failure modes"
+  },
+  {
+   "id": "preporato:ccar-p#28",
+   "action": "set_option",
+   "match": "eval baselines and",
+   "text": "Eval baselines plus an inventory of deployed prompts and their versions"
+  },
+  {
+   "id": "preporato:ccar-p#29",
+   "action": "set_option",
+   "match": "each developer s",
+   "text": "Each developer's own `~/.claude/settings.json`, with the same deny rules added there by hand"
+  },
+  {
+   "id": "preporato:ccar-p#29",
+   "action": "set_option",
+   "match": "deny rules in",
+   "text": "Deny rules in committed project settings, such as `Bash(git push *)` and `Bash(curl *)`"
+  },
+  {
+   "id": "preporato:ccar-p#29",
+   "action": "set_option",
+   "match": "a wiki page",
+   "text": "A wiki page that documents the team's agreed rules for using Claude Code in the CI pipeline"
+  },
+  {
+   "id": "preporato:ccar-p#29",
+   "action": "set_option",
+   "match": "a claude md",
+   "text": "A `CLAUDE.md` instruction telling Claude not to run git push or curl commands in any environment"
+  },
+  {
+   "id": "preporato:ccar-p#3",
+   "action": "set_option",
+   "match": "run both in",
+   "text": "Run both designs in production indefinitely and route traffic by request type"
+  },
+  {
+   "id": "preporato:ccar-p#3",
+   "action": "set_option",
+   "match": "postpone the decision",
+   "text": "Postpone the decision until a newer model is released that may close the gap"
+  },
+  {
+   "id": "preporato:ccar-p#3",
+   "action": "set_option",
+   "match": "design 1 for",
+   "text": "Design 1, because the top tier leaves more quality headroom for harder requests"
+  },
+  {
+   "id": "preporato:ccar-p#3",
+   "action": "set_option",
+   "match": "design 2 because",
+   "text": "Design 2, since it meets the latency SLA and the cost pillar at equal accuracy"
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "set_option",
+   "match": "package them as",
+   "text": "Package them as a plugin (or deploy via managed settings) so every developer gets the same versioned definitions"
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "set_option",
+   "match": "post the prompt",
+   "text": "Post the prompt text in a team chat channel so developers can copy the latest version when they need it"
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "set_option",
+   "match": "ask each developer",
+   "text": "Ask each developer to copy the files into `~/.claude/` and pull updates from a shared folder"
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "set_option",
+   "match": "paste both into",
+   "text": "Paste both definitions into every repository's `CLAUDE.md` so that they load in each session"
   }
  ],
  "hold": []
