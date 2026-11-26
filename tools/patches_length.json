@@ -47956,6 +47956,283 @@
    "action": "set_option",
    "match": "paste both into",
    "text": "Paste both definitions into every repository's `CLAUDE.md` so that they load in each session"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-008",
+   "action": "set_option",
+   "match": "stratify results",
+   "text": "Stratify results by task type, user segment, and risk class"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-008",
+   "action": "set_option",
+   "match": "randomize all eligible",
+   "text": "Expose all eligible users at once after offline gates pass"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-008",
+   "action": "set_option",
+   "match": "use aggregate task",
+   "text": "Use aggregate task success across all users as the sole release metric"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-009",
+   "action": "set_option",
+   "match": "add a longer",
+   "text": "Add a longer system prompt telling Claude to ignore names and account identifiers"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-009",
+   "action": "set_option",
+   "match": "upload the complete",
+   "text": "Upload full records to a restricted workspace and redact identifiers in outputs"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-009",
+   "action": "set_option",
+   "match": "upload it and ask",
+   "text": "Upload it and ask Claude in the prompt not to remember or repeat the identifiers"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-011",
+   "action": "set_option",
+   "match": "a complete list of",
+   "text": "A complete list of the SDK methods, endpoints, and model versions the solution uses"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-011",
+   "action": "set_option",
+   "match": "the number of model",
+   "text": "The number of model calls per workflow, token volumes, and projected API spend"
+  },
+  {
+   "id": "rohitg00:ccar-p-diag-011",
+   "action": "set_option",
+   "match": "a complete target state",
+   "text": "A target-state sequence diagram with latency estimates, model calls, and integration boundaries"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-003",
+   "action": "set_option",
+   "match": "an unrestricted agent",
+   "text": "An unrestricted agent with access to every banking system it may need"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-003",
+   "action": "set_option",
+   "match": "one structured prompt",
+   "text": "One prompt in which Claude applies every rule to copied database values"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-003",
+   "action": "set_option",
+   "match": "a peer to peer",
+   "text": "A peer-to-peer swarm of specialist agents with no central coordinator"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-007",
+   "action": "set_option",
+   "match": "output token count",
+   "text": "Output token count per case, since output tokens dominate the per-request model bill"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-007",
+   "action": "set_option",
+   "match": "model inference cost",
+   "text": "Model inference cost per request, since Design A halves the API spend for each case"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-007",
+   "action": "set_option",
+   "match": "total automated handling",
+   "text": "Automated handling time before human review, since the cheaper model decides faster"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-009",
+   "action": "set_option",
+   "match": "a richer refund tool",
+   "text": "A refund-tool response that reports the amount and a success status"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-009",
+   "action": "set_option",
+   "match": "prompt caching",
+   "text": "Prompt caching of the refund policy and tool definitions across requests"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-009",
+   "action": "set_option",
+   "match": "a prompt template",
+   "text": "A stricter prompt template that tells the model to confirm each refund"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-012",
+   "action": "set_option",
+   "match": "use the smaller model",
+   "text": "Use the smaller model for every request and add a human review rule for the complex cases"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-012",
+   "action": "set_option",
+   "match": "average the two",
+   "text": "Send each request to both models and average their two outputs without any further validation"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-012",
+   "action": "set_option",
+   "match": "use the larger model",
+   "text": "Use the larger model for every request, since a 6-point accuracy gain outweighs the 3x cost"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-012",
+   "action": "set_option",
+   "match": "segment the workload",
+   "text": "Segment the workload, quantify the gain's value, and route only cases that earn the larger model"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-015",
+   "action": "set_option",
+   "match": "increase output length",
+   "text": "Increase the required output length to 5,000 words so the model reasons through each claim"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-015",
+   "action": "set_option",
+   "match": "add few shot",
+   "text": "Add few-shot examples drawn from the difficult boundary cases, with correct rationale and labels"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-015",
+   "action": "set_option",
+   "match": "add a larger balanced",
+   "text": "Add a larger balanced sample of routine approved and denied claims to show the label distribution"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-015",
+   "action": "set_option",
+   "match": "tell the model",
+   "text": "Tell the model in the system prompt that it is a world-class insurance claims classifier"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-016",
+   "action": "set_option",
+   "match": "pre summarize each",
+   "text": "Pre-summarize each source into a paragraph and load all summaries into one stable context without provenance"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-016",
+   "action": "set_option",
+   "match": "always select the",
+   "text": "Select the largest available context window so all 200 pages fit into every single request"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-016",
+   "action": "set_option",
+   "match": "drop source citations",
+   "text": "Keep all 200 pages but drop source citations and metadata to save input tokens"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-019",
+   "action": "set_option",
+   "match": "keep extended thinking",
+   "text": "Keep extended thinking on the synchronous route and stream progress updates to mask the added delay"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-019",
+   "action": "set_option",
+   "match": "disable all reasoning",
+   "text": "Disable extended thinking and all other reasoning features permanently on every route"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-019",
+   "action": "set_option",
+   "match": "ignore the latency",
+   "text": "Accept the latency miss on the interactive service, since the eval shows higher planning quality"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-019",
+   "action": "set_option",
+   "match": "use the measured gain",
+   "text": "Use extended thinking only on asynchronous or high-complexity routes whose objective can absorb it"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-026",
+   "action": "set_option",
+   "match": "a public mcp",
+   "text": "A public MCP registry entry so that other teams can discover the risk API"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-026",
+   "action": "set_option",
+   "match": "a small mcp server",
+   "text": "A small MCP server beside the service so more hosts can discover the risk API later"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-026",
+   "action": "set_option",
+   "match": "a new multi agent",
+   "text": "A new agent-to-agent protocol layer between the service and the risk API"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-027",
+   "action": "set_option",
+   "match": "duplicate bespoke",
+   "text": "Duplicate bespoke connectors in each host, each maintained by that host's own team"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-027",
+   "action": "set_option",
+   "match": "a spreadsheet copied",
+   "text": "A shared spreadsheet of repository commands pasted into every session as context"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-027",
+   "action": "set_option",
+   "match": "three host specific",
+   "text": "Three host-specific connectors generated from one shared package, calling the same API"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-029",
+   "action": "set_option",
+   "match": "remove retrieval",
+   "text": "Remove retrieval entirely and answer from the model's own knowledge to cut the p95 latency"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-029",
+   "action": "set_option",
+   "match": "hide the latency",
+   "text": "Report only average latency to stakeholders so that the p95 miss does not block the release"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-029",
+   "action": "set_option",
+   "match": "keep all five",
+   "text": "Keep all five expansions for every query but run them concurrently and cache the repeated candidates"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-039",
+   "action": "set_option",
+   "match": "increase cache lifetime",
+   "text": "Extend the cache lifetime to raise the hit rate further, without taking new measurements"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-039",
+   "action": "set_option",
+   "match": "remove correctness",
+   "text": "Remove correctness from the scorecard and optimize cache hit rate and input cost alone"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-039",
+   "action": "set_option",
+   "match": "keep caching enabled",
+   "text": "Keep caching enabled but shorten the cache lifetime and tell the prompt to prefer newer retrieved policy"
+  },
+  {
+   "id": "rohitg00:ccar-p-m1-012",
+   "action": "edit",
+   "field": "explanation",
+   "find": "where the measured quality improvement justifies",
+   "replace": "where the business value of the measured quality improvement justifies"
   }
  ],
  "hold": []
