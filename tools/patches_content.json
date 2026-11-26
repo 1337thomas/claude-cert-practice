@@ -172,6 +172,357 @@
    "text": "A subagent's tool access is set by the `tools` field of its AgentDefinition: listing `[\"WebSearch\"]` gives the subagent only that tool, while omitting the field inherits every tool available to subagents. `allowedTools` on the query only auto-approves the listed tools; it does not restrict which tools exist, so it cannot enforce least privilege. `tool_scope` and `tool_filter` are not AgentDefinition fields.",
    "src": "https://code.claude.com/docs/en/agent-sdk/subagents",
    "why": "Erklaerung samt alter Correction-Notiz neu, passend zum neuen Schluessel."
+  },
+  {
+   "id": "amey:developer-foundations-mock1-2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "50% of the cost within a 24-hour window",
+   "replace": "50% of the cost within a 24-hour window. At 200,000 requests the job needs at least two batches, since one batch holds at most 100,000 requests or 256 MB",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Batch-Obergrenze 100.000 Requests ergänzt, damit die Erklärung zum Mengengerüst passt."
+  },
+  {
+   "id": "amey:developer-foundations-mock3-1",
+   "action": "set_option",
+   "match": "A key that expired",
+   "text": "A key that expired, was rotated, or has been revoked",
+   "src": "https://platform.claude.com/docs/en/api/errors",
+   "why": "Fehlende Berechtigungen liefern 403 permission_error, nicht 401 authentication_error."
+  },
+  {
+   "id": "amey:developer-foundations-mock3-1",
+   "action": "set_explanation",
+   "text": "Authentication failures point at the credential rather than the payload: a 401 authentication_error means the API key itself is invalid, expired, or revoked, while a key that merely lacks permission returns a 403 permission_error instead. A transient fault (A) presents differently, and neither prompt length (B) nor deprecation (D) produces an auth error.",
+   "src": "https://platform.claude.com/docs/en/api/errors",
+   "why": "401 vs. 403 laut Fehler-Doku getrennt."
+  },
+  {
+   "id": "amey:developer-foundations-mock1-4",
+   "action": "set_explanation",
+   "text": "Schema enforcement plus a validation-retry loop treats model output as untrusted input and lets the model self-correct. With strict tool use (`strict: true`) or Structured Outputs, constrained decoding guarantees schema-compliant output, so the retry loop becomes the fallback for paths without that guarantee and for semantic checks. Returning an empty object (A) hides the failure, firmer wording (B) still leaves compliance to chance, and regex patching (C) invents data.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung nennt jetzt strict/Structured Outputs als heutige Garantie statt eines erzwungenen tool_choice."
+  },
+  {
+   "id": "amey:developer-foundations-practice-15",
+   "action": "set_option",
+   "match": "Declare the shape as a tool schema",
+   "text": "Declare the shape as a JSON schema the output must match",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Tool-Schema setzte ein erzwungenes tool_choice voraus (400 bei Opus/Sonnet 5.5); heute Structured Outputs."
+  },
+  {
+   "id": "amey:developer-foundations-practice-15",
+   "action": "set_explanation",
+   "text": "A declared schema turns structure into a contract the response must satisfy, which is what a typed insert needs. Structured Outputs (`output_config.format` with a JSON schema) or a strict tool definition enforce it through constrained decoding. Asking in prose (A) and retrying on failure (B) both leave the shape to chance, and regular expressions over prose (C) are brittle by construction.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung auf Structured Outputs umgestellt."
+  },
+  {
+   "id": "amey:developer-foundations-practice-18",
+   "action": "edit",
+   "field": "explanation",
+   "find": "An oversized input (A) fails before generation,",
+   "replace": "An input larger than the context window (A) is rejected with a 400 before generation (an input that fits but leaves too little room stops with model_context_window_exceeded instead),",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+   "why": "Overflow-Verhalten laut Doku präzisiert (400 vs. model_context_window_exceeded)."
+  },
+  {
+   "id": "davidalex89:developer/d1/quiz#9",
+   "action": "set_option",
+   "match": "It pushes toward self-hosting",
+   "text": "It pushes tool execution into your network, where the tools can reach the database.",
+   "src": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
+   "why": "Mit self-hosted sandboxes läuft der Loop bei Anthropic, nur die Tools im eigenen Netz."
+  },
+  {
+   "id": "davidalex89:developer/d1/quiz#9",
+   "action": "set_explanation",
+   "text": "The tools have to execute somewhere that can reach the database, so network topology constrains the deployment. That means self-hosting, or with Managed Agents a self-hosted sandbox (Anthropic keeps running the loop, your worker executes the tool calls) or an MCP tunnel to a private MCP server in front of the database. Hosting choice is very much constrained by topology (A). Managed hosting doesn't grant arbitrary private-network reach (C), and network placement has nothing to do with whether the control flow is agentic (D).",
+   "src": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
+   "why": "Falsche Aussage „tool execution happens where the loop runs“ ersetzt."
+  },
+  {
+   "id": "davidalex89:developer/d3/check#2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "not for being inherently safe.",
+   "replace": "not for being inherently safe. In headless mode (`-p`) a call that needs approval is denied rather than waited on, so the tools CI may use must be allowed upfront (for example with `--allowedTools`, a hook, or `--permission-prompt-tool`).",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "-p lehnt freigabepflichtige Aufrufe ab, statt zu warten."
+  },
+  {
+   "id": "davidalex89:developer/d3/quiz#4",
+   "action": "set_explanation",
+   "text": "Auto mode replaces the human prompt with a classifier that blocks actions it judges risky; it reduces prompts but does not guarantee safety. So whatever must reliably bound the damage has to live in permissions and hooks, and deny rules still apply in every mode. Treating it as a drop-in (A) silently weakens a control. Auto mode doesn't ignore CLAUDE.md (C), since the classifier reads it, and model tier (D) is unrelated to the guardrail question.",
+   "src": "https://code.claude.com/docs/en/permission-modes",
+   "why": "Auto-Mode laut Doku: Klassifikator, keine Sicherheitsgarantie, Deny-Regeln greifen."
+  },
+  {
+   "id": "davidalex89:developer/d3/check#1",
+   "action": "set_explanation",
+   "text": "CLAUDE.md content, like a rule in .claude/rules/ without `paths` frontmatter, is loaded into every session; Skills stay dormant until their task arises. A biweekly procedure belongs in a Skill so it's supplied when relevant, not carried on every unrelated request. The file format (A) allows any prose, there's no convention forcing commands (C), and an always-loaded file is not the intended home for an occasional procedure (D).",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "„Rules are passive and permanent“ gilt nicht für Rules mit paths; präzisiert."
+  },
+  {
+   "id": "davidalex89:developer/d4/check#1",
+   "action": "edit",
+   "field": "q",
+   "find": "a blanket retry-with-backoff decorator",
+   "replace": "a blanket retry-with-backoff decorator (three retries)",
+   "src": "editorial",
+   "why": "„sent four times“ setzt drei Retries voraus, die der Stamm bisher nicht nannte."
+  },
+  {
+   "id": "davidalex89:developer/d2/quiz#26",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Volume (A) argues *for* batch;",
+   "replace": "Volume (A) argues *for* batch (split across at least two batches, since one holds at most 100,000 requests);",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Batch-Obergrenze ergänzt."
+  },
+  {
+   "id": "davidalex89:developer/d8/quiz#10",
+   "action": "set_explanation",
+   "text": "The MCP client is the intermediary: it discovers what the server offers, forwards calls, and returns results, which is why the server needs no knowledge of any conversation and stays independently deployable. With the Messages API's MCP connector, Anthropic's API plays that client role for remote servers you name, but it doesn't host every MCP server centrally (C). The model only emits tool calls (A) and has no network access of its own, and MCP servers don't relay calls to each other (D).",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector",
+   "why": "„The client is always the intermediary“ übersah den MCP connector."
+  },
+  {
+   "id": "preporato:ccdv-f#10",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The token counting endpoint measures the request as the model will receive it,",
+   "replace": "The token counting endpoint estimates the request as the model will receive it (the actual count can differ by a small amount),",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/token-counting",
+   "why": "Doku: „The token count is an estimate.“"
+  },
+  {
+   "id": "preporato:ccdv-f#22",
+   "action": "set_option",
+   "match": "Two to four varied examples",
+   "text": "Three to five varied examples, including one the model should reject",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+   "why": "Doku: „Include 3–5 examples for best results.“"
+  },
+  {
+   "id": "preporato:ccdv-f#25",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Temperature (B) affects variation and can't guarantee types.",
+   "replace": "Temperature (B) can't guarantee types, and sampling parameters are removed as of API version 2026-10-21.",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung unterstellte einen frei einstellbaren temperature-Parameter."
+  },
+  {
+   "id": "rohitg00:lesson-15#2",
+   "action": "set_explanation",
+   "text": "acceptEdits auto-approves file edits (plus common filesystem commands such as mkdir, mv, or rm inside the working directory) while other commands still need approval. It does not authorize publishing, deployment, or arbitrary shell work.",
+   "src": "https://code.claude.com/docs/en/permission-modes",
+   "why": "acceptEdits genehmigt laut Doku auch gängige Dateisystem-Befehle; Erklärung präzisiert."
+  },
+  {
+   "id": "rohitg00:ccdv-m1-030",
+   "action": "edit",
+   "field": "q",
+   "find": "A classification task uses an enum and already passes its eval.",
+   "replace": "On a legacy setup that still accepts sampling parameters, a classification task uses an enum and already passes its eval.",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Richtige Antwort hängt an Sampling-Parametern; Stamm auf Legacy-Setup eingegrenzt."
+  },
+  {
+   "id": "amey:associate-foundations-mock2-15",
+   "action": "edit",
+   "field": "explanation",
+   "find": "a universal temperature rule (B) is too blunt",
+   "replace": "a universal temperature rule (B) is no lever here, since sampling parameters are removed as of API version 2026-10-21",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung behandelte temperature als frei einstellbar."
+  },
+  {
+   "id": "amey:associate-foundations-practice-8",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Project knowledge is maintained, not self-updating",
+   "replace": "Uploaded project knowledge is maintained, not self-updating",
+   "src": "https://support.claude.com/en/articles/10166901-using-the-google-drive-integration",
+   "why": "Drive-Dokumente in privaten Projects synchronisieren; Aussage auf hochgeladene Dateien begrenzt."
+  },
+  {
+   "id": "davidalex89:associate/d3/quiz#7",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(C) and (D) invent limits that don't exist.",
+   "replace": "(C) and (D) invent limits that don't exist. Even at the limit, claude.ai with code execution enabled summarizes earlier messages automatically and carries on, so there is no hard stop to rely on either.",
+   "src": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+   "why": "Automatic context management ergänzt."
+  },
+  {
+   "id": "davidalex89:associate/d3/check#2",
+   "action": "set_option",
+   "match": "Ask Claude to permanently memorize",
+   "text": "Keep one long chat thread and paste each new month's data into it.",
+   "src": "https://support.claude.com/en/articles/11817273",
+   "why": "Mit der Memory-Funktion ist „remember this“ möglich; Distraktor war nicht mehr eindeutig falsch."
+  },
+  {
+   "id": "davidalex89:associate/d3/check#2",
+   "action": "set_explanation",
+   "text": "Stable, reused context belongs in a Project's persistent instructions/knowledge sources — that's precisely the feature built for recurring work with shared background. Re-pasting each month (A) repeats work, research mode (C) looks online rather than at your guide, and one ever-growing thread (D) piles up context and degrades over time.",
+   "src": "https://support.claude.com/en/articles/9517075-what-are-projects",
+   "why": "Erklärung deckt den neuen Distraktor ab."
+  },
+  {
+   "id": "davidalex89:associate/d5/quiz#5",
+   "action": "set_explanation",
+   "text": "Uploaded documents don't update themselves, Drive-synced files (available only in private Projects) are only as current as their source, and instructions never change on their own. Without periodic review, a Project will keep confidently referencing outdated material as if it were still accurate — with no error and no warning to signal it.",
+   "src": "https://support.claude.com/en/articles/10166901-using-the-google-drive-integration",
+   "why": "„connected sources don't automatically stay current“ widersprach der Drive-Synchronisierung."
+  },
+  {
+   "id": "rohitg00:ccao-d-002",
+   "action": "set_explanation",
+   "text": "Source approval and claim extraction are meaningful verification boundaries. Drafting sections in parallel and reconciling citations only at the end (A) defers verification, and drafting recommendations during extraction (C) pushes unverified claims downstream.",
+   "src": "editorial",
+   "why": "Erklärung verwies auf eine Option („paragraph splits“), die es nicht gibt."
+  },
+  {
+   "id": "rohitg00:ccao-m1-028",
+   "action": "edit",
+   "field": "explanation",
+   "find": "Memory, caching, and research have different primary jobs.",
+   "replace": "Memory, Project chat replies, and research have different primary jobs.",
+   "src": "editorial",
+   "why": "„caching“ ist keine Option der Frage."
+  },
+  {
+   "id": "amey:architect-professional-mock3-9",
+   "action": "edit",
+   "field": "q",
+   "find": "What should happen when a model version is updated beneath a production solution?",
+   "replace": "What should happen before a production solution moves to a new model version?",
+   "src": "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "why": "Doku: jede Model-ID ist ein gepinnter Snapshot; ein Modell ändert sich nicht „beneath“ der Anwendung."
+  },
+  {
+   "id": "amey:architect-professional-mock2-2",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von amey:architect-professional-practice-12 (bleibt; vollständigere Erklärung)."
+  },
+  {
+   "id": "amey:architect-professional-mock2-3",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von amey:architect-professional-practice-13 (bleibt; Erklärung nennt den zusätzlichen Hop)."
+  },
+  {
+   "id": "amey:architect-professional-mock2-4",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von amey:architect-professional-practice-17 (bleibt; klarerer Stamm, vollständigere Erklärung)."
+  },
+  {
+   "id": "amey:architect-professional-practice-18",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von amey:architect-professional-mock2-5 (bleibt; ausgewogene Optionslängen, practice-18 hatte die richtige Option als längste)."
+  },
+  {
+   "id": "amey:architect-professional-mock1-14",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von amey:architect-professional-practice-10 (bleibt; konkretes Szenario, vollständige Erklärung)."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#4",
+   "action": "set_explanation",
+   "text": "Structural guardrails enforced in code don't depend on the model reliably complying under every input; instruction-only guardrails (A, C) can still be violated on edge cases or adversarial input. Where the request uses Structured Outputs or strict tool use, constrained decoding already guarantees the schema, and code-level validation stays as the backstop and for semantic checks. Temperature (D) is no guardrail, and sampling parameters are removed as of API version 2026-10-21.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Structured Outputs als heutige Garantie ergänzt; temperature-Distraktor eingeordnet."
+  },
+  {
+   "id": "davidalex89:architect-professional/d2/quiz#12",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and the enforcement is in the code, not the prose (D).",
+   "replace": "and the enforcement is in the code, not the prose (D). (With Structured Outputs, constrained decoding would guarantee the shape itself; this design relies on prompt plus validation.)",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Abgrenzung zu Structured Outputs ergänzt."
+  },
+  {
+   "id": "amey:architect-professional-practice-3",
+   "action": "edit",
+   "field": "explanation",
+   "find": "a mode-switch mega-tool (C) hides forty behaviors from the selection mechanism entirely",
+   "replace": "a mode-switch mega-tool over forty unrelated behaviors (C) hides them from the selection mechanism (grouping only closely related operations behind an action parameter is the documented pattern)",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Doku empfiehlt, verwandte Aktionen zu bündeln; Erklärung war pauschal gegen Mega-Tools."
+  },
+  {
+   "id": "amey:architect-professional-practice-33",
+   "action": "edit",
+   "field": "explanation",
+   "find": "creates friction without conveying practice.",
+   "replace": "creates friction without conveying practice. Where rules must be enforced organization-wide, managed settings or a managed CLAUDE.md add a layer above every repository's own configuration.",
+   "src": "https://code.claude.com/docs/en/managed-settings",
+   "why": "Managed Settings / managed CLAUDE.md als Durchsetzungsebene ergänzt."
+  },
+  {
+   "id": "preporato:ccar-p#29",
+   "action": "edit",
+   "field": "explanation",
+   "find": "A wiki (C) is invisible to the tooling.",
+   "replace": "A wiki (C) is invisible to the tooling. Argument-matching Bash patterns are fragile and can be sidestepped by other commands, so for a hard guarantee pair them with controls outside Claude Code, such as CI network restrictions.",
+   "src": "https://code.claude.com/docs/en/permissions",
+   "why": "Doku: „Bash permission patterns that try to constrain command arguments are fragile.“"
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "set_option",
+   "match": "Package them as a plugin",
+   "text": "Package them as a plugin, enabled org-wide via managed settings, so everyone gets one version",
+   "src": "https://code.claude.com/docs/en/settings",
+   "why": "Managed Settings verteilen Skills/Subagents nur über Plugins (enabledPlugins), nicht direkt."
+  },
+  {
+   "id": "preporato:ccar-p#30",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and managed settings can push them to the whole organization",
+   "replace": "and managed settings can enable that plugin for the whole organization (`enabledPlugins`, marketplace restrictions)",
+   "src": "https://code.claude.com/docs/en/settings",
+   "why": "Erklärung an belegten Mechanismus angepasst."
+  },
+  {
+   "id": "aliquanto:d2-24",
+   "action": "edit",
+   "field": "q",
+   "find": "A legacy extraction service uses a Claude model that supports temperature and must",
+   "replace": "A legacy extraction service, pinned to an API version and Claude model that still accept temperature, must",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "API-Version 2026-10-21 entfernt temperature für alle Modelle; Stamm grenzt jetzt auch die API-Version ein."
+  },
+  {
+   "id": "aliquanto:d2-24",
+   "action": "edit",
+   "field": "explanation",
+   "find": "on models that support it,",
+   "replace": "on legacy setups that still accept it (API version 2026-10-21 removes sampling parameters, and newer models reject them),",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung entsprechend eingegrenzt."
+  },
+  {
+   "id": "aliquanto:d1-08",
+   "action": "edit",
+   "field": "explanation",
+   "find": "CoT (B) and temperature 0 (D) reduce but do not eliminate the mismatch.",
+   "replace": "CoT (B) reduces but does not eliminate the mismatch, and temperature 0 (D) never made generation deterministic (sampling parameters are also removed as of API version 2026-10-21).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Erklärung unterstellte, temperature 0 sei heute ein nutzbarer Hebel."
   }
  ],
  "hold": []
