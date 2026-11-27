@@ -7897,6 +7897,942 @@
    "text": "Give the review job a larger context window so it can account for the reformatting on its own",
    "src": "editorial",
    "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#49",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#45"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#50",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#50"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#51",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-4#51"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#53",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#53"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#54",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#51"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#56",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#2"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#58",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#58"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#59",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#59"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#60",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#60"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#1",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#23"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#3",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-2#7"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#6",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-2#12"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#9",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#24"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#10",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-3#10"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#14",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#14"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#15",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#48"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#17",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#17"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#20",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#21",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-2#26"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#23",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#35"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#26",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#25"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#31",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#10"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#32",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#35"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#33",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#55"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#34",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#38"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#48",
+   "action": "set_option",
+   "match": "add more fine grained",
+   "text": "Add more fine-grained values to the `finding_type` enum so the categories overlap less and the model picks more precisely",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#48",
+   "action": "set_option",
+   "match": "add a deterministic post",
+   "text": "Add a deterministic post-generation check that compares `finding_type` with signals in `description` and flags mismatches before routing",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#48",
+   "action": "set_option",
+   "match": "switch to a larger",
+   "text": "Switch to a larger model on the assumption that it will show better categorical judgment when it assigns `finding_type`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#48",
+   "action": "set_option",
+   "match": "lower max_tokens to encourage",
+   "text": "Lower `max_tokens` so findings are written more concisely, on the theory that shorter output gets categorized more accurately",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#52",
+   "action": "set_option",
+   "match": "merge the two tools",
+   "text": "Merge the two tools into one combined extraction tool, so the model never has to decide between prose and tables",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#52",
+   "action": "set_option",
+   "match": "rewrite both descriptions to",
+   "text": "Rewrite both descriptions to state what each tool covers and that documents with prose and tables need both tools",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#52",
+   "action": "set_option",
+   "match": "force tool_choice to a",
+   "text": "Force `tool_choice` to a single named tool so that every document is routed to exactly one of the two extractors",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#52",
+   "action": "set_option",
+   "match": "add a preprocessing step",
+   "text": "Add a preprocessing step that splits every document into separate table-only and prose-only files before extraction",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#55",
+   "action": "set_option",
+   "match": "increase max_tokens to give",
+   "text": "Increase `max_tokens` so the model has more room to reason through which of the two dates it should pick for the field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#55",
+   "action": "set_option",
+   "match": "merge both dates into",
+   "text": "Merge both dates into a single free-form text field, so the model no longer has to choose between executed and effective",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#55",
+   "action": "set_option",
+   "match": "add few shot examples",
+   "text": "Add few-shot examples that spell out the precedence reasoning (prefer the effective date when both appear) and state the rule in the schema",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#55",
+   "action": "set_option",
+   "match": "switch to a larger",
+   "text": "Switch to a larger model and rely on it to infer the right precedence between executed and effective dates on its own",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#55",
+   "action": "edit",
+   "field": "explanation",
+   "find": "instead of leaving it to infer a pattern from examples alone.",
+   "replace": "instead of leaving it to infer a pattern from examples alone. For example: when both dates appear, prefer the effective date, since that is when obligations actually begin.",
+   "src": "editorial",
+   "why": "Begründung aus der gestrafften richtigen Option in die Erklärung übernommen."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#57",
+   "action": "set_option",
+   "match": "add a lightweight second",
+   "text": "Add a second-pass extraction or reviewer that checks whether each high-confidence value is grounded in the source and in the right field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#57",
+   "action": "set_option",
+   "match": "require every extracted field",
+   "text": "Require each extracted field to carry a source location or evidence reference, so ungrounded or misplaced values get flagged",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#57",
+   "action": "set_option",
+   "match": "raise the confidence threshold",
+   "text": "Raise the confidence threshold across the board, so that a larger share of all extractions is routed to human review by default",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#57",
+   "action": "set_option",
+   "match": "rely on the extraction",
+   "text": "Rely on the extraction model to self-report whenever it is unsure about a field assignment, and send only those self-flagged cases to review",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#2",
+   "action": "set_option",
+   "match": "rename both parameters to",
+   "text": "Rename both parameters to something else entirely, on the theory that new names alone will resolve the confusion between them",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#2",
+   "action": "set_option",
+   "match": "merge them into a",
+   "text": "Merge them into one free-text `refund_reason` field and parse the category and the detail out of it on the server side",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#2",
+   "action": "set_option",
+   "match": "expand both parameter descriptions",
+   "text": "Expand both descriptions: `reason_code` must be exactly one enum value, never free text; `justification` gets an example of when it's needed",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#2",
+   "action": "set_option",
+   "match": "add a hook that",
+   "text": "Add a hook that rejects every refund call outright whenever the `refund_justification` field has been left empty",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#2",
+   "action": "edit",
+   "field": "explanation",
+   "find": "(B), or bolting on a rejection hook (D).",
+   "replace": "(B), or bolting on a rejection hook (D). Enabling strict tool use (`strict: true`) would additionally guarantee that `reason_code` is a legal enum value, but it can't make the agent write a useful `justification`; that still needs the description guidance.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Ergänzt: strict tool use erzwingt den Enum-Wert, ersetzt die Beschreibung aber nicht."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#4",
+   "action": "set_option",
+   "match": "give the single agent",
+   "text": "Give the single agent even more tools, including advanced financial-analysis and multi-factor-authentication capabilities",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#4",
+   "action": "set_option",
+   "match": "introduce a lightweight intake",
+   "text": "Add an intake step that routes each case to a specialized subagent per category, each scoped to its own tools",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#4",
+   "action": "set_option",
+   "match": "keep one general agent",
+   "text": "Keep one general agent, but add 15+ few-shot examples that span returns, billing disputes, and account-security cases",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#5",
+   "action": "set_option",
+   "match": "make the system prompt",
+   "text": "Make the system-prompt wording even stronger and more emphatic, and repeat the rule at the end of every user turn",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#5",
+   "action": "set_option",
+   "match": "define escalate_to_human s input",
+   "text": "Make `customer_id`, `root_cause` and `attempted_actions` required in the tool's schema and enable `strict: true` on it",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Ohne strict tool use ist `required` keine Garantie; deterministisch wird es erst mit `strict: true`."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#5",
+   "action": "set_option",
+   "match": "add a hook that",
+   "text": "Add a hook that inspects each escalation after the fact and flags the ones with thin context for a later manual follow-up",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#5",
+   "action": "set_option",
+   "match": "split escalate_to_human into two",
+   "text": "Split `escalate_to_human` into two separate tools, one for routine escalations and one for urgent emergencies",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#5",
+   "action": "set_explanation",
+   "text": "Marking `customer_id`, `root_cause` and `attempted_actions` as required and enabling strict tool use (`strict: true`) makes the schema binding: strict mode \"guarantees that tool inputs always match your schema exactly,\" so an escalation can no longer go out without those fields. Without `strict: true`, `required` is only a strong hint, not a guarantee. The tool handler can additionally reject empty values. Stronger prompt wording (A) stays probabilistic, a hook that only flags escalations after the fact (C) doesn't stop them, and splitting the tool in two (D) doesn't address the missing context.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung an die korrigierte Lösung (required + strict: true) angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#7",
+   "action": "set_option",
+   "match": "bake a rigid fully",
+   "text": "Bake a rigid, fully enumerated if-then-else decision tree for every red-flag combination into the coordinator's prompt",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#7",
+   "action": "set_option",
+   "match": "have the coordinator inspect",
+   "text": "Have the coordinator check each subagent's result before dispatching the next one and escalate at the first red flag",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#7",
+   "action": "set_option",
+   "match": "remove the subagent layer",
+   "text": "Remove the subagent layer and have one agent call all of the underlying check tools directly, with its own branching logic",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#7",
+   "action": "set_option",
+   "match": "run all three checks",
+   "text": "Run all three checks in parallel to save overall time, then escalate afterward if any one of them has raised a red flag",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#8",
+   "action": "set_option",
+   "match": "rewrite the description with",
+   "text": "Rewrite the description with explicit use cases, example queries, and a clear boundary against `check_refund_eligibility`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#8",
+   "action": "set_option",
+   "match": "add structured error fields",
+   "text": "Add an `errorCategory` (e.g. transient, validation, business) and an `isRetryable` boolean to the tool's error responses",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#8",
+   "action": "set_option",
+   "match": "merge recommend_resolution and check_refund_eligibility",
+   "text": "Merge `recommend_resolution` and `check_refund_eligibility` into one combined tool so the model no longer has to choose at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#8",
+   "action": "set_option",
+   "match": "give both tools identical",
+   "text": "Give both tools identical, broadly worded descriptions so that the model has maximum flexibility in choosing whichever one fits",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "edit",
+   "field": "q",
+   "find": "exit code 0 for a valid file, non-zero for an invalid one",
+   "replace": "exit code 0 for a valid file, exit code 2 for an invalid one",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Stamm auf Exit-Code 2 präzisiert: Nur Exit 2 (oder deny-JSON) blockiert, Exit 1 ist nicht blockierend."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "set_option",
+   "match": "the file is written",
+   "text": "The file is written first, and the validation failure is only reported to Claude afterward as feedback",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "set_option",
+   "match": "the write is blocked",
+   "text": "The write is blocked before it runs, because exit code 2 from a `PreToolUse` hook denies the tool call",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Richtige Antwort behauptete, jeder Non-Zero-Exit blockiere; nur Exit 2 blockiert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "set_option",
+   "match": "the hook only applies",
+   "text": "Nothing is checked, because `PreToolUse` hooks only apply to `Bash` commands and a `Write` call bypasses them",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "set_option",
+   "match": "the write proceeds regardless",
+   "text": "The write proceeds anyway, since hooks are advisory and only log their result rather than enforcing anything",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#11",
+   "action": "set_explanation",
+   "text": "A `PreToolUse` command hook blocks the tool call when its script exits with code 2 (or returns a deny decision as JSON), so the invalid file is never written. That is why the script has to use exit code 2: any other non-zero code, such as 1, is only a non-blocking error and the write would go ahead. The hooks docs say: \"If your hook is meant to enforce a policy, use `exit 2`.\" The hook fires on the `Write` call itself (ruling out C), it runs before the tool executes (ruling out A), and with exit code 2 it enforces rather than advises (ruling out D).",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklärung auf Exit-Code 2 korrigiert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#12",
+   "action": "set_option",
+   "match": "yes the presence of",
+   "text": "Yes — any path that contains an `api` directory segment anywhere matches, since rule globs are evaluated loosely",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#12",
+   "action": "set_option",
+   "match": "no src api and",
+   "text": "No — those globs only cover `src/api/` and `lib/api/`; `server/api/**` or a broader `**/api/**` has to be added",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#12",
+   "action": "set_option",
+   "match": "yes but only once",
+   "text": "Yes, but only after the new files under `server/api/` have been committed to version control and the session restarts",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#12",
+   "action": "set_option",
+   "match": "no because rules never",
+   "text": "No, because rules never apply to any directory that did not yet exist when the rule file itself was first created",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#13",
+   "action": "set_option",
+   "match": "yes context fork only",
+   "text": "Yes — `context: fork` only changes what's displayed; all of the underlying reasoning still stays part of the session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#13",
+   "action": "set_option",
+   "match": "no the fork s",
+   "text": "No — the fork's exploratory reasoning stays isolated; only the final result the skill returns comes back to the session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#13",
+   "action": "set_option",
+   "match": "only if the skill",
+   "text": "No — and the final proposal is dropped as well, unless the skill explicitly writes it to a file before it finishes",
+   "src": "editorial",
+   "why": "Distraktor C war teilweise richtig (eine Zusammenfassung im Endergebnis kommt tatsächlich zurück); durch eindeutig falsche Annahme ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#13",
+   "action": "set_option",
+   "match": "yes but only after",
+   "text": "Yes, but only after a manual step merges the fork's full context back into the main thread once the skill has finished",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#13",
+   "action": "set_explanation",
+   "text": "`context: fork` runs the skill in a forked subagent context, which exists specifically to keep its exploratory back-and-forth out of the main session. Only the final result the skill returns comes back, so the proposal does arrive (ruling out C) while the intermediate questions and dead ends stay in the fork. It is not just a display change (A), and there is no manual re-merge step (D).",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung an neuen Distraktor C angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#16",
+   "action": "set_option",
+   "match": "repeat the requirement more",
+   "text": "Repeat the requirement more forcefully in the prompt: \"make sure all three conditions are always checked consistently\"",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#16",
+   "action": "set_option",
+   "match": "provide a small test",
+   "text": "Provide a small test suite covering every combination of active, role-present and role-valid, and share the failures after each attempt",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#16",
+   "action": "set_option",
+   "match": "ask claude to be",
+   "text": "Ask Claude to be more careful about edge cases this time and to double-check the logic before it returns the code",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#16",
+   "action": "set_option",
+   "match": "generate five separate attempts",
+   "text": "Generate five separate attempts in parallel and then manually pick whichever implementation looks the most correct",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#18",
+   "action": "set_option",
+   "match": "the formatting hook runs",
+   "text": "The formatting hook runs first because hooks run in alphabetical order, blocks the call, and type-checking never gets to run",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#18",
+   "action": "set_option",
+   "match": "both hooks run regardless",
+   "text": "Both hooks run regardless of which tool was called — the formatting check first, then the type-checking validation",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#18",
+   "action": "set_option",
+   "match": "only the type checking",
+   "text": "Only the type-checking hook runs, because it matches `Edit`; the formatting hook is scoped to `Write` and doesn't fire",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#18",
+   "action": "set_option",
+   "match": "neither hook runs since",
+   "text": "Neither hook runs, since `PreToolUse` hooks are only evaluated for `Write` calls and never for `Edit` calls",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "edit",
+   "field": "q",
+   "find": "What stops this from working?",
+   "replace": "What happens to the `Bash` call?",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Fragesatz setzte voraus, dass allowed-tools Bash blockiert; neutral formuliert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "set_option",
+   "match": "bash isn t in",
+   "text": "It fails: `Bash` isn't in the skill's `allowed-tools` list, so the skill can't invoke any tool outside that set",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Bisherige Lösung ist falsch (allowed-tools schränkt nicht ein) und bleibt als Distraktor."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "set_option",
+   "match": "allowed tools is only",
+   "text": "It fails only in `-p` mode, where `allowed-tools` removes all unlisted tools; interactive sessions simply ignore the list",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Distraktor B war im Kern richtig (Aufruf läuft über die normale Freigabe); durch eindeutig falsche Annahme ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "set_option",
+   "match": "bash is categorically disallowed",
+   "text": "It fails, because `Bash` is categorically disallowed inside every skill, regardless of the frontmatter configuration",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "set_option",
+   "match": "allowed tools doesn t",
+   "text": "Nothing in the skill blocks it: `allowed-tools` only pre-approves tools, so `Bash` goes through normal permission checks",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Neue richtige Antwort nach Doku: allowed-tools gibt nur frei, schränkt nicht ein."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "rekey",
+   "correct": "Nothing in the skill blocks it",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools schränkt nicht ein; richtig ist, dass Bash über die normale Freigabe läuft."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "set_explanation",
+   "text": "Per the skills docs, `allowed-tools` lists \"Tools Claude can use without asking permission during the turn that invokes this skill\" and \"does not restrict which tools are available: every tool remains callable.\" So the skill does not block `Bash`; the call simply isn't pre-approved and goes through the normal permission check (a prompt, allow/deny rules or the permission mode). This is the same in interactive sessions and in `-p` mode (ruling out B), the list doesn't confine the skill to `Read` and `Grep` (A), and `Bash` isn't banned inside skills (C). To really keep the skill away from Bash, list it under `disallowed-tools`, which removes tools from Claude's available pool while the skill is active.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung an die korrigierte Lösung angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#22",
+   "action": "set_option",
+   "match": "the third subagent s output",
+   "text": "The third subagent's output was never actually included in the combined text that was sent to the final synthesis step",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#22",
+   "action": "set_option",
+   "match": "a separate follow up",
+   "text": "Synthesis needs a separate follow-up turn before it can incorporate a third input source, so that output was skipped",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#22",
+   "action": "set_option",
+   "match": "the third subagent s findings",
+   "text": "Its findings sat in the middle of a very long combined prompt with nothing marking them as important, so they got less attention",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#22",
+   "action": "set_option",
+   "match": "the document analysis subagent",
+   "text": "The document-analysis subagent's output silently overwrote the third subagent's data before the synthesis pass ran",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#24",
+   "action": "set_option",
+   "match": "the two subagents share",
+   "text": "The two subagents share a common memory pool, so findings from the precedent research bleed into the recent-changes report",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#24",
+   "action": "set_option",
+   "match": "reusing the identical prompt",
+   "text": "The identical template carries an unintended thematic association between the tasks; the shared phrasing, not shared state, pulls it in",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#24",
+   "action": "set_option",
+   "match": "the coordinator s own",
+   "text": "The coordinator's own system prompt wasn't specific enough to keep the two request types apart when delegating them",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#24",
+   "action": "set_option",
+   "match": "the two delegations should",
+   "text": "The two delegations should have run one after the other instead of in parallel, so their results could not interfere",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#25",
+   "action": "set_option",
+   "match": "add explicit ordering language",
+   "text": "Add explicit ordering language to both subagents' system prompts, stating that report generation always comes after synthesis",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#25",
+   "action": "set_option",
+   "match": "add a hook on",
+   "text": "Add a hook on the coordinator's dispatch step that blocks any report-generation call until synthesis's result is present",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#25",
+   "action": "set_option",
+   "match": "add several few shot",
+   "text": "Add several few-shot examples to the coordinator's prompt that show synthesis completing before report generation starts",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#25",
+   "action": "set_option",
+   "match": "increase the coordinator s",
+   "text": "Increase the coordinator's context window so that it remembers the intended order of the pipeline steps more reliably",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#27",
+   "action": "set_option",
+   "match": "require every source to",
+   "text": "Require every source to carry structured metadata (date, methodology, sample size) that synthesis keeps attached to each claim",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#27",
+   "action": "set_option",
+   "match": "require subagents to hand",
+   "text": "Require subagents to hand off claim-source mappings (claim, source, date, short excerpt) that synthesis must preserve verbatim",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#27",
+   "action": "set_option",
+   "match": "add a coordinator level",
+   "text": "Add a coordinator-level quality gate that checks the finished report for citation mismatches before it is considered final",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#28",
+   "action": "set_option",
+   "match": "always return the partial",
+   "text": "Always return the partial results immediately, since some information is better than none and the error is transient",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#28",
+   "action": "set_option",
+   "match": "always escalate since any",
+   "text": "Always escalate to a human, since any incomplete research inherently needs a person to weigh in before it is used",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#28",
+   "action": "set_option",
+   "match": "judge whether the 60",
+   "text": "Judge whether the 60 results satisfy what the user asked; if the missing 90 could change the conclusions, retry or escalate",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#28",
+   "action": "set_option",
+   "match": "keep retrying indefinitely until",
+   "text": "Keep retrying indefinitely until all 150 results are collected, since the error was explicitly flagged as transient and retryable",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#29",
+   "action": "set_option",
+   "match": "retry every subagent indefinitely",
+   "text": "Retry every failing subagent indefinitely until it eventually succeeds, no matter how long the research run then takes",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#29",
+   "action": "set_option",
+   "match": "use a graduated retry",
+   "text": "Graduated retries with exponential backoff and a small attempt limit, then escalation or a documented partial result",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#29",
+   "action": "set_option",
+   "match": "remove retries entirely and",
+   "text": "Remove retries entirely and fail the run immediately on the very first transient error, so that failures surface faster",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#29",
+   "action": "set_option",
+   "match": "always escalate any transient",
+   "text": "Escalate every transient error straight to a human operator without first attempting any automated recovery or retry",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#29",
+   "action": "edit",
+   "field": "explanation",
+   "find": "A graduated backoff-and-retry-limit policy",
+   "replace": "A graduated backoff-and-retry-limit policy (e.g. 100ms, then 500ms, then 2s, then stop)",
+   "src": "editorial",
+   "why": "Beispielwerte aus der gestrafften richtigen Option in die Erklärung übernommen."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#30",
+   "action": "set_option",
+   "match": "increase the context window",
+   "text": "Increase the context window so that the model can hold on to its specificity across all 50 documents within a single pass",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#30",
+   "action": "set_option",
+   "match": "split synthesis into two",
+   "text": "Split synthesis into a map phase that extracts specific claims per source and a reduce phase that merges those outputs",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#30",
+   "action": "set_option",
+   "match": "simply process fewer source",
+   "text": "Simply process fewer source documents per run, trimming the set to whatever the model's effective attention span seems to be",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#30",
+   "action": "set_option",
+   "match": "have the model attach",
+   "text": "Have the model attach a confidence score to each claim and drop everything below a fixed cutoff from the final report",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#8",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-5#8 (gleiche Lage, gleiches Lösungspaar: Beschreibungen schärfen + errorCategory/isRetryable)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#19",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-5#16 (allowed-tools blockiert Bash nicht; dort bereits korrekt live)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#24",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Lösung stützt sich auf einen nicht belegten Mechanismus (Prompt-Vorlage überträgt Themen); gleiche Begründung wie exam-5#29 in h5"
   }
  ],
  "hold": []
