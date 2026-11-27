@@ -6911,6 +6911,992 @@
    "text": "An averaged score lets one very weak field hide behind several strong ones, which is exactly how a category confidence of 0.32 got auto-approved (0.95, 0.93, 0.32 and 0.87 still average about 0.77). A minimum-field threshold ensures no single field is silently the weak link, which is why the flat-0.72 receipts perform better in the audit despite a lower \"overall\" score. The median (A) would mask the weak field just as well (0.90 here), and lowering the threshold (D) lets even more weak fields through.",
    "src": "editorial",
    "why": "Erklärung an korrigierten Stamm (arithmetischer Mittelwert) angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#60",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#60 (Fehlerlog ohne Ursache -> detected_pattern-Feld fuer Root-Cause-Analyse)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#3",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#7 (Agent vergisst Bestellnummer/Betrag im langen Verlauf -> persistenter Case-Facts-Block)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#4",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#24 (Subagent-Timeout -> strukturierter Fehlerkontext statt stiller Leermeldung; vgl. exam-2#9)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#5",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-6#35 (selten veraenderliche Katalogdaten werden per Tool-Aufruf geholt -> als MCP-Resource bereitstellen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#6",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#9 (Eskalation nach selbstberichteter Konfidenz -> schlecht kalibriert)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#9",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-4#9 (Eskalation nach Anzahl der Turns -> explizite Kriterien (Policy-Luecke) statt Proxy; vgl. exam-3#40)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#17",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#17 (unbekannter Service -> erst Designfragen stellen lassen (Interview-Pattern); hier nur als Warum-Frage)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#20",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#37 (langer Verlauf verliert frueh gefundene Details/Constraints -> Scratchpad-Datei)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#21",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-3#10 (zwei sich ausschliessende Richtungen von gemeinsamem Stand aus -> Session forken)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#22",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#18 (Subagent kennt den Kontext des Koordinators nicht -> explizit in den Aufrufprompt; vgl. exam-1#22)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#23",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#25 (Synthese braucht viele einfache Faktenchecks -> eng gescoptes Verify-Tool, Komplexes ueber Koordinator)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#28",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#29 (unterbrochene Pipeline fortsetzen -> Zustand exportieren, Manifest beim Resume laden)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#31",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#10 (generisches isError fuer alle Fehler -> errorCategory und isRetryable; vgl. exam-6#40)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#32",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-6#35 (Katalog per Tool 15+ mal abgefragt -> als MCP-Resource bereitstellen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#34",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#10 (reine Warum-Frage zu errorCategory/isRetryable (Validation-Fehler wird durch Retry nicht besser))"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#35",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-6#37 (22 Tools, Agent waehlt suboptimal -> Toolset je Aufgabe einschraenken; vgl. exam-1#40)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#38",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#27 (Subagents liefern Prosa, Zuordnung geht verloren -> strukturierte Claim-Source-Zuordnung)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#41",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#45 (doppelte PR-Kommentare -> bisherige Findings in den Kontext, nur Neues melden; zudem waren C und D vertretbar)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#11",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Stamm und Loesung widersprechen der Doku: argument-hint ist nur ein Autocomplete-Hinweis und fragt nichts ab, und Skills werden laut Doku innerhalb der laufenden Session neu eingelesen (\"picks up the change within the current session\"); der beschriebene Unterschied zwischen alter und neuer Session ist so nicht moeglich"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#13",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/commands",
+   "why": "Stamm beruht auf einem nicht existierenden verbose/debug-Flag fuer die Kompaktierung (/compact nimmt nur optionale Fokus-Anweisungen); eine korrigierte Fassung (Scratchpad gegen Detailverlust) waere Dublette von utkarsh1agarwal:exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#18",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/commands",
+   "why": "Begruendung der Loesung falsch: /branch bzw. /fork kopieren den Gespraechsverlauf, ein Fork verliert den Refactoring-Kontext also nicht; ohne diese Annahme ist Fork vs. Weiterarbeiten eine Ermessensfrage ohne eindeutige Antwort"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#29",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Loesung nicht haltbar: ein frisch gestarteter Subagent kann ohne geteilten Zustand nicht gezielt das Thema eines frueheren Auftrags nennen; \"gleiches Prompt-Template\" als Ursache ist nicht belegt. Die belegte Erklaerung (Kontext kommt nur ueber den Aufrufprompt) waere Dublette von utkarsh1agarwal:exam-2#18"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#39",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Loesung widerspricht dem Faktenblatt: disallowedTools nimmt im Agent SDK auch eingeschraenkte Regeln wie Bash(rm *) an, \"hat kein Konzept fuer Pfade\" ist so nicht haltbar; fuer disallowed-tools in Skills ist die Spezifizierer-Syntax nicht belegt. Die eigentliche Ursache im Stamm bleibt offen"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#1",
+   "action": "set_option",
+   "match": "Increase the intake",
+   "text": "Move the \"skip simple cases\" rule into the investigation subagent's own system prompt",
+   "src": "editorial",
+   "why": "length balance; Temperature-Distraktor durch gleich falsche Prompt-Fehlannahme ersetzt (Sampling-Parameter ab API-Version 2026-10-21 entfernt)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#1",
+   "action": "set_option",
+   "match": "Add a step",
+   "text": "Have the coordinator call investigation only for cases the intake marked complex",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#1",
+   "action": "set_option",
+   "match": "Include 5 few-shot",
+   "text": "Add 5 few-shot examples to the intake prompt showing requests classified as simple",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#1",
+   "action": "set_option",
+   "match": "Increase the token",
+   "text": "Raise the intake subagent's token budget so it is more confident in its decisions",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#1",
+   "action": "set_explanation",
+   "text": "A system-prompt instruction (\"skip investigation for simple cases\") provides only probabilistic compliance, and moving it into another subagent's prompt (A) or adding examples (C) keeps it probabilistic. The reliable fix is a deterministic gate in the coordinator that simply never invokes the investigation subagent for cases the intake subagent already marked simple, enforcing the decision at the control-flow level instead of hoping the model follows a prose instruction.",
+   "src": "editorial",
+   "why": "Erklaerung um den neuen Distraktor A ergaenzt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#2",
+   "action": "set_option",
+   "match": "Add 8 few-shot",
+   "text": "Add stricter input validation to both tools so malformed order_id or amount values fail",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Few-Shot-Distraktor ersetzt: widersprach live utkarsh1agarwal:exam-1#55 (Few-Shot als naechster Hebel); Validierung hilft nicht, da beide Tools dieselben Inputs haben"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#2",
+   "action": "set_option",
+   "match": "Rename `request_refund_exception` to",
+   "text": "Rename `request_refund_exception` to `escalate_refund_exception_review` with explicit when-to-use guidance",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#2",
+   "action": "set_option",
+   "match": "Merge both tools",
+   "text": "Set `strict: true` on both tools so every call's inputs must match their shared schema",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Merge-Distraktor ersetzt: Zusammenlegen mit action-Parameter ist laut Doku eine empfohlene Option (\"group them into a single tool with an `action` parameter\"); strict regelt nur Inputs, nicht die Auswahl"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#2",
+   "action": "set_option",
+   "match": "Split the tools",
+   "text": "Split the tools into separate subagents, each with only its own tool, to remove the choice",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#2",
+   "action": "set_explanation",
+   "text": "Improving the descriptions with input formats didn't help because both tools accept identical inputs: the confusion is about *when* each tool applies. Renaming the exception tool so its purpose is unmistakable and adding explicit \"use this when policy does NOT allow the refund\" guidance completes the description-level fix. Stricter input validation (A) and `strict: true` (C) only check that inputs match the schema, so a well-formed call to the wrong tool still goes through. Splitting the tools into separate subagents (D) is a far more disruptive restructuring that just moves the routing decision elsewhere.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklaerung an neue Distraktoren angepasst; strict \"guarantees that tool inputs always match your schema exactly\", sagt aber nichts zur Toolauswahl"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#7",
+   "action": "set_option",
+   "match": "The model should",
+   "text": "The model should never produce customer-facing text in the same response as a pending tool call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#7",
+   "action": "set_option",
+   "match": "The loop must",
+   "text": "The loop must check for `stop_reason: \"tool_use\"`, then run the pending tool despite the text",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#7",
+   "action": "set_option",
+   "match": "The response should",
+   "text": "The reply should be split into two separate API calls, one for the text and one for the tool",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#7",
+   "action": "set_option",
+   "match": "Add a deterministic",
+   "text": "Add a deterministic check for phrases like \"processed\" in the text to stop early termination",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#8",
+   "action": "set_option",
+   "match": "Consolidate into a",
+   "text": "Add a retry wrapper that calls the other eligibility tool whenever the first one returns an error",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Distraktor A ersetzt: Zusammenlegen mit check_level-Parameter ist laut Doku eine empfohlene Option und haette mit C ein zweites vertretbares Paar ergeben"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#8",
+   "action": "set_option",
+   "match": "Expand both tool",
+   "text": "Expand both descriptions with explicit use cases, e.g. the quick check only for simple returns under 48 hours",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#8",
+   "action": "set_option",
+   "match": "Structure error responses",
+   "text": "Return errors with `errorCategory` (timeout/validation/permission/policy) and an `isRetryable` flag",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#8",
+   "action": "set_option",
+   "match": "Give both tools",
+   "text": "Give both tools identical, broader descriptions so the agent can freely choose whichever one fits the case",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#8",
+   "action": "set_explanation",
+   "text": "B fixes the tool-selection confusion by making each tool's intended use case explicit; C fixes the separate problem of the coordinator being unable to tell a retryable timeout from a hard policy failure by giving error responses a category and a retryability flag. A retry wrapper that falls back to the other tool (A) neither explains the error nor fixes the selection problem, and making the descriptions identical (D) would make the original confusion worse, not better.",
+   "src": "editorial",
+   "why": "Erklaerung an neuen Distraktor A angepasst"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#10",
+   "action": "set_option",
+   "match": "The subagent needs",
+   "text": "The subagent needs the full conversation history passed to it explicitly on every call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#10",
+   "action": "set_option",
+   "match": "The prompt over-specifies",
+   "text": "The prompt hard-codes if-then-else steps; give criteria and tools and let it judge",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#10",
+   "action": "set_option",
+   "match": "The coordinator should",
+   "text": "The coordinator should route unusual cases to a different, more specialized subagent instead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#10",
+   "action": "set_option",
+   "match": "The refund-decision subagent",
+   "text": "The refund-decision subagent shouldn't be given any investigation tools of its own at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#12",
+   "action": "set_option",
+   "match": "Personal skills are",
+   "text": "Keep it at user level, since personal skills load faster, and have each engineer copy the file over",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#12",
+   "action": "set_option",
+   "match": "The user-level location",
+   "text": "User-level skills aren't shared via git; move it to `.claude/skills/refactor-tests/` in the repo",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#12",
+   "action": "set_option",
+   "match": "Create a duplicate",
+   "text": "Keep the user-level copy and add a duplicate at project level so engineers can use either one",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#12",
+   "action": "set_option",
+   "match": "Convert the skill",
+   "text": "Convert the skill into a slash command, since skills can't be shared across a team at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#14",
+   "action": "set_option",
+   "match": "`context: fork` writes",
+   "text": "`context: fork` runs in a temporary sandbox, and no file the fork writes exists outside it",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#14",
+   "action": "set_option",
+   "match": "A forked subagent's",
+   "text": "Only the fork's summarized result comes back; a document built inside it is lost unless saved to a file",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "richtige Option korrigiert: laut Doku kommt das Ergebnis des Forks automatisch zurueck (\"summarizes its results and returns them to your main conversation\"), nur Zwischenergebnisse nicht"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#14",
+   "action": "set_option",
+   "match": "Subagents are not",
+   "text": "Subagents aren't permitted to produce long-form output at all when `context: fork` is set",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#14",
+   "action": "set_option",
+   "match": "The reference exists,",
+   "text": "The reference exists, but fork-isolated output only shows up through the `/memory` command",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "length balance; Distraktor konkretisiert (/memory listet Memory-Dateien, keine Fork-Ausgaben)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#14",
+   "action": "set_explanation",
+   "text": "With `context: fork`, the skill runs in a forked subagent that summarizes its results and returns them to the main conversation when it finishes. Intermediate work, such as a long reference document assembled inside the fork, does not come back verbatim, so the main session only knows what that summary contains. To reuse the full reference, the fork should write it to a file the main session can read, or put the needed content into its final result. `context: fork` isolates context; it does not sandbox the fork's files (A) or forbid long output (C), and `/memory` lists memory files, not fork output (D).",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklaerung neu: Doku \"summarizes its results and returns them to your main conversation when it finishes\""
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "set_option",
+   "match": "Multiple hooks on",
+   "text": "Matching hooks run in parallel; combine formatter and linter into one hook that runs them in sequence",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "neue richtige Option: laut Doku laufen passende Hooks parallel (\"its matching hooks run in parallel\"); A beschrieb das bereits fast richtig"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "set_option",
+   "match": "The hooks are",
+   "text": "The hooks run in the order they're listed; move the formatter's entry above the linter's entry",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "alte Loesung (Reihenfolge der Eintraege) ist laut Doku falsch und wird Distraktor"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "set_option",
+   "match": "Hooks always run",
+   "text": "Hooks always run concurrently, so this false violation is unavoidable and has to be tolerated",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "set_option",
+   "match": "This is expected;",
+   "text": "This is expected; configure the linter to tolerate whatever the formatter happens to produce",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "rekey",
+   "correct": "Matching hooks run in parallel",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Hooks desselben Events laufen parallel ohne garantierte Reihenfolge; Umsortieren (alte Loesung B) aendert nichts, ein gemeinsames Skript mit fester Abfolge schon"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#15",
+   "action": "set_explanation",
+   "text": "When an event fires, all of its matching hooks run in parallel, with no guaranteed order between them. The linter can therefore read the file before the formatter has finished, and moving entries around in `.claude/settings.json` (B) changes nothing. Running both steps from a single hook command, formatter first and linter second, makes validation always see the formatted file. The failure is therefore not unavoidable (C), and loosening the linter (D) only hides the race condition.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklaerung neu nach Rekey; Doku \"When an event fires, its matching hooks run in parallel.\""
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#16",
+   "action": "set_option",
+   "match": "The request is silently",
+   "text": "The request is silently blocked, because Bash isn't listed in that skill's own `allowed-tools` field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#16",
+   "action": "set_option",
+   "match": "Claude can still",
+   "text": "Bash stays callable; `allowed-tools` only pre-approves Read and Grep, and normal permissions apply",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#16",
+   "action": "set_option",
+   "match": "The request is blocked",
+   "text": "Bash is allowed once, after which the skill's `allowed-tools` list blocks any further Bash calls",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "length balance; Distraktor C ersetzt (\"blockiert, wenn niemand freigeben kann\" waere in headless-Laeufen teilweise richtig)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#16",
+   "action": "set_option",
+   "match": "`allowed-tools` and `disallowedTools`",
+   "text": "`allowed-tools` and `disallowed-tools` are equivalent; listing tools in one excludes all others",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#16",
+   "action": "set_explanation",
+   "text": "`allowed-tools` is a pre-approval list, not a restriction: per the docs, every tool remains callable and the permission settings still govern tools that aren't listed. So Claude can still request Bash, and the request goes through the normal approval path (or succeeds if Bash is already approved). Treating `allowed-tools` as a security boundary is the mistake; a real block on Bash needs `disallowed-tools` in the skill's frontmatter, a deny rule, or a blocking hook.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Feldname auf disallowed-tools (Skill-Frontmatter) korrigiert; Doku \"every tool remains callable\""
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#19",
+   "action": "set_option",
+   "match": "The glob `src/api/**/*.ts`",
+   "text": "`src/api/**/*.ts` only matches paths under `src/api/`; `src/api-client/` merely shares a prefix",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#19",
+   "action": "set_option",
+   "match": "`.claude/rules/` files only",
+   "text": "`.claude/rules/` files only apply to files that already existed when the current session started",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#19",
+   "action": "set_option",
+   "match": "Glob patterns are",
+   "text": "Glob patterns in `paths` are case-sensitive, and the new file's path casing doesn't match",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#19",
+   "action": "set_option",
+   "match": "Rule paths require",
+   "text": "Rule paths need an exact directory match, so sibling directories are always excluded by design",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#24",
+   "action": "set_option",
+   "match": "One specific subagent",
+   "text": "One specific subagent must have misattributed a source; re-run it with stricter instructions",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#24",
+   "action": "set_option",
+   "match": "The report-writing step",
+   "text": "The report writer introduces the errors itself; add a citation-cleanup pass after the report is done",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#24",
+   "action": "set_option",
+   "match": "Add an explicit",
+   "text": "Add a coordinator checkpoint that checks combined findings for citation and consistency errors",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#24",
+   "action": "set_option",
+   "match": "The problem is",
+   "text": "Tool responses format citations inconsistently; normalize the citation format with a hook",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#25",
+   "action": "set_option",
+   "match": "Always return the",
+   "text": "Always return the two successful results as a partial report, since some data beats none",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#25",
+   "action": "set_option",
+   "match": "Reason about whether",
+   "text": "Synthesis was the core of the request, so escalate instead of returning partial output",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#25",
+   "action": "set_option",
+   "match": "Retry the synthesis",
+   "text": "Retry synthesis exactly once more and then return whatever it produces, success or failure",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#25",
+   "action": "set_option",
+   "match": "Discard everything and",
+   "text": "Discard both results and restart the whole three-subagent pipeline from the very beginning",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#26",
+   "action": "set_option",
+   "match": "Remove web search",
+   "text": "Remove web search entirely and tell the subagent in its prompt to rely only on its own documents",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#26",
+   "action": "set_option",
+   "match": "Replace the general",
+   "text": "Swap web search for a scoped tool that can only verify claims against the approved documents",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#26",
+   "action": "set_option",
+   "match": "Add a stronger",
+   "text": "Add a stronger system-prompt warning against using web search to expand the document scope",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#26",
+   "action": "set_option",
+   "match": "Let the coordinator",
+   "text": "Let the coordinator strip any external citations from the subagent's output after the fact",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#26",
+   "action": "edit",
+   "field": "explanation",
+   "find": "it technically still has the power to exceed.",
+   "replace": "it technically still has the power to exceed. Removing web search outright (A) also removes the fact-checking the tool was added for in the first place.",
+   "src": "editorial",
+   "why": "Erklaerung zu A ergaenzt (A verliert die Verifikationsfaehigkeit)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#27",
+   "action": "set_option",
+   "match": "Require every finding",
+   "text": "Require each finding passed to synthesis to carry its date, methodology notes and source count",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#27",
+   "action": "set_option",
+   "match": "Instruct synthesis to prioritize",
+   "text": "Tell synthesis to always prioritize the most recent finding, however many sources support the others",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#27",
+   "action": "set_option",
+   "match": "Have synthesis explicitly",
+   "text": "Have synthesis weight corroboration, ranking multi-source findings above one uncorroborated report",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#27",
+   "action": "set_option",
+   "match": "Instruct synthesis to",
+   "text": "Tell synthesis to exclude every finding that doesn't come from the single most recent source",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#30",
+   "action": "set_option",
+   "match": "Store every source",
+   "text": "Store every source as a permanent, stable URL so readers can always check the original text",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#30",
+   "action": "set_option",
+   "match": "When resuming research",
+   "text": "On resuming after a gap, re-check that cited sources are still current before reuse",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#30",
+   "action": "set_option",
+   "match": "Have a policy",
+   "text": "Adopt a policy of never citing any source that is more than six months old at publication",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#30",
+   "action": "set_option",
+   "match": "Re-run the entire",
+   "text": "Re-run the entire original research pipeline from scratch whenever new work touches the topic",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#33",
+   "action": "set_option",
+   "match": "Use a single",
+   "text": "Read only the first 50 lines of each file so that every sequential read returns faster",
+   "src": "editorial",
+   "why": "length balance; Distraktor A ersetzt (ein einziger Bash-Befehl ueber alle drei Dateien haette die Round-Trips ebenfalls reduziert und waere vertretbar gewesen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#33",
+   "action": "set_option",
+   "match": "Emit all three",
+   "text": "Emit all three reads in one response as separate tool-use blocks so they can run concurrently",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#33",
+   "action": "set_option",
+   "match": "Split the analysis",
+   "text": "Split the analysis across three separate sessions, each one reading exactly one of the files",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#33",
+   "action": "set_option",
+   "match": "Keep reading sequentially,",
+   "text": "Keep reading sequentially, but cache each file's contents locally to avoid re-reading it later",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#36",
+   "action": "set_option",
+   "match": "Add a hook that runs after",
+   "text": "Add a hook that runs after each Bash command finishes, checks for out-of-scope paths and rolls back",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#36",
+   "action": "set_option",
+   "match": "Have the agent",
+   "text": "Have the agent run its own path-check command before each modification as a self-safeguard",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#36",
+   "action": "set_option",
+   "match": "Add a prompt",
+   "text": "Add a prompt rule stating the boundary, then monitor the logs afterward for any violations",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#36",
+   "action": "set_option",
+   "match": "Add a hook that runs *before*",
+   "text": "Add a `PreToolUse` hook that checks the target path against `workspace_root` and blocks the call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#37",
+   "action": "set_option",
+   "match": "The operation timed",
+   "text": "The operation timed out and will most likely succeed if retried with exponential backoff",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#37",
+   "action": "set_option",
+   "match": "The agent lacks",
+   "text": "The agent lacks authorization; don't retry, but escalate, get other credentials or skip",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#37",
+   "action": "set_option",
+   "match": "The input was",
+   "text": "The input was malformed, so the agent should reformat the arguments and then retry the call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#37",
+   "action": "set_option",
+   "match": "The operation actually",
+   "text": "The operation actually succeeded with an empty result and can safely be treated as a no-op",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#40",
+   "action": "set_option",
+   "match": "Keep a single",
+   "text": "Keep a single agent and use prompt instructions to say which tools fit each phase, nothing else",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#40",
+   "action": "set_option",
+   "match": "Delegate the modification",
+   "text": "Delegate modification to a subagent with fewer tools whose prompt carries the key exploration findings",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#40",
+   "action": "set_option",
+   "match": "Run the whole",
+   "text": "Run the whole task in one phase with every tool available, since narrowing isn't worth the overhead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#40",
+   "action": "set_option",
+   "match": "Have the developer",
+   "text": "Have the developer manually copy the relevant findings into a brand-new session before modifying",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#42",
+   "action": "set_option",
+   "match": "The generated code",
+   "text": "The tests assume Unix-style paths; rewriting them to use Windows-style paths fixes the CI runs",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#42",
+   "action": "set_option",
+   "match": "The test-generation prompt",
+   "text": "Generation never learned the CI fixture layout; document fixtures and relative paths in `CLAUDE.md`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#42",
+   "action": "set_option",
+   "match": "CI containers mount",
+   "text": "CI containers mount volumes differently; the fix belongs in the container setup, not the tests",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#42",
+   "action": "set_option",
+   "match": "The test-generation step",
+   "text": "Test generation runs with `context: fork`, which is why it can't see the rest of the repository",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#43",
+   "action": "set_option",
+   "match": "Before posting each",
+   "text": "Before posting, validate each `line_number` against the diff's range and drop anything outside it",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#43",
+   "action": "set_option",
+   "match": "Switch to a",
+   "text": "Switch to a larger model on the theory that it understands file scope and diff bounds better",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#43",
+   "action": "set_option",
+   "match": "Lower the sampling",
+   "text": "Add few-shot examples of in-range findings so the model learns to keep line numbers in the diff",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "length balance; Temperature-Distraktor durch gleich falsche Few-Shot-Fehlannahme ersetzt (Sampling-Parameter ab API-Version 2026-10-21 entfernt)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#43",
+   "action": "set_explanation",
+   "text": "A prompt instruction to \"only report changed lines\" (A) or few-shot examples (D) still leave it to the model not to generate a line number outside that range, and a larger model (C) offers no guarantee either. Validating each finding's `line_number` against the PR's actual diff bounds before posting is the deterministic check that filters out-of-range findings, rather than hoping instruction-following prevents them.",
+   "src": "editorial",
+   "why": "Erklaerung an neuen Distraktor D angepasst"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#44",
+   "action": "set_option",
+   "match": "Add an informal",
+   "text": "Move the try/catch guidance into the root `CLAUDE.md` so Claude applies it with more judgment",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Distraktor A ersetzt: eine Ausnahme im Regeltext (\"except in test files\") waere nach Korrektur von B gleich wirksam gewesen"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#44",
+   "action": "set_option",
+   "match": "Add a second",
+   "text": "Add a rule scoped to `src/**/*.test.ts` stating the try/catch guidance doesn't apply to tests",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "richtige Option korrigiert: beide Regeldateien laden fuer Testdateien (src/**/*.ts trifft auch *.test.ts), die Testregel ersetzt die Produktionsregel also nicht, sondern muss die Ausnahme ausdruecklich nennen"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#44",
+   "action": "set_option",
+   "match": "Remove all path-scoped",
+   "text": "Remove all path-scoped rules and rely solely on one root-level memory file for every convention",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#44",
+   "action": "set_explanation",
+   "text": "`src/**/*.ts` also matches `src/auth.test.ts`, so the security rule keeps loading for test files; loaded instruction files are added to context together rather than overriding each other. A second rule scoped to test files can therefore state the exception explicitly (try/catch wrapping doesn't apply to tests, `rejects.toThrow()` is the expected pattern) while production files keep the original guidance. Moving the guidance into the root `CLAUDE.md` (A) or dropping path-scoped rules (C) makes it load everywhere, and switching it off (D) loses it for production code too.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklaerung neu; Doku: \"concatenated into context rather than overriding each other\"; `**/*.ts` trifft .ts-Dateien ueberall unter der Basis"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#45",
+   "action": "set_option",
+   "match": "Lower `max_tokens` to",
+   "text": "Lower `max_tokens` to force shorter and hopefully simpler tests that skip internal details",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#45",
+   "action": "set_option",
+   "match": "Provide 2–3 concrete",
+   "text": "Add 2-3 before/after examples of detail vs. behavior tests; record the rule in `CLAUDE.md`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#45",
+   "action": "set_option",
+   "match": "Have developers manually",
+   "text": "Have developers manually rewrite every generated test to remove implementation-detail asserts",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#46",
+   "action": "set_option",
+   "match": "Run the test-generation",
+   "text": "Run the generation step several times and have a developer manually reconcile any conflicts",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#46",
+   "action": "set_option",
+   "match": "Adopt a policy",
+   "text": "Adopt a policy that every test name in the codebase be globally unique, enforced by discipline",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#46",
+   "action": "set_option",
+   "match": "Include an explicit",
+   "text": "Pass an explicit list of the file's existing test names with an instruction not to reuse any",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#46",
+   "action": "set_option",
+   "match": "Disable test generation",
+   "text": "Disable test generation entirely for any file that already contains existing tests of its own",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#47",
+   "action": "set_option",
+   "match": "The review job should",
+   "text": "Have the review read a snapshot of the files as they are in the PR diff, before any reformatting",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#47",
+   "action": "set_option",
+   "match": "The formatter is",
+   "text": "Configure the formatter so it never changes line counts, even when it reformats the PR's files",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#47",
+   "action": "set_option",
+   "match": "This is expected",
+   "text": "Accept it as unavoidable and have the review prompt tell the model to guess the line-number drift",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-5#47",
+   "action": "set_option",
+   "match": "The review job",
+   "text": "Give the review job a larger context window so it can account for the reformatting on its own",
+   "src": "editorial",
+   "why": "length balance"
   }
  ],
  "hold": []
