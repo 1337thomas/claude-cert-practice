@@ -2904,6 +2904,993 @@
    "text": "Exception tunneling; the fix is to retry the failed fetch at every boundary until it succeeds instead of passing any error along",
    "src": "editorial",
    "why": "Abhilfe in A deckte sich fast mit der Lösung; jetzt eindeutig falsch."
+  },
+  {
+   "id": "milind:Q202",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct built-in tool approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct built-in tool approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q202",
+   "action": "set_explanation",
+   "text": "Grep is the built-in tool for content-based file search — finding files that contain a specific string or pattern. Glob is the built-in tool for path-based file discovery (finding files by name/extension patterns). Read opens and reads file content. The correct two-tool pipeline is: Grep (find files containing the string) then Read (open the matched files). Creating a shell script via Write to run grep is an unnecessary workaround when the built-in Grep tool handles this directly. Read does not support wildcard scanning. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q212",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the most efficient approach using built-in tools?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the most efficient approach using built-in tools?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q212",
+   "action": "set_explanation",
+   "text": "Glob is a path-pattern tool — it filters by filename and path patterns, not content. The most efficient approach is tightening the Glob pattern itself: specifying subdirectories (`src/`), excluding known artifact directories, and using precise extension patterns. This keeps results small before any downstream processing. Using Read to check content type is expensive (opens every file); using Grep for path filtering misuses a content-search tool; creating a filter script via Write is unnecessary overhead when Glob patterns can express the constraint. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q228",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool should you use",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool should you use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q228",
+   "action": "set_explanation",
+   "text": "Glob is the purpose-built tool for file path pattern matching using glob syntax. When you need to find files by name, extension, or path pattern, Glob is the correct choice. Grep searches file contents, Read requires known paths, and Bash's `find` command is a fallback when Glob is insufficient. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q229",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool is most appropriate?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool is most appropriate?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q229",
+   "action": "set_explanation",
+   "text": "Grep is designed for content search — finding patterns within file contents. Searching for function calls, import statements, or error messages across a codebase is Grep's primary use case. Glob finds files by path (not content); Read requires knowing the file path; Edit is for making changes. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q241",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach best builds codebase understanding incrementally",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach best builds codebase understanding incrementally",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q241",
+   "action": "set_explanation",
+   "text": "Incremental understanding (Grep → Read → trace) is more efficient than exhaustive file reading. Grep identifies relevant entry points and patterns without loading file contents; Read follows the specific paths that matter; this approach scales to large codebases without context window explosion. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q247",
+   "action": "edit",
+   "field": "q",
+   "find": "What tool sequence should you use?",
+   "replace": "The dedicated Glob and Grep tools are available. What tool sequence should you use?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q247",
+   "action": "set_explanation",
+   "text": "The incremental approach: first Grep for `validateUserInput` to find all direct usages and exports; then Grep for any names that export/re-export the function to trace through wrapper layers. This builds a complete call graph without reading entire files or loading irrelevant content. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q257",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool and approach is correct?",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool and approach is correct?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q257",
+   "action": "set_explanation",
+   "text": "Grep is the correct tool for content-based searches like finding import statements. The pattern matches the import syntax with the specific module path. Glob finds files by path pattern (not content); Read requires knowing which files to read; `ls` only lists filenames. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q331",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the most efficient tool approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the most efficient tool approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q331",
+   "action": "set_explanation",
+   "text": "Grep for routing patterns identifies exactly which files contain route definitions without loading the entire codebase. Following up with Read on only the matched files provides the implementation details. This incremental approach scales efficiently: Grep first (broad, content-aware), then Read (targeted, deep). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q352",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of built-in tools is most efficient?",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of built-in tools is most efficient?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q352",
+   "action": "set_explanation",
+   "text": "Grep searching for `useState` across all React files is the single most efficient approach — it searches content directly without needing to enumerate files first. Providing the file pattern to Grep (e.g., `*.tsx`) makes it targeted. The Glob-then-Read approach requires two steps and loads entire file contents unnecessarily. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q365",
+   "action": "edit",
+   "field": "q",
+   "find": "When is it appropriate to use Bash",
+   "replace": "The dedicated Glob and Grep tools are available. When is it appropriate to use Bash",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q365",
+   "action": "set_explanation",
+   "text": "Built-in tools should be preferred for their intended purposes (file operations, content search, pattern matching). Bash is appropriate for operations requiring shell execution: running tests, build commands, git operations, or complex multi-step shell workflows that don't have a dedicated built-in tool equivalent. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q375",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q375",
+   "action": "set_explanation",
+   "text": "Reading all 847 files is unnecessary and context-exhausting. The correct pattern is Glob (file discovery) → Grep (content filtering) → Read (targeted deep read of relevant files only). This incremental approach builds understanding without loading irrelevant file contents. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q387",
+   "action": "edit",
+   "field": "q",
+   "find": "Which combination of built-in tools would you use",
+   "replace": "The dedicated Glob and Grep tools are available. Which combination of built-in tools would you use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q387",
+   "action": "set_explanation",
+   "text": "This is the canonical incremental built-in tools workflow: Grep (content-aware discovery) → Read (targeted full-file read) → Edit (precise modification). Each tool is used for its specific strength, minimizing unnecessary data loading while achieving the complete task. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q392",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool sequence is most efficient?",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool sequence is most efficient?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q392",
+   "action": "set_explanation",
+   "text": "Multi-step content analysis requires chained Grep operations: first find the candidate files (onClick components), then narrow within those files to find the specific anti-pattern (onClick without accessibility). This progressive filtering avoids loading irrelevant files while precisely identifying the target pattern. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q403",
+   "action": "edit",
+   "field": "q",
+   "find": "When should you choose to have an agent use",
+   "replace": "The dedicated Glob and Grep tools are available. When should you choose to have an agent use",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q403",
+   "action": "set_explanation",
+   "text": "The tools serve complementary roles in code understanding. Grep is efficient for locating (confirming which file has the function) without loading irrelevant content. Read provides depth when you need the full implementation context — but only after Grep confirms where to look. This incremental approach avoids unnecessary file loading. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q405",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach finds all test files?",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach finds all test files?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q405",
+   "action": "set_explanation",
+   "text": "A recursive glob pattern like `**/*test*.py` matches all files with \"test\" in the name anywhere in the directory tree, regardless of nesting level or location. This handles the three-location scenario in a single operation. Multiple targeted globs work but are less efficient; Grep for imports finds test files by content but misses non-pytest tests. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q471",
+   "action": "edit",
+   "field": "q",
+   "find": "Which combination of built-in tools is most appropriate for this workflow?",
+   "replace": "The dedicated Glob and Grep tools are available. Which combination of built-in tools is most appropriate for this workflow?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q471",
+   "action": "set_explanation",
+   "text": "Grep searches file contents and can limit the search with its `glob` (or `type`) parameter, so one call finds every `.py` file that imports the module; Read then provides the full files for extracting the signatures. Listing all `.py` files with Glob first adds nothing, because Grep's filter already restricts the search. Glob matches file paths, not contents, so a pattern built from the module name (A) finds files named after it, not files that import it. Reading every file (C) floods the context, and `__init__.py` files (D) don't record which modules import what. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q478",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of built-in tools is most appropriate?",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of built-in tools is most appropriate?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q478",
+   "action": "set_explanation",
+   "text": "The exam guide recommends using purpose-built tools (Grep for search, Edit with replace_all for bulk replacement) over Bash workarounds. Grep identifies the files that actually contain the function, limiting Edit calls to matching files. Edit with `replace_all: true` handles all occurrences within each file. Option A uses Bash instead of Grep; option C is inefficient—Read+Write does not use Edit's diff capability and re-writes unchanged content; option D uses an opaque shell command instead of auditable tool calls. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tools should be used for steps 1, 2, and 3 respectively?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tools should be used for steps 1, 2, and 3 respectively?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_explanation",
+   "text": "The exam guide recommends built-in tools for their intended purposes: Glob for file discovery (with pattern matching), Bash for running external CLI tools (eslint) when no built-in alternative exists, and Write for creating output files. Using Write is preferable to Bash echo for file creation because it is more readable and auditable. Option A uses Bash for all three including file writing; option C uses Read+in-context analysis instead of the dedicated eslint tool; option D uses git diff which finds changed files but misses untracked new files. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q497",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool configuration achieves this most directly?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool configuration achieves this most directly?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q497",
+   "action": "set_explanation",
+   "text": "The Grep built-in tool supports a context parameter that includes surrounding lines around each match—equivalent to `grep -C N`—making it the purpose-built tool for this task. The exam guide recommends built-in tools over Bash alternatives when the built-in covers the use case. Option A uses Bash instead of the dedicated Grep tool; option C reads entire files unnecessarily when Grep can scope results; option D misuses Edit for a read-only search task. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q526",
+   "action": "edit",
+   "field": "q",
+   "find": "Write the SKILL.md frontmatter.",
+   "replace": "The dedicated Glob and Grep tools are available. Write the SKILL.md frontmatter.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q526",
+   "action": "set_explanation",
+   "text": "The correct SKILL.md frontmatter uses `context: fork` for isolation and `allowed-tools` as a YAML list. The exact field names matter: `context:` (not `fork:` or `run-in-fork:`) and `allowed-tools:` (not `tools:` or `allow:`). These are the documented frontmatter field names from the exam guide. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "edit",
+   "field": "q",
+   "find": "What is the correct tool to use?",
+   "replace": "The dedicated Glob and Grep tools are available. What is the correct tool to use?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "milind:Q1123",
+   "action": "set_explanation",
+   "text": "Grep is the tool for content-based search — finding specific text patterns inside files. Import statements are file content, not file names. Glob finds files by name pattern (not content). Read requires knowing which files to read. Grep scanning for the import string across all TypeScript files is the single most efficient approach. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool is most appropriate for discovering",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool is most appropriate for discovering",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-easy-1",
+   "action": "set_explanation",
+   "text": "Glob is the purpose-built tool for finding files by name pattern. The pattern `**/*.ts` matches all TypeScript files in any subdirectory. Glob returns results sorted by modification time, making it ideal as the first step in incremental codebase understanding (Glob → Read → Grep). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool should the agent use to find all files containing",
+   "replace": "The dedicated Glob and Grep tools are available. Which tool should the agent use to find all files containing",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-easy-3",
+   "action": "set_explanation",
+   "text": "Grep searches file CONTENTS by regex pattern, making it the correct tool to find all files that contain a specific string like `AuthService`. It returns matching files efficiently without requiring individual file reads. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-medium-2",
+   "action": "edit",
+   "field": "q",
+   "find": "Which Grep configuration would most accurately",
+   "replace": "The dedicated Glob and Grep tools are available. Which Grep configuration would most accurately",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-medium-2",
+   "action": "set_explanation",
+   "text": "Grep with the specific pattern `export class DatabaseConnection`, filtered to TypeScript files using `type: 'ts'`, and `output_mode: 'files_with_matches'` is the most precise approach. It searches file contents for the exact export declaration and limits scope to TypeScript files, reducing noise. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "connectry:q-2.5-medium-3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which sequence of tools best implements",
+   "replace": "The dedicated Glob and Grep tools are available. Which sequence of tools best implements",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "connectry:q-2.5-medium-3",
+   "action": "set_explanation",
+   "text": "The recommended incremental codebase understanding workflow is explicitly: Glob to find files → Read to understand → Grep to search. This sequence moves from broad discovery (file names) to deep understanding (file content) to targeted pattern search (content regex). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#8",
+   "action": "edit",
+   "field": "q",
+   "find": "Which two of the following correctly describe",
+   "replace": "The dedicated Glob and Grep tools are available. Which two of the following correctly describe",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#8",
+   "action": "set_explanation",
+   "text": "Grep is for content search (patterns inside file contents); Glob is for path/name pattern matching, not content search. Reaching for Bash instead of Grep/Glob for routine content or path search adds unnecessary complexity for no benefit. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#16",
+   "action": "edit",
+   "field": "q",
+   "find": "Which approach best manages context while producing an accurate answer?",
+   "replace": "The dedicated Glob and Grep tools are available. Which approach best manages context while producing an accurate answer?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#16",
+   "action": "set_explanation",
+   "text": "Building understanding incrementally — Grep to find entry points, then Read to follow imports and trace flows — is the documented pattern, and every file that enters context earns its place by being on the path to the answer. Option A floods the context window with irrelevant files, making the relevant ones harder to attend to (and inviting lost-in-the-middle effects). Option C uses file size as a poor proxy for relevance. Option D describes exactly the context-degradation symptom to avoid: answering from \"typical patterns\" rather than the specific code. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#31",
+   "action": "edit",
+   "field": "q",
+   "find": "Which built-in tool is correct?",
+   "replace": "The dedicated Glob and Grep tools are available. Which built-in tool is correct?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#31",
+   "action": "set_explanation",
+   "text": "`Glob` matches file paths/names by pattern. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#38",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the recommended exploration pattern?",
+   "replace": "The dedicated Glob and Grep tools are available. What's the recommended exploration pattern?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#38",
+   "action": "set_explanation",
+   "text": "Starting with `Grep` for entry points, then `Read` to follow imports, builds understanding incrementally without reading everything upfront. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#41",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the most direct mechanism?",
+   "replace": "The dedicated Glob and Grep tools are available. What's the most direct mechanism?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob/Grep fehlen unter macOS/Linux/WSL standardmäßig; der Stamm setzt die dedizierten Tools voraus, weil die richtige Antwort davon abhängt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-6#41",
+   "action": "set_explanation",
+   "text": "Configuring `.claude/settings.json` permissions so only the three read-only tools are allowed, with everything else denied by default, is a declarative, version-controlled restriction every developer's session inherits automatically — more direct and more maintainable than reimplementing the same allow logic inside a hook (B), a prompt note that depends on the model following it (A), or physically stripping tools from the whole project's registry (D). (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Einheitlicher Hinweis zur Glob/Grep-Verfügbarkeit (tools-reference: „Absent by default on macOS, Linux, and WSL“)."
+  },
+  {
+   "id": "milind:Q486",
+   "action": "edit",
+   "field": "q",
+   "find": "Which `tool_choice` setting prevents this omission?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` setting prevents this omission?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "edit",
+   "field": "q",
+   "find": "What tool_choice configuration does this require?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What tool_choice configuration does this require?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "edit",
+   "field": "q",
+   "find": "How do you configure tool_choice for each task type",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). How do you configure tool_choice for each task type",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "edit",
+   "field": "q",
+   "find": "Why is the per-workflow tool_choice approach preferable?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Why is the per-workflow tool_choice approach preferable?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q728",
+   "action": "edit",
+   "field": "q",
+   "find": "Which is more reliable:",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which is more reliable:",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q745",
+   "action": "edit",
+   "field": "q",
+   "find": "Which configuration change achieves this?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which configuration change achieves this?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q759",
+   "action": "edit",
+   "field": "q",
+   "find": "When is it appropriate",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). When is it appropriate",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q769",
+   "action": "edit",
+   "field": "q",
+   "find": "When should you apply",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). When should you apply",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "edit",
+   "field": "q",
+   "find": "What will the model most likely do",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What will the model most likely do",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat architectural change best guarantees",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What architectural change best guarantees",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat is the most accurate explanation",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What is the most accurate explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` setting ensures",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` setting ensures",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` sequence",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` sequence",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhat `tool_choice` setting should the coordinator use",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What `tool_choice` setting should the coordinator use",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool_choice setting achieves this?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which tool_choice setting achieves this?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "edit",
+   "field": "q",
+   "find": "Which tool_choice setting fits?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which tool_choice setting fits?",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "milind:Q486",
+   "action": "set_explanation",
+   "text": "For safety-critical mandatory tool calls, the exam guide recommends forced specific-tool invocation: `{\"type\": \"tool\", \"name\": \"check_drug_interactions\"}` guarantees the check happens regardless of model preference. Option A relies on instruction-following—unacceptable for a patient-safety constraint; option C forces some tool call but the model could pick a different tool; option D is overly restrictive if other tools are also needed during the recommendation turn.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q490",
+   "action": "set_explanation",
+   "text": "The exam guide supports different tool_choice settings per API call (per step). Free-choice steps use \"auto\" for flexibility; mandatory-tool steps use forced specific-tool invocation. This gives each step exactly the control it requires. Option A uses \"any\" which doesn't guarantee the specific tool; option B forces validate_schema on all steps, breaking collection and transformation; option D uses \"any\" for mandatory steps, relying on instructions.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q495",
+   "action": "set_explanation",
+   "text": "`tool_choice` is configured at the API call level, not globally per agent. The same agent can receive different tool_choice values on different calls depending on the task phase. This is the exam guide's per-turn tool_choice pattern applied to task-type switching. Option A forces tool use even when \"auto\" (no forced tool) is appropriate for exploration; option C forces report generation on exploratory calls, disrupting analysis; option D adds unnecessary architectural complexity.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q728",
+   "action": "set_explanation",
+   "text": "Forced tool selection is deterministic; prompt instructions are probabilistic. For a required first-step extraction that subsequent steps depend on, the reliability of forced selection is worth the implementation. The exam guide notes this pattern: \"Using tool_choice forced selection to ensure a specific tool is called first.\"\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q745",
+   "action": "set_explanation",
+   "text": "`tool_choice: \"any\"` guarantees at least one tool call. `\"required\"` is not a valid `tool_choice` value. System prompt instructions are probabilistic. Tool ordering doesn't affect whether tools are called.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q759",
+   "action": "set_explanation",
+   "text": "`\"auto\"` is appropriate when Claude's judgment about whether to extract is valuable — for example, detecting and communicating about blank or corrupted documents rather than producing empty extractions. For standard extraction pipelines where every document should produce structured output, `\"any\"` is more appropriate. The choice depends on whether occasional text responses are acceptable or destructive to downstream processing.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q769",
+   "action": "set_explanation",
+   "text": "The distinction is whether context-dependence exists. When the right tool depends on document content → `\"any\"` (Claude can inspect content and select). When a specific tool must ALWAYS run (pipeline initialization, mandatory first steps) → forced selection regardless of content. This is the fundamental design decision for multi-step extraction architectures.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q841",
+   "action": "set_explanation",
+   "text": "Forced tool calls with strict enums create a constraint violation when the real-world value falls outside the defined set. The model's behavior in this case is unpredictable — it may pick the least-wrong option, which is a silent semantic error. The `enum + \"other\" + detail` pattern is the recommended escape hatch: it preserves enum constraints for known values while providing a structured path for novel ones, making the failure mode explicit rather than silent.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "set_explanation",
+   "text": "Setting `tool_choice` to `{\"type\": \"any\"}` forces the model to call at least one tool from the provided list before responding. The model still selects which tool to use, but it cannot skip tool use entirely. This is the correct setting when you need guaranteed grounding in external data rather than parametric knowledge.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-hard-3",
+   "action": "set_explanation",
+   "text": "Stage 1 requires a guaranteed call to a specific tool (`parse_document`), so forced tool choice is the minimum necessary constraint. Stage 2 requires conditional tool use—Claude should decide based on context—so `auto` is the minimum constraint (it allows both calling and not calling the tool). Stage 3 requires a guaranteed call to a specific tool (`emit_result`), so forced tool choice again. Option D is the only sequence that satisfies all three requirements with the minimum constraint at each stage.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "connectry:q-2.3-medium-1",
+   "action": "set_explanation",
+   "text": "The coordinator should use `auto` so it can decide intelligently which subagent to invoke based on context. Each subagent, however, should use a forced `tool_choice` for its own single capability tool so it always executes its specialized function rather than attempting to answer from parametric knowledge. This design matches coordinator-level reasoning with subagent-level reliability.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#3",
+   "action": "set_explanation",
+   "text": "Forced tool selection requires the model to call that specific named tool on this turn, which is exactly what's needed to guarantee a particular step (like metadata extraction) runs first.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/quiz#6",
+   "action": "set_explanation",
+   "text": "tool_choice: \"any\" forces the model to call a tool but leaves the choice of which tool up to the model — exactly right when multiple valid extraction schemas exist and you don't yet know which applies.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Hinweis ergänzt, dass Opus 5.5, Sonnet 5.5 und Fable/Mythos 5.x any/tool mit 400 ablehnen (auto + strict bzw. Structured Outputs)."
+  },
+  {
+   "id": "milind:Q501",
+   "action": "set_explanation",
+   "text": "The exam guide distinguishes structural enforcement from instruction-based enforcement: for compliance-critical operations like modification logging, `{\"type\": \"tool\", \"name\": \"log_modification\"}` provides a guarantee that survives adversarial user inputs, whereas system-prompt rules can be worked around. Option A is factually incorrect—\"any\" allows any number of tools; option B is unrelated to tool_choice semantics; option D is incorrect: `any` is not deprecated by an API version; whether forced tool use is accepted depends on the model (see note).\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "D-Begründung präzisiert (modellabhängig, nicht API-Version) + Modellhinweis."
+  },
+  {
+   "id": "connectry:q-2.3-easy-1",
+   "action": "edit",
+   "field": "q",
+   "find": "from its parametric knowledge alone.",
+   "replace": "from its parametric knowledge alone, while still letting it choose which of the four tools fits.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Forced `search` (C) erzwingt ebenfalls einen Tool-Call; Stamm verlangt nun freie Toolwahl, damit nur `any` passt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-3",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Modellhinweis ergänzt; D-Begründung um Entfernung von temperature ergänzt.",
+   "text": "Separating classification from extraction via a two-call pipeline eliminates the ambiguity at the root of the problem. The first lightweight call determines document type; the second call registers only the matching tool and forces it with `tool_choice`. Claude has no choice but to use the correct schema because it is the only tool available. This is the standard pattern for deterministic multi-schema routing. Option D does not help either: routing instructions stay probabilistic, and API version 2026-10-21 removes `temperature` entirely (sending it returns a 400 error on every model).\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there the second call uses `auto` with only the matching tool and `strict: true`, or Structured Outputs with the matching schema."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "edit",
+   "field": "q",
+   "find": "what is the correct way to recover the reasoning field?",
+   "replace": "what is the correct way to get a rationale back into the output?",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Ein `reasoning`-Feld im Tool-Input kann auf Haiku 5.5 eine reasoning_extraction-Ablehnung auslösen; Frage auf Begründung/Erklärung umgestellt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_option",
+   "match": "The old prompt named the field explicitly",
+   "text": "The new schema never declares such a field; add a short `explanation` string to the tool's `properties` and `required`, and Claude fills it",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Doku: kurze Erklärung statt `reasoning`-Feld anfordern (\"Ask for an explanation, not reasoning\")."
+  },
+  {
+   "id": "connectry:q-4.3-hard-4",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+   "why": "Erklärung an neue Option B, reasoning_extraction und Modellgrenzen angepasst.",
+   "text": "The rationale did not disappear because of an inherent tool-use limitation: it disappeared because the new schema does not declare a field for it. Claude fills the fields that are declared in the `input_schema`, so adding a required string field restores a rationale as part of the structured output. Ask for a short `explanation` (or the evidence behind the result) rather than a `reasoning` field: on current models a field that asks for the model's reasoning or thinking might lead to a `reasoning_extraction` refusal. Option A is wrong: a forced tool call skips thinking (the response starts with the `tool_use` block), and manual extended thinking (`type: \"enabled\"`) does not support forced `tool_choice`. Options C and D misdescribe the API: `stop_reason` and `usage` carry no rationale, and JSON mode never added fields on its own.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_option",
+   "match": "Set `tool_choice` to `\"any\"`",
+   "text": "Use Structured Outputs (`output_config.format`) for the classification.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Eigentliches Ziel ist garantiert parsebares JSON; Structured Outputs statt erzwungenem tool_choice (Variante b)."
+  },
+  {
+   "id": "milind:Q828",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung für Structured Outputs neu geschrieben.",
+   "text": "With `tool_choice: \"auto\"` the model decides whether to call a tool, so a pipeline that always needs a structured classification cannot rely on it. Structured Outputs (`output_config.format` with a JSON schema) constrain the response itself through constrained decoding, so every reply is schema-compliant JSON and no retries are needed for schema violations. A system prompt instruction (D) is advisory, a retry loop (B) only treats the symptom and adds latency and cost, and more tools (A) make prose replies no less likely. Forcing a tool call (`tool_choice: \"any\"`) is not a general fix either: Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject forced `tool_choice` with a 400 error."
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_option",
+   "match": "Force a no-side-effect extraction contract",
+   "text": "Use Structured Outputs for the typed record; keep publish tools undistributed",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Typisierter Change Record = garantiert schema-konformes JSON; Structured Outputs statt erzwungenem Tool (Variante b)."
+  },
+  {
+   "id": "rohitg00:ccar-f-m1-049",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung für Structured Outputs neu geschrieben.",
+   "text": "The typed-output requirement does not justify action authority. Structured Outputs (`output_config.format` with a JSON schema) guarantee a schema-compliant change record without giving the CI step any tool that can act, while publish and deploy tools stay out of this stage and behind a separate approved one. A prose summary (B) drops the typed record, distributing production write tools (C) relies on the system prompt for safety, and forcing the deployment tool (D) hands action authority to a stage that should only describe the change."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "They have defined a single `extract_data` tool whose parameters mirror the target schema.",
+   "replace": "They have defined an `extract_data` tool with `strict: true` whose parameters mirror the target schema, plus two helper tools, `lookup_customer` and `log_event`, that the agent may also call.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Mit nur einem Tool erzwingt auch `any` den Aufruf (zwei richtige Antworten); weitere Tools aufgenommen, Schema-Garantie auf strict gestützt."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "edit",
+   "field": "q",
+   "find": "\n\nWhich `tool_choice` configuration guarantees",
+   "replace": "\n\nThe application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which `tool_choice` configuration guarantees",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erzwungenes tool_choice nur auf Modellen mit Unterstützung (Haiku 5.5); Stamm eingegrenzt (Variante a)."
+  },
+  {
+   "id": "connectry:q-2.3-easy-3",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung neu: forced tool garantiert den Aufruf, strict die Schema-Konformität; any kann ein Hilfstool wählen.",
+   "text": "Forcing `tool_choice` to `{\"type\": \"tool\", \"name\": \"extract_data\"}` makes the response start with a call to exactly that tool, so Claude does not reply with free text. Because the tool has `strict: true`, its input is constrained to the schema, so the JSON always matches it; the forced call alone guarantees the call, not schema compliance. With `{\"type\": \"any\"}` (C) Claude must call a tool but may pick `lookup_customer` or `log_event`; `auto` (B) and a system prompt instruction (D) still allow a prose reply.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use Structured Outputs (`output_config.format`) for a fixed JSON response, or `auto` plus `strict: true`."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "edit",
+   "field": "q",
+   "find": "A system uses Claude to auto-complete multi-step forms.",
+   "replace": "A system uses Claude Sonnet 4.5, which still accepts a prefilled assistant turn, to auto-complete multi-step forms.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/working-with-messages",
+   "why": "Prefill liefert ab Claude 4.6 eine 400; Stamm auf Legacy-Modell Sonnet 4.5 eingegrenzt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_option",
+   "match": "Prefilling fixes only the opening tokens",
+   "text": "Prefilling fixes only the opening tokens, not nested fields; a forced tool call with `strict: true` enforces the schema, so the engineer is right",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Ohne strict garantiert ein input_schema keine Schema-Konformität; Garantie auf strict tool use gestützt."
+  },
+  {
+   "id": "connectry:q-4.3-hard-2",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklärung auf strict tool use umgestellt, Correction zu Prefill präzisiert.",
+   "text": "Prefilling is a prompt-level technique: it fixes where the generation starts but imposes no structural constraint, so Claude may still produce nested fields that violate types, enums, or required properties. A forced tool call with `strict: true` uses constrained decoding, which guarantees that the tool input matches the schema exactly at every nesting level. An `input_schema` without `strict` gives no such guarantee and still needs validation. For a production form-completion pipeline the senior engineer is therefore right. A, C and D rest on false premises: the two approaches are not equivalent, a forced call needs no extra round-trip, and nesting depth is not limited to two levels.\n\n**Correction (per current docs):** the API accepts a prefill only on Claude 4.5 and earlier models; all later models (for example Claude Sonnet 4.6, Opus 4.6 and the 5.x models) return a 400 error. There, use Structured Outputs (`output_config.format`) or strict tool use; on Claude Opus 5.5, Sonnet 5.5 and Fable/Mythos 5.x combine `strict: true` with `tool_choice: \"auto\"`, because forced `tool_choice` is rejected."
+  },
+  {
+   "id": "milind:Q802",
+   "action": "remove",
+   "src": "editorial",
+   "why": "drei vertretbare deterministische Nachfilter, Doku ohne Aussage"
+  },
+  {
+   "id": "milind:Q813",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Lösung ohne Doku-Grundlage"
+  },
+  {
+   "id": "milind:Q1085",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Fine-Tuning laut CCAR-F-Guide nicht im Prüfungsstoff"
+  },
+  {
+   "id": "aliquanto:d6-44",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-45",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-46",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "aliquanto:d6-47",
+   "action": "remove",
+   "src": "editorial",
+   "why": "GTM-/Partner-Thema, laut eigener Erklärung nicht prüfungsrelevant"
+  },
+  {
+   "id": "davidalex89:associate/d2/quiz#14",
+   "action": "edit",
+   "field": "explanation",
+   "find": "This is the trap the official Sample 1 question is built around: asking the model",
+   "replace": "Asking the model",
+   "src": "editorial",
+   "why": "Verweis auf „the official Sample 1 question“ entfernt."
+  },
+  {
+   "id": "milind:Q1030",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The exam guide explicitly states: \"Domain 1: Agentic Architecture & Orchestration (27%), Domain 2: Tool Design & MCP Integration (18%), Domain 3: Claude Code Configuration & Workflows (20%), Domain 4: Prompt Engineering & Structured Output (20%), Domain 5: Context Management & Reliability (15%).\"",
+   "replace": "The exam guide's blueprint table lists Domain 1: Agentic Architecture & Orchestration at 27%, Domain 2: Tool Design & MCP Integration at 18%, Domain 3: Claude Code Configuration & Workflows at 20%, Domain 4: Prompt Engineering & Structured Output at 20%, and Domain 5: Context Management & Reliability at 15%.",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Werte stimmen mit Guide v1.1 überein; Tabellenwerte waren als wörtliches Zitat formatiert."
+  },
+  {
+   "id": "milind:Q1031",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The exam guide states: \"Your results are reported as a scaled score of 100–1,000. The minimum passing score is 720.\"",
+   "replace": "The exam guide states: \"The score is reported on a scaled range of 100–1,000, and the cut score is 720.\"",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Wert 720 stimmt; Zitat an den Wortlaut von Guide v1.1 angeglichen."
+  },
+  {
+   "id": "milind:Q1032",
+   "action": "edit",
+   "field": "explanation",
+   "find": "\"During the exam, 4 scenarios will be presented and picked at random from the full set of the 6 scenarios below.\"",
+   "replace": "\"During the exam, 4 scenarios are presented and picked at random from the full set of the 6 scenarios below.\"",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "6/4 stimmt; Zitat an den Wortlaut von Guide v1.1 angeglichen."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "set_option",
+   "match": "Merge the two tools into one",
+   "text": "Give both tools one identical generic description so the model treats them equally.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Merge ist nach „Consolidate related operations into fewer tools“ vertretbar; durch eindeutig falsche Beschreibungsstrategie ersetzt."
+  },
+  {
+   "id": "davidalex89:architect-foundations/d2/check#1",
+   "action": "edit",
+   "field": "explanation",
+   "find": "The temperature option (D) would not fix this either",
+   "replace": "An identical generic description (C) removes exactly the signal Claude needs, and the temperature option (D) would not fix this either",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung um ersetzten Distraktor C ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_option",
+   "match": "Merge the two tools into one",
+   "text": "Delete both descriptions entirely so that the agent has to decide based on the two tool names alone",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Merge zu `get_account` ist nach „Consolidate related operations into fewer tools“ vertretbar; durch eindeutig falsche Option ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#2",
+   "action": "set_explanation",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklärung um ersetzten Distraktor A und D ergänzt.",
+   "text": "Tool description quality is the primary, lowest-effort lever for fixing tool-selection confusion. Always fix descriptions before reaching for few-shot examples or architectural changes. Deleting the descriptions (A) removes the very signal Claude needs, since descriptions are \"by far the most important factor in tool performance\". A keyword pre-router (C) adds brittle architecture before the cheap fix is tried, and forcing one named tool (D) breaks every non-billing request."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_option",
+   "match": "Step 1: Glob with a date filter",
+   "text": "Step 1: Bash (`find . -name '*.ts' -mtime -1`). Step 2: Bash (`eslint` for each file). Step 3: Write the report.",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Glob only matches name/path patterns (results sorted by modification time); it has no date filter, so the 24-hour condition needs find -mtime."
+  },
+  {
+   "id": "milind:Q485",
+   "action": "set_explanation",
+   "text": "Glob matches file names and paths by pattern; it sorts results by modification time but cannot filter by date, so the 24-hour condition in step 1 needs Bash (`find -mtime -1`). Linting needs the external eslint CLI, which only Bash can run, and Write is the dedicated tool for creating the report file. Option A falls short at step 3, where `echo` through Bash replaces Write. Option C uses Grep, which searches file contents rather than modification times, replaces eslint with reading files in context, and edits a report file that does not exist yet. Option D uses `git diff`, which misses new untracked files. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Explanation aligned with the corrected answer (no Glob date filter)."
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_option",
+   "match": "`context: fork` plus read-only",
+   "text": "`context: fork` plus `disallowed-tools` listing Edit and Write",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools only pre-approves tools and restricts nothing; disallowed-tools removes tools while the skill is active."
+  },
+  {
+   "id": "milind:Q1112",
+   "action": "set_explanation",
+   "text": "`context: fork` runs the skill in a forked subagent context, so the verbose intermediate output stays out of the main conversation and only the result comes back. `disallowed-tools` removes Edit and Write from the pool while the skill is active, so the review cannot modify files. `allowed-tools` (B) only lets Claude use the listed tools without asking; it does not restrict which tools are available, so it neither makes the skill read-only nor isolates its output. `output: summary` (A) and `context: isolated` (D) are not skill frontmatter fields.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools is pre-approval, not restriction (skills doc: 'It does not restrict which tools are available')."
+  },
+  {
+   "id": "connectry:q-4.1-easy-1",
+   "action": "remove",
+   "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
+   "why": "Keyed answer relies on the model's numeric self-reported confidence as a threshold; the current CCAR-F guide states 'LLM self-reported confidence is poorly calibrated' (Task 5.2), so the question teaches the opposite."
   }
  ],
  "hold": []
