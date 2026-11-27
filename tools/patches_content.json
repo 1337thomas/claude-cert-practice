@@ -6002,6 +6002,915 @@
    "text": "Rules with `paths` frontmatter are not loaded at launch: a path-scoped rule loads when Claude uses the Read, Write, or Edit tool on a matching file. Claude hasn't touched `src/db/migration.ts` yet, so the rule isn't in context. The glob is correct (ruling out B), git status doesn't gate rule loading (C), and there is no session-start snapshot of files (D): as soon as Claude reads or edits the new file, the rule loads.",
    "src": "https://code.claude.com/docs/en/memory",
    "why": "Erklaerung neu: \"Rules without paths frontmatter are loaded at launch\"; Pfad-Regeln laden bei Read/Write/Edit"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#14",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-2#41"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#15",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#15"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#16",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#12"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#17",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#20",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#21",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#21"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#22",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#22"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#23",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#23"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#24",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#31"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#26",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#2"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#27",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#30"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#28",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-2#21"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#30",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#32",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#33"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#34",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#34"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#35",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#35"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#36",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#36"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#37",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#38",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#38"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#44",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#47"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#48",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#44"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#49",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#46"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#50",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-6#45"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#53",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#57"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#56",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-4#52"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#57",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#57"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#59",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-4#54"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "edit",
+   "field": "q",
+   "find": "Why doesn't `allowed-tools` prevent this failure from being a restriction problem in the first place?",
+   "replace": "What role does the `allowed-tools` list play in this failure?",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Fragesatz setzte voraus, dass allowed-tools Built-in-Tools einschränkt; neutral formuliert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "set_option",
+   "match": "allowed tools restricts built",
+   "text": "None: `allowed-tools` only pre-approves the listed tools and restricts nothing, so MCP tools stay callable",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Richtige Antwort war falsch: allowed-tools schränkt laut Doku gar nicht ein."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "set_option",
+   "match": "mcp tools must be",
+   "text": "It blocks the MCP tools because MCP servers also have to be listed in a separate `allowed-servers` frontmatter field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "set_option",
+   "match": "the mcp call is",
+   "text": "It limits the skill to `Write`, and skills can only reach MCP servers that are explicitly declared in `.mcp.json`",
+   "src": "editorial",
+   "why": "tool_choice-Distraktor ersetzt (keine neuen Distraktoren mit tool_choice); length balance."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "set_option",
+   "match": "skill invocation automatically escalates",
+   "text": "It escalates the skill's tool restriction to the parent session, so the main conversation loses its MCP tools too",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#12",
+   "action": "set_explanation",
+   "text": "Per the skills docs, `allowed-tools` lists \"Tools Claude can use without asking permission during the turn that invokes this skill\" and \"does not restrict which tools are available: every tool remains callable.\" So `allowed-tools: [\"Write\"]` neither limits the skill to `Write` nor blocks the MCP server's tools; the failure has a different cause (for example the server connection or a permission prompt that nobody answered). To actually remove tools while the skill runs, the frontmatter field is `disallowed-tools`. There is no `allowed-servers` field (B), skills are not limited to servers declared in `.mcp.json` (C), and a skill's frontmatter does not change the parent session's tools (D).",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung an die korrigierte Lösung angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#13",
+   "action": "edit",
+   "field": "q",
+   "find": "A `.claude/settings.json` hook is configured with",
+   "replace": "A `.claude/settings.json` `PreToolUse` hook is configured with",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Hook-Event im Stamm ergänzt, da Option C es voraussetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#13",
+   "action": "set_option",
+   "match": "make sure the hook",
+   "text": "Make the script exit with code 2 (or return a deny decision) on a match; logging or exiting 1 does not block",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Richtige Antwort ungenau: nur Exit-Code 2 blockiert, andere Non-Zero-Codes sind nicht blockierend."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#13",
+   "action": "set_option",
+   "match": "add a separate type",
+   "text": "Add a separate `{\"type\": \"approval\"}` hook entry next to the command hook so that it can veto the Bash call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#13",
+   "action": "set_explanation",
+   "text": "A `PreToolUse` command hook blocks a tool call only when its script exits with code 2 (or returns a deny decision as JSON). Printing a detection message changes nothing, and any other non-zero exit code, including 1, is a non-blocking error: the action goes ahead. The hooks docs say: \"If your hook is meant to enforce a policy, use `exit 2`.\" The matcher `\"Bash\"` already matches the Bash tool exactly (A), `PostToolUse` (C) runs after the command has already executed, and `\"approval\"` isn't a valid hook type (D); valid types are `command`, `http`, `mcp_tool`, `prompt` and `agent`.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklärung auf Exit-Code 2 korrigiert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#18",
+   "action": "set_option",
+   "match": "yes the independent instance",
+   "text": "Yes — the independent instance should receive the generation session's full reasoning so it has more context for its review",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#18",
+   "action": "set_option",
+   "match": "no the point of",
+   "text": "No — the independent instance exists to avoid the generator's bias toward its own decisions; this miss is a separate gap",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#18",
+   "action": "set_option",
+   "match": "yes both steps should",
+   "text": "Yes — generation and review should share one session so the full context of the change carries over cleanly",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#18",
+   "action": "set_option",
+   "match": "no but the reviewer",
+   "text": "No, but the reviewer instance should switch to a different model on every run to add perspective diversity",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "edit",
+   "field": "q",
+   "find": "Invoking it with no arguments prompts the developer to describe the target API. Invoking it with a description already supplied as an argument runs the skill silently, with no follow-up prompt.",
+   "replace": "While typing the command, the developer sees \"Describe the target API\" as an autocomplete hint. Invoking it with a description supplied as an argument runs the skill with no follow-up prompt.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Stamm schrieb argument-hint eine Rückfrage zu; laut Doku ist es nur ein Autocomplete-Hinweis."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "set_option",
+   "match": "no argument hint should",
+   "text": "No — `argument-hint` should open an interactive prompt for the argument on every run; the missing prompt is a bug",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "set_option",
+   "match": "yes argument hint is",
+   "text": "Yes — `argument-hint` is only an autocomplete hint; it neither validates the argument nor triggers a prompt",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Richtige Antwort an die Doku angeglichen (nur Autocomplete-Hinweis) und gekürzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "set_option",
+   "match": "no context fork disables",
+   "text": "No — with `context: fork` the hint has to be asked again as a follow-up prompt inside the forked subagent run",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "set_option",
+   "match": "yes but only because",
+   "text": "Yes, but only because `argument-hint` validates the supplied argument against a schema before the skill runs",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#19",
+   "action": "set_explanation",
+   "text": "Per the skills docs, `argument-hint` is a \"Hint shown during autocomplete to indicate expected arguments.\" It is display text only: it doesn't open a prompt (A), doesn't validate the argument against a schema (D), and isn't re-asked inside a forked subagent (C). `context: fork` only runs the skill in a forked subagent context; it has nothing to do with prompting for arguments.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklärung an korrigierten Stamm angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#25",
+   "action": "set_option",
+   "match": "merge search analysis and",
+   "text": "Merge search, analysis, and synthesis into one subagent that handles every stage in a single context window",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#29",
+   "action": "set_option",
+   "match": "escalate the whole pipeline",
+   "text": "Escalate the whole pipeline to a human, since any subagent failure should halt the process whatever the others found",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#29",
+   "action": "set_option",
+   "match": "produce the partial report",
+   "text": "Produce the report from the two completed subagents, annotate the emerging-technology gap and its cause, and let the reader judge it",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#29",
+   "action": "set_option",
+   "match": "retry the failed subagent",
+   "text": "Retry the failed subagent indefinitely and hold back the report until the technology research finally succeeds",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#29",
+   "action": "set_option",
+   "match": "discard the two successful",
+   "text": "Discard the two successful results as well, since the three-subagent pipeline was defined as all-or-nothing",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#31",
+   "action": "set_option",
+   "match": "increase the context window",
+   "text": "Increase the context window so Claude can load all 14 matching files at once and review them in a single pass",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#31",
+   "action": "set_option",
+   "match": "maintain a scratchpad file",
+   "text": "Keep a scratchpad file recording each candidate's path, line number, and null-check status as it is checked, then synthesize",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#31",
+   "action": "set_option",
+   "match": "replace grep with a",
+   "text": "Replace `Grep` with a more elaborate `Bash find` pipeline that pre-filters the matches before Claude reads them",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#31",
+   "action": "set_option",
+   "match": "add a system prompt",
+   "text": "Add a system-prompt instruction telling Claude to \"be thorough\" whenever it reviews security-sensitive code paths",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "edit",
+   "field": "q",
+   "find": "A developer wants to compare one function's signature across three branches (`main`, `develop`, `staging`) — just the definition line and its parameter list in each. What's",
+   "replace": "A developer has three branches (`main`, `develop`, `staging`) checked out side by side as git worktrees and wants to compare one function's signature across them — just the definition line and its parameter list in each. The dedicated Glob and Grep tools are available. What's",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Grep/Read sehen nur das Dateisystem, nicht andere Branches: Szenario auf Worktrees präzisiert; Glob/Grep-Hausregel."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "set_option",
+   "match": "use bash to run",
+   "text": "Use `Bash` to run `git diff` across the three branches and parse the function out of the raw diff output",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "set_option",
+   "match": "use grep to locate",
+   "text": "Use `Grep` to find the definition in each worktree, then `Read` only the few lines around each match",
+   "src": "editorial",
+   "why": "An die Worktree-Formulierung des Stamms angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "set_option",
+   "match": "use glob to enumerate",
+   "text": "Use `Glob` to enumerate every source file in each worktree, then `Read` each one looking for the signature",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "set_option",
+   "match": "use read on the",
+   "text": "Use `Read` on every file of each worktree, then search the combined content manually for the definition",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#33",
+   "action": "set_explanation",
+   "text": "`Grep` is the right tool for finding a pattern (the function definition) inside file contents across the three worktrees, and `Read` is then used narrowly on just the matched region. A raw `git diff` (A) returns far more than the one signature, `Glob` (C) matches file paths, not contents, and reading every file (D) wastes context on code that isn't relevant to the comparison. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Erklärung an Worktree-Szenario angepasst; Glob/Grep-Hinweis (Hausregel)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#39",
+   "action": "set_option",
+   "match": "credentials referenced via environment",
+   "text": "Environment-variable expansion for credentials only works in `~/.claude.json`, never in a project's `.mcp.json`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#39",
+   "action": "set_option",
+   "match": "a variable set in",
+   "text": "`~/.bashrc` only reaches shells that source it, so Claude Code started without the variable; set it where Claude launches",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#39",
+   "action": "set_option",
+   "match": "the syntax is wrong",
+   "text": "The syntax is wrong; it must be `${GIT_API_TOKEN:-default}`, because a bare `${VAR}` isn't supported in `.mcp.json`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#39",
+   "action": "set_option",
+   "match": "environment variable expansion isn",
+   "text": "Expansion isn't supported in `.mcp.json` at all, so the token has to be hardcoded there or read from a separate `.env` file",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#40",
+   "action": "edit",
+   "field": "q",
+   "find": "(read-only: `Read`, `Grep`, `Bash` restricted to read-only commands)",
+   "replace": "(read-only: `Read`, `Grep`, `Glob`)",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Bash-Einschränkung auf Befehle ist per `tools` nicht möglich; Stamm auf reine Read-Tools gebracht."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#40",
+   "action": "set_option",
+   "match": "configure allowedtools at each",
+   "text": "Give each phase its own subagent definition with a `tools` allowlist, so each phase only ever gets its own tools",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Richtige Antwort war falsch: allowedTools gibt nur frei und schränkt nicht ein; Einschränken per `tools`."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#40",
+   "action": "set_option",
+   "match": "build two fully separate",
+   "text": "Build two fully separate agents in different sessions that share no context whatsoever between the phases",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#40",
+   "action": "set_option",
+   "match": "use hooks to dynamically",
+   "text": "Add a `PostToolUse` hook that blocks any tool call that isn't on the current phase's approved list as soon as it fires",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Distraktor war vertretbar (PreToolUse-Hooks können blockieren); auf PostToolUse geändert, das erst nach dem Aufruf läuft."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#40",
+   "action": "set_explanation",
+   "text": "A subagent's `tools` field is an allowlist: \"To restrict tools, use the `tools` field as an allowlist.\" Giving the exploration subagent only `Read`, `Grep` and `Glob` and the modification subagent `Read`, `Write` and `Edit`, with the coordinator passing the identified target from one to the other, enforces the scoping per phase without two disconnected agents (B). `allowedTools` would not do this, because it only pre-approves tools and restricts nothing. Prompt instructions (C) are no hard boundary, and a `PostToolUse` hook (D) runs only after the tool call has already executed, so it cannot block it.",
+   "src": "https://code.claude.com/docs/en/sub-agents",
+   "why": "Erklärung an korrigierte Lösung und neuen Distraktor angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#41",
+   "action": "set_option",
+   "match": "the session s context",
+   "text": "The session's context window is exhausted; raise `max_tokens` so each invocation gets more room for the PR review",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#41",
+   "action": "set_option",
+   "match": "the session is carrying",
+   "text": "Earlier PRs' reasoning and context carry over and bias later reviews; use a fresh Claude Code session per PR",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#41",
+   "action": "set_option",
+   "match": "the ci runner is",
+   "text": "The CI runner is caching findings between invocations by mistake; clear the runner's cache before each PR",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#41",
+   "action": "set_option",
+   "match": "run all pr reviews",
+   "text": "Keep the shared session and add a prompt line telling Claude to ignore everything from earlier PRs",
+   "src": "editorial",
+   "why": "Distraktor „parallel statt sequenziell“ war vertretbar (parallele Läufe wären getrennte Sessions); ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#41",
+   "action": "edit",
+   "field": "explanation",
+   "find": "and parallelizing (D) sidesteps the question of what's actually wrong with the sequential design rather than fixing it.",
+   "replace": "and a prompt telling Claude to ignore earlier PRs (D) leaves the accumulated context in place.",
+   "src": "editorial",
+   "why": "Erklärung an neuen Distraktor D angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#42",
+   "action": "edit",
+   "field": "q",
+   "find": "In CI, the same hook also fires on an unrelated test-execution Bash step that emits raw plain-text test output, and normalizing that output breaks the downstream test-result parser, which now fails the build.",
+   "replace": "In CI, the same hook also fires on an unrelated test-execution Bash step, so Claude now sees normalized JSON instead of the raw plain-text test output it must quote verbatim for the downstream test-result parser, which now fails the build.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "PostToolUse ändert nur, was Claude sieht; Stamm so präzisiert, dass der Parser Claudes Wiedergabe liest."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#42",
+   "action": "set_option",
+   "match": "remove the hook entirely",
+   "text": "Remove the hook entirely and give up on normalizing tool responses anywhere in the CI review run",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#42",
+   "action": "set_option",
+   "match": "narrow the hook s",
+   "text": "Narrow the hook with an `if` rule or a tighter `matcher` so it only fires on review-related calls, not the test step",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Matcher `Bash` trifft jeden Bash-Aufruf; die dokumentierte `if`-Bedingung ergänzt; length balance."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#42",
+   "action": "set_option",
+   "match": "disable bash tool access",
+   "text": "Disable `Bash` tool access for the entire CI review run and let the review rely only on the built-in `Read` and `Edit` tools",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#42",
+   "action": "set_explanation",
+   "text": "The hook's logic is sound; its scope is too broad. `matcher: \"Bash|Read|Edit\"` fires on every Bash call, so the hook needs a narrower `matcher` or an `if` condition in permission-rule syntax (for example `Bash(git diff *)`) so it only rewrites review-related tool output and leaves the test step's raw output alone. That fixes the interference without giving up normalization altogether (A). Moving it to `PreToolUse` (C) misdiagnoses the problem: that event runs before the tool and cannot rewrite its output. Disabling Bash (D) would also take away the test step the pipeline needs.",
+   "src": "https://code.claude.com/docs/en/hooks",
+   "why": "Erklärung um `if`-Bedingung und Begründung zu C/D ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#43",
+   "action": "set_option",
+   "match": "the criteria are too",
+   "text": "The criteria are too strict overall; loosen them so the reviewer becomes more confident and more consistent across files",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#43",
+   "action": "set_option",
+   "match": "packing many fine grained",
+   "text": "Too many fine-grained rules in one pass dilute attention; split into per-category or per-file passes, or check in code",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#43",
+   "action": "set_option",
+   "match": "add 5 8 few",
+   "text": "Add 5–8 few-shot examples per category showing how each criterion should be applied to real findings",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#43",
+   "action": "set_option",
+   "match": "set temperature 0 to",
+   "text": "Set `temperature: 0` so the model follows the rules strictly and deterministically, regardless of length",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#43",
+   "action": "edit",
+   "field": "explanation",
+   "find": "don't resolve rules competing for the same attention budget.",
+   "replace": "don't resolve rules competing for the same attention budget. API version 2026-10-21 also removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#45",
+   "action": "set_option",
+   "match": "have the bot search",
+   "text": "Have the bot search for the first `[` in the raw response and parse only from that point onward",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#45",
+   "action": "set_option",
+   "match": "add a prompt instruction",
+   "text": "Add a prompt instruction telling the reviewer to \"output JSON only, no prose before or after\" in every run",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#45",
+   "action": "set_option",
+   "match": "remove the bot s",
+   "text": "Drop the bot's bracket-counting check and parse the schema-validated `structured_output` field directly",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "Gekürzt; Ausgabefeld `structured_output` laut Doku benannt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#45",
+   "action": "set_option",
+   "match": "have the bot trigger",
+   "text": "Have the bot trigger a second review run with a different prompt whenever the first one fails to parse",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#45",
+   "action": "set_explanation",
+   "text": "With `--output-format json` and `--json-schema`, Claude Code returns the schema-validated result in the `structured_output` field of the JSON response. The bracket-counting sanity check the bot added on top is a redundant heuristic that misfires on legitimate finding text containing `{` or `}`. Removing it and parsing `structured_output` directly is more robust than another string-search heuristic (A), a prompt instruction (B), which cannot stop braces from appearing inside string values, or rerunning the review whenever parsing fails (D).",
+   "src": "https://code.claude.com/docs/en/headless",
+   "why": "Erklärung an gekürzte Option C angepasst (Feld `structured_output`)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#46",
+   "action": "set_option",
+   "match": "add a pretooluse hook",
+   "text": "Add a `PreToolUse` hook that checks the ticket link via the issue tracker's API and blocks the review tool call if it is missing",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#47",
+   "action": "set_option",
+   "match": "keep both stages in",
+   "text": "Keep both stages in one session, separated by a clear divider, and tell the model not to repeat earlier findings",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#47",
+   "action": "set_option",
+   "match": "run each stage as",
+   "text": "Run each stage as its own `-p` invocation with fresh context, passing the per-file findings into the integration run's input",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#47",
+   "action": "set_option",
+   "match": "merge both stages into",
+   "text": "Merge both stages into one comprehensive prompt that analyzes every file of the PR at once for full consistency",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#47",
+   "action": "set_option",
+   "match": "run the per file",
+   "text": "Run the per-file passes in parallel, but keep the integration pass inside the same accumulated session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#51",
+   "action": "set_option",
+   "match": "a required ocr_confidence field",
+   "text": "Add a required `ocr_confidence` field so documents with poor OCR quality can be skipped or rerouted",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#51",
+   "action": "set_option",
+   "match": "a source_location field e",
+   "text": "Add a per-value `source_location` (e.g., \"header\", \"ocr_image\") so a validator can check the value really appears there",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#51",
+   "action": "set_option",
+   "match": "an is_hallucinated boolean that",
+   "text": "Add an `is_hallucinated` boolean that the model self-reports for every extracted field, including the vendor name itself",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#51",
+   "action": "set_option",
+   "match": "a higher max_tokens budget",
+   "text": "Raise the `max_tokens` budget so the model has more room to reason before it fills in the vendor field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the root issue and the most direct fix?",
+   "replace": "The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). What's the root issue and the most direct fix?",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/thinking",
+   "why": "Hausregel forced tool_choice: Modellannahme vor den Fragesatz."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "set_option",
+   "match": "add 2 3 few",
+   "text": "Add 2–3 few-shot examples that distinguish a borderline receipt from an invoice, then retry the same document",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "set_option",
+   "match": "switch to tool_choice auto",
+   "text": "Switch to `tool_choice: \"auto\"` so the model can fall back to a plain-text answer instead of a tool call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "set_option",
+   "match": "tool_choice any only guarantees",
+   "text": "`\"any\"` forces a call, not the right one; validate field presence against the chosen schema and retry with an error naming the better fit",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "set_option",
+   "match": "drop the contract schema",
+   "text": "Drop the contract schema, since most real documents are receipts or invoices and fewer options reduce misrouting",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#52",
+   "action": "edit",
+   "field": "explanation",
+   "find": "t error feedback on the actual mismatch.",
+   "replace": "t error feedback on the actual mismatch.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/thinking",
+   "why": "Hausregel forced tool_choice: 400 bei Opus 5.5/Sonnet 5.5/Fable-Mythos 5.x ergänzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#54",
+   "action": "set_option",
+   "match": "retry a fifth time",
+   "text": "Retry a fifth time with a larger `max_tokens` budget, in case the model needs more room to work out the fix",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#54",
+   "action": "set_option",
+   "match": "recognize this as a",
+   "text": "Treat it as a schema issue: accept `amount` as a string, parse \"1234 dollars\" deterministically, and drop it from the retry loop",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#54",
+   "action": "set_option",
+   "match": "the tokenizer is likely",
+   "text": "The tokenizer is likely confusing \"dollars\" with the number itself; rephrase the validation error using only numerals and symbols",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#54",
+   "action": "set_option",
+   "match": "persist through up to",
+   "text": "Keep going for up to 10 retries, since enough repetition with the same feedback eventually fixes this class of error",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#55",
+   "action": "set_option",
+   "match": "revert to required and",
+   "text": "Revert the field to required and rely on better prompting to make payment-method extraction more reliable",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#55",
+   "action": "set_option",
+   "match": "add a payment_method_confidence field",
+   "text": "Add a `payment_method_confidence` field so low-confidence nulls can be told apart from high-confidence ones",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#55",
+   "action": "set_option",
+   "match": "keep the field optional",
+   "text": "Keep it optional and add an evidence field such as `source_location`, so \"absent from the source\" differs from \"present but missed\"",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#55",
+   "action": "set_option",
+   "match": "default to the string",
+   "text": "Default the field to the string `\"unknown\"` instead of `null`, so that every extraction always has it populated",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "edit",
+   "field": "q",
+   "find": "as their geometric mean (0.78)",
+   "replace": "as their arithmetic mean (0.78)",
+   "src": "editorial",
+   "why": "Rechenfehler: Der geometrische Mittelwert von 0.95/0.93/0.38/0.87 ist 0.735, der arithmetische 0.78."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "set_option",
+   "match": "geometric mean is the",
+   "text": "The arithmetic mean is the wrong statistic here; route on the median of the four field-level confidence scores instead",
+   "src": "editorial",
+   "why": "Distraktor an korrigierten Stamm angepasst (Median maskiert das schwache Feld ebenso)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "set_option",
+   "match": "a single very low",
+   "text": "A single weak field is masked by the others; auto-approve only if every field individually clears e.g. 0.70",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "set_option",
+   "match": "confidence scoring in general",
+   "text": "Confidence scoring is unreliable here in general; replace it with a fixed percentage-based approval quota per day",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "set_option",
+   "match": "the 0 75 threshold",
+   "text": "The 0.75 threshold is simply too high; lowering it to 0.60 would cut the review workload without any other change",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#58",
+   "action": "set_explanation",
+   "text": "An averaged score lets one very weak field hide behind several strong ones, which is exactly how a category confidence of 0.32 got auto-approved (0.95, 0.93, 0.32 and 0.87 still average about 0.77). A minimum-field threshold ensures no single field is silently the weak link, which is why the flat-0.72 receipts perform better in the audit despite a lower \"overall\" score. The median (A) would mask the weak field just as well (0.90 here), and lowering the threshold (D) lets even more weak fields through.",
+   "src": "editorial",
+   "why": "Erklärung an korrigierten Stamm (arithmetischer Mittelwert) angepasst."
   }
  ],
  "hold": []
