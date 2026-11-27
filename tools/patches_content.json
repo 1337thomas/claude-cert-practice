@@ -5270,6 +5270,738 @@
    "text": "`context: fork` applied to CLAUDE.md",
    "src": "editorial",
    "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#24",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#44 (40 % False Positives in einer Kategorie -> explizite Kriterien, Kategorie ggf. pausieren)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#27",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#41 (CI-Job haengt an interaktiver Eingabe -> -p/--print)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#28",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#55 (Batch mit Teilfehlern -> per custom_id nur die fehlgeschlagenen neu einreichen; exam-2#55 liegt in h2 und bleibt dort)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#31",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#1 (get_customer wird uebersprungen -> programmatische Vorbedingung vor process_refund)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#32",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#2 (zwei verwechselte Tools mit Minimalbeschreibung -> Beschreibungen ausbauen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#33",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#7 (PostToolUse normalisiert Unix- und ISO-Datumsformate)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#34",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#3 (Refund-Hook ueber $500 -> deterministische statt probabilistischer Durchsetzung; vgl. exam-1#6)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#35",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#8 (Billing-Dispute + Lieferverzug -> zerlegen, gemeinsamer Kontext, eine Antwort)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#36",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#3 (Lookup liefert mehrere Treffer -> zusaetzlichen Identifier erfragen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#37",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#5 (Handoff an Menschen ohne Transkript -> strukturierte Zusammenfassung)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#38",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#10 (18 Tools, Auswahlgenauigkeit sinkt -> auf 4-6 Tools pro Rolle beschraenken)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#39",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#9 (Timeout bei lookup_order -> isError mit errorCategory/isRetryable statt leerem Erfolg; vgl. exam-1#10)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#41",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#7 (Zusammenfassung verliert Betrag und Bestellnummer -> persistenter Case-Facts-Block)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#42",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#4 (expliziter Wunsch nach Mensch bei einfachem Fall -> sofort eskalieren)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#43",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#9 (selbstberichtete Konfidenz als Eskalationssignal -> schlecht kalibriert)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#44",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#12 (Policy schweigt zum konkreten Wunsch -> eskalieren statt ablehnen/genehmigen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#46",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#53 (purchase_order_number fehlt im Quelldokument -> Feld nullable statt required)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#47",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#54 (verschachteltes Array flachgedrueckt -> Retry mit Dokument, fehlerhafter Extraktion und konkretem Validierungsfehler)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#49",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#59 (Kategorie-Enum -> \"other\" plus category_detail)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#50",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#60 (Zweck von detected_pattern -> systematische Analyse der Ausloeser; gleiche Frage auch exam-2#51)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#53",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#56 (hohe Gesamtgenauigkeit -> erst nach Dokumenttyp und Feld aufschluesseln)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#54",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#58 (Schwellen fuer Konfidenz-Routing -> an gelabeltem Validierungsset kalibrieren; exam-2#58 liegt in h2 und bleibt dort)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#55",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#30 (scheinbarer Widerspruch durch zeitlich versetzte Quellen -> Publikations-/Erhebungsdatum)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#57",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#51 (calculated_total neben stated_total -> semantische Fehler erkennen, die das Schema nicht faengt)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#59",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#52 (invertierte Fassung: drei Schemas, Toolaufruf garantieren -> any statt auto; zudem kaputte Option \"Both B and C\", die beim Mischen nicht mehr stimmt)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#2",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#10 (generisches isError fuer Timeout/ungueltige ID/Permission -> errorCategory und isRetryable)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#3",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#3 (mehrere Kundenkonten mit gleichem Namen -> zusaetzlichen Identifier erfragen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#6",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-2#7 (Zusammenfassung verliert Betrag und Bestellnummer -> persistenter Case-Facts-Block)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#7",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#1 (Identitaetspruefung vor process_refund garantieren -> blockierende Vorbedingung vor dem Aufruf (PreToolUse))"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#5",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Loesung nicht haltbar: escalate_to_human erst nach get_customer und lookup_order freizugeben verhindert, einen ausdruecklichen Wunsch nach einem Menschen sofort zu erfuellen (live utkarsh1agarwal:exam-1#4), und behebt die autonom behandelten mehrdeutigen Faelle nicht; die korrigierte Fassung (explizite Eskalationskriterien mit Few-Shot-Beispielen) waere eine Dublette von utkarsh1agarwal:exam-3#40"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#25",
+   "action": "set_option",
+   "match": "Add \"only flag",
+   "text": "Add \"only flag issues you're very confident about\" to the existing instruction",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#25",
+   "action": "set_option",
+   "match": "Lower the sampling",
+   "text": "Raise `max_tokens` so the reviewer has more room to reason before it flags anything",
+   "src": "editorial",
+   "why": "length balance; Temperature-Distraktor durch gleich falsche max_tokens-Fehlannahme ersetzt (Sampling-Parameter ab API-Version 2026-10-21 entfernt)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#25",
+   "action": "set_option",
+   "match": "Replace the vague",
+   "text": "Replace it with categorical criteria, e.g. flag comments that contradict the code",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#26",
+   "action": "set_option",
+   "match": "`fork_session` to branch",
+   "text": "`fork_session`, branching each of the three steps into its own independent session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#26",
+   "action": "set_option",
+   "match": "Parallel subagent spawning",
+   "text": "Parallel subagent spawning via several Agent tool calls at once",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#26",
+   "action": "set_option",
+   "match": "Dynamic/adaptive decomposition, since",
+   "text": "Dynamic, adaptive decomposition, since the steps are open-ended",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#26",
+   "action": "set_option",
+   "match": "Prompt chaining —",
+   "text": "Prompt chaining: a fixed sequence of ordered steps run one after another",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#29",
+   "action": "set_option",
+   "match": "Submit at a",
+   "text": "Submit on a fixed cadence (e.g., every 4 hours) so the wait plus 24-hour processing stays within 30 hours",
+   "src": "editorial",
+   "why": "length balance; \"guarantees ... completes within the 24-hour window\" praezisiert (Wartezeit + max. 24 h Verarbeitung <= 30 h)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#29",
+   "action": "set_option",
+   "match": "Switch to real-time",
+   "text": "Switch to real-time calls entirely, since a batch can never fit inside a 30-hour SLA",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#29",
+   "action": "set_option",
+   "match": "Submit immediately when",
+   "text": "Accumulate PRs and submit a batch once 100 requests have queued, however long that takes",
+   "src": "editorial",
+   "why": "length balance; Distraktor C war vertretbar (sofort einreichen haelt 24 h < 30 h ein) -> eindeutig falsche zaehlbasierte Einreichung"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#29",
+   "action": "set_option",
+   "match": "Submit only once",
+   "text": "Submit one batch daily at midnight, regardless of when each PR was actually opened",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#29",
+   "action": "set_explanation",
+   "text": "The Batches API offers no latency SLA and may take up to 24 hours per batch, so only the remaining 6 hours of the 30-hour SLA are available for waiting before submission. A fixed cadence such as every 4 hours caps that wait at 4 hours, so worst-case wait plus processing stays at 28 hours. A once-daily run (D) can add up to 24 hours of waiting before the batch even starts, and a count-based trigger (C) has no time bound at all on quiet days. Real-time calls (B) are not needed, because a well-timed batch fits within 30 hours and keeps the 50% batch discount.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Erklaerung an neue Optionen angepasst; Batches: \"Batches expire if processing does not complete within 24 hours.\""
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#30",
+   "action": "set_option",
+   "match": "It supports multi-turn",
+   "text": "It runs your client tools and continues the tool loop within one request",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Distraktor D praezisiert: Batch-Requests duerfen Tools und Multi-Turn-Verlaeufe enthalten; falsch ist nur, dass Client-Tools innerhalb eines Requests ausgefuehrt werden"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#30",
+   "action": "set_explanation",
+   "text": "The Batches API is charged at 50% of standard API prices (A) and processes within a window of up to 24 hours with no guaranteed latency SLA (C). B is wrong because requests and results are correlated by `custom_id`, not by session names or `--resume`. D is wrong because each batch request produces a single response: a request may include tool definitions and earlier tool turns, but the API cannot run your client-side tools and feed their results back mid-request, so an agentic tool loop needs a new request per turn.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+   "why": "Erklaerung zu D praezisiert (Tool Use und Multi-Turn sind in Batch-Requests erlaubt; 50 % laut Doku)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#40",
+   "action": "set_option",
+   "match": "A separately trained",
+   "text": "Train a separate ML classifier on historical tickets to decide escalations",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#40",
+   "action": "set_option",
+   "match": "Self-reported confidence-score routing",
+   "text": "Route cases by the model's self-reported confidence, escalating below 6/10",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#40",
+   "action": "set_option",
+   "match": "Sentiment-based escalation",
+   "text": "Escalate whenever sentiment analysis detects frustration above a threshold",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#40",
+   "action": "set_option",
+   "match": "Explicit escalation criteria",
+   "text": "Add explicit escalation criteria and few-shot escalate-vs-resolve cases",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#45",
+   "action": "edit",
+   "field": "q",
+   "find": "appropriate, reliable escalation triggers per the exam blueprint?",
+   "replace": "appropriate, reliable escalation triggers?",
+   "src": "editorial",
+   "why": "Meta-Verweis auf den Exam-Blueprint aus dem Stamm entfernt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#45",
+   "action": "set_option",
+   "match": "The customer explicitly",
+   "text": "The customer explicitly asks to be transferred to a human agent",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#45",
+   "action": "set_option",
+   "match": "The agent's self-reported",
+   "text": "The agent's self-reported confidence drops below a set threshold",
+   "src": "editorial",
+   "why": "length balance; Verraeter \"arbitrary\" entfernt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#45",
+   "action": "set_option",
+   "match": "The customer's message",
+   "text": "The customer's message contains several strongly negative sentiment keywords",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "edit",
+   "field": "q",
+   "find": "`tool_use` with a JSON schema does and does not guarantee?",
+   "replace": "`tool_use` with a JSON schema and `strict: true` does and does not guarantee?",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Syntaxgarantie gilt nur mit strict: true (\"guarantees that tool inputs always match your schema exactly\")"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "set_option",
+   "match": "It guarantees semantic",
+   "text": "It guarantees semantically correct values but not schema-valid syntax",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "set_option",
+   "match": "It guarantees syntactic",
+   "text": "It guarantees schema-valid syntax but not semantic correctness",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "set_option",
+   "match": "It guarantees neither,",
+   "text": "It guarantees neither and offers no benefit over plain-text JSON output",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "set_option",
+   "match": "It guarantees both",
+   "text": "It guarantees both schema-valid syntax and semantically correct values",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#48",
+   "action": "set_explanation",
+   "text": "With `strict: true`, constrained decoding guarantees that tool inputs always match the schema, so the output is syntactically valid. Nothing in the schema checks semantic correctness, such as a value landing in the wrong field or line items that don't sum to the stated total; that gap is what a `calculated_total` vs. `stated_total` check catches. D overclaims semantic correctness, A reverses the two, and C ignores the schema guarantee strict mode provides. Without `strict: true`, the schema only guides the model and conformance is not guaranteed, so validation and retries are still needed.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Erklaerung: Syntaxgarantie nur mit strict: true (\"guarantees that tool inputs always match your schema exactly\")"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#51",
+   "action": "set_option",
+   "match": "They demonstrate correct",
+   "text": "They show how to handle varied layouts, so the model generalizes to unseen formats",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#51",
+   "action": "set_option",
+   "match": "They guarantee the",
+   "text": "They guarantee that the model will never omit a required field in any document",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#51",
+   "action": "set_option",
+   "match": "They eliminate the",
+   "text": "They remove the need for a JSON schema, since the examples already define the structure",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#51",
+   "action": "set_option",
+   "match": "Few-shot examples primarily",
+   "text": "They mainly cut token usage by replacing long written extraction instructions",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#52",
+   "action": "set_option",
+   "match": "Switch to synchronous",
+   "text": "Switch to synchronous calls for the full run, since batch results arrive too slowly",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#52",
+   "action": "set_option",
+   "match": "Submit all 5,000",
+   "text": "Submit all 5,000 documents at once so the run finishes as early as possible",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#52",
+   "action": "set_option",
+   "match": "Refine the prompt",
+   "text": "Refine the prompt on a representative sample first to maximize first-pass success",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#52",
+   "action": "set_option",
+   "match": "Skip validation entirely",
+   "text": "Skip validation for the full run, since the 20-document pilot already passed",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#56",
+   "action": "set_option",
+   "match": "When the required",
+   "text": "When the required information is genuinely absent from the source document",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#56",
+   "action": "set_option",
+   "match": "When the model",
+   "text": "When the model swapped the values of two adjacent fields in its output",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#56",
+   "action": "set_option",
+   "match": "When the validation",
+   "text": "When the validation error points to a structural or format mismatch in the output",
+   "src": "editorial",
+   "why": "length balance; Verraeter \"fixable through clearer instructions\" entfernt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#56",
+   "action": "set_option",
+   "match": "When a nested",
+   "text": "When a nested array of line items was incorrectly flattened into one string",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#58",
+   "action": "set_option",
+   "match": "Only the financial",
+   "text": "Keep only the financial figures and drop all of the narrative and technical content",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#58",
+   "action": "set_option",
+   "match": "Appropriately to its",
+   "text": "Per type: financial data as tables, narrative as prose, specs as structured lists",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#58",
+   "action": "set_option",
+   "match": "Uniformly as plain",
+   "text": "Uniformly as plain paragraphs, regardless of which content type they are",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#58",
+   "action": "set_option",
+   "match": "Entirely as a",
+   "text": "As one single JSON blob with no formatting distinctions between the content types",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#60",
+   "action": "set_option",
+   "match": "Increasing `max_tokens` substantially",
+   "text": "Increasing `max_tokens` substantially so the model has room to find every value",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#1",
+   "action": "set_option",
+   "match": "The threshold is",
+   "text": "The threshold is set too high; lower it to $500 to stop the false escalations",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#1",
+   "action": "set_option",
+   "match": "The hook is",
+   "text": "The hook is fine; `process_refund`'s description doesn't say it handles amounts up to $750",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#1",
+   "action": "set_option",
+   "match": "The hook should",
+   "text": "The hook should be a `PostToolUse` hook instead, so the refund is attempted before it is blocked",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#4",
+   "action": "set_option",
+   "match": "The agent should have escalated",
+   "text": "It should have escalated both concerns at once instead of resolving anything itself",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#4",
+   "action": "set_option",
+   "match": "The agent should",
+   "text": "It should have checked prerequisites for both concerns before taking any refund action at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#4",
+   "action": "set_option",
+   "match": "The agent picked",
+   "text": "It handled the concerns in the wrong order; starting with the return would have fixed it",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#4",
+   "action": "set_option",
+   "match": "The agent needed",
+   "text": "It needed stronger prompting on how to handle messages that contain multiple concerns",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#8",
+   "action": "set_option",
+   "match": "Rename the tools",
+   "text": "Rename them `is_return_eligible` and `is_product_under_warranty`, describing when and when not to use each",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#8",
+   "action": "set_option",
+   "match": "Add 5 few-shot",
+   "text": "Add five few-shot examples of correct routing between the two tools before touching the tool definitions at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#8",
+   "action": "set_option",
+   "match": "Merge both tools",
+   "text": "Merge both into one `check_product_status` tool that returns eligibility and warranty status together",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#8",
+   "action": "set_option",
+   "match": "Expand both descriptions",
+   "text": "Expand both descriptions with input formats, example queries and boundaries such as \"return eligibility only\"",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#8",
+   "action": "edit",
+   "field": "explanation",
+   "find": "merging the tools (C) throws away a legitimate distinction the team still needs.",
+   "replace": "merging the tools (C) is a restructuring step rather than a description fix, and here it would blur a distinction the team still needs. Consolidating related operations can be a valid design choice, but not as the first rung of this ladder.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Erklaerung zu C: Doku empfiehlt Konsolidieren grundsaetzlich (\"Consolidate related operations into fewer tools\"), hier aber nicht als erster Schritt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#9",
+   "action": "set_option",
+   "match": "It's actually a",
+   "text": "Turn count is a reasonable proxy for complexity; just raise the threshold to 12 turns",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#9",
+   "action": "set_option",
+   "match": "Turn count is orthogonal",
+   "text": "Turn count doesn't track complexity; escalate on a real policy gap or ambiguity",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#9",
+   "action": "set_option",
+   "match": "Escalate based on",
+   "text": "Turn count is too noisy; escalate based on the customer's detected sentiment instead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#10",
+   "action": "set_option",
+   "match": "The full unedited",
+   "text": "The full unedited transcript, so the human can re-trace the entire investigation alone",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#10",
+   "action": "set_option",
+   "match": "A field documenting",
+   "text": "A field listing what the agent attempted, stating it took no refund action itself",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#10",
+   "action": "set_option",
+   "match": "The customer's original",
+   "text": "The customer's original message, verbatim, to confirm that the request was genuine",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#10",
+   "action": "set_option",
+   "match": "A confidence score,",
+   "text": "A confidence score, so the human knows how certain the agent was about its recommendation",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#11",
+   "action": "edit",
+   "field": "q",
+   "find": "A developer runs `/memory` during a long Claude Code session and sees that both the project-level `CLAUDE.md` and a `.claude/rules/database.md` rule (with `paths: [\"src/db/**/*.ts\"]`) are listed as loaded. Yet the rule isn't applying to `src/db/migration.ts`, a file the developer created moments ago mid-session — even though the path clearly matches the glob. What's the most likely cause?",
+   "replace": "A project has a `.claude/rules/database.md` rule with `paths: [\"src/db/**/*.ts\"]`. Mid-session, a developer creates `src/db/migration.ts` in their editor and asks Claude a general question about the database layer. Claude answers without opening any file, and the answer ignores the rule, even though the new file's path clearly matches the glob. What's the most likely cause?",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Stamm korrigiert: /memory listet Speicherorte und zeigt nicht, was geladen ist; Szenario auf den dokumentierten Ladezeitpunkt von Pfad-Regeln umgestellt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#11",
+   "action": "set_option",
+   "match": "Path-scoped rules are",
+   "text": "Path-scoped rules load only once Claude reads, writes, or edits a file that matches",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "richtige Option war falsch (Pfad-Regeln laden, \"when Claude uses the Read, Write, or Edit tool\"); alte Aussage wird Distraktor D"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#11",
+   "action": "set_option",
+   "match": "The file must",
+   "text": "The new file must be committed to git before glob-based rules will apply to it",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#11",
+   "action": "set_option",
+   "match": "The developer needs",
+   "text": "Path-scoped rules match only the file set present at session start, not later files",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "richtige Option war falsch (Pfad-Regeln laden, \"when Claude uses the Read, Write, or Edit tool\"); alte Aussage wird Distraktor D"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-4#11",
+   "action": "set_explanation",
+   "text": "Rules with `paths` frontmatter are not loaded at launch: a path-scoped rule loads when Claude uses the Read, Write, or Edit tool on a matching file. Claude hasn't touched `src/db/migration.ts` yet, so the rule isn't in context. The glob is correct (ruling out B), git status doesn't gate rule loading (C), and there is no session-start snapshot of files (D): as soon as Claude reads or edits the new file, the rule loads.",
+   "src": "https://code.claude.com/docs/en/memory",
+   "why": "Erklaerung neu: \"Rules without paths frontmatter are loaded at launch\"; Pfad-Regeln laden bei Read/Write/Edit"
   }
  ],
  "hold": []
