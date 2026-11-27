@@ -4726,6 +4726,550 @@
    "replace": "that were never collected. API version 2026-10-21 also removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
    "src": "https://platform.claude.com/docs/en/api/versioning",
    "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergaenzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#36",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#13"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#38",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#11"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#39",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#12"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#42",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#15"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#43",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#17"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#44",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#16"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#45",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#14"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#46",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#53"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#47",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#51"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#48",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#52"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#49",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#53"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#50",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#54"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#51",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#60"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#52",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#44"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#53",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#55"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#54",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#47"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#56",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#56"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#57",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#57"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#59",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#43"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#60",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#46"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#1",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#15"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#2",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#17"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#3",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#19"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#4",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#16"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#6",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#18"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#7",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#13"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#9",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#12"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#14",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#37"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#16",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#41"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#17",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#42"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#18",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#45"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#19",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#48"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#20",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#43"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#21",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#50"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#22",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#46"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#23",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-1#47"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#37",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von exam-3#12 (beide hold, Paket h2): nach der Korrektur auf disallowed-tools gleiche Frage mit gleichem Optionssatz; exam-3#12 bleibt"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#40",
+   "action": "set_option",
+   "match": "Map the codebase structure",
+   "text": "Map the structure first, find high-impact areas, then follow a prioritized plan that adapts as dependencies emerge",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#40",
+   "action": "set_option",
+   "match": "A fixed fully",
+   "text": "Write a fixed, fully pre-specified sequential checklist of test targets before exploring any part of the codebase",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#40",
+   "action": "set_option",
+   "match": "Escalate to a human",
+   "text": "Escalate to a human immediately, since the task is too loosely defined for an agent to break down on its own",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#40",
+   "action": "set_option",
+   "match": "Write tests for every",
+   "text": "Write tests for every file in alphabetical order so that no module in the legacy codebase gets skipped along the way",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#41",
+   "action": "set_option",
+   "match": "Escalate to a second",
+   "text": "Escalate to a second Claude instance for review before touching any code",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#55",
+   "action": "set_option",
+   "match": "Identify the failed",
+   "text": "Resubmit only the failed items, found by `custom_id`, after fixing each cause (e.g., chunking big files)",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#55",
+   "action": "set_option",
+   "match": "Switch failed",
+   "text": "Move the failed documents to a completely different extraction schema and resubmit them in a new batch",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#55",
+   "action": "set_option",
+   "match": "Resubmit the entire",
+   "text": "Resubmit the entire batch of 200 documents from scratch so every result comes from the same batch run",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#55",
+   "action": "set_option",
+   "match": "Discard the failed",
+   "text": "Discard the failed documents permanently, since requests that failed inside a Message Batch cannot be retried",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#55",
+   "action": "edit",
+   "field": "explanation",
+   "find": "reprocessing 198 documents that already succeeded",
+   "replace": "reprocessing every document that already succeeded",
+   "src": "editorial",
+   "why": "Der Stamm nennt nur \"some failures\"; die Zahl 198 passte nicht dazu."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#58",
+   "action": "set_option",
+   "match": "Thresholds calibrated",
+   "text": "Thresholds calibrated on labeled validation data to match real accuracy",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#58",
+   "action": "set_option",
+   "match": "An arbitrary fixed",
+   "text": "An arbitrary fixed cutoff such as exactly 80%, applied the same way to every field",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#58",
+   "action": "set_option",
+   "match": "The number of fields",
+   "text": "The number of fields in the schema, with a lower threshold for schemas with many fields",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#58",
+   "action": "set_option",
+   "match": "The document s file size",
+   "text": "The document's file size, with stricter thresholds applied to larger documents",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#5",
+   "action": "set_option",
+   "match": "Plan mode for both",
+   "text": "Plan mode for both tasks, since planning first is always the safer route",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#5",
+   "action": "set_option",
+   "match": "Direct execution for both",
+   "text": "Direct execution for both, since Claude Code gains little from planning",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#5",
+   "action": "set_option",
+   "match": "Plan mode for the bug fix",
+   "text": "Plan mode for the bug fix; direct execution for the cross-service authentication redesign",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#8",
+   "action": "set_option",
+   "match": "It s fine",
+   "text": "It's fine: the user-level file applies only to that engineer and is not shared via git",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#8",
+   "action": "set_option",
+   "match": "It s broken",
+   "text": "It's broken: user-level and project-level CLAUDE.md files cannot coexist in one setup",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#8",
+   "action": "set_option",
+   "match": "Only one CLAUDE md",
+   "text": "It's broken: only one CLAUDE.md file can be active per repository, so one is ignored",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#8",
+   "action": "set_option",
+   "match": "The user level file will",
+   "text": "It's broken: the user-level file silently overwrites the project-level file for everyone",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#10",
+   "action": "set_option",
+   "match": "compact",
+   "text": "Running `/compact` twice to create two summarized copies of the session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#10",
+   "action": "set_option",
+   "match": "Restarting from scratch",
+   "text": "Restarting from scratch for each strategy with an identical opening prompt",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#11",
+   "action": "set_option",
+   "match": "Informed the resumed",
+   "text": "Told the resumed session which files changed, prompting targeted re-analysis",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#11",
+   "action": "set_option",
+   "match": "Used fork_session",
+   "text": "Used `fork_session` instead of `--resume`, so the analysis starts from a clean branch",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#11",
+   "action": "set_option",
+   "match": "Started an entirely",
+   "text": "Started an entirely new session with zero context and repeated the full analysis",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#11",
+   "action": "set_option",
+   "match": "Increased max_tokens",
+   "text": "Increased `max_tokens` for the resumed session so it can reconsider more of the code",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#12",
+   "action": "set_option",
+   "match": "allowed tools",
+   "text": "`disallowed-tools`",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "allowed-tools schraenkt nicht ein (\"It does not restrict which tools are available\"); einschraenkend wirkt disallowed-tools."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#12",
+   "action": "set_option",
+   "match": "paths",
+   "text": "`allowed-tools`",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Kurz-Distraktor `paths` durch die typische Fehlannahme allowed-tools ersetzt (zugleich Laengenangleich)."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#12",
+   "action": "set_explanation",
+   "text": "`disallowed-tools` removes the listed tools from Claude's available pool while the skill is active, so listing `Bash` there structurally prevents destructive shell commands. `allowed-tools` (B) only pre-approves tools so they run without a permission prompt; it does not restrict which tools are available, and every tool remains callable. `context: fork` (C) isolates the skill's context and output, not its tool access, and `argument-hint` (A) is only an autocomplete hint.",
+   "src": "https://code.claude.com/docs/en/skills",
+   "why": "Erklaerung an die korrigierte Loesung disallowed-tools angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "edit",
+   "field": "q",
+   "find": "What's the most effective approach?",
+   "replace": "The dedicated Glob and Grep tools are available. What's the most effective approach?",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Hausregel Glob/Grep: auf macOS, Linux und WSL nicht im Standard-Tool-Set."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "set_option",
+   "match": "First identify all",
+   "text": "Find every exported name, including wrapper re-exports, then `Grep` for each name",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "set_option",
+   "match": "Read every file",
+   "text": "`Read` every file in the repository upfront to build full context before running any search",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "set_option",
+   "match": "Glob for",
+   "text": "`Glob` for `**/*.ts` and manually scan the matching files for calls to the utility function",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "set_option",
+   "match": "Ask the user",
+   "text": "Ask the user to list the call sites manually, since re-exported names cannot be searched reliably",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#13",
+   "action": "edit",
+   "field": "explanation",
+   "find": "start with targeted search, not full reads.",
+   "replace": "start with targeted search, not full reads. (On macOS, Linux and WSL, Claude Code omits Glob and Grep by default and searches with `find` and `grep` through Bash instead; the scenario assumes the dedicated tools are enabled.)",
+   "src": "https://code.claude.com/docs/en/tools-reference",
+   "why": "Hausregel Glob/Grep: Hinweis an die Erklaerung angehaengt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#15",
+   "action": "set_option",
+   "match": "fork_session",
+   "text": "`fork_session` branched off the main session",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#15",
+   "action": "set_option",
+   "match": "memory",
+   "text": "Project memory opened via `/memory`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#15",
+   "action": "set_option",
+   "match": "The Explore subagent",
+   "text": "The built-in read-only Explore subagent",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-3#15",
+   "action": "set_option",
+   "match": "context fork",
+   "text": "`context: fork` applied to CLAUDE.md",
+   "src": "editorial",
+   "why": "length balance"
   }
  ],
  "hold": []
