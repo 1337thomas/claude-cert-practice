@@ -3891,6 +3891,841 @@
    "action": "remove",
    "src": "https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794946250/Claude_Certified_Architect_-_Foundations_Exam_Guide.pdf",
    "why": "Keyed answer relies on the model's numeric self-reported confidence as a threshold; the current CCAR-F guide states 'LLM self-reported confidence is poorly calibrated' (Task 5.2), so the question teaches the opposite."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#49",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#42 (CI-Findings maschinenlesbar -> --output-format json + --json-schema)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#1",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#4 (expliziter Wunsch nach Mensch bei Routinefall -> sofort eskalieren)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#2",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#3 (Lookup liefert drei Treffer -> zusaetzlichen Identifier erfragen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#4",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#8 (Billing-Dispute + Lieferverzug -> zerlegen, gemeinsamer Kontext, eine Antwort)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#5",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#5 (Handoff an Menschen -> strukturierte Zusammenfassung)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#6",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#2 (zwei verwechselte Tools mit Minimalbeschreibung -> Beschreibungen ausbauen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#8",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#9 (selbstberichtete Konfidenz 1-10 -> schlecht kalibriert)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#13",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#7 (PostToolUse normalisiert Unix- vs. ISO-Datumsformate)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#16",
+   "action": "remove",
+   "src": "https://code.claude.com/docs/en/agent-sdk/permissions",
+   "why": "Loesung falsch (Agent-Tool braucht keine Freigabe in allowedTools; allowedTools schraenkt nicht ein); korrekte Fassung desselben Punkts ist live als utkarsh1agarwal:exam-1#28"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#19",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#23 (parallele Subagents -> mehrere Agent-Aufrufe in einer Antwort)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#20",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#26 (widerspruechliche Quellen -> beide Werte mit Attribution)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#22",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#24 (Timeout im Such-Subagent -> strukturierter Fehlerkontext)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#23",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#30 (scheinbarer Widerspruch -> Publikations-/Erhebungsdaten fehlen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#24",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#25 (85/15 Faktenchecks -> scoped verify_fact-Tool)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#25",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#21 (zu enge Zerlegung durch den Koordinator -> schmaler Bericht)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#27",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#22 (Subagent-Kontext wird nicht geerbt, muss explizit uebergeben werden)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#28",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#29 (Absturz mitten im Lauf -> State exportieren, Manifest beim Resume laden)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#31",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#32 (alle Aufrufer einer Funktion finden -> Grep)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#32",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#31 (Dateien per **/*-Muster finden -> Glob)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#33",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#34 (Edit-Anker nicht eindeutig -> Read + Write)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#34",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#36 (persoenlicher experimenteller MCP-Server -> ~/.claude.json)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#35",
+   "action": "remove",
+   "src": "editorial",
+   "why": "Dublette von utkarsh1agarwal:exam-1#33 (MCP-Tool verliert gegen Grep -> Beschreibung schaerfen)"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "edit",
+   "field": "q",
+   "find": "want to guarantee some structured extraction occurs. Which",
+   "replace": "want to guarantee some structured extraction occurs. The application runs on a model that accepts forced tool_choice (for example Claude Haiku 5.5). Which",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/thinking",
+   "why": "Hausregel: erzwungenes tool_choice als richtige Antwort nur auf Modellen, die es akzeptieren."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#50",
+   "action": "edit",
+   "field": "q",
+   "find": "Documented testing standards live only",
+   "replace": "Testing standards live only",
+   "src": "editorial",
+   "why": "Stamm widerspruechlich (\"Documented\" vs. \"not written anywhere\")."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#12",
+   "action": "edit",
+   "field": "q",
+   "find": "A customer explicitly states policy allows price matching only against the company's own past sales, but asks",
+   "replace": "Company policy covers price matching against the company's own past sales. A customer asks",
+   "src": "editorial",
+   "why": "Stamm widerspruechlich: \"only against own sales\" regelt den Wettbewerberfall doch; jetzt wirklich ungeregelt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#48",
+   "action": "set_option",
+   "match": "increase max_tokens for",
+   "text": "Increase `max_tokens` so the model has more room to reason about which tests are new",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#48",
+   "action": "set_option",
+   "match": "provide existing test",
+   "text": "Put existing test files in context; document standards and fixtures in `CLAUDE.md`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#48",
+   "action": "set_option",
+   "match": "disable test generation",
+   "text": "Disable test generation in CI and rely only on the manually written test suite instead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#48",
+   "action": "set_option",
+   "match": "ask developers to",
+   "text": "Ask developers to write every new test by hand and use generation only for first drafts",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#50",
+   "action": "set_option",
+   "match": "rely on the",
+   "text": "Rely on the model's general knowledge of what makes a good, valuable test",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#50",
+   "action": "set_option",
+   "match": "document testing standards",
+   "text": "Document testing standards, valuable test criteria, and fixtures in `CLAUDE.md`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#50",
+   "action": "set_option",
+   "match": "ask the senior",
+   "text": "Have the senior engineer manually review every generated test on each PR instead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#50",
+   "action": "set_option",
+   "match": "add the standards",
+   "text": "Post the standards as a pinned message in the team's engineering Slack channel",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#51",
+   "action": "set_option",
+   "match": "the schema itself",
+   "text": "The schema is incomplete; mark more fields as `required` so every line item is captured",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#51",
+   "action": "set_option",
+   "match": "this is a",
+   "text": "It's a semantic error, not a syntax one; add a `calculated_total` to check `stated_total`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#51",
+   "action": "set_option",
+   "match": "switch away from",
+   "text": "The schema is too strict; switch from `tool_use` to plain-text JSON output in the prompt",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#51",
+   "action": "set_option",
+   "match": "reduce max_tokens to",
+   "text": "The output runs too long; lower `max_tokens` to force shorter and simpler line item lists",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "set_option",
+   "match": "auto",
+   "text": "`tool_choice: {\"type\": \"auto\"}` with all three schema tools provided",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "set_option",
+   "match": "any",
+   "text": "`tool_choice: {\"type\": \"any\"}` with all three schema tools provided",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "set_option",
+   "match": "a forced call",
+   "text": "`tool_choice: {\"type\": \"tool\", \"name\": \"extract_invoice\"}` on every call",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "set_option",
+   "match": "omitting tool_choice",
+   "text": "No `tool_choice` field at all, with all three schema tools provided",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#54",
+   "action": "set_option",
+   "match": "only a repeated",
+   "text": "Only a repeated instruction telling the model to \"format it correctly this time\"",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#54",
+   "action": "set_option",
+   "match": "the original document",
+   "text": "The original document, the failed extraction, and the specific flattening error",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#54",
+   "action": "set_option",
+   "match": "a completely different",
+   "text": "A different, unrelated example document that shows what a nested array looks like",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#54",
+   "action": "set_option",
+   "match": "nothing further the",
+   "text": "Nothing further, since the model will notice the problem and self-correct silently",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#55",
+   "action": "set_option",
+   "match": "2 4 few",
+   "text": "2–4 few-shot examples that show the correct choice, with reasoning, for the ambiguous cases",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#55",
+   "action": "set_option",
+   "match": "force tool_choice to",
+   "text": "Force `tool_choice` to a single tool so the model can never pick the wrong one of the two",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#55",
+   "action": "set_option",
+   "match": "merge the tools",
+   "text": "Add an all-caps IMPORTANT warning to both descriptions telling the model to choose carefully",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Distraktor \"Merge the tools into one\" ist laut Doku (consolidate related operations) vertretbar; durch eindeutig falsche Fehlannahme ersetzt."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#55",
+   "action": "set_option",
+   "match": "increase max_tokens",
+   "text": "Increase `max_tokens` so the model has more room to think through each tool selection",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#56",
+   "action": "set_option",
+   "match": "immediately reduce human",
+   "text": "Reduce human review across the board right away, since 97% is already a high number",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#56",
+   "action": "set_option",
+   "match": "validate accuracy broken",
+   "text": "Break accuracy down by document type and field, since aggregates can mask weak segments",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#56",
+   "action": "set_option",
+   "match": "round the accuracy",
+   "text": "Round the figure up to 100% for stakeholder reporting, since the remaining gap is just noise",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#56",
+   "action": "set_option",
+   "match": "stop measuring accuracy",
+   "text": "Stop measuring accuracy altogether, since 97% already exceeds the agreed threshold",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#58",
+   "action": "set_option",
+   "match": "yes always batch",
+   "text": "Yes — batch processing should be used wherever possible to capture the full 50% cost savings",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#58",
+   "action": "set_option",
+   "match": "no batch processing",
+   "text": "No — batches have no latency SLA and may take up to 24 hours, unfit for a blocking step",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#58",
+   "action": "set_option",
+   "match": "yes as long",
+   "text": "Yes, as long as every request carries a unique `custom_id` so results can be matched",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#58",
+   "action": "set_option",
+   "match": "only if the",
+   "text": "Only if the invoices are small enough to keep each batch well under the 256 MB limit",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#59",
+   "action": "set_option",
+   "match": "a required category",
+   "text": "A required `category` string field with no enum or other constraints on its values",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#59",
+   "action": "set_option",
+   "match": "an enum field",
+   "text": "An `enum` of known categories plus `\"other\"`, paired with a `category_detail` string",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#59",
+   "action": "set_option",
+   "match": "a free text",
+   "text": "A free-text description field that a later pipeline step parses with regular expressions",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#59",
+   "action": "set_option",
+   "match": "omitting the category",
+   "text": "No category field at all; downstream reporting infers the category from the vendor's name",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#60",
+   "action": "set_option",
+   "match": "a random uuid",
+   "text": "A random UUID per finding so that each one can be tracked individually",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#60",
+   "action": "set_option",
+   "match": "a free text",
+   "text": "A free-text reviewer comment box with no structure or fixed fields",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#60",
+   "action": "set_option",
+   "match": "nothing this requires",
+   "text": "Nothing; this analysis needs a separately trained ML model instead",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#53",
+   "action": "set_option",
+   "match": "keep retrying with",
+   "text": "Keep retrying with the same prompt until a value appears",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#53",
+   "action": "set_option",
+   "match": "increase max_tokens and",
+   "text": "Increase `max_tokens` and run the extraction once more",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#3",
+   "action": "set_option",
+   "match": "prompt instructions have",
+   "text": "Prompt instructions have a non-zero failure rate, so the guarantee becomes probabilistic",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#3",
+   "action": "set_option",
+   "match": "removing the hook",
+   "text": "Removing the hook would violate the MCP specification for tool authorization flows",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#3",
+   "action": "set_option",
+   "match": "none a clear",
+   "text": "None — a clearly worded instruction is just as reliable as a hook for this threshold",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#3",
+   "action": "set_option",
+   "match": "the system prompt",
+   "text": "The system prompt has a hard character limit that this extra rule would push it past",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#7",
+   "action": "set_option",
+   "match": "maintain a persistent",
+   "text": "Keep a persistent \"case facts\" block (amount, order ID, dates) outside the summary",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#7",
+   "action": "set_option",
+   "match": "disable summarization entirely",
+   "text": "Disable summarization entirely so every conversation keeps its full transcript",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#7",
+   "action": "set_option",
+   "match": "ask the customer",
+   "text": "Ask the customer to begin every message with their order number and refund amount",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#7",
+   "action": "set_option",
+   "match": "switch to a",
+   "text": "Switch to a model with a larger context window so summarization is rarely needed",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#11",
+   "action": "set_option",
+   "match": "it provides a",
+   "text": "It gives a deterministic guarantee rather than relying on probabilistic compliance",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#11",
+   "action": "set_option",
+   "match": "it s the",
+   "text": "It's the only way to satisfy MCP's requirement that failed tools return `isError`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#11",
+   "action": "set_option",
+   "match": "it is required",
+   "text": "It is required whenever the agent's requests are sent through the Message Batches API",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#11",
+   "action": "set_option",
+   "match": "it reduces the",
+   "text": "It reduces the number of tokens the model consumes on each turn of the conversation",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#12",
+   "action": "set_option",
+   "match": "offer a partial",
+   "text": "Offer a partial discount on the purchase as a fair compromise",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#12",
+   "action": "set_option",
+   "match": "escalate since the",
+   "text": "Escalate, since the policy is silent on this exact request",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#12",
+   "action": "set_option",
+   "match": "deny the request",
+   "text": "Deny the request, since it was not explicitly permitted",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#12",
+   "action": "set_option",
+   "match": "approve the request",
+   "text": "Approve the request, since it was not explicitly denied",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#14",
+   "action": "set_option",
+   "match": "the sentiment threshold",
+   "text": "The sentiment threshold was simply set too low and only needs to be raised",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#14",
+   "action": "set_option",
+   "match": "the agent needs",
+   "text": "The agent needs more few-shot examples of how to handle angry customers well",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#14",
+   "action": "set_option",
+   "match": "sentiment doesn t",
+   "text": "Sentiment doesn't track real case complexity, so on its own it's a weak escalation signal",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#14",
+   "action": "set_option",
+   "match": "sentiment analysis should",
+   "text": "Sentiment analysis should run on a larger model so it classifies frustration better",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#15",
+   "action": "set_option",
+   "match": "honor the reiterated",
+   "text": "Honor the reiterated request and escalate the case to a human agent",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#15",
+   "action": "set_option",
+   "match": "continue offering the",
+   "text": "Continue the same resolution path, since the issue is within the agent's scope",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#15",
+   "action": "set_option",
+   "match": "provide a partial",
+   "text": "Issue a partial refund automatically so the issue closes without more discussion",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#15",
+   "action": "set_option",
+   "match": "ask one more",
+   "text": "Ask one more diagnostic question to confirm the issue is really still unresolved",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#21",
+   "action": "set_option",
+   "match": "the excerpt should",
+   "text": "The excerpt should have been converted into a different content type before merging",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#21",
+   "action": "set_option",
+   "match": "structured claim source",
+   "text": "Claim-source mappings must be preserved and merged through synthesis, not summarized away",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#21",
+   "action": "set_option",
+   "match": "the claim should",
+   "text": "The claim should have been paraphrased more aggressively so the URL wasn't needed",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#21",
+   "action": "set_option",
+   "match": "the claim needed",
+   "text": "The claim needed a confidence score in place of the source URL to stay traceable",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#26",
+   "action": "set_option",
+   "match": "publish the report",
+   "text": "Publish the report as-is, since thoroughness is the synthesis agent's sole responsibility",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#26",
+   "action": "set_option",
+   "match": "lower the temperature",
+   "text": "Lower the temperature and regenerate the synthesis from the same set of inputs",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#26",
+   "action": "set_option",
+   "match": "ask the user",
+   "text": "Ask the user to manually supply the missing counterarguments for the report",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#26",
+   "action": "set_option",
+   "match": "re delegate to",
+   "text": "Re-delegate targeted follow-up queries to the search and analysis subagents, then re-synthesize",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#29",
+   "action": "set_option",
+   "match": "it requires fork_session",
+   "text": "The synthesis agent will then need `fork_session` to run those extra tools correctly",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#29",
+   "action": "set_option",
+   "match": "it has no",
+   "text": "There's no real downside, since tools the agent never calls cost nothing at all",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#29",
+   "action": "set_option",
+   "match": "agents with tools",
+   "text": "Agents with tools outside their specialization tend to misuse them, e.g. running web searches",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#29",
+   "action": "set_option",
+   "match": "it will always",
+   "text": "None; a broadly equipped agent will always outperform a narrowly scoped specialist",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#30",
+   "action": "set_option",
+   "match": "a markdown formatted",
+   "text": "A markdown-formatted paragraph with inline citations after each claim",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#30",
+   "action": "set_option",
+   "match": "a single string",
+   "text": "A single string like `\"Retail vacancy hit 18% (Source: CBRE, March 2026, cbre.com/report)\"`",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#30",
+   "action": "set_option",
+   "match": "a raw dump",
+   "text": "A raw dump of the source webpage's full HTML, stored next to each extracted claim",
+   "src": "editorial",
+   "why": "length balance"
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#51",
+   "action": "edit",
+   "field": "explanation",
+   "find": "`tool_use` with a schema eliminates syntax errors",
+   "replace": "`tool_use` with a strict schema (`strict: true`) eliminates syntax errors",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+   "why": "Schema-Garantie gilt nur mit strict: true; Erklaerung praezisiert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#52",
+   "action": "edit",
+   "field": "explanation",
+   "find": "fits.",
+   "replace": "fits. `\"auto\"` or omitting `tool_choice` lets the model answer in plain text, and forcing one named tool picks a schema before the document type is known.\n\nNote: forced `tool_choice` (`any` or a named tool) only works on models that accept it, such as Claude Haiku 5.5. Claude Opus 5.5, Claude Sonnet 5.5 and Claude Fable/Mythos 5.x reject `any` and `tool` with a 400 error; there you use `auto` plus strict tool use (`strict: true`) or Structured Outputs instead.",
+   "src": "https://platform.claude.com/docs/en/build-with-claude/thinking",
+   "why": "Hinweis auf 400 bei Opus 5.5/Sonnet 5.5/Fable-Mythos 5.x ergaenzt; Distraktoren nach Umformulierung erklaert."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-1#55",
+   "action": "edit",
+   "field": "explanation",
+   "find": "ambiguous residual cases.",
+   "replace": "ambiguous residual cases. All-caps emphasis (C) adds no information about where the boundary lies, and forcing one tool (B) or raising `max_tokens` (D) does not address selection at all.",
+   "src": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+   "why": "Distraktor C ersetzt (Zusammenlegen der Tools ist laut Doku eine legitime Option); Erklaerung angepasst."
+  },
+  {
+   "id": "utkarsh1agarwal:exam-2#26",
+   "action": "edit",
+   "field": "explanation",
+   "find": "that were never collected.",
+   "replace": "that were never collected. API version 2026-10-21 also removes `temperature`, `top_p` and `top_k` entirely (sending them returns a 400 error on every model).",
+   "src": "https://platform.claude.com/docs/en/api/versioning",
+   "why": "Temperature-Distraktor ohne Hinweis; Entfernung ab API-Version 2026-10-21 ergaenzt."
   }
  ],
  "hold": []
